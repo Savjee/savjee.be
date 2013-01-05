@@ -1,0 +1,231 @@
+body{
+	background-color: #E2E2E2;
+	color: #373737;
+	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.625;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	clear:both;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: inherit;
+	margin:0;
+	padding: 0;
+}
+
+img{
+	max-width: 620px;
+}
+p{
+	margin-bottom: 1em;
+}
+
+p code{
+	background-color: #F4F4F4;
+	border: solid 1px #DCDCDC;
+	border-radius: 3px;
+}
+
+a{
+	text-decoration: none;
+	color: #1982D1;
+}
+
+pre{
+	background: #F4F4F4;
+	font: 13px "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.625em;
+	overflow: auto;
+	padding: 1.625em;
+	border:solid 1px #DCDCDC;
+	border-radius: 3px;
+}
+
+#page{
+	margin-top: 4em;
+	max-width: 960px;
+	margin: 2em auto;
+}
+
+#branding{
+	text-align:right;
+	top:0;
+	bottom: 0;
+	padding-top: 5em;
+	margin-right: 40px;
+	position: fixed;
+	width: 180px;
+	padding-bottom: 10px;
+	z-index: 9999;
+}
+
+#site-title{
+	width: auto;
+	margin: 0;
+	padding: 10px 0;
+	float: right;
+}
+#site-title a{
+	font-size: 56px;
+	line-height: 1em;
+	color: rgba( 0, 0, 0, 0.2 );
+	font-weight: bold;
+	margin-right: -4px;
+	text-align: right;
+}
+
+#main{
+	margin-left: 220px;
+	clear:both;
+}
+
+#primary{
+	float: left;
+	margin: 0 -26.4% 0 0;
+	width: 100%;
+}
+
+.post{
+	background: #fff;
+	-webkit-box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+	-moz-box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+	border-radius: 3px;
+	margin-bottom: 1.625em;
+}
+
+.post-header, .post-header a{
+	color: #222;
+	text-decoration: none;
+}
+
+.post-title{
+	clear: both;
+	color: #222;
+	font-size: 26px;
+	line-height: 1.5em;
+	padding-top: 0px;
+}
+
+.post-header{
+	padding: 1.625em 60px 0;
+}
+
+.post-meta{
+	color: #666;
+	clear: both;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.post-content{
+	padding: 0.6em 60px 0;
+	border-style: solid;
+	border-color: #EEE;
+	border-width: 0 0 1px;
+}
+
+.post-content h1{
+	color: #000;
+	font-weight: bold;
+	margin: 0 0 .8125em;
+}
+
+/* Style for the comment box beneath a post */
+#comments{
+	background: #DDD;
+	border: 1px solid #d3d3d3;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 0 auto 1.625em;
+	padding: 1.625em;
+}
+
+#site-menu{
+	font-size: 13px;
+	list-style: none;
+}
+
+#site-menu a{
+	color: #AAA;
+	line-height: 2.6em;
+}
+
+#site-menu a:hover{
+	color: #373737;
+}
+
+#footer{
+	margin-left: 220px;
+	clear:both;
+	color: #666;
+	font-size: 12px;
+	padding: 2.2em 0.5em;
+	text-align: center;
+}
+
+/* ----------------- Code highlighter style ----------------- */
+.hll{background-color:#ffc}
+.c{color:#408080;font-style:italic}
+.err{border:1px solid #f00}
+.k{color:#008000;font-weight:bold}
+.o{color:#666}
+.cm{color:#408080;font-style:italic}
+.cp{color:#bc7a00}
+.c1{color:#408080;font-style:italic}
+.cs{color:#408080;font-style:italic}
+.gd{color:#a00000}
+.ge{font-style:italic}
+.gr{color:#f00}
+.gh{color:#000080;font-weight:bold}
+.gi{color:#00a000}
+.go{color:#808080}
+.gp{color:#000080;font-weight:bold}
+.gs{font-weight:bold}
+.gu{color:#800080;font-weight:bold}
+.gt{color:#0040d0}
+.kc{color:#008000;font-weight:bold}
+.kd{color:#008000;font-weight:bold}
+.kn{color:#008000;font-weight:bold}
+.kp{color:#008000}
+.kr{color:#008000;font-weight:bold}
+.kt{color:#b00040}
+.m{color:#666}
+.s{color:#ba2121}
+.na{color:#7d9029}
+.nb{color:#008000}
+.nc{color:#00f;font-weight:bold}
+.no{color:#800}
+.nd{color:#a2f}
+.ni{color:#999;font-weight:bold}
+.ne{color:#d2413a;font-weight:bold}
+.nf{color:#00f}
+.nl{color:#a0a000}
+.nn{color:#00f;font-weight:bold}
+.nt{color:#008000;font-weight:bold}
+.nv{color:#19177c}
+.ow{color:#a2f;font-weight:bold}
+.w{color:#bbb}
+.mf{color:#666}
+.mh{color:#666}
+.mi{color:#666}
+.mo{color:#666}
+.sb{color:#ba2121}
+.sc{color:#ba2121}
+.sd{color:#ba2121;font-style:italic}
+.s2{color:#ba2121}
+.se{color:#b62;font-weight:bold}
+.sh{color:#ba2121}
+.si{color:#b68;font-weight:bold}
+.sx{color:#008000}
+.sr{color:#b68}
+.s1{color:#ba2121}
+.ss{color:#19177c}
+.bp{color:#008000}
+.vc{color:#19177c}
+.vg{color:#19177c}
+.vi{color:#19177c}
+.il{color:#666}

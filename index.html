@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts %}
+{% for post in site.posts limit: 5 %}
 <div class="post">
 	<div class="post-header">
 
@@ -12,7 +12,7 @@ title: Home
 		</h1>
 
 		<div class="post-meta">
-			<p>Posted on {{ post.date | date_to_string }} in </p>
+			<p>Posted on {{ post.date | date_to_string }}</p>
 		</div>
 
 	</div>

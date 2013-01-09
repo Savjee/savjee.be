@@ -69,7 +69,7 @@ pre{
 	float: right;
 }
 #site-title a{
-	font-size: 56px;
+	font-size: 40px;
 	line-height: 1em;
 	color: rgba( 0, 0, 0, 0.2 );
 	font-weight: bold;
@@ -132,6 +132,23 @@ pre{
 	color: #000;
 	font-weight: bold;
 	margin: 0 0 .8125em;
+}
+
+.post-content a:hover{
+	text-decoration:underline;
+}
+
+.share{
+	padding: .6em 60px;
+	color: #666;
+}
+
+.share a{
+	color: #666;
+}
+
+.share a:hover{
+	text-decoration: underline;
 }
 
 /* Style for the comment box beneath a post */

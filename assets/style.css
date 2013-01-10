@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6, p{
 
 img{
 	max-width: 620px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 p{
 	margin-bottom: 1em;

@@ -183,6 +183,10 @@ pre{
 	color: #373737;
 }
 
+.previous{
+	margin-right: 10px;
+}
+
 #footer{
 	clear:both;
 	color: #666;

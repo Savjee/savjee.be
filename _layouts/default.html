@@ -49,8 +49,6 @@ _gaq.push(['_trackPageview']);
 
 // Track external links
 function trackOutboundLink(link) {
-console.log("tracked link: " + link);
-
 try{
 	_gaq.push(['_trackEvent', 'outbound-link', link]);
 	setTimeout('document.location = "' + link + '"', 100);
@@ -58,19 +56,20 @@ try{
 }
 
 window.onload = function(){
-	var posts = document.getElementsByClassName("post-content");
 
-	for(i=0; i<=posts.length-1; i++){
-		var links = posts[i].getElementsByTagName('a');
+	var links = document.links;
 
-		for(ii=0; ii<=links.length-1;ii++){
-			links[ii].onclick = function(){
+	for(i=0; i<=links.length -1; i++){
+
+		if(links[i].href.indexOf("savjee.be/") == -1){
+			links[i].onclick = function(){
 				trackOutboundLink(this.href);
 				return false;
 			}
 		}
 
 	}
+
 }
 </script>
 </body>

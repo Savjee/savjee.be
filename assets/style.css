@@ -199,6 +199,21 @@ pre{
 	text-align: center;
 }
 
+/* ----------------- Attempt to make things fluid ----------------- */
+
+/* Smartphone in portrait */
+@media screen and (max-width:640px){
+
+	.post-content{
+		padding: 0.6em 2em 0;
+	}
+
+	.post-header{
+		padding: 1.625em 2em 0;
+	}
+
+}
+
 /* ----------------- Code highlighter style ----------------- */
 .hll{background-color:#ffc}
 .c{color:#408080;font-style:italic}

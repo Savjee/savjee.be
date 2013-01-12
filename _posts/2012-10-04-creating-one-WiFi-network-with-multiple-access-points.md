@@ -3,7 +3,9 @@ layout: post
 title:  Creating one WiFi network with multiple access points
 ---
 
-At home, I have a problem that I know is very common: the range on our WiFi router is not enough to cover every bit of the house. (Well actually it does cover our house, but in some places it’s just painfully slow!)
+At home, I have a problem that I know is very common: the range on our WiFi router is not enough to cover every bit of the house. (Well actually it does cover our house, but in some places it’s just painfully slow!). Luckily there are a few solutions to have WiFi everywhere.
+
+<!--more-->
 
 To partially solve this problem we use a powerline to go from the front of the house to the back. There, the powerline is connected to a Dlink switch which in turn is connected to two computers over Ethernet. So far so good!
 

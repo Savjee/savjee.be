@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts limit: 5 %}
+{% for post in paginator.posts %}
 <div class="post">
 	<div class="post-header">
 
@@ -18,8 +18,27 @@ title: Home
 	</div>
 
 	<div class="post-content">
-		{{ post.content }}
+		{{ post.content | preview }}
+
+		<p><a href="{{ post.url }}">Continue reading &rarr;</a></p>
 	</div>
 
 </div>
 {% endfor %}
+
+<p style="text-align:center">
+	{% if paginator.previous_page %}
+
+		{% if paginator.previous_page == 1 %}
+			<a href="/" class="previous">&larr; Previous</a>
+		{% else %}
+			<a href="/page{{paginator.previous_page}}/" class="previous">&larr; Previous page</a>
+		{% endif %}
+	{% endif %}
+
+	<!-- <span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span> -->
+
+	{% if paginator.next_page %}
+		<a href="/page{{paginator.next_page}}/" class="next">Next page &rarr;</a>
+	{% endif %}
+</p>

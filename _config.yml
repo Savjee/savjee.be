@@ -3,3 +3,4 @@ pygments: true
 permalink: /:year/:month/:title/
 safe: false
 exclude: _deploy.sh
+paginate: 5

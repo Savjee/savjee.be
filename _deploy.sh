@@ -22,5 +22,5 @@ s3cmd sync --acl-public --exclude '*.*' --include  '*.html' --add-header="Cache-
 echo "\n--> Syncing everything else"
 s3cmd sync --acl-public --exclude '.DS_Store' --exclude 'assets/' --reduced-redundancy _site/ s3://s3.savjee.be
 
-# Sync: delete removed
-s3cmd sync --delete-removed _site/ s3://s3.savjee.be
+# Sync: remaining files & delete removed
+s3cmd sync --acl-public --delete-removed _site/ s3://s3.savjee.be

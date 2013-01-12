@@ -214,6 +214,17 @@ pre{
 
 }
 
+/* iPad */
+@media all and (device-width: 768px) and (device-height: 1024px) {
+	body{
+		font-size: 16px;
+	}
+
+	pre{
+		font-size: 14px;
+	}
+}
+
 /* ----------------- Code highlighter style ----------------- */
 .hll{background-color:#ffc}
 .c{color:#408080;font-style:italic}

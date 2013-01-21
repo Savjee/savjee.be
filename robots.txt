@@ -1,0 +1,17 @@
+# robots.txt for http://www.savjee.be
+
+User-agent: *
+
+# Old Wordpress stuff shouldn't be indexed
+Disallow: /projects/
+Disallow: /contact-me/
+Disallow: /about-me/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /author/
+Disallow: /chomeschool.html
+Disallow: /wp-content/
+Disallow: /pulsetrack.html
+Disallow: /comments/
+Disallow: /trim4lion.html
+Disallow: /src/

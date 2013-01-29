@@ -88,7 +88,28 @@ pre{
 	-moz-box-shadow: 0 0 10px #b4b4b4;
 	box-shadow: 0 0 10px #b4b4b4;
 	border-radius: 3px;
-	margin: 30px 0 50px 0;
+	margin: 30px 0 30px 0;
+}
+
+@media screen and (min-width:800px){
+
+	.left, .right{
+		width: 385px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.left{
+		float:left;
+	}
+
+	.left .post-header, .left .post-content, .right .post-header, .right .post-content {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.right{
+		float:right;
+	}
 }
 
 .post-header, .post-header a{
@@ -217,6 +238,14 @@ pre{
 
 	.post-header{
 		padding: 1.625em 2em 0;
+	}
+
+	.share{
+		padding: 0.6em 2em;
+	}
+
+	img{
+		max-width: 250px;
 	}
 
 }

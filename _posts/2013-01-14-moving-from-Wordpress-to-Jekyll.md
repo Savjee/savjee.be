@@ -96,7 +96,7 @@ Your website's theme goes into ``_layouts/``, Jekyll plugins go into ``_plugins/
 The best way to start a Jekyll blog is to look at existing blogs. The official wiki has [a huge list](https://github.com/mojombo/jekyll/wiki/Sites) of websites that use Jekyll and have published the source code. (At some point in the future I'll upload my blog to GitHub as well. Just not right now.)
 
 # Permalinks
-When moving from Wordpress to Jekyll you'll run into another problem: permalinks. If you change your URL structure, you'll break every link to your blog. Luckily Jekyll allows you to set the structure of links that it generates. I added this to my _config.yml file (If you don't have the config file yet, just create it and add this line):
+When moving from Wordpress to Jekyll you'll run into another problem: permalinks. If you change your URL structure, you'll break every link to your blog. Luckily Jekyll allows you to set the structure of links that it generates. I added this to my ``_config.yml`` file (If you don't have the config file yet, just create it and add this line):
 <pre>
 permalink: /:year/:month/:title/
 </pre>

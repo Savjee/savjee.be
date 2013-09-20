@@ -122,7 +122,7 @@ You might say that one ``s3cmd sync`` command would be enough to upload your web
 
 That's it. Everytime I want to publish my blog I run ``sh _deploy.sh`` and sit back. Everything is taken care of. No worries.
 
-*Note: I initially used reduced redundancy storage for hosting my website. This raised by bill to a whopping 0.01 dollars ;). Amazon's free tier gives you 5GB of **standard** storage, not reduced storage. So use that if you're eligible for the free tier.*
+*Note: I initially used reduced redundancy storage for hosting my website. This raised by bill to a whopping 0.01 dollars ;). Amazon's free tier gives you 5GB of **standard** storage, not reduced storage. So use that if you're eligible for the free tier.* 
 
 # DNS changes
 Once you uploaded your website to S3 and enabled website hosting you can access your website through a very long URL. Like this one: [www.savjee.be.s3-website-eu-west-1.amazonaws.com](http://www.savjee.be.s3-website-eu-west-1.amazonaws.com). No way a user can remember that!

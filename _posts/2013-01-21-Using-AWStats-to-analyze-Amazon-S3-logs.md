@@ -83,7 +83,51 @@ s3cmd --configure</pre>
 
 Now that everything is ready we need a script to automate everything:
 
-<script src="https://gist.github.com/4580498.js"></script>
+{% highlight bash %}
+#!/bin/bash
+ 
+# s3-to-AWStat
+# Copyright 2013 Xavier Decuyper
+# http://www.savjee.be
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+ 
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+ 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+##
+# CONFIGURATION
+##
+log_file="/home/xavier/s3logs/script.log" # File to log this scripts output
+log_dir="/home/xavier/s3logs/" # Directory to store the S3 log files (access.log is also stored here)
+bucket_name="logs.savjee.be" # Name of the bucket where log files are store
+config_name="savjee.be" # Name of the AWStats site
+ 
+# Download all log files from S3
+echo "=========== Downloading new files from S3 ===========" >> $log_file
+s3cmd sync --delete-removed s3://${bucket_name}/ ${log_dir}tmp/ >> $log_file
+ 
+# Merge all logs in access.log
+cat ${log_dir}/tmp/* > ${log_dir}access.log
+ 
+# Run AWStats to update reports
+echo "=========== Updating AWStats ===========" >> $log_file
+sudo /usr/lib/cgi-bin/awstats.pl -config=${config_name} -update >> $log_file
+{% endhighlight %}
 
 Put the script on your server and make sure to change the configuration options at the top of the script before you continue. (Contribute to the script: [gist.github.com/4580498](https://gist.github.com/4580498))
 

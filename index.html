@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in paginator.posts %}
+{% for post in site.posts limit: 3 %}
 <div class="post">
 	<div class="post-header">
 
@@ -25,6 +25,21 @@ title: Home
 
 </div>
 {% endfor %}
+
+<div class='post'>
+	<div class='post-header'>
+		<div class='post-title'><h1>Older posts</h1></div>
+	</div>
+
+	<div class="post-content">
+		<ul style='list-style:none;margin:0;padding:0 0 1em 0;'>
+			{% for post in site.posts limit: 20 offset: 3 %}
+				<li><a href='{{post.url}}'><span style='color: #666; display:inline-block; width: 100px;'>{{post.date | date_to_string}}</span>{{post.title}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+</div>
 
 <p style="text-align:center">
 	{% if paginator.previous_page %}

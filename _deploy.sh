@@ -1,6 +1,6 @@
 # Run Jekyll
 echo "-> Running Jekyll"
-Jekyll
+Jekyll build
 
 # Upload to S3!
 echo "\n\n-> Uploading to S3"

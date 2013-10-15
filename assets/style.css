@@ -167,6 +167,18 @@ pre{
 	text-decoration: underline;
 }
 
+.olderposts-list{
+	list-style:none;
+	margin:0;
+	padding:0 0 1em 0;
+}
+
+.olderposts-date{
+	color: #666;
+	display:inline-block;
+	width: 100px;
+}
+
 /* Style for the comment box beneath a post */
 #comments{
 	background: #DDD;

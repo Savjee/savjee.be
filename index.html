@@ -31,10 +31,10 @@ title: Home
 		<div class='post-title'><h1>Older posts</h1></div>
 	</div>
 
-	<div class="post-content">
-		<ul style='list-style:none;margin:0;padding:0 0 1em 0;'>
+	<div class='post-content'>
+		<ul class='olderposts-list'>
 			{% for post in site.posts limit: 20 offset: 3 %}
-				<li><a href='{{post.url}}'><span style='color: #666; display:inline-block; width: 100px;'>{{post.date | date_to_string}}</span>{{post.title}}</a></li>
+				<li><a href='{{post.url}}'><span class='olderposts-date'>{{post.date | date_to_string}}</span>{{post.title}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>

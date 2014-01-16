@@ -10,6 +10,7 @@ A few months ago I had the idea to start blogging. So what do you do when you wa
 For a moment I was really impressed. In a matter of minutes you can set up a blog and start writing. Add some photos, tweak the theme, add a menu and you're ready. Really easy.
 
 The downside for this flexibility is performance and efficiency. Wordpress made my site incredibly slow (I have a cheap web host). My old website loaded under a second and Wordpress took 2 to 3 seconds! That's unacceptable so I started to look for alternatives.
+
 <!--more-->
 
 Before I switched to Wordpress I made every single web page by hand in TextMate. It seems like a lot of work but I only had a few pages. It gave me complete control over my website. Every page could be entirely different. I choose where to include a big script and where not to. In Wordpress you don't have this flexibility!

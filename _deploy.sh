@@ -54,4 +54,4 @@ s3cmd sync --exclude '*.*' --include '*.html' --add-header='Content-Type: text/h
 
 # Sync everything else
 yellow '--> Syncing everything else'
-s3cmd sync --exclude '.DS_Store' --delete-removed $SITE_DIR $BUCKET
+s3cmd sync --delete-removed $SITE_DIR $BUCKET

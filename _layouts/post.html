@@ -1,29 +1,18 @@
 ---
 layout: default
 ---
-<div class="post">
-	<div class="post-header">
 
-		<h1 class="post-title">
-			<a href="{{ post.url }}">{{ page.title }}</a>
-		</h1>
+<section class='post'>
+	<header class='post-header'>
+		<h2 class='post-title'> {{ page.title }} </h2>
+		<p class='post-meta'>
+			Posted on <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}">{{ page.date | date_to_string }}</time>
+		</p>
 
-		<div class="post-meta">
-			<p>Posted on <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}">{{ page.date | date_to_string }}</time></p>
+		<div class='post-description'>
+			{{ content }}
 		</div>
-
-	</div>
-
-	<div class="post-content">
-		{{ content }}
-	</div>
-
-	<div class="share">
-		Share on <a href="https://twitter.com/intent/tweet?text=%22{{ page.title | url_encode }}%22&url=http://www.savjee.be{{ page.url }}" rel="nofollow" target="_blank">Twitter</a> or <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.savjee.be{{ page.url }}" rel="nofollow" target="_blank">Facebook</a>
-	</div>
-
-</div>
-
+		
 <div id="comments">
 	<div id="disqus_thread"></div>
 	<script type="text/javascript">

@@ -32,7 +32,7 @@ Jekyll build
 
 
 red '--> Gzipping all html, css and js files'
-find $SITE_DIR \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec gzip -9 {} \; -exec mv {}.gz {} \;
+find $SITE_DIR \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec gzip -9 -n {} \; -exec mv {}.gz {} \;
 
 
 yellow '--> Uploading css files'
@@ -49,7 +49,7 @@ s3cmd sync --exclude '*.*' --include '*.png' --include '*.jpg' --include '*.ico'
 
 # Sync html files (Cache: 2 hours)
 yellow '--> Uploading html files'
-s3cmd sync --exclude '*.*' --include '*.html' --add-header='Content-Type: text/html' --add-header='Cache-Control: max-age=7200, must-revalidate' --add-header="Content-Encoding: gzip" $SITE_DIR $BUCKET
+s3cmd sync --exclude '*.*' --include '*.html' --add-header='Content-Type: text/html' --add-header='Cache-Control: max-age=7200, must-revalidate' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 
 
 # Sync everything else

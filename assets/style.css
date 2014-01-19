@@ -95,6 +95,26 @@ a:focus {
     color: #444;
     line-height: 1.8em;
 }
+.post-description h1{ /* style for h2 */
+    font-size: 1.5em;
+    margin: .83em 0;
+}
+
+.post-description h2{ /* style for h3 */
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+.post-description h3{ /* style for h4 */ 
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+pre{
+    font-family: Consolas,"Andale Mono",Monaco,Courier,"Courier New",sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.3em !important;
+    background: #f4f4f4;
+    padding: 15px;
+}
 .post-meta {
     color: #999;
     font-size: 90%;

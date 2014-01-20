@@ -14,7 +14,7 @@ layout: nil
 		<email>xavier.decuyper@gmail.com</email>
 	</author>
 
-	{% for post in site.posts %}
+	{% for post in site.posts limit 15 %}
 	<entry>
 		<title>{{ post.title | xml_escape }}</title>
 		<link type='text/html' href='http://www.savjee.be{{ post.url }}'/>
@@ -25,6 +25,7 @@ layout: nil
 			<name>Xavier Decuyper</name>
 			<uri>http://www.savjee.be/</uri>
 		</author>
+
 		<content type='html'>{{ post.content | preview | xml_escape }}</content>
 	</entry>
   {% endfor %}

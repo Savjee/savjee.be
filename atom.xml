@@ -1,13 +1,13 @@
 ---
 layout: nil
 ---
-<?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<?xml version='1.0'?>
+<feed xmlns='http://www.w3.org/2005/Atom'>
 	<title>www.savjee.be</title>
-	<link href="http://www.savjee.be/"/>
-	<link type="application/atom+xml" rel="self" href="http://www.savjee.be/atom.xml"/>
+	<link href='http://www.savjee.be/'/>
+	<link type='application/atom+xml' rel='self' href='http://www.savjee.be/atom.xml'/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://www.savjee.be</id>
+	<id>http://www.savjee.be/</id>
 
 	<author>
 		<name>Xavier Decuyper</name>
@@ -17,7 +17,7 @@ layout: nil
 	{% for post in site.posts %}
 	<entry>
 		<title>{{ post.title | xml_escape }}</title>
-		<link type="text/html" href="http://www.savjee.be{{ post.url }}"/>
+		<link type='text/html' href='http://www.savjee.be{{ post.url }}'/>
 		<id>http://www.savjee.be{{ post.url }}</id>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 
@@ -25,7 +25,7 @@ layout: nil
 			<name>Xavier Decuyper</name>
 			<uri>http://www.savjee.be/</uri>
 		</author>
-		<content type="html">{{ post.content | preview | xml_escape }}</content>
+		<content type='html'>{{ post.content | preview | xml_escape }}</content>
 	</entry>
   {% endfor %}
 </feed>

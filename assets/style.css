@@ -78,6 +78,9 @@ a:focus {
     padding: 2em 3em 0;
 }
 
+.content, .footer{
+    max-width: 900px;
+}
 .post {
     padding-bottom: 2em;
 }

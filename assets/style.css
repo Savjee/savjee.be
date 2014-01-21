@@ -119,11 +119,16 @@ a:focus {
     margin: 1.33em 0;
 }
 pre{
-    font-family: Consolas,"Andale Mono",Monaco,Courier,"Courier New",sans-serif !important;
-    font-size: 13px !important;
     line-height: 1.3em !important;
     background: #f4f4f4;
     padding: 15px;
+}
+pre, p code{
+    font-family: Consolas,"Andale Mono",Monaco,Courier,"Courier New",sans-serif !important;
+    font-size: 14px !important;
+}
+p code{
+    background-color: #F4F4F4;
 }
 .post-meta {
     color: #999;

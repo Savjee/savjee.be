@@ -146,7 +146,7 @@ p code{
     margin-top: 20px;
 }
 .footer a, .footer a:visited, .footer span {
-    color: #ccc;
+    color: #ccc !important;
     font-size: 80%;
 }
 .footer .pure-menu a:hover,

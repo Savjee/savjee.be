@@ -79,7 +79,8 @@ a:focus {
 }
 
 .content, .footer{
-    max-width: 900px;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .content img{
@@ -135,12 +136,14 @@ p code{
     font-size: 90%;
     margin: 0;
 }
-.older-posts{
+.older-posts, .list-reduced-padding{
 	padding: 0 0 0 20px;
 }
 .footer {
     text-align: center;
     padding: 1em 0;
+    border-top: solid 1px #F4F4F4;
+    margin-top: 20px;
 }
 .footer a, .footer a:visited, .footer span {
     color: #ccc;

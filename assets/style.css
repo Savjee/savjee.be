@@ -126,6 +126,10 @@ pre{
     line-height: 1.3em !important;
     background: #f4f4f4;
     padding: 15px;
+    overflow-x: auto;
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre !important;
 }
 pre, p code{
     font-family: Consolas,"Andale Mono",Monaco,Courier,"Courier New",sans-serif !important;

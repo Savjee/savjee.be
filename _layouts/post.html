@@ -6,7 +6,7 @@ layout: default
 	<header class='post-header'>
 		<h2 class='post-title'> {{ page.title }} </h2>
 		<p class='post-meta'>
-			Posted on <time itemprop="datePublished" datetime="{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}">{{ page.date | date_to_string }}</time>
+			Posted on <time itemprop='datePublished' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
 		</p>
 
 		<div class='post-description'>
@@ -14,16 +14,16 @@ layout: default
 		</div>
 </section>
 
-<div id="comments">
-	<div id="disqus_thread"></div>
-	<script type="text/javascript">
+<div id='comments'>
+	<div id='disqus_thread'></div>
+	<script type='text/javascript'>
 		var disqus_shortname = 'savjee';
 		(function() {
 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 		})();
-    </script>
+	</script>
 
 	<noscript>Please enable JavaScript to view the comments</noscript>
 </div>

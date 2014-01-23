@@ -132,7 +132,7 @@ pre{
     white-space: pre !important;
 }
 pre, p code{
-    font-family: Consolas,"Andale Mono",Monaco,Courier,"Courier New",sans-serif !important;
+    font-family: Monospace, Courier,"Courier New" !important;
     font-size: 14px !important;
 }
 p code{

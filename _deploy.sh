@@ -1,7 +1,7 @@
 ##
 # Configuration options
 ##
-BUCKET='s3://gzip.savjee.be/'
+BUCKET='s3://www.savjee.be/'
 SITE_DIR='_site/'
 
 ##

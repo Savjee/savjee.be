@@ -1,19 +1,14 @@
 ---
-layout: default
-title: Page not found
+layout: page
+title: 404 - Page not found
 ---
 
-<div class="post">
+<p>Oops. Seems like the page you're looking for doesn't exist anymore...</p>
 
-	<div class="post-header">
+<p>Looking for a recent post?</p>
 
-		<h1 class="post-title">
-			404 - Page Not Found
-		</h1>
-	</div>
-
-	<div class="post-content">
-		<p>Oops. Seems like the page you're looking for doesn't exist anymore...</p>
-	</div>
-
-</div>
+<ul class='list-reduced-padding'>
+	{% for post in site.posts limit 10 %}
+		<li><a href='{{post.url}}'>{{ post.title }}</a></li>
+	{% endfor %}
+</ul>

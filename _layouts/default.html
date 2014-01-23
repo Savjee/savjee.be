@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
 	<title>{{page.title}} | Savjee.be</title>
-	<link rel="stylesheet" type="text/css" href="{% minified_css_file %}">
-	<link rel="alternate" type="application/rss+xml" title="savjee.be Feed" href="http://www.savjee.be/atom.xml">
-	<meta name='description' content="{{ page.quote }}"/>
-	<meta name='keywords' content="{{ page.keywords }}"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel='stylesheet' type='text/css' href='/assets/style.css'>
+	<link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='http://www.savjee.be/atom.xml'>
+	<meta name='description' content='{{ page.quote }}'/>
+	<meta name='keywords' content='{{ page.keywords }}'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+	<link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'>
+	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
 </head>
 <body>
 
-<div id="branding">
-	<h1 id="site-title"><a href="/">Savjee.be</a></h1>
+<div class='pure-g-r' id='layout'>
+	<div class='sidebar pure-u'>
+		<header class='header'>
+			<hgroup>
+				<h1 class='brand-title'><a href='/index.html'>Savjee.be</a></h1>
+			</hgroup>
 
-	<ul id="site-menu">
-		<li><a href="/">Home</a></li>
-		<li><a href="/anagramsolver.html">Anagram Solver</a></li>
-		<li><a href="/tshark.html">Tshark</a></li>
-		<li><a href="/about.html">About Me</a></li>
-	</ul>
-</div>
+			<nav class='nav'>
+				<ul class='nav-list'>
+					<li class='nav-item'>
+						<a href='/anagramsolver.html'>Anagram Solver</a>
+					</li>
+					<li class='nav-item'>
+						<a href='/tshark.html'>Tshark</a>
+					</li>
+					<li class='nav-item'>
+						<a href='/about.html'>About Me</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
 
-
-<div id="page">
-	<div id="main">
-		<div id="primary">
+	<div class='pure-u-1'>
+		<div class='content'>
 			{{ content }}
 		</div>
-	</div>
 
-	<div id="footer">
-		Copyright 2013, Xavier Decuyper<br>
+		<footer class='footer'>
+			<span>Copyright 2014, Xavier Decuyper</span>
+
+			<div class='pure-menu pure-menu-horizontal pure-menu-open'>
+				<ul>
+					<li><a href='http://www.savjee.be/atom.xml'>RSS feed</a></li>
+					<li><a href='https://plus.google.com/+XavierDecuyper?rel=author'>Google+</a></li>
+					<li><a href='https://twitter.com/Xafke/'>Twitter</a></li>
+					<li><a href='https://github.com/Savjee'>GitHub</a></li>
+				</ul>
+			</div>
+		</footer>
+
 	</div>
 </div>
 
-<script type="text/javascript">
+<script type='text/javascript'>
 // Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-21432611-1']);
@@ -54,7 +74,6 @@ _gaq.push(['_trackPageview']);
 function trackOutboundLink(link) {
 	try{
 		_gaq.push(['_trackEvent', 'outbound-link', link]);
-		setTimeout('document.location = "' + link + '"', 100);
 	}catch(e){}
 }
 
@@ -62,16 +81,13 @@ function trackOutboundLink(link) {
 	var links = document.links;
 
 	for(i=0; i<=links.length -1; i++){
-
-		if(links[i].href.indexOf("savjee.be/") == -1){
-			links[i].onclick = function(){
+		if(links[i].hostname != window.location.hostname){
+			links[i].target = '_blank'; // open external links in new tab
+			links[i].onclick = function(){ // track event
 				trackOutboundLink(this.href);
-				return false;
 			}
 		}
-
 	}
-
 })();
 </script>
 </body>

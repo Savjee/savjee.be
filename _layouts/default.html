@@ -74,7 +74,6 @@ _gaq.push(['_trackPageview']);
 function trackOutboundLink(link) {
 	try{
 		_gaq.push(['_trackEvent', 'outbound-link', link]);
-		setTimeout('document.location = "' + link + '"', 100);
 	}catch(e){}
 }
 
@@ -82,16 +81,13 @@ function trackOutboundLink(link) {
 	var links = document.links;
 
 	for(i=0; i<=links.length -1; i++){
-
-		if(links[i].href.indexOf("savjee.be/") == -1){
-			links[i].onclick = function(){
+		if(links[i].hostname != window.location.hostname){
+			links[i].target = '_blank'; // open external links in new tab
+			links[i].onclick = function(){ // track event
 				trackOutboundLink(this.href);
-				return false;
 			}
 		}
-
 	}
-
 })();
 </script>
 </body>

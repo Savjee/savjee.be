@@ -3,6 +3,7 @@
 ##
 BUCKET='s3://gzip.savjee.be/'
 SITE_DIR='_site/'
+MAX_SITE_WIDTH=850
 
 ##
 # Color stuff
@@ -33,6 +34,9 @@ Jekyll build
 
 red '--> Gzipping all html, css and js files'
 find $SITE_DIR \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec gzip -9 -n {} \; -exec mv {}.gz {} \;
+
+yellow '--> Resizing images'
+find $SITE_DIR \( -iname '*.jpg' -o -iname '*.png' \) -exec convert -verbose -resize $MAX_SITE_WIDTH\> {} {} \;
 
 
 yellow '--> Uploading css files'

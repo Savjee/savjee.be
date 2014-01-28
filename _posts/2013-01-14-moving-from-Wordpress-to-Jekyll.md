@@ -148,6 +148,6 @@ That's it! Everytime Jekyll generates my website, the stylesheets are compressed
 
 
 # Future & conclusion
-To increase the uptime and performance of my blog I moved it to Amazon S3. I can automatically deploy my blog to S3 in a matter of seconds. How I did this is for a future blog post!
+To increase the uptime and performance of my blog [I moved it to Amazon S3]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}). I can automatically deploy my blog to S3 in a matter of seconds.
 
 Moving your blog over to Jekyll can be a lot of work depending on the size of your blog. But if you're comfortable with a terminal and want a high performance blog it's definitely worth it!

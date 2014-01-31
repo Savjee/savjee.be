@@ -1,9 +1,22 @@
 ##
 # Configuration options
 ##
-BUCKET='s3://www.savjee.be/'
+STAGING_BUCKET='s3://staging.savjee.be/'
+LIVE_BUCKET='s3://www.savjee.be/'
 SITE_DIR='_site/'
 
+##
+# Usage
+##
+usage() {
+cat << _EOF_
+Usage: ${0} [staging | live]
+    
+    staging		Deploy to the staging bucket
+    live		Deploy to the live (www) bucket
+_EOF_
+}
+ 
 ##
 # Color stuff
 ##
@@ -27,6 +40,23 @@ function yellow() {
 ##
 # Actual script
 ##
+
+# Expecting at least 1 parameter
+if [[ "$#" -ne "1" ]]; then
+    echo "Expected 1 argument, got $#" >&2
+    usage
+    exit 2
+fi
+
+if [[ "$1" = "live" ]]; then
+	BUCKET=$LIVE_BUCKET
+	green 'Deploying to live bucket'
+else
+	BUCKET=$STAGING_BUCKET
+	green 'Deploying to staging bucket'
+fi
+
+
 red '--> Running Jekyll'
 Jekyll build
 

@@ -1,0 +1,11 @@
+/* TEAM */
+	Geek & Site owner: Xavier Decuyper
+	Site: xavier.decuyper [AT] gmail.com
+	Twitter: @Xafke
+	Location: Ghent, Belgium.
+
+
+/* SITE */
+	Standards: HTML5, CSS3
+	Components: Pure (Yahoo CSS framework)
+	Software: Jekyll, s3cmd

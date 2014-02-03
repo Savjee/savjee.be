@@ -1,0 +1,241 @@
+<html>
+<head>
+	<title>jsTixClock - Xavier Decuyper</title>
+	<style type='text/css'>
+		body{
+			background-color: #000;
+		}
+
+		#tixClock{
+			display:table;
+			height: 100%;
+			width: 1240px;
+			margin: 0 auto;
+		}
+
+		/* Stuff to valign the tixClock */
+		#cell{
+			display:table-cell;
+			vertical-align:middle;
+		}
+
+		#group_0, #group_1, #group_2, #group_3{
+			float:left;
+			margin: 20px;
+		}
+
+		#group_0{
+			width: 120px;
+		}
+
+		#group_1, #group_3{
+			width: 360px;
+		}
+
+		#group_2{
+			width: 240px;
+		}
+
+		#group_0 > div, #group_1 > div, #group_2 > div, #group_3 > div{
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			background-color: #1C1C1C;
+			float:left;
+		}
+
+		#group_0 .active, #group_3 .active{
+			background-color: red !important;
+		}
+
+		#group_1 .active{
+			background-color: green !important;
+		}
+
+		#group_2 .active{
+			background-color: blue !important;
+		}
+
+		.active{
+			box-shadow:inset 0px 0px 40px #000;
+		}
+	</style>
+</head>
+<body>
+	<div id='tixClock'>
+		<div id='cell'>
+			<div id='center'>
+			<div id='group_0'>
+				<div id='0_0'> </div>
+				<div id='0_1'> </div>
+				<div id='0_2'> </div>
+			</div>
+
+			<div id='group_1'>
+				<div id='1_0' class='active'> </div>
+				<div id='1_1' class='active'> </div>
+				<div id='1_2' class='active'> </div>
+
+				<div id='1_3'> </div>
+				<div id='1_4' class='active'> </div>
+				<div id='1_5'> </div>
+
+				<div id='1_6'> </div>
+				<div id='1_7' class='active'> </div>
+				<div id='1_8'> </div>
+			</div>
+
+			<div id='group_2'>
+				<div id='2_0'> </div>
+				<div id='2_1' class='active'> </div>
+
+				<div id='2_2'> </div>
+				<div id='2_3' class='active'> </div>
+
+				<div id='2_4'> </div>
+				<div id='2_5' class='active'> </div>
+			</div>
+
+			<div id='group_3'>
+				<div id='3_0' class='active'> </div>
+				<div id='3_1'> </div>
+				<div id='3_2' class='active'> </div>
+
+				<div id='3_3'> </div>
+				<div id='3_4' class='active'> </div>
+				<div id='3_5'> </div>
+
+				<div id='3_6' class='active'> </div>
+				<div id='3_7'> </div>
+				<div id='3_8' class='active'> </div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type='text/javascript'>
+		var arr_leds = [2, 8, 5, 8]; // amount of LEDs in each group
+
+
+		/**
+		 * Function that generates a random number between two values
+		 *
+		 * @param	integer		min
+		 * @param	integer		max
+		 */
+		function random_number (min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+
+		/**
+		 * Function that checks if a givin string is in the givin array
+		 *
+		 * @param	string	string
+		 * @param	array 	array
+		 * @return	bool
+		 */
+		function inArray(string, array){
+			var output = false;
+
+			for(i=0; i <= array.length; i++){
+				if(string == array[i]){
+					output = true;
+				}
+			}
+
+			return output;
+		}
+
+
+		/**
+		 * Function that adds leading zero's to a givin number
+		 */
+		function pad(number, length) {
+			var str = '' + number;
+
+			while (str.length < length) {
+				str = '0' + str;
+			}
+
+			return str;
+		}
+
+
+		/**
+		 * Function that colors a given amount of LEDs in a given group
+		 *
+		 * @param	integer		amount
+		 * @param	integer		group
+		 */
+		function colorLeds(amount, group){
+			var arr_colored = [];
+
+			while( arr_colored.length != amount ){
+
+				var num = random_number(0, arr_leds[group]);
+
+				if( !inArray(num, arr_colored) ){
+
+					document.getElementById(group + '_' + num).className = 'active';
+
+					arr_colored.push(num);
+				}
+			}
+		}
+
+
+		/**
+		 * Function that clears all active LEDs
+		 */
+		function clearLeds(){
+			var elements = document.getElementsByTagName('div');
+
+			for(i=0; i<=elements.length-1; i++){
+				if(elements[i].className == 'active'){
+					elements[i].className = '';
+				}
+			}
+		}
+
+		/**
+		 * Function to update the time of the pixClock
+		 */
+		function updateTime(){
+			var currentTime = new Date()
+
+			var hour = pad( currentTime.getHours(), 2);
+			var minutes = pad( currentTime.getMinutes(), 2);
+
+			var hour_1 = hour.substr(0,1);
+			var hour_2 = hour.substr(1,2);
+
+			var minute_1 = minutes.substr(0,1);
+			var minute_2 = minutes.substr(1,2);
+
+			colorLeds(hour_1, 0);
+			colorLeds(hour_2, 1);
+			colorLeds(minute_1, 2);
+			colorLeds(minute_2, 3);
+		}
+
+		setInterval(function(){
+			clearLeds();
+			updateTime();
+		}, 4000);
+
+		// Google Analytics
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-21432611-1']);
+		_gaq.push(['_setDomainName', 'savjee.be']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+	</script>
+</body>
+</html>

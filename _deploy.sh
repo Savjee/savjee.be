@@ -68,6 +68,7 @@ find $SITE_DIR \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec gz
 yellow '--> Resizing images'
 find $SITE_DIR \( -iname '*.jpg' -o -iname '*.png' \) -exec convert -verbose -resize $MAX_SITE_WIDTH\> {} {} \;
 
+
 yellow '--> Uploading css files'
 s3cmd sync --exclude '*.*' --include '*.css' --add-header='Content-Type: text/css' --add-header='Cache-Control: max-age=604800' --add-header='Content-Encoding: gzip' $SITE_DIR $BUCKET
 

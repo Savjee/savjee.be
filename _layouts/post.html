@@ -6,7 +6,7 @@ layout: default
 	<header class='post-header'>
 		<h2 class='post-title'> {{ page.title }} </h2>
 		<p class='post-meta'>
-			Posted on <time itemprop='datePublished' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
+			Posted on <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
 		</p>
 	</header>
 

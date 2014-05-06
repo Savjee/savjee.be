@@ -111,6 +111,14 @@ a:focus {
 .pure-menu a{
     padding: 5px 5px !important;
 }
+blockquote{
+    font-family: "Georgia",serif;
+    color: #666;
+    font-style: italic;
+    line-height: 1.8;
+    border-left: 5px solid #DDD;
+    padding-left: 1.5em;
+}
 pre{
     line-height: 1.3em !important;
     background: #f4f4f4;

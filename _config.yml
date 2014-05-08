@@ -3,5 +3,5 @@ markdown_ext: markdown,mkd,mkdn,md
 pygments: true
 permalink: /:year/:month/:title/
 safe: false
-exclude: ['_deploy.sh']
+exclude: ['s3_website.yml']
 paginate: 3

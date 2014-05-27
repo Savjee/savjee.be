@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Sync iTunes Library between computers with BitTorrent Sync'
+keywords: Bittorrent, sync, btsync, itunes, music, library
 quote: Use BitTorrent Sync to keep your iTunes Library in sync between several computers or even between your mobile devices. With no limits, BTSync is the best option available for syncing large media files!
 ---
 

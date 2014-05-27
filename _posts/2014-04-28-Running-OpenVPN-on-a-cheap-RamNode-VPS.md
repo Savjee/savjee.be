@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Running OpenVPN on a cheap RamNode VPS
-quote: 
+keywords: OpenVPN, VPN, privacy, online, VPS, server, ramnode, protect, tunnel
+quote: OpenVPN protects your privacy online. Get your own VPN running with a cheap RamNode VPS.
 ---
 
 When I'm on the road and connecting to free public WiFi access points, I always use [OpenVPN](http://en.wikipedia.org/wiki/OpenVPN) to prevent my traffic from being intercepted by others. It's also very practical to circumvent the restrictive firewall at my school.

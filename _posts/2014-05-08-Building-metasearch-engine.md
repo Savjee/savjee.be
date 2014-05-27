@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Building a meta-search engine
+keywords: Metasearch, search engine, PHP, MariaDB, Sphinx, search, ranking, database, index
 quote: In this post I'll walk you through the technical aspects of building a meta-search engine with PHP, MariaDB and Sphinx. Capable of searching through millions of records!
 ---
 

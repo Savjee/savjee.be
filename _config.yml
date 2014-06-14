@@ -1,6 +1,6 @@
 markdown: redcarpet
 markdown_ext: markdown,mkd,mkdn,md
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:title/
 safe: false
 exclude: ['s3_website.yml']

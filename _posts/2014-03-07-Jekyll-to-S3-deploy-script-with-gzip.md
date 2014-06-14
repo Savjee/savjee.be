@@ -131,7 +131,7 @@ yellow '--> Syncing everything else'
 s3cmd sync --delete-removed $SITE_DIR $BUCKET
 {% endhighlight %}
 
-(The full script is available [on GitHub](https://github.com/Savjee/savjee.be/blob/master/_deploy.sh))
+(The full script is available [on GitHub](https://github.com/Savjee/savjee.be/blob/1a84362c4424ecd2ee7d368298ed30c218a2d66a/_deploy.sh))
 
 With one command I can deploy my website to my staging environment (``sh _deploy.sh staging``) or to my production environment (``sh _deploy.sh live``). The script is pretty simple and I'm sure there's room for improvement.
 

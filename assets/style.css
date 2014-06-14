@@ -13,6 +13,10 @@ a:focus {
     text-decoration: underline;
 }
 
+.pure-button:hover{
+	text-decoration: none !important;
+}
+
 /* LAYOUT CSS */
 #layout {
     padding-left: 25%;

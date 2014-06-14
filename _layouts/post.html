@@ -13,6 +13,11 @@ layout: default
 		<div class='post-description'>
 			{{ content }}
 		</div>
+	<div style='margin: 25px 0; text-align:center'>
+		<a class='pure-button' href="http://twitter.com/share?url={{'http://www.savjee.be' | cgi_escape}}{{page.url | cgi_escape}}&text={{page.title | cgi_escape}}&via=Xafke" target='_blank'>
+	    	Like it? Tweet it.
+		</a>
+	</div>
 </section>
 
 <div id='comments'>

@@ -112,6 +112,9 @@ a:focus {
     font-size: 1em;
     margin: 1.33em 0;
 }
+.post-description img{
+	border: solid 1px #ccc;
+}
 .pure-menu a{
     padding: 5px 5px !important;
 }

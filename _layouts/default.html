@@ -69,23 +69,13 @@ ga('create', 'UA-21432611-1', 'savjee.be');
 ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
-
-// Track external links
-function trackOutboundLink(link) {
-	try{
-		ga('send', 'event', 'outbound-link', link);
-	}catch(e){}
-}
-
+// Open external links in new tab
 (window.onload = function(){
 	var links = document.links;
 
 	for(i=0; i<=links.length -1; i++){
 		if(links[i].hostname != window.location.hostname){
-			links[i].target = '_blank'; // open external links in new tab
-			links[i].onclick = function(){ // track event
-				trackOutboundLink(this.href);
-			}
+			links[i].target = '_blank';
 		}
 	}
 })();

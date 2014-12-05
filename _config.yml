@@ -5,3 +5,10 @@ permalink: /:year/:month/:title/
 safe: false
 exclude: ['s3_website.yml']
 paginate: 3
+
+asset_bundler:
+  compress:
+    js: false
+    css: yui
+  base_path: /bundles/
+  dev: false

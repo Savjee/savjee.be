@@ -3,7 +3,6 @@
 <head>
 	<meta charset='UTF-8'>
 	<title>{{page.title}} | Savjee.be</title>
-	<link rel='stylesheet' type='text/css' href='/assets/style.css'>
 	<link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='http://www.savjee.be/atom.xml'>
 	<meta name='description' content='{{ page.quote }}'/>
 	<meta name='keywords' content='{{ page.keywords }}'/>
@@ -11,6 +10,8 @@
 	<meta name='theme-color' content='#D2211F'>
 	<link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'>
 	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
+
+	{% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
 </head>
 <body>
 

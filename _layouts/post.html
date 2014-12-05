@@ -25,10 +25,24 @@ layout: default
 	(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 	
-	<div style='margin: 25px 0; text-align:center'>
-		<a class='pure-button' href="http://twitter.com/share?url={{'http://www.savjee.be' | cgi_escape}}{{page.url | cgi_escape}}&text={{page.title | cgi_escape}}&via=Xafke" target='_blank'>
-	    	Like it? Tweet it.
-		</a>
+	<div class='share-button-container'>
+		<div class='share-button share-button-twitter' data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+			<div clas='box'>
+				<a href="http://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke" target='_blank'>
+					<span class='share'>Tweet</span>
+					<span class='count'>0</span>
+				</a>
+			</div>
+		</div>
+
+		<div style="" class="share-button share-button-facebook" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+			<div class="box">
+				<a href='#'>
+					<span class='share'>Share</span>
+					<span class='count'>0</span>
+				</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -45,3 +59,5 @@ layout: default
 
 	<noscript>Please enable JavaScript to view the comments</noscript>
 </div>
+
+{% bundle %} [/assets/js/StaticShareButtons.js] {% endbundle %}

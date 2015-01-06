@@ -82,6 +82,7 @@ a:focus {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width:100%;
 }
 .post {
     padding-bottom: 2em;
@@ -178,8 +179,9 @@ p code{
     .header {
         text-align: center;
         top: auto;
-        margin: 3em auto;
+        margin: 0 auto;
         position: static;
+        padding: 3em 0;
     }
     #layout {
         padding: 0;

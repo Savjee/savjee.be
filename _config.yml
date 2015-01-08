@@ -8,7 +8,7 @@ paginate: 3
 
 asset_bundler:
   compress:
-    js: false
+    js: yui
     css: yui
   base_path: /bundles/
   dev: false

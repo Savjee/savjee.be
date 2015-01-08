@@ -143,6 +143,9 @@ pre, p code{
 p code{
     background-color: #F4F4F4;
 }
+th{
+    background-color: #e0e0e0;
+}
 .post-meta {
     color: #999;
     font-size: 90%;

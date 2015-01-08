@@ -1,0 +1,80 @@
+.share-button-container{
+	text-align:center;
+	margin: 20px 0;
+	padding: 10px 0;
+	border-top: solid 1px #e4e4e4;
+	border-bottom: solid 1px #e4e4e4;
+}
+
+.share-button-container p{
+	margin:0px 0 10px 0;
+}
+
+.share-button {
+	margin-left: 20px;
+}
+
+.share-button a{
+	text-decoration:none;
+}
+
+.share-button, .share-button .count{
+	display:inline-block;
+}
+
+.share-button .count, .share-button .share {
+	font-family:"Helvetica Neue";
+	font-weight:700;
+	text-decoration:none;
+	text-align:center;
+}
+
+.share-button .count {
+	background-color:#F1F3F6;
+	color:#333;
+	font-size:12px;
+	line-height:25px;
+	margin-left:4px;
+	text-transform:uppercase;
+	min-width:40px;
+}
+
+.share-button .share {
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	color:#FFF;
+	display:inline;
+	font-size:13px;
+	width:40px;
+	padding:4px 8px;
+}
+
+.share-button-twitter .share {
+	background-color:#00ABF0;
+}
+
+.share-button-facebook .share {
+	background-color:#3b5998;
+}
+
+.share-button-googleplus .share {
+	background-color:#F53424;
+}
+
+.share-button-twitter .share:active,.share-button-facebook .share:active,.share-button-googleplus .share:active {
+	background-color:#353535;
+}
+
+/* Responsive */
+@media (max-width: 925px) {
+	.share-button .share{
+		font-size:15px;
+		padding: 8px 16px; /* Double the padding */
+	}
+
+	.share-button .count{
+		font-size:14px;
+		line-height: 32px;
+	}
+}

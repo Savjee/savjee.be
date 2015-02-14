@@ -30,6 +30,14 @@ a:focus {
     margin-left: -25%;
     background: #c0392b;
     color: #fff;
+
+    /* Background! */
+    background-color: #1f1815;
+    background-attachment: fixed;
+    background-image: url("/assets/img/bg.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 }
 .header {
     margin: 50% 2em 0;

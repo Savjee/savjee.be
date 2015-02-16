@@ -2,3 +2,4 @@ _site
 _drafts
 s3_website.yml
 _asset_bundler_cache
+.idea

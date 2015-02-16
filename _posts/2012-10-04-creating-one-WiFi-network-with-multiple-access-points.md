@@ -23,6 +23,6 @@ Once configured, devices connected to our WiFi network will automatically switch
 
 Some people would suggest buying a WiFi repeater. However, a repeater uses WiFi as backhaul and slows down every request you make. Take my phone for example: If I would use a WiFi repeater, my phone would send a request to the repeater over WiFi. The repeater would then send that same request to my primary router (again) over WiFi. This slows down transfer speeds and adds more latency. If you use a fast ethernet connection as backhaul you keep the latency low and transfer speeds high.
 
-![Diagram of the network setup](/assets/img/network-diagram-wifi.png)
+![Diagram of the network setup](/uploads/wifi-network-multiple-access-points/network-diagram-wifi.png)
 
 I’ve tested this setup on a Macbook Pro (running both Windows and OS X), iPad and iPhone. All these devices switch without problem between these networks when needed. I have noticed that the iOS devices switch much quicker between AP’s then Windows or OS X machines.

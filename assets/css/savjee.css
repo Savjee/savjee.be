@@ -193,6 +193,11 @@ th{
         width: 100%;
         position: relative;
         margin: 0;
+
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        left: auto;
     }
    .nav-item{
             display: inline-block;

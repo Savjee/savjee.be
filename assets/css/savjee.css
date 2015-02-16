@@ -4,13 +4,26 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-a {
-    text-decoration: none;
-    color: rgb(142, 142, 214);
+body{
+    font-family: 'Source Sans Pro', sans-serif;
 }
-a:hover,
-a:focus {
-    text-decoration: underline;
+
+a {
+    color: #49bf9d;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.content p>a{
+    transition: color .2s ease-in-out,border-color .2s ease-in-out;
+    border-bottom: dotted 1px;
+}
+
+.content p>a:hover, .content p>a:focus{
+    border-bottom-color:transparent;
 }
 
 .pure-button:hover{
@@ -105,7 +118,6 @@ a:focus {
 	text-decoration:none;
 }
 .post-description {
-    font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
 }
@@ -128,7 +140,6 @@ a:focus {
     padding: 5px 5px !important;
 }
 blockquote{
-    font-family: "Georgia",serif;
     color: #666;
     font-style: italic;
     line-height: 1.8;

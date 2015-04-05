@@ -22,6 +22,14 @@
 		<meta name="twitter:title" content="{{page.title}}">
 		<meta name="twitter:description" content="{{ page.content | preview }}">
 		<meta name="twitter:image:src" content="http://www.savjee.be/{{page.thumbnail}}">
+
+		<!-- Facebook tags -->
+		<meta property="og:title" content="{{page.title}}" />
+		<meta property="og:site_name" content="Savjee.be"/>
+		<meta property="og:url" content="http://www.savjee.be{{page.url}}" />
+		<meta property="og:description" content="{{ page.content | preview }}" />
+		<meta property="og:image" content="http://www.savjee.be/{{page.thumbnail}}" />
+		<meta property="fb:app_id" content="805673586165209" />
 	{% endif %}
 </head>
 <body>

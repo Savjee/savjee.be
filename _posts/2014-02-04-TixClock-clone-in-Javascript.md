@@ -3,6 +3,7 @@ layout: post
 title: TixClock clone in Javascript
 keywords: Tix, tixclock, javascript, html5, screensaver
 quote: After struggling to get my hands on a Tix clock, I decided to code my own Tix clock with HTML and Javascript.
+thumbnail: uploads/tixclock/thumb.jpg
 ---
 
 Some time ago I discovered [Chris Pirillo on Youtube](http://www.youtube.com/lockergnome) and I wondered what he had above his desk. Some sort of LED lights in different colors that change every now and then. I thought it was a very cool accessory but rather pointless.

@@ -3,6 +3,7 @@ layout: post
 title:  Creating one WiFi network with multiple access points
 quote: Have a router with limited WiFi range? Setup a second router to extend your network and great WiFi coverage.
 keywords: WiFi network, extend WiFi range, one network multiple routers, access points
+thumbnail: uploads/wifi-network-multiple-access-points/thumb.jpg
 ---
 
 At home, I have a problem that I know is very common: the range on our WiFi router is not enough to cover every bit of the house. (Well actually it does cover our house, but in some places it’s just painfully slow!). Luckily there are a few solutions to have WiFi everywhere.

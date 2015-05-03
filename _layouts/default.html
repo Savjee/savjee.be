@@ -12,22 +12,7 @@
 	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-	<link href='/assets/css/pure-base-min.css' rel='stylesheet' type='text/css'>
-	<link href='/assets/css/pure-grids-responsive-min.css' rel='stylesheet' type='text/css'>
-	<link href='/assets/css/pure-menus-min.css' rel='stylesheet' type='text/css'>
-	<link href='/assets/css/pure-tables-min.css' rel='stylesheet' type='text/css'>
-	<link href='/assets/css/savjee.css' rel='stylesheet' type='text/css'>
-
-	
-				<!--<link href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css' rel='stylesheet' type='text/css'>
-				<link href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css' rel='stylesheet' type='text/css'>
-				<link href='http://yui.yahooapis.com/pure/0.6.0/menus-min.css' rel='stylesheet' type='text/css'>-->
-
-				<link href='/assets/css/social-buttons.css' rel='stylesheet' type='text/css'>
-				<link href='/assets/css/code-highlighter.css' rel='stylesheet' type='text/css'>
-				<link href='/assets/css/savjee.css' rel='stylesheet' type='text/css'>
-
-
+	{% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
 	
 	{% if page.thumbnail %}
 		<!-- Twitter tags -->

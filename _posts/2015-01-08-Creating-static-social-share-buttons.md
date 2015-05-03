@@ -3,6 +3,7 @@ layout: post
 title: Creating static social share buttons
 quote: 
 thumbnail: uploads/creating-static-social-buttons/screenshot_buttons.png
+upload_directory: creating-static-social-buttons
 ---
 
 Social networks are everywhere online. Share, like and tweet buttons are popping up on a lot of webpages these days.

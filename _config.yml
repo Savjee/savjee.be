@@ -4,7 +4,7 @@ highlighter: pygments
 permalink: /:year/:month/:title/
 safe: false
 exclude: ['s3_website.yml']
-paginate: 3
+paginate: 10
 
 asset_bundler:
   compress:

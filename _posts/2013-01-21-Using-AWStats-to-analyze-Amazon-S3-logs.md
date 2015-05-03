@@ -3,6 +3,7 @@ layout: post
 title:  Use AWStats to analyze Amazon S3 logs
 quote: How to configure AWStats to parse Amazon S3 logs and generate useful reports.
 keywords: Amazon S3, Access logs, S3 logs, AWStats, analyze logs
+upload_directory: awstats-s3
 ---
 
 A few weeks ago [I switched from Wordpress to Jekyll]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}). I also started using Amazon S3 to host my blog. I've been pretty happy with my new blog and the performance of S3. There's just one thing missing: access logs.

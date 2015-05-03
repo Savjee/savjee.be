@@ -3,10 +3,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 a {
@@ -16,6 +17,11 @@ a {
 
 a:hover, a:focus {
     text-decoration: none;
+}
+
+.content{
+    margin-left: 25%;
+    padding: 2em 3em 0;
 }
 
 .content p > a {
@@ -33,18 +39,13 @@ a:hover, a:focus {
 
 /* LAYOUT CSS */
 #layout {
-    padding-left: 25%;
-    position: relative;
+    padding:0;
 }
 
 .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 25%;
-    margin-left: -25%;
-    background-color: #1f1815;
-    color: #fff;
 
     /* Background image! */
     background-attachment: fixed;
@@ -122,7 +123,7 @@ a:hover, a:focus {
 }
 
 .post-title {
-    font-size: 2em;
+    /*font-size: 2em;*/
     color: #222;
     margin-bottom: 0.2em;
 }
@@ -245,10 +246,15 @@ th {
     #layout {
         padding: 0;
     }
+
+    .content{
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 480px) {
     .content {
         padding: 2em 1em 0;
+            margin-left: 0;
     }
 }

@@ -12,8 +12,23 @@
 	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-	{% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
+	<link href='/assets/css/pure-base-min.css' rel='stylesheet' type='text/css'>
+	<link href='/assets/css/pure-grids-responsive-min.css' rel='stylesheet' type='text/css'>
+	<link href='/assets/css/pure-menus-min.css' rel='stylesheet' type='text/css'>
+	<link href='/assets/css/pure-tables-min.css' rel='stylesheet' type='text/css'>
+	<link href='/assets/css/savjee.css' rel='stylesheet' type='text/css'>
 
+	
+				<!--<link href='http://yui.yahooapis.com/pure/0.6.0/pure-min.css' rel='stylesheet' type='text/css'>
+				<link href='http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css' rel='stylesheet' type='text/css'>
+				<link href='http://yui.yahooapis.com/pure/0.6.0/menus-min.css' rel='stylesheet' type='text/css'>-->
+
+				<link href='/assets/css/social-buttons.css' rel='stylesheet' type='text/css'>
+				<link href='/assets/css/code-highlighter.css' rel='stylesheet' type='text/css'>
+				<link href='/assets/css/savjee.css' rel='stylesheet' type='text/css'>
+
+
+	
 	{% if page.thumbnail %}
 		<!-- Twitter tags -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -34,7 +49,7 @@
 </head>
 <body>
 
-<div class='pure-g' id='layout'>
+<div class='pure-g' id='layout' style=''>
 	<div class='sidebar pure-u-1 pure-u-md-1-4'>
 		<div class='header'>
 			<h1 class='brand-title'>
@@ -62,20 +77,18 @@
 
 	</div>
 
-	<div class='pure-u-1'>
-		<div class='content'>
+	<div class='content pure-u-1 pure-u-md-3-4'>
 			{{ content }}
-		</div>
 
 		<footer class='footer'>
 			<span>Copyright 2015, Xavier Decuyper</span>
 
-			<div class='pure-menu pure-menu-horizontal pure-menu-open'>
+			<div class='pure-menu pure-menu-horizontal'>
 				<ul>
-					<li><a href='http://www.savjee.be/atom.xml'>RSS feed</a></li>
-					<li><a href='https://plus.google.com/+XavierDecuyper?rel=author'>Google+</a></li>
-					<li><a href='https://twitter.com/Xafke/'>Twitter</a></li>
-					<li><a href='https://github.com/Savjee'>GitHub</a></li>
+					<li class="pure-menu-item"><a href='http://www.savjee.be/atom.xml' class="pure-menu-link">RSS feed</a></li>
+					<li class="pure-menu-item"><a href='https://plus.google.com/+XavierDecuyper?rel=author' class="pure-menu-link">Google+</a></li>
+					<li class="pure-menu-item"><a href='https://twitter.com/Xafke/' class="pure-menu-link">Twitter</a></li>
+					<li class="pure-menu-item"><a href='https://github.com/Savjee' class="pure-menu-link">GitHub</a></li>
 				</ul>
 			</div>
 		</footer>
@@ -85,6 +98,7 @@
 
 {% include google-analytics.html %}
 
+<script src='/assets/js/scrollReveal.min.js'></script>
 <script type="text/javascript">
 // Open external links in new tab
 (window.onload = function(){
@@ -96,6 +110,9 @@
 		}
 	}
 })();
+
+window.sr = new scrollReveal();
 </script>
+
 </body>
 </html>

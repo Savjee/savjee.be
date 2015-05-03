@@ -3,6 +3,7 @@ layout: post
 title:  Building a meta-search engine
 keywords: Metasearch, search engine, PHP, MariaDB, Sphinx, search, ranking, database, index
 quote: In this post I'll walk you through the technical aspects of building a meta-search engine with PHP, MariaDB and Sphinx. Capable of searching through millions of records!
+upload_directory: building-metasearch-engine
 ---
 
 At the end of 2012 [I launched](http://www.nieuwsblad.be/article/detail.aspx?articleid=DMF20121112_00366062) a search engine that combined the offerings of six different second hand websites in Belgium. It was called 'Zoekertjesland' and indexed well over 3 million items.

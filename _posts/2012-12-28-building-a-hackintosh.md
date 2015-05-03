@@ -3,6 +3,7 @@ layout: post
 title:  Building a Hackintosh
 quote: After 3 years of using my Macbook I wanted a new computer. The price of a Mac Pro is insane so I builded a much cheaper Hackintosh with great specs.
 keywords: Building Hackintosh, OS X on a PC, OSX86
+upload_directory: building-hackintosh
 ---
 
 In 2009 I bought the first Unibody Macbook Pro (Macbook pro 5,1) as a replacement for my four year old PowerBook G4. I’ve used it ever since and absolutely love the machine! Over the years I’ve added more memory and took the SuperDrive out to make room for a SSD.

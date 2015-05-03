@@ -83,7 +83,8 @@
 
 {% include google-analytics.html %}
 
-<script src='/assets/js/scrollReveal.min.js'></script>
+{% bundle %} [/assets/js/scrollReveal.min.js] {% endbundle %}
+
 <script type="text/javascript">
 // Open external links in new tab
 (window.onload = function(){
@@ -96,7 +97,7 @@
 	}
 })();
 
-window.sr = new scrollReveal();
+window.sr = new scrollReveal({vFactor:  0.40});
 </script>
 
 </body>

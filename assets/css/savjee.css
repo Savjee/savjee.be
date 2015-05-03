@@ -208,6 +208,11 @@ th {
     margin-top: 20px;
 }
 
+.footer ul{
+    margin: 0;
+    padding:0;
+}
+
 .footer a, .footer a:visited, .footer span {
     color: #ccc !important;
     font-size: 80%;
@@ -218,7 +223,11 @@ th {
     background: none;
 }
 
-@media (max-width: 925px) {
+.only-show-on-mobile{
+    display:none;
+}
+
+@media (max-width: 768px) {
     .sidebar {
         width: 100%;
         position: relative;
@@ -256,5 +265,9 @@ th {
     .content {
         padding: 2em 1em 0;
             margin-left: 0;
+    }
+
+    .only-show-on-mobile{
+        display:block;
     }
 }

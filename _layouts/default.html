@@ -83,8 +83,6 @@
 
 {% include google-analytics.html %}
 
-{% bundle %} [/assets/js/scrollReveal.min.js] {% endbundle %}
-
 <script type="text/javascript">
 // Open external links in new tab
 (window.onload = function(){
@@ -96,9 +94,21 @@
 		}
 	}
 })();
-
-window.sr = new scrollReveal({vFactor:  0.40});
 </script>
-
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.savjee.be/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.savjee.be/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
 </body>
 </html>

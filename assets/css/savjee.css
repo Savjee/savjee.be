@@ -6,171 +6,72 @@
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
 }
 
-a {
-    color: #49bf9d;
+header {
+    padding: 20px 0;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+
+header .avatar {
+    float: right;
+}
+
+header .site-title a {
+    color: #565656;
     text-decoration: none;
 }
 
-a:hover, a:focus {
-    text-decoration: none;
+header .site-title span {
+    font-weight: 200;
+    color: #888888;
+    text-transform: lowercase;
 }
 
-.content p > a {
-    transition: color .2s ease-in-out, border-color .2s ease-in-out;
-    border-bottom: dotted 1px;
+header .site-title {
+    float: left;
+    width: 80%;
+    margin-top: 22px;
+    font-size: 16px;
 }
 
-.content p > a:hover, .content p > a:focus {
-    border-bottom-color: transparent;
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.pure-button:hover {
-    text-decoration: none !important;
+header nav ul li {
+    display: inline-block;
+    margin: 2px 10px 0 0;
 }
 
-/* LAYOUT CSS */
-#layout {
-    padding-left: 25%;
+header nav ul li a {
+    color: #888888;
+    font-size: 14px;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    max-width: 720px;
+    padding: 20px;
+    margin: 0 auto;
     position: relative;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 25%;
-    margin-left: -25%;
-    background-color: #1f1815;
-    color: #fff;
-
-    /* Background image! */
-    background-attachment: fixed;
-    background-image: url("/assets/img/bg.jpg");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+.container.single {
+    padding-top: 0;
 }
 
-.header {
-    margin: 50% 2em 0;
-    text-align: right;
-}
-
-.brand-title {
-    margin: 0;
-}
-
-.brand-title a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-item {
-    display: block;
-    zoom: 1;
-}
-
-.nav-item a {
-    background: transparent;
-    color: #fff;
-    margin-top: 1em;
-    line-height: 2em;
-}
-
-.nav-item a:hover,
-.nav-item a:focus {
-    color: rgb(142, 142, 214);
-    text-decoration: none;
-}
-
-.content-subhead {
-    text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-}
-
-.content {
-    padding: 2em 3em 0;
-}
-
-.content, .footer {
-    max-width: 850px;
-}
-
-.content img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-}
-
-.post {
-    padding-bottom: 2em;
-}
-
-.post-title {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 0.2em;
-}
-
-.post-title a, .post-title a:hover, .post-title a:visited {
-    color: #222;
-    text-decoration: none;
-}
-
-.post-description {
-    color: #444;
-    line-height: 1.8em;
-}
-
-.post-description h1 {
-    /* style for h2 */
-    font-size: 1.5em;
-    margin: .83em 0;
-}
-
-.post-description h2 {
-    /* style for h3 */
-    font-size: 1.17em;
-    margin: 1em 0;
-}
-
-.post-description h3 {
-    /* style for h4 */
-    font-size: 1em;
-    margin: 1.33em 0;
-}
-
-.pure-menu a {
-    padding: 5px 5px !important;
-}
-
-blockquote {
-    color: #666;
-    font-style: italic;
-    line-height: 1.8;
-    border-left: 5px solid #DDD;
-    padding-left: 1.5em;
-}
-
-pre {
-    line-height: 1.3em !important;
-    background: #f4f4f4;
-    padding: 15px;
+pre, code {
     overflow-x: auto;
     word-break: normal !important;
     word-wrap: normal !important;
@@ -178,77 +79,112 @@ pre {
 }
 
 pre, p code {
-    font-family: Monospace, Courier, "Courier New" !important;
-    font-size: 14px !important;
+    background-color: #F8F8F8;
+    border: solid 1px #D1D1D1;
 }
 
-p code, li code {
-    background-color: #F4F4F4;
+pre {
+    padding: 1em;
+    font-size: 0.8em;
+    line-height: 1.5;
 }
 
-th {
-    background-color: #e0e0e0;
+p code {
+    font-size: 1em;
+    padding: 2px 5px;
+    margin: 0 2px;
 }
 
-.post-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
+article img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.older-posts, .list-reduced-padding {
-    padding: 0 0 0 20px;
+a {
+    color: #007998;
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    text-decoration: none;
 }
 
-.footer {
-    text-align: center;
-    padding: 1em 0;
-    border-top: solid 1px #F4F4F4;
-    margin-top: 20px;
+hr {
+    border: none;
+    border-top: solid 1px #ddd;
+    padding: 20px 0;
 }
 
-.footer a, .footer a:visited, .footer span {
-    color: #ccc !important;
-    font-size: 80%;
+a:hover {
+    color: rgba(0, 121, 152, 0.5);
 }
 
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-    background: none;
+h1.post-title {
+    font-family: 'Lato', sans-serif;
 }
 
-@media (max-width: 925px) {
-    .sidebar {
-        width: 100%;
-        position: relative;
-        margin: 0;
+article {
+    letter-spacing: .5px;
+    margin: 0 0 35px;
+    font-weight: 300;
+    line-height: 34px;
+}
 
-        background-attachment: scroll;
-        background-position: center center;
-        background-size: cover;
-        left: auto;
+article .post-description h1 {
+    font-size: 1.5em; /* make it look like an H2 */
+    margin-bottom: -0.5em;
+    margin-top: 2em;
+}
+
+article .post-description h2 {
+    font-size: 1.17em; /* make it look like an H3 */
+    margin-bottom: -0.5em;
+    margin-top: 2em;
+}
+
+article h1 a {
+    color: #404040;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+footer{
+    margin: 30px 0;
+}
+
+footer p{
+    text-align:center;
+    font-size: 0.7em;
+    line-height: 10px;
+}
+
+footer p, footer a{
+    color: #959595;
+}
+
+@media (max-width: 767px) {
+    body {
+        /*font-size: 15px;*/
     }
 
-    .nav-item {
-        display: inline-block;
-        margin: 0 15px 0 0;
-    }
-
-    .header {
-        text-align: center;
-        top: auto;
-        margin: 0 auto;
-        position: static;
-        padding: 3em 0;
-    }
-
-    #layout {
+    header {
         padding: 0;
+        text-align: center;
     }
-}
 
-@media (max-width: 480px) {
-    .content {
-        padding: 2em 1em 0;
+    header .avatar {
+        float: none;
+    }
+
+    header .site-title {
+        float: none;
+        width: auto;
+    }
+
+    article {
+        /*line-height: 30px;*/
     }
 }

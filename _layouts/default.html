@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='UTF-8'>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 	<title>{{page.title}} | Savjee.be</title>
+
 	<link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='http://www.savjee.be/atom.xml'>
 	<meta name='description' content='{{ page.quote }}'/>
 	<meta name='keywords' content='{{ page.keywords }}'/>
 	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-	<meta name='theme-color' content='#655B54'>
 	<link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'>
 	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 	{% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
-
+	
 	{% if page.thumbnail %}
 		<!-- Twitter tags -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -32,70 +33,56 @@
 		<meta property="fb:app_id" content="805673586165209" />
 	{% endif %}
 </head>
+
 <body>
 
-<div class='pure-g' id='layout'>
-	<div class='sidebar pure-u-1 pure-u-md-1-4'>
-		<div class='header'>
-			<h1 class='brand-title'>
-				<a href='/index.html'>
-					<img src='/assets/img/avatar.png' height='100'/>
-					<br>
-					Savjee.be
+	<header class="site-header" role="banner">
+		<div class="container">
+			<div class="avatar">
+				<a href='http://www.savjee.be/'>
+					<img alt="" src="/assets/img/avatar.png" height="100" width="100">
 				</a>
-			</h1>
-
-			<nav class='nav'>
-				<ul class='nav-list'>
-					<li class='nav-item'>
-						<a href='/posts.html'>Blog posts</a>
-					</li>
-					<li class='nav-item'>
-						<a href='/anagramsolver.html'>Anagram Solver</a>
-					</li>
-					<li class='nav-item'>
-						<a href='/about.html'>About Me</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-
-	</div>
-
-	<div class='pure-u-1'>
-		<div class='content'>
-			{{ content }}
-		</div>
-
-		<footer class='footer'>
-			<span>Copyright 2015, Xavier Decuyper</span>
-
-			<div class='pure-menu pure-menu-horizontal pure-menu-open'>
-				<ul>
-					<li><a href='http://www.savjee.be/atom.xml'>RSS feed</a></li>
-					<li><a href='https://plus.google.com/+XavierDecuyper?rel=author'>Google+</a></li>
-					<li><a href='https://twitter.com/Xafke/'>Twitter</a></li>
-					<li><a href='https://github.com/Savjee'>GitHub</a></li>
-				</ul>
 			</div>
-		</footer>
 
-	</div>
+			<div>
+				<h1 class="site-title">
+					<a href="http://www.savjee.be/" title="Savjee.be" rel="home">Savjee.be</a> 
+					&nbsp;-&nbsp; 
+					<span>A geek's blog</span>
+				</h1>
+			</div>
+	
+		<nav role="navigation">
+			<div class="menu-main-nav-container">
+				<ul id="menu-main-nav" class="menu">
+					<li><a href="/posts.html">Blog posts</a></li>
+					<li><a href="/anagramsolver.html">Anagram Solver</a></li>
+					<li><a href="/about.html">About Me</a></li>
+				</ul>
+			</div>		
+		</nav>
+		
+		<div class="clear"></div>
+	</div><!--/container -->
+		
+</header>
+
+<div class='container'>
+	{{ content }}
 </div>
+
+<footer>
+	<p>Copyright 2015, Xavier Decuyper</p>
+
+	<p>
+		<a href="/atom.xml">RSS feed</a> - <a href="https://github.com/Savjee">Github</a> - <a href="https://twitter.com/Xafke/">Twitter</a>
+	</p>
+</footer>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 {% include google-analytics.html %}
 
-<script type="text/javascript">
-// Open external links in new tab
-(window.onload = function(){
-	var links = document.links;
-
-	for(i=0; i<=links.length -1; i++){
-		if(links[i].hostname != window.location.hostname){
-			links[i].target = '_blank';
-		}
-	}
-})();
-</script>
 </body>
 </html>

@@ -4,6 +4,7 @@ title:  Building a dynamic heart of profile pictures
 quote:
 keywords: heart, profile pictures, facebook, PHP, animate, CSS3, JavaScript
 thumbnail: uploads/dynamic-heart/thumb.jpg
+upload_directory: dynamic-heart
 ---
 
 A few months back I was contacted by a non-profit organisation for building an online donation system. They found me after reading a news article about [the meta search engine]({% post_url 2014-05-08-Building-metasearch-engine %}) that I developed. I happily accepted their request and met with the founder shortly afterwards. The idea was simple: set up a website where people can see what the organisation does and where they can donate. After donating a user should be "rewarded" with something.

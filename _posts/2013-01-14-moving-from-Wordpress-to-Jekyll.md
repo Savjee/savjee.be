@@ -3,6 +3,7 @@ layout: post
 title:  Moving from Wordpress to Jekyll
 quote: A few months ago I started a blog using Wordpress. Unsatisfied with the performance, I moved my blog over to Jekyll, a blog-aware static site generator.
 keywords: Wordpress to Jekyll, Jekyll blog, high performance, static website, static blog
+upload_directory: wordpress-to-jekyll
 ---
 
 A few months ago I had the idea to start blogging. So what do you do when you want to blog? You setup a blog script on your webserver! I decided to go with Wordpress since it's so popular and easy to use. I did a clean install of Wordpress on my local machine and gave it a spin!

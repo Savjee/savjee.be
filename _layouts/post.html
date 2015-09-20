@@ -2,17 +2,20 @@
 layout: default
 ---
 
-<section class='post'>
-	<header class='post-header'>
-		<h2 class='post-title'> {{ page.title }} </h2>
-		<p class='post-meta'>
-			Posted on <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
-		</p>
-	</header>
+
+<article class='post'>
+	<h1 class='post-title'>
+		<a href="{{ post.url }}">{{ page.title }}</a>
+	</h1>
 
 	<div class='post-description'>
 		{{ content }}
 	</div>
+</article>
+
+
+
+
 	
 	<div class='share-button-container'>
 		<p>Like it? Share it!</p>

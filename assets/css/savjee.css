@@ -117,7 +117,11 @@ hr {
     border-top: solid 1px #ddd;
     padding: 20px 0;
 }
-
+img+em{
+    font-size:0.8em;
+    text-align: center;
+    display: block;
+}
 a:hover {
     color: rgba(0, 121, 152, 0.5);
 }

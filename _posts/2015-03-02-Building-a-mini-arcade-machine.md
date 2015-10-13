@@ -123,5 +123,5 @@ That's it! Start Emulation Station, select the system you want to emulate, selec
 
 ![Screenshot of Emulation Station](/uploads/mini-arcade/p1_emulationstation.png)
 
-# Work in progress...
-See you in the next post!
+# Part 2
+[Continue reading part 2]({% post_url 2015-04-11-Building-a-mini-arcade-machine-part2 %}) and discover how I assembled all the individual pieces, wired everything up and configured the software for the arcade (EmulationStation & RetroArch).

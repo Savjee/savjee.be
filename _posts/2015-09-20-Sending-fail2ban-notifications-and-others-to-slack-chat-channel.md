@@ -2,8 +2,6 @@
 layout: post
 title:  Sending Fail2ban (and other) notifications to a Slack chat channel
 quote: 
-thumbnail: uploads/review-qy7/poster-750.jpg
-upload_directory: review-qy7
 ---
 
 A lot of companies these days are using [Slack](https://slack.com/) for their internal communications. And can you blame them? Slack is easy to use and fast as hell (I promise you Slack didn't pay me to <del>say</del> write this!). It was used at the company where I did my internship. I fell in love with Slack's simplicity. I used it every workday to ask simple questions to people who where out of the office, to send files around and so on...

@@ -17,7 +17,7 @@ The problem now is that we can’t use our mobile devices when we’re too far a
 
 This problem made me wonder how my school solves it. Hogeschool Gent has multiple access points that all act as one big network. When I walk around the campus, my phone switches from AP to AP without me noticing it!
 
-After a bit of Googling I found out that it’s really easy to create one WiFi network with multiple access points. All you need to do is configure two routers to use the same SSID and password.
+After a bit of Googling I found out that it’s really easy to create one WiFi network with multiple access points. **All you need to do is configure two routers to use the same SSID and password**.
 
 I picked up an old Dlink DIR-635 router and began configuring it. The first thing I did was disabling DHCP and NAT on the router (bridged). This will prevent the router from making a secondary network inside the existing network. Next, I assigned an IP address to the router. My primary router has the IP address 192.168.1.1, so I gave 192.168.1.2 to my secondary router. Finally I gave both WiFi networks the same name (SSID) and set them to use the same password.
 

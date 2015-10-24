@@ -4,53 +4,73 @@ layout: default
 
 
 <article class='post'>
-	<h1 class='post-title'>
-		<a href="{{ post.url }}">{{ page.title }}</a>
-	</h1>
+    <h1 class='post-title'>
+        <a href="{{ post.url }}">{{ page.title }}</a>
+    </h1>
 
-	<div class='post-description'>
-		{{ content }}
-	</div>
+    <div class='post-description'>
+        {{ content }}
+    </div>
 </article>
 
+<p style="text-align:center;">
+    <small>Posted on
+        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
+    </small>
+</p>
+
+<div class='share-button-container'>
+    <p>Like it? Share it!</p>
+
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke">
+            <div class="socialbutton twitter" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+                <p class="icon">
+                    <img src="/assets/img/icon-twitter.png">
+                </p>
+
+                <p class="shares">0</p>
+            </div>
+        </a>
 
 
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}">
+            <div class="socialbutton facebook" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+                <p class="icon">
+                    <img src="/assets/img/icon-facebook.png">
+                </p>
 
-	
-	<div class='share-button-container'>
-		<p>Like it? Share it!</p>
-		<div class='share-button share-button-twitter' data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
-			<div clas='box'>
-				<a href="https://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke" target='_blank'>
-					<span class='share'>Tweet</span>
-					<span class='count'>0</span>
-				</a>
-			</div>
-		</div>
+                <p class="shares">0</p>
+            </div>
+        </a>
 
-		<div class="share-button share-button-facebook" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
-			<div class="box">
-				<a href="https://www.facebook.com/sharer/sharer.php?u={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}">
-					<span class='share'>Share</span>
-					<span class='count'>0</span>
-				</a>
-			</div>
-		</div>
-	</div>
-</section>
+
+        <a href="http://www.reddit.com/submit?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&title={{page.title | cgi_escape}}">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/assets/img/icon-reddit.png">
+                </p>
+
+                <p class="shares">0</p>
+            </div>
+        </a>
+    </div>
+</div>
 
 <div id='comments'>
-	<div id='disqus_thread'></div>
-	<script type='text/javascript'>
-		var disqus_shortname = 'savjee';
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	</script>
+    <div id='disqus_thread'></div>
+    <script type='text/javascript'>
+        var disqus_shortname = 'savjee';
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
 
-	<noscript>Please enable JavaScript to view the comments</noscript>
+    <noscript>Please enable JavaScript to view the comments</noscript>
 </div>
 
 {% bundle %} [/assets/js/StaticShareButtons.js] {% endbundle %}

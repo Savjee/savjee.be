@@ -149,6 +149,10 @@ article .post-description h2 {
     margin-top: 2em;
 }
 
+article .post-description a{
+    text-decoration:underline;
+}
+
 article h1 a {
     color: #404040;
     font-size: 1.4em;

@@ -4,10 +4,10 @@ var StaticShareButtons = {
     redditButton: document.querySelector('.socialbutton.reddit'),
 
     init: function () {
-        this.injectScript('http://urls.api.twitter.com/1/urls/count.json?url=' +
+        this.injectScript('https://urls.api.twitter.com/1/urls/count.json?url=' +
             encodeURI(this.twitterButton.dataset.shareUrl) + '&callback=' + 'StaticShareButtons.processTwitter');
 
-        this.injectScript('http://graph.facebook.com/?id=' +
+        this.injectScript('https://graph.facebook.com/?id=' +
             encodeURI(this.facebookButton.dataset.shareUrl) + '&callback=StaticShareButtons.processFacebook');
 
         this.injectScript('https://www.reddit.com/api/info.json?jsonp=StaticShareButtons.processReddit&url='

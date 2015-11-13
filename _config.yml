@@ -5,6 +5,7 @@ permalink: /:year/:month/:title/
 safe: false
 exclude: ['s3_website.yml']
 paginate: 5
+gems: [jekyll-paginate]
 
 asset_bundler:
   compress:

@@ -22,25 +22,6 @@
 
 }
 
-.socialbutton:hover {
-    height: 80px;
-    margin-bottom: 0;
-}
-
-.socialbutton .shares {
-    opacity: 0;
-    transition: opacity 500ms;
-    -webkit-transition: opacity 500ms;
-    color: #fff;
-    text-align: center;
-    margin-top: 7px;
-    font-family: Merriweather, serif;
-}
-
-.socialbutton:hover .shares {
-    opacity: 1;
-}
-
 .socialbutton p {
     margin: 0;
     padding: 0;

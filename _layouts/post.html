@@ -23,38 +23,50 @@ layout: default
     <p>Like it? Share it!</p>
 
     <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke">
+        <a href="https://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke" target="_blank">
             <div class="socialbutton twitter" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
                 <p class="icon">
                     <img src="/assets/img/icon-twitter.png">
                 </p>
-
-                <p class="shares">0</p>
             </div>
         </a>
 
 
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}" target="_blank">
             <div class="socialbutton facebook" data-share-url="{{'http://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
                 <p class="icon">
                     <img src="/assets/img/icon-facebook.png">
                 </p>
-
-                <p class="shares">0</p>
             </div>
         </a>
 
 
-        <a href="http://www.reddit.com/submit?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&title={{page.title | cgi_escape}}">
+        <a href="http://www.reddit.com/submit?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&title={{page.title | cgi_escape}}" target="_blank">
             <div class="socialbutton reddit">
                 <p class="icon">
                     <img src="/assets/img/icon-reddit.png">
                 </p>
-
-                <p class="shares">0</p>
             </div>
         </a>
     </div>
+
+    <!-- Begin MailChimp Signup Form -->
+
+    <p>Subscribe and be notified of new posts:</p>
+        <div id="mc_embed_signup">
+        <form action="//savjee.us6.list-manage.com/subscribe/post?u=6aff488a8cc6fa185b18cb220&amp;id=e595293f73" method="post" name="mc-embedded-subscribe-form" target="_blank">
+                        
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;">
+                <input type="text" name="b_6aff488a8cc6fa185b18cb220_e595293f73" tabindex="-1" value="">
+            </div>
+
+            <input type="email" value="" placeholder="Your email address" name="EMAIL" class="required email" id="mce-EMAIL" style="font-size: 1em; border: solid 1px #ddd; height: 1.5em;width: 320px;max-width: 100%;">
+
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style='font-size: 1em; height: 1.5em;'>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
 </div>
 
 <div id='comments'>
@@ -72,5 +84,3 @@ layout: default
 
     <noscript>Please enable JavaScript to view the comments</noscript>
 </div>
-
-{% bundle %} [/assets/js/StaticShareButtons.js] {% endbundle %}

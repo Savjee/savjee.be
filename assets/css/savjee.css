@@ -178,6 +178,7 @@ footer p, footer a{
     display: block;
     margin: 20px 0;
     width: 100%;
+    max-width: 600px;
 }
 
 .youtube-player {
@@ -204,6 +205,12 @@ img.youtube-thumb {
     right: 0;
     top: 0;
     height: auto
+}
+
+@-moz-document url-prefix() {
+    img.youtube-thumb {
+        top: -56px;
+    }
 }
 
 div.play-button {

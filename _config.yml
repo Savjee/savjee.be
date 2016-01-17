@@ -5,7 +5,9 @@ permalink: /:year/:month/:title/
 safe: false
 exclude: ['s3_website.yml']
 paginate: 5
-gems: [jekyll-paginate]
+
+gems:
+- jekyll-paginate
 
 asset_bundler:
   compress:
@@ -13,3 +15,6 @@ asset_bundler:
     css: yui
   base_path: /bundles/
   dev: false
+
+collections:
+- videos

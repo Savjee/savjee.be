@@ -1,89 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-	<title>{{page.title}} | Savjee.be</title>
+    <title>{{page.title}} | Savjee.be</title>
 
-	<link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='http://www.savjee.be/atom.xml'>
-	<meta name='description' content='{{ page.quote }}'/>
-	<meta name='keywords' content='{{ page.keywords }}'/>
-	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-	<link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'>
-	<link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
+    <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='http://www.savjee.be/atom.xml'>
+    <meta name='description' content='{{ page.quote }}'/>
+    <meta name='keywords' content='{{ page.keywords }}'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <link rel='shortcut icon' href='/assets/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='/assets/favicon.ico' type='image/x-icon'>
 
-	{% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
-	
-	{% if page.thumbnail %}
-		<!-- Twitter tags -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@Xafke">
-		<meta name="twitter:creator" content="@Xafke">
-		<meta name="twitter:title" content="{{page.title}}">
-		<meta name="twitter:description" content="{{ page.content | preview | strip_html }}">
-		<meta name="twitter:image:src" content="http://www.savjee.be/{{page.thumbnail}}">
+    {% bundle_glob %} [/assets/css/*.css] {% endbundle_glob %}
 
-		<!-- Facebook tags -->
-		<meta property="og:title" content="{{page.title}}" />
-		<meta property="og:site_name" content="Savjee.be"/>
-		<meta property="og:url" content="http://www.savjee.be{{page.url}}" />
-		<meta property="og:description" content="{{ page.content | preview | strip_html }}" />
-		<meta property="og:image" content="http://www.savjee.be/{{page.thumbnail}}" />
-		<meta property="fb:app_id" content="805673586165209" />
-	{% endif %}
+    {% if page.thumbnail %}
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Xafke">
+    <meta name="twitter:creator" content="@Xafke">
+    <meta name="twitter:title" content="{{page.title}}">
+    <meta name="twitter:description" content="{{ page.content | preview | strip_html }}">
+    <meta name="twitter:image:src" content="http://www.savjee.be/{{page.thumbnail}}">
+
+    <!-- Facebook tags -->
+    <meta property="og:title" content="{{page.title}}"/>
+    <meta property="og:site_name" content="Savjee.be"/>
+    <meta property="og:url" content="http://www.savjee.be{{page.url}}"/>
+    <meta property="og:description" content="{{ page.content | preview | strip_html }}"/>
+    <meta property="og:image" content="http://www.savjee.be/{{page.thumbnail}}"/>
+    <meta property="fb:app_id" content="805673586165209"/>
+    {% endif %}
 </head>
 
 <body>
 
-	<header class="site-header" role="banner">
-		<div class="container">
-			<div class="avatar">
-				<a href='http://www.savjee.be/'>
-					<img alt="" src="/assets/img/avatar.png" height="100" width="100">
-				</a>
-			</div>
+<header class="site-header" role="banner">
+    <div class="container">
+        <div class="avatar">
+            <a href='http://www.savjee.be/'>
+                <img alt="" src="/assets/img/avatar.png" height="100" width="100">
+            </a>
+        </div>
 
-			<div>
-				<h1 class="site-title">
-					<a href="http://www.savjee.be/" title="Savjee.be" rel="home">Savjee.be</a> 
-					&nbsp;-&nbsp; 
-					<span>A geek's blog</span>
-				</h1>
-			</div>
-	
-		<nav role="navigation">
-			<div class="menu-main-nav-container">
-				<ul id="menu-main-nav" class="menu">
-					<li><a href="/posts.html">Blog posts</a></li>
-					<li><a href="/videos/">Video's <sup style='color:red'>*</sup></a></li>
-					<li><a href="/anagramsolver.html">Anagram Solver</a></li>
-					<li><a href="/about.html">About Me</a></li>
-				</ul>
-			</div>		
-		</nav>
-		
-		<div class="clear"></div>
-	</div><!--/container -->
-		
+        <div>
+            <h1 class="site-title">
+                <a href="http://www.savjee.be/" title="Savjee.be" rel="home">Savjee.be</a>
+                &nbsp;-&nbsp;
+                <span>A geek's blog</span>
+            </h1>
+        </div>
+
+        <nav role="navigation">
+            <div class="menu-main-nav-container">
+                <ul id="menu-main-nav" class="menu">
+                    <li><a href="/posts.html">Blog posts</a></li>
+                    <li><a href="/videos/">Video's <sup style='color:red'>*</sup></a></li>
+                    <li><a href="/anagramsolver.html">Anagram Solver</a></li>
+                    <li><a href="/about.html">About Me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="clear"></div>
+    </div><!--/container -->
+
 </header>
 
 <div class='container'>
-	{{ content }}
+    {{ content }}
 </div>
 
 <footer>
-	<p>Copyright 2015, Xavier Decuyper</p>
+    <p>Copyright 2015, Xavier Decuyper</p>
 
-	<p>
-		<a href="/atom.xml">RSS feed</a> - <a href="https://github.com/Savjee">Github</a> - <a href="https://twitter.com/Xafke/">Twitter</a>
-	</p>
+    <p>
+        <a href="/atom.xml">RSS feed</a> - <a href="https://github.com/Savjee">Github</a> - <a
+            href="https://twitter.com/Xafke/">Twitter</a>
+    </p>
 </footer>
 
 <link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Merriweather:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:300,700&subset=latin,latin-ext' rel='stylesheet'
+      type='text/css'>
+
 
 {% include google-analytics.html %}
 
+<script type="text/javascript">
+    //
+    // Lazy load the YouTube videos
+    //
+    (function () {
+        var v = document.getElementsByClassName("youtube-player");
+        for (var n = 0; n < v.length; n++) {
+            var p = document.createElement("div");
+            p.innerHTML = labnolThumb(v[n].dataset.id);
+            p.onclick = labnolIframe;
+            v[n].appendChild(p);
+        }
+    })();
+
+    function labnolThumb(id) {
+        return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&showinfo=0&rel=0");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("id", "youtube-iframe");
+        this.parentNode.replaceChild(iframe, this);
+    }
+</script>
 </body>
 </html>

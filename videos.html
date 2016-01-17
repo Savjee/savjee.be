@@ -1,0 +1,56 @@
+---
+layout: page
+title: Videos
+paginate:
+collection: videos
+---
+
+<p>Hi there! I'm in the process of creating my own YouTube channel and I would really appreciate your support!
+    Subscribe to my channel:</p>
+
+<div style="text-align:center">
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCnxrdFPXJMeHru_b4Q_vTPQ" data-layout="full" data-count="default"></div>
+</div>
+
+
+{% for video in site.videos %}
+    <article class='post'>
+        <h2 class='post-title'>
+            {{ video.title }}
+        </h2>
+
+        <div class='post-description'>
+            {{ video.content }}
+        </div>
+    </article>
+
+    <hr>
+{% endfor %}
+
+<script>
+    //
+    // Lazy load the YouTube videos
+    //
+    (function() {
+        var v = document.getElementsByClassName("youtube-player");
+        for (var n = 0; n < v.length; n++) {
+            var p = document.createElement("div");
+            p.innerHTML = labnolThumb(v[n].dataset.id);
+            p.onclick = labnolIframe;
+            v[n].appendChild(p);
+        }
+    })();
+
+    function labnolThumb(id) {
+        return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&showinfo=0&rel=0");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("id", "youtube-iframe");
+        this.parentNode.replaceChild(iframe, this);
+    }
+</script>

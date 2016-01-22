@@ -78,18 +78,20 @@ pre, code {
     white-space: pre !important;
 }
 
-pre, p code {
+pre, p code, li code {
     background-color: #F8F8F8;
     border: solid 1px #D1D1D1;
 }
-
+figure{
+    margin:0;
+}
 pre {
     padding: 1em;
     font-size: 0.8em;
     line-height: 1.5;
 }
 
-p code {
+p code, li code {
     font-size: 1em;
     padding: 2px 5px;
     margin: 0 2px;
@@ -157,6 +159,16 @@ article h1 a {
     color: #404040;
     font-size: 1.4em;
     font-weight: 700;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 0;
+    padding: 20px;
+}
+blockquote p {
+  display: inline;
 }
 
 footer{

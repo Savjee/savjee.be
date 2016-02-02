@@ -14,7 +14,9 @@ collection: videos
 </div>
 
 
-{% for video in site.videos %}
+{% assign videos = site.videos %}
+
+{% for video in videos reversed %}
     <article class='post'>
         <h2 class='post-title'>
             {{ video.title }}

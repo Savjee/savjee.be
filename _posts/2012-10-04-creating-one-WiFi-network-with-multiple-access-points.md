@@ -11,6 +11,22 @@ At home, I have a problem that I know is very common: the range on our WiFi rout
 
 <!--more-->
 
+# Quick overview
+Here is a quick overview of what you should do to extend your home network with a second access point:
+
+> To extend your home network:
+>
+> - Connect two access points to the same network
+>
+> - Make sure that there is only 1 DHCP server
+>
+> - Use the same wireless network name (SSID) for both AP's
+>
+> - Use the same password and encryption settings for both AP's
+>
+> - Enjoy!
+
+# Full instructions
 To partially solve this problem we use a powerline to go from the front of the house to the back. There, the powerline is connected to a Dlink switch which in turn is connected to two computers over Ethernet. So far so good!
 
 The problem now is that we can’t use our mobile devices when we’re too far away from our main WiFi basestation. I didn’t want to use an extra router because that would create a separate WiFi network and would require us to switch between networks all the time.

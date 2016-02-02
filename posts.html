@@ -5,24 +5,102 @@ permalink: posts.html
 quote: Overview of blog posts on Savjee.be
 ---
 
+<!--{% for post in site.posts  %}
+        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+        {% if forloop.first %}
+            <h2>{{this_year}}</h2>
+            <ul>
+        {% endif %}
+
+        <li><a href='{{ post.url }}'>{{ post.title }}</a></li>
+
+        {% if forloop.last %}
+            </ul>
+        {% else %}
+            {% if this_year != next_year %}
+                </ul>
+                <h2>{{next_year}}</h2>
+                <ul>
+            {% endif %}
+        {% endif %}
+    {% endfor %}-->
+
+
 {% for post in site.posts  %}
-	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-	{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
-	{% if forloop.first %}
-		<h2>{{this_year}}</h2>
-		<ul>
-	{% endif %}
+    {% if forloop.first %}
+        <div class="container">
+            <div class="page-header text-center">
+                <h1>{{this_year}}</h1>
+            </div>
+            <ul class="timeline">
 
-	<li><a href='{{ post.url }}'>{{ post.title }}</a></li>
+    {% endif %}
+                <li class="timeline{% cycle '-panel', '-inverted' %}">
+                    <div class="timeline-panel">
+                        {% if post.thumbnail %}
+                        <div class="timeline-heading">
+                            <img class="img-responsive" src="http://www.savjee.be/{{post.thumbnail}}"/>
+                        </div>
+                        {% endif %}
+                        <div class="timeline-body">
+                            <p style="margin-top:0;"><a href='{{ post.url }}'>{{ post.title }}</a></p>
+                        </div>
 
-	{% if forloop.last %}
-		</ul>
-	{% else %}
-		{% if this_year != next_year %}
-			</ul>
-			<h2>{{next_year}}</h2>
-			<ul>
-		{% endif %}
-	{% endif %}
+                        <!--<div class="timeline-footer">-->
+                            <!--<a><i class="glyphicon glyphicon-thumbs-up"></i></a>-->
+                            <!--<a><i class="glyphicon glyphicon-share"></i></a>-->
+                            <!--<a class="pull-right">Continuar Lendo</a>-->
+                        <!--</div>-->
+                    </div>
+                </li>
+
+    {% if forloop.last %}
+
+                <li class="clearfix" style="float: none;"></li>
+            </ul>
+        </div>
+
+{% else %}
+
+        {% if this_year != next_year %}
+
+            <li class="clearfix" style="float: none;"></li>
+            </ul>
+            </div>
+
+<div class="container">
+    <div class="page-header text-center">
+        <h1 id="timeline">{{next_year}}</h1>
+    </div>
+    <ul class="timeline">
+        {% endif %}
+    {% endif %}
 {% endfor %}
+
+
+    <!--{% for post in site.posts  %}
+        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+        {% if forloop.first %}
+            <h2>{{this_year}}</h2>
+            <ul>
+        {% endif %}
+
+        <li><a href='{{ post.url }}'>{{ post.title }}</a></li>
+
+        {% if forloop.last %}
+            </ul>
+        {% else %}
+            {% if this_year != next_year %}
+                </ul>
+                <h2>{{next_year}}</h2>
+                <ul>
+            {% endif %}
+        {% endif %}
+    {% endfor %}-->

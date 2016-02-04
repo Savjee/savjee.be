@@ -2,6 +2,8 @@
 layout: post
 title: Switching from Android to iOS - What I love and hate about both platforms
 quote: 
+thumbnail: uploads/switch-android-ios/poster-750.jpg
+upload_directory: switch-android-ios
 ---
 
 About three weeks ago I received an iPhone 6 from my employer. At first I was a little sceptical and wondered if I should keep the iPhone. I have owned an iPhone in the past, but I've been using Android for nearly three years now. I decided to give it a try, use the phone for a couple of weeks and decide whether or not I should continue to use it. 

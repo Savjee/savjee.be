@@ -22,7 +22,9 @@ quote: Overview of blog posts on Savjee.be
                     <div class="timeline-panel">
                         {% if post.thumbnail %}
                         <div class="timeline-heading">
-                            <img class="img-responsive" src="{{post.thumbnail}}"/>
+                            <a href='{{ post.url }}'>
+                                <img class="img-responsive" src="{{post.upload_directory}}/thumb_timeline.jpg"/>
+                            </a>
                         </div>
                         {% endif %}
                         <div class="timeline-body">

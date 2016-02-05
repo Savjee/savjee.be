@@ -439,4 +439,8 @@ div.play-button {
         position: relative;
         width: 100%;
     }
+
+    ul.timeline > li.clearfix{
+        margin:0;
+    }
 }

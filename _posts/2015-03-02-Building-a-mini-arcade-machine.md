@@ -2,8 +2,8 @@
 layout: post
 title:  Building a Mini Arcade Cabinet (Part 1)
 quote: 
-thumbnail: uploads/mini-arcade/thumb.jpg
-upload_directory: mini-arcade
+thumbnail: true
+upload_directory: /uploads/mini-arcade
 ---
 
 I'm a geek. I like geeky stuff. For the past couple of months I was looking for a reason to buy myself a Raspberry Pi. I thought about integrating it in my room and in my car. I thought about creating an internet radio with it or just use it as a home server.

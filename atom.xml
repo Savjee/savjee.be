@@ -11,7 +11,7 @@ layout: null
 
 	<author>
 		<name>Xavier Decuyper</name>
-		<email>xavier.decuyper@gmail.com</email>
+		<email>hi@savjee.be</email>
 	</author>
 
 	{% for post in site.posts limit:15 %}
@@ -26,7 +26,7 @@ layout: null
 			<uri>http://www.savjee.be/</uri>
 		</author>
 
-		<content type='html'>{{ post.content | preview | xml_escape }}</content>
+		<content type='html'>{{ post.excerpt | xml_escape }}</content>
 	</entry>
   {% endfor %}
 </feed>

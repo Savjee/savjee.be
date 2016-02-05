@@ -18,3 +18,5 @@ asset_bundler:
 
 collections:
 - videos
+
+excerpt_separator: <!--more-->

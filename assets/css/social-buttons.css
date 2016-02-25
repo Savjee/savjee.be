@@ -1,45 +1,54 @@
 .socialbutton-wrapper {
-    height: 80px;
-    text-align:center;
-}
-
-.share-button-container{
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: solid 1px #e4e4e4;
+  border-bottom: solid 1px #e4e4e4; }
+  .socialbutton-wrapper a {
+    text-decoration: none; }
+  .socialbutton-wrapper .only-smartphone {
+    display: none; }
+    @media (max-width: 767px) {
+      .socialbutton-wrapper .only-smartphone {
+        display: inline-block; } }
+  .socialbutton-wrapper .share-button-container {
     text-align: center;
     margin: 20px 0;
     padding: 10px 0;
     border-top: solid 1px #e4e4e4;
-    border-bottom: solid 1px #e4e4e4;
-}
-
-.socialbutton {
-    width: 80px;
+    border-bottom: solid 1px #e4e4e4; }
+  .socialbutton-wrapper .socialbutton {
+    width: 70px;
     height: 55px;
     margin-bottom: 0;
     display: inline-block;
+    margin: 5px; }
+    .socialbutton-wrapper .socialbutton p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      padding-top: 15px; }
+      .socialbutton-wrapper .socialbutton p > img {
+        height: 25px; }
+    .socialbutton-wrapper .socialbutton.twitter {
+      background-color: #5BC2F0; }
+      .socialbutton-wrapper .socialbutton.twitter:hover {
+        background-color: #15a8e9; }
+    .socialbutton-wrapper .socialbutton.facebook {
+      background-color: #435D96; }
+      .socialbutton-wrapper .socialbutton.facebook:hover {
+        background-color: #2b3c61; }
+    .socialbutton-wrapper .socialbutton.pocket {
+      background-color: #EF3E56; }
+      .socialbutton-wrapper .socialbutton.pocket:hover {
+        background-color: #cf112b; }
+    .socialbutton-wrapper .socialbutton.whatsapp {
+      background-color: #25D366; }
+      .socialbutton-wrapper .socialbutton.whatsapp:hover {
+        background-color: #1a9247; }
+    .socialbutton-wrapper .socialbutton.reddit {
+      background-color: #333333; }
+      .socialbutton-wrapper .socialbutton.reddit:hover {
+        background-color: #0d0d0d; }
 
-    transition: all 500ms;
-    -webkit-transition: all 500ms;
-
-}
-
-.socialbutton p {
-    margin: 0;
-    padding: 0;
-}
-
-.socialbutton p.icon {
-    text-align: center;
-    padding-top: 13px;
-}
-
-.socialbutton.twitter {
-    background-color: #5BC2F0;
-}
-
-.socialbutton.reddit {
-    background-color: #333333;
-}
-
-.socialbutton.facebook {
-    background-color: #435D96;
-}
+/*# sourceMappingURL=static-social-buttons.css.map */

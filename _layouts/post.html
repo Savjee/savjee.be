@@ -20,7 +20,6 @@ layout: default
 </p>
 
 <div class='share-button-container'>
-    <p>Like it? Share it!</p>
 
     <div class="socialbutton-wrapper">
         <a href="https://twitter.com/share?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke" target="_blank">
@@ -45,6 +44,24 @@ layout: default
             <div class="socialbutton reddit">
                 <p class="icon">
                     <img src="/assets/img/icon-reddit.png">
+                </p>
+            </div>
+        </a>
+
+        <br class="only-smartphone">
+
+        <a href="https://getpocket.com/edit?url={{'http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}">
+            <div class="socialbutton pocket">
+                <p class="icon">
+                    <img src="/assets/img/icon-pocket.png">
+                </p>
+            </div>
+        </a>
+
+        <a href="whatsapp://send?text={{page.title | cgi_escape}}{{' http://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}" class="only-smartphone">
+            <div class="socialbutton whatsapp">
+                <p class="icon">
+                    <img src="/assets/img/icon-whatsapp.png">
                 </p>
             </div>
         </a>

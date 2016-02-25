@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use Jenkins and git-ftp to deploy a website to shared webshoting
+title: Use Jenkins and git-ftp to deploy a website to shared webhosting
 quote: 
 ---
 

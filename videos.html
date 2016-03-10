@@ -8,24 +8,59 @@ collection: videos
 <p>Hi there! I'm in the process of creating my own YouTube channel and I would really appreciate your support!
     Subscribe to my channel:</p>
 
+
 <div style="text-align:center">
     <script src="https://apis.google.com/js/platform.js"></script>
     <div class="g-ytsubscribe" data-channelid="UCnxrdFPXJMeHru_b4Q_vTPQ" data-layout="full" data-count="default"></div>
 </div>
 
+    {% for allSeries in site.data.videos reversed %}
+        {% assign serie = allSeries[1] %}
 
-{% assign videos = site.videos %}
 
-{% for video in videos reversed %}
-    <article class='post'>
-        <h2 class='post-title'>
-            {{ video.title }}
-        </h2>
+            <h1>{{serie.name}}</h1>
+            <div class="pure-g">
+                {% for video in serie.videos %}
+                    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                        <div class="l-box" style="padding: 0 10px;">
+                            <a href="//www.youtube.com/watch?v={{video.id}}" data-lity>
+                                {% include youtube-embed.html videoId=video.id %}
+                            </a>
+                            <p style="margin-top:0;line-height: 1.5; font-size:0.9em;">
+                                <a href="//www.youtube.com/watch?v={{video.id}}" data-lity>
+                                    {{video.title}}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
 
-        <div class='post-description'>
-            {{ video.content }}
-        </div>
-    </article>
+    {% endfor %}
 
-    <hr>
-{% endfor %}
+
+<script type="text/javascript" src='/assets/js/jquery-2.2.1.min.js'></script>
+<script type="text/javascript" src='/assets/js/lity.min.js'></script>
+<script type="text/javascript">
+    (function () {
+        var v = document.getElementsByClassName("youtube-player");
+        for (var n = 0; n < v.length; n++) {
+            var p = document.createElement("div");
+            p.innerHTML = labnolThumb(v[n].dataset.id);
+//            p.onclick = labnolIframe;
+            v[n].appendChild(p);
+        }
+    })();
+
+    function labnolThumb(id) {
+        return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+    }
+
+//    function labnolIframe() {
+//        var iframe = document.createElement("iframe");
+//        iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&showinfo=0&rel=0");
+//        iframe.setAttribute("frameborder", "0");
+//        iframe.setAttribute("id", "youtube-iframe");
+//        this.parentNode.replaceChild(iframe, this);
+//    }
+</script>

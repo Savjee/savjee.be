@@ -1,0 +1,11 @@
+name: AWS Tutorials
+published: "2016-01-20"
+videos:
+  - title: Hosting a static website on Amazon S3
+    id: g9NbuTcos18
+
+  - title: Getting a free SSL certificate with AWS Certificate Manager for CloudFront
+    id: JbQbwum196g
+
+  - title: Deploy a static website to Amazon S3 with s3_website
+    id: sshXVtr29HU

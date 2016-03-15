@@ -1,0 +1,17 @@
+name: Get started with Jenkins
+published: "2016-03-20"
+videos:
+  - title: Introduction
+    id: WWcijE7ifcA
+
+  - title: Installing Jenkins on Ubuntu Server 15.10
+    id: AXlN-f6Uk64
+
+  - title: Getting source code from git
+    id: 7svnd9b-BmU
+
+  - title: "Integrate with BitBucket: build after each commit"
+    id: nNaR5Q_pIa4
+
+  - title: "Running PHPUnit tests after each commit"
+    id: 68cDNUz7uro

@@ -15,3 +15,6 @@ videos:
 
   - title: "Running PHPUnit tests after each commit"
     id: 68cDNUz7uro
+
+  - title: "Integrate Jenkins with BitBucket Build Status API"
+    id: uu5XcU4EPzQ

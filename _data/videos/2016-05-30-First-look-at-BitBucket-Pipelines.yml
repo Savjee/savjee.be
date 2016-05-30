@@ -1,0 +1,17 @@
+name: First look at BitBucket Pipelines
+published: "2016-05-30"
+videos:
+  - title: Introduction
+    id: 5mtxVkZbJcg
+
+  - title: Running PHPUnit tests
+    id: 2cMa0HJq3Tk
+
+  - title: Using environment variables
+    id: RVwkT4oHDd8
+
+  - title: Deploy a website to FTP server
+    id: 8HZhHtZebdw
+
+  - title: Deploy static website with s3_website
+    id: 57pwPxJer1E

@@ -1,3 +1,33 @@
-<div class="youtube-container">
-    <div class="youtube-player" data-id="{{ include.videoId }}"></div>
-</div>
+<!-- Only use this include for a POST! -->
+
+<a href="//www.youtube.com/watch?v={{include.videoId}}" data-lity>
+	<div class="youtube-container">
+		<div class="youtube-player" data-id="{{ include.videoId }}"></div>
+	</div>
+</a>
+
+<script type="text/javascript">
+	window.onload = function(){
+		var v = document.getElementsByClassName("youtube-player");
+	        for (var n = 0; n < v.length; n++) {
+	            var p = document.createElement("div");
+	            p.innerHTML = labnolThumb(v[n].dataset.id);
+	            v[n].appendChild(p);
+	        }
+
+	        // Load the programatically
+	        var script = document.createElement('script');
+			script.src = '/assets/js/jquery-2.2.1.min.js';
+			script.onload = function(){
+				var script2 = document.createElement('script');
+				script2.src = '/assets/js/lity.min.js';
+				document.head.appendChild(script2);
+			}
+
+			document.head.appendChild(script);
+	}
+
+    function labnolThumb(id) {
+        return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+    }
+</script>

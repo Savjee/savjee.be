@@ -1,7 +1,7 @@
 ---
 layout: page
 title: OneHighlighter
-permalink: onehighlighter
+permalink: /onehighlighter/
 quote: Overview of blog posts on Savjee.be
 ---
 

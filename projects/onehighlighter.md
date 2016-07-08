@@ -6,7 +6,7 @@ quote: Overview of blog posts on Savjee.be
 ---
 
 <img src="/projects/onehighlighter/onehighlighter-logo.png" height="256">
-<a href="http://appstore.com/mac/onehighlighter" target="_blank">
+<a href="https://itunes.apple.com/be/app/onehighlighter/id1131580917?mt=12" target="_blank">
 	<img src="/projects/onehighlighter/app-store-badge.png" height="40">
 </a>
 
@@ -52,4 +52,4 @@ OneHighlighter supports code highlighting for the following languages:
 * XML
 
 # Download
-OneHighlighter is available for free on the [Mac App Store](http://appstore.com/mac/onehighlighter).
+OneHighlighter is available for free on the [Mac App Store](https://itunes.apple.com/be/app/onehighlighter/id1131580917?mt=12).

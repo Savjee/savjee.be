@@ -3,11 +3,11 @@ layout: null
 ---
 <?xml version='1.0'?>
 <feed xmlns='http://www.w3.org/2005/Atom'>
-	<title>www.savjee.be</title>
-	<link href='http://www.savjee.be/'/>
-	<link type='application/atom+xml' rel='self' href='http://www.savjee.be/atom.xml'/>
+	<title>savjee.be</title>
+	<link href='https://www.savjee.be/'/>
+	<link type='application/atom+xml' rel='self' href='https://www.savjee.be/atom.xml'/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://www.savjee.be/</id>
+	<id>https://www.savjee.be/</id>
 
 	<author>
 		<name>Xavier Decuyper</name>
@@ -18,12 +18,12 @@ layout: null
 	<entry>
 		<title>{{ post.title | xml_escape }}</title>
 		<link type='text/html' href='http://www.savjee.be{{ post.url }}'/>
-		<id>http://www.savjee.be{{ post.url }}</id>
+		<id>https://www.savjee.be{{ post.url }}</id>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 
 		<author>
 			<name>Xavier Decuyper</name>
-			<uri>http://www.savjee.be/</uri>
+			<uri>https://www.savjee.be/</uri>
 		</author>
 
 		<content type='html'>{{ post.excerpt | xml_escape }}</content>

@@ -1,0 +1,14 @@
+name: Get started with AWS Lambda
+published: "2016-08-01"
+videos:
+  - title: Introduction
+    id: fSUEk6iMW88
+
+  - title: First Lambda function in node.js
+    id: PEatXsXIkLc
+
+  - title: Connecting Lambda to API Gateway
+    id: DSrg7hG-jV4
+
+  - title: Passing information through API Gateway
+    id: afhNipd6TkE

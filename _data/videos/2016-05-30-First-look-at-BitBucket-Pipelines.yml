@@ -1,5 +1,6 @@
 name: First look at BitBucket Pipelines
 published: "2016-05-30"
+description: "This video series offers a first look at Atlassian's new service for BitBucket: Pipelines. I'll show you how the service works, how to run PHPUnit tests, how to use environment variables, how you can deploy to an FTP server and how you can deploy to Amazon S3."
 videos:
   - title: Introduction
     id: 5mtxVkZbJcg

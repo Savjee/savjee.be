@@ -1,5 +1,6 @@
 name: Get started with Jenkins
 published: "2016-03-20"
+description: "In these video tutorials I'll show you how to get started with Jenkins, the open source continuous integration & delivery application. I'll cover topics like installing Jenkins, importing git source code, integrating it with BitBucket and much more!"
 videos:
   - title: Introduction
     id: WWcijE7ifcA

@@ -19,3 +19,12 @@ videos:
 
   - title: Using scheduled events to trigger Lambda functions
     id: 1nxIKzFBkRY
+
+  - title: Writing data to DynamoDB
+    id: G_-aEXmluq8
+
+  - title: Reading data from DynamoDB tables
+    id: P8okmPWIAcQ
+
+  - title: Creating a front-end for Lambda functions
+    id: mfAT38B_uhw

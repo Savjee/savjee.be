@@ -4,7 +4,7 @@ title: Verifying Amazon S3 multi-part uploads with the ETag hash
 quote: 
 ---
 
-Uploading big files to Amazon S3 can be a bit of pain when you're on an unstable network connection. If an error occurs, your transfer will be cancelled and you can start the upload process all over again. This not only wastes your bandwidth, it also increases your AWS bill.
+Uploading big files to Amazon S3 can be a bit of pain when you're on an unstable network connection. If an error occurs, your transfer will be cancelled and you can start the upload process all over again.
 
 To check the integrity of a file that was uploaded in multiple parts, you can calculate the checksum of the local file and compare it with the checksum on S3. Problem is: Amazon doesn't use a regular md5 hash for multipart uploads. In this post we'll take a look at how you can compute the correct checksum on your computer so you can compare it to the checksum calculated by Amazon.
 

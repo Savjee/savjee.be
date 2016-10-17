@@ -7,9 +7,6 @@ title: Home
 
 	{% if paginator.previous_page %}
 		<h1 class='content-subhead'>Page {{paginator.page}}</h1>
-	{% else %}
-		<!--<h1 class='content-subhead'>Hi!</h1>
-		<p>My name is Xavier Decuyper. I'm a digital project manager at BNP Paribas Fortis.</p>-->
 	{% endif %}
 
 	{% for post in paginator.posts %}

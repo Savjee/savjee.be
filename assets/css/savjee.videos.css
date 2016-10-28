@@ -39,3 +39,13 @@
     text-decoration: none;
     display:inline-block;
 }
+
+.video-serieList{
+    column-count: 2;
+}
+
+@media (max-width: 767px) {
+    .video-serieList{
+        column-count: 1;
+    }
+}

@@ -1,0 +1,48 @@
+<div class='share-button-container'>
+
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url={{'https://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&text={{page.title | URLEncoding}}&via=Xafke" target="_blank">
+            <div class="socialbutton twitter" data-share-url="{{'https://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+                <p class="icon">
+                    <img src="/assets/img/social-twitter.svg">
+                </p>
+            </div>
+        </a>
+
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{'https://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}" target="_blank">
+            <div class="socialbutton facebook" data-share-url="{{'https://www.savjee.be' | URLEncoding}}{{page.url | URLEncoding}}">
+                <p class="icon">
+                    <img src="/assets/img/social-facebook.svg">
+                </p>
+            </div>
+        </a>
+
+
+        <a href="http://www.reddit.com/submit?url={{'https://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}&title={{page.title | cgi_escape}}" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/assets/img/social-reddit.svg">
+                </p>
+            </div>
+        </a>
+
+        <br class="only-smartphone">
+
+        <a href="https://getpocket.com/edit?url={{'https://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}">
+            <div class="socialbutton pocket">
+                <p class="icon">
+                    <img src="/assets/img/social-pocket.svg">
+                </p>
+            </div>
+        </a>
+
+        <a href="whatsapp://send?text={{page.title | cgi_escape}}{{' https://www.savjee.be' | URLEncoding}}{{page.url | cgi_escape}}" class="only-smartphone">
+            <div class="socialbutton whatsapp">
+                <p class="icon">
+                    <img src="/assets/img/social-whatsapp.svg">
+                </p>
+            </div>
+        </a>
+    </div>
+</div>

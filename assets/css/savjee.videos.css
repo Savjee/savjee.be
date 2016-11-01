@@ -48,4 +48,8 @@
     .video-serieList{
         column-count: 1;
     }
+
+    .video-navigation.empty{
+        display:none;
+    }
 }

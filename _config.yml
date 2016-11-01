@@ -17,6 +17,8 @@ asset_bundler:
   dev: false
 
 collections:
-- videos
+  videos:
+    output: true
+    permalink: /videos/:path/
 
 excerpt_separator: <!--more-->

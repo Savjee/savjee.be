@@ -1,0 +1,51 @@
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hide-overflow-text{
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: scroll;
+}
+
+.video-navigation{
+    font-size: 0.8em; 
+    background-color: #F0F0F0; 
+    padding: 15px;
+    min-height: 100px;
+}
+
+.video-navigation p{
+    margin:0;
+}
+
+.video-navigation strong{
+    color: #000;
+    text-decoration: none;
+    display:inline-block;
+}
+
+.video-serieList{
+    column-count: 2;
+}
+
+@media (max-width: 767px) {
+    .video-serieList{
+        column-count: 1;
+    }
+}

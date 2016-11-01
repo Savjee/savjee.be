@@ -11,5 +11,8 @@ In this video I'll show you how to use scheduled events to trigger Lambda functi
 
 You can think of schedules events as cron jobs in Linux.
 
+# Source code
+Source code of the Lambda function that sends an email through the MailGun API can be found on <a href="https://github.com/SavjeeTutorials/getting-started-with-lambda/tree/master/06-scheduled-events-to-trigger-lambda" target="_blank">GitHub</a>.
+
 # Useful resources
 * <a href="http://docs.aws.amazon.com/lambda/latest/dg/with-scheduled-events.html" target="_blank">Official documentation on scheduled events</a>

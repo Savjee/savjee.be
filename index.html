@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-
-
 	{% if paginator.previous_page %}
 		<h1 class='content-subhead'>Page {{paginator.page}}</h1>
 	{% endif %}
@@ -27,7 +25,7 @@ title: Home
 	{% endfor %}
 
 {% if paginator.previous_page == nil %}
-	<h1 class='content-subhead'>Older posts</h1>
+	<h1 class='post-title'>Older posts</h1>
 	<div class='post-description'>
 		<ul class='older-posts'>
 			{% for post in site.posts limit:6 offset: 3 %}

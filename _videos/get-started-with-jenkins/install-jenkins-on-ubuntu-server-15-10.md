@@ -28,3 +28,5 @@ The commands are also available on <a href="https://github.com/SavjeeTutorials/g
 
 # Useful resources
 * <a href="https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu" target="_blank">Official installation instructions</a>
+
+In this video I'll show you how you can install Jenkins on Ubuntu Server 15.10. The same instructions will also work for the latest release of Ubuntu Server (16.10).

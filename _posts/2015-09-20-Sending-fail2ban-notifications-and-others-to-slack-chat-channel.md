@@ -150,3 +150,6 @@ Each of these scripts push their messages to a separate channel on my Slack acco
 As you can see, Slack is an amazing tool. Not only for team collaboration but also for individual use. And it gets even better. When you use an Android device and own a smartwatch, you'll get your notifications pushed straight to your wrist!
 
 ![](/uploads/fail2ban-slack-notifications/slack-android-wear.png)
+
+# Source code
+The source code for SlackConnect is [on GitHub](https://github.com/Savjee/SlackConnect/)

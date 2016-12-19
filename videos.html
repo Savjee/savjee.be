@@ -14,40 +14,46 @@ collection: videos
 
 <hr>
 
-{% assign series = site.videos | group_by:"series" %}
+{% assign series = site.data.videos.series %}
 
 {% for serie in series %}
-    {% assign vidsInSerie = serie.items | sort: 'order' %}
-    {% assign serieData = site.data.videos.series[serie.name] %}
+    {% assign currentSerie = serie[1] %}
+    {% assign vidsInSerie = site.videos | where:'series', serie[0] | sort: 'order' %}
 
-    <h1 style="margin:0;">{{serie.name}}</h1>
-    <div class="video-details" style="font-size: 0.9em;">
-        <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3">
-                <p style="margin-top: 1.5em; text-align:center">
-                    <a href="{{vidsInSerie[0].url}}">
-                        <img class="" src="//i.ytimg.com/vi/{{vidsInSerie[0].videoId}}/mqdefault.jpg">
-                    </a>
+    <h1 style="margin:0;">{{serie[0]}}</h1>
+        <div class="video-details" style="font-size: 0.9em;">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3">
+                    <p style="margin-top: 1.5em; text-align:center">
+                        <a href="{{vidsInSerie[0].url}}">
+                            <img class="" src="//i.ytimg.com/vi/{{vidsInSerie[0].videoId}}/mqdefault.jpg">
+                        </a>
 
-                    <small>{{serie.size}} videos</small>
-                </p>
+                        <small>{{vidsInSerie.size}} videos</small>
+                    </p>
+                </div>
+
+                <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3" style="padding-left: 20px;">
+                    <!--<p style="margin:0;"><small>{{serie.size}} videos, {{serieData.length}}</small></p>-->
+                    <p>{{currentSerie.description}}</p>
+                </div>
             </div>
 
-            <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3" style="padding-left: 20px;">
-                <!--<p style="margin:0;"><small>{{serie.size}} videos, {{serieData.length}}</small></p>-->
-                <p>{{serieData.description}}</p>
+            <div class="video-serieList">
+                <ol style="margin: 0;">
+                    {% for vid in vidsInSerie %}
+                        <li><a href="{{vid.url}}">{{vid.title}}</a></li>
+                    {% endfor %}
+                </ol>
             </div>
         </div>
 
-        <div class="video-serieList">
-            <ol style="margin: 0;">
-                {% for vid in vidsInSerie %}
-                    <li><a href="{{vid.url}}">{{vid.title}}</a></li>
-                {% endfor %}
-            </ol>
-        </div>
-    </div>
-    
-    <br>
-    <hr>
+        {% if currentSerie.wip %}
+            <p style="display:block; font-size: 0.8em; background-color: #eee; background-image: url(/assets/img/in-progress.svg); background-position-y: center; background-position-x: 20px; background-repeat: no-repeat; line-height: 1.2em; padding: 20px 20px 20px 50px; margin-bottom: 0;">
+                This series is being rolled out! New videos will be published regularly.
+            </p>
+        {% endif %}
+        
+        <br>
+        <hr>
 {% endfor %}

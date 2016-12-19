@@ -1,7 +1,9 @@
-name: AWS Lambda
-length: 18829
-published: "2016-01-10"
 series:
+  "Learning TypeScript":
+    wip: true
+    playlistId: PLzvRQMJ9HDiQyjtcrtvDkeQMJIrv5ABbm
+    description: "In this series I'll show you how to get started with TypeScript. It's a superset of JavaScript that allows you to use classes and types. It also features static type checking and accurate code refactoring."
+
   "Get started with AWS Lambda":
     playlistId: PLzvRQMJ9HDiSQMe68cti8cupI0mzLk1Gc
     description: "In this series I'll show you how to use AWS Lambda to create scalable applications. I'll cover topics like creating a function in Node.js, deploying them with automated tools, executing functions with HTTP calls, integrating them with other AWS services and much more!"

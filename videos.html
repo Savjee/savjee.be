@@ -5,7 +5,7 @@ paginate:
 collection: videos
 ---
 
-<p>Hi there! I'm starting my own YouTube channel with free, high-quality video tutorials. I would really appreciate your support, so subscribe now:</p>
+<p>Hi there! I'm starting my own YouTube channel with {{site.videos.size | divided_by: 5 | ceil | times: 5}}+ free, high-quality video tutorials. I would really appreciate your support, so subscribe now:</p>
 
 <div style="text-align:center">
     <script src="https://apis.google.com/js/platform.js"></script>

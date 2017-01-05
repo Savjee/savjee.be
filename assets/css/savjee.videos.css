@@ -42,11 +42,13 @@
 
 .video-serieList{
     column-count: 2;
+    -moz-column-count: 2;
 }
 
 @media (max-width: 767px) {
     .video-serieList{
         column-count: 1;
+        -moz-column-count: 1;
     }
 
     .video-navigation.empty{

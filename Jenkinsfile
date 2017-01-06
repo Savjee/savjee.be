@@ -6,7 +6,6 @@ node {
             dir('_includes') {
                 sh 'echo ${analyticsid}'
                 sh "sed -i -e 's/UA-XXXXXXXX-X/${analyticsid}/g' google-analytics.html"
-                sh "rm google-analytics.html-e"
             }
         }       
     }

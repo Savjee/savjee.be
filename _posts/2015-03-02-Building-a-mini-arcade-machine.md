@@ -86,7 +86,7 @@ Working out the rough edges with a rasp:
 We didn't just cut the side panels and control panel. The front panel, marquee and bottom are also finished. Only the screen cutout and back panel remains. That's for next weekend ;).
 
 # Setting up the Pi
-I started setting up the Raspberry Pi in between the wood sawing sessions. I found two operating systems for the Pi that are built for emulating classic games: [PiPlay](http://pimame.org/) and [RetroPie](http://blog.petrockblock.com/retropie/). Both have about the same features and come with support for many emulators. I choose RetroPie because it had a stable build for the Raspberry Pi 2 (PiPlay for the Pi 2 was in beta). 
+I started setting up the Raspberry Pi in between the wood sawing sessions. I found two operating systems for the Pi that are built for emulating classic games: [PiPlay](http://piplay.org/) and [RetroPie](http://blog.petrockblock.com/retropie/). Both have about the same features and come with support for many emulators. I choose RetroPie because it had a stable build for the Raspberry Pi 2 (PiPlay for the Pi 2 was in beta). 
 
 RetroPie can be used to emulate many game systems including: MAME (for all those classic arcade games), NES, SNES, GameBoy and PlayStation 1. Check out the full [list of supported systems](http://blog.petrockblock.com/retropie/arcade-systems-game-consoles-and-home-computers-in-retropie/).
 

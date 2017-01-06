@@ -18,6 +18,7 @@ I quickly found [AWStats](http://awstats.sourceforge.net/), a log analyzer simil
 Because AWStats can't be installed on S3, you're going to need a small server for it. I choose a small VPS with Ubuntu Server on it.
 
 Only one command is needed to install AWStats on Ubuntu Server:
+
 <pre>sudo apt-get install awstats</pre>
 
 After the necessary packages are installed, you need to configure AWStats. There is a template configuration located in ``/etc/awstats`` so that's a good starting point. Copy the sample configuration and name it to awstats.yourdomain.com.conf:
@@ -25,6 +26,7 @@ After the necessary packages are installed, you need to configure AWStats. There
 <pre>cp /etc/awstats/awstats.conf /etc/awstats/awstats.savjee.be.conf</pre>
 
 Inside the config files, there are a few variables that need to be changed. Find them and modify them so they match your website's setup:
+
 <pre>
 LogFile="/home/xavier/s3logs/access.log"
 SiteDomain="www.savjee.be"
@@ -134,7 +136,9 @@ Put the script on your server and make sure to change the configuration options 
 
 # Cron
 And finally, add the bash script to your cron so it can run automatically. Run: 
+
 <pre>sudo crontab -e</pre>
 
 And add this line to run the script every 12 hours.
+
 <pre>0 */12 * * * sh /home/xavier/s3-to-AWStat.sh</pre>

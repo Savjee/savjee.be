@@ -43,7 +43,7 @@ The M4 SSD is still running inside my MacBook and I've used 100GB of it's capaci
 ![](/uploads/review-mbp-2008/superdrive.jpg)
 *Say goodbye to the SuperDrive!*
 
-The SSD replaced my regular harddrive as a boot drive but I kept the HDD for extra storage. I threw out my SuperDrive, placed my HDD in an [OptiBay/HDCaddy](http://hdcaddy.com/product.php?id_product=10) and screwed everything in place. Right now I only use the HDD for storing music, photos and downloads (I symlinked their directories to the HDD).
+The SSD replaced my regular harddrive as a boot drive but I kept the HDD for extra storage. I threw out my SuperDrive, placed my HDD in an OptiBay/HDCaddy and screwed everything in place. Right now I only use the HDD for storing music, photos and downloads (I symlinked their directories to the HDD).
 
 At the time I was worried that I might miss the SuperDrive. Just to be safe I also bought an enclosure that allowed me to use the SuperDrive with a USB cable. However I never really used it after that. 
 

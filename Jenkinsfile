@@ -15,7 +15,10 @@ node {
     }
 
     stage('Deploy to AWS') {
-        withCredentials([usernamePassword(credentialsId: 'savjee.be-aws', passwordVariable: 'S3_SECRET', usernameVariable: 'S3_ID')]) {
+        withCredentials([
+            usernamePassword(credentialsId: 'savjee.be-aws', passwordVariable: 'S3_SECRET', usernameVariable: 'S3_ID'),
+            string(credentialsId: 'savjee.be-cloudfront-id', variable: 'CLOUDFRONT_DISTRIBUTION_ID')
+        ]) {
             sh 's3_website push'
         }
         

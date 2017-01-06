@@ -14,6 +14,12 @@ node {
         sh 'jekyll build'
     }
 
+    stage('html-proofer') {
+        dir('_scripts') {
+            sh 'ruby html-proofer.rb'
+        }
+    }
+
     stage('Deploy to AWS') {
         withCredentials([
             usernamePassword(credentialsId: 'savjee.be-aws', passwordVariable: 'S3_SECRET', usernameVariable: 'S3_ID'),

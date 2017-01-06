@@ -3,7 +3,7 @@ markdown_ext: markdown,mkd,mkdn,md
 highlighter: rouge
 permalink: /:year/:month/:title/
 safe: false
-exclude: ['s3_website.yml']
+exclude: ['s3_website.yml', 'Jenkinsfile', 'README.md', '_resizeThumbnails.sh']
 paginate: 5
 
 gems:

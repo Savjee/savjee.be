@@ -3,3 +3,4 @@ _drafts
 _asset_bundler_cache
 .idea
 .jekyll-metadata
+_scripts/tmp

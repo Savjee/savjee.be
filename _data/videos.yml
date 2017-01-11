@@ -1,6 +1,5 @@
 series:
   "Learning TypeScript":
-    wip: true
     playlistId: PLzvRQMJ9HDiQyjtcrtvDkeQMJIrv5ABbm
     description: "In this series I'll show you how to get started with TypeScript. It's a superset of JavaScript that allows you to use classes and types. It also features static type checking and accurate code refactoring."
 

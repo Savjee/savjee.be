@@ -3,7 +3,7 @@ node {
         checkout scm
 
         stage('Inject Google Analytics') {
-            slackSend channel: 'jenkins', message: "Started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
+            slackSend channel: 'jenkins', message: "Started *${env.JOB_NAME}* #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
 
             withCredentials([string(credentialsId: 'savjee.be-googleanalytics-id', variable: 'analyticsid')]) {
                 dir('_includes') {
@@ -31,10 +31,10 @@ node {
                 sh 's3_website push'
             }
             
-            slackSend channel: 'jenkins', color: 'good', message: "Finished ${env.JOB_NAME} ${env.BUILD_NUMBER}", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
+            slackSend channel: 'jenkins', color: 'good', message: "Finished *${env.JOB_NAME}* #${env.BUILD_NUMBER}", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
         }
     }catch(e){
-        slackSend channel: 'jenkins', color: 'danger', message: "FAILED ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
+        slackSend channel: 'jenkins', color: 'danger', message: "FAILED *${env.JOB_NAME}* #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
     }
     
 }

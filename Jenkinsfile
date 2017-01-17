@@ -1,3 +1,4 @@
+#!groovy
 node {
     try{
         checkout scm

@@ -1,4 +1,8 @@
 series:
+  "Great Mac Apps":
+    playlistId: PLzvRQMJ9HDiStnho-YPF9N3ROqDlESPqD
+    description: In this series I will show you some great Mac applications. Apps that have a beautiful design, pack a lot features, are innovative or incredibly useful. These are my personal recommendations.
+
   "Learning TypeScript":
     playlistId: PLzvRQMJ9HDiQyjtcrtvDkeQMJIrv5ABbm
     description: "In this series I'll show you how to get started with TypeScript. It's a superset of JavaScript that allows you to use classes and types. It also features static type checking and accurate code refactoring."

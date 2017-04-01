@@ -6,7 +6,7 @@ HTMLProofer.check_directory("../_site", {
   :alt_ignore => [/.*/],
 
   # Check external URLs
-  :disable_external => false,
+  :disable_external => true,
 
   :check_opengraph => true,
   :assume_extension => true,

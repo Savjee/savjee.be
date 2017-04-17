@@ -9,7 +9,7 @@ upload_directory: /uploads/building-hackintosh
 
 In 2009 I bought the first Unibody Macbook Pro (Macbook pro 5,1) as a replacement for my four year old PowerBook G4. I’ve used it ever since and absolutely love the machine! Over the years I’ve added more memory and took the SuperDrive out to make room for a SSD.
 
-After 3 years my Macbook is still fast but it can’t handle recent games. I decided to look for an affordable new computer to replace the Macbook for when I’m home. While I was looking for advice on Youtube, I found [this](http://www.youtube.com/watch?v=0-1zxBI42JI) video of [Bob Roche](http://www.youtube.com/user/cpukid00) talking about his Hackintosh. I started to look more into the Hackintosh scene and ultimately decided to go for it and build myself a Hackintosh!
+After 3 years my Macbook is still fast but it can’t handle recent games. I decided to look for an affordable new computer to replace the Macbook for when I’m home. While I was looking for advice on Youtube, I found [this](https://www.youtube.com/watch?v=0-1zxBI42JI) video of [Bob Roche](https://www.youtube.com/user/cpukid00) talking about his Hackintosh. I started to look more into the Hackintosh scene and ultimately decided to go for it and build myself a Hackintosh!
 
 <!--more-->
 
@@ -31,7 +31,7 @@ I decided not to buy a GPU because they’re expensive and I didn’t know if th
 I can’t stress this enough: do research before buying components. Verify that everything works under OS X before you buy. That way, you save yourself money and a ton of headaches!
 
 # The install
-I’m not going to describe every single detail of the installation. There are a lot of great guides out there that explain how to install OS X on your Hackintosh. Since Apple only distributes OS X through the Mac App Store you will need access to a real Mac. On that Mac, you have to download a copy of OS X from the [App Store](https://itunes.apple.com/us/app/os-x-mountain-lion/id537386512?ls=1&mt=12), download and run [UniBeast](http://www.tonymacx86.com/downloads.php?do=file&id=134) and follow the on-screen instructions. It’s really easy! You’ll end up with a bootable USB drive that you can use to boot up your Hackintosh. Ready to install OS X!
+I’m not going to describe every single detail of the installation. There are a lot of great guides out there that explain how to install OS X on your Hackintosh. Since Apple only distributes OS X through the Mac App Store you will need access to a real Mac. On that Mac, you have to download a copy of OS X from the [App Store](https://itunes.apple.com/us/app/os-x-mountain-lion/id537386512?ls=1&mt=12), download and run [UniBeast](https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/) and follow the on-screen instructions. It’s really easy! You’ll end up with a bootable USB drive that you can use to boot up your Hackintosh. Ready to install OS X!
 
 In my case, the installation took about 20 minutes and ran without problems!
 

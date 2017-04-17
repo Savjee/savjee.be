@@ -18,7 +18,7 @@ Here's a sneak peak of what the result looks like:
 ![Preview of the dynamic heart](/uploads/dynamic-heart/dynamicHeart.gif)
 
 # The organisation
-Let me start by quickly describing the organisation. The NPO is called [VZW Bescherm kinderen](http://www.beschermkinderen.be/) and was founded to protect children when parents are having severe issue's. The organisation aims to prevent family tragedies. They want to be able to take children away from dangerous situations and put them in safe house. Currently there is no organisation or law in Belgium that protects children from dangerous family situations.
+Let me start by quickly describing the organisation. The NPO is called VZW Bescherm kinderen and was founded to protect children when parents are having severe issue's. The organisation aims to prevent family tragedies. They want to be able to take children away from dangerous situations and put them in safe house. Currently there is no organisation or law in Belgium that protects children from dangerous family situations.
 
 # The problem
 The idea was to create a website where people can donate money for the organisation. However, the problem we faced was: what do we give people in return for their donation? Donators should feel good about their donation and receive a little gift for it. After all, they are helping to protect children! 

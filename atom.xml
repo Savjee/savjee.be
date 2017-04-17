@@ -17,7 +17,7 @@ layout: null
 	{% for post in site.posts limit:40 %}
 	<entry>
 		<title>{{ post.title | xml_escape }}</title>
-		<link type='text/html' href='http://www.savjee.be{{ post.url }}'/>
+		<link type='text/html' href='https://www.savjee.be{{ post.url }}'/>
 		<id>https://www.savjee.be{{ post.url }}</id>
 		<updated>{{ post.date | date_to_xmlschema }}</updated>
 

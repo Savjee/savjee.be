@@ -213,3 +213,7 @@ footer p, footer a {
         /*line-height: 30px;*/
     }
 }
+
+.mailmunch-scrollbox{
+    width: 320px !important;
+}

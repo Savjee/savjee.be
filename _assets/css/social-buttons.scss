@@ -1,68 +1,56 @@
-/*# sourceMappingURL=static-social-buttons.css.map */
+@mixin social-button-instance($base-color) {
+  background-color: $base-color;
+		&:hover {
+			background-color: darken($base-color, 10%);
+		}
+}
+
 .socialbutton-wrapper {
 	text-align: center;
 	margin: 20px 0;
 	padding: 10px 0;
 	border-top: solid 1px #e4e4e4;
 	border-bottom: solid 1px #e4e4e4;
+
 	a {
 		text-decoration: none;
 	}
-	.only-smartphone {
+
+  .only-smartphone {
 		display: none;
 	}
-	.share-button-container {
+
+  .share-button-container {
 		text-align: center;
 		margin: 20px 0;
 		padding: 10px 0;
 		border-top: solid 1px #e4e4e4;
 		border-bottom: solid 1px #e4e4e4;
 	}
-	.socialbutton {
+
+  .socialbutton {
 		width: 70px;
 		height: 55px;
 		margin-bottom: 0;
 		display: inline-block;
 		margin: 5px;
+
 		p {
 			margin: 0;
 			padding: 0;
 			text-align: center;
 			padding-top: 15px;
+
 			>img {
 				height: 25px;
 			}
 		}
-	}
-	.socialbutton.twitter {
-		background-color: #5BC2F0;
-		&:hover {
-			background-color: #15a8e9;
-		}
-	}
-	.socialbutton.facebook {
-		background-color: #435D96;
-		&:hover {
-			background-color: #2b3c61;
-		}
-	}
-	.socialbutton.pocket {
-		background-color: #EF3E56;
-		&:hover {
-			background-color: #cf112b;
-		}
-	}
-	.socialbutton.whatsapp {
-		background-color: #25D366;
-		&:hover {
-			background-color: #1a9247;
-		}
-	}
-	.socialbutton.reddit {
-		background-color: #333333;
-		&:hover {
-			background-color: #0d0d0d;
-		}
+
+    &.twitter{ @include social-button-instance(#5BC2F0); }
+    &.facebook { @include social-button-instance(#435D96); }
+    &.pocket { @include social-button-instance(#EF3E56); }
+    &.whatsapp { @include social-button-instance(#25D366); }
+    &.reddit{@include social-button-instance(#333333); }
 	}
 }
 

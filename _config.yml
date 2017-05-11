@@ -8,6 +8,7 @@ paginate: 5
 
 gems:
 - jekyll-paginate
+- jekyll-assets
 
 asset_bundler:
   compress:
@@ -22,3 +23,15 @@ collections:
     permalink: /videos/:path/
 
 excerpt_separator: <!--more-->
+
+assets:
+  compress:
+    css: true
+    js: true
+  cache: _asset-cache
+  prefix: "/assets"
+  assets:
+    - "bundle.css"
+  digest: true
+  sources:
+    - "_assets/css"

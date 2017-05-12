@@ -20,20 +20,12 @@ header {
     }
 
     .site-title {
-        float: left;
-        width: 80%;
         margin-top: 22px;
         font-size: 16px;
 
         a {
             color: #565656;
             text-decoration: none;
-        }
-
-        span {
-            font-weight: 200;
-            color: #888888;
-            text-transform: lowercase;
         }
     }
 
@@ -52,10 +44,10 @@ header {
             }
         }
     }
-}
 
-.clear {
-    clear: both;
+    .clear {
+        clear: both;
+    }
 }
 
 .container {
@@ -97,48 +89,24 @@ p code, li code {
     margin: 0 2px;
 }
 
-article img {
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-a {
-    color: #007998;
-    -webkit-transition: color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out;
-    transition: color 0.25s ease-in-out;
-    text-decoration: none;
-}
-
-hr {
-    border: none;
-    border-top: solid 1px #ddd;
-    padding: 20px 0;
-}
-
-img + em {
-    font-size: 0.8em;
-    text-align: center;
-    display: block;
-}
-
-a:hover {
-    color: rgba(0, 121, 152, 0.5);
-}
-
-h1.post-title {
-    font-family: 'Lato', sans-serif;
-}
-
 article {
     letter-spacing: .5px;
     margin: 0 0 35px;
     font-weight: 300;
     line-height: 34px;
+
+    img{
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img + em {
+        font-size: 0.8em;
+        text-align: center;
+        display: block;
+    }
 
     .post-description{
         h1{
@@ -163,6 +131,30 @@ article {
         font-size: 1.4em;
         font-weight: 700;
     }
+}
+
+a {
+    color: #007998;
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        color: rgba(0, 121, 152, 0.5);
+    }
+}
+
+hr {
+    border: none;
+    border-top: solid 1px #ddd;
+    padding: 20px 0;
+}
+
+h1.post-title {
+    font-family: 'Lato', sans-serif;
 }
 
 blockquote {
@@ -191,10 +183,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-    body {
-        /*font-size: 15px;*/
-    }
-
     header {
         padding: 0;
         text-align: center;
@@ -207,10 +195,6 @@ footer {
     header .site-title {
         float: none;
         width: auto;
-    }
-
-    article {
-        /*line-height: 30px;*/
     }
 }
 

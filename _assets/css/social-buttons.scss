@@ -16,11 +16,11 @@
 		text-decoration: none;
 	}
 
-  .only-smartphone {
+  	.only-smartphone {
 		display: none;
 	}
 
-  .socialbutton {
+  	.socialbutton {
 		width: 70px;
 		height: 55px;
 		margin-bottom: 0;
@@ -38,11 +38,11 @@
 			}
 		}
 
-    &.twitter{ @include social-button-instance(#5BC2F0); }
-    &.facebook { @include social-button-instance(#435D96); }
-    &.pocket { @include social-button-instance(#EF3E56); }
-    &.whatsapp { @include social-button-instance(#25D366); }
-    &.reddit{@include social-button-instance(#333333); }
+		&.twitter{ @include social-button-instance(#5BC2F0); }
+		&.facebook { @include social-button-instance(#435D96); }
+		&.pocket { @include social-button-instance(#EF3E56); }
+		&.whatsapp { @include social-button-instance(#25D366); }
+		&.reddit{@include social-button-instance(#333333); }
 	}
 }
 

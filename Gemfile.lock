@@ -8,9 +8,22 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    aws-sdk (2.9.16)
+      aws-sdk-resources (= 2.9.16)
+    aws-sdk-core (2.9.16)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.9.16)
+      aws-sdk-core (= 2.9.16)
+    aws-sigv4 (1.0.0)
     colorator (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.5)
+    configure-s3-website (2.0.0)
+      aws-sdk (~> 2)
+      deep_merge (~> 1.0.0)
+    deep_merge (1.0.0)
+    dotenv (1.0.2)
     ethon (0.10.1)
       ffi (>= 1.3.0)
     extras (0.1.0)
@@ -51,6 +64,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    jmespath (1.3.1)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -71,11 +85,17 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.4.0)
     rouge (1.11.1)
+    s3_website (3.1.0)
+      colored (= 1.2)
+      configure-s3-website (= 2.0.0)
+      dotenv (~> 1.0)
+      thor (~> 0.18)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sprockets (3.6.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
+    thor (0.19.4)
     thread_safe (0.3.6)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
@@ -92,6 +112,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-paginate
   redcarpet
+  s3_website
 
 BUNDLED WITH
    1.14.6

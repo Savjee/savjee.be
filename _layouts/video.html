@@ -16,7 +16,8 @@ layout: default
         </div>
 
         <div class="pure-g">
-            {% assign videosInThisSerie = site.videos | where:"series", page.series | sort: "order" %}
+            {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}
+
             {% assign tmp = page.order | minus: 2 %}
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                     {% if page.order != 1 %}
@@ -47,7 +48,7 @@ layout: default
                 </div>
         </div>
 
-        {{ content }}        
+        {{ content }}
     </div>
 </article>
 

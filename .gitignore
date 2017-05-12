@@ -1,6 +1,6 @@
 _site
 _drafts
-_asset_bundler_cache
+_asset-cache
 .idea
 .jekyll-metadata
 _scripts/tmp

@@ -11,7 +11,11 @@ node {
                     sh 'echo ${analyticsid}'
                     sh "sed -i -e 's/UA-XXXXXXXX-X/${analyticsid}/g' google-analytics.html"
                 }
-            }       
+            }
+        }
+
+        stage('Install dependencies') {
+            sh 'bundle install'
         }
 
         stage('Running Jekyll') {
@@ -31,11 +35,11 @@ node {
             ]) {
                 sh 's3_website push'
             }
-            
+
             slackSend channel: 'jenkins', color: 'good', message: "Finished *${env.JOB_NAME}* #${env.BUILD_NUMBER}", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
         }
     }catch(e){
         slackSend channel: 'jenkins', color: 'danger', message: "FAILED *${env.JOB_NAME}* #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
     }
-    
+
 }

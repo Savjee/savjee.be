@@ -15,7 +15,7 @@ node {
         }
 
         stage('Install dependencies') {
-            sh 'bundle install'
+            sh 'bundle exec bundle install'
         }
 
         stage('Running Jekyll') {

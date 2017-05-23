@@ -40,6 +40,9 @@ node {
         }
     }catch(e){
         slackSend channel: 'jenkins', color: 'danger', message: "FAILED *${env.JOB_NAME}* #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'savjee', tokenCredentialId: 'slack-savjee'
+
+        currentBuild.result = 'FAILURE'
+
     }
 
 }

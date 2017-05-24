@@ -13,6 +13,9 @@ HTMLProofer.check_directory("../_site", {
   :cache => { :timeframe => '30d' },
   :parallel => { :in_processes => 2},
 
+  :check_favicon => true,
+  :check_opengraph => true,
+
   # Timeout for checking external links = 10 seconds, verify the SSL certificates
   :typhoeus => { timeout: 10, :ssl_verifyhost => 2, :followlocation => true},
 }).run

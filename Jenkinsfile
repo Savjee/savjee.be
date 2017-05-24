@@ -19,7 +19,7 @@ node {
         }
 
         stage('Running Jekyll') {
-            sh 'jekyll build'
+            sh 'bundle exec jekyll build'
         }
 
         stage('html-proofer') {

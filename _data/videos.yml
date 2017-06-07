@@ -1,4 +1,9 @@
 series:
+  - title: "Serverless Framework"
+    playlistId: PLzvRQMJ9HDiT5b4OsmIBiMbsPjfp4kfg3
+    description: The Serverless framework allows you to build & deploy auto-scaling functions. It takes care of provisioning all the resources that you need. In this series we'll focus on deploying Lambda functions to AWS (written in node.js)
+    wip: true
+
   - title: "TypeScript Design Patterns"
     playlistId: PLzvRQMJ9HDiSk1pnrKewLklYfCdu9Qjhy
     description: Design patterns are a collection of solutions to common programming problems. In this series I'll show you how to use some of these patterns in TypeScript.

@@ -55,3 +55,18 @@ layout: default
 {% include youtube-subscribebutton.html %}
 
 {% include disqus-comments.html %}
+
+<!-- *********** Structured data for Google *********** -->
+<script type="application/ld+json">
+[
+	{
+        "@context": "http://schema.org/",
+        "@type": "VideoObject",
+        "name": "{{ page.title }}",
+        "description": "{{ content | strip_html | truncatewords: 40 }}",
+        "thumbnailURL": "http://i.ytimg.com/vi/{{page.videoId}}/hqdefault.jpg",
+        "UploadDate": "{% if page.uploadDate %}{{page.uploadDate}}{% else %}2017-06-23{% endif %}",
+        "embedUrl": "https://www.youtube.com/embed/{{page.videoId}}"
+    }
+]
+</script>

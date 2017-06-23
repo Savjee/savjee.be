@@ -5,6 +5,7 @@ title: Configure AWS credentials
 videoId: tgb_MRVylWw
 order: 5
 series: Serverless Framework
+uploadDate: 2017-06-06
 ---
 
 Learn how to create AWS credentials and then use them with the Serverless framework. This is the final step before we can start deploying functions to AWS Lambda!

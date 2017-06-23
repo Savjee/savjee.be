@@ -5,6 +5,7 @@ title: Core concepts
 videoId: wP7a9IosX3g
 order: 3
 series: Serverless Framework
+uploadDate: 2017-06-06
 ---
 
 In this video we'll take a look at the core concepts that you should understand when you want to start using the Serverless framework.

@@ -5,6 +5,7 @@ title: What is Lambda?
 videoId: 4T_50kGJKfw
 order: 2
 series: Serverless Framework
+uploadDate: 2017-06-06
 ---
 
 What is so special about AWS Lambda? In this video we will look at why people like Lambda so much.

@@ -5,6 +5,7 @@ title: Integrate with API Gateway
 videoId: 6n4l_aLfY4Y
 order: 8
 series: Serverless Framework
+uploadDate: 2017-06-13
 ---
 
 Learn how to quickly integrate your Lambda function with API Gateway. Just add an event to the serverless.yml file, deploy your function and done!

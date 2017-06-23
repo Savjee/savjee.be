@@ -53,11 +53,29 @@ title: Home
 	{% endif %}
 </p>
 
+<!-- *********** Structured data for Google *********** -->
 <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "name": "Savjee",
-  "url": "https://www.savjee.be/"
-}
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"name": "Savjee",
+		"url": "https://www.savjee.be/"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"url": "https://www.savjee.be/",
+		"logo": "https://www.savjee.be/assets/img/logo.svg",
+		"sameAs": [
+			"https://www.facebook.com/savjee",
+			"https://www.youtube.com/savjee",
+			"https://twitter.com/Xafke"
+		]
+	}
+]
+</script>
+
+<script type="application/ld+json">
+
 </script>

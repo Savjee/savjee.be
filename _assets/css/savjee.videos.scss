@@ -20,12 +20,12 @@
     overflow: hidden;
     display: block;
     text-overflow: ellipsis;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .video-navigation{
-    font-size: 0.8em; 
-    background-color: #F0F0F0; 
+    font-size: 0.8em;
+    background-color: #F0F0F0;
     padding: 15px;
     min-height: 100px;
 }

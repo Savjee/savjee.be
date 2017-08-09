@@ -1,0 +1,60 @@
+---
+layout: page
+title: Bookshelf
+---
+
+<div class="bookshelf">
+    An overview of all the books that I own, along with a short review of each book.
+
+    <hr>
+
+    {% for book in site.data.bookshelf %}
+
+        {% if book.opinion and book.cover and book.links %}
+            {% assign mod = forloop.index0 | modulo: 2 %}
+
+            <h1>{{book.title}} <span>by {{book.author}}</span></h1>
+            <small>Finished on {{ book.dateRead | date_to_long_string }} - Rating: {{book.rating}}/5
+                <!-- - <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-amazon.svg" height="20" style="display:inline-block;height: 14px;"></a> <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-apple.svg" height="20" style="display:inline-block;height: 14px;"></a> -->
+            </small>
+
+
+            <div class="pure-g">
+                {% if mod == 0 %}
+                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3" style='position:relative'>
+                        <img src="/uploads/bookcovers/{{book.cover}}">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3" style="padding-left: 20px;">
+                        <p style="margin-top:0; padding-top: 0;">{{book.opinion}}</p>
+                    </div>
+                {% endif %}
+
+
+
+                {% if mod != 0 %}
+                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3" style="padding-right: 20px;">
+                        <p style="margin-top:0; padding-top: 0;">{{book.opinion}}</p>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3" style='position:relative'>
+                        <img src="/uploads/bookcovers/{{book.cover}}">
+                    </div>
+                {% endif %}
+            </div>
+
+            <hr>
+        {% else %}
+            <h1>{{book.title}} <span>by {{book.author}}</span></h1>
+
+            <small>Rating: {{book.rating}}/5
+                <!-- - <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-amazon.svg" height="20" style="display:inline-block;height: 14px;"></a> <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-apple.svg" height="20" style="display:inline-block;height: 14px;"></a> -->
+            </small>
+
+            <hr>
+        {% endif %}
+
+    {% endfor %}
+
+    <p>That's it for now! Will add more books in the future.</p>
+</div>

@@ -35,3 +35,6 @@ assets:
   digest: true
   sources:
     - "_assets/css"
+
+redcarpet:
+    extensions: ["footnotes"]

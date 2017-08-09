@@ -1,0 +1,19 @@
+.bookshelf{
+    h1{
+        margin-top: 0 !important;
+        line-height: 0.9em;
+        padding-bottom: 10px;
+
+        span{
+            font-size: 0.6em;
+            color: #aaa;
+            font-weight: 200;
+        }
+    }
+
+    @media (max-width: 767px) {
+        img{
+            max-height: 250px;
+        }
+    }
+}

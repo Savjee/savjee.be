@@ -48,7 +48,9 @@ title: Bookshelf
             <h1>{{book.title}} <span>by {{book.author}}</span></h1>
 
             <small>Rating: {{book.rating}}/5
-                <!-- - <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-amazon.svg" height="20" style="display:inline-block;height: 14px;"></a> <a href="{{book.links.Amazon}}"><img src="/assets/img/icon-apple.svg" height="20" style="display:inline-block;height: 14px;"></a> -->
+                {% if book.links %}
+                 - <a href="{{book.links.Amazon}}">Amazon</a>
+                {% endif %}
             </small>
 
             <hr>

@@ -120,73 +120,109 @@
         "title":"Sterrenkunde voor in bed, op het toilet of in bad",
         "author": "Sarah Brands",
         "dateRead": "20161007",
-        "rating": 5
+        "rating": 5,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00P9G7UK8"
+        }
     },
 
     {
         "title":"Steve Jobs",
         "author": "Walter Isaacson",
         "dateRead": "20160912",
-        "rating": 5
+        "rating": 5,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B004W2UBYW"
+        }
     },
 
     {
         "title":"Lean UX",
         "author": "Jeff Gothelf",
-        "rating": 3
+        "rating": 3,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B01LYGQ6CH"
+        }
     },
 
     {
         "title":"Mars Rover Curiosity",
         "author": "Rob Manning",
-        "rating": 4
+        "rating": 4,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00JYVYVAQ"
+        }
     },
 
     {
         "title":"Samen door één deur",
         "author": "Guillaume Van der Stighelen",
-        "rating": 4
+        "rating": 4,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B01LNO74FU"
+        }
     },
 
     {
         "title":"Elon Musk: Inventing the Future",
         "author": "Ashlee Vance",
-        "rating": 5
+        "rating": 5,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00KVI76ZS"
+        }
     },
 
     {
         "title":"The Everything Store",
         "author": "Brad Stone",
-        "rating": 4
+        "rating": 4,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00FOQRNN2"
+        }
     },
 
     {
         "title":"Rework",
         "author": "Jason Fried",
-        "rating": 5
+        "rating": 5,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B003ELY7PG"
+        }
     },
 
     {
         "title":"The Hitchhiker's Guide to the Galaxy",
         "author": "Douglas Adams",
-        "rating": 5
+        "rating": 5,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B003GK2180"
+        }
     },
 
     {
         "title":"Zero to One",
         "author": "Peter Thiel",
-        "rating": 3
+        "rating": 3,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00KHX0II4"
+        }
     },
 
     {
         "title":"Creativity, Inc.",
         "author": "Ed Catmull",
-        "rating": 3
+        "rating": 3,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B00GUOEMA4"
+        }
     },
 
     {
         "title":"The Hunger Games (entire series)",
         "author": "Suzanne Collins",
-        "rating": 4
+        "rating": 4,
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B002MQYOFW"
+        }
     }
 ]

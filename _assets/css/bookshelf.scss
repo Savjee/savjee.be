@@ -11,9 +11,44 @@
         }
     }
 
+    h1+small{
+        line-height: 20px;
+        display: inline-block;
+        padding-bottom: 20px;
+        padding-top: 5px;
+
+        span{
+            white-space: nowrap;
+        }
+
+        &.no-padding{
+            padding-bottom: 0;
+        }
+    }
+
+    .opinion-right{
+        padding-left: 20px;
+    }
+
+    .opinion-left{
+        padding-right: 20px;
+    }
+
+    .only-mobile{
+            display:none;
+    }
+
     @media (max-width: 767px) {
         img{
             max-height: 250px;
+        }
+
+        .opinion-left, .opinion-right{
+            padding:0;
+        }
+
+        .only-mobile{
+            display:block;
         }
     }
 }

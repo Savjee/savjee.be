@@ -9,6 +9,7 @@ paginate: 5
 gems:
 - jekyll-paginate
 - jekyll-assets
+- jekyll-extlinks
 
 asset_bundler:
   compress:
@@ -38,3 +39,7 @@ assets:
 
 redcarpet:
     extensions: ["footnotes"]
+
+extlinks:
+  attributes: {target: _blank}
+  rel_exclude: ['savjee.be']

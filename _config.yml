@@ -6,7 +6,7 @@ safe: false
 exclude: ['s3_website.yml', 'Jenkinsfile', 'README.md', 'tmp/', 'Gemfile', 'Gemfile.lock']
 paginate: 5
 
-gems:
+plugins:
 - jekyll-paginate
 - jekyll-assets
 - jekyll-extlinks

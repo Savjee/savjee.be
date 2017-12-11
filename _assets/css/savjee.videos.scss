@@ -50,6 +50,26 @@
     }
 }
 
+// Container for a series on the "Video" page
+.video-details{
+    .next-to-each-other{
+        display:flex;
+    }
+
+    .thumb, .description{
+        flex:1;
+    }
+
+    .thumb{
+        max-width: 220px;
+        position: relative; // for the play button overlay
+
+        img{
+            max-width: 200px;
+        }
+    }
+}
+
 .video-serieList{
     column-count: 2;
     -moz-column-count: 2;
@@ -64,5 +84,14 @@
     // Previous and Next video shouldn't be in 2 column layout anymore
     .videoNavigation{
         display: block;
+    }
+
+    .video-details{
+        .thumb, .thumb img{
+            max-width: initial;
+        }
+        .next-to-each-other{
+            display:block;
+        }
     }
 }

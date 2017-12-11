@@ -15,37 +15,34 @@ layout: default
             <iframe src="https://www.youtube.com/embed/{{page.videoId}}?list={{serieData.playlistId}}&showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="pure-g">
+        <div class="videoNavigation">
             {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}
-
             {% assign tmp = page.order | minus: 2 %}
-                <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                    {% if page.order != 1 %}
-                        <div class="video-navigation">
-                            <a href="{{videosInThisSerie[tmp].url}}">
-                                <p><strong>&larr; Previous video</strong><br>
-                                    <span class="hide-overflow-text">{{videosInThisSerie[tmp].title}}</span>
-                                </p>
-                            </a>
-                        </div>
-                    {% else %}
-                        <div class="video-navigation empty"></div>
-                    {% endif %}
-                </div><!--
-                --><div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2" style="text-align:right;">
-                        {% if page.order >= 1 and page.order < videosInThisSerie.size %}
-                            <div class="video-navigation">
-                                <a href="{{videosInThisSerie[page.order].url}}">
-                                    <p>
-                                        <strong>Next video &rarr;</strong><br>
-                                        <span class="hide-overflow-text">{{videosInThisSerie[page.order].title}}</span>
-                                    </p>
-                                </a>
-                            </div>
-                        {% else %}
-                            <div class="video-navigation empty"></div>
-                        {% endif %}
-                </div>
+
+            <div>
+                {% if page.order != 1 %}
+                    <div class="video-">
+                        <a href="{{videosInThisSerie[tmp].url}}">
+                            <p><strong>&larr; Previous video</strong><br>
+                                <span class="hide-overflow-text">{{videosInThisSerie[tmp].title}}</span>
+                            </p>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="nextVideo">
+                {% if page.order >= 1 and page.order < videosInThisSerie.size %}
+                    <div class="video-">
+                        <a href="{{videosInThisSerie[page.order].url}}">
+                            <p>
+                                <strong>Next video &rarr;</strong><br>
+                                <span class="hide-overflow-text">{{videosInThisSerie[page.order].title}}</span>
+                            </p>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
         </div>
 
         {{ content }}

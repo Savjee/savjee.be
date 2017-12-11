@@ -23,21 +23,31 @@
     overflow: hidden;
 }
 
-.video-navigation{
-    font-size: 0.8em;
+.videoNavigation{
+    display: flex;
+    align-items:center;
     background-color: #F0F0F0;
-    padding: 15px;
+    font-size: 0.8em;
     min-height: 100px;
-}
+    padding: 15px;
 
-.video-navigation p{
-    margin:0;
-}
+    p{
+        margin:0;
+    }
 
-.video-navigation strong{
-    color: #000;
-    text-decoration: none;
-    display:inline-block;
+    strong{
+        color: #000;
+        text-decoration: none;
+        display:inline-block;
+    }
+
+    div{
+        flex:1;
+    }
+
+    div.nextVideo{
+        text-align:right;
+    }
 }
 
 .video-serieList{
@@ -51,7 +61,8 @@
         -moz-column-count: 1;
     }
 
-    .video-navigation.empty{
-        display:none;
+    // Previous and Next video shouldn't be in 2 column layout anymore
+    .videoNavigation{
+        display: block;
     }
 }

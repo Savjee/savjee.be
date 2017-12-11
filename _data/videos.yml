@@ -1,8 +1,12 @@
 series:
+  - title: "Simply explained"
+    playlistId: PLzvRQMJ9HDiSbvXWQ7OdgVccdr7Wni5Qw
+    description: Simply Explained is all about taking a complex subject and explaining it in plain English.
+    wip: true
+
   - title: "Serverless Framework"
     playlistId: PLzvRQMJ9HDiT5b4OsmIBiMbsPjfp4kfg3
     description: The Serverless framework allows you to build & deploy auto-scaling functions. It takes care of provisioning all the resources that you need. In this series we'll focus on deploying Lambda functions to AWS (written in node.js)
-    wip: true
 
   - title: "TypeScript Design Patterns"
     playlistId: PLzvRQMJ9HDiSk1pnrKewLklYfCdu9Qjhy

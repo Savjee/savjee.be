@@ -1,12 +1,23 @@
 [
     {
+        "title":"Big Data",
+        "author": "Viktor Mayer-Schönberger, Kenneth Cukier",
+        "dateRead": "20170921",
+        "rating": 4,
+        "opinion": "'A Revolution That Will Transform How We Live, Work, and Think'. Great introduction to the world of big data. It doesn't go into a lot of technical details but explains the main concepts very well. Also focusses on how big data will change our society (good and bad) and how we should handle that. Makes you think about all the data we leave behind.",
+
+        "links": {
+            "Amazon": "https://www.amazon.com/dp/B009N08NKW"
+        }
+    },
+
+    {
         "title":"Ready Player One",
         "author": "Ernest Cline",
         "dateRead": "20170807",
         "rating": 5,
         "opinion": "Discovered it after Casey Neistat mentioned it in one of his vlogs. As a geek, I found this book incredibly hard to put down. I started reading it not expecting to be sucked in so quickly. After just a handful of pages I was hooked and couldn't put the book down. The book sketches a doomsday picture of society where most people prefer to live inside a virtual reality world, instead of the real world. It's fast paced, funny, exciting and filled with 80s references. Really enjoyed it!",
 
-        "cover": "ready-player-one.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B005CVWWJY"
         }
@@ -19,7 +30,6 @@
         "rating": 4,
         "opinion": "I picked up this book to learn more about the rise and fall of RIM. I knew the brand and I knew a few people who where Blackberry fans. When Apple introduced the iPhone however, the company didn't recognize the threat. It was really interesting to see this company and it's executives to be so blinded by their own success.",
 
-        "cover": "losing-the-signal.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B0056A1IVY"
         }
@@ -32,7 +42,6 @@
         "rating": 5,
         "opinion": "The book starts off with childhood stories of Howard Wasdin. It's quickly followed by a summary of his early military career. At this point the book is nice to read, but didn't really capture my attention. However, when Wasdin starts training to become a Navy Seal, the book becomes almost irresistible.<br><br>I teared through the pages and read about his training, times he was deployed in war and about his return to the States. The only thing I didn't like was the times where he brags about himself. He has ofcourse every reason to be proud, but at certain points it was just a bit too much.",
 
-        "cover": "seal-team-six.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B0056A1IVY"
         }
@@ -45,7 +54,6 @@
         "rating": 4,
         "opinion": "The main idea of this book is that successful companies are able to describe WHY they do the things that they do. Not just WHAT they do and HOW they do it. That's a very interesting thought because most companies only tell you WHAT they do, never WHY. The book is really inspiring but also very repetitive. It could be made much shorter. My advise is: definitely read it when you can, but feel free to skip a few pages if it becomes too repetitive.",
 
-        "cover": "start-with-why.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/1591842808"
         }
@@ -58,7 +66,6 @@
         "rating": 4,
         "opinion": "Rough translation of the title would be 'You DO have something to hide'. We all say that we value our privacy, but the authors of this book show that we don't act on that. The book focusses on two ways that company get data about us: we give it to them or they use big data analysis to find patterns in our behaviour. Through a series of examples the authors show that even having a smartphone in your pocket already compromises your privacy. It's an interesting read but it doesn't go into a lot of technical details (something I would've liked).",
 
-        "cover": "je-hebt-wel-iets-te-verbergen.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B01M030RJB"
         }
@@ -71,7 +78,6 @@
         "rating": 4,
         "opinion": "Dutch book, title translates to: 'Why Coke is more expensive then milk'. It's actually weird because milk is more expensive to make, is far more healthy and yet it costs less. The book is obviously not about milk alone, it explains basic economic principles in an easy and comprehensible way. It's written by a Dutch philosopher who made the book funny with countless of examples to make it clear why economies work the way they do. Each chapter is the answer to a common question that people have. Perfect for people who want an easy introduction into the world of economics.",
 
-        "cover": "waarom-cola-duurder-is-dan-melk.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B01GFZFZHQ"
         }
@@ -84,7 +90,6 @@
         "rating": 5,
         "opinion": "I actually read this book a few times because I like it soo much. I originally saw the movie and decided to also read the book. The story is amazing: a stranded astronaut (Mark Watney) on Mars without enough supplies to last until the next mission comes along. Watney is confronted by many problems but he manages to solve each and every one of them by thinking it through and using science. The author paid a lot of attention to details: each chemical reaction, equation and even travel times and orbits are correct. As a geek, I loved this book and will definitely read it again in the future!",
 
-        "cover": "the-martian.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/0804139024"
         }
@@ -97,7 +102,6 @@
         "rating": 5,
         "opinion": "Super small Dutch book that summarizes Robert Cialdini's book on influence. Discovered it after seeing a TV program (Het lichaam van Coppens) that showed how you could use Cialdini's research to influence people into buying goods. The book summarizes the 6 key principles of his research and give a few examples for each. It's ideal for people who are interested in the topic but don't want to read Cialdini's extensive book.",
 
-        "cover": "de-kleine-cialdini.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B018MMZRUK"
         }
@@ -110,7 +114,6 @@
         "rating": 4,
         "opinion": "Dutch book about how we can make our cities smarter by using technologies. It contains a lot of examples of technology that has improved cities around the world. Ranging from smart trash cans to smart safety camera's and traffic lights. The book also discusses the potential risks of a smart city and what it means for our privacy. One interesting discovery: traditionally direction signs on Dutch highways have an arrow that points down at the lane that you should drive. Just changing the direction of the arrow, and making it pointing upward, made the traffic drive 10km/h faster!",
 
-        "cover": "smart-cities.jpg",
         "links": {
             "Amazon": "https://www.amazon.com/dp/B01CES69MS"
         }

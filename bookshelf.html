@@ -9,53 +9,17 @@ title: Bookshelf
     <hr>
 
     {% for book in site.data.bookshelf %}
-
-        {% if book.opinion and book.cover and book.links %}
-            {% assign mod = forloop.index0 | modulo: 2 %}
-
-            <h1>{{book.title}} <br class="only-mobile"><span>by {{book.author}}</span></h1>
-            <small>
-                <span>Finished: {{ book.dateRead | date_to_string }}</span> - <span>Rating: {{book.rating}}/5</span>
-                 - <span>Buy: <a href="{{book.links.Amazon}}">Amazon</a></span>
-            </small>
-
-
-            <div class="pure-g">
-                {% if mod == 0 %}
-                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3" style='position:relative'>
-                        <img src="/uploads/bookcovers/{{book.cover}}">
-                    </div>
-
-                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3 opinion-right">
-                        <p style="margin-top:0; padding-top: 0;">{{book.opinion}}</p>
-                    </div>
-                {% endif %}
-
-
-
-                {% if mod != 0 %}
-                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-2-3 pure-u-lg-2-3 opinion-left">
-                        <p style="margin-top:0; padding-top: 0;">{{book.opinion}}</p>
-                    </div>
-
-                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-1-3 pure-u-lg-1-3" style='position:relative'>
-                        <img src="/uploads/bookcovers/{{book.cover}}">
-                    </div>
-                {% endif %}
-            </div>
-
-            <hr>
-        {% else %}
-            <h1>{{book.title}} <br class="only-mobile"><span>by {{book.author}}</span></h1>
-            <small class="no-padding">Rating: {{book.rating}}/5
-                {% if book.links %}
-                 - <a href="{{book.links.Amazon}}">Amazon</a>
-                {% endif %}
-            </small>
-
-            <hr>
+        <h1>{{book.title}} <br class="only-mobile"><span>by {{book.author}}</span></h1>
+        <small class="no-padding">Rating: {{book.rating}}/5
+            {% if book.links %}
+            - <a href="{{book.links.Amazon}}">Amazon</a>
+            {% endif %}
+        </small>
+        {% if book.opinion %}
+            <p style="margin-top:0; padding-top: 0;">{{book.opinion}}</p>
         {% endif %}
 
+        <hr>
     {% endfor %}
 
     <p>That's it for now! Will add more books in the future.</p>

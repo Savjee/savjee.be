@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating static social share buttons
-quote: 
+quote:
 thumbnail: true
 upload_directory: /uploads/creating-static-social-buttons
 ---
@@ -120,7 +120,7 @@ This share URL takes 3 parameters:
 
   * ``url``: The URL to tweet (this should be URL encoded!).
   * ``text``: The text that should be placed before the url.
-  * ``via``: A Twitter username of the author. This will be appended to the tweet as 'via @Xafke'.
+  * ``via``: A Twitter username of the author. This will be appended to the tweet as 'via @Savjee'.
 
 Facebook has a similar URL that allows you to share stories:
 <pre>https://www.facebook.com/sharer/sharer.php?u=URL_TO_PAGE</pre>

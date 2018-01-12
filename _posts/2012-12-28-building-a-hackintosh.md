@@ -14,7 +14,7 @@ After 3 years my Macbook is still fast but it can’t handle recent games. I dec
 <!--more-->
 
 # Hardware
-When you decide to build a Hackintosh, the components are the most important aspect of the build. Not every piece of hardware works with OS X. Remember that OS X was designed to run on Apple’s own hardware. Since this was my first build, I decided to buy components that where recommended by the [tonymacx86](http://www.tonymacx86.com/) community. Here’s the list:
+When you decide to build a Hackintosh, the components are the most important aspect of the build. Not every piece of hardware works with OS X. Remember that OS X was designed to run on Apple’s own hardware. Since this was my first build, I decided to buy components that where recommended by the [tonymacx86](https://www.tonymacx86.com/) community. Here’s the list:
 
 * Case: Antec Sonata IV with 620W power supply
     * (I don’t recommend this case! Why is explained later in the post)
@@ -38,14 +38,14 @@ In my case, the installation took about 20 minutes and ran without problems!
 # Drivers
 After you’ve installed OS X, you will need to install a few extra drivers and a bootloader. It’s sounds complicated but it’s really easy with Multibeast, another free tool from the tonymacx86 community. Which drivers to install depend on your hardware. In my case only sound and ethernet drivers where needed to get everything working. I also installed FakeSMC to get access to the temperature sensors of the motherboard and CPU. Here are the Multibeast settings that I’ve used:
 
-[![Multibeast screenshot](http://farm9.staticflickr.com/8194/8367661645_a18dc11d69_z.jpg)](http://www.flickr.com/photos/91990000@N08/8367661645/)
+[![Multibeast screenshot](https://farm9.staticflickr.com/8194/8367661645_a18dc11d69_z.jpg)](https://www.flickr.com/photos/91990000@N08/8367661645/)
 
 # Graphics
 I was a little worried about the integrated Intel HD4000 graphics. I wondered if I could use it with my dual monitor setup. I have two LG IPS235 monitors that run at a resolution of 1920×1080. As it turns out, the HD4000 has no problems with that at all! I connected one display with HDMI, the other with DVI. That’s it! OS X detected the two monitors in a second and I was on my way!
 
 Performance of the integrated GPU is good, but not mind blowing. 1080p video’s play without a problem and if you don’t want killer graphics you can play modern games on it. I’ve played Call of Duty Black Ops 2 and Assassin’s Creed 3 on the HD4000. The games run smoothly but you have to turn down the graphics a bit.
 
-[![Graphics screenshot](http://farm9.staticflickr.com/8195/8367680821_f99b1cab6c_z.jpg)](http://www.flickr.com/photos/91990000@N08/8367680821/)
+[![Graphics screenshot](https://farm9.staticflickr.com/8195/8367680821_f99b1cab6c_z.jpg)](https://www.flickr.com/photos/91990000@N08/8367680821/)
 
 # Speed, stability and updates
 My “Mack Pro” is a big improvement over my Macbook Pro in terms of speed. It isn’t a fair comparison, but still. Stability is something a lot of people worry about when considering building a Hackintosh. My Hackintosh is rock-solid, just like a real Mac. Haven’t got a single kernel panic or freeze.
@@ -62,4 +62,4 @@ There are a ton of cases out there that are quiet and yet practical. I’m looki
 # Conclusion
 Building a Hackintosh is not so easy and requires time and patience. I therefore only recommend it to people who have builded a computer before or have some IT knowledge. It’s not extremely difficult but it’s not easy either.
 
-[![About this Mac Screenshot](http://farm9.staticflickr.com/8220/8367691567_e759253855_z.jpg)](http://www.flickr.com/photos/91990000@N08/8367691567/)
+[![About this Mac Screenshot](https://farm9.staticflickr.com/8220/8367691567_e759253855_z.jpg)](http://www.flickr.com/photos/91990000@N08/8367691567/)

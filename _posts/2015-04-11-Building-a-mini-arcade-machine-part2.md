@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Building a Mini Arcade Machine (Part 2)
-quote: 
+quote:
 thumbnail: true
 upload_directory: /uploads/mini-arcade-pt2
 ---
@@ -127,7 +127,7 @@ Definitely leave a comment if you know another great multiplayer game for any of
 # The finished arcade
 Here is the finished arcade in action:
 
-<a href="http://imgur.com/X9TuKxm"><img src="http://i.imgur.com/X9TuKxm.gif" title="source: imgur.com" /></a>
+<a href="http://imgur.com/X9TuKxm"><img src="https://i.imgur.com/X9TuKxm.gif" title="source: imgur.com" /></a>
 
 And here are some more pictures:
 

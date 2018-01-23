@@ -16,6 +16,13 @@ GEM
     aws-sdk-resources (2.10.54)
       aws-sdk-core (= 2.10.54)
     aws-sigv4 (1.0.2)
+    bibtex-ruby (4.4.5)
+      latex-decode (~> 0.0)
+    citeproc (1.0.8)
+      namae (~> 1.0)
+    citeproc-ruby (1.1.8)
+      citeproc (>= 1.0.4, < 2.0)
+      csl (~> 1.4)
     colorator (1.1.0)
     colored (1.2)
     colorize (0.8.1)
@@ -23,6 +30,10 @@ GEM
     configure-s3-website (2.2.0)
       aws-sdk (~> 2)
       deep_merge (~> 1.0.0)
+    csl (1.5.0)
+      namae (~> 1.0)
+    csl-styles (1.0.1.8)
+      csl (~> 1.0)
     deep_merge (1.0.1)
     dotenv (1.0.2)
     ethon (0.10.1)
@@ -71,6 +82,7 @@ GEM
       listen (~> 3.0, < 3.1)
     jmespath (1.3.1)
     kramdown (1.15.0)
+    latex-decode (0.3.1)
     liquid (4.0.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -78,6 +90,7 @@ GEM
     mercenary (0.3.6)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
+    namae (1.0.1)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.0)
@@ -116,6 +129,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bibtex-ruby
+  citeproc-ruby
+  csl-styles
   html-proofer
   jekyll
   jekyll-assets

@@ -16,30 +16,30 @@ Small mistake I made in the video: Bitcoin was launched in 2008, not 2012!
 
 {% bibtex %}
 @online{src,
-    title = { IOTA BREAKDOWN - The Tangle Vs. Blockchain Explained },
+    title = {IOTA BREAKDOWN - The Tangle Vs. Blockchain Explained},
     date = 2017,
-    organization = { Cryptonauts },
-    url = { https://www.youtube.com/watch?v=I_jNH9BlEEo },
+    organization = {Cryptonauts},
+    url = {https://www.youtube.com/watch?v=I_jNH9BlEEo},
 }
 
 @online{src,
-    title = { Directed Acyclic Graph DAG (Tangle) is not Blockchain },
+    title = {Directed Acyclic Graph DAG (Tangle) is not Blockchain},
     date = 2017,
-    organization = { Satoshi Watch },
-    url = { https://satoshiwatch.com/coins/iota/in-depth/iota-dag-tangle/ },
+    organization = {Satoshi Watch},
+    url = {https://satoshiwatch.com/coins/iota/in-depth/iota-dag-tangle/},
 }
 
 @online{src,
-    title = { How IOTA makes bright future for Internet of Things },
+    title = {How IOTA makes bright future for Internet of Things},
     date = 2017,
-    author = { Martin Rosulek },
-    url = { https://medium.com/@MartinRosulek/how-iota-makes-future-for-internet-of-things-af14fd77d2a3 },
+    author = {Martin Rosulek},
+    url = {https://medium.com/@MartinRosulek/how-iota-makes-future-for-internet-of-things-af14fd77d2a3},
 }
 
 @online{src,
-    title = { Blockchain size },
+    title = {Blockchain size},
     date = 2017,
-    organization = { Blockchain Luxembourg S.A. },
-    url = { https://blockchain.info/nl/charts/blocks-size },
+    organization = {Blockchain Luxembourg S.A.},
+    url = {https://blockchain.info/nl/charts/blocks-size},
 }
 {% endbibtex %}

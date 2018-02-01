@@ -73,7 +73,7 @@ There are a few things that immediately catch our attention:
 
 **S3** performing considerably worse than others is related to the fact that an S3 bucket is locked to a region. In my case the ``eu-west-1`` region, which is located in London. Pingdom runs tests from all over the world meaning that their European servers will see faster response times compared to servers in the US or Asia. S3's bad performance was expected. It doesn't use any CDN (that's what CloudFront is for) and it being locked to a specific region doesn't help.
 
-The only reason I included S3 in this test was to compare it to Google's regional bucket. On **Google's side** we seem something funny: the regional and multiregional bucket have an almost identical performance. Google is pretty vague on how it does this. Their website mentions that they cache your content around the world but they're not talking details. Still, it's nice to see that it works so well out of the box!
+The only reason I included S3 in this test was to compare it to Google's regional bucket. On **Google's side** we see something funny: the regional and multiregional bucket have an almost identical performance. Google is pretty vague on how it does this. Their website mentions that they cache your content around the world but they're not talking details. Still, it's nice to see that it works so well out of the box!
 
 **Netlify** on the other hand suffers from spikes in it's performance (as we could see on the Pingdom website). It's average and median response times are very good, but the deviation is far too high. Maybe something to do with their "hybrid" CDN solution?
 

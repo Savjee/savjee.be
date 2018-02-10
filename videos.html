@@ -42,7 +42,9 @@ collection: videos
             <div class="video-serieList">
                 <ol style="margin: 0;">
                     {% for vid in vidsInSerie %}
-                        <li><a href="{{vid.url}}">{{vid.title}}</a></li>
+                        {% unless vid.hide %}
+                            <li><a href="{{vid.url}}">{{vid.title}}</a></li>
+                        {% endunless %}
                     {% endfor %}
                 </ol>
             </div>

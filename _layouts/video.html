@@ -33,6 +33,7 @@ layout: default
 
             <div class="nextVideo">
                 {% if page.order >= 1 and page.order < videosInThisSerie.size %}
+                    {% unless videosInThisSerie[page.order].hide %}
                     <div class="video-">
                         <a href="{{videosInThisSerie[page.order].url}}">
                             <p>
@@ -41,6 +42,7 @@ layout: default
                             </p>
                         </a>
                     </div>
+                    {% endunless %}
                 {% endif %}
             </div>
         </div>

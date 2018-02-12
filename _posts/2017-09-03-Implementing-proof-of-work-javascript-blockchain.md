@@ -8,8 +8,11 @@ quote:
 
 <!--more-->
 
-Missed part 1? [Read it here]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %}).
+This blog post is part of a whole series:
 
+* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
+* **Part 2: Implementing proof-of-work**
+* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
 
 # The problem
 Right now we can create blocks and add them to our blockchain really quickly. And this creates 3 problems:
@@ -149,6 +152,11 @@ If you increase the difficulty to 5, you'll see that a modern computer takes abo
 Just as before a quick warning: this is by no means a complete blockchain implementation. It still lacks many features (like a P2P network). This is just to show how blockchains work internally.
 
 Also: mining blocks in Javascript is not really fast because it just uses a single thread.
+
+# Next up
+* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
+* **Part 2: Implementing proof-of-work**
+* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
 
 # Conclusion & source code
 Proof-of-work is essential for the security and integrity of blockchains. Without it, we couldn't trust it enough to store information it.

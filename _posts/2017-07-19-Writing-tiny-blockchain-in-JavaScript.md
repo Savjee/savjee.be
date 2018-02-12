@@ -10,7 +10,12 @@ Almost everyone has heard about cryptocurrencies like Bitcoin and Ethereum, but 
 
 {% include youtube-embed.html videoId='zVqczFZr124' %}
 
-Part 2 is available here: [Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %})
+This blog post is part of a whole series:
+
+* **Part 1: Implementing a basic blockchain**
+* [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}).
+* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
+
 
 # Blockchains
 A blockchain is a public database that consists out of blocks that anyone can read. Nothing special, but they have an interesting property: they are immutable. Once a block has been added to the chain, it cannot be changed anymore without invalidating the rest of the chain.
@@ -125,5 +130,9 @@ This implementation is far from complete. It doesn't implement proof-of-work or 
 
 It does however demonstrate how a blockchain works. Many people think that it's very complex, but this post demonstrates that the basic concepts of a blockchain are easy to understand and to implement.
 
-# Part 2
-This blockchain is not complete and not fully secure. [In part 2 we'll implement proof-of-work to secure it!]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %})
+# Next up
+This blockchain is not complete and not fully secure. Keep reading:
+
+* **Part 1: Implementing a basic blockchain**
+* [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}).
+* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})

@@ -14,6 +14,7 @@ Missed the other parts? Read them here:
 * [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}).
 * **Part 3: Transactions & mining rewards**
 
+{% include youtube-embed.html videoId='fRV6cGXVQ4I' %}
 
 ## Restructuring the Block class
 Right now a block has the index, previousHash, timestamp, data, hash and nonce properties. The `index` property isn’t really useful, in fact I don’t even know why I added it to begin with. So let’s remove that and lets rename `data` to `transactions` which makes more sense.

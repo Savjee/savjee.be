@@ -11,6 +11,8 @@ hide: true
 
 The Falcon 9, Falcon Heavy and Dragon are very advanced spacecrafts. So that got me thinking: what is powering these vehicles?
 
+In this video we'll take a look at what programming languages, operating systems, tools and hardware SpaceX uses to get these vehicles into orbit around the around.
+
 # Sources
 {% bibtex %}
 @online{src,

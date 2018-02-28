@@ -24,9 +24,9 @@ In this video we'll take a look at what programming languages, operating systems
 }
 
 @online{src,
-    title={What computer and software is used by the Falcon 9?},
-    organization = {StackExchange},
-    url={https://space.stackexchange.com/questions/9243/what-computer-and-software-is-used-by-the-falcon-9}
+    title={A bug and a Crash},
+    author={James Gleick},
+    url={https://around.com/ariane.html},
 }
 
 @online{src,
@@ -37,6 +37,24 @@ In this video we'll take a look at what programming languages, operating systems
     year={2012},
     month={11},
     day={19}
+}
+
+@online{src,
+    title={Ariane 5 rocket launch explosion},
+    organization={Amazing Info TV},
+    url={https://www.youtube.com/watch?v=PK_yguLapgA},
+    day={1},
+    month={2},
+    year={2015},
+}
+
+@online{src,
+    title={The Explosion of the Ariane 5},
+    author={Douglas N. Arnold},
+    url={http://www-users.math.umn.edu/~arnold/disasters/ariane.html},
+    day={23},
+    month={8},
+    year={2000},
 }
 
 @online{src,
@@ -64,27 +82,9 @@ In this video we'll take a look at what programming languages, operating systems
 }
 
 @online{src,
-    title={Ariane 5 rocket launch explosion},
-    organization={Amazing Info TV},
-    url={https://www.youtube.com/watch?v=PK_yguLapgA},
-    day={1},
-    month={2},
-    year={2015},
-}
-
-@online{src,
-    title={The Explosion of the Ariane 5},
-    author={Douglas N. Arnold},
-    url={http://www-users.math.umn.edu/~arnold/disasters/ariane.html},
-    day={23},
-    month={8},
-    year={2000},
-}
-
-@online{src,
-    title={A bug and a Crash},
-    author={James Gleick},
-    url={https://around.com/ariane.html},
+    title={What computer and software is used by the Falcon 9?},
+    organization = {StackExchange},
+    url={https://space.stackexchange.com/questions/9243/what-computer-and-software-is-used-by-the-falcon-9}
 }
 
 @online{src,

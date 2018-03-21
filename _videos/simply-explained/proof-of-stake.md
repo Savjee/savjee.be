@@ -1,11 +1,10 @@
 ---
 layout: video
 collection: videos
-title: Proof-of-Stake
+title: Proof-of-Stake (vs. Proof-of-work)
 videoId: C9uNPZm4644
 order: 11
 series: Simply explained
-hide: true
 uploadDate: 2018-03-20
 ---
 

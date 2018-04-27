@@ -18,10 +18,6 @@ node {
             sh 'bundle install'
         }
 
-        stage('Scripts') {
-            sh 'sh _scripts/_resizeBookcovers.sh'
-        }
-
         stage('Running Jekyll') {
             sh 'bundle exec jekyll build'
         }

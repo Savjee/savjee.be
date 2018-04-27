@@ -11,13 +11,6 @@ plugins:
 - jekyll-assets
 - jekyll-extlinks
 
-asset_bundler:
-  compress:
-    js: yui
-    css: yui
-  base_path: /bundles/
-  dev: false
-
 collections:
   videos:
     output: true
@@ -26,14 +19,7 @@ collections:
 excerpt_separator: <!--more-->
 
 assets:
-  compress:
-    css: true
-    js: true
-  cache: _asset-cache
-  prefix: "/assets"
-  assets:
-    - "bundle.css"
-  digest: true
+  compression: true
   sources:
     - "_assets/css"
 

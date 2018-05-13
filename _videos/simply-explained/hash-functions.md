@@ -3,10 +3,9 @@ layout: video
 collection: videos
 title: Hash functions
 videoId: cczlpiiu42M
-order: 12
+order: 13
 series: Simply explained
 uploadDate: 2018-04-03
-hide: true
 ---
 
 How can companies store passwords safely and keep them away from hackers? Well let's find out!

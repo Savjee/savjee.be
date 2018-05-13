@@ -3,7 +3,7 @@ layout: video
 collection: videos
 title: Proof-of-Stake (vs. Proof-of-work)
 videoId: M3EFi_POhps
-order: 11
+order: 12
 series: Simply explained
 uploadDate: 2018-03-20
 ---

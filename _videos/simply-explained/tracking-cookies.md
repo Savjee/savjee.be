@@ -1,16 +1,23 @@
 ---
 layout: video
 collection: videos
-title: Tracking cookies
-videoId: aQWflNQuP_o
+title: How cookies can track you
+videoId: QWw7Wd2gUJk
 order: 16
 series: Simply explained
 uploadDate: 2018-06-18
+hide: true
 ---
 
+Cookies can be used to invade your privacy and track you around the internet. But what are cookies and how do they work? They were initially invented to make our lives easier and are used to keep us logged in and to store things like shopping carts and preferences on our computers instead of on servers.
+
+However, clever companies can use cookies to track us around the internet. It can help them to build a profile of users and sell more targeted advertisements.
+
+In this video, I'll show you how cookies are working and why they're useful. Then we'll explore how cookies can be used to track people and finally, we'll discuss how you can prevent being followed.
 
 
 # Sources
+This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 
 {% bibtex %}
 

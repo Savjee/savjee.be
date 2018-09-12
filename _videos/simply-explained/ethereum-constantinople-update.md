@@ -6,7 +6,6 @@ videoId: rfg408lSAj0
 order: 18
 series: Simply explained
 uploadDate: 2018-09-11
-hide: true
 ---
 
 Ethereum is about to get another big update. It's called Constantinople and will increase the performance of the network and introduce some new features. It will also delay the difficulty bomb. Here we'll take a bird's eye look at the new update.

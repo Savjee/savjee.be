@@ -6,7 +6,6 @@ videoId: kWQ84S13-hw
 order: 4
 series: Building a blockchain in Javascript
 uploadDate: 2018-10-23
-hide: true
 ---
 
 Transactions on a blockchain have to be signed. You do this with a public and private key. It prevents people from spending coins that aren't theirs.

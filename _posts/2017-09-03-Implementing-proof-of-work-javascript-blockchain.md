@@ -13,6 +13,7 @@ This blog post is part of a whole series:
 * [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
 * **Part 2: Implementing proof-of-work**
 * [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
+* [Part 4: Signing transactions]({% post_url 2018-10-27-Signing-transactions-blockchain-javascript %})
 
 # The problem
 Right now we can create blocks and add them to our blockchain really quickly. And this creates 3 problems:

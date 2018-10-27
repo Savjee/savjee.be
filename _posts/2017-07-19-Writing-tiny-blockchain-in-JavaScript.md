@@ -15,6 +15,7 @@ This blog post is part of a whole series:
 * **Part 1: Implementing a basic blockchain**
 * [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}).
 * [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
+* [Part 4: Signing transactions]({% post_url 2018-10-27-Signing-transactions-blockchain-javascript %})
 
 
 # Blockchains

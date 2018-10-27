@@ -10,9 +10,10 @@ This is part 3 of my blog posts series in which we create a blockchain in Javasc
 
 Missed the other parts? Read them here:
 
-* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %}).
-* [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}).
+* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
+* [Part 2: Implementing proof-of-work]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %})
 * **Part 3: Transactions & mining rewards**
+* [Part 4: Signing transactions]({% post_url 2018-10-27-Signing-transactions-blockchain-javascript %})
 
 {% include youtube-embed.html videoId='fRV6cGXVQ4I' %}
 

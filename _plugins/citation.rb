@@ -16,7 +16,7 @@ module Jekyll
             out = testing['@entry, @meta_content'].map do |e|
                 if e.entry?
                     citation = cp.render :bibliography, :id => e.key
-                    citation = citation.join.gsub(/(?<!"|'|>)https?:\/\/[\S]+/, '<a href="\0">\0</a>')
+                    citation = citation.join.gsub(/(?<!"|'|>)https?:\/\/[\S]+/, '<a href="\0" rel="nofollow">\0</a>')
                     "<p>" + citation + "</p>"
                 else
                     e.to_s

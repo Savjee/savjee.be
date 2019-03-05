@@ -6,7 +6,6 @@ videoId: S57uhCQBEk0
 order: 23
 series: Simply explained
 uploadDate: 2019-03-05
-hide: true
 ---
 
 Mastodon is a "federated" social network that works like Twitter. It puts the control of data into the user's hands, not in a single corporation.

@@ -4,24 +4,12 @@ variables:
   JEKYLL_ENV: production
 
 stages:
-  - prepare
   - build
-  - test
-  - deploy
-
-prepare:
-  script:
-  - bundle install
-  - echo "Google Analytics inject"
 
 build:
   script:
+  - bundle install
+  - echo "Google Analytics inject"
   - bundle exec jekyll build
-
-test:
-  script:
-  - ruby _scripts/html-proofer.rb
-
-deploy:
-  script:
   - bundle exec s3_website push
+  - ruby _scripts/html-proofer.rb

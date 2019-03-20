@@ -82,3 +82,20 @@ header {
         }
     }
 }
+
+@media (max-width: 650px) {
+    header {
+        .container{
+            flex-wrap: wrap;
+        }
+
+        .flex-vcenter{
+            flex-basis: 100%;
+            text-align:center;
+        }
+
+        nav{
+            text-align: center;
+        }
+    }
+}

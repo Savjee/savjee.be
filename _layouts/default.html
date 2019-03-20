@@ -6,8 +6,10 @@
 
     <title>{{page.title}} | Savjee.be</title>
 
+    {% assign seo_description = page.quote | default: page.excerpt | strip_html | truncate: 350 %}
+
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
-    <meta name='description' content='{{ page.quote }}'/>
+    <meta name='description' content='{{ seo_description }}'/>
     <meta name='keywords' content='{{ page.keywords }}'/>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
@@ -19,18 +21,20 @@
 
     {% if page.thumbnail %}
     <!-- Twitter tags -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
+    <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
     <meta name="twitter:title" content="{{page.title}}">
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+    <meta name="twitter:description" content="{{ seo_description }}">
     <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
 
     <!-- Facebook tags -->
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:site_name" content="Savjee.be"/>
     <meta property="og:url" content="https://www.savjee.be{{page.url}}"/>
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+    <meta property="og:description" content="{{ seo_description }}"/>
+    <meta property="og:type" content="article">
     <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
     <meta property="fb:app_id" content="805673586165209"/>
     {% endif %}

@@ -30,19 +30,19 @@ quote: Overview of blog posts on Savjee.be
             {% endif %}
 
             <div class="timeline-body">
-                <p style="margin-top:0;"><a href='{{ post.url }}'>{{ post.title }}</a></p>
+                <p><a href='{{ post.url }}'>{{ post.title }}</a></p>
             </div>
         </div>
     </li>
 
     {% if forloop.last %}
-        <li class="clearfix" style="float: none;"></li>
+        <li class="clearfix"></li>
         </ul>
         </div>
     {% else %}
         {% if this_year != next_year %}
 
-            <li class="clearfix" style="float: none;"></li>
+            <li class="clearfix"></li>
             </ul>
             </div>
 

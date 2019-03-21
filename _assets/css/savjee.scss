@@ -15,7 +15,7 @@ body {
 
 .container {
     max-width: 720px;
-    padding: 20px;
+    // padding: 20px;
     margin: 0 auto;
     position: relative;
 
@@ -76,6 +76,10 @@ article {
 
     .post-title{
         line-height: 1.5;
+        text-decoration: none;
+        a{
+            text-decoration: none !important;
+        }
     }
 
     .post-description{
@@ -147,8 +151,4 @@ footer {
     p, a{
         color: #959595;
     }
-}
-
-.mailmunch-scrollbox{
-    width: 320px !important;
 }

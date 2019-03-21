@@ -12,6 +12,9 @@ build:
   - apt-get update -qy
   - apt-get install -y openjdk-8-jre-headless
   - bundle install
+  - echo "Adding .env"
+  - echo S3_ID=${S3_ID} > .env
+  - echo S3_SECRET=${S3_SECRET} >> .env
   - echo "Google Analytics inject"
   - echo ${analyticsid}
   - sed -i -e 's/UA-XXXXXXXX-X/${analyticsid}/g' _includes/google-analytics.html

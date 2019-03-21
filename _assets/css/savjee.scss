@@ -107,6 +107,11 @@ article {
     }
 }
 
+// At the end of each post, shows the date when it was posted
+.post-date{
+    text-align:center;
+}
+
 a {
     color: #007998;
     -webkit-transition: color 0.25s ease-in-out;

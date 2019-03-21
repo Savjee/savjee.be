@@ -1,25 +1,27 @@
 ---
 layout: default
+fullwidth: "true"
 ---
 
 
 <article class='post'>
-    <h1 class='post-title'>
-        <a href="{{ post.url }}">{{ page.title }}</a>
-    </h1>
+    {% assign serieData = site.data.videos.series[page.series] %}
 
-    <div class='post-description'>
-        {% assign serieData = site.data.videos.series[page.series] %}
-
-        <div class="videowrapper">
-            <iframe src="https://www.youtube.com/embed/{{page.videoId}}?list={{serieData.playlistId}}&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <div class="videobackdrop">
+        <div class="container video" style="padding: 0;">
+            <div class="videowrapper">
+                <iframe src="https://www.youtube.com/embed/{{page.videoId}}?list={{serieData.playlistId}}&showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
+    </div>
+    
 
-        <div class="videoNavigation">
+    <div class="videoNavigation">
+        <div class="container">
             {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}
             {% assign tmp = page.order | minus: 2 %}
-
-            <div>
+            
+            <div class="previousVideo">
                 {% if page.order != 1 %}
                     <div class="video-">
                         <a href="{{videosInThisSerie[tmp].url}}">
@@ -46,14 +48,20 @@ layout: default
                 {% endif %}
             </div>
         </div>
+    </div>
 
+    <div class="container">
+        <h1 class='post-title'>
+            <a href="{{ post.url }}">{{ page.title }}</a>
+        </h1>
         {{ content }}
+
+        {% include youtube-subscribebutton.html %}
+
+        {% include disqus-comments.html %}
     </div>
 </article>
 
-{% include youtube-subscribebutton.html %}
-
-{% include disqus-comments.html %}
 
 <!-- *********** Structured data for Google *********** -->
 <script type="application/ld+json">

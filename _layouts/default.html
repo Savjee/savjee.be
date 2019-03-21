@@ -89,36 +89,7 @@
 -->
 {% include google-analytics.html %}
 
-<!-- 
-    When changing this, also update the Content Security Policy!
-    sha256-V5cd+NPFSKMYBQ7hI9lFQKprtS0KJ8NUKTADou1CuXg= 
--->
-<script type="text/javascript">
-(function () {
-    try{
-        var links = document.querySelectorAll('a.external');
-
-        for (var i = 0; i < links.length; ++i) {
-            links[i].onclick = function() {
-                ga('send', 'event', 'outbound', 'click', this.href);
-            };
-        }
-
-        window.addEventListener('error', function(e) {
-            ga('send', 'exception', {
-                'exDescription': e.message,
-                'exFatal': false
-            });
-        });
-    }catch(e){
-        ga('send', 'exception', {
-            'exDescription': err.message,
-            'exFatal': false
-        });
-    }
-})();
-</script>
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+{% asset all.js %}
 
 </body>
 </html>

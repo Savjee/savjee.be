@@ -54,7 +54,11 @@ fullwidth: "true"
         <h1 class='post-title'>
             <a href="{{ post.url }}">{{ page.title }}</a>
         </h1>
-        {{ content }}
+
+        <div class="post-description">
+            {{ content }}
+        </div>
+        
 
         {% include youtube-subscribebutton.html %}
 

@@ -123,7 +123,7 @@
     }
 
     // Previous and Next video shouldn't be in 2 column layout anymore
-    .videoNavigation{
+    .videoNavigation, .videoNavigation .container{
         display: block;
     }
 

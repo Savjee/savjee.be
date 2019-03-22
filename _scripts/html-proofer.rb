@@ -1,6 +1,6 @@
 require 'html-proofer'
 
-HTMLProofer.check_directory("../_site", {
+HTMLProofer.check_directory("_site", {
 
   # Ignore images without an ALT tag
   :alt_ignore => [/.*/],
@@ -8,7 +8,6 @@ HTMLProofer.check_directory("../_site", {
   # Check external URLs
   :disable_external => true,
 
-  :check_opengraph => true,
   :assume_extension => true,
   :cache => { :timeframe => '30d' },
   :parallel => { :in_processes => 2},

@@ -7,6 +7,10 @@
     padding-top: 0;
     height: 0;
 }
+.videobackdrop{
+    background-color: #423e45;
+    padding: 30px 0px;
+}
 .videowrapper iframe {
     position: absolute;
     top: 0;
@@ -24,12 +28,21 @@
 }
 
 .videoNavigation{
-    display: flex;
-    align-items:center;
     background-color: #F0F0F0;
     font-size: 0.8em;
-    min-height: 100px;
-    padding: 15px;
+    padding: 20px 0;
+
+    .container{
+        display: flex;
+        align-items:center;
+
+        div{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
 
     p{
         margin:0;
@@ -41,10 +54,6 @@
         display:inline-block;
     }
 
-    div{
-        flex:1;
-    }
-
     div.nextVideo{
         text-align:right;
     }
@@ -54,25 +63,57 @@
 .video-details{
     .next-to-each-other{
         display:flex;
+        margin-bottom: 20px;
     }
 
     .thumb, .description{
         flex:1;
     }
 
-    .thumb{
+    .thumb-wrapper{
         max-width: 220px;
         position: relative; // for the play button overlay
+        margin-right: 20px;
+        text-align:center;
 
-        img{
-            max-width: 200px;
+        img.thumb{
+            width: 200px;
+            height: 113px;
+        }
+
+        img.playbtn{
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
         }
     }
+}
+
+.series-in-rollout{
+    display:block;
+    font-size: 0.8em;
+    background-color: #eee;
+    background-image: url(/assets/img/in-progress.svg);
+    background-position-y: center;
+    background-position-x: 20px;
+    background-repeat: no-repeat;
+    line-height: 1.2em;
+    padding: 20px 20px 20px 50px;
+    margin-bottom: 0;
 }
 
 .video-serieList{
     column-count: 2;
     -moz-column-count: 2;
+    font-size: 0.85em;
+}
+
+.youtube-subscribe-btn{
+    width: 100%;
+    height: 60px;
 }
 
 @media (max-width: 767px) {
@@ -82,13 +123,13 @@
     }
 
     // Previous and Next video shouldn't be in 2 column layout anymore
-    .videoNavigation{
+    .videoNavigation, .videoNavigation .container{
         display: block;
     }
 
     .video-details{
-        .thumb, .thumb img{
-            max-width: initial;
+        .thumb-wrapper{
+            margin: 0 auto;
         }
         .next-to-each-other{
             display:block;

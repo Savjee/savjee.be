@@ -1,0 +1,28 @@
+image: savjee/docker-s3website-git-ftp-deploy
+
+variables:
+  JEKYLL_ENV: production
+
+before_script:
+- export LANG=en_US.UTF-8
+- export LANGUAGE=en_US.UTF-8
+- export LC_ALL=en_US.UTF-8
+- bundle install
+
+build:
+  only: 
+    - master
+  stage: build
+  script:
+  - echo "Creating .env file"
+  - echo S3_ID=${S3_ID} > .env
+  - echo S3_SECRET=${S3_SECRET} >> .env
+  
+  - echo "Google Analytics inject"
+  - sed -i -e 's/UA-XXXXXXXX-X/'"${analyticsid}"'/g' _assets/js/analytics.js
+  
+  - bundle exec jekyll build
+  - bundle exec s3_website install
+  - java -cp $(bundle show s3_website)/*.jar s3.website.Push
+
+  # - ruby _scripts/html-proofer.rb

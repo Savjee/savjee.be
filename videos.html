@@ -3,11 +3,12 @@ layout: page
 title: Videos
 paginate:
 collection: videos
+quote: Simply Explained videos are all about taking complicated topics and explaining them in a simple and straightforward way.
 ---
 
 <p>Hi there! I'm starting my own YouTube channel with {{site.videos.size | divided_by: 5 | ceil | times: 5}}+ free, high-quality video tutorials. I would really appreciate your support, so subscribe now:</p>
 
-<div style="text-align:center">
+<div class="youtube-subscribe-btn text-center">
     <script src="https://apis.google.com/js/platform.js"></script>
     <div class="g-ytsubscribe" data-channelid="UCnxrdFPXJMeHru_b4Q_vTPQ" data-layout="full" data-count="default"></div>
 </div>
@@ -20,42 +21,40 @@ collection: videos
 
     {% assign vidsInSerie = site.videos | where_exp:'vid','vid.series == serie.title' | sort: 'order' %}
 
-    <h1 style="margin:0;">{{serie.title}}</h1>
-        <div class="video-details" style="font-size: 0.9em;">
+    <h1 class="no-margin">{{serie.title}}</h1>
+    <div class="video-details">
 
-            <div class="next-to-each-other">
-                    <div class="thumb">
-                            <p style="margin-top: 1.5em; text-align:center">
-                                    <a href="{{vidsInSerie[0].url}}">
-                                        <img src="/assets/img/play-button.svg" width="60" height="60" style="position: absolute;top: 50px;left: 0;right: 0;">
-                                        <img class="" src="//i.ytimg.com/vi/{{vidsInSerie[0].videoId}}/mqdefault.jpg">
-                                    </a>
+        <div class="next-to-each-other">
+            <div class="thumb-wrapper">
+                <a href="{{vidsInSerie[0].url}}">
+                    <img src="/assets/img/play-button.svg" class="playbtn">
+                    <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].videoId}}/mqdefault.jpg">
+                </a>
 
-                                    <small>{{vidsInSerie.size}} videos</small>
-                    </div>
-                    <div class="description">
-                        <p>{{serie.description}}</p>
-                    </div>
+                <small>{{vidsInSerie.size}} videos</small>
             </div>
-
-
-            <div class="video-serieList">
-                <ol style="margin: 0;">
-                    {% for vid in vidsInSerie %}
-                        {% unless vid.hide %}
-                            <li><a href="{{vid.url}}">{{vid.title}}</a></li>
-                        {% endunless %}
-                    {% endfor %}
-                </ol>
+            <div class="description">
+                {{serie.description}}
             </div>
         </div>
 
-        {% if serie.wip %}
-            <p style="display:block; font-size: 0.8em; background-color: #eee; background-image: url(/assets/img/in-progress.svg); background-position-y: center; background-position-x: 20px; background-repeat: no-repeat; line-height: 1.2em; padding: 20px 20px 20px 50px; margin-bottom: 0;">
-                This series is being rolled out! New videos will be published regularly.
-            </p>
-        {% endif %}
+        <div class="video-serieList">
+            <ol class="no-margin">
+                {% for vid in vidsInSerie %}
+                    {% unless vid.hide %}
+                        <li><a href="{{vid.url}}">{{vid.title}}</a></li>
+                    {% endunless %}
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
 
-        <br>
-        <hr>
+    {% if serie.wip %}
+        <p class="series-in-rollout">
+            This series is being rolled out! New videos will be published regularly.
+        </p>
+    {% endif %}
+
+    <br>
+    <hr>
 {% endfor %}

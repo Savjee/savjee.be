@@ -1,0 +1,65 @@
+body {
+    background-color: #000;
+}
+
+#tixClock {
+    display: table;
+    height: 100%;
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* Stuff to valign the tixClock */
+#cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#group_0,
+#group_1,
+#group_2,
+#group_3 {
+    float: left;
+    margin: 20px;
+}
+
+#group_0 {
+    width: 120px;
+}
+
+#group_1,
+#group_3 {
+    width: 360px;
+}
+
+#group_2 {
+    width: 240px;
+}
+
+#group_0>div,
+#group_1>div,
+#group_2>div,
+#group_3>div {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #1C1C1C;
+    float: left;
+}
+
+#group_0 .active,
+#group_3 .active {
+    background-color: red !important;
+}
+
+#group_1 .active {
+    background-color: green !important;
+}
+
+#group_2 .active {
+    background-color: blue !important;
+}
+
+.active {
+    box-shadow: inset 0px 0px 40px #000;
+}

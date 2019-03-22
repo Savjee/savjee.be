@@ -13,7 +13,7 @@ quote: Overview of blog posts on Savjee.be
     {% if forloop.first %}
         <div class="container2">
             <div class="page-header text-center">
-                <h1 style='text-align:center'>{{this_year}}</h1>
+                <h1 class='text-center'>{{this_year}}</h1>
             </div>
             <ul class="timeline">
 
@@ -30,25 +30,25 @@ quote: Overview of blog posts on Savjee.be
             {% endif %}
 
             <div class="timeline-body">
-                <p style="margin-top:0;"><a href='{{ post.url }}'>{{ post.title }}</a></p>
+                <p><a href='{{ post.url }}'>{{ post.title }}</a></p>
             </div>
         </div>
     </li>
 
     {% if forloop.last %}
-        <li class="clearfix" style="float: none;"></li>
+        <li class="clearfix"></li>
         </ul>
         </div>
     {% else %}
         {% if this_year != next_year %}
 
-            <li class="clearfix" style="float: none;"></li>
+            <li class="clearfix"></li>
             </ul>
             </div>
 
             <div class="container2">
                 <div class="page-header text-center">
-                    <h1 id="timeline" style='text-align:center;'>{{next_year}}</h1>
+                    <h1 id="timeline" class='text-center'>{{next_year}}</h1>
                 </div>
 
                 <ul class="timeline">

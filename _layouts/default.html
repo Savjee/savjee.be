@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     <title>{{page.title}} | Savjee.be</title>
 
+    {% assign seo_description_tmp = page.quote | default: page.excerpt %}
+    {% assign seo_description_tmp2 = seo_description_tmp | strip_html %}
+    {% assign seo_description = seo_description_tmp2 | truncate:350 %}
+
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
-    <meta name='description' content='{{ page.quote }}'/>
+    <meta name='description' content='{{ seo_description }}'/>
     <meta name='keywords' content='{{ page.keywords }}'/>
-    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
     <link rel='icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
 
@@ -19,18 +23,20 @@
 
     {% if page.thumbnail %}
     <!-- Twitter tags -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
+    <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
     <meta name="twitter:title" content="{{page.title}}">
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+    <meta name="twitter:description" content="{{ seo_description }}">
     <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
 
     <!-- Facebook tags -->
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:site_name" content="Savjee.be"/>
     <meta property="og:url" content="https://www.savjee.be{{page.url}}"/>
-    <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+    <meta property="og:description" content="{{ seo_description }}"/>
+    <meta property="og:type" content="article">
     <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
     <meta property="fb:app_id" content="805673586165209"/>
     {% endif %}
@@ -40,84 +46,51 @@
 
 <header class="site-header" role="banner">
     <div class="container">
-        <div class="avatar">
-            <a href='https://www.savjee.be/'>
-                <img alt="" src="/assets/img/logo.svg" height="100">
+        <div class="logo flex-vcenter">
+            <a href='/'>
+                <img alt="Savjee Logo" src="/assets/img/logo.svg">
             </a>
         </div>
 
-            <h1 class="site-title">
-                <a href="https://www.savjee.be/" title="Savjee.be" rel="home">Savjee.be</a>
-            </h1>
+        <div class="brand-name flex-vcenter">
+            <a href="/" title="Savjee.be" rel="home">Savjee <br>Simply Explained</a>
+        </div>
 
-        <nav role="navigation">
+        <nav role="navigation" class="flex-vcenter">
             <div class="menu-main-nav-container">
                 <ul id="menu-main-nav" class="menu">
-                    <li><a href="/posts.html">Blog posts</a></li>
-                    <li><a href="/videos/">Videos <sup style='color:red'>*</sup></a></li>
-                    <!-- <li><a href="/bookshelf/">Bookshelf</a></li> -->
-                    <!-- <li><a href="/onehighlighter">OneHighlighter</a></li> -->
+                    <li><a href="/posts.html">Blog</a></li>
+                    <li><a href="/videos/">Videos</a></li>
                     <li><a href="/about.html">About Me</a></li>
                 </ul>
             </div>
         </nav>
-
-        <div class="clear"></div>
     </div><!--/container -->
 </header>
 
+{% unless layout.fullwidth %}
 <div class='container'>
+{% endunless %}
+
     {{ content | extlinks }}
+
+{% unless layout.fullwidth %}
 </div>
+{% endunless %}
 
 <footer>
-    <p>Copyright 2019, Xavier Decuyper</p>
+    <p>Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper</p>
 
     <p>
-        <a href="/atom.xml">RSS feed</a> - <a href="https://github.com/Savjee" rel='noopener' target='_blank'>Github</a> - <a
-            href="https://twitter.com/Savjee/" rel='noopener' target='_blank'>Twitter</a> - <a href="https://www.facebook.com/savjee" rel='noopener' target="_blank">Facebook</a> - <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" rel='noopener' target='_blank'>YouTube</a>
+        <a href="/atom.xml">RSS feed</a> - 
+        <a href="https://github.com/Savjee" rel='noopener' target='_blank'>Github</a> - 
+        <a href="https://twitter.com/Savjee/" rel='noopener' target='_blank'>Twitter</a> - 
+        <a href="https://www.facebook.com/savjee" rel='noopener' target="_blank">Facebook</a> - 
+        <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" rel='noopener' target='_blank'>YouTube</a>
     </p>
 </footer>
 
-<link href='https://fonts.googleapis.com/css?family=Lato:700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Merriweather:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-<!-- 
-    When changing this, also update the Content Security Policy!
-    sha256-+LqOHBtwe59G7XsxSsFyXHbj+579Br2M+tUEbM1/Q2M= 
--->
-{% include google-analytics.html %}
-
-<!-- 
-    When changing this, also update the Content Security Policy!
-    sha256-V5cd+NPFSKMYBQ7hI9lFQKprtS0KJ8NUKTADou1CuXg= 
--->
-<script type="text/javascript">
-(function () {
-    try{
-        var links = document.querySelectorAll('a.external');
-
-        for (var i = 0; i < links.length; ++i) {
-            links[i].onclick = function() {
-                ga('send', 'event', 'outbound', 'click', this.href);
-            };
-        }
-
-        window.addEventListener('error', function(e) {
-            ga('send', 'exception', {
-                'exDescription': e.message,
-                'exFatal': false
-            });
-        });
-    }catch(e){
-        ga('send', 'exception', {
-            'exDescription': err.message,
-            'exFatal': false
-        });
-    }
-})();
-</script>
-<script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>
+{% asset all.js %}
 
 </body>
 </html>

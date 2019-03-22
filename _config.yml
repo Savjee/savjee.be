@@ -19,9 +19,10 @@ collections:
 excerpt_separator: <!--more-->
 
 assets:
-  compression: true
+  # compression: true
   sources:
     - "_assets/css"
+    - "_assets/js"
 
 redcarpet:
     extensions: ["footnotes"]

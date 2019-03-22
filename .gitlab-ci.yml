@@ -9,7 +9,13 @@ before_script:
 - export LC_ALL=en_US.UTF-8
 - bundle install
 
+stages:
+  - prepare
+  - build
+  - deploy
+
 preparations:
+  stage: prepare
   script:
   - echo "Creating .env file"
   - echo S3_ID=${S3_ID} > .env
@@ -19,10 +25,12 @@ preparations:
   - sed -i -e 's/UA-XXXXXXXX-X/'"${analyticsid}"'/g' _assets/js/analytics.js
   
 building_site:
+  stage: build
   script:
   - bundle exec jekyll build
 
 deploy_site:
+  stage: deploy
   only:
     - master
   script:

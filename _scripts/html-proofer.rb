@@ -1,6 +1,6 @@
 require 'html-proofer'
 
-HTMLProofer.check_directory("../_site", {
+HTMLProofer.check_directory("_site", {
 
   # Ignore images without an ALT tag
   :alt_ignore => [/.*/],

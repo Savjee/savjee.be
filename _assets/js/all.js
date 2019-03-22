@@ -1,6 +1,7 @@
 //= require external-links
 //= require lib/instantpage
 //= require lib/disqusLoader
+//= require analytics
 
 // Lazy load Disqus comments
 try{
@@ -8,5 +9,3 @@ try{
 }catch(e){
 	console.error(e);
 }
-
-//= require analytics

@@ -18,8 +18,7 @@ build:
   - echo S3_SECRET=${S3_SECRET} >> .env
   
   - echo "Google Analytics inject"
-  - echo ${analyticsid}
-  - sed -i -e 's/UA-XXXXXXXX-X/'"${analyticsid}"'/g' _includes/google-analytics.html
+  - sed -i -e 's/UA-XXXXXXXX-X/'"${analyticsid}"'/g' _assets/js/analytics.js
   
   - bundle exec jekyll build
   - bundle exec s3_website install

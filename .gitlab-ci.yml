@@ -17,6 +17,7 @@ build:
   - echo "Creating .env file"
   - echo S3_ID=${S3_ID} > .env
   - echo S3_SECRET=${S3_SECRET} >> .env
+  - echo CLOUDFRONT_DISTRIBUTION_ID=${CLOUDFRONT_DISTRIBUTION_ID} >> .env
   
   - echo "Google Analytics inject"
   - sed -i -e 's/UA-XXXXXXXX-X/'"${analyticsid}"'/g' _assets/js/analytics.js

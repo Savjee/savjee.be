@@ -63,15 +63,18 @@
 	}
 }
 
-// .course-title{
-	// font-size: 1.3em !important;
-	// font-weight: 300 !important;
-// }
+@media (max-width: 650px) {
+    .course-container{
+    	.display-flex {
+    		display:block;
+    	}
 
-// .course-thumb-wrapper{
-	// margin-right: 20px;
-// 
-	// img{
-		// max-width: 200px;
-	// }
-// }
+    	.course-thumbnail{
+    		width: 100% !important;
+
+    		img{
+    			width: 100%;
+    		}
+    	}
+    }
+}

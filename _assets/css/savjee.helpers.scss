@@ -5,3 +5,13 @@
 .text-center{
     text-align:center;
 }
+
+.display-flex{
+	display: flex;
+}
+
+.flex-vcenter{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}

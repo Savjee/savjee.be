@@ -16,12 +16,6 @@ header {
         }
     }
 
-    .flex-vcenter{
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
     .brand-name{
         font-size: 19px;
         font-weight: 100;
@@ -54,7 +48,7 @@ header {
                     font-weight: bold;
                     text-decoration: none;
 
-                    &:hover{
+                    &:hover, &.active{
                         color: #423e45;
                         &:after{
                             text-decoration: none;

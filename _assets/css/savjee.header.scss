@@ -48,7 +48,7 @@ header {
                     font-weight: bold;
                     text-decoration: none;
 
-                    &:hover{
+                    &:hover, &.active{
                         color: #423e45;
                         &:after{
                             text-decoration: none;

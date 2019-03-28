@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: course
 collection: videos
 title: Complete guide to building a GraphQL API
 

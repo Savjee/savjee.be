@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class='post'>
+	<h1 class='post-title'>
+		<a href="{{ post.url }}">{{ page.title }}</a>
+	</h1>
+
+	<p class="no-margin">
+		Available on:
+
+		{% if page.link_udemy %}
+          <a href="{{page.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+        {% endif %}
+        
+        {% if page.link_skillshare %}
+            <a href="{{page.link_skillshare}}">Skillshare</a>
+        {% endif %}
+	</p>
+	<hr>
+
+	<div class='post-description'>
+		{{ content }}
+	</div>
+</article>

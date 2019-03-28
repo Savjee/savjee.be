@@ -1,0 +1,77 @@
+.badge{
+
+	margin: 0 10px;
+	padding: 5px 10px;
+	border-radius: 3px;
+	border: solid 1px #000;
+
+	a{
+		text-decoration: none;
+	}
+
+	&.udemy{
+		border-color:#E85356;
+		color: #fff;
+	}
+
+	&.skillshare{
+		border-color: #117A83;
+		color: #fff;
+	}
+}
+
+.course-container{
+	border: solid 1px #DDDDDD;
+
+	div.course-thumbnail, .course-thumbnail img{
+		min-width: 270px;
+		width: 270px;
+	}
+
+	div.course-description{
+		padding: 25px;
+
+		.course-title{
+			margin:0;
+
+			a{
+				color: #000;
+				font-weight: 400;
+				text-decoration: none;
+				line-height: 1;
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.course-preview{
+		padding: 0 15px;
+		font-size: 0.9em;
+	}
+
+	.platforms{
+		font-size: 0.8em;
+		// margin-top: -7px;
+
+		a{
+			color: #6b6b6b;
+		}
+	}
+
+	&:hover{
+		border-color: #4c4c4c;
+	}
+}
+
+// .course-title{
+	// font-size: 1.3em !important;
+	// font-weight: 300 !important;
+// }
+
+// .course-thumb-wrapper{
+	// margin-right: 20px;
+// 
+	// img{
+		// max-width: 200px;
+	// }
+// }

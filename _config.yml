@@ -16,6 +16,10 @@ collections:
     output: true
     permalink: /videos/:path/
 
+  courses:
+    output: true
+    permalink: /courses/:path/
+
 excerpt_separator: <!--more-->
 
 assets:

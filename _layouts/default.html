@@ -10,7 +10,8 @@
 
     {% assign seo_description_tmp = page.quote | default: page.excerpt %}
     {% assign seo_description_tmp2 = seo_description_tmp | strip_html %}
-    {% assign seo_description = seo_description_tmp2 | truncate:350 %}
+    {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
+    {% assign seo_description = seo_description_tmp3 | escape %}
 
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
     <meta name='description' content='{{ seo_description }}'/>

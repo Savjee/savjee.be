@@ -23,24 +23,23 @@
 
     <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d"/>
 
-    {% if page.thumbnail %}
-    <!-- Twitter tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
     <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
     <meta name="twitter:title" content="{{page.title}}">
     <meta name="twitter:description" content="{{ seo_description }}">
-    <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
 
-    <!-- Facebook tags -->
     <meta property="og:title" content="{{page.title}}"/>
     <meta property="og:site_name" content="Savjee.be"/>
     <meta property="og:url" content="https://www.savjee.be{{page.url}}"/>
     <meta property="og:description" content="{{ seo_description }}"/>
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
     <meta property="fb:app_id" content="805673586165209"/>
+
+    {% if page.thumbnail %}
+        <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
+        <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
     {% endif %}
 </head>
 

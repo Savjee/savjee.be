@@ -6,7 +6,6 @@ videoId: FJYa6C-MXno
 order: 24
 series: Simply explained
 uploadDate: 2019-05-06
-hide: true
 ---
 
 How does a computer know how to reach youtube.com? This domain name needs to be translated to an IP address and that's where DNS comes in. Let's learn how it works!

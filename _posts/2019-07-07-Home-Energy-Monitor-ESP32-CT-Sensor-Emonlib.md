@@ -101,7 +101,7 @@ This is what I ended up with:
 
 And this is how the display mounts on top of the standoffs:
 
-![](/uploads/2019-07-home-energy-monitor/case-display.png)
+![](/uploads/2019-07-home-energy-monitor/case-display.jpg)
 *Mockup of how the display is mounted on top of the standoffs while leaving space for the protoboard below.*
 
 In case you’re wondering: yes, I made dummy models of the display and screws. I like to see how everything fits together before sending it off to the 3D printer.

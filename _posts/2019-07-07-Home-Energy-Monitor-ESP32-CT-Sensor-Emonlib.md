@@ -2,6 +2,8 @@
 layout: post
 title: "DIY Home Energy Monitor: ESP32 + CT Sensors + Emonlib"
 quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measures total electricity consumption in the entire house.
+thumbnail: /uploads/2019-07-home-energy-monitor/poster-750.jpg
+upload_directory: /uploads/2019-07-home-energy-monitor
 ---
 
 One day I was wondering: how much electricity is flowing through my apartment right now? Looking online I found various sensor devices like Smappee and Sense, but those are relatively expensive and even require a subscription. So I decided to build my own with an ESP32 and the SCT-013 sensor. My very own Fitbit for electricity consumption!

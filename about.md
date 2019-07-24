@@ -4,20 +4,12 @@ permalink: about.html
 title: About me
 ---
 
-Hi. Nice to meet you! My name is Xavier, I'm an all-round geek and video creator.
+By looking at this website and my content you probably think that I’m a developer and a passionate geek. Spot on! Here are some facts that you probably don't know about me: I’m 25 years old and I live in a country that is so tiny you might not even spot it on a map!
 
-I like to learn, take on challenges and share my knowledge with others. These passions led me to creating this blog, a YouTube channel and serveral online learning courses.
+Besides this blog, I also have [a YouTube channel](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ) and I’ve created [a few e-learning courses](/courses). One of my biggest passions is taking complex topics and simply explaining them. I love doing extensive research and continuously rewrite my posts or video scripts until they make sense. It’s a messy and unstructured process but when I’m finally done, it gives me satisfaction knowing that I’ve helped people to understand new topics.
 
-I’m very eager to learn and always looking for new challenges and ways in which I can improve my projects & skills. 
+I hope that you can feel all my passion when reading my blog posts or watching my videos. A lot of hard work has gone into them!
 
-## Open source
-Most of my projects, including [this website](https://github.com/Savjee/savjee.be), are available [on GitHub](https://github.com/Savjee). Open source software has helped me build great things and peek into how others were built.
+But enough about me! Let’s talk about you. What is your story? What drives you? What gets you up in the morning? Is it the Simply Explained content or something else? 
 
-## The Simply Explained YouTube Channel
-In 2016 I started [my own YouTube channel](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ) with one goal: taking complicated topics and explaining them in a simple, straightforward way. So far my videos have been watched over 8 million times and over 130,000 people have subscribed to the channel.
-
-I make explainer videos on a variety of topics such as blockchains, encryption, space, technology, programming, ... Each video is the result of a lot of research and boiling everything down into an easy format.
-
-
-## Contact
-If you have questions or suggestions, feel free to mention on Twitter [@Savjee](https://twitter.com/Savjee) or to post a comment on my website or videos.
+Feel free to reach out to me on Twitter ([@Savjee](https://twitter.com/Savjee)) and let me know. I'd love hearing from you!

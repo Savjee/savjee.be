@@ -421,3 +421,9 @@ That’s a wrap! My home energy monitor has been running since January 2019 and 
 Buying an existing sensor is certainly possible but I had way too much fun building one myself. I also learned a lot about electronics, ESP32 programming, and how to set up AWS for IoT purposes.
 
 What do you think about this project? Would you like to see more DIY projects? Let me know!
+
+## Downloads
+
+* [Fusion360 files for the case + top lid](/uploads/2019-07-home-energy-monitor/fusion-energy-monitor-case.f3z)
+
+I will work on open sourcing the full Arduino code + Backend + App. Stay tuned!

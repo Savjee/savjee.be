@@ -55,7 +55,7 @@ I started by looking for parts on AliExpress. I’m no expert in electrical circ
     <td>€10,99</td>
   </tr>
   <tr>
-    <td>Resistors</td>
+    <td>Resistors (between 10k and 470k Ω)</td>
     <td>Already had them</td>
   </tr>
   <tr>
@@ -86,6 +86,8 @@ And finally, I ordered some 3,5mm headphone jacks. Why? Well the CT sensor has a
 Once the components arrived I wired everything up like this:
 
 ![](/uploads/2019-07-home-energy-monitor/wiring-arduino.jpg)
+
+Note: I used 2x 100kΩ resistors, but you can use any resistor value between 10k and 470k. Just make sure R1 and R2 are of the same value.
 
 I first tried it on a breadboard to verify that everything worked and moved it to a protoboard afterward:
 

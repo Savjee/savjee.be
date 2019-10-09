@@ -1,3 +1,7 @@
+/* ----------------- Colors ----------------- */
+$mainTextColor: #2a2f35;
+$codeBoxBackground: #F8F8F8;
+
 /* ----------------- Main site styles ----------------- */
 * {
     -webkit-box-sizing: border-box;
@@ -10,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    color: #2a2f35;
+    color: $mainTextColor;
 }
 
 .container {
@@ -36,7 +40,7 @@ pre, code {
 }
 
 pre, p code, li code {
-    background-color: #F8F8F8;
+    background-color: $codeBoxBackground;
     border: solid 1px #D1D1D1;
 }
 
@@ -152,5 +156,16 @@ footer {
 
     p, a{
         color: #959595;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #fff;
+        background: #000;
+    }
+
+    article h1 a{
+        color: #cec7c8;
     }
 }

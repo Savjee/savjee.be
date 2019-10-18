@@ -1,3 +1,5 @@
+@import "savjee.colors";
+
 .videowrapper {
     float: none;
     clear: both;
@@ -50,7 +52,7 @@
     }
 
     strong{
-        color: #000;
+        // color: #000;
         text-decoration: none;
         display:inline-block;
     }
@@ -93,19 +95,6 @@
     }
 }
 
-.series-in-rollout{
-    display:block;
-    font-size: 0.8em;
-    background-color: #eee;
-    background-image: url(/assets/img/in-progress.svg);
-    background-position-y: center;
-    background-position-x: 20px;
-    background-repeat: no-repeat;
-    line-height: 1.2em;
-    padding: 20px 20px 20px 50px;
-    margin-bottom: 0;
-}
-
 .video-serieList{
     column-count: 2;
     -moz-column-count: 2;
@@ -135,5 +124,15 @@
         .next-to-each-other{
             display:block;
         }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .videobackdrop{
+        background:none;
+    }
+
+    .videoNavigation{
+        background-color: $headerBackgroundDarkMode;
     }
 }

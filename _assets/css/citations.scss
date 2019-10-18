@@ -12,3 +12,11 @@
         color: #000;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .bibtex-sources{
+        a{
+            color: #fff;
+        }
+    }
+}

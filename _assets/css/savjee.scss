@@ -1,3 +1,5 @@
+@import "savjee.colors";
+
 /* ----------------- Main site styles ----------------- */
 * {
     -webkit-box-sizing: border-box;
@@ -10,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    color: #2a2f35;
+    color: $mainTextColor;
 }
 
 .container {
@@ -36,7 +38,7 @@ pre, code {
 }
 
 pre, p code, li code {
-    background-color: #F8F8F8;
+    background-color: $codeBoxBackground;
     border: solid 1px #D1D1D1;
 }
 
@@ -110,7 +112,7 @@ article {
 }
 
 a {
-    color: #007998;
+    color: $linkColor;
     -webkit-transition: color 0.25s ease-in-out;
     -moz-transition: color 0.25s ease-in-out;
     -o-transition: color 0.25s ease-in-out;
@@ -152,5 +154,32 @@ footer {
 
     p, a{
         color: #959595;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: $mainTextColorDarkMode;
+        background: $bodyBackgroundDarkMode;
+    }
+
+    pre, p code, li code {
+        background-color: $headerBackgroundDarkMode;
+    }
+
+    article h1 a{
+        color: #cec7c8;
+    }
+
+    pre{
+        background-color: #202020;
+    }
+
+    a{
+        color: $linkColorDarkMode;
+
+        &:hover{
+            color: $linkColor;
+        }
     }
 }

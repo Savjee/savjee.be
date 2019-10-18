@@ -1,6 +1,4 @@
-/* ----------------- Colors ----------------- */
-$mainTextColor: #2a2f35;
-$codeBoxBackground: #F8F8F8;
+@import "savjee.colors";
 
 /* ----------------- Main site styles ----------------- */
 * {
@@ -114,7 +112,7 @@ article {
 }
 
 a {
-    color: #007998;
+    color: $linkColor;
     -webkit-transition: color 0.25s ease-in-out;
     -moz-transition: color 0.25s ease-in-out;
     -o-transition: color 0.25s ease-in-out;
@@ -161,13 +159,12 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        color: #fff;
-        background: #000;
+        color: $mainTextColorDarkMode;
+        background: $bodyBackgroundDarkMode;
     }
 
     pre, p code, li code {
-        background-color: #323232;
-        border: solid 1px #D1D1D1;
+        background-color: $headerBackgroundDarkMode;
     }
 
     article h1 a{
@@ -179,10 +176,10 @@ footer {
     }
 
     a{
-        color: #1cd1ff;
+        color: $linkColorDarkMode;
 
         &:hover{
-            color: #007998;
+            color: $linkColor;
         }
     }
 }

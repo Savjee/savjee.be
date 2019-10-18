@@ -1,3 +1,5 @@
+@import "savjee.colors";
+
 .videowrapper {
     float: none;
     clear: both;
@@ -131,6 +133,6 @@
     }
 
     .videoNavigation{
-        background-color: #323232;
+        background-color: $headerBackgroundDarkMode;
     }
 }

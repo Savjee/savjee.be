@@ -168,4 +168,31 @@ footer {
     article h1 a{
         color: #cec7c8;
     }
+    header{
+        background-color: #323232 !important;
+    }
+
+    header nav ul li a, header .brand-name a{
+        color: #fff !important;
+    }
+    
+    header nav ul li a:hover{
+        color: #fff !important;
+    }
+    
+    header nav ul li a:after{
+        background-color: #fff !important;
+    }
+
+    pre{
+        background-color: #202020;
+    }
+
+    a{
+        color: #1cd1ff;
+
+        &:hover{
+            color: #007998;
+        }
+    }
 }

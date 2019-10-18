@@ -78,3 +78,15 @@
     	}
     }
 }
+
+@media (prefers-color-scheme: dark) {
+	.course-container{
+		div.course-description{
+			.course-title{
+				a{
+					color: #fff;
+				}
+			}
+		}
+	}
+}

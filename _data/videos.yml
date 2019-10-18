@@ -2,7 +2,6 @@ series:
   - title: "Simply explained"
     playlistId: PLzvRQMJ9HDiSbvXWQ7OdgVccdr7Wni5Qw
     description: Simply Explained is all about taking a complex subject and explaining it in plain English.
-    wip: true
 
   - title: "Building a blockchain in Javascript"
     playlistId: PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4

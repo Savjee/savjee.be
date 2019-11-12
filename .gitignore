@@ -5,3 +5,4 @@ _asset-cache
 .jekyll-metadata
 _scripts/tmp
 .jekyll-cache
+.DS_Store

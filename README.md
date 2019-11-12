@@ -10,5 +10,9 @@ The following directories and their contents are Copyright Xavier Decuyper. You 
 
 * _posts/
 * _videos/
+* _courses/
+* _data/
+* uploads/
+* projects/
 
 All other directories and files are MIT Licensed.

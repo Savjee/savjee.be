@@ -17,7 +17,7 @@ find uploads -type f -iname "thumb_master.jpg" -print0 | while IFS= read -r -d $
 
     # Generate a Facebook thumbnail if it does not exist yet
     if [ ! -f ${DIRECTORY}/thumb_facebook.jpg ]; then
-        convert ${line} -resize 600x315 -background white -gravity center -extent 600x315 ${DIRECTORY}/thumb_facebook.jpg
+        convert ${line} -quality 90 -resize 1200x630 -background white -gravity center -extent 1200x630 ${DIRECTORY}/thumb_facebook.jpg
     fi
 
 done

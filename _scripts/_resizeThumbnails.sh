@@ -7,7 +7,7 @@ find uploads -type f -iname "thumb_master.jpg" -print0 | while IFS= read -r -d $
 
     # Generate a thumbnail for the timeline, should be 350px wide, height doesn't matter
     if [ ! -f ${DIRECTORY}/thumb_timeline.jpg ]; then
-        convert ${line} -resize 350x ${DIRECTORY}/thumb_timeline.jpg
+        convert ${line} -quality 80 -resize 700x ${DIRECTORY}/thumb_timeline.jpg
     fi
 
     # Generate a Twitter thumbnail if it does not exist yet

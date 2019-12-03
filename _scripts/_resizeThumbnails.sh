@@ -12,7 +12,7 @@ find uploads -type f -iname "thumb_master.jpg" -print0 | while IFS= read -r -d $
 
     # Generate a Twitter thumbnail if it does not exist yet
     if [ ! -f ${DIRECTORY}/thumb_twitter.jpg ]; then
-        convert ${line} -resize 560x300 -background white -gravity center -extent 560x300 ${DIRECTORY}/thumb_twitter.jpg
+        convert ${line} -quality 90 -resize 1120x600 -background white -gravity center -extent 1120x600 ${DIRECTORY}/thumb_twitter.jpg
     fi
 
     # Generate a Facebook thumbnail if it does not exist yet

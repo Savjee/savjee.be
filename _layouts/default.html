@@ -24,7 +24,6 @@
 
     <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d"/>
 
-    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
     <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
@@ -42,6 +41,8 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
         <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
+    {% else %}
+        <meta name="twitter:card" content="summary">
     {% endif %}
 </head>
 

@@ -184,6 +184,17 @@ offlineReadingCount = 0;
 
 *Note: As pointed out [on Reddit](https://www.reddit.com/r/esp32/comments/e8n7p1/esp32_tips_to_increase_battery_life_15_weeks_and/fadjoz0/), this code doesn't handle a situation in which the ESP32 can't connect to WiFi when the offline readings buffer is full. You might want to add this.*
 
+## Tip 8: Use static IP & avoid hostnames
+This tip comes from Reddit user [romkey](https://www.reddit.com/r/esp32/comments/e8n7p1/esp32_tips_to_increase_battery_life_15_weeks_and/faeje1c/): use a static IP address and avoid using hostnames (which have to be resolved with DNS).
+
+By hard coding an IP address into your ESP32, you reduce the time it takes to get an address through DHCP.
+
+Another tip is to avoid using domain names when connecting to remote servers. Creating an MQTT connection with cloudmqtt.com, for instance, requires your ESP32 to figure out the IP address behind the name. This happens through a DNS resolver, and this can take anywhere between a few milliseconds and several hundred.
+
+If you want to publish MQTT messages to cloudmqtt.com, your ESP32 first has to resolve the domainname with DNS. Cutting this step will
+
+Although these tips will reduce the amount of time spent with the WiFi radio on, they aren't always practical. A static IP address is doable on your home network, but not when you want to ship devices to customers. Likewise, avoiding DNS is likely not possible if you use a service like AWS IoT.
+
 ## Future tip
 Another tip I’m currently exploring is using a hardware encryption module to speed up encryption. For me, that would come in handy because I use AWS IoT, which requires strong encryption, and that takes a while to do on a vanilla ESP32.
 

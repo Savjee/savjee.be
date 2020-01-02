@@ -234,6 +234,7 @@ unsigned long timeFinishedSetup = 0;
 ```
 
 Then I wrote two helper functions to write the current energy consumption and the IP address to the LCD display. That way I can re-use them in other parts of the code:
+
 ```cpp
 void writeEnergyToDisplay(double watts, double amps){
   lcd.setCursor(3, 1); // Start from column 3, first two are broken :/

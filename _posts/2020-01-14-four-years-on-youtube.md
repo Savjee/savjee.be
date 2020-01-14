@@ -8,7 +8,7 @@ Every year I sit down and take a look at how my YouTube channel has been doing. 
 
 <!--more-->
 
-Previous years: [2017]({% post_url 2017-01-13-my-first-year-on-youtube %}), [2018]({% post_url 2018-01-08-My-second-year-on-YouTube %}), [2019]({% post_url 2019-01-13-Three-years-on-YouTube %}).
+Previous years: [2017]({% link _posts/2017-01-13-my-first-year-on-youtube.md %}), [2018]({% link _posts/2018-01-08-My-second-year-on-YouTube.md %}), [2019]({% link _posts/2019-01-13-Three-years-on-YouTube.md %}).
 
 ## Stats for 2019
 Let's start with the raw statistics for 2019 and see how they compare to the year before:
@@ -21,7 +21,7 @@ Let's start with the raw statistics for 2019 and see how they compare to the yea
 
 Overall, 2019 was a year of much slower growth. I uploaded 35% fewer videos, and in return, I got 37% fewer views and 60% fewer new subscribers. That seems fair. Make fewer videos, get fewer views & subscribers in return. I can't complain about that.
 
-Part of the reason for this decline is still my choice of not making more videos related to cryptocurrencies. My most popular video explains how Blockchains work, and that drew in a lot of new subscribers. After they got onto the channel, I started making fewer videos about cryptocurrencies which puts some people off (something I also addressed last year). Every new video I upload sees a period of subscriber decline before growing again.
+Part of the reason for this decline is still my choice of not making more videos related to cryptocurrencies. My [most popular video explains how Blockchains work]({% link _videos/simply-explained/how-does-a-blockchain-work.md %}), and that drew in a lot of new subscribers. After they got onto the channel, I started making fewer videos about cryptocurrencies which puts some people off (something I also addressed last year). Every new video I upload sees a period of subscriber decline before growing again.
 
 Not much I can do about that. I want to keep distancing myself from cryptocurrencies and make it clear: I want to make videos about anything. If I find it interesting, I put it in a video. I'm not going to produce content to please my audience because that's not sustainable.
 

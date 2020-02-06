@@ -428,5 +428,4 @@ What do you think about this project? Would you like to see more DIY projects? L
 ## Downloads
 
 * [Fusion360 files for the case + top lid](/uploads/2019-07-home-energy-monitor/fusion-energy-monitor-case.f3z)
-
-I will work on open sourcing the full Arduino code + Backend + App. Stay tuned!
+* Full Source Code (ESP32 + AWS + App) [available on GitHub](https://github.com/Savjee/home-energy-monitor)

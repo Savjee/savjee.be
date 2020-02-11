@@ -10,6 +10,10 @@ One day I was wondering: how much electricity is flowing through my apartment ri
 
 <!--more-->
 
+
+**Since this post I've made an improved version. [Read more about Home Energy Monitor V2 here.]({% post_url 2020-02-11-home-energy-monitor-v2 %})**
+
+
 ## Goal
 Before jumping in, I set myself these goals for the project:
 
@@ -424,6 +428,8 @@ That’s a wrap! My home energy monitor has been running since January 2019 and 
 Buying an existing sensor is certainly possible but I had way too much fun building one myself. I also learned a lot about electronics, ESP32 programming, and how to set up AWS for IoT purposes.
 
 What do you think about this project? Would you like to see more DIY projects? Let me know!
+
+[Also check out the improved Home Energy Monitor V2.]({% post_url 2020-02-11-home-energy-monitor-v2 %})
 
 ## Downloads
 

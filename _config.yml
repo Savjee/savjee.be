@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: kramdown
 markdown_ext: markdown,mkd,mkdn,md
 highlighter: rouge
 permalink: /:year/:month/:title/

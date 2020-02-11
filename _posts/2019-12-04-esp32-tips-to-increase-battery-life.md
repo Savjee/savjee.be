@@ -13,6 +13,14 @@ Running an ESP32 on a battery is a tricky operation. The chip is a powerhouse, a
 Before we begin: the code samples shown in this post are for use with the [Arduino framework](https://github.com/espressif/arduino-esp32). This was not tested with `esp-idf` directly.
 
 
+---
+
+**Table of contents:**
+* TOC:
+{:toc}
+
+---
+
 ## Tip 1: Use the right battery & board
 Want to increase battery life? Then pick an ESP32 board that has a built-in battery connector. These boards likely use a much more efficient LDO voltage regulator.
 

@@ -14,6 +14,15 @@ This post will show you how to connect your ESP32 with AWS IoT. Unleash the powe
 
 *Note: this project will not use the AWS IoT SDK or Mongoose or FreeRTOS. Just a combination of Arduino libraries to stitch everything together.*
 
+---
+
+**Table of contents:**
+* TOC:
+{:toc}
+
+---
+
+
 ## First things first: WiFi
 Before we can connect to AWS, the ESP32 needs an active internet connection. So let’s start by writing some code to connect to a WiFi network. Feel free to skip this step if you already got this.
 

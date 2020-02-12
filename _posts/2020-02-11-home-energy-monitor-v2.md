@@ -214,13 +214,61 @@ In a nutshell:
 * A second Lambda function exposes a GraphQL API that is consumed by the web dashboard and the Ionic app.
 
 
+## Integrating with Home Assistant
+I've been a huge fan of [Home Assistant](https://www.home-assistant.io/), ever since a colleague of mine introduced me to it. I have it running [on a Raspberry Pi that is booting from an external SSD]({% post_url 2019-12-03-home-assistant-boot-pi-from-usb-ssd %}).
+
+Naturally, I wanted my energy consumption to show up there as well. So that means the ESP32 has to connect to two services: AWS (to archive all my readings) and Home Assistant.
+
+You can interface with Home Assistant in a number of ways. I decided to use MQTT because I already know how to use it on the ESP32. The only requirement is that you install a broker (or use an online service) on your Home Assistant machine. I chose to use the [Mosquito integration of HASS.IO](https://github.com/home-assistant/hassio-addons/tree/master/mosquitto).
+
+Home Assistant gives device makers two options to integrate with MQTT: either the user has to configure the device manually in the `configuration.yaml` file, or the device can configure itself by using [MQTT Discovery](https://www.home-assistant.io/docs/mqtt/discovery/).
+
+Of course, I choose the latter -- no manual configuration for me.
+
+To make it all work, you have to tell Home Assistant everything there is to know about your device. The name, type, measurement units, the icon, and so on... This can be done by posting a message to this MQTT topic: `homeassistant/sensor/home-energy-monitor-1/config` with the following contents:
+
+```json
+{
+    "name": "home-energy-monitor-1",
+    "device_class": "power",
+    "unit_of_measurement": "W",
+    "icon": "mdi:transmission-tower",
+    "state_topic": "homeassistant/sensor/home-energy-monitor-1/state",
+    "value_template": "{% raw %}{{ value_json.power }}{% endraw %}",
+    "device": {
+        "name": "home-energy-monitor-1",
+        "sw_version": "2.0",
+        "model": "HW V2",
+        "manufacturer": "Xavier Decuyper",
+        "identifiers": ["home-energy-monitor-1"]
+    }
+}
+```
+
+This will automatically configure my energy monitor in Home Assistant and even adds it to the device registry. No additional work required!
+
+All that's left now is to periodically send the energy consumption to the topic `homeassistant/sensor/home-energy-monitor-1/state`:
+
+```json
+{ "power": 163 }
+```
+
+This is the end result:
+
+![Energy Monitor integrated with Home Assistant](/uploads/2020-02-11-home-energy-monitor-v2/home-assistant-integration.png)
+*Home Assistant integration up and running.*
+
+
+
+Note: Home Assistant integration is optional and disabled by default in the firmware. If you want to enable it, open the `config.h` file, set `HA_ENABLED` to `true` and enter the IP address of your Home Assistant instance as well as the login credentials for your MQTT broker.
+
 ## Status & next steps
 I've been running V2 of my energy monitor since January 3th, 2020, and so far, it's been rock solid. The WiFi and MQTT connections are automatically reconnected if necessary. That's already a huge improvement.
 
 In terms of next steps, I only have three:
 1. Print & test the DIN rail mount
-2. Integrate it with [my Home Assistant installation]({% post_url 2019-12-03-home-assistant-boot-pi-from-usb-ssd %})
-3. Design & order a custom PCB to replace the protoboard and my bad soldering skills ;) 
+2. Design & order a custom PCB to replace the protoboard and my bad soldering skills ;) 
+3. <strike>Integrate it with my Home Assistant installation</strike>
 
 So stay tuned for an update ;) 
 

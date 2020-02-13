@@ -2,6 +2,8 @@
 layout: post
 title: Transactions &amp; Mining Rewards (Javascript blockchain, part 3)
 quote:
+thumbnail: /uploads/2018-02-transactions-and-mining-rewards/poster-750.jpg
+upload_directory: /uploads/2018-02-transactions-and-mining-rewards
 ---
 
 This is part 3 of my blog posts series in which we create a blockchain in Javascript. In the previous blog posts we created a simple blockchain and implemented proof-of-work to protect it from spammers and attackers. However we made some shortcuts along the way: our blockchain can only store 1 transaction in a block and there are no rewards for miners. Let’s fix that!

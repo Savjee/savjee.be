@@ -2,6 +2,8 @@
 layout: post
 title: Signing Transactions (Javascript blockchain, part 4)
 quote:
+thumbnail: /uploads/2018-10-27-signing-transactions-blockchain-javascript/poster-750.jpg
+upload_directory: /uploads/2018-10-27-signing-transactions-blockchain-javascript
 ---
 
 This is part 4 of my blog posts series in which we create a blockchain in Javascript. In the previous blog posts, we added wallets and mining rewards to our simple blockchain. But the current implementation doesn't validate transactions. We can effectively spend money from someone else's wallet! Let's fix that.

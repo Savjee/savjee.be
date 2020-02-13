@@ -2,6 +2,8 @@
 layout: post
 title: Writing a tiny blockchain in JavaScript
 quote:
+thumbnail: /uploads/2017-07-blockchain-in-js-part1/poster-750.jpg
+upload_directory: /uploads/2017-07-blockchain-in-js-part1
 ---
 
 Almost everyone has heard about cryptocurrencies like Bitcoin and Ethereum, but few people actually know how the technology behind these work. In this blog post I'll create a simple blockchain in JavaScript to demonstrate how they work internally. I'll call it SavjeeCoin!

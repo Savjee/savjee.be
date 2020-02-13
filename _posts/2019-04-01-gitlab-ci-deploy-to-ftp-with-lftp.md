@@ -2,6 +2,7 @@
 layout: post
 title: "GitLab CI: Deploy to FTP / SFTP with lftp"
 quote: How to use GitLab CI and lftp to deploy websites over FTP/SFTP to your web hosting account.
+tags: [CI/CD]
 ---
 
 Lately, I’ve been using GitLab CI more and more to replace my Jenkins server. The main purpose is to run unit tests on my code and to deploy it to various services. A few older projects still require deployment to a shared web hosting provider using FTP or SFTP.

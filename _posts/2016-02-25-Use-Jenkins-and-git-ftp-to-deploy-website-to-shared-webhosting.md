@@ -3,6 +3,7 @@ layout: post
 title: Use Jenkins and git-ftp to deploy a website to shared webhosting
 thumbnail: uploads/jenkins-git-ftp/poster-750.jpg
 upload_directory: /uploads/jenkins-git-ftp
+tags: [CI/CD]
 ---
 
 Gone are the days of manually deploying code to servers! I recently started using Jenkins to deploy several simple websites that I've built over the years. However, some of these websites are hosted on a shared webhosting. This means: no shell access available for pushing a git repository to it. In this post I'll show you how to configure Jenkins to deploy websites with FTP.

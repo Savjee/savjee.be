@@ -2,7 +2,7 @@
 layout: post
 title: Deploying websites to FTP or Amazon S3 with BitBucket Pipelines
 quote: 
-tags: [AWS]
+tags: [AWS, CI/CD]
 ---
 
 Last week Atlassian announced a new feature for BitBucket called Pipelines. It’s a continuous integration service that is integrated into BitBucket and is powered by Docker. I immediately signed up for the closed beta and received my invite shortly afterwards, yay!

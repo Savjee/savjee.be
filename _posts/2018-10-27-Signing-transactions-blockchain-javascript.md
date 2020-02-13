@@ -2,6 +2,7 @@
 layout: post
 title: Signing Transactions (Javascript blockchain, part 4)
 quote:
+tags: [Blockchain]
 thumbnail: /uploads/2018-10-27-signing-transactions-blockchain-javascript/poster-750.jpg
 upload_directory: /uploads/2018-10-27-signing-transactions-blockchain-javascript
 ---

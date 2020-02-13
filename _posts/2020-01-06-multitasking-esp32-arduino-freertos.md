@@ -4,6 +4,7 @@ title: "Multitasking on ESP32 with Arduino and FreeRTOS"
 quote: 
 thumbnail: /uploads/2020-01-06-multitasking-esp32-arduino-freertos/poster-750.jpg
 upload_directory: /uploads/2020-01-06-multitasking-esp32-arduino-freertos
+tags: [ESP32, Tutorial, Arduino, FreeRTOS]
 ---
 
 By now, it's no secret that the ESP32 is my go-to chip for making IoT devices. They're small, powerful, have a ton of onboard features, and they're relatively easy to program.

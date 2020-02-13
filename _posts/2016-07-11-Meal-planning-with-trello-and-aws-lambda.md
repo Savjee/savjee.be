@@ -2,6 +2,7 @@
 layout: post
 title: Meal planning with Trello and AWS Lambda
 quote: 
+tags: [AWS]
 ---
 
 When my girlfriend and I moved in together, we decided to sit down each Saturday and plan ahead what we we're going to eat the following week. We used to do this with pen and paper but as a few weeks passed I thought: why are we doing this the old school way? Don't get me wrong: pen and paper get the job done efficiently but it doesn't allow us to check what's for dinner when we aren't home.

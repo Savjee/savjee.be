@@ -4,6 +4,7 @@ title: "Home Assistant: Boot Raspberry Pi from USB SSD"
 quote: 
 thumbnail: /uploads/2019-12-03-home-assistant-pi-usb-boot/poster-750.jpg
 upload_directory: /uploads/2019-12-03-home-assistant-pi-usb-boot
+tags: [Home Assistant]
 ---
 
 I'm a geek and got infected with the "smart home" virus. I bought a smart doorbell, smart cameras, smart TV, smart outlets, smart buttons, smart thermostats… A ton of devices in my home are now smart. Yet, it hardly feels like living in the future.

@@ -4,6 +4,7 @@ title: "Connect ESP32 to AWS IoT (with Arduino code)"
 quote: 
 thumbnail: /uploads/2019-07-esp32-aws-iot-arduino/poster-750.jpg
 upload_directory: /uploads/2019-07-esp32-aws-iot-arduino
+tags: [ESP32, Tutorial, Arduino, AWS, Energy]
 ---
 
 Lately, I’ve been building some IoT devices and every time I used the ESP32 micro-controller. It's a powerful micro-controller and has built-in WiFi, which means I can connect it to AWS IoT to send sensor data to the cloud for processing and safe-keeping. 

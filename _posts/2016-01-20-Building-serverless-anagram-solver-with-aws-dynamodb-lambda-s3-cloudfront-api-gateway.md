@@ -3,6 +3,7 @@ layout: post
 title: Building a serverless anagram solver with AWS (DynamoDB, Lambda, S3, CloudFront and API gateway)
 thumbnail: uploads/anagram-aws/poster-750.jpg
 upload_directory: /uploads/anagram-aws
+tags: [AWS]
 ---
 
 When I was in high school (2011) I wrote a simple anagram solver in PHP. It used a MySQL backend to store multiple dictionaries and was pretty fast. Fast forward to 2015: the anagram solver is still online but I wanted to revamp it. The goal? Build the anagram solver on top of AWS and go serverless. That’s right! No servers, **just me and my code**.

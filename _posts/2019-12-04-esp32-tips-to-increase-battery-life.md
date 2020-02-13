@@ -4,6 +4,7 @@ title: "ESP32: Tips to increase battery life"
 quote: 
 thumbnail: /uploads/2019-12-04-esp32-tips-to-increase-battery-life/poster-750.jpg
 upload_directory: /uploads/2019-12-04-esp32-tips-to-increase-battery-life
+tags: [ESP32, Tutorial, Arduino]
 ---
 
 Running an ESP32 on a battery is a tricky operation. The chip is a powerhouse, and with power comes great responsibility. In this post, I’ll outline how I got an ESP32 to run for over 15 weeks (and counting) on a single 1000mAh battery.

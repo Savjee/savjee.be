@@ -2,6 +2,7 @@
 layout: post
 title: Uploading your own SSL certificate to Amazon CloudFront
 quote: 
+tags: [AWS]
 ---
 
 I've been wanting to add HTTPS support to my website for quite some time and never got around it. Enabling SSL has several benefits such as increased privacy and a slight boost in search ranking. I know that my blog doesn't really benefit from the increase of privacy, but I wanted to enable it anyway.

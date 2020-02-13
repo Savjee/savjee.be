@@ -4,6 +4,7 @@ title: Review EC Technology sports headphones
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-ectechnology-sport-headphones
+tags: [Review]
 ---
 
 Last year I reviewed two pairs of bluetooth earphones: the QCY Qy7 and a pair from EC Technology. I've been really impressed with both these earphones because they are cheap, comfortable and easy to take with you. However, a couple of months ago I started to run three times a week. With that new habit came a new desire: find decent wireless sport headphones that don't fall out of my ears.

@@ -4,6 +4,7 @@ title: Implementing proof-of-work (Javascript blockchain, part 2)
 quote:
 thumbnail: /uploads/2017-09-implementing-proof-of-work-javascript-blockchain/poster-750.jpg
 upload_directory: /uploads/2017-09-implementing-proof-of-work-javascript-blockchain
+tags: [Blockchain]
 ---
 
 [In my previous blog post]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %}) we created a simple blockchain in Javascript to demonstrate how a blockchain works. However many people commented and said that the implementation wasn't complete and that they could still fool the system. They are correct! Our blockchain needs another mechanism to secure itself against attacks. So let's take a look at how we can do that!

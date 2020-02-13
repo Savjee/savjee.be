@@ -3,6 +3,7 @@ layout: post
 title: Backup DokuWiki to Amazon S3 with PHP
 quote: 
 upload_directory: dokuwiki-backup-s3
+tags: [AWS]
 ---
 
 I have a small RamNode VPS that [I use as a VPN server]({% post_url 2014-04-28-Running-OpenVPN-on-a-cheap-RamNode-VPS %}). I also host my personal wiki on there and use it to document interesting things that I would otherwise forget. The information in my wiki is pretty valuable to me. I therefore decided that I needed a way to automatically backup my wiki, just in case. 

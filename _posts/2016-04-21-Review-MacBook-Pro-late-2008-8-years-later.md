@@ -3,6 +3,7 @@ layout: post
 title: MacBook Pro 2008, Review 8 Years Later
 thumbnail: uploads/review-mbp-2008/poster-750.jpg
 upload_directory: /uploads/review-mbp-2008
+tags: [Review]
 ---
 
 On the 13th of April 2009 at exactly 21:08 I ordered a new MacBook Pro from the Apple online store. This was the first 15 inch MacBook Pro with the unibody design and it replaced my PowerBook G4. It was only my second Mac and I've used it throughout high school, throughout college and now I carry it with me to work. It's been the best investment I have ever made. In fact I'm still using it today and I've used it to write blog posts, to create this website, to create [video tutorials for my YouTube channel](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ), to setup servers, …

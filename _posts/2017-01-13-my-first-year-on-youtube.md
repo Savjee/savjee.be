@@ -2,6 +2,7 @@
 layout: post
 title: My First Year on YouTube
 quote: Exactly one year ago I started my YouTube channel. In this post I'll share my experience and go over the things I've learned throughout the year.
+tags: [YouTube channel]
 ---
 
 Exactly one year ago I started my YouTube channel. It was something I wanted to do for a long time, but only got around to last year. In this post I will reflect on my first year on YouTube. I'll share my experiences with starting and growing a YouTube channel. I'll also go over the things I've learned throughout the year and I'll give some advice for others.

@@ -2,6 +2,7 @@
 layout: post
 title: Verifying Amazon S3 multi-part uploads with the ETag hash
 quote: 
+tags: [AWS]
 ---
 
 Uploading big files to Amazon S3 can be a bit of pain when you're on an unstable network connection. If an error occurs, your transfer will be cancelled and you can start the upload process all over again.

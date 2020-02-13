@@ -4,6 +4,7 @@ title: Review EC Technology Bluetooth Sports Earphones
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-ectechnology-headphones
+tags: [Review]
 ---
 
 Earlier this year I reviewed the cheap QCY Qy7 wireless Bleutooth headphones and concluded that they offer amazing value for a very low price. However, two weeks ago I started using another pair of cheap bluetooth headphones from a company called EC-Technology.

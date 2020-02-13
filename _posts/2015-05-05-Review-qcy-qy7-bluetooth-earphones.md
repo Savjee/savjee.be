@@ -4,6 +4,7 @@ title:  Review - QCY Qy7 Bluetooth Earphones
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-qy7
+tags: [Review]
 ---
 
 About 2 weeks ago I received my first pair of bluetooth earbuds. I searched the cheapest earbuds with some decent reviews and ultimately found a lot of QCY Qy7 headphones. I order [the ones from AGPTek](http://www.amazon.de/Wireless-Bluetooth-Ohrh%C3%B6rer-Kopfh%C3%B6rer-Bluetooth-Ger%C3%A4te/dp/B00R5RLZEG/ref=sr_1_1?ie=UTF8&qid=1430817286&sr=8-1&keywords=QCY), an unknown company that apparently doesn't have a website. 

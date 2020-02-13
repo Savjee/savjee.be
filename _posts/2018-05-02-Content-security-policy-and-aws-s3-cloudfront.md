@@ -2,6 +2,7 @@
 layout: post
 title: Implement Content Security Policy with AWS S3 and CloudFront
 quote:
+tags: [AWS]
 ---
 
 About a week ago I found out that Troy Hunt had published a new course about modern web security. I decided to check out the introduction video and that made me realize that I don't have a Content Security Policy (CSP) for my website. In fact, I was missing a lot of security headers... Time to get up to speed!

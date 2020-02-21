@@ -198,9 +198,7 @@ This tip comes from Reddit user [romkey](https://www.reddit.com/r/esp32/comments
 
 By hard coding an IP address into your ESP32, you reduce the time it takes to get an address through DHCP.
 
-Another tip is to avoid using domain names when connecting to remote servers. Creating an MQTT connection with cloudmqtt.com, for instance, requires your ESP32 to figure out the IP address behind the name. This happens through a DNS resolver, and this can take anywhere between a few milliseconds and several hundred.
-
-If you want to publish MQTT messages to cloudmqtt.com, your ESP32 first has to resolve the domainname with DNS. Cutting this step will
+Another tip is to avoid using domain names when connecting to remote servers. Creating an MQTT connection with cloudmqtt.com, for instance, requires your ESP32 to figure out the IP address behind the name. This happens through a DNS resolver, and this can take anywhere between a few milliseconds and several hundred. If you can, use the IP address of servers you want to connect to. This will allow you to turn off the WiFi sooner.
 
 Although these tips will reduce the amount of time spent with the WiFi radio on, they aren't always practical. A static IP address is doable on your home network, but not when you want to ship devices to customers. Likewise, avoiding DNS is likely not possible if you use a service like AWS IoT.
 

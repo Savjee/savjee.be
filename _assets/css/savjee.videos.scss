@@ -106,6 +106,39 @@
     height: 60px;
 }
 
+.latest-videos{
+    &>div{
+        margin-bottom: 30px;
+    }
+
+    img.thumb{
+        width: 100%;
+        min-height: 124px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        line-height: 1.5;
+        height: 100%;
+        width: 100%;
+
+        &:hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content{
+            padding: 10px 16px;
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .video-serieList{
         column-count: 1;

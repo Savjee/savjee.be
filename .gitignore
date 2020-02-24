@@ -6,3 +6,4 @@ _asset-cache
 _scripts/tmp
 .jekyll-cache
 .DS_Store
+.sass-cache/

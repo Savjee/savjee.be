@@ -172,10 +172,4 @@ This video wouldn't be possible without the work of others. Here are the sources
     url={https://en.wikipedia.org/wiki/Mastodon_(software)},
     organization={Wikipedia},
 }
-
-@online{src,
-    title={Mastodon instances},
-    url={https://mnm.social/instances/},
-    organization={Wikipedia},
-}
 {% endbibtex %}

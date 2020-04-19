@@ -6,11 +6,33 @@ collection: videos
 quote: Simply Explained videos are all about taking complicated topics and explaining them in a simple and straightforward way.
 ---
 
-<p>Hi there! I'm starting my own YouTube channel with {{site.videos.size | divided_by: 5 | ceil | times: 5}}+ free, high-quality video tutorials. I would really appreciate your support, so subscribe now:</p>
+<!-- <p>Hi there! I'm starting my own YouTube channel with {{site.videos.size | divided_by: 5 | ceil | times: 5}}+ free, high-quality video tutorials. I would really appreciate your support, so subscribe now:</p> -->
 
-<div class="youtube-subscribe-btn text-center">
+<!-- <div class="youtube-subscribe-btn text-center">
     <script src="https://apis.google.com/js/platform.js"></script>
     <div class="g-ytsubscribe" data-channelid="UCnxrdFPXJMeHru_b4Q_vTPQ" data-layout="full" data-count="default"></div>
+</div> -->
+
+<!-- <hr> -->
+
+<!-- <h1>Latest videos</h1> -->
+<!-- <br> -->
+
+{% assign latestVideos = site.videos | sort: 'uploadDate' | reverse %}
+
+<div class="row latest-videos">
+    {% for vid in latestVideos limit: 6 %}
+        <div class="col-md-4 col-sm-6 col-xs-1 {% if forloop.index > 3 %}d-none d-sm-block{% endif %}">
+            <div class="card">
+                <a href="{{vid.url}}">
+                    <img class="thumb" src="https://i.ytimg.com/vi/{{vid.videoId}}/mqdefault.jpg">
+                    <div class="content">
+                        {{ vid.title | truncate:100 }}
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
 </div>
 
 <hr>
@@ -21,7 +43,7 @@ quote: Simply Explained videos are all about taking complicated topics and expla
 
     {% assign vidsInSerie = site.videos | where_exp:'vid','vid.series == serie.title' | sort: 'order' %}
 
-    <h1 class="no-margin">{{serie.title}}</h1>
+    <h2 class="no-margin">{{serie.title}}</h2>
     <div class="video-details">
 
         <div class="next-to-each-other">

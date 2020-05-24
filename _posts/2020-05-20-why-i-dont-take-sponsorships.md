@@ -2,7 +2,7 @@
 layout: post
 title: "Why I don't take sponsorships"
 quote: 
-tags: [Simply Explained]
+tags: [Simply Explained, YouTube channel]
 ---
 
 Last year I made that video in response to a sponsorship offer that I got from various VPN providers. They all told me the same thing: our service is the best way to protect your privacy, and we were hoping you could convey this message in one of your videos.

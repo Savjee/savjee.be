@@ -168,4 +168,15 @@
     .videoNavigation{
         background-color: $headerBackgroundDarkMode;
     }
+
+    .latest-videos{
+        .card {
+            background-color: #323232;
+            color: #fff;
+
+            a{
+                color: #fff;
+            }
+        }
+    }
 }

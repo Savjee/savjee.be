@@ -2,7 +2,7 @@
 layout: post
 title: Static website hosting&#58; who's fastest? AWS, Google, Firebase, Netlify or GitHub?
 quote:
-tags: [AWS]
+tags: [AWS, static-webhosting-benchmark, static-webhosting]
 ---
 
 I've been hosting this website on AWS since 2012 and a lot has changed in the cloud business. So I was wondering if AWS Cloudfront is still the best place to host my static website. What about Google Cloud Storage, Firebase Hosting, Netlify or GitHub Pages?  How do they stack up?
@@ -10,6 +10,8 @@ I've been hosting this website on AWS since 2012 and a lot has changed in the cl
 Well let's find out!
 
 <!--more-->
+
+This blog post is about a benchmark I did in 2017. [I repeated this in 2020 with more tests & more providers]({% link _posts/2020-05-28-benchmarking-static-website-hosting-providers.md %}).
 
 # What I tested
 I started by creating an account on a few public clouds that allow you to host static websites. Static websites are built using only HTML, CSS and Javascript so basic storage is sufficient. I ended up creating an account on these services:

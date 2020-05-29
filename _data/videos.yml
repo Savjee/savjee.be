@@ -3,6 +3,10 @@ series:
     playlistId: PLzvRQMJ9HDiSbvXWQ7OdgVccdr7Wni5Qw
     description: Simply Explained is all about taking a complex subject and explaining it in plain English.
 
+  - title: "Programming ESP32 with Arduino"
+    playlistId: PLzvRQMJ9HDiQ3OIuBWCEW6yE0S0LUWhGU
+    descripion: TODO
+
   - title: "Building a blockchain in Javascript"
     playlistId: PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4
     description: Want to understand how blockchains and cryptocurrencies work under the hood? Just build a simple version yourself with Javascript!

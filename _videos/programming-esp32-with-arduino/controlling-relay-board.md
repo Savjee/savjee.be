@@ -3,8 +3,9 @@ layout: video
 collection: videos
 title: "Controlling a Relay Board"
 videoId: zIHPogas1cU
-order: 12
+order: 11
 series: Programming ESP32 with Arduino
 uploadDate: 2020-05-22
+not_featureable: true
 ---
 

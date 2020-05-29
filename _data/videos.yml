@@ -5,7 +5,7 @@ series:
 
   - title: "Programming ESP32 with Arduino"
     playlistId: PLzvRQMJ9HDiQ3OIuBWCEW6yE0S0LUWhGU
-    descripion: TODO
+    description: Start using the ESP32 microcontroller to build your own IoT projects! This series will guide you through how to program the ESP32, how to connect to WiFi and how to interface with various sensors and peripherals.
 
   - title: "Building a blockchain in Javascript"
     playlistId: PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4

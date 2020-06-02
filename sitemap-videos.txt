@@ -1,0 +1,11 @@
+---
+layout: null
+---
+{% comment %}
+    WARNING: DON'T CHANGE THE FORMATTING 
+
+    This was done so there is exactly 1 URL per line. Adding
+    more linebreaks will result in a file with empty lines.
+{% endcomment %}
+{% for post in site.videos %}https://www.savjee.be{{ post.url }}
+{% endfor %}

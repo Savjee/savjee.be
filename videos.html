@@ -18,7 +18,7 @@ quote: Simply Explained videos are all about taking complicated topics and expla
 <!-- <h1>Latest videos</h1> -->
 <!-- <br> -->
 
-{% assign latestVideos = site.videos | sort: 'uploadDate' | where_exp:"item", "item.not_featureable == nil" | reverse %}
+{% assign latestVideos = site.videos | sort: 'uploadDate' | where_exp:"item", "item.not_featureable == nil" | where_exp:"item", "item.hide != true" | reverse %}
 
 <div class="row latest-videos">
     {% for vid in latestVideos limit: 6 %}

@@ -1,7 +1,7 @@
 ---
 layout: video
 collection: videos
-title: "Software/Hardware used in F1"
+title: "Software & Hardware Used in Formula 1"
 videoId: QuDxbjfxFfc
 order: 32
 series: Simply explained

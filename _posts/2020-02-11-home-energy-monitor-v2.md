@@ -273,6 +273,26 @@ In terms of next steps, I only have three:
 
 So stay tuned for an update ;) 
 
+## A note on calibration
+The SCT013 sensors aren't very accurate with low current. You might see "idle" readings of a couple of watts even though no current is flowing through the wire.
+
+According to Jm Casler, this is caused by 
+
+* The SCT013 is built for price, not for quality
+* The cable's shielding can induce noise if it's shorted with the signal cable
+* A filter capacitor is needed (preferably a ceramic one)
+
+You can read his full (detailed) analysis here: [https://www.casler.org/wordpress/low-current-measurement-performance-of-the-sct013/](https://www.casler.org/wordpress/low-current-measurement-performance-of-the-sct013/).
+
+Additionally, he shared the formula that he uses to calculate the calibration value for emonlib:
+
+```
+Calibration number = Number of turns of CT Clamp / Burden Resistor
+```
+
+So for a CT clamp with 2000 turns and a 68-ohm burden, that gives a calibration of 29.4. 
+
+Thanks, man!
 
 ## Source code
 All of the source code for this project is available [on GitHub](https://github.com/Savjee/home-energy-monitor). That includes the ESP32 firmware, the AWS Lambda functions (and Serverless configuration file) as well as the Fusion360 design files.

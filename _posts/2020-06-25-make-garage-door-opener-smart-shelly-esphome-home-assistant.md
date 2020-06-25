@@ -80,9 +80,9 @@ Connecting the Shelly to your garage door opener and the contact sensor is relat
 
 > Please be careful when wiring this all up. Disconnect your garage door opener from mains, so you don't get hurt! It would be a shame to get electrocuted before being able to test it ;)
 
-When using 110V or 230V, the wiring is pretty straightforward. Connect the phase to `L` and neutral to `N`. The contact sensor has to be connected to the `SW` input and to the neutral line `N`. 
+When using 110V or 230V, the wiring is pretty straightforward. Connect the phase to `L` and neutral to `N`.
 
-Don't connect the contact sensor to the live wire because they aren't rated for high voltages!
+> Warning: the Shelly puts main voltage on the `SW` input and these contact switches aren't rated for such high voltages. If you're using 110-230V, use the GPIO3 and Ground pins instead. Thanks [photinus on Reddit](https://www.reddit.com/r/homeassistant/comments/hfox2e/make_your_garage_door_opener_smart_shelly_1/fvz5m7z/) for pointing this out!
 
 ![Connect Shelly to Garage Door with AC power](/uploads/2020-06-smart-garage-door-shelly-home-assistant/shelly-schematic-ac.png)
 *Connect Shelly to AC power. Be careful not to put 110-230V on the contact sensor! Only use the neutral line.*

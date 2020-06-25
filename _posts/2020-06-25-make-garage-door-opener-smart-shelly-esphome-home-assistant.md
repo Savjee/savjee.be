@@ -401,6 +401,11 @@ When the user clicks on "Open garage" an event is created in Home Assistant. Thi
       entity_id: cover.garage_door
 ```
 
+This is what it looks like on my phone:
+
+![Actionable notification on iOS](/uploads/2020-06-smart-garage-door-shelly-home-assistant/actionable-notification.png)
+*Actionable notification on iOS*
+
 ## Conclusion & next steps
 I'm super happy with how this turned out. Our "smart" garage door has been very reliable, so much so that I don't even bother carrying the remote! It also gives me peace of mind being able to check the state of the garage easily and knowing that it's tied into the security system.
 

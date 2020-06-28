@@ -74,18 +74,20 @@ I then attached the sensor to the garage door pulley (black plastic parts in the
 ## Wiring
 Connecting the Shelly to your garage door opener and the contact sensor is relatively easy:
 
-* Power the Shelly with either 110-230V AC or 24-60V DC.
+* Power the Shelly with 24-60V DC.
 * Connect the contact sensor to `SW` and ground of the Shelly.
 * Connect your garage door opener's switch contact to the input `I` and output `O` of the Shelly.
 
 > Please be careful when wiring this all up. Disconnect your garage door opener from mains, so you don't get hurt! It would be a shame to get electrocuted before being able to test it ;)
 
+{% comment %}
 When using 110V or 230V, the wiring is pretty straightforward. Connect the phase to `L` and neutral to `N`.
 
-> Warning: the Shelly puts main voltage on the `SW` input and these contact switches aren't rated for such high voltages. If you're using 110-230V, use the GPIO3 and Ground pins instead. Thanks [photinus on Reddit](https://www.reddit.com/r/homeassistant/comments/hfox2e/make_your_garage_door_opener_smart_shelly_1/fvz5m7z/) for pointing this out!
+> Warning: the Shelly puts main voltage on the `SW` input and these contact switches aren't rated for such high voltages. If you're using 110-230V, use the GPIO3 and Ground pins instead. Thanks, [photinus on Reddit](https://www.reddit.com/r/homeassistant/comments/hfox2e/make_your_garage_door_opener_smart_shelly_1/fvz5m7z/) for pointing this out!
 
 ![Connect Shelly to Garage Door with AC power](/uploads/2020-06-smart-garage-door-shelly-home-assistant/shelly-schematic-ac.png)
 *Connect Shelly to AC power. Be careful not to put 110-230V on the contact sensor! Only use the neutral line.*
+{% endcomment %}
 
 When you use DC power, Shelly's `L` becomes the negative wire, and the `N` becomes the positive one. This is exactly the opposite of AC wiring, so be sure you don't get them mixed up.
 
@@ -93,6 +95,8 @@ The contact sensor still has to be connected to `SW`, but the other end should n
 
 ![Connect Shelly to Garage Door with DC power](/uploads/2020-06-smart-garage-door-shelly-home-assistant/shelly-schematic-dc.png)
 *Connect Shelly to DC power. Watch out: L is now negative, while N is positive.*
+
+> Warning: you can run the Shelly on 110-230V, but not with this contact sensor. The Shelly puts main voltage on the `SW` input and the sensor isn't rated for that voltage! So please stick to DC or buy an appropriate contact switch.
 
 ## Custom firmware: ESPHome
 Next up: flashing a custom firmware to the Shelly. 

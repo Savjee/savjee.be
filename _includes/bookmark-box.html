@@ -1,0 +1,23 @@
+<div class="bookmarkbox">
+    <a href="{{include.url}}">
+        <div class="bookmark-contents">
+            {% unless include.imageLeft %}
+                <div class="text-container align-self-center">
+                    {{ include.title | truncate:100 }}
+                </div>
+            {% endunless %}
+            
+            {% if include.imageUrl %}
+                <div class="image-container">
+                    <img src="{{include.imageUrl}}" loading="lazy" />
+                </div>
+            {% endif %}
+
+            {% if include.imageLeft %}
+            <div class="align-self-center text-container">
+                {{ include.title | truncate:100 }}
+            </div>
+            {% endif %}
+        </div>
+    </a>
+</div>

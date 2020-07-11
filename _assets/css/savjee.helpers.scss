@@ -15,3 +15,14 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.fluid-image{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+	.hide-mobile {
+        display: none;
+    }
+}

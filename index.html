@@ -1,8 +1,79 @@
 ---
 layout: default
 title: Home
-quote: Taking complicated topics and explaining them in a simple and straightforward way. That's what Simply Explained is all about. My blog posts are in-depth and technical while my videos are simple & in plain English.
+wider: "true"
+quote: "Taking complicated topics and explaining them in a simple and straightforward way. That's what Simply Explained is all about. My blog posts are in-depth and technical while my videos are simple & in plain English."
 ---
+
+<div class="container home-box">
+	<div class="row">
+		<div class="col-md-5 text-center">
+			<img src="/assets/img/me.png" class="fluid-image me">
+		</div>
+		<div class="col-md-7 d-flex align-items-center">
+			<div>
+				<h1>Hey there, I'm Xavier.</h1>
+				<h3>I'm a full-stack developer & <a href="/videos">YouTuber</a>.</h3>
+				<p>I love taking complicated topics and explaining them in plain-English.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<hr>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h3 class="no-margin">Latest posts</h3>
+			{% for post in site.posts limit: 3 %}
+				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+					{% assign postThumb = post.upload_directory | append: "/thumb_timeline.jpg" %}
+					{% include 
+							bookmark-box.html 
+							url=post.url 
+							title=post.title 
+							imageUrl=postThumb 
+							imageLeft="true" 
+					%}
+				{% if forloop.index > 2 %}</div>{% endif %}
+			{% endfor %}
+
+			<p>
+				<a href="/posts.html">📝 More posts</a>
+			</p>
+		</div>
+
+		<div class="col-md-6">
+			<h3 class="no-margin">Latest videos</h3>
+
+			{% assign latestVideos = site.videos | sort: 'uploadDate' | where_exp:"item", "item.not_featureable == nil" | where_exp:"item", "item.hide != true" | reverse %}		
+
+			{% for vid in latestVideos limit: 3 %}
+				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+					{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.videoId | append: "/mqdefault.jpg" %}
+					{% include 
+						bookmark-box.html 
+						url=vid.url 
+						title=vid.title 
+						imageUrl=ytThumb 
+					%}
+				{% if forloop.index > 2 %}</div>{% endif %}
+			{% endfor %}
+
+			<p class="text-md-right">
+				<a href="/videos/">More videos 📹</a>
+			</p>
+	</div>
+</div>
+<hr>
+
+	</div>
+</div>
+
+
+<!-- 
+<hr>
 
 	{% if paginator.previous_page %}
 		<h1 class='content-subhead'>Page {{paginator.page}}</h1>
@@ -52,7 +123,7 @@ quote: Taking complicated topics and explaining them in a simple and straightfor
 	{% if paginator.next_page %}
 		<a href='/page{{paginator.next_page}}/'>Next page &rarr;</a>
 	{% endif %}
-</p>
+</p> -->
 
 <!-- *********** Structured data for Google *********** -->
 <script type="application/ld+json">

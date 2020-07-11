@@ -28,6 +28,10 @@ body {
     &.single{
         padding-top: 0;
     }
+
+    &.wider{
+        max-width: 960px;
+    }
 }
 
 pre, code {

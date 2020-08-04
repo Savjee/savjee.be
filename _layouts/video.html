@@ -10,7 +10,7 @@ fullwidth: "true"
     <div class="videobackdrop">
         <div class="container video">
             <div class="videowrapper">
-                <iframe src="https://www.youtube-nocookie.com/embed/{{page.videoId}}?list={{serieData.playlistId}}&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                {% include youtube-embed.html videoId=page.videoId %}
             </div>
         </div>
     </div>

@@ -410,6 +410,42 @@ This is what it looks like on my phone:
 ![Actionable notification on iOS](/uploads/2020-06-smart-garage-door-shelly-home-assistant/actionable-notification.png)
 *Actionable notification on iOS*
 
+## Automating lights
+
+Here's another conventient automation: when the garage door opens (and it's dark outside), turn on the lights. Then, 30 seconds after the garage was closed, turn them off again.
+
+Both these actions are automated with a single automation:
+
+```yaml
+- id: 79d7fa44-a2bc-4856-ba6d-f42a58fe6080
+  alias: '[💡] Garage light on when gate opens/closes'
+  trigger:
+    - platform: state
+      entity_id: cover.garage_door
+      from: closed
+      to: open
+      for:
+        seconds: 2
+    - platform: state
+      entity_id: cover.garage_door
+      from: open
+      to: closed
+      for:
+        seconds: 30 # Turn off, when garage is closed for 30 seconds
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: below_horizon
+  action:
+    - service_template: >-
+        {% raw %}{% if trigger.to_state.state == "open" %}light.turn_on{% endif %}
+        {% if trigger.to_state.state == "closed" %}light.turn_off{% endif %}{% endraw %}
+      entity_id: light.garage
+      data: {}
+```
+
+It's things like this that make me appreciate Home Assistant. No more walking to the light switch in the dark ;)
+
 ## Conclusion & next steps
 I'm super happy with how this turned out. Our "smart" garage door has been very reliable, so much so that I don't even bother carrying the remote! It also gives me peace of mind being able to check the state of the garage easily and knowing that it's tied into the security system.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Air Quality Sensor: Luftdaten + Home Assistant"
+title: "Building Air Quality Sensor: Luftdaten + Home Assistant"
 quote:
 tags: [Home Assistant, Smart Home, DIY]
 thumbnail: /uploads/2020-09-03-air-quality-luftdaten-home-assistant/poster-750.jpg

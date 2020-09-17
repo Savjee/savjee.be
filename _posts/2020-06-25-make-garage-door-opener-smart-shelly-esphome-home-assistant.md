@@ -2,7 +2,7 @@
 layout: post
 title: "Make Your Garage Door Opener Smart: Shelly 1, ESPHome and Home Assistant"
 quote:
-tags: [Home Assistant, Smart Home, DIY]
+tags: [Home Assistant, Smart Home, DIY, ESPHome]
 thumbnail: /uploads/2020-06-smart-garage-door-shelly-home-assistant/poster-750.jpg
 upload_directory: /uploads/2020-06-smart-garage-door-shelly-home-assistant
 ---

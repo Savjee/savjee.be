@@ -158,7 +158,12 @@ However, the default [thermostat card](https://www.home-assistant.io/lovelace/th
 
 I [reported this to the development team](https://github.com/home-assistant/frontend/issues/7036), so let's hope they'll add that capability! 
 
-In the meantime, I'm using a custom card called [simple-thermostat](https://github.com/nervetattoo/simple-thermostat):
+In the meantime, there are two possible alternatives:
+
+* Use a custom card, like [simple-thermostat](https://github.com/nervetattoo/simple-thermostat)
+* Import the value of your temperature sensor into ESPHome and then send it back to Home Assistant.
+
+The custom [simple-thermostat](https://github.com/nervetattoo/simple-thermostat) card looks like this:
 
 ![My simple-thermostat setup](/uploads/2020-09-tuya-ir-hub-daikin-ac-home-assistant-esphome/home-assistant-simple-thermostat-card.png)
 *My simple-thermostat setup*
@@ -174,13 +179,39 @@ step_size: 1
 hide:
   temperature: true
 sensors:
+    # Use my Aqara temperature sensor instead
   - entity: sensor.temperature_bureau
     name: Temperature
   - entity: sensor.humidity_bureau
     name: Humidity
 ```
 
-On my start page, I'm showing a [button-text-card](https://github.com/Savjee/button-text-card) to remind me that the AC is on. Clicking on it, redirects me to the climate control page.
+The second option involves [importing your temperature sensor from Home Assistant into ESPHome](https://esphome.io/components/sensor/homeassistant.html). Here's the ESPHome configuration for that:
+
+```yaml
+# Import the state of the Aqara sensor from Home Assistant into
+# ESPHome.
+sensor:
+  - platform: homeassistant
+    name: "Current temperature"
+    entity_id: sensor.temperature_bureau
+    id: temp
+    internal: true
+
+climate:
+  - platform: daikin
+    name: "Office AC"
+    receiver_id: rcvr
+    # Add a reference to the temperature sensor here
+    sensor: temp
+```
+
+Flashing this to your device will instantly make the default thermostat card behave as it should ;)
+
+## Button Text Card
+On my main Home Assistant page, I've created a dashboard with an overview of all active things in the house.
+
+I'm using a [button-text-card](https://github.com/Savjee/button-text-card) to remind me that the AC is on. Clicking on it, redirects me to the climate control page.
 
 ![Home Assistant button-text-card screenshot](/uploads/2020-09-tuya-ir-hub-daikin-ac-home-assistant-esphome/home-assistant-button-text-card.png)
 *Shameless plug. I developed button-text-card ;)*

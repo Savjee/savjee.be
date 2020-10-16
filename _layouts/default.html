@@ -11,10 +11,11 @@
     {% assign seo_description_tmp = page.quote | default: page.excerpt %}
     {% assign seo_description_tmp2 = seo_description_tmp | strip_html %}
     {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
-    {% assign seo_description = seo_description_tmp3 | escape %}
+    {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
+    {% assign seo_description = seo_description_tmp4 | escape %}
 
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
-    <meta name='description' content='{{ seo_description }}'/>
+    <meta name='description' content="{{ seo_description }}"/>
     <meta name='keywords' content='{{ page.keywords }}'/>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>

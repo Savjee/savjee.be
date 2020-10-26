@@ -221,4 +221,9 @@ footer {
     .related-posts{
         background-color: $headerBackgroundDarkMode;
     }
+
+    blockquote {
+        background: #333;
+        border-left: 10px solid #ccc;
+    }
 }

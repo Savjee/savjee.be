@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Home"
+---
+
+<div class="flex items-center my-4 pb-4 border-b">
+    <div class="mr-8">
+        <img src="https://savjee.be/assets/img/me.png" 
+                alt="Picture of me, thinking face" 
+                style="max-height: 340px;">
+    </div>
+
+    <div class="">
+        <h1>Hey there, I'm Xavier.</h1>
+        <h2 class="font-medium text-2xl text-gray-700">
+            I'm a full-stack developer & <a href="/">YouTuber</a>.
+        </h2>
+
+        <p class="mt-8">
+            I love taking complicated topics and explaining them in plain-English.
+        </p>
+    </div>
+</div>
+
+<div>
+    Posts
+
+    <ul>
+        {% for post in collections.posts %}
+            <li>
+                <a href="{{post.url}}">{{ post.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

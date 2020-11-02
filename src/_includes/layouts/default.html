@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" class="text-gray-900 antialiased leading-tight">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Savjee.be</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+</head>
+<body class="dark:bg-black dark:text-gray-100">
+    {% include components/navbar.html %}
+
+    <div class="md:max-w-3xl mx-auto">
+        {{ content }}
+    </div>
+
+    {% include components/footer.html %}
+
+</body>
+</html>

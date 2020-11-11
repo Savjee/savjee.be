@@ -2,10 +2,52 @@
 <html lang="en" class="text-gray-900 antialiased leading-tight">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
     <title>{{ title }} | Savjee.be</title>
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self';frame-src disqus.com c.disquscdn.com https://*.disquscdn.com www.google.com www.youtube.com www.youtube-nocookie.com accounts.google.com;img-src 'self' c.disquscdn.com referrer.disqus.com https://*.disquscdn.com www.google-analytics.com www.gstatic.com ssl.gstatic.com i.ytimg.com img.youtube.com i.imgur.com data:;script-src 'self' c.disquscdn.com disqus.com savjee.disqus.com https://*.disquscdn.com www.google.com www.google-analytics.com www.gstatic.com apis.google.com;style-src 'self' c.disquscdn.com https://*.disquscdn.com 'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs=';object-src 'none'; base-uri 'self';"> -->
+
+    {% assign seo_description_tmp = page.quote | default: page.excerpt %}
+    {% assign seo_description_tmp2 = seo_description_tmp | strip_html %}
+    {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
+    {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
+    {% assign seo_description = seo_description_tmp4 | escape %}
+
+    <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
+    <meta name='description' content="{{ seo_description }}"/>
+    <meta name='keywords' content='{{ page.data.tags }}'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
+
     <link rel="stylesheet" href="/style.css"/>
     <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d"/>
+
+    <meta name="twitter:site" content="@Savjee">
+    <meta name="twitter:creator" content="@Savjee">
+    <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
+    <meta name="twitter:title" content="{{page.title}}">
+    <meta name="twitter:description" content="{{ seo_description }}">
+
+    <meta property="og:title" content="{{page.title}}"/>
+    <meta property="og:site_name" content="Savjee.be"/>
+    <meta property="og:url" content="https://www.savjee.be{{page.url}}"/>
+    <meta property="og:description" content="{{ seo_description }}"/>
+    <meta property="og:type" content="article">
+    <meta property="fb:app_id" content="805673586165209"/>
+
+    <link rel="canonical" href="https://savjee.be{{ page.url | replace:'index.html',''}}">
+
+    {% if page.thumbnail %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:src" content="https://www.savjee.be{{page.upload_directory}}/thumb_twitter.jpg">
+        <meta property="og:image" content="https://www.savjee.be{{page.upload_directory}}/thumb_facebook.jpg"/>
+    {% else %}
+        <meta name="twitter:card" content="summary">
+    {% endif %}
 </head>
 <body class="dark:bg-black dark:text-gray-100">
     {% include components/navbar.html %}

@@ -34,6 +34,12 @@ module.exports = function (eleventyConfig) {
     }
 
     return content;
+  // Extract excerpt for each post containing the <!--more--> tag
+  // Used to construct SEO <meta> tags in <head>
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    // Optional, default is "---"
+    excerpt_separator: "<!--more-->"
   });
 
     return {

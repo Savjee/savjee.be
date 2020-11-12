@@ -1,0 +1,57 @@
+---
+layout: default
+title: Blog posts
+permalink: posts.html
+quote: Overview of blog posts on Savjee.be
+---
+
+
+{% for post in collections.posts  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+        <div class="container2">
+            <div class="page-header text-center">
+                <h1 class='text-center'>{{this_year}}</h1>
+            </div>
+            <ul class="timeline">
+
+    {% endif %}
+
+    <li class="timeline{% cycle '-panel', '-inverted' %}">
+        <div class="timeline-panel">
+            {% if post.data.thumbnail %}
+                <div class="timeline-heading">
+                    <a href='{{ post.url }}'>
+                        <img class="img-responsive" src="{{post.data.upload_directory}}/thumb_timeline.jpg" loading="lazy"/>
+                    </a>
+                </div>
+            {% endif %}
+
+            <div class="timeline-body">
+                <p><a href='{{ post.url }}'>{{ post.data.title }}</a></p>
+            </div>
+        </div>
+    </li>
+
+    {% if forloop.last %}
+        <li class="clearfix"></li>
+        </ul>
+        </div>
+    {% else %}
+        {% if this_year != next_year %}
+
+            <li class="clearfix"></li>
+            </ul>
+            </div>
+
+            <div class="container2">
+                <div class="page-header text-center">
+                    <h1 id="timeline" class='text-center'>{{next_year}}</h1>
+                </div>
+
+                <ul class="timeline">
+        {% endif %}
+    {% endif %}
+{% endfor %}

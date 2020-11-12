@@ -7,7 +7,7 @@ thumbnail: true
 upload_directory: /uploads/dynamic-heart
 ---
 
-A few months back I was contacted by a non-profit organisation for building an online donation system. They found me after reading a news article about [the meta search engine]({% post_url 2014-05-08-Building-metasearch-engine %}) that I developed. I happily accepted their request and met with the founder shortly afterwards. The idea was simple: set up a website where people can see what the organisation does and where they can donate. After donating a user should be "rewarded" with something.
+A few months back I was contacted by a non-profit organisation for building an online donation system. They found me after reading a news article about [the meta search engine]({% link collections.posts, '2014-05-08-Building-metasearch-engine' %}) that I developed. I happily accepted their request and met with the founder shortly afterwards. The idea was simple: set up a website where people can see what the organisation does and where they can donate. After donating a user should be "rewarded" with something.
 
 We end up building a "beating" heart surrounded by profile pictures of donators. After each donation, a user is "rewarded" with the possibility to include his picture in the heart. In this post I'll walk you through the process of building the dynamic heart.
 

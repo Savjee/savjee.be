@@ -7,7 +7,7 @@ upload_directory: awstats-s3
 tags: [AWS]
 ---
 
-A few weeks ago [I switched from Wordpress to Jekyll]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}). I also started using Amazon S3 to host my blog. I've been pretty happy with my new blog and the performance of S3. There's just one thing missing: access logs.
+A few weeks ago [I switched from Wordpress to Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}). I also started using Amazon S3 to host my blog. I've been pretty happy with my new blog and the performance of S3. There's just one thing missing: access logs.
 
 My previous hosting provider had [Webalizer](http://www.webalizer.org/) installed to analyze the Apache access logs. This is a good way to track bandwidth usage. Additionally I used it to track how often Google indexed my website. S3 has the ability to log accessed files, but no way to analyze them in an efficient way. So I started looking for a solution!
 

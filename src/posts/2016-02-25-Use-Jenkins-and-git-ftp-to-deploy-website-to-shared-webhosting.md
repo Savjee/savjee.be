@@ -18,7 +18,7 @@ Let's quickly go over what [Jenkins](https://jenkins-ci.org) is and why you shou
 Sounds sweet right? You can set it to automatically build, unit test and deploy websites after each git commit.
 
 # Deploy to shared webhost?
-I know what you're thinking: shared webhosting? Really? Why would I need to deploy to a shared webhosting if [I'm hosting my website on Amazon S3]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}) and if [I'm working with serverless applications]({% post_url 2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway %})?
+I know what you're thinking: shared webhosting? Really? Why would I need to deploy to a shared webhosting if [I'm hosting my website on Amazon S3]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}) and if [I'm working with serverless applications]({% link collections.posts, '2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway' %})?
 
 Well, I work as a volunteer for a non-profit and they don't have a big budget for the website. They chose to use shared webhosting because it’s very cheap and sufficient enough for their Laravel application. Sadly though, every time the websites needs an update, I have to use my FTP client, connect to the server and initialize a sync. Not really ideal. So let's automate that!
 

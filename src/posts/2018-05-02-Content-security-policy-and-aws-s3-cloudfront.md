@@ -9,7 +9,7 @@ About a week ago I found out that Troy Hunt had published a new course about mod
 
 <!--more-->
 
-The architecture of my website is pretty simple and [I've talked about it before]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}). It's a static website that is hosted on AWS S3 and uses CloudFront as a CDN to speed things up. While this is easy to set up, there are some limitations to it when it comes to setting custom HTTP headers.
+The architecture of my website is pretty simple and [I've talked about it before]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}). It's a static website that is hosted on AWS S3 and uses CloudFront as a CDN to speed things up. While this is easy to set up, there are some limitations to it when it comes to setting custom HTTP headers.
 
 ## Setting custom headers
 Before I can set custom HTTP headers, I need to learn how! With my current setup that's actually not trivial. CloudFront will take any headers that the origin has set and will forward them to the client. However, I can't set custom headers on my files in S3...

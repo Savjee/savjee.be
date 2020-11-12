@@ -38,7 +38,7 @@ Next stop: a place to store a dictionary. Amazon has multiple cloud database sol
 
 Low latency and high scalability? Sign me up! **DynamoDB** can handle extreme loads and is very suitable for non-relational datasets (such as a dictionary).
 
-The final part is a place for the front-end to live. The current anagram solver has a front-end that uses AJAX to get the results from the server. It's basically a static website and it so happens that [I already have experience with hosting static websites on Amazon S3]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}) and CloudFront. Using these services was a no-brainer!
+The final part is a place for the front-end to live. The current anagram solver has a front-end that uses AJAX to get the results from the server. It's basically a static website and it so happens that [I already have experience with hosting static websites on Amazon S3]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}) and CloudFront. Using these services was a no-brainer!
 
 So that's it! Replace the webserver with S3 and CloudFront, replace PHP with Lambda and replace MySQL with DynamoDB. How hard can it be? In the next sections I'll dive deeper into each transition but let’s first take a look at the pro’s and cons of this serverless approach.
 
@@ -177,7 +177,7 @@ Now that we have an API it's time to develop a front-end so that it’s easy for
   * Don't make the interface any more complicated than the existing situation
   * Make sure it's responsive
 
-After a couple of days he came back with a simple front-end implementation, built on top Bootstrap and jQuery. We went back and forth a couple of days to tweak the design and the behaviour. From there I continued: I uploaded the static front-end to [a S3 bucket and enabled static website hosting]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}).
+After a couple of days he came back with a simple front-end implementation, built on top Bootstrap and jQuery. We went back and forth a couple of days to tweak the design and the behaviour. From there I continued: I uploaded the static front-end to [a S3 bucket and enabled static website hosting]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}).
 
 ![](/uploads/anagram-aws/s3-hosting.png)
 *The anagram solver's files hosted in a S3 bucket*

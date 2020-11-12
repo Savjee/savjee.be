@@ -12,7 +12,7 @@ One day I was wondering: how much electricity is flowing through my apartment ri
 <!--more-->
 
 
-**Since this post I've made an improved version. [Read more about Home Energy Monitor V2 here.]({% post_url 2020-02-11-home-energy-monitor-v2 %})**
+**Since this post I've made an improved version. [Read more about Home Energy Monitor V2 here.]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})**
 
 
 ## Goal
@@ -430,7 +430,7 @@ Buying an existing sensor is certainly possible but I had way too much fun build
 
 What do you think about this project? Would you like to see more DIY projects? Let me know!
 
-[Also check out the improved Home Energy Monitor V2.]({% post_url 2020-02-11-home-energy-monitor-v2 %})
+[Also check out the improved Home Energy Monitor V2.]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})
 
 ## Downloads
 

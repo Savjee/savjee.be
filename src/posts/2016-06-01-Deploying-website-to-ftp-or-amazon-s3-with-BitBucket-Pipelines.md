@@ -7,7 +7,7 @@ tags: [AWS, CI/CD]
 
 Last week Atlassian announced a new feature for BitBucket called Pipelines. It’s a continuous integration service that is integrated into BitBucket and is powered by Docker. I immediately signed up for the closed beta and received my invite shortly afterwards, yay!
 
-I wondered if BitBucket Pipelines could replace [my Jenkins server]({% post_url 2016-02-25-Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting %}). I mostly use Jenkins to automate the deployment of websites to a FTP server and to Amazon S3. In this post I’ll show you how to configure BitBucket Pipelines to deploy your website to a FTP server or to Amazon S3 (with s3_website).
+I wondered if BitBucket Pipelines could replace [my Jenkins server]({% link collections.posts, '2016-02-25-Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting' %}). I mostly use Jenkins to automate the deployment of websites to a FTP server and to Amazon S3. In this post I’ll show you how to configure BitBucket Pipelines to deploy your website to a FTP server or to Amazon S3 (with s3_website).
 
 <!--more-->
 
@@ -35,7 +35,7 @@ After clicking the "create bitbucket-pipelines.yml" button, BitBucket will autom
 
 
 # Config file for FTP deployments
-To deploy a website to an FTP server, I use [git-ftp](https://github.com/git-ftp/git-ftp). It's a wonderful tool that allows you to upload only changed or removed files to an FTP server. [I have previously used this tool with Jenkins as well]({% post_url 2016-02-25-Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting %})!
+To deploy a website to an FTP server, I use [git-ftp](https://github.com/git-ftp/git-ftp). It's a wonderful tool that allows you to upload only changed or removed files to an FTP server. [I have previously used this tool with Jenkins as well]({% link collections.posts, '2016-02-25-Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting' %})!
 
 So I modified two parts of Pipelines configuration file. First of all, I choose to use the [debian-git](https://hub.docker.com/r/samueldebruyn/debian-git/) Docker image because it already has git installed and because I'm somewhat familiar with Debian. And secondly, I defined the steps that Pipelines should run through:
 

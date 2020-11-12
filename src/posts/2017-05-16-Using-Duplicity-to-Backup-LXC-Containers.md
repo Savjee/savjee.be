@@ -4,7 +4,7 @@ title: Using Duplicity to Backup LXC Containers
 quote:
 ---
 
-Last year I wrote [a blog post about how to use LXC containers on a VPS]({% post_url 2016-05-09-Getting-started-with-LXC-on-a-Scaleway-cloud-server %}). I've been running this setup for quite a while now and it has been great. However, my approach involved making full copies of my containers. Not very space or cost efficient!
+Last year I wrote [a blog post about how to use LXC containers on a VPS]({% link collections.posts, '2016-05-09-Getting-started-with-LXC-on-a-Scaleway-cloud-server' %}). I've been running this setup for quite a while now and it has been great. However, my approach involved making full copies of my containers. Not very space or cost efficient!
 
 So it was time to revisit my backup strategy: I started using Duplicity to take incremental and encrypted backups of my LXC containers. I also switched from Amazon S3 to BackBlaze B2 to further reduce my storage costs.
 
@@ -154,7 +154,7 @@ done
 unset PASSPHRASE
 {% endhighlight %}
 
-This shell script backs up each LXC container individually and stores these backups in my B2 account. It puts all backups of a container in it's own folder so I can easily find them. I run this backup script in a LXC container and mount the ``/var/lib/lxc`` directory of the host inside the container in read-only mode. That way I prevent the backup process from changing files in other containers. Check out [this blog post]({% post_url 2016-05-09-Getting-started-with-LXC-on-a-Scaleway-cloud-server %}) to know more about mounting host folders in containers.
+This shell script backs up each LXC container individually and stores these backups in my B2 account. It puts all backups of a container in it's own folder so I can easily find them. I run this backup script in a LXC container and mount the ``/var/lib/lxc`` directory of the host inside the container in read-only mode. That way I prevent the backup process from changing files in other containers. Check out [this blog post]({% link collections.posts, '2016-05-09-Getting-started-with-LXC-on-a-Scaleway-cloud-server' %}) to know more about mounting host folders in containers.
 
 After creating the script I configured cron to trigger it every day. This is what the backups of a single container looks like after a while:
 

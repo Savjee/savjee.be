@@ -30,7 +30,7 @@ module.exports = function (eleventyConfig) {
         throw "Filename is an invalid type - it must be a string!";
       }
 
-      const found = collection.find(p => p.template.parsed.base == filename);
+      const found = collection.find(p => p.template.parsed.base.replace('.md', '') == filename.replace('.md', ''));
       if (found === 0 || found === undefined) {
         throw `${filename} not found in specified collection.`;
       } else {

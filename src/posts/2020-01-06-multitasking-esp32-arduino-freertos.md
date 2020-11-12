@@ -79,7 +79,7 @@ void setup() {
 That's it! Want to blink another LED at a different interval? Just create another task and sit back while the scheduler takes care of running both of them.
 
 ## Creating a one-off task
-You can also create tasks that only run once. For example, [my energy monitor]({% post_url 2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib %}) creates a task to upload data to the cloud when it has enough readings.
+You can also create tasks that only run once. For example, [my energy monitor]({% link collections.posts, '2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib' %}) creates a task to upload data to the cloud when it has enough readings.
 
 One-off tasks don't need a never-ending for loop, instead it looks like this:
 

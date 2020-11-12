@@ -7,7 +7,7 @@ upload_directory: itunes-bittorrent-sync
 
 ---
 
-At home I have an iTunes library of almost 200 music albums totaling 17GB. I also have multiple computers that I constantly use. At school and on the go I use my MacBook Pro and at home I use my [Hackintosh]({% post_url 2012-12-28-building-a-hackintosh %}).
+At home I have an iTunes library of almost 200 music albums totaling 17GB. I also have multiple computers that I constantly use. At school and on the go I use my MacBook Pro and at home I use my [Hackintosh]({% link collections.posts, '2012-12-28-building-a-hackintosh' %}).
 
 The problem I now have is: How do I share my music collection between both machines and how do I keep them in sync?
 

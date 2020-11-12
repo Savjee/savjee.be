@@ -44,7 +44,7 @@ Initial setup of the headphones was pretty easy. Power them on by long pressing 
 ![](/uploads/review-ectechnology-sport-headphones/bluetooth-pairing.jpg)
 *Weird name for headphones!*
 
-After this little road block, I successfully paired them with my phone. It didn't require a passcode and started working immediately afterwards. Pretty much what you expect from bluetooth headphones! [Being an iOS user]({% post_url 2015-10-14-Switching-from-Android-to-iOS-what-I-love-and-hate-about-both-platforms %}) I also get the benefit of seeing the battery level of the headphones right on my phone. It's a nice touch, but sadly only available on iOS, not on Android or macOS (I've complained about this before). The headphones are not at fault for this, so I'm addressing this complaint to Google and Apple.
+After this little road block, I successfully paired them with my phone. It didn't require a passcode and started working immediately afterwards. Pretty much what you expect from bluetooth headphones! [Being an iOS user]({% link collections.posts, '2015-10-14-Switching-from-Android-to-iOS-what-I-love-and-hate-about-both-platforms' %}) I also get the benefit of seeing the battery level of the headphones right on my phone. It's a nice touch, but sadly only available on iOS, not on Android or macOS (I've complained about this before). The headphones are not at fault for this, so I'm addressing this complaint to Google and Apple.
 
 ![](/uploads/review-ectechnology-sport-headphones/bluetooth-batterylevel.jpg)
 *iOS users see the battery status*
@@ -59,7 +59,7 @@ The output of the headphones is muddy. The bass isn't as hard as the other bluet
 However, I found that this is only a problem when you are using the headphones indoor, while you are really focusing on the music. I went running them multiple times the past two weeks and I didn't notice the crappy sound while I was going for a run.
 
 # Running with them
-So the sound quality is a lacking, but the headphones make up for that by being comfortable to wear. As said, I've had a lot of trouble keeping my earphones in while running. The Apple EarPods, [the Qy7]({% post_url 2015-05-05-Review-qcy-qy7-bluetooth-earphones %}) and the previous pair of [EC-Technology headphones]({% post_url 2015-11-10-Review-EC-Technology-Bluetooth-Sports-Earphones %}) all tended to fall out of my ear during a long running session.
+So the sound quality is a lacking, but the headphones make up for that by being comfortable to wear. As said, I've had a lot of trouble keeping my earphones in while running. The Apple EarPods, [the Qy7]({% link collections.posts, '2015-05-05-Review-qcy-qy7-bluetooth-earphones' %}) and the previous pair of [EC-Technology headphones]({% link collections.posts, '2015-11-10-Review-EC-Technology-Bluetooth-Sports-Earphones' %}) all tended to fall out of my ear during a long running session.
 
 ![](/uploads/review-ectechnology-sport-headphones/headphones-in-ears.jpg)
 *The supports keep the headphones in my ears during runs*

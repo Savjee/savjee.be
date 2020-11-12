@@ -104,7 +104,7 @@ After successfully implementing my own Tix clock I wanted to use it as a screens
 
 Sadly I have no knowledge of how to write a screensaver, how to work with Xcode or how to program Objective-C. Luckily though I found [WebSaver on GitHub](https://github.com/tlrobinson/WebSaver) and within a few minutes I had a working Tix clock screensaver for OS X!
 
-Here's a picture of the screensaver running on my [Hackintosh]({% post_url 2012-12-28-building-a-hackintosh %}):
+Here's a picture of the screensaver running on my [Hackintosh]({% link collections.posts, '2012-12-28-building-a-hackintosh' %}):
 
 <img src='/uploads/tixclock/hackintosh-screensaver.jpg'>
 

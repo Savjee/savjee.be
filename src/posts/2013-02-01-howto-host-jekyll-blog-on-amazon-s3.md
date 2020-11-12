@@ -7,7 +7,7 @@ upload_directory: host-blog-s3
 tags: [AWS, Jekyll]
 ---
 
-A few weeks ago [I started using Jekyll]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}) for my blog and moved it to Amazon S3. I also [configured AWStats to analyze Amazon S3 access logs]({% post_url 2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs %}). Yet, I never explained how I moved to S3, how I automatically deploy my website and what effects S3 has on a website's performance.
+A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}) for my blog and moved it to Amazon S3. I also [configured AWStats to analyze Amazon S3 access logs]({% link '2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs' %}). Yet, I never explained how I moved to S3, how I automatically deploy my website and what effects S3 has on a website's performance.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ Before you can host a website on S3 you need to create a bucket.
 1. Login to the [AWS Management Console](https://console.aws.amazon.com/) and select S3
 2. Click "Create Bucket"
 3. The name of the bucket should be your domain name. In my case: www.savjee.be
-4. No need for logging, just click "Create". ([You could enable logging to keep a detailed access log]({% post_url 2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs %}))
+4. No need for logging, just click "Create". ([You could enable logging to keep a detailed access log]({% link collections.posts, '2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs' %}))
 
 ![Creating a new bucket](/uploads/host-blog-s3/create-bucket.png)
 

@@ -100,7 +100,7 @@ Still, they add a lot of bulk to your webpages. I compared these numbers with th
     </tr>
 </table>
 
-(My website uses Gzip compression to make sure pages are as small as possible. [Read more here]({% post_url 2014-03-07-Jekyll-to-S3-deploy-script-with-gzip %}).).
+(My website uses Gzip compression to make sure pages are as small as possible. [Read more here]({% link collections.posts, '2014-03-07-Jekyll-to-S3-deploy-script-with-gzip' %}).).
 
 If I would integrate a share button on my homepage, I would make my page 6 times heavier (going from 21.7KB to 168.7KB). And that's only the Facebook button! Let's say I want to add Twitter and Google+ as well.
 
@@ -214,7 +214,7 @@ Here's the HTML code that I use on my website for the social buttons:
 </div>
 {% endhighlight %}
 
-There are some Liquid tags in this piece of HTML code that are being filled in by Jekyll. [I previously wrote a blog post on static blogging with Jekyll]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}). By default URLEncoding is not available in the Liquid templating engine but you can add it using [this](https://gist.github.com/jamesan/919275) simple filter.
+There are some Liquid tags in this piece of HTML code that are being filled in by Jekyll. [I previously wrote a blog post on static blogging with Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}). By default URLEncoding is not available in the Liquid templating engine but you can add it using [this](https://gist.github.com/jamesan/919275) simple filter.
 
 My modified CSS code looks like this:
 

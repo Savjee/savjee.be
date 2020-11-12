@@ -6,7 +6,7 @@ upload_directory: dokuwiki-backup-s3
 tags: [AWS]
 ---
 
-I have a small RamNode VPS that [I use as a VPN server]({% post_url 2014-04-28-Running-OpenVPN-on-a-cheap-RamNode-VPS %}). I also host my personal wiki on there and use it to document interesting things that I would otherwise forget. The information in my wiki is pretty valuable to me. I therefore decided that I needed a way to automatically backup my wiki, just in case. 
+I have a small RamNode VPS that [I use as a VPN server]({% link collections.posts, '2014-04-28-Running-OpenVPN-on-a-cheap-RamNode-VPS' %}). I also host my personal wiki on there and use it to document interesting things that I would otherwise forget. The information in my wiki is pretty valuable to me. I therefore decided that I needed a way to automatically backup my wiki, just in case. 
 
 I'm a pretty big fan of Amazon S3 and what better place is there to backup your data? It's safe, secure and very cheap!
 

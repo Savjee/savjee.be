@@ -21,7 +21,7 @@ In the box we find the headphones, a tiny micro USB cable for charging, a super 
 
 # Design
 
-The headphones have a flashy, black and green design that I really like. They're rather big and sometimes remind me of professional in-ear monitors. Compared to the [Qy7 heapdhones]({% post_url 2015-05-05-Review-qcy-qy7-bluetooth-earphones %}) they're equally as big but a bit lighter, making them more comfortable to wear.
+The headphones have a flashy, black and green design that I really like. They're rather big and sometimes remind me of professional in-ear monitors. Compared to the [Qy7 heapdhones]({% link collections.posts, '2015-05-05-Review-qcy-qy7-bluetooth-earphones' %}) they're equally as big but a bit lighter, making them more comfortable to wear.
 
 After using them (almost) every day for the last two weeks I can say that they're very comfortable to wear. The included ear pieces are small enough to fit my ears and I can listen to them for hours at a time without having pain in my ears. Something I can't do with the Qy7 as they start to hurt my ears after few hours.
 
@@ -31,12 +31,12 @@ After using them (almost) every day for the last two weeks I can say that they'r
 # Pairing
 Pairing the headphones is pretty easy. Put them into pairing mode by holding down the power button until the LED starts flashing red and blue. Afterwards, go to your phone, tablet or PC and connect to the headphones. Done! No need for a PIN code or whatever. Easy!
 
-I've tested the headphones on OS X El Capitan and iOS 9. The pairing is painless and takes very little time. The headphones remember multiple devices. In my case I've used them with my Mac and with [my iPhone]({% post_url 2015-10-14-Switching-from-Android-to-iOS-what-I-love-and-hate-about-both-platforms %}). The headphones connect insanely quickly to devices it was previously paired to making it very fast to start listening to music!
+I've tested the headphones on OS X El Capitan and iOS 9. The pairing is painless and takes very little time. The headphones remember multiple devices. In my case I've used them with my Mac and with [my iPhone]({% link collections.posts, '2015-10-14-Switching-from-Android-to-iOS-what-I-love-and-hate-about-both-platforms' %}). The headphones connect insanely quickly to devices it was previously paired to making it very fast to start listening to music!
 
 # Sound quality
 I'm not a true audiophile but I do want my music to sound good. I have bought a lot of cheap headphones over the years and they usually have terrible sound quality. Before using these earphones I used Apple's EarPods (still one of my favorites) and the Qy7 wireless headpones. Both of these sound great!
 
-So how do these headphones compare to the QY7 wireless headphones? Very well! The bass is, just like with the Qy7, very loud and really impressive. [When reviewing the Qy7 I said]({% post_url 2015-05-05-Review-qcy-qy7-bluetooth-earphones %}) that the highs are sometimes difficult to hear. The EC-Technology headphones don't have this issue. Highs are clearly noticable. Overall the headphones are more balanced compared to the Qy7 headphones and almost match the superiority of Apple's EarPods!
+So how do these headphones compare to the QY7 wireless headphones? Very well! The bass is, just like with the Qy7, very loud and really impressive. [When reviewing the Qy7 I said]({% link collections.posts, '2015-05-05-Review-qcy-qy7-bluetooth-earphones' %}) that the highs are sometimes difficult to hear. The EC-Technology headphones don't have this issue. Highs are clearly noticable. Overall the headphones are more balanced compared to the Qy7 headphones and almost match the superiority of Apple's EarPods!
 
 Since these headphones are in-ear they isolate external noise very well. This is something I really love and something the EarPods don't offer. When I'm on the train I can hardly hear any noise around me and that's awesome!
 
@@ -53,7 +53,7 @@ You can also use the headphones to make phone calls. I haven't used this feature
 Is that a big deal? No. You buy bluetooth headphones to listen to music, not to make phone calls. The fact that it has a microphone is nice but won't be used often I believe.
 
 ![](/uploads/review-ectechnology-headphones/headphones.jpg)
-*The headphones on top of [my mini arcade machine]({% post_url 2015-03-02-Building-a-mini-arcade-machine %}).*
+*The headphones on top of [my mini arcade machine]({% link collections.posts, '2015-03-02-Building-a-mini-arcade-machine' %}).*
 
 # Battery life
 Yes, being wireless means having to charge them. The question is how long can these headphones perform with a single charge? EC-Technology claims a battery life of 6 hours while playing music and 175 hours of standby time. Being a $20 product I didn't expect these claims to actually be correct.

@@ -7,16 +7,16 @@ upload_directory: /uploads/2017-09-implementing-proof-of-work-javascript-blockch
 tags: [Blockchain]
 ---
 
-[In my previous blog post]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %}) we created a simple blockchain in Javascript to demonstrate how a blockchain works. However many people commented and said that the implementation wasn't complete and that they could still fool the system. They are correct! Our blockchain needs another mechanism to secure itself against attacks. So let's take a look at how we can do that!
+[In my previous blog post]({% link collections.posts, '2017-07-19-Writing-tiny-blockchain-in-JavaScript' %}) we created a simple blockchain in Javascript to demonstrate how a blockchain works. However many people commented and said that the implementation wasn't complete and that they could still fool the system. They are correct! Our blockchain needs another mechanism to secure itself against attacks. So let's take a look at how we can do that!
 
 <!--more-->
 
 This blog post is part of a whole series:
 
-* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
+* [Part 1: Implementing a basic blockchain]({% link collections.posts, '2017-07-19-Writing-tiny-blockchain-in-JavaScript' %})
 * **Part 2: Implementing proof-of-work**
-* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
-* [Part 4: Signing transactions]({% post_url 2018-10-27-Signing-transactions-blockchain-javascript %})
+* [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %})
+* [Part 4: Signing transactions]({% link collections.posts, '2018-10-27-Signing-transactions-blockchain-javascript' %})
 
 # The problem
 Right now we can create blocks and add them to our blockchain really quickly. And this creates 3 problems:
@@ -158,9 +158,9 @@ Just as before a quick warning: this is by no means a complete blockchain implem
 Also: mining blocks in Javascript is not really fast because it just uses a single thread.
 
 # Next up
-* [Part 1: Implementing a basic blockchain]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %})
+* [Part 1: Implementing a basic blockchain]({% link collections.posts, '2017-07-19-Writing-tiny-blockchain-in-JavaScript' %})
 * **Part 2: Implementing proof-of-work**
-* [Part 3: Transactions & mining rewards]({% post_url 2018-02-12-Transactions-and-mining-rewards %})
+* [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %})
 
 # Conclusion & source code
 Proof-of-work is essential for the security and integrity of blockchains. Without it, we couldn't trust it enough to store information it.

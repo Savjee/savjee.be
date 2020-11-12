@@ -7,7 +7,7 @@ upload_directory: jekyll-s3-deploy-gzip
 tags: [AWS, Jekyll]
 ---
 
-A little over a year ago [I moved away from Wordpress and started using Jekyll for this blog]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}). I also [started using Amazon S3 as a cheap but very reliable hosting provider]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}).
+A little over a year ago [I moved away from Wordpress and started using Jekyll for this blog]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}). I also [started using Amazon S3 as a cheap but very reliable hosting provider]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}).
 
 The past weeks I've looked into ways to speed up my blog even further without using a CDN. One technique that is used very frequently is [enabling gzip compression](https://developers.google.com/speed/docs/insights/EnableCompression). In this post I'll walk you through the steps I took to serve gzipped content from Amazon S3.
 
@@ -21,7 +21,7 @@ Let's start with the why: "Why would you want to serve a gzipped copy of your we
 
 Gzip is very effective in compressing HTML and CSS files since most text is repeated multiple times. Codes like ``<div>`` and ``<p>`` are used very frequently throughout HTML pages and a lot of whitespace can be compressed as well.
 
-The first question I asked myself was: "How much smaller is gzip going to make my webpages?". I took an uncompressed version of my [Hackintosh blog post]({% post_url 2012-12-28-building-a-hackintosh %}) and compared it to the compressed version. The uncompressed page was 10217 bytes long while the compressed version was just 4538 bytes long. That's a **44% reduction** for a pretty small page!
+The first question I asked myself was: "How much smaller is gzip going to make my webpages?". I took an uncompressed version of my [Hackintosh blog post]({% link collections.posts, '2012-12-28-building-a-hackintosh' %}) and compared it to the compressed version. The uncompressed page was 10217 bytes long while the compressed version was just 4538 bytes long. That's a **44% reduction** for a pretty small page!
 
 # One way road
 Serving gzipped content from S3 is a one way road. It's all or nothing. Once enabled, all your visitors **have to support** gzip compression.

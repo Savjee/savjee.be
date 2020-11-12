@@ -13,7 +13,7 @@ Still, though, there is room for improvement. It's time to look back, evaluate &
 
 <!--more-->
 
-[Read more about Energy Monitor v1 here.]({% post_url 2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib %})
+[Read more about Energy Monitor v1 here.]({% link collections.posts, '2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib.md' %})
 
 ---
 
@@ -79,7 +79,7 @@ And here's how it looks with the ESP32 fitted onto the pin headers:
 ## Improved stability: Arduino + FreeRTOS!
 After improving the wiring, I started improving the software. The main issue with V1 was that it couldn't reconnect to the WiFi if it lost the connection. And because I'm using an unstable ISP-provided router, that happened quite often.
 
-To fix this, I decided to use FreeRTOS, a system that allows you to create many tasks and let the scheduler worry about running them. I blogged about this before: [Multitasking on ESP32 with Arduino and FreeRTOS]({% post_url 2020-01-06-multitasking-esp32-arduino-freertos %})
+To fix this, I decided to use FreeRTOS, a system that allows you to create many tasks and let the scheduler worry about running them. I blogged about this before: [Multitasking on ESP32 with Arduino and FreeRTOS]({% link collections.posts, '2020-01-06-multitasking-esp32-arduino-freertos' %})
 
 To solve my WiFi problem, I created a task that checks the connection every 10 seconds. WiFi still connected? Great, the task suspends itself for 10 seconds and then runs again. If it's disconnected, it will try to reconnect. Simple:
 
@@ -216,7 +216,7 @@ In a nutshell:
 
 
 ## Integrating with Home Assistant
-I've been a huge fan of [Home Assistant](https://www.home-assistant.io/), ever since a colleague of mine introduced me to it. I have it running [on a Raspberry Pi that is booting from an external SSD]({% post_url 2019-12-03-home-assistant-boot-pi-from-usb-ssd %}).
+I've been a huge fan of [Home Assistant](https://www.home-assistant.io/), ever since a colleague of mine introduced me to it. I have it running [on a Raspberry Pi that is booting from an external SSD]({% link collections.posts, '2019-12-03-home-assistant-boot-pi-from-usb-ssd' %}).
 
 Naturally, I wanted my energy consumption to show up there as well. So that means the ESP32 has to connect to two services: AWS (to archive all my readings) and Home Assistant.
 

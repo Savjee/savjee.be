@@ -7,7 +7,7 @@ tags: [AWS]
 
 I've been wanting to add HTTPS support to my website for quite some time and never got around it. Enabling SSL has several benefits such as increased privacy and a slight boost in search ranking. I know that my blog doesn't really benefit from the increase of privacy, but I wanted to enable it anyway.
 
-This blog [is powered by the static website generator Jekyll]({% post_url 2013-01-14-moving-from-Wordpress-to-Jekyll %}), [stored on Amazon S3]({% post_url 2013-02-01-howto-host-jekyll-blog-on-amazon-s3 %}) and served through CloudFront. Since 2014 it is possible to serve your own SSL certificate through CloudFront by using SNI or Server Name Indication. Let's take a look at how you can upload your own SSL certificate to the service.
+This blog [is powered by the static website generator Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}), [stored on Amazon S3]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}) and served through CloudFront. Since 2014 it is possible to serve your own SSL certificate through CloudFront by using SNI or Server Name Indication. Let's take a look at how you can upload your own SSL certificate to the service.
 
 <!--more-->
 

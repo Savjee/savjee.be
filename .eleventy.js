@@ -13,6 +13,44 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob('src/posts/*.md');
   });
 
+  // Define a post_url Liquid tag for cross referencing
+  // Original creator: https://rusingh.com/articles/2020/04/24/implement-jekyll-post-url-tag-11ty-shortcode/
+  // Adapted by me to work with filename instead of slug.
+  const linkHandler = function(collection, filename){
+    // console.log("hi: ", collection[0].template.parsed.base);
+    // return "";
+    try {
+      if (collection.length < 1) {
+        throw "Collection appears to be empty";
+      }
+      if (!Array.isArray(collection)) {
+        throw "Collection is an invalid type - it must be an array!";
+      }
+      if (typeof filename !== "string") {
+        throw "Filename is an invalid type - it must be a string!";
+      }
+
+      const found = collection.find(p => p.template.parsed.base == filename);
+      if (found === 0 || found === undefined) {
+        throw `${filename} not found in specified collection.`;
+      } else {
+        return found.url;
+      }
+    } catch (e) {
+      console.error(
+        `An error occured while searching for the url to ${filename}. Details:`,
+        e
+      );
+    }
+  }
+
+  // I should deprecate this, because Eleventy allows to link to all collection types
+  // not just posts.
+  eleventyConfig.addShortcode("post_url", linkHandler);
+
+  // This should be used instead of post_url:
+  eleventyConfig.addShortcode("link", linkHandler);
+
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addWatchTarget("./_tmp/style.css");

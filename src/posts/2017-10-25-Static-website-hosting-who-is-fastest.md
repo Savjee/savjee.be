@@ -11,7 +11,7 @@ Well let's find out!
 
 <!--more-->
 
-This blog post is about a benchmark I did in 2017. [I repeated this in 2020 with more tests & more providers]({% link _posts/2020-05-28-benchmarking-static-website-hosting-providers.md %}).
+This blog post is about a benchmark I did in 2017. [I repeated this in 2020 with more tests & more providers]({% link collections.posts, '2020-05-28-benchmarking-static-website-hosting-providers.md' %}).
 
 # What I tested
 I started by creating an account on a few public clouds that allow you to host static websites. Static websites are built using only HTML, CSS and Javascript so basic storage is sufficient. I ended up creating an account on these services:

@@ -13,7 +13,7 @@ In other words: what is the fastest static website hosting provider in 2020? Wel
 
 <!--more-->
 
-I did [a similar test in 2017]({% link _posts/2017-10-25-Static-website-hosting-who-is-fastest.md %}), so it will be curious to see if the hosting providers have been improving.
+I did [a similar test in 2017]({% link collections.posts, '2017-10-25-Static-website-hosting-who-is-fastest.md' %}), so it will be curious to see if the hosting providers have been improving.
 
 ## Test setup
 Just like in 2017, I created a simple webpage that I could host on many services. I opted to use my own homepage, including all the images, CSS, and JS files. I then uploaded these files to the following hosting providers:

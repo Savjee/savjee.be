@@ -1,4 +1,4 @@
-const htmlmin = require("html-minifier");
+// const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
@@ -59,21 +59,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "./_tmp": "assets/css" });
   // eleventyConfig.addPassthroughCopy({ "./_tmp/timeline.css": "./assets/timeline.css" });
 
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (
-      process.env.ELEVENTY_PRODUCTION &&
-      outputPath &&
-      outputPath.endsWith(".html")
-    ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   if (
+  //     process.env.ELEVENTY_PRODUCTION &&
+  //     outputPath &&
+  //     outputPath.endsWith(".html")
+  //   ) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true,
+  //     });
+  //     return minified;
+  //   }
 
-    return content;
+  //   return content;
+  // });
+
   // Extract excerpt for each post containing the <!--more--> tag
   // Used to construct SEO <meta> tags in <head>
   eleventyConfig.setFrontMatterParsingOptions({

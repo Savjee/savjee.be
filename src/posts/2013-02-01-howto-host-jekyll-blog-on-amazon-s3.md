@@ -7,7 +7,7 @@ upload_directory: host-blog-s3
 tags: [AWS, Jekyll]
 ---
 
-A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}) for my blog and moved it to Amazon S3. I also [configured AWStats to analyze Amazon S3 access logs]({% link '2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs' %}). Yet, I never explained how I moved to S3, how I automatically deploy my website and what effects S3 has on a website's performance.
+A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}) for my blog and moved it to Amazon S3. I also [configured AWStats to analyze Amazon S3 access logs]({% link collections.posts, '2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs' %}). Yet, I never explained how I moved to S3, how I automatically deploy my website and what effects S3 has on a website's performance.
 
 <!--more-->
 

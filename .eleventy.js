@@ -54,8 +54,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.addWatchTarget("./_tmp/style.css");
+  eleventyConfig.addWatchTarget("./_tmp/timeline.css");
 
-  eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
+  eleventyConfig.addPassthroughCopy({ "./_tmp": "assets/css" });
+  // eleventyConfig.addPassthroughCopy({ "./_tmp/timeline.css": "./assets/timeline.css" });
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (

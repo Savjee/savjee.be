@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
+    "start": "eleventy --serve & postcss styles/*.css --dir _tmp/ --watch",
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
   },
   "devDependencies": {

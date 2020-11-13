@@ -1,0 +1,9 @@
+---
+layout: default
+title: Videos
+quote: Overview of blog posts on Savjee.be
+---
+
+{% for vid in collections.videos %}
+    <a href="{{vid.url}}">{{ vid.data.title }}</a>
+{% endfor %}

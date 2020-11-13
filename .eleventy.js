@@ -17,6 +17,13 @@ module.exports = function (eleventyConfig) {
                         });
   });
 
+  eleventyConfig.addCollection('videos', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('src/videos/**/*.md')
+                        // .sort(function(a, b) {
+                        //   return b.uploadDate - a.date;
+                        // });
+  });
+
   // Define a post_url Liquid tag for cross referencing
   // Original creator: https://rusingh.com/articles/2020/04/24/implement-jekyll-post-url-tag-11ty-shortcode/
   // Adapted by me to work with filename instead of slug.
@@ -54,6 +61,10 @@ module.exports = function (eleventyConfig) {
 
   // This should be used instead of post_url:
   eleventyConfig.addShortcode("link", linkHandler);
+
+  eleventyConfig.addPairedLiquidShortcode("bibtex", function(content, firstName, lastName) {
+    return "TODO";
+  });
 
   eleventyConfig.setUseGitIgnore(false);
 

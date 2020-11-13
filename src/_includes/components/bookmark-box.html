@@ -1,0 +1,24 @@
+<div class="bg-gray-100 dark:bg-gray-900 mt-4 mb-4 rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    <a href="{{url}}" class="no-underline text-gray-600">
+        <div class="flex max-w-xs sm:max-w-xs lg:max-w-lg rounded-lg shadow-lg pb-6 lg:pb-0">
+
+            {% if imageLeft == true %}
+                <div class="w-full lg:w-3/5">
+                    <img src="{{imageUrl}}" alt="image" class="h-full object-cover object-center w-full">
+                </div>
+            {% endif %}
+
+            <div class="w-full lg:w-3/5 p-6 flex flex-grow items-center">
+                <p class="text-gray-600 ">
+                    {{ title | truncate: 100 }}
+                </p>
+            </div>
+
+            {% if imageLeft != true %}
+                <div class="w-full lg:w-3/5">
+                    <img src="{{imageUrl}}" alt="image" class="h-full object-cover object-center w-full">
+                </div>
+            {% endif %}
+        </div>
+    </a>
+</div>

@@ -9,10 +9,21 @@ module.exports = {
     extend: {
       colors: {
         change: "black",
+        savjeeblack: {
+          '100': '#f5f5f5',
+          '200': '#eeeeee',
+          '300': '#e0e0e0',
+          '400': '#bdbdbd',
+          '500': '#9e9e9e',
+          '600': '#757575',
+          '700': '#616161',
+          '800': '#323232',
+          '900': '#212121',
+        },
       },
       screens: {
         dark: {'raw': '(prefers-color-scheme: dark)'},
-      }
+      },
     },
   },
   variants: {},

@@ -11,7 +11,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("page", "layouts/page.html");
   
   eleventyConfig.addCollection('posts', (collectionApi) => {
-    return collectionApi.getFilteredByGlob('src/posts/*.md');
+    return collectionApi.getFilteredByGlob('src/posts/**/*.md')
+                        .sort(function(a, b) {
+                          return b.date - a.date;
+                        });
   });
 
   // Define a post_url Liquid tag for cross referencing

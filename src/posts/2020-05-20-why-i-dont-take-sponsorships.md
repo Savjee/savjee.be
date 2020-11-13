@@ -11,7 +11,7 @@ So I decided to do just that. Minus the sponsorship part. Here's why.
 
 <!--more-->
 
-{% include youtube-embed.html videoId='SfFSxThtzhE' %}
+{% include youtube-embed.html, videoId:'SfFSxThtzhE' %}
 
 The reason is simple: I didn't feel comfortable taking money to recommend a service that will have access to your entire internet traffic. 
 

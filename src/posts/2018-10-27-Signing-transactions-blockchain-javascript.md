@@ -18,7 +18,7 @@ Missed the other parts? Read them here:
 * [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %}).
 * **Part 4: Signing transactions**
 
-{% include youtube-embed.html videoId='kWQ84S13-hw' %}
+{% include youtube-embed.html, videoId:'kWQ84S13-hw' %}
 
 ## Creating a key generator
 TO solve this problem we have to sign transactions. We do this with a public and private keypair. The public key will be used as our wallet's address and is freely shareable, while the private key will be used to sign transactions. This means we can only spend money in a wallet if we have the associated private key. The same system is used in Bitcoin, Euthereum and other cryptocurrencies.

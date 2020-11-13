@@ -8,7 +8,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("default", "layouts/default.html");
   eleventyConfig.addLayoutAlias("post", "layouts/default.html");
   eleventyConfig.addLayoutAlias("video", "layouts/default.html");
-
+  eleventyConfig.addLayoutAlias("page", "layouts/page.html");
+  
   eleventyConfig.addCollection('posts', (collectionApi) => {
     return collectionApi.getFilteredByGlob('src/posts/*.md');
   });

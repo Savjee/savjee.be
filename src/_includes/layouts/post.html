@@ -5,7 +5,7 @@ layout: default
 
 <article class='post'>
     <h1 class='post-title'>
-        <a href="{{ post.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">{{ title }}</a>
     </h1>
 
     <div class='post-description'>
@@ -19,6 +19,7 @@ layout: default
     </small>
 </p>
 
+{% comment %}
 {% include share-buttons.html %}
 
 {% if site.related_posts.size > 0 %}
@@ -34,3 +35,4 @@ layout: default
 {% endif %}
 
 {% include disqus-comments.html %}
+{% endcomment %}

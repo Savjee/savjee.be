@@ -36,3 +36,24 @@ layout: default
 
 {% include disqus-comments.html %}
 {% endcomment %}
+
+<!-- *********** Structured data for Google *********** -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ title | truncate: 110}}",
+    "author": {
+        "name": "Xavier Decuyper"
+    },
+    
+    {% if thumbnail %}
+        "image": [
+          "https://www.savjee.be{{upload_directory}}/thumb_master.jpg"
+        ],
+    {% endif %}
+
+    "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
+    "dateModified": "2015-02-05T09:20:00+08:00"
+}
+</script>

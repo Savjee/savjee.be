@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
 
   // Savjee
   eleventyConfig.addLayoutAlias("default", "layouts/default.html");
-  eleventyConfig.addLayoutAlias("post", "layouts/default.html");
+  eleventyConfig.addLayoutAlias("post", "layouts/post.html");
   eleventyConfig.addLayoutAlias("video", "layouts/default.html");
   eleventyConfig.addLayoutAlias("page", "layouts/page.html");
   

@@ -12,7 +12,7 @@ wider: true
                 style="max-height: 340px;">
     </div>
 
-    <div class="">
+    <div>
         <h1>Hey there, I'm Xavier.</h1>
         <h2 class="font-medium text-2xl text-gray-700">
             I'm a full-stack developer & <a href="/">YouTuber</a>.
@@ -24,14 +24,47 @@ wider: true
     </div>
 </div>
 
-<div>
-    Posts
 
-    <ul>
-        {% for post in collections.posts %}
-            <li>
-                <a href="{{post.url}}">{{ post.data.title }}</a>
-            </li>
+<div class="grid grid-cols-2 gap-4">
+    <div>
+		<h3>Latest posts</h3>
+
+        {% for post in collections.posts reversed limit:3 %}
+                {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+                    {% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+                    {% include 
+                            components/bookmark-box.html, 
+                            url: post.url,
+                            title: post.data.title,
+                            imageUrl: postThumb,
+                            imageLeft: true,
+                    %}
+                {% if forloop.index > 2 %}</div>{% endif %}
+            {% endfor %}
+
+        <p>
+            <a href="/posts.html" class="no-underline">📝 More posts</a>
+        </p>
+    </div>
+
+    <div>
+        <h3>Latest videos</h3>
+
+        {% for post in collections.posts reversed limit:3 %}
+            {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+                {% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+                {% include 
+                        components/bookmark-box.html, 
+                        url: post.url,
+                        title: post.data.title,
+                        imageUrl: postThumb,
+                        imageLeft: false,
+                %}
+            {% if forloop.index > 2 %}</div>{% endif %}
         {% endfor %}
-    </ul>
+
+        <p class="md:text-right">
+            <a href="/videos/" class="no-underline">More videos 📹</a>
+        </p>
+    </div>
 </div>

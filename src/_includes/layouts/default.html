@@ -53,9 +53,16 @@
 <body class="dark:bg-black dark:text-gray-100">
     {% include components/navbar.html %}
 
-    <div class="md:max-w-3xl mx-auto">
+
+    {% if wider == true %}
+        <div class="md:max-w-4xl mx-auto">
+    {% else %}
+        <div class="md:max-w-3xl mx-auto">
+    {% endif %}
+
         {{ content }}
     </div>
+
 
     {% include components/footer.html %}
 

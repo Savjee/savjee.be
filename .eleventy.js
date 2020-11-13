@@ -57,9 +57,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("./_tmp/style.css");
-  eleventyConfig.addWatchTarget("./_tmp/timeline.css");
+  eleventyConfig.addWatchTarget("./_tmp");
+  // eleventyConfig.addWatchTarget("./_tmp/timeline.css");
 
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/uploads");
   eleventyConfig.addPassthroughCopy({ "./_tmp": "assets/css" });
   // eleventyConfig.addPassthroughCopy({ "./_tmp/timeline.css": "./assets/timeline.css" });
 

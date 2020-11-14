@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
   // Savjee
   eleventyConfig.addLayoutAlias("default", "layouts/default.html");
   eleventyConfig.addLayoutAlias("post", "layouts/post.html");
-  eleventyConfig.addLayoutAlias("video", "layouts/default.html");
+  eleventyConfig.addLayoutAlias("video", "layouts/video.html");
   eleventyConfig.addLayoutAlias("page", "layouts/page.html");
   
   eleventyConfig.addCollection('posts', (collectionApi) => {

@@ -1,21 +1,24 @@
 ---
 layout: default
-fullwidth: "true"
+fullwidth: true
 ---
 
 
 <article class='post'>
+
+    {% comment %}
     {% assign serieData = site.data.videos.series[page.series] %}
+    {% endcomment %}
 
     <div class="videobackdrop">
         <div class="container video">
             <div class="videowrapper">
-                {% include youtube-embed.html videoId=page.videoId %}
+                {% include youtube-embed.html, videoId:videoId %}
             </div>
         </div>
     </div>
     
-
+    {% comment %}
     <div class="videoNavigation">
         <div class="container">
             {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}
@@ -49,10 +52,11 @@ fullwidth: "true"
             </div>
         </div>
     </div>
+    {% endcomment %}
 
     <div class="container">
         <h1 class='post-title'>
-            <a href="{{ post.url }}">{{ page.title }}</a>
+            <a href="{{ page.url }}">{{ title }}</a>
         </h1>
 
         <div class="post-description">
@@ -60,12 +64,16 @@ fullwidth: "true"
         </div>
         
         {% comment %}
-        {% include youtube-subscribebutton.html %}
+            {% include youtube-subscribebutton.html %}
         {% endcomment %}
 
         <hr>
         
-        {% include disqus-comments.html %}
+        
+        {% comment %}
+            {% include disqus-comments.html %}
+        {% endcomment %}
+
     </div>
 </article>
 
@@ -76,11 +84,11 @@ fullwidth: "true"
 	{
         "@context": "http://schema.org/",
         "@type": "VideoObject",
-        "name": "{{ page.title }}",
+        "name": "{{ title }}",
         "description": "{{ content | strip_html | truncatewords: 40 }}",
-        "thumbnailURL": "http://i.ytimg.com/vi/{{page.videoId}}/hqdefault.jpg",
-        "UploadDate": "{% if page.uploadDate %}{{page.uploadDate}}{% else %}2017-06-23{% endif %}",
-        "embedUrl": "https://www.youtube.com/embed/{{page.videoId}}"
+        "thumbnailURL": "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg",
+        "UploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+        "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
     }
 ]
 </script>

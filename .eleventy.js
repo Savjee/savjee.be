@@ -1,5 +1,7 @@
 // const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Cite = require('citation-js');
+const Autolinker = require('autolinker');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -62,8 +64,34 @@ module.exports = function (eleventyConfig) {
   // This should be used instead of post_url:
   eleventyConfig.addShortcode("link", linkHandler);
 
-  eleventyConfig.addPairedLiquidShortcode("bibtex", function(content, firstName, lastName) {
-    return "TODO";
+
+  eleventyConfig.addPairedLiquidShortcode("bibtex", async function(content, firstName, lastName) {
+    let bibtexCounter = 1;
+
+    // Parse bibtex string
+    const input = await Cite.inputAsync(content);
+
+    // Citation.js required unique IDs, so make sure they're unique.
+    // I've always used "src" as ID, showing my BibTex incompetence.
+    input.map(e => e.id = bibtexCounter++);
+
+    // Put in Cite object and get HTML out of it!
+    const data = new Cite(input);
+    const html = data.format('bibliography', {
+      format: 'html',
+      template: 'apa',
+      lang: 'en-US'
+    });
+
+    // Convert all links in the output HTML to actual <a> tags
+    return Autolinker.link(html, {
+      newWindow: true,
+      email: false,
+      phone: false,
+      stripPrefix: false,
+      stripTrailingSlash: false,
+      className: "no-underline",
+    });
   });
 
   eleventyConfig.setUseGitIgnore(false);

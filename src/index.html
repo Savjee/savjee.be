@@ -50,14 +50,15 @@ wider: true
     <div>
         <h3>Latest videos</h3>
 
-        {% for post in collections.posts reversed limit:3 %}
+        {% for vid in collections.videos reversed limit:3 %}
             {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-                {% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+				{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
+
                 {% include 
                         components/bookmark-box.html, 
-                        url: post.url,
-                        title: post.data.title,
-                        imageUrl: postThumb,
+                        url: vid.url,
+                        title: vid.data.title,
+                        imageUrl: ytThumb,
                         imageLeft: false,
                 %}
             {% if forloop.index > 2 %}</div>{% endif %}

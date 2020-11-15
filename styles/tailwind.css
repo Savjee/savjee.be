@@ -50,6 +50,25 @@ article .post-title a {
   } 
 }
 
+/** VIDEO **/
+.videowrapper{
+  @apply float-none;
+  @apply clear-both;
+  @apply w-full;
+  @apply relative;
+  @apply pt-0;
+  @apply h-0;  
+  padding-bottom: 56.25%;
+}
+
+.videowrapper iframe{
+  @apply absolute;
+  @apply top-0;
+  @apply left-0;
+  @apply w-full;
+  @apply h-full;
+}
+
 
 ul{
   @apply list-inside;

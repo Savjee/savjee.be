@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-size:18px;
+}
+
 h1, h2, h3{
   @apply font-bold;
 }
@@ -15,21 +19,50 @@ h2 {
 h3 {
   @apply text-2xl;
 }
-a {
+
+/** ARTICLE CONTENTS STYLE **/
+article a {
   @apply text-blue-600;
   @apply underline;
 }
+
+article a:hover{
+  @apply no-underline;
+  @apply text-blue-700;
+}
+
+article .post-title a {
+  @apply no-underline;
+  @apply text-gray-900;
+}
+
+@screen dark{
+  article a {
+    @apply text-blue-400;
+  }
+
+  article a:hover{
+    @apply text-blue-300;
+  }
+
+  article .post-title a{
+    @apply text-gray-100;
+  } 
+}
+
 
 ul{
   @apply list-inside;
   @apply list-disc;
   @apply p-4;
+  @apply pl-4;
 }
-
+ul li {
+  @apply list-disc;
+}
 article p {
   @apply my-4;
   @apply leading-7;
-  @apply text-lg;
 }
 
 article h1, article h2, article h3, article h4 {
@@ -47,3 +80,33 @@ article img + em {
     @apply block;
     @apply mx-8;
 }
+
+blockquote {
+  @apply bg-savjeeblack-100;
+  @apply p-4;
+  @apply border-l-8;
+  @apply border-savjeeblack-400;
+}
+
+@screen dark{
+  blockquote {
+      @apply bg-savjeeblack-800;
+      @apply border-savjeeblack-400;
+  }
+}
+
+pre, code {
+  @apply overflow-x-auto;
+  @apply break-normal;
+  @apply whitespace-pre;
+}
+
+pre, p code, li code {
+  @apply bg-savjeeblack-100;
+  @apply border;
+  @apply border-gray-300;
+  @apply py-1;
+  @apply px-2;
+  @apply text-sm;
+}
+

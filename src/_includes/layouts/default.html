@@ -56,12 +56,15 @@
 
     {% if wider == true %}
         <div class="md:max-w-4xl mx-auto">
+    {% else if fullwidth == true %}
+        <div>
     {% else %}
         <div class="md:max-w-3xl mx-auto">
     {% endif %}
 
-        {{ content }}
     </div>
+    
+    {{ content }}
 
 
     {% include components/footer.html %}

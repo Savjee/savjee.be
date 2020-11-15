@@ -10,7 +10,7 @@ fullwidth: true
     {% assign serieData = site.data.videos.series[page.series] %}
     {% endcomment %}
 
-    <div class="videobackdrop">
+    <div class="videobackdrop w-full bg-savjeeblack-900">
         <div class="container video">
             <div class="videowrapper">
                 {% include youtube-embed.html, videoId:videoId %}
@@ -54,7 +54,7 @@ fullwidth: true
     </div>
     {% endcomment %}
 
-    <div class="container">
+    <div class="md:max-w-3xl mx-auto my-4 pb-4">
         <h1 class='post-title'>
             <a href="{{ page.url }}">{{ title }}</a>
         </h1>

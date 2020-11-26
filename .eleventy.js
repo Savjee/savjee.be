@@ -30,8 +30,6 @@ module.exports = function (eleventyConfig) {
   // Original creator: https://rusingh.com/articles/2020/04/24/implement-jekyll-post-url-tag-11ty-shortcode/
   // Adapted by me to work with filename instead of slug.
   const linkHandler = function(collection, filename){
-    // console.log("hi: ", collection[0].template.parsed.base);
-    // return "";
     try {
       if (collection.length < 1) {
         throw "Collection appears to be empty";
@@ -51,7 +49,7 @@ module.exports = function (eleventyConfig) {
       }
     } catch (e) {
       console.error(
-        `An error occured while searching for the url to ${filename}. Details:`,
+        `An error occured while searching for the url to ${collection} ${filename}. Details:`,
         e
       );
     }
@@ -96,7 +94,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("./_tmp");
+  // eleventyConfig.addWatchTarget("./_tmp");
   // eleventyConfig.addWatchTarget("./_tmp/timeline.css");
 
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -132,7 +130,7 @@ module.exports = function (eleventyConfig) {
     return {
       dir: { input: 'src', output: 'dist', data: '_data' },
       // passthroughFileCopy: false,
-      // templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
+      // templateFormats: ['njk', 'md', 'css', 'html', 'yml', 'txt'],
       // htmlTemplateEngine: 'njk'
     }
 };

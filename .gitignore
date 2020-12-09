@@ -7,3 +7,4 @@ _scripts/tmp
 .jekyll-cache
 .DS_Store
 .sass-cache/
+node_modules

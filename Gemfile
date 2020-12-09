@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll', '3.8.6'
 gem 'jekyll-paginate'
 gem 'jekyll-assets'
+gem "sprockets", "~> 3.7"
 gem 'html-proofer'
 gem 'redcarpet'
 gem 's3_website'

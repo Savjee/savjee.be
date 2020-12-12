@@ -55,7 +55,7 @@ GEM
       yell (~> 2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.6.0)
+    jekyll (3.6.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -148,7 +148,7 @@ DEPENDENCIES
   citeproc-ruby
   csl-styles
   html-proofer
-  jekyll (= 3.6.0)
+  jekyll (= 3.6.3)
   jekyll-assets
   jekyll-extlinks
   jekyll-paginate

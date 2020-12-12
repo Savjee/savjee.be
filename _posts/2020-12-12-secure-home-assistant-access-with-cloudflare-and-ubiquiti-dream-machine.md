@@ -119,7 +119,7 @@ First, we'll define 3 groups in Unifi:
 
 To create a group in your Unifi controller, head over to Settings > Security > Internet Threat Management > Firewall > Create New Group.
 
-![Unifi: How to create a new IP/port group](/uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/unifi-firewall-rules-1)
+![Unifi: How to create a new IP/port group](/uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/unifi-firewall-rules-1.png)
 
 
 Let's start by creating a group containing all Cloudflare IP addresses. Luckily, [they publish a list](https://www.cloudflare.com/ips/) of used IP ranges. (Unfortunately, there's no way to keep this up-to-date automatically. So you might have to check back on this list in the future).

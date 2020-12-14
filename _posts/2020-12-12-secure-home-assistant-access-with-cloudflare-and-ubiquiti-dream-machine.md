@@ -203,7 +203,7 @@ So I'll block that:
 ![Cloudflare firewall rule to block traffic from outside Belgium](/uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/cloudflare-firewall-outside-belgium.png)
 *You can't allow the whole world into your home.*
 
-This rule is currently blocking about 10-50 requests from other countries:
+This rule is currently blocking about 10-50 requests a day from other countries:
 
 ![Cloudflare firewall logs](/uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/cloudflare-firewall-logs.png)
 *Nice try!*

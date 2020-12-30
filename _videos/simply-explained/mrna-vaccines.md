@@ -6,7 +6,6 @@ videoId: WOvvyqJ-vwo
 order: 39
 series: Simply explained
 uploadDate: 2020-12-30
-hide: true
 ---
 
 mRNA vaccines have to potential to end the COVID19 pandemic. How do they work? Are they safe? And how could they've been developed so quickly?

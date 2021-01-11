@@ -115,7 +115,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     rouge (2.2.1)
     s3_website (3.4.0)
       colored (= 1.2)

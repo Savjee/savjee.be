@@ -1,7 +1,7 @@
 ---
 layout: video
 collection: videos
-title: "mRNA Vaccines"
+title: "How mRNA Vaccines Work"
 videoId: WOvvyqJ-vwo
 order: 39
 series: Simply explained

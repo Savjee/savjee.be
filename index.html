@@ -73,60 +73,6 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 	</div>
 </div>
 
-
-<!-- 
-<hr>
-
-	{% if paginator.previous_page %}
-		<h1 class='content-subhead'>Page {{paginator.page}}</h1>
-	{% endif %}
-
-	{% for post in paginator.posts %}
-	<article class='post'>
-		<h1 class='post-title'>
-			<a href="{{ post.url }}">{{ post.title }}</a>
-		</h1>
-
-		<div class='post-description'>
-			{{ post.excerpt }}
-
-			<p><a href='{{ post.url }}'>Continue reading &rarr;</a></p>
-		</div>
-	</article>
-
-	<hr>
-
-	{% endfor %}
-
-{% if paginator.previous_page == nil %}
-	<h1 class='post-title'>Older posts</h1>
-	<div class='post-description'>
-		<ul class='older-posts'>
-			{% for post in site.posts limit:6 offset: 5 %}
-				<li><a href='{{post.url}}'>{{post.title}}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-{% endif %}
-
-<p class="text-center">
-	{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-			<a href='/'>&larr; Previous page</a>
-		{% else %}
-			<a href='/page{{paginator.previous_page}}/'>&larr; Previous page</a>
-		{% endif %}
-	{% endif %}
-
-	{% if paginator.next_page and paginator.previous_page %}
-		|
-	{% endif %}
-
-	{% if paginator.next_page %}
-		<a href='/page{{paginator.next_page}}/'>Next page &rarr;</a>
-	{% endif %}
-</p> -->
-
 <!-- *********** Structured data for Google *********** -->
 <script type="application/ld+json">
 [

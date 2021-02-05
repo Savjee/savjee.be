@@ -36,7 +36,7 @@ article .post-title a {
   @apply text-gray-900;
 }
 
-@screen dark{
+@media dark{
   article a {
     @apply text-blue-400;
   }
@@ -106,8 +106,7 @@ blockquote {
   @apply border-l-8;
   @apply border-savjeeblack-400;
 }
-
-@screen dark{
+@media dark{
   blockquote {
       @apply bg-savjeeblack-800;
       @apply border-savjeeblack-400;

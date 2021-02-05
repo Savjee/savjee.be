@@ -7,12 +7,12 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "autolinker": "^3.14.2",
-    "autoprefixer": "^8.6.5",
+    "autoprefixer": "^10.2.4",
     "citation-js": "^0.5.0-alpha.9",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.1.7",
+    "postcss": "^8.2.4",
     "postcss-clean": "^1.1.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.7.2"
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
   }
 }

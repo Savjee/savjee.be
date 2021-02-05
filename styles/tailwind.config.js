@@ -21,14 +21,9 @@ module.exports = {
           '900': '#212121',
         },
       },
-      screens: {
-        dark: {'raw': '(prefers-color-scheme: dark)'},
-      },
     },
   },
+  darkMode: "media",
   variants: {},
   plugins: [],
-  future: {
-    removeDeprecatedGapUtilities: true,
-  }
 };

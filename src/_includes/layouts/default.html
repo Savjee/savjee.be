@@ -16,7 +16,10 @@
 
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
     <meta name='description' content="{{ seo_description }}"/>
-    <meta name='keywords' content='{{ tags }}'/>
+
+    {% if tags %}
+    <meta name='keywords' content='{{ tags | join: ", " }}'/>
+    {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
     <link rel='icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>

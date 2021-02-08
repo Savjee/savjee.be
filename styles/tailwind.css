@@ -23,6 +23,9 @@ h3 {
 }
 
 /** ARTICLE CONTENTS STYLE **/
+article{
+  @apply break-words;
+}
 article a {
   @apply text-blue-600;
   @apply underline;

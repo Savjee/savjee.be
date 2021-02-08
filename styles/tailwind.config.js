@@ -7,6 +7,7 @@ module.exports = {
   },
   theme: {
     extend: {
+      padding: {"fluid-video": "56.25%" },
       colors: {
         change: "black",
         savjeeblack: {

@@ -146,6 +146,24 @@ module.exports = function (eleventyConfig) {
     excerpt_separator: "<!--more-->"
   });
 
+  //
+  // External links should be opened in a new tab and should
+  // not expose personal details
+  //
+  const mila = require("markdown-it-link-attributes");
+  const milaOptions = {
+    pattern: /^https?:/,
+    attrs: {
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }
+  };
+
+  const markdownLib = markdownIt({
+    html: true
+  }).use(mila, milaOptions);
+  eleventyConfig.setLibrary("md", markdownLib);
+
     return {
       dir: { input: 'src', output: 'dist', data: '_data' },
       // passthroughFileCopy: false,

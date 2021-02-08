@@ -4,3 +4,6 @@ _tmp/
 node_modules/
 package-lock.json
 dist/
+
+.jekyll-cache
+.sass-cache

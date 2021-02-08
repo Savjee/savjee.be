@@ -49,10 +49,23 @@ article .post-title a {
   article a:hover{
     @apply text-blue-300;
   }
+/* Citations */
+article .csl-bib-body{
+  @apply text-sm;
+}
+article .csl-bib-body a{
+  @apply underline;
+  @apply text-gray-900;
+}
 
-  article .post-title a{
+@media dark{
+  article .csl-bib-body a{
     @apply text-gray-100;
-  } 
+  }
+}
+
+article .csl-entry{
+  @apply pb-4;
 }
 
 /** VIDEO **/
@@ -132,4 +145,3 @@ pre, p code, li code {
   @apply px-2;
   @apply text-sm;
 }
-

@@ -11,15 +11,15 @@
     {% assign seo_description_tmp = page.quote | default: page.excerpt %}
     {% assign seo_description = seo_description_tmp | md | strip_html | truncate:350 | strip_newlines | escape %}
 
-    <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
-    <meta name='description' content="{{ seo_description }}"/>
+    <link rel="alternate" type="application/rss+xml" title="savjee.be Feed" href="https://www.savjee.be/atom.xml">
+    <meta name="description" content="{{ seo_description }}"/>
 
     {% if tags %}
-    <meta name='keywords' content='{{ tags | join: ", " }}'/>
+    <meta name="keywords" content="{{ tags | join: ", " }}"/>
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
-    <link rel='icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/assets/css/tailwind.css"/>
     <link rel="stylesheet" href="/assets/css/timeline.css"/>

@@ -2,6 +2,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Cite = require('citation-js');
 const Autolinker = require('autolinker');
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -11,6 +12,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.html");
   eleventyConfig.addLayoutAlias("video", "layouts/video.html");
   eleventyConfig.addLayoutAlias("page", "layouts/page.html");
+
+  eleventyConfig.addFilter("md", function (content = "") {
+    return markdownIt({ html: true }).render(content);
+  });
+
   
   eleventyConfig.addCollection('posts', (collectionApi) => {
     return collectionApi.getFilteredByGlob('src/posts/**/*.md')

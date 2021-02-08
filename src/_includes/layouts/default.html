@@ -9,10 +9,7 @@
     <meta http-equiv="Content-Security-Policy" content="font-src 'self';frame-src disqus.com c.disquscdn.com https://*.disquscdn.com www.google.com www.youtube.com www.youtube-nocookie.com accounts.google.com;img-src 'self' c.disquscdn.com referrer.disqus.com https://*.disquscdn.com www.google-analytics.com www.gstatic.com ssl.gstatic.com i.ytimg.com img.youtube.com i.imgur.com data:;script-src 'self' c.disquscdn.com disqus.com savjee.disqus.com https://*.disquscdn.com www.google.com www.google-analytics.com www.gstatic.com apis.google.com;style-src 'self' c.disquscdn.com https://*.disquscdn.com 'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs=';object-src 'none'; base-uri 'self';">
 
     {% assign seo_description_tmp = page.quote | default: page.excerpt %}
-    {% assign seo_description_tmp2 = seo_description_tmp | strip_html %}
-    {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
-    {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
-    {% assign seo_description = seo_description_tmp4 | escape %}
+    {% assign seo_description = seo_description_tmp | md | strip_html | truncate:350 | strip_newlines | escape %}
 
     <link rel='alternate' type='application/rss+xml' title='savjee.be Feed' href='https://www.savjee.be/atom.xml'>
     <meta name='description' content="{{ seo_description }}"/>

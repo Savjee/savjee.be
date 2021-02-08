@@ -1,9 +1,38 @@
 ---
 layout: page
 title: Videos
-quote: Overview of blog posts on Savjee.be
+quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
 ---
 
-{% for vid in collections.videos %}
-    <a href="{{vid.url}}">{{ vid.data.title }}</a>
+{% for serie in video_series %}
+    {% assign vidsInSerie = collections.videos | getVideosInSeries: serie.title %}
+
+    {% comment %}
+        Just to be sure, check that there are videos in the series.
+        If not, continue to the next series and don't render anything.
+    {% endcomment %}
+    {% if vidsInSerie.size == 0 %}
+        {% continue %}
+    {% endif %}
+
+    <article>
+        <header class="flex">
+            <div class="mr-4">
+                <a href="{{vidsInSerie[0].url}}">
+                    <!-- <img src="/assets/img/play-button.svg" class="playbtn"> -->
+                    <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg">
+                </a>
+            </div>
+            <div>
+                <h1 class="m-0">{{ serie.title }}</h1>
+                <p>{{ serie.description }}</p>
+            </div>
+        </header>
+
+        <ol class="list-decimal">
+            {% for vid in vidsInSerie reversed %}
+                <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
+            {% endfor %}
+        </ol>
+    </article>
 {% endfor %}

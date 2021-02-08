@@ -49,6 +49,8 @@ article .post-title a {
   article a:hover{
     @apply text-blue-300;
   }
+}
+
 /* Citations */
 article .csl-bib-body{
   @apply text-sm;

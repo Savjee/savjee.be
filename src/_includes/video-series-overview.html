@@ -1,0 +1,26 @@
+{% assign vidsInSerie = collections.videos | getVideosInSeries: serieTitle %}
+
+{% if vidsInSerie.size != 0 %}
+<article>
+    <header class="flex">
+        <div class="mr-4">
+            <a href="{{vidsInSerie[0].url}}">
+                <!-- <img src="/assets/img/play-button.svg" class="playbtn"> -->
+                <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg">
+            </a>
+        </div>
+        <div>
+            <h1 class="m-0">
+                <a href="/videos/{{vidsInSerie[0].data.series | slug }}">{{ serie.title }}</a>
+            </h1>
+            <p>{{ serie.description }}</p>
+        </div>
+    </header>
+
+    <ol class="list-decimal">
+        {% for vid in vidsInSerie %}
+            <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
+        {% endfor %}
+    </ol>
+</article>
+{% endif %}

@@ -1,0 +1,10 @@
+---
+layout: page
+pagination:
+    data: video_series
+    size: 1
+    alias: serie
+permalink: "videos/{{ serie.title | slug }}/"
+---
+
+{% include video-series-overview.html, serieTitle:serie.title %}

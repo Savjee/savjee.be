@@ -43,11 +43,11 @@ module.exports = function (eleventyConfig) {
                         });
   });
 
+  // Collection: videos
+  //  - Sorted by "order" field (DESC)
   eleventyConfig.addCollection('videos', (collectionApi) => {
     return collectionApi.getFilteredByGlob('src/videos/**/*.md')
-                        // .sort(function(a, b) {
-                        //   return b.uploadDate - a.date;
-                        // });
+                          .sort((a, b) => a.data.uploadDate - b.data.uploadDate);
   });
 
   // Define a post_url Liquid tag for cross referencing

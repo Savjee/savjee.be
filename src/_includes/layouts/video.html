@@ -4,7 +4,7 @@ fullwidth: true
 ---
 
 
-<article class='post'>
+<article>
 
     {% comment %}
     {% assign serieData = site.data.videos.series[page.series] %}
@@ -90,6 +90,25 @@ fullwidth: true
         "thumbnailURL": "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg",
         "UploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
         "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Videos",
+        "item": "https://savjee.be/videos/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{series}}",
+        "item": "https://savjee.be/videos/{{series | slug }}"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ title }}"
+      }]
     }
 ]
 </script>

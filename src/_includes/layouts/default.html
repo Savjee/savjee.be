@@ -6,7 +6,7 @@
 
     <title>{{ title }} | Savjee.be</title>
 
-    <meta http-equiv="Content-Security-Policy" content="font-src 'self';frame-src disqus.com c.disquscdn.com https://*.disquscdn.com www.google.com www.youtube.com www.youtube-nocookie.com accounts.google.com;img-src 'self' c.disquscdn.com referrer.disqus.com https://*.disquscdn.com www.google-analytics.com www.gstatic.com ssl.gstatic.com i.ytimg.com img.youtube.com i.imgur.com data:;script-src 'self' c.disquscdn.com disqus.com savjee.disqus.com https://*.disquscdn.com www.google.com www.google-analytics.com www.gstatic.com apis.google.com;style-src 'self' c.disquscdn.com https://*.disquscdn.com 'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs=';object-src 'none'; base-uri 'self';">
+    <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self';frame-src disqus.com c.disquscdn.com https://*.disquscdn.com www.google.com www.youtube.com www.youtube-nocookie.com accounts.google.com;img-src 'self' c.disquscdn.com referrer.disqus.com https://*.disquscdn.com www.google-analytics.com www.gstatic.com ssl.gstatic.com i.ytimg.com img.youtube.com i.imgur.com data:;script-src 'self' c.disquscdn.com disqus.com savjee.disqus.com https://*.disquscdn.com www.google.com www.google-analytics.com www.gstatic.com apis.google.com;style-src 'self' c.disquscdn.com https://*.disquscdn.com 'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs=';object-src 'none'; base-uri 'self';"> -->
 
     {% assign seo_description_tmp = page.quote | default: page.excerpt %}
     {% assign seo_description = seo_description_tmp | md | strip_html | truncate:350 | strip_newlines | escape %}
@@ -55,16 +55,16 @@
 
     {% if wider == true %}
         <div class="md:max-w-4xl mx-auto">
-    {% else if fullwidth == true %}
-        <div>
+    {% elsif fullwidth == true %}
+        <div> 
     {% else %}
-        <div class="md:max-w-3xl mx-auto">
+        <div class="md:max-w-2xl mx-auto">
     {% endif %}
 
-    </div>
     
     {{ content }}
 
+    </div>
 
     {% include components/footer.html %}
 

@@ -6,7 +6,6 @@ videoId: qWVTjMsv7AE
 order: 41
 series: Simply explained
 uploadDate: 2021-03-11
-hide: true
 ---
 
 We have no privacy on the web anymore. Our data is stored with many third-parties, some even sell it behind our backs. Solid aims to put all our data in a single place that's under our control (pods). Changing the way we deal with personal data.

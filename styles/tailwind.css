@@ -70,6 +70,10 @@ article .csl-entry{
   @apply pb-4;
 }
 
+.two-column{
+  column-count: 2;
+}
+
 /** VIDEO **/
 .videowrapper{
   @apply float-none;

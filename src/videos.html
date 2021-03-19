@@ -5,6 +5,15 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
 ---
 
 {% for serie in video_series %}
-    {% include video-series-overview.html, serieTitle:serie.title %}
     {% assign vidsInSerie = collections.videos | getVideosInSeries: serie.title %}
+    {% assign vidCount = vidsInSerie | size %}
+
+    {% if vidCount > 0 %}
+        {% render "video-series-overview.html", serieTitle:serie.title %}
+
+        <br>
+        <hr>
+        <br>
+    {% endif %}
+    
 {% endfor %}

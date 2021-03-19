@@ -16,7 +16,7 @@ This video wouldn't be possible without the work of others. Here are the sources
 {% bibtex %}
 
 @online{src,
-    title={Ethereum's Next Upgrade Could Be the $29 Billion Blockchain's Biggest Test Yet},
+    title={Ethereum's Next Upgrade Could Be the \$29 Billion Blockchain's Biggest Test Yet},
     url={https://www.coindesk.com/ethereums-october-upgrade-could-be-29-billion-blockchains-biggest-test-yet/},
     author={Rachel Rose O'Leary},
     organization={},

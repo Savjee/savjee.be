@@ -45,8 +45,8 @@ It will then crop your image, store the resulting image back in your frame buffe
 ```cpp
 void crop_image(camera_fb_t *fb, unsigned short cropLeft, unsigned short cropRight, unsigned short cropTop, unsigned short cropBottom)
 {
-    unsigned short maxTopIndex = cropTop * fb->width * 2;
-    unsigned short minBottomIndex = ((fb->width*fb->height) - (cropBottom * fb->width)) * 2;
+    unsigned int maxTopIndex = cropTop * fb->width * 2;
+    unsigned int minBottomIndex = ((fb->width*fb->height) - (cropBottom * fb->width)) * 2;
     unsigned short maxX = fb->width - cropRight; // In pixels
     unsigned short newWidth = fb->width - cropLeft - cropRight;
     unsigned short newHeight = fb->height - cropTop - cropBottom;

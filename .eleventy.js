@@ -1,43 +1,25 @@
 // const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Cite = require('citation-js');
-const Autolinker = require('autolinker');
+
 const markdownIt = require("markdown-it");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight);
+module.exports = function (config) {
+  config.addPlugin(syntaxHighlight);
 
   // Savjee
-  eleventyConfig.addLayoutAlias("default", "layouts/default.html");
-  eleventyConfig.addLayoutAlias("post", "layouts/post.html");
-  eleventyConfig.addLayoutAlias("video", "layouts/video.html");
-  eleventyConfig.addLayoutAlias("page", "layouts/page.html");
+  config.addLayoutAlias("default", "layouts/default.html");
+  config.addLayoutAlias("post", "layouts/post.html");
+  config.addLayoutAlias("video", "layouts/video.html");
+  config.addLayoutAlias("page", "layouts/page.html");
 
-  eleventyConfig.addFilter("md", function (content = "") {
+  config.addFilter("md", function (content = "") {
     return markdownIt({ html: true }).render(content);
   });
 
-  /**
-   * Liquid filter: getVideosInSeries 
-   * 
-   * Usage in liquid:
-   *    {% assign vidsInSerie = collections.videos | getVideosInSeries: "Simply explained" %}
-   * 
-   * Takes the given video collection (parameter 1, before the pipe) 
-   * and returns only the videos in a given series (param 2, string).
-   */
-  eleventyConfig.addLiquidFilter("getVideosInSeries", function(collection, serieName) {
-    if(!Array.isArray(collection)){
-      throw new Error("getVideosInSeries: first parameter is not an array");
-    };
-    if(typeof serieName !== "string"){
-      throw new Error("getVideosInSeries: second parameter should be a string");
-    }
-    return collection.filter(m => m.data.series === serieName);
-  });
+  config.addLiquidFilter("getVideosInSeries", require('./src/utils/filters/getVideosInSeries'));
   
-  eleventyConfig.addCollection('posts', (collectionApi) => {
-    return collectionApi.getFilteredByGlob('src/posts/**/*.md')
+  config.addCollection('posts', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')
                         .sort(function(a, b) {
                           return b.date - a.date;
                         });
@@ -45,79 +27,23 @@ module.exports = function (eleventyConfig) {
 
   // Collection: videos
   //  - Sorted by "order" field (DESC)
-  eleventyConfig.addCollection('videos', (collectionApi) => {
-    return collectionApi.getFilteredByGlob('src/videos/**/*.md')
+  config.addCollection('videos', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
                           .sort((a, b) => a.data.uploadDate - b.data.uploadDate);
   });
 
-  // Define a post_url Liquid tag for cross referencing
-  // Original creator: https://rusingh.com/articles/2020/04/24/implement-jekyll-post-url-tag-11ty-shortcode/
-  // Adapted by me to work with filename instead of slug.
-  const linkHandler = function (collection, filename) {
-    if (collection.length < 1) {
-      throw "Collection appears to be empty";
-    }
-    if (!Array.isArray(collection)) {
-      throw "Collection is an invalid type - it must be an array!";
-    }
-    if (typeof filename !== "string") {
-      throw "Filename is an invalid type - it must be a string!";
-    }
-
-    const found = collection.find(p => p.template.inputPath.indexOf(filename) > -1);
-    if (found === 0 || found === undefined) {
-      // When nothing was found, throw an error to break the build.
-      // Broken links should not be allowed!
-      throw new Error(`File ${this.page.inputPath} wants to link to ${filename}, but it does not exist.`);
-    } else {
-      return found.url;
-    }
-  }
-
-  // I should deprecate this, because Eleventy allows to link to all collection types
-  // not just posts.
-  eleventyConfig.addShortcode("post_url", linkHandler);
-
-  // This should be used instead of post_url:
-  eleventyConfig.addShortcode("link", linkHandler);
 
 
-  eleventyConfig.addPairedLiquidShortcode("bibtex", async function(content, firstName, lastName) {
-    let bibtexCounter = 1;
+  config.addShortcode("link", require('./src/utils/shortcode/link.js'));
+  config.addPairedLiquidShortcode("bibtex", require('./src/utils/shortcode/bibtex'));
 
-    // Parse bibtex string
-    const input = await Cite.inputAsync(content);
-
-    // Citation.js required unique IDs, so make sure they're unique.
-    // I've always used "src" as ID, showing my BibTex incompetence.
-    input.map(e => e.id = bibtexCounter++);
-
-    // Put in Cite object and get HTML out of it!
-    const data = new Cite(input);
-    const html = data.format('bibliography', {
-      format: 'html',
-      template: 'apa',
-      lang: 'en-US'
-    });
-
-    // Convert all links in the output HTML to actual <a> tags
-    return Autolinker.link(html, {
-      newWindow: true,
-      email: false,
-      phone: false,
-      stripPrefix: false,
-      stripTrailingSlash: false,
-      className: "no-underline",
-    });
-  });
-
-  eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/uploads");
-  eleventyConfig.addPassthroughCopy({ "./_tmp": "assets/css" });
+  config.addPassthroughCopy("src/site/assets");
+  config.addPassthroughCopy("src/site/uploads");
+  config.addPassthroughCopy({ "./_tmp": "site/assets/css" });
 
   // Extract excerpt for each post containing the <!--more--> tag
   // Used to construct SEO <meta> tags in <head>
-  eleventyConfig.setFrontMatterParsingOptions({
+  config.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
     excerpt_separator: "<!--more-->"
@@ -139,10 +65,10 @@ module.exports = function (eleventyConfig) {
   const markdownLib = markdownIt({
     html: true
   }).use(mila, milaOptions);
-  eleventyConfig.setLibrary("md", markdownLib);
+  config.setLibrary("md", markdownLib);
 
     return {
-      dir: { input: 'src', output: 'dist', data: '_data' },
+      dir: { input: 'src/site', output: 'dist', data: '_data' },
       // passthroughFileCopy: false,
       // templateFormats: ['njk', 'md', 'css', 'html', 'yml', 'txt'],
       // htmlTemplateEngine: 'njk'

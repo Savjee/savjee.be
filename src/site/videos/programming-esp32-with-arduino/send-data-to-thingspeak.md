@@ -42,9 +42,9 @@ lib_deps =
 ```
 
 ## Sending a field to ThingSpeak
-Now let's write some code! In the `main.cpp` file, I already added code to connect to a WiFi network. I made [a video about this]({% link _videos/programming-esp32-with-arduino/connecting-to-wifi.md %}) as well. Now there are two things I want to push to Thingspeak: a simple counter, just to demonstrate and the current WiFi signal strength.
+Now let's write some code! In the `main.cpp` file, I already added code to connect to a WiFi network. I made [a video about this]({% link collections.videos, "programming-esp32-with-arduino/connecting-to-wifi.md" %}) as well. Now there are two things I want to push to Thingspeak: a simple counter, just to demonstrate and the current WiFi signal strength.
 
-Here is an example program that will push a simple counter to ThingSpeak. Make sure to change the `CHANNEL_ID` and `CHANNEL_API_KEY`. Also make sure to copy the `connectToWiFi()` function from [the previous]({% link _videos/programming-esp32-with-arduino/connecting-to-wifi.md %}) video.
+Here is an example program that will push a simple counter to ThingSpeak. Make sure to change the `CHANNEL_ID` and `CHANNEL_API_KEY`. Also make sure to copy the `connectToWiFi()` function from [the previous]({% link collections.videos, "programming-esp32-with-arduino/connecting-to-wifi.md" %}) video.
 
 ```cpp
 #include "ThingSpeak.h"

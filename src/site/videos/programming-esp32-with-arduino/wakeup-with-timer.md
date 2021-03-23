@@ -34,4 +34,5 @@ Three things to mention about deep sleep.
 
 1. First, `esp_deep_sleep_start` shuts down the processor, so any code you write beneath this line won't be executed. 
 2. Secondly, when the ESP32 awakes from the deep sleep, it will rerun your `setup` function.
-3. And finally, when you enter deep sleep, all data stored in memory is lost.  If you want to keep some data around then watch the [next video in which I'll talk about RTC memory]({% link _videos/programming-esp32-with-arduino/using-rtc-memory.md %}).
+3. And finally, when you enter deep sleep, all data stored in memory is lost.  If you want to keep some data around then watch the [next video in which I'll talk about RTC memory]({% link collections.videos, "programming-esp32-with-arduino/using-rtc-memory.md" %}).
+

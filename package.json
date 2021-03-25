@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "eleventy --serve & postcss styles/*.css --dir _tmp/ --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css"
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o dist/bundle.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -12,7 +12,6 @@
     "html-minifier": "^4.0.0",
     "markdown-it-link-attributes": "^3.0.0",
     "postcss": "^8.2.8",
-    "postcss-clean": "^1.2.2",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.0",
     "prism-themes": "^1.6.0",

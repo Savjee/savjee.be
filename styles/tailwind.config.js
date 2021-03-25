@@ -1,6 +1,9 @@
 module.exports = {
   purge: {
-    content: ["_site/**/*.html"],
+    content: [
+      "src/**/*.html",
+      "src/**/*.liquid",
+    ],
     options: {
       whitelist: [],
     },

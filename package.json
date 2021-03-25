@@ -4,7 +4,7 @@
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o dist/bundle.css"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "autolinker": "^3.14.3",
     "autoprefixer": "^10.2.5",

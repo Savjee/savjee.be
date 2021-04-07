@@ -20,6 +20,26 @@ fullwidth: true
     </div>
 
     {% comment %}
+        Show the previous and next videos for easy navigation.
+        
+        Note: in Eleventy, previous and next post are on collection level.
+              I have many video series, but they're all stored in the same
+              collection. So here we check if the previous and next posts
+              are from the series.
+    {% endcomment %}
+    {% assign previousPost = collections.videos | getPreviousCollectionItem: page %}
+    {% assign nextPost = collections.videos | getNextCollectionItem: page %}
+
+    {% if previousPost and previousPost.data.series == series %}
+        Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+    {% endif %}
+    
+    {% if nextPost and previousPost.data.series == series %}
+        Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+    {% endif %}
+
+
+    {% comment %}
     <div class="videoNavigation">
         <div class="container">
             {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}

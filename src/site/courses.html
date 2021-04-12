@@ -10,7 +10,7 @@ quote:
 these courses to help you learn certain topics in-depth. Enjoy!</p>
 
 
-{% for course in site.courses %}
+{% for course in collections.courses %}
 
   <div class="course-container">
 
@@ -24,16 +24,16 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
       <div class="course-description flex-vcenter">
 
         <div class="course-title">
-          <a href="{{course.url}}">{{course.title}}</a>
+          <a href="{{course.url}}">{{course.data.title}}</a>
         </div>
 
         <div class="platforms">
-          {% if course.link_udemy %}
-             <a href="{{course.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+          {% if course.data.link_udemy %}
+             <a href="{{course.data.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
            {% endif %}
            
-           {% if course.link_skillshare %}
-               <a href="{{course.link_skillshare}}">Skillshare</a>
+           {% if course.data.link_skillshare %}
+               <a href="{{course.data.link_skillshare}}">Skillshare</a>
            {% endif %}
         </div>
 

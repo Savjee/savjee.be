@@ -2,56 +2,28 @@
 layout: default
 ---
 
-<div class="prose dark:prose-dark max-w-none">
-    <article itemtype="http://schema.org/BlogPosting">
-        <header>
-            <h1 itemprop="headline">{{ title }}</h1>
-        </header>
+<article class='post'>
+    <h1 class='post-title'>
+        <a href="{{ url }}">{{ title }}</a>
+    </h1>
 
+    <div class='post-description'>
         {{ content }}
-    </article>
+    </div>
+</article>
 
-    <p class="text-center">
-        <small>Posted on
-            <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}' itemprop="dateCreated pubdate datePublished">{{ page.date | date: "%Y-%m-%d" }}</time>
-        </small>
-    </p>
+<p class="text-center">
+    <small>Posted on
+        <time class='date' datetime='{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
+    </small>
+</p>
 
-    {% comment %}
-    {% include share-buttons.html %}
 
-    {% if site.related_posts.size > 0 %}
-        <div class="related-posts">
-            <h2>You May Also Enjoy</h2>
-            
-            <ul>
-                {% for post in site.related_posts limit:4 %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
-
-    {% include disqus-comments.html %}
-    {% endcomment %}
-</div>
-
-<!-- *********** Structured data for Google *********** -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "headline": "{{ title | truncate: 110 }}",
-    "author": {
-        "name": "Xavier Decuyper"
-    },
-    
-    {% if thumbnail %}
-        "image": [
-          "https://www.savjee.be{{upload_directory}}/thumb_master.jpg"
-        ],
-    {% endif %}
-
-    "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
-}
-</script>
+<!-- 
+<article class="post prose dark:prose-dark max-w-none">
+	<header>
+		<h1 itemprop="headline">{{ title }}</h1>
+	</header>
+	
+	{{ content }}
+</article> -->

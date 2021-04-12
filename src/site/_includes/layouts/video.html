@@ -3,79 +3,51 @@ layout: default
 fullwidth: true
 ---
 
-
-<article>
-
-    {% comment %}
-    {% assign serieData = site.data.videos.series[page.series] %}
-    {% endcomment %}
-    <div class="w-full bg-savjeeblack-800 py-10">
-        <div class="md:max-w-5xl mx-auto">
-            <div class="mx-auto">
-                <div class="relative h-0 pb-fluid-video">
-                    {% include youtube-embed.html, videoId:videoId %}
-                </div>
+<article class='post'>
+    <div class="videobackdrop">
+        <div class="container video">
+            <div class="videowrapper">
+                {% include youtube-embed.html, videoId:videoId %}
             </div>
         </div>
     </div>
-
-    {% comment %}
-        Show the previous and next videos for easy navigation.
-        
-        Note: in Eleventy, previous and next post are on collection level.
-              I have many video series, but they're all stored in the same
-              collection. So here we check if the previous and next posts
-              are from the series.
-    {% endcomment %}
-    {% assign previousPost = collections.videos | getPreviousCollectionItem: page %}
-    {% assign nextPost = collections.videos | getNextCollectionItem: page %}
-
-    {% if previousPost and previousPost.data.series == series %}
-        Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-    {% endif %}
     
-    {% if nextPost and previousPost.data.series == series %}
-        Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-    {% endif %}
 
-
-    {% comment %}
     <div class="videoNavigation">
         <div class="container">
-            {% assign videosInThisSerie = site.videos | where_exp:'vid','vid.series == page.series' | sort: 'order' %}
-            {% assign tmp = page.order | minus: 2 %}
-            
-            <div class="previousVideo">
-                {% if page.order != 1 %}
+            {% assign prevVideo = collections.videos | getPreviousCollectionItem: page %}
+            {% assign nextVideo = collections.videos | getNextCollectionItem: page %}
+                        
+            {% if prevVideo and prevVideo.data.series == series %}
+                <div class="previousVideo">
                     <div class="video-">
-                        <a href="{{videosInThisSerie[tmp].url}}">
+                        <a href="{{ prevVideo.url }}">
                             <p><strong>&larr; Previous video</strong><br>
-                                <span class="hide-overflow-text">{{videosInThisSerie[tmp].title}}</span>
+                                <span class="hide-overflow-text">{{prevVideo.data.title}}</span>
                             </p>
                         </a>
                     </div>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
 
-            <div class="nextVideo">
-                {% if page.order >= 1 and page.order < videosInThisSerie.size %}
-                    {% unless videosInThisSerie[page.order].hide %}
-                    <div class="video-">
-                        <a href="{{videosInThisSerie[page.order].url}}">
-                            <p>
-                                <strong>Next video &rarr;</strong><br>
-                                <span class="hide-overflow-text">{{videosInThisSerie[page.order].title}}</span>
-                            </p>
-                        </a>
-                    </div>
-                    {% endunless %}
-                {% endif %}
-            </div>
+            {% if nextVideo and prevVideo.data.series == series %}
+                <div class="nextVideo">
+                        {% unless nextVideo.data.hide %}
+                        <div class="video-">
+                            <a href="{{nextVideo.url}}">
+                                <p>
+                                    <strong>Next video &rarr;</strong><br>
+                                    <span class="hide-overflow-text">{{nextVideo.data.title}}</span>
+                                </p>
+                            </a>
+                        </div>
+                        {% endunless %}
+                </div>
+            {% endif %}
         </div>
     </div>
-    {% endcomment %}
 
-    <div class="md:max-w-2xl mx-auto my-4 pb-4">
+    <div class="container">
         <h1 class='post-title'>
             <a href="{{ page.url }}">{{ title }}</a>
         </h1>
@@ -85,19 +57,14 @@ fullwidth: true
         </div>
         
         {% comment %}
-            {% include youtube-subscribebutton.html %}
+        {% include youtube-subscribebutton.html %}
         {% endcomment %}
 
         <hr>
-        
-        
-        {% comment %}
-            {% include disqus-comments.html %}
-        {% endcomment %}
-
+            {% include components/newsletter-box.html %}
+        <hr>
     </div>
 </article>
-
 
 <!-- *********** Structured data for Google *********** -->
 <script type="application/ld+json">

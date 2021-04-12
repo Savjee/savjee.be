@@ -2,10 +2,13 @@
 layout: default
 ---
 
-<article class="post prose dark:prose-dark max-w-none">
-	<header>
-		<h1 itemprop="headline">{{ title }}</h1>
-	</header>
-	
-	{{ content }}
+
+<article class='post'>
+	<h1 class='post-title'>
+		<a href="{{ url }}">{{ title }}</a>
+	</h1>
+
+	<div class='post-description'>
+		{{ content }}
+	</div>
 </article>

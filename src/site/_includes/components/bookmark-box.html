@@ -1,23 +1,22 @@
-<div class="bg-gray-100 dark:bg-savjeeblack-800 mt-4 mb-4 rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-    <a href="{{url}}" class="no-underline text-gray-600">
-        <div class="flex max-w-xs sm:max-w-xs lg:max-w-lg rounded-lg shadow-lg pb-6 lg:pb-0">
-
-            {% if imageLeft == true %}
-                <div class="w-full lg:w-3/5">
-                    <img src="{{imageUrl}}" alt="image" class="h-full object-cover object-center w-full">
+<div class="bookmarkbox">
+    <a href="{{url}}">
+        <div class="bookmark-contents">
+            {% unless imageLeft %}
+                <div class="text-container align-self-center">
+                    {{ title | truncate:100 }}
+                </div>
+            {% endunless %}
+            
+            {% if imageUrl %}
+                <div class="image-container">
+                    <img src="{{imageUrl}}" loading="lazy" />
                 </div>
             {% endif %}
 
-            <div class="w-full lg:w-3/5 p-6 flex flex-grow items-center">
-                <p class="text-gray-600 dark:text-white">
-                    {{ title | truncate: 100 }}
-                </p>
+            {% if imageLeft %}
+            <div class="align-self-center text-container">
+                {{ title | truncate:100 }}
             </div>
-
-            {% if imageLeft != true %}
-                <div class="w-full lg:w-3/5">
-                    <img src="{{imageUrl}}" alt="image" class="h-full object-cover object-center w-full">
-                </div>
             {% endif %}
         </div>
     </a>

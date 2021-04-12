@@ -4,16 +4,61 @@ title: Videos
 quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
 ---
 
-{% for serie in video_series %}
+{% assign latestVideos = collections.videos | getFeatureableVideos %}
+
+<div class="row latest-videos">
+    {% for vid in latestVideos limit: 6 %}
+        <div class="col-md-4 col-sm-6 col-xs-1 {% if forloop.index > 3 %}d-none d-sm-block{% endif %}">
+            <div class="card">
+                <a href="{{vid.url}}">
+                    <img class="thumb" src="https://i.ytimg.com/vi/{{vid.data.videoId}}/mqdefault.jpg">
+                    <div class="content">
+                        {{ vid.data.title | truncate:100 }}
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<hr>
+
+{% assign series = video_series %}
+
+{% for serie in series %}
     {% assign vidsInSerie = collections.videos | getVideosInSeries: serie.title %}
     {% assign vidCount = vidsInSerie | size %}
 
     {% if vidCount > 0 %}
-        {% include video-series-overview.html, serieTitle:serie.title %}
+        <h2 class="no-margin">{{serie.title}}</h2>
+        <div class="video-details">
+
+            <div class="next-to-each-other">
+                <div class="thumb-wrapper">
+                    <a href="{{vidsInSerie[0].url}}">
+                        <img src="/assets/img/play-button.svg" class="playbtn">
+                        <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg">
+                    </a>
+
+                    <small>{{vidsInSerie.size}} videos</small>
+                </div>
+                <div class="description">
+                    {{serie.description}}
+                </div>
+            </div>
+
+            <div class="video-serieList">
+                <ol class="no-margin">
+                    {% for vid in vidsInSerie %}
+                        {% unless vid.hide %}
+                            <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
+                        {% endunless %}
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
 
         <br>
         <hr>
-        <br>
     {% endif %}
-    
 {% endfor %}

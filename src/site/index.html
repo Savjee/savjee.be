@@ -1,83 +1,96 @@
 ---
 layout: default
-title: "Home"
+title: Home
 wider: true
+quote: "Taking complicated topics and explaining them in a simple and straightforward way. That's what Simply Explained is all about. My blog posts are in-depth and technical while my videos are simple & in plain English."
 ---
 
-
-<div class="md:max-w-3xl mx-auto flex items-center my-4 pb-4">
-    <div class="mr-8">
-        <img src="/assets/img/me.png" 
-                alt="Picture of me, thinking face">
-    </div>
-
-    <div>
-        <h1>Hey there, I'm Xavier.</h1>
-        <h2 class="font-medium text-2xl text-gray-700">
-            I'm a full-stack developer &amp; <a href="/">YouTuber</a>.
-        </h2>
-
-        <p class="mt-8">
-            I love taking complicated topics and explaining them in plain-English.
-        </p>
-    </div>
-</div>
-
-
-<div class="md:max-w-4xl mx-auto grid grid-cols-2 gap-4 border-t pt-6">
-    <div>
-		<h3>Latest posts</h3>
-
-        {% for post in collections.posts reversed limit:3 %}
-                {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-                    {% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                    {% include 
-                            components/bookmark-box.html, 
-                            url: post.url,
-                            title: post.data.title,
-                            imageUrl: postThumb,
-                            imageLeft: true,
-                    %}
-                {% if forloop.index > 2 %}</div>{% endif %}
-            {% endfor %}
-
-        <p>
-            <a href="/posts.html" class="no-underline">📝 More posts</a>
-        </p>
-    </div>
-
-    <div>
-        <h3>Latest videos</h3>
-
-        {% for vid in collections.videos reversed limit:3 %}
-            {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-				{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
-
-                {% include 
-                        components/bookmark-box.html, 
-                        url: vid.url,
-                        title: vid.data.title,
-                        imageUrl: ytThumb,
-                        imageLeft: false,
-                %}
-            {% if forloop.index > 2 %}</div>{% endif %}
-        {% endfor %}
-
-        <p class="md:text-right">
-            <a href="/videos/" class="no-underline">More videos 📹</a>
-        </p>
-    </div>
-</div>
-
-<div class="md:max-w-4xl mx-auto text-center bg-gray-100 dark:bg-savjeeblack-800 m-8 p-8">
-    <h2>💌 Suscribe to my newsletter</h2>
-    <div>
-		<form action="http://newsletter.savjee.be/add_subscriber" method="post" target="_blank">
+<div class="container home-box">
+	<div class="row">
+		<div class="col-md-5 text-center">
+			<img src="/assets/img/me.png" class="fluid-image me">
+		</div>
+		<div class="col-md-7 d-flex align-items-center">
 			<div>
-				<input placeholder="Your email address" type="email" name="member[email]">
-				<button type="submit">Subscribe</button>
+				<h1>Hey there, I'm Xavier.</h1>
+				<h3>I'm a full-stack developer & <a href="/videos">YouTuber</a>.</h3>
+				<p>I love taking complicated topics and explaining them in plain-English.</p>
 			</div>
-		</form>
+		</div>
 	</div>
-<small>No more than once a month.<br>No spam, only highlights about my work.</small>
 </div>
+
+<div>
+	<hr>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h3 class="no-margin">Latest posts</h3>
+			{% for post in collections.posts limit: 3 %}
+				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+					{% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+					{% include 
+							components/bookmark-box.html, 
+							url: post.url,
+							title: post.data.title,
+							imageUrl: postThumb,
+							imageLeft: true,
+					%}
+				{% if forloop.index > 2 %}</div>{% endif %}
+			{% endfor %}
+
+			<p>
+				<a href="/posts.html">📝 More posts</a>
+			</p>
+		</div>
+
+		<div class="col-md-6">
+			<h3 class="no-margin">Latest videos</h3>
+
+			{% assign latestVideos = collections.videos | getFeatureableVideos %}
+			{% for vid in latestVideos limit: 3 %}
+				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
+					{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
+					{% include 
+						components/bookmark-box.html, 
+						url: vid.url,
+						title: vid.data.title,
+						imageUrl: ytThumb,
+						imageLeft: false,
+					%}
+				{% if forloop.index > 2 %}</div>{% endif %}
+			{% endfor %}
+
+			<p class="text-md-right">
+				<a href="/videos/">More videos 📹</a>
+			</p>
+	</div>
+</div>
+<hr>
+
+	</div>
+</div>
+
+
+<!-- *********** Structured data for Google *********** -->
+<script type="application/ld+json">
+[
+	{
+		"@context": "http://schema.org",
+		"@type": "WebSite",
+		"name": "Savjee",
+		"url": "https://www.savjee.be/"
+	},
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"url": "https://www.savjee.be/",
+		"logo": "https://www.savjee.be/assets/img/logo.svg",
+		"sameAs": [
+			"https://www.facebook.com/savjee",
+			"https://www.youtube.com/savjee",
+			"https://twitter.com/Savjee"
+		]
+	}
+]
+</script>

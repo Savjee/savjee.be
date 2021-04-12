@@ -14,16 +14,8 @@ layout: default
 
 <p class="text-center">
     <small>Posted on
-        <time class='date' datetime='{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date_to_string }}</time>
+        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
     </small>
 </p>
 
-
-<!-- 
-<article class="post prose dark:prose-dark max-w-none">
-	<header>
-		<h1 itemprop="headline">{{ title }}</h1>
-	</header>
-	
-	{{ content }}
-</article> -->
+{% include components/newsletter-box.html %}

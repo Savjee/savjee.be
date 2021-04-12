@@ -108,6 +108,13 @@ module.exports = function (config) {
     }).use(mila, milaOptions);
     config.setLibrary("md", markdownLib);
 
+    // Custom "md" tag to render Markdown. This is used for the page excerpt,
+    // which sometimes contains a markdown link.
+    // Markdown excerpt > HTML > liquid strip_html filter
+    config.addFilter("md", function (content = "") {
+        return markdownIt({ html: true }).render(content);
+    });
+
     return {
         dir: { input: 'src/site', output: 'dist', data: '_data' },
         // passthroughFileCopy: false,

@@ -19,6 +19,7 @@ module.exports = function (config) {
     config.addLayoutAlias("post", "layouts/post.html");
     config.addLayoutAlias("video", "layouts/video.html");
     config.addLayoutAlias("page", "layouts/page.html");
+    config.addLayoutAlias("course", "layouts/course.html");
 
     config.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);
@@ -31,6 +32,10 @@ module.exports = function (config) {
             .sort(function (a, b) {
                 return b.date - a.date;
             });
+    });
+
+    config.addCollection('courses', (collectionApi) => {
+       return collectionApi.getFilteredByGlob('src/site/courses/**/*.md');
     });
 
     config.addCollection('videos', (collectionApi) => {
@@ -63,6 +68,10 @@ module.exports = function (config) {
 
     config.addPassthroughCopy("src/site/assets");
     config.addPassthroughCopy("src/site/uploads");
+
+    // Copy all resource files for courses (except the markdown files themselves)
+    config.addPassthroughCopy("src/site/courses/**/*[^md]");
+    
     config.addPassthroughCopy({ "./_tmp": "site/assets/css" });
 
     // Extract excerpt for each post containing the <!--more--> tag

@@ -42,8 +42,8 @@ pre, code {
 }
 
 pre, p code, li code {
-    background-color: $codeBoxBackground;
-    border: solid 1px $codeBoxBorder;
+    background-color: $codeBoxBackground !important;
+    border: solid 1px $codeBoxBorder !important;
 }
 
 figure {
@@ -199,7 +199,7 @@ footer {
     }
 
     pre, p code, li code {
-        background-color: $headerBackgroundDarkMode;
+        background-color: $headerBackgroundDarkMode !important;
     }
 
     article h1 a{

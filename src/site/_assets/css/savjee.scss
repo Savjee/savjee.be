@@ -43,7 +43,7 @@ pre, code {
 
 pre, p code, li code {
     background-color: $codeBoxBackground;
-    border: solid 1px #D1D1D1;
+    border: solid 1px $codeBoxBorder;
 }
 
 figure {

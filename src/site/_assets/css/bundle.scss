@@ -11,6 +11,8 @@
 @import 'citations';
 
 // External dependencies
-@import 'lib/code-highlighter';
 @import 'lib/pure-tables-min';
 @import 'lib/bootstrap-grid';
+
+@import '../../../../node_modules/prism-themes/themes/prism-coldark-cold.css' (prefers-color-scheme: light);
+@import '../../../../node_modules/prism-themes/themes/prism-coldark-dark.css' (prefers-color-scheme: dark);

@@ -14,7 +14,7 @@ After creating our blockchain we'll try and tamper with it. This will demonstrat
 
 # Blog post
 
-[Read my blog post]({% post_url 2017-07-19-Writing-tiny-blockchain-in-JavaScript %}) if you want more information about this video.
+[Read my blog post]({% link collections.posts, "2017-07-19-Writing-tiny-blockchain-in-JavaScript.md" %}) if you want more information about this video.
 
 # Source code
 

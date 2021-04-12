@@ -20,5 +20,5 @@ Lambda allows developers to deploy "serverless" applications. Obviously there ar
 
 Interested in what you can do with Lambda? Here are just two practical use case for which I use Lambda:
 
-* [Meal planning with Trello and AWS Lambda]({% post_url 2016-07-11-Meal-planning-with-trello-and-aws-lambda %})
-* [Building a serverless anagram solver with AWS (DynamoDB, Lambda, S3, CloudFront and API gateway)]({% post_url 2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway %})
+* [Meal planning with Trello and AWS Lambda]({% link collections.posts, "2016-07-11-Meal-planning-with-trello-and-aws-lambda.md" %})
+* [Building a serverless anagram solver with AWS (DynamoDB, Lambda, S3, CloudFront and API gateway)]({% link collections.posts, "2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway.md" %})

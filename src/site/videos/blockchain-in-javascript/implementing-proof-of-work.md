@@ -13,8 +13,7 @@ Adding the proof-of-work mechanism to our homemade Javascript blockchain.
 Proof-of-work will secure our blockchain against spammers and people trying to tamper with our blocks.
 
 # Blog post
-[Read my blog post]({% post_url 2017-09-03-Implementing-proof-of-work-javascript-blockchain %}) if you want more information about this video.
-
+[Read my blog post]({% link collections.posts, "2017-09-03-Implementing-proof-of-work-javascript-blockchain.md" %}) if you want more information about this video.
 
 # Source code
 

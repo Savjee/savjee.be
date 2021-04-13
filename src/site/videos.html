@@ -26,39 +26,5 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
 {% assign series = video_series %}
 
 {% for serie in series %}
-    {% assign vidsInSerie = collections.videos | getVideosInSeries: serie.title %}
-    {% assign vidCount = vidsInSerie | size %}
-
-    {% if vidCount > 0 %}
-        <h2 class="no-margin">{{serie.title}}</h2>
-        <div class="video-details">
-
-            <div class="next-to-each-other">
-                <div class="thumb-wrapper">
-                    <a href="{{vidsInSerie[0].url}}">
-                        <img src="/assets/img/play-button.svg" class="playbtn">
-                        <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg">
-                    </a>
-
-                    <small>{{vidsInSerie.size}} videos</small>
-                </div>
-                <div class="description">
-                    {{serie.description}}
-                </div>
-            </div>
-
-            <div class="video-serieList">
-                <ol class="no-margin">
-                    {% for vid in vidsInSerie %}
-                        {% unless vid.hide %}
-                            <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
-                        {% endunless %}
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-
-        <br>
-        <hr>
-    {% endif %}
+    {% include video-series-overview.html, serieTitle:serie.title %}
 {% endfor %}

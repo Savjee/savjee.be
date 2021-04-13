@@ -7,8 +7,6 @@ pagination:
 permalink: "videos/{{ serie.title | slug }}/"
 ---
 
-<p>
-    <a href="/videos/">Videos</a> / {{ serie.title }}
-</p>
+<small><a href="/videos">&larr; All Videos</a></small>
 
 {% include video-series-overview.html, serieTitle:serie.title %}

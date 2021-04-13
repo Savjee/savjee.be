@@ -20,7 +20,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'dist/assets/'),
+    path: path.resolve(__dirname, '_site/assets/'),
     filename: 'main.js'
   }
 };

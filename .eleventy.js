@@ -11,7 +11,7 @@ module.exports = function (config) {
         watch: [
             "src/site/_assets/css/bundle.scss"
         ],
-        outputDir: "dist/css-sass/"
+        outputDir: "_site/css-sass/"
     });
 
     // Savjee
@@ -113,9 +113,6 @@ module.exports = function (config) {
     });
 
     return {
-        dir: { input: 'src/site', output: 'dist', data: '_data' },
-        // passthroughFileCopy: false,
-        // templateFormats: ['njk', 'md', 'css', 'html', 'yml', 'txt'],
-        // htmlTemplateEngine: 'njk'
+        dir: { input: 'src/site', output: '_site', data: '_data' },
     }
 };

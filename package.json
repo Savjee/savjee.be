@@ -18,6 +18,7 @@
     "markdown-it-link-attributes": "^3.0.0",
     "prism-themes": "^1.6.0",
     "webpack": "^5.32.0",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.6.0",
+    "markdown-it-image-lazy-loading": "^1.0.2"
   }
 }

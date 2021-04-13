@@ -105,9 +105,13 @@ module.exports = function (config) {
         }
     };
 
+    const lazy_loading = require('markdown-it-image-lazy-loading');
+
+
     const markdownLib = markdownIt({
         html: true
-    }).use(mila, milaOptions);
+    }).use(mila, milaOptions)
+        .use(lazy_loading);
     config.setLibrary("md", markdownLib);
 
     // Custom "md" tag to render Markdown. This is used for the page excerpt,

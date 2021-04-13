@@ -13,4 +13,17 @@ jobs:
       with:
         node-version: '15.x'
     - run: npm install
+
+    # Build Eleventy site
     - run: npm run build
+
+    # Deploy the site to AWS S3 + CloudFront (if non-staging)
+    - name: Deploy
+        uses: docker://justinharringa/s3_website:master
+        with:
+          args: 'push'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.S3_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          AWS_CLOUDFRONT_DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}

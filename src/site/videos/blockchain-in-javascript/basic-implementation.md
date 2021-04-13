@@ -4,7 +4,7 @@ collection: videos
 title: Basic implementation
 videoId: zVqczFZr124
 order: 1
-series: Building a blockchain in Javascript
+series: Blockchain in Javascript
 uploadDate: 2017-07-18
 ---
 

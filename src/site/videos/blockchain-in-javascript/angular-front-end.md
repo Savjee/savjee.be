@@ -4,7 +4,7 @@ collection: videos
 title: Angular Frontend
 videoId: AQV0WNpE_3g
 order: 5
-series: Building a blockchain in Javascript
+series: Blockchain in Javascript
 uploadDate: 2019-04-15
 ---
 

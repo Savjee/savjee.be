@@ -4,7 +4,7 @@ collection: videos
 title: Signing transactions with private key
 videoId: kWQ84S13-hw
 order: 4
-series: Building a blockchain in Javascript
+series: Blockchain in Javascript
 uploadDate: 2018-10-23
 ---
 

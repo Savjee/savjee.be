@@ -4,7 +4,7 @@ collection: videos
 title: Implementing proof-of-work
 videoId: HneatE69814
 order: 2
-series: Building a blockchain in Javascript
+series: Blockchain in Javascript
 uploadDate: 2017-10-03
 ---
 

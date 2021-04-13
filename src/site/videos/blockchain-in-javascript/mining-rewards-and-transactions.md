@@ -4,7 +4,7 @@ collection: videos
 title: Mining transactions &amp; rewards
 videoId: fRV6cGXVQ4I
 order: 3
-series: Building a blockchain in Javascript
+series: Blockchain in Javascript
 uploadDate: 2018-01-30
 ---
 

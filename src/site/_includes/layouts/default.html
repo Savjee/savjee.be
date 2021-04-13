@@ -30,18 +30,18 @@
 
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
-    <meta name="twitter:url" content="https://www.savjee.be{{url}}">
+    <meta name="twitter:url" content="https://www.savjee.be{{page.url}}">
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{ seo_description }}">
 
     <meta property="og:title" content="{{title}}"/>
     <meta property="og:site_name" content="Savjee.be"/>
-    <meta property="og:url" content="https://www.savjee.be{{url}}"/>
+    <meta property="og:url" content="https://www.savjee.be{{page.url}}"/>
     <meta property="og:description" content="{{ seo_description }}"/>
     <meta property="og:type" content="article">
     <meta property="fb:app_id" content="805673586165209"/>
 
-    <link rel="canonical" href="https://savjee.be{{ url | replace:'index.html',''}}">
+    <link rel="canonical" href="https://savjee.be{{ page.url | replace:'index.html',''}}">
 
     {% if thumbnail %}
         <meta name="twitter:card" content="summary_large_image">

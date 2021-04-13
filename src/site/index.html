@@ -26,7 +26,8 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 	<div class="row">
 		<div class="col-md-6">
 			<h3 class="no-margin">Latest posts</h3>
-			{% for post in collections.posts limit: 3 %}
+			{% assign latestPosts = collections.posts | getFeatureable %}
+			{% for post in latestPosts limit: 3 %}
 				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
 					{% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
 					{% include 
@@ -47,7 +48,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 		<div class="col-md-6">
 			<h3 class="no-margin">Latest videos</h3>
 
-			{% assign latestVideos = collections.videos | getFeatureableVideos %}
+			{% assign latestVideos = collections.videos | getFeatureable %}
 			{% for vid in latestVideos limit: 3 %}
 				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
 					{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}

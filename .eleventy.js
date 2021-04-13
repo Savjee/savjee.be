@@ -26,16 +26,7 @@ module.exports = function (config) {
     });
 
     config.addLiquidFilter("getVideosInSeries", require('./src/utils/filters/getVideosInSeries'));
-
-    config.addLiquidFilter("getFeatureableVideos", (collection) => {
-        if (!Array.isArray(collection)) {
-            throw new Error("getFeatureableVideos: first parameter is not an array");
-        };
-        
-        return collection
-            .filter(m => m.data.not_featureable === undefined || m.data.not_featureable === false)
-            .reverse();
-    });
+    config.addLiquidFilter("getFeatureable", require('./src/utils/filters/getFeaturable'));
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')

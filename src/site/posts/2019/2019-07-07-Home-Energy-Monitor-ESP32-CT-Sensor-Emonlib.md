@@ -73,7 +73,7 @@ The two most important components are obviously the ESP32 microcontroller and th
 
 
 #### ESP32
-The ESP32 is a no-brainer for me because I’ve used it before on small projects. They are small, are easy to program (Arduino compatible), have a lot of power (160MHz dual-core processor, 520K memory) and have built-in WiFi which means they can directly connect to the internet. No hubs needed.
+The ESP32 is a no-brainer for me because I’ve used it before on small projects. They are small, are easy to program (Arduino compatible), have a lot of power (240MHz dual-core processor, 520K memory) and have built-in WiFi which means they can directly connect to the internet. No hubs needed.
 
 
 #### CT Sensor

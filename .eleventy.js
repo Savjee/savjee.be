@@ -73,6 +73,7 @@ module.exports = function (config) {
     // Copy all resource files for courses (except the markdown files themselves)
     config.addPassthroughCopy("src/site/courses/**/*[^md]");
     config.addPassthroughCopy("src/site/projects/**/*[^md]");
+    config.addPassthroughCopy("src/site/videos/**/*[^md]");
     config.addPassthroughCopy("src/site/robots.txt");
     
     // Extract excerpt for each post containing the <!--more--> tag

@@ -8,14 +8,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js
+
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '15.x'
-    - run: npm install
+
+    - name: Cache node_modules
+      id: cache-node-modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: node-modules-${{ hashFiles('package-lock.json') }}
+
+    - name: Install dependenciea
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm install
 
     # Inject Google Analytics ID
-    - run: sed -i '' 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+    - run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
       env:
         GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 

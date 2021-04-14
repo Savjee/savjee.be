@@ -21,6 +21,9 @@ jobs:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
+    # Test if the variables work
+    - run: echo "$TEST_SECRET"
+
     - name: Install dependenciea
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm install

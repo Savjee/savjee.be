@@ -11,7 +11,9 @@
   "private": true,
   "scripts": {
     "start": "eleventy --serve",
-    "build": "ELEVENTY_PRODUCTION=true eleventy",
+    "build": "npm run build:webpack && npm run build:eleventy",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
+    "build:webpack": "webpack --mode production",
     "pack": "webpack --mode production --watch"
   },
   "devDependencies": {

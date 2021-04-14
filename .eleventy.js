@@ -29,7 +29,7 @@ module.exports = function (config) {
     config.addLiquidFilter("getFeatureable", require('./src/utils/filters/getFeaturable'));
     config.addLiquidFilter("reverse", require('./src/utils/filters/reverse'));
     config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
-    
+
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')
             .sort(function (a, b) {
@@ -48,8 +48,15 @@ module.exports = function (config) {
             // Fallback to the "date" that Eleventy generates (based
             // on file creation date).
             .sort((a, b) => {
+                return a.uploadDate - b.uploadDate || a.date - b.date;
                 if(a.data.uploadDate && b.data.uploadDate){
-                    return a.data.uploadDate - b.data.uploadDate;
+                    if(a.data.uploadDate !== b.data.uploadDate){
+                        return a.data.uploadDate - b.data.uploadDate;
+                    }
+                }
+
+                if(a.data.order && b.data.order){
+                    return a.data.order - b.data.order;
                 }
 
                 return a.date - b.date;

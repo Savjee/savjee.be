@@ -27,7 +27,9 @@ module.exports = function (config) {
 
     config.addLiquidFilter("getVideosInSeries", require('./src/utils/filters/getVideosInSeries'));
     config.addLiquidFilter("getFeatureable", require('./src/utils/filters/getFeaturable'));
-
+    config.addLiquidFilter("reverse", require('./src/utils/filters/reverse'));
+    config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
+    
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')
             .sort(function (a, b) {
@@ -40,29 +42,19 @@ module.exports = function (config) {
     });
 
     config.addCollection('videos', (collectionApi) => {
-        return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
+         return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
+
+            // Sort on the "uploadDate" that I've manually put it
+            // Fallback to the "date" that Eleventy generates (based
+            // on file creation date).
             .sort((a, b) => {
-                // First sort on series
-                if (a.data.series > b.data.series) return 1;
-                if (a.data.series < b.data.series) return -1;
-
-                // Then sort on upload date (if it's set)
-                if (a.data.uploadDate && b.data.uploadDate) {
-                    if (a.data.uploadDate > b.data.uploadDate) return 1;
-                    if (a.data.uploadDate < b.data.uploadDate) return -1;
+                if(a.data.uploadDate && b.data.uploadDate){
+                    return a.data.uploadDate - b.data.uploadDate;
                 }
 
-                // Finally, sort on upload order
-                if (a.data.order && b.data.order) {
-                    if (a.data.order > b.data.order) return 1;
-                    if (a.data.order < b.data.order) return -1;
-                }
-
-                return 0;
+                return a.date - b.date;
             });
     });
-
-
 
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedLiquidShortcode("bibtex", require('./src/utils/shortcode/bibtex'));

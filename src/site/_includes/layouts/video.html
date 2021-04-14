@@ -3,6 +3,7 @@ layout: default
 fullwidth: true
 ---
 
+
 <article class='post'>
     <div class="videobackdrop">
         <div class="container video">
@@ -15,10 +16,16 @@ fullwidth: true
 
     <div class="videoNavigation">
         <div class="container">
-            {% assign prevVideo = collections.videos | getPreviousCollectionItem: page %}
-            {% assign nextVideo = collections.videos | getNextCollectionItem: page %}
-                        
-            {% if prevVideo and prevVideo.data.series == series %}
+            {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
+            {% assign videoIndex = vidsInSerie | indexOf: page %}
+
+            {% assign prevIndex = videoIndex | minus: 1 %}
+            {% assign nextIndex = videoIndex | plus: 1 %}
+
+            {% assign prevVideo = vidsInSerie[prevIndex] %}
+            {% assign nextVideo = vidsInSerie[nextIndex] %}
+            
+            {% if prevVideo %}
                 <div class="previousVideo">
                     <div class="video-">
                         <a href="{{ prevVideo.url }}">
@@ -30,7 +37,7 @@ fullwidth: true
                 </div>
             {% endif %}
 
-            {% if nextVideo and prevVideo.data.series == series %}
+            {% if nextVideo %}
                 <div class="nextVideo">
                         {% unless nextVideo.data.hide %}
                         <div class="video-">

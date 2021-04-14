@@ -4,7 +4,7 @@ title: Videos
 quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
 ---
 
-{% assign latestVideos = collections.videos | getFeatureable %}
+{% assign latestVideos = collections.videos | reverse | getFeatureable %}
 
 <div class="row latest-videos">
     {% for vid in latestVideos limit: 6 %}

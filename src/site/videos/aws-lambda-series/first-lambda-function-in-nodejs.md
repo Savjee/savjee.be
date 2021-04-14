@@ -5,6 +5,7 @@ videoId: PEatXsXIkLc
 order: 2
 series: Get started with AWS Lambda
 layout: video
+uploadDate: 2016-08-01
 ---
 
 In this video I'll show you how to create a simple random number generator up and running on Lambda.

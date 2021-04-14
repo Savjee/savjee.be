@@ -5,6 +5,7 @@ title: Observer pattern
 videoId: GioexP_s5Yc
 order: 3
 series: TypeScript Design Patterns
+uploadDate: 2017-04-06
 ---
 
 Often when information in one part of application changes, other parts need to be updates. This is the problem that the Observer pattern solves very efficiently.

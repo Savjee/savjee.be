@@ -5,6 +5,7 @@ title: Introduction
 videoId: fSUEk6iMW88
 order: 1
 series: Get started with AWS Lambda
+uploadDate: 2016-08-01
 ---
 
 In this video I'll give you an overview of this series: getting started with Lambda.

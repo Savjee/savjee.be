@@ -5,6 +5,7 @@ title: Introduction
 videoId: 5mtxVkZbJcg
 order: 1
 series: First look at BitBucket Pipelines
+uploadDate: 2016-05-27
 ---
 
 In this video I'll give you an overview of this series: a first look at BitBucket Pipelines.

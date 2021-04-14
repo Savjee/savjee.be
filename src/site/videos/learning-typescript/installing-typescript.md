@@ -5,6 +5,7 @@ title: Installing TypeScript
 videoId: EI73ycybieU
 order: 2
 series: Learning TypeScript
+uploadDate: 2016-12-19
 ---
 
 In this video I'll show you how to install the TypeScript compiler on your computer. The compiler is key to start using TypeScript because it transpiles TypeScript code into JavaScript that browsers can interpret.

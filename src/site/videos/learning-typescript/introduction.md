@@ -5,6 +5,7 @@ title: Introduction
 videoId: Gd76yF1Dkg4
 order: 1
 series: Learning TypeScript
+uploadDate: 2016-12-19
 ---
 
 This is an introduction video to my "Learning TypeScript" series. In the next videos I will show you how to start using TypeScript. I'll discuss the benefits of TypeScript and how to use it step by step.

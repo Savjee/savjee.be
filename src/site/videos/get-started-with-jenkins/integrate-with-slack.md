@@ -5,6 +5,7 @@ title: Integrate with Slack
 videoId: TWwvxn2-J7E
 order: 12
 series: Get started with Jenkins
+uploadDate: 2016-03-15
 ---
 
 Setup Jenkins to post to your Slack channel whenever a build starts, ends, fails or succeeds. That way you can bring your entire team up-to-date. 

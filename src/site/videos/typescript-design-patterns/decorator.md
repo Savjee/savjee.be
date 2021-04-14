@@ -5,6 +5,7 @@ title: Decorator pattern
 videoId: WPOLDEk1LF0
 order: 2
 series: TypeScript Design Patterns
+uploadDate: 2017-04-06
 ---
 
 With the Decorator pattern you can add behaviour to classes dynamically.

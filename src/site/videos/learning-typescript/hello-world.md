@@ -5,6 +5,7 @@ title: Hello World
 videoId: 5IOK_ksHnCo
 order: 3
 series: Learning TypeScript
+uploadDate: 2016-12-19
 ---
 
 Migrating to TypeScript is really easy. In this video I'll show you how to write your very first lines of TypeScript code.

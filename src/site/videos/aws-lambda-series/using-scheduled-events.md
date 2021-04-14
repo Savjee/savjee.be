@@ -5,6 +5,7 @@ videoId: 1nxIKzFBkRY
 order: 6
 layout: video
 series: Get started with AWS Lambda
+uploadDate: 2016-08-01
 ---
 
 In this video I'll show you how to use scheduled events to trigger Lambda functions on a regular interval. This can be useful if you have to perform maintenance on a database, send out periodic emails, checking the status of different services, ...

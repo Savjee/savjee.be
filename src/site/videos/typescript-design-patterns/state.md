@@ -5,6 +5,7 @@ title: State pattern
 videoId: gMyRtqwxr10
 order: 6
 series: TypeScript Design Patterns
+uploadDate: 2017-04-06
 ---
 
 The state pattern is used to keep track of the state of a process. In this video I'll use an order on Amazon.com as an example.

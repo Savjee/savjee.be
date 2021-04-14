@@ -5,6 +5,7 @@ videoId: mfAT38B_uhw
 order: 9
 series: Get started with AWS Lambda
 layout: video
+uploadDate: 2016-08-01
 ---
 
 In this video I'll show you how to create a front-end for your Lambda functions. I'm going to build a HTML front-end for the guestbook functions that I showed you in the previous 2 video's.

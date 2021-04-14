@@ -5,6 +5,7 @@ title: Type Definitions
 videoId: cqv5nhARjr8
 order: 9
 series: Learning TypeScript
+uploadDate: 2016-12-19
 ---
 
 Use existing JavaScript frameworks like jQuery in your TypeScript projects. Type definitions bring great autocomplete to libraries and frameworks that weren't written in TypeScript.

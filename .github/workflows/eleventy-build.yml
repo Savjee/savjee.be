@@ -21,10 +21,7 @@ jobs:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
 
-    # Test if the variables work
-    - run: echo "$TEST_SECRET"
-
-    - name: Install dependenciea
+    - name: Install dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm install
 
@@ -33,13 +30,13 @@ jobs:
       if: endsWith(github.ref, '/v5-eleventy')
       run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
       env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS_ID }}
+        GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS }}
     
     - name: Inject production Google Analytics ID
       if: endsWith(github.ref, '/master')
       run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
       env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
+        GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS }}
     
     # Build Eleventy site
     - name: Eleventy build

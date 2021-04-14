@@ -42,7 +42,12 @@ jobs:
         GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS_ID }}
     
     # Build Eleventy site
-    - run: npm run build
+    - name: Eleventy build
+      run: npm run build
+
+    # For staging, remove the CloudFront configuration from s3_website (hacky)
+    - name: Remove CloudFront config (staging)
+      run: sed -i -e '/PROD -/,/- PROD/d' s3_website.yml
 
     # Deploy the site to AWS S3 + CloudFront (if non-staging)
     - name: Deploy staging
@@ -54,4 +59,3 @@ jobs:
         S3_ID: ${{ secrets.STAGING_S3_ID }}
         S3_SECRET: ${{ secrets.STAGING_S3_SECRET }}
         S3_BUCKET: ${{ secrets.STAGING_S3_BUCKET }}
-        CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.STAGING_CLOUDFRONT_DISTRIBUTION_ID }}

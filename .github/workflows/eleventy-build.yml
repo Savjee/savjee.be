@@ -39,7 +39,7 @@ jobs:
       with:
         args: 'push'
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.S3_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET }}
+        S3_ID: ${{ secrets.S3_ID }}
+        S3_SECRET: ${{ secrets.S3_SECRET }}
         S3_BUCKET: ${{ secrets.S3_BUCKET }}
-        AWS_CLOUDFRONT_DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}

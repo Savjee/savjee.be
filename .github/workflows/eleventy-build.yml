@@ -14,6 +14,9 @@ jobs:
         node-version: '15.x'
     - run: npm install
 
+    # Inject Google Analytics ID
+    - run: sed -i '' 's/UA-XXXXXXXX-X/'"${secrets.GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+
     # Build Eleventy site
     - run: npm run build
 

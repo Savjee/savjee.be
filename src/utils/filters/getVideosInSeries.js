@@ -14,5 +14,7 @@ module.exports = (collection, serieName) => {
     if (typeof serieName !== "string") {
         throw new Error("getVideosInSeries: second parameter should be a string");
     }
-    return collection.filter(m => m.data.series === serieName);
+    return collection
+            .filter(m => m.data.series === serieName)
+            .sort((a, b) => { return a.data.order - b.data.order });
 };

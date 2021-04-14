@@ -7,10 +7,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set env to staging
-      if: endsWith(github.ref, '/v5-eleventy')
-      run: |
-        echo "::set-env name=ENVIRONMENT::staging"
+    - name: Set env vars (dev)
+        if: endsWith(github.ref, '/v5-eleventy')
+        run: |
+          echo "S3_ID=STAGING_S3_ID" >> $GITHUB_ENV
+          echo "S3_SECRET=STAGING_S3_SECRET" >> $GITHUB_ENV
+          echo "S3_BUCKET=STAGING_S3_BUCKET" >> $GITHUB_ENV
+          echo "GOOGLE_ANALYTICS=STAGING_GOOGLE_ANALYTICS" >> $GITHUB_ENV
+      - name: Set env vars (prod)
+        if: endsWith(github.ref, '/master')
+        run: |
+          echo "S3_ID=STAGING_S3_ID" >> $GITHUB_ENV
+          echo "S3_SECRET=STAGING_S3_SECRET" >> $GITHUB_ENV
+          echo "S3_BUCKET=STAGING_S3_BUCKET" >> $GITHUB_ENV
+          echo "GOOGLE_ANALYTICS=STAGING_GOOGLE_ANALYTICS" >> $GITHUB_ENV
     
     - uses: actions/checkout@v2
 

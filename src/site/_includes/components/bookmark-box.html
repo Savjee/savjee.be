@@ -9,7 +9,7 @@
             
             {% if imageUrl %}
                 <div class="image-container">
-                    <img src="{{imageUrl}}" loading="lazy" />
+                    <img src="{{imageUrl}}" alt="Thumbnail for {{title | truncate: 70}}" loading="lazy" />
                 </div>
             {% endif %}
 

@@ -29,6 +29,7 @@ module.exports = function (config) {
     config.addLiquidFilter("getFeatureable", require('./src/utils/filters/getFeaturable'));
     config.addLiquidFilter("reverse", require('./src/utils/filters/reverse'));
     config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
+    config.addLiquidFilter("getRelated", require('./src/utils/filters/getRelated'));
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')

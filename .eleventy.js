@@ -48,7 +48,7 @@ module.exports = function (config) {
             // Fallback to the "date" that Eleventy generates (based
             // on file creation date).
             .sort((a, b) => {
-                return a.uploadDate - b.uploadDate;
+                return a.data.uploadDate - b.data.uploadDate;
             });
     });
 

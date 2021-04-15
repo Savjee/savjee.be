@@ -75,11 +75,9 @@ module.exports = function (config) {
         excerpt_separator: "<!--more-->"
     });
 
-    //
-    // External links should be opened in a new tab and should
-    // not expose personal details
-    //
-    const mila = require("markdown-it-link-attributes");
+
+    // Markdown option: external links should be opened in a 
+    // new tab and not expose personal details
     const milaOptions = {
         pattern: /^https?:/,
         attrs: {
@@ -88,13 +86,25 @@ module.exports = function (config) {
         }
     };
 
-    const lazy_loading = require('markdown-it-image-lazy-loading');
+    // Main options for the Markdown renderer
+    const markdownOptions = {
+        // Allow HTML tags inside md files
+        html: true,
+    };
 
+    const markdownLib = markdownIt(markdownOptions)
+        // Makes sure that each external link opens in a new tab 
+        .use(require("markdown-it-link-attributes"), milaOptions)
 
-    const markdownLib = markdownIt({
-        html: true
-    }).use(mila, milaOptions)
-        .use(lazy_loading);
+        // Generates anchors for all headings
+        .use(require('markdown-it-anchor'))
+        
+        // Generate table of contents when asked (needs anchors to work)
+        .use(require("markdown-it-table-of-contents"))
+
+        // Lazy load all images by default (browser support needed)
+        .use(require('markdown-it-image-lazy-loading'));
+
     config.setLibrary("md", markdownLib);
 
     // Custom "md" tag to render Markdown. This is used for the page excerpt,

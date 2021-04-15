@@ -17,8 +17,7 @@ Before we begin: the code samples shown in this post are for use with the [Ardui
 ---
 
 **Table of contents:**
-* TOC:
-{:toc}
+[[toc]]
 
 ---
 

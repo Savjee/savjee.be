@@ -18,8 +18,7 @@ Still, though, there is room for improvement. It's time to look back, evaluate &
 ---
 
 **Table of contents:**
-* TOC:
-{:toc}
+[[toc]]
 
 ---
 

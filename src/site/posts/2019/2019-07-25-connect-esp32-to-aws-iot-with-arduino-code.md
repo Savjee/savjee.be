@@ -18,8 +18,7 @@ This post will show you how to connect your ESP32 with AWS IoT. Unleash the powe
 ---
 
 **Table of contents:**
-* TOC:
-{:toc}
+[[toc]]
 
 ---
 

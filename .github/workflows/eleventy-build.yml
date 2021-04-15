@@ -58,3 +58,12 @@ jobs:
         S3_ID: ${{ secrets.STAGING_S3_ID }}
         S3_SECRET: ${{ secrets.STAGING_S3_SECRET }}
         S3_BUCKET: ${{ secrets.STAGING_S3_BUCKET }}
+
+    # Notify on Slack!
+    - uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      if: always()

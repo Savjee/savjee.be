@@ -81,8 +81,10 @@ fullwidth: true
         "@type": "VideoObject",
         "name": "{{ title }}",
         "description": "{{ content | strip_html | truncatewords: 40 }}",
-        "thumbnailURL": "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg",
-        "UploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+        "thumbnailURL": [
+            "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
+        ],
+        "uploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
         "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
     },
     {

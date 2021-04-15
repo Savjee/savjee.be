@@ -29,3 +29,17 @@ layout: default
 {% include components/disqus-comments.html %}
 
 <hr>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ title }}",
+        {% if thumbnail %}
+        "image": [
+            "https://www.savjee.be{{upload_directory}}/thumb_master.jpg"
+         ],
+        {% endif %}
+        "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
+    }
+</script>

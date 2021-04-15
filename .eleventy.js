@@ -56,7 +56,10 @@ module.exports = function (config) {
     config.addPairedLiquidShortcode("bibtex", require('./src/utils/shortcode/bibtex'));
 
     config.addPassthroughCopy("src/site/assets");
-    config.addPassthroughCopy("src/site/uploads");
+
+    // Ignore all files starting with underscore (private files such as
+    // thumbnail designs)
+    config.addPassthroughCopy("src/site/uploads/**/(?!_)*");
 
     // Copy all resource files for courses (except the markdown files themselves)
     config.addPassthroughCopy("src/site/courses/**/*[^md]");

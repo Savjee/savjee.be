@@ -29,7 +29,7 @@ jobs:
 
     # Inject Google Analytics ID
     - name: Inject staging Google Analytics ID
-      if: endsWith(github.ref, '/v5-eleventy')
+      if: endsWith(github.ref, '/staging')
       run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
       env:
         GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS }}
@@ -46,11 +46,12 @@ jobs:
 
     # For staging, remove the CloudFront configuration from s3_website (hacky)
     - name: Remove CloudFront config (staging)
+      if: endsWith(github.ref, '/staging')
       run: sed -i -e '/PROD -/,/- PROD/d' s3_website.yml
 
-    # Deploy the site to AWS S3 + CloudFront (if non-staging)
+    # Deploy the site to AWS S3 (staging)
     - name: Deploy staging
-      if: endsWith(github.ref, '/v5-eleventy')
+      if: endsWith(github.ref, '/staging')
       uses: docker://justinharringa/s3_website:master
       with:
         args: 'push'
@@ -58,6 +59,17 @@ jobs:
         S3_ID: ${{ secrets.STAGING_S3_ID }}
         S3_SECRET: ${{ secrets.STAGING_S3_SECRET }}
         S3_BUCKET: ${{ secrets.STAGING_S3_BUCKET }}
+
+    # Deploy the site to AWS S3 + CloudFront (if non-staging)
+    - name: Deploy production
+      if: endsWith(github.ref, '/master')
+      uses: docker://justinharringa/s3_website:master
+      with:
+        args: 'push'
+      env:
+        S3_ID: ${{ secrets.PROD_S3_ID }}
+        S3_SECRET: ${{ secrets.PROD_S3_SECRET }}
+        S3_BUCKET: ${{ secrets.PROD_S3_BUCKET }}
 
     # Notify on Slack!
     - uses: 8398a7/action-slack@v3

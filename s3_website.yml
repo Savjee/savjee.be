@@ -1,9 +1,6 @@
 s3_id: <%= ENV['S3_ID'] %>
 s3_secret: <%= ENV['S3_SECRET'] %>
-s3_bucket: www.savjee.be
-
-# Below are examples of all the available configurations.
-# See README for more detailed info on each of them.
+s3_bucket: <%= ENV['S3_BUCKET'] %>
 
 max_age:
    "*.css": 604800
@@ -17,28 +14,19 @@ max_age:
 gzip:
    - .html
    - .css
-#   - .md
-# gzip_zopfli: true
 
 # See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
 s3_endpoint: eu-west-1
 
-# ignore_on_server: that_folder_of_stuff_i_dont_keep_locally
 
-# exclude_from_upload:
-#   - those_folders_of_stuff
-#   - i_wouldnt_want_to_upload
-
-# s3_reduced_redundancy: true
-
+# PROD -
 cloudfront_distribution_id: <%= ENV['CLOUDFRONT_DISTRIBUTION_ID'] %>
 
 cloudfront_distribution_config:
  default_cache_behavior:
    min_TTL: <%= 60 * 60 * 24 %>
 cloudfront_invalidate_root: true
-
-#concurrency_level: 5
+# - PROD
 
 # Redirects that fix issue's in Google Wemaster
 # (Keeping old Backlink URLs alive!)
@@ -57,13 +45,3 @@ redirects:
    page9: /
    page10: /
    page11: /
-
-# routing_rules:
-#   - condition:
-#       key_prefix_equals: blog/some_path
-#     redirect:
-#       host_name: blog.example.com
-#       replace_key_prefix_with: some_new_path/
-#       http_redirect_code: 301
-
-# extensionless_mime_type: text/html

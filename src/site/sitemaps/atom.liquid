@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: atom.xml
+---
+<?xml version='1.0'?>
+<feed xmlns='http://www.w3.org/2005/Atom'>
+	<title>savjee.be</title>
+	<link href='https://www.savjee.be/'/>
+	<link type='application/atom+xml' rel='self' href='https://www.savjee.be/atom.xml'/>
+	<updated>{{ "now" | date: "%Y-%m-%dT%H:%M:00Z" }}</updated>
+	<id>https://www.savjee.be/</id>
+
+	<author>
+		<name>Xavier Decuyper</name>
+		<email>hi@savjee.be</email>
+	</author>
+
+	{% for post in collections.posts limit:40 %}
+	<entry>
+		<title type="html">{{ post.data.title | escape | strip }}</title>
+		<link type='text/html' href='https://www.savjee.be{{ post.url }}'/>
+		<id>https://www.savjee.be{{ post.url }}</id>
+		<updated>{{ post.date | date: "%Y-%m-%dT%H:%M:00Z"}}</updated>
+
+		<author>
+			<name>Xavier Decuyper</name>
+			<uri>https://www.savjee.be/</uri>
+		</author>
+
+		<content type='html'>
+			<![CDATA[
+				{{ post.data.page.excerpt | strip }}
+			]]>
+		</content>
+	</entry>
+  {% endfor %}
+</feed>

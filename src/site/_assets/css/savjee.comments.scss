@@ -1,0 +1,14 @@
+@import "savjee.colors";
+
+#comments > button{
+    display: block;
+    border: 0;
+    padding: 1.5em;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: $codeBoxBackground;
+    font: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}

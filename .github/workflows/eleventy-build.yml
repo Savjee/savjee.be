@@ -1,0 +1,69 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '15.x'
+
+    - name: Cache node_modules
+      id: cache-node-modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: node-modules-${{ hashFiles('package-lock.json') }}
+
+    - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: npm install
+
+    # Inject Google Analytics ID
+    - name: Inject staging Google Analytics ID
+      if: endsWith(github.ref, '/v5-eleventy')
+      run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+      env:
+        GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS }}
+    
+    - name: Inject production Google Analytics ID
+      if: endsWith(github.ref, '/master')
+      run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+      env:
+        GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS }}
+    
+    # Build Eleventy site
+    - name: Eleventy build
+      run: npm run build
+
+    # For staging, remove the CloudFront configuration from s3_website (hacky)
+    - name: Remove CloudFront config (staging)
+      run: sed -i -e '/PROD -/,/- PROD/d' s3_website.yml
+
+    # Deploy the site to AWS S3 + CloudFront (if non-staging)
+    - name: Deploy staging
+      if: endsWith(github.ref, '/v5-eleventy')
+      uses: docker://justinharringa/s3_website:master
+      with:
+        args: 'push'
+      env:
+        S3_ID: ${{ secrets.STAGING_S3_ID }}
+        S3_SECRET: ${{ secrets.STAGING_S3_SECRET }}
+        S3_BUCKET: ${{ secrets.STAGING_S3_BUCKET }}
+
+    # Notify on Slack!
+    - uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      if: always()

@@ -1,0 +1,50 @@
+---
+layout: page
+title: Courses
+paginate:
+collection: courses
+quote: 
+---
+
+<p>Short explainer videos on YouTube only get you so far. That's why I've created
+these courses to help you learn certain topics in-depth. Enjoy!</p>
+
+
+{% for course in collections.courses %}
+
+  <div class="course-container">
+
+    <div class="display-flex">
+      <div class="course-thumbnail">
+        <a href="{{course.url}}">
+          <img src="{{course.url}}thumb.jpg" loading="lazy">
+        </a>
+      </div>
+
+      <div class="course-description flex-vcenter">
+
+        <div class="course-title">
+          <a href="{{course.url}}">{{course.data.title}}</a>
+        </div>
+
+        <div class="platforms">
+          {% if course.data.link_udemy %}
+             <a href="{{course.data.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+           {% endif %}
+           
+           {% if course.data.link_skillshare %}
+               <a href="{{course.data.link_skillshare}}">Skillshare</a>
+           {% endif %}
+        </div>
+
+        <!-- <a href="{{course.url}}">More details...</a> -->
+      </div>
+    </div>
+
+    <!-- <div class="course-preview"> -->
+        <!-- {{course.excerpt | truncate:300}} <a href="{{course.url}}">More details...</a> -->
+    <!-- </div> -->
+  </div>
+
+  <br>
+{% endfor %}

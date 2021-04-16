@@ -1,0 +1,110 @@
+---
+layout: default
+fullwidth: true
+---
+
+
+<article class='post'>
+    <div class="videobackdrop">
+        <div class="container video">
+            <div class="videowrapper">
+                {% include youtube-embed.html, videoId:videoId %}
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="videoNavigation">
+        <div class="container">
+            {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
+            {% assign videoIndex = vidsInSerie | indexOf: page %}
+
+            {% assign prevIndex = videoIndex | minus: 1 %}
+            {% assign nextIndex = videoIndex | plus: 1 %}
+
+            {% assign prevVideo = vidsInSerie[prevIndex] %}
+            {% assign nextVideo = vidsInSerie[nextIndex] %}
+            
+            {% if prevVideo %}
+                <div class="previousVideo">
+                    <div class="video-">
+                        <a href="{{ prevVideo.url }}">
+                            <p><strong>&larr; Previous video</strong><br>
+                                <span class="hide-overflow-text">{{prevVideo.data.title}}</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if nextVideo %}
+                <div class="nextVideo">
+                        {% unless nextVideo.data.hide %}
+                        <div class="video-">
+                            <a href="{{nextVideo.url}}">
+                                <p>
+                                    <strong>Next video &rarr;</strong><br>
+                                    <span class="hide-overflow-text">{{nextVideo.data.title}}</span>
+                                </p>
+                            </a>
+                        </div>
+                        {% endunless %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class='post-title'>
+            <a href="{{ page.url }}">{{ title }}</a>
+        </h1>
+
+        <div class="post-description">
+            {{ content }}
+        </div>
+        
+        {% comment %}
+        {% include youtube-subscribebutton.html %}
+        {% endcomment %}
+
+        <hr>
+            {% include components/newsletter-box.html %}
+        <hr>
+    </div>
+</article>
+
+<!-- *********** Structured data for Google *********** -->
+<script type="application/ld+json">
+[
+	{
+        "@context": "http://schema.org/",
+        "@type": "VideoObject",
+        "name": "{{ title }}",
+        "description": "{{ content | strip_html | truncatewords: 40 }}",
+        "thumbnailURL": [
+            "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
+        ],
+        "uploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+        "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Videos",
+        "item": "https://savjee.be/videos/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{series}}",
+        "item": "https://savjee.be/videos/{{series | slug }}"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ title }}"
+      }]
+    }
+]
+</script>

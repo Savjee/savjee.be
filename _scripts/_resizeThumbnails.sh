@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-find uploads -type f -iname "thumb_master.jpg" -print0 | while IFS= read -r -d $'\0' line; do
+find src/site/uploads -type f -iname "thumb_master.jpg" -print0 | while IFS= read -r -d $'\0' line; do
 
     # Directory of the file
     DIRECTORY=$(dirname $line)

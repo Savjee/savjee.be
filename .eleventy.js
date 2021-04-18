@@ -101,7 +101,7 @@ module.exports = function (config) {
         .use(require('markdown-it-anchor'))
         
         // Generate table of contents when asked (needs anchors to work)
-        .use(require("markdown-it-table-of-contents"))
+        .use(require("markdown-it-table-of-contents"), { includeLevel: [1, 2, 3] })
 
         // Lazy load all images by default (browser support needed)
         .use(require('markdown-it-image-lazy-loading'));

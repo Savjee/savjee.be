@@ -12,3 +12,10 @@
     cursor: pointer;
     font-weight: bold;
 }
+
+@media (prefers-color-scheme: dark) {
+    #comments > button {
+        background-color: $headerBackgroundDarkMode;
+        color: #fff;
+    }
+}

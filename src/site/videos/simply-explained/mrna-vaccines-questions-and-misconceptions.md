@@ -13,8 +13,7 @@ There are a lot of questions and misconceptions about mRNA vaccines (especially 
 I'm not trying to convince you of anything. Feel free to check out my sources and do your own research.
 
 **Overview of questions:**
-* TOC:
-{:toc}
+[[TOC]]
 
 ---
 

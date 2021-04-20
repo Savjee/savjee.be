@@ -11,9 +11,10 @@
   "private": true,
   "scripts": {
     "start": "eleventy --serve",
-    "build": "npm run build:webpack && npm run build:eleventy",
+    "build": "npm run build:ganalytics && npm run build:webpack && npm run build:eleventy",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
+    "build:ganalytics": "node src/utils/build/google-analytics.js",
     "pack": "webpack --mode production --watch"
   },
   "devDependencies": {

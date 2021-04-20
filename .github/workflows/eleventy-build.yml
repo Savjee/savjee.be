@@ -27,18 +27,18 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm install
 
-    # Inject Google Analytics ID
-    - name: Inject staging Google Analytics ID
-      if: endsWith(github.ref, '/staging')
-      run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
-      env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS }}
+    # # Inject Google Analytics ID
+    # - name: Inject staging Google Analytics ID
+    #   if: endsWith(github.ref, '/staging')
+    #   run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+    #   env:
+    #     GOOGLE_ANALYTICS_ID: ${{ secrets.STAGING_GOOGLE_ANALYTICS }}
     
-    - name: Inject production Google Analytics ID
-      if: endsWith(github.ref, '/master')
-      run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
-      env:
-        GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS }}
+    # - name: Inject production Google Analytics ID
+    #   if: endsWith(github.ref, '/master')
+    #   run: sed -i -e 's/UA-XXXXXXXX-X/'"${GOOGLE_ANALYTICS_ID}"'/g' src/site/_assets/js/analytics.js
+    #   env:
+    #     GOOGLE_ANALYTICS_ID: ${{ secrets.PROD_GOOGLE_ANALYTICS }}
     
     # Build Eleventy site
     - name: Eleventy build

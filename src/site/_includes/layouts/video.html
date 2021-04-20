@@ -3,7 +3,6 @@ layout: default
 fullwidth: true
 ---
 
-
 <article class='post'>
     <div class="videobackdrop">
         <div class="container video">
@@ -13,7 +12,6 @@ fullwidth: true
         </div>
     </div>
     
-
     <div class="videoNavigation">
         <div class="container">
             {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
@@ -62,10 +60,6 @@ fullwidth: true
         <div class="post-description">
             {{ content }}
         </div>
-        
-        {% comment %}
-        {% include youtube-subscribebutton.html %}
-        {% endcomment %}
 
         <hr>
             {% include components/newsletter-box.html %}
@@ -73,7 +67,7 @@ fullwidth: true
     </div>
 </article>
 
-<!-- *********** Structured data for Google *********** -->
+{% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">
 [
 	{

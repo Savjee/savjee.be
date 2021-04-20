@@ -4,7 +4,7 @@ permalink: about.html
 title: About me
 ---
 
-By looking at this website and my content you probably think that I’m a developer and a passionate geek. Spot on! Here are some facts that you probably don't know about me: I’m 25 years old and I live in a country that is so tiny you might not even spot it on a map!
+By looking at this website and my content you probably think that I’m a developer and a passionate geek. Spot on! Here are some facts that you probably don't know about me: I’m 27 years old and I live in a country that is so tiny you might not even spot it on a map!
 
 Besides this blog, I also have [a YouTube channel](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ) and I’ve created [a few e-learning courses](/courses). One of my biggest passions is taking complex topics and simply explaining them. I love doing extensive research and continuously rewrite my posts or video scripts until they make sense. It’s a messy and unstructured process but when I’m finally done, it gives me satisfaction knowing that I’ve helped people to understand new topics.
 

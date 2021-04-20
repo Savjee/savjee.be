@@ -42,6 +42,7 @@ layout: default
 {% include components/disqus-comments.html %}
 
 <script type="application/ld+json">
+[
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -49,8 +50,26 @@ layout: default
         {% if thumbnail %}
         "image": [
             "https://www.savjee.be{{upload_directory}}/thumb_master.jpg"
-         ],
+        ],
         {% endif %}
         "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Blog posts",
+                "item": "https://savjee.be/posts.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{ title }}"
+            }
+        ]
     }
+]
 </script>

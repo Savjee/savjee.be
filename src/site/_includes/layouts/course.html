@@ -4,7 +4,7 @@ layout: default
 
 <article class='post'>
 	<h1 class='post-title'>
-		<a href="{{ url }}">{{ title }}</a>
+		<a href="{{ page.url }}">{{ title }}</a>
 	</h1>
 
 	<p class="no-margin">
@@ -24,3 +24,26 @@ layout: default
 		{{ content }}
 	</div>
 </article>
+
+{% comment %} *********** Structured data for Google *********** {% endcomment %}
+<script type="application/ld+json">
+[
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+	  	{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Courses",
+			"item": "https://savjee.be/courses/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "{{ title }}"
+		}
+	]
+    }
+]
+</script>

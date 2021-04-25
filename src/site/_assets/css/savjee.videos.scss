@@ -104,6 +104,12 @@
 // Spacing between APA citations
 .csl-entry{
     padding-bottom: 1em;
+
+    // Some links are too long for mobile devices. Force line breaks
+    a{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
 }
 
 .latest-videos{

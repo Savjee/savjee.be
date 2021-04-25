@@ -29,7 +29,7 @@
     "html-minifier": "^4.0.0",
     "instant.page": "^5.1.0",
     "markdown-it-anchor": "^7.1.0",
-    "markdown-it-image-lazy-loading": "^1.0.2",
+    "markdown-it-image-lazy-loading": "^1.1.0",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-table-of-contents": "^0.5.2",
     "prism-themes": "^1.6.0",

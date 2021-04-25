@@ -104,7 +104,10 @@ module.exports = function (config) {
         .use(require("markdown-it-table-of-contents"), { includeLevel: [1, 2, 3] })
 
         // Lazy load all images by default (browser support needed)
-        .use(require('markdown-it-image-lazy-loading'));
+        .use(require('markdown-it-image-lazy-loading'), {
+            image_size: true,
+            base_path: __dirname + '/src/site',
+        });
 
     config.setLibrary("md", markdownLib);
 

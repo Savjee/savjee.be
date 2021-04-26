@@ -29,7 +29,11 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 			{% assign latestPosts = collections.posts | getFeatureable %}
 			{% for post in latestPosts limit: 3 %}
 				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-					{% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+					{%- if post.data.upload_directory -%}
+						{% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+					{%- else -%}
+						{% assign postThumb = nil %}
+					{%- endif -%}
 					{% include 
 							components/bookmark-box.html, 
 							url: post.url,
@@ -77,8 +81,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 	<hr>
 </div>
 
-
-<!-- *********** Structured data for Google *********** -->
+{% comment %}*********** Structured data for Google ***********{% endcomment %}
 <script type="application/ld+json">
 [
 	{

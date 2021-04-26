@@ -1,6 +1,8 @@
 .home-box{
     img.me {
         max-height: 340px;
+        width: auto;
+        height: auto;
     }
 
     h1{
@@ -16,5 +18,14 @@
 
     p{
         font-weight:300;
+    }
+}
+
+@media (max-width: 767px) {
+	.home-box{
+        img.me{
+            width: 200px;
+            height: 238px;
+        }
     }
 }

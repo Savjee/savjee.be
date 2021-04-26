@@ -36,6 +36,8 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 							title: post.data.title,
 							imageUrl: postThumb,
 							imageLeft: true,
+							imageWidth: 700,
+							imageHeight: 368
 					%}
 				{% if forloop.index > 2 %}</div>{% endif %}
 			{% endfor %}
@@ -58,6 +60,8 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 						title: vid.data.title,
 						imageUrl: ytThumb,
 						imageLeft: false,
+						imageWidth: 320,
+						imageHeight: 180
 					%}
 				{% if forloop.index > 2 %}</div>{% endif %}
 			{% endfor %}

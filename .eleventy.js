@@ -44,6 +44,10 @@ const csp_preset_cloudflare_web_analytics = {
     "script-src": [
         "static.cloudflareinsights.com",
     ],
+
+    "connect-src": [
+        "cloudflareinsights.com",
+    ],
 };
 
 const csp_preset_youtube_embed = {

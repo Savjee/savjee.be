@@ -25,7 +25,10 @@ window.load_disqus = function () {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('disqus_trigger').addEventListener('click', function(){
-	  load_disqus();
-  });
+	const load_button = document.getElementById('disqus_trigger');
+	if(load_button){
+		load_button.addEventListener('click', function(){
+			load_disqus();
+		});
+	}
 });

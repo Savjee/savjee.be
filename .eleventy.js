@@ -5,7 +5,101 @@ const markdownIt = require("markdown-it");
 
 const pluginSass = require("eleventy-plugin-sass");
 
+
+const { getCSP, nonce, EVAL, INLINE, SELF } = require('csp-header');
+
+const csp_preset_disqus = {
+    "frame-src": [
+        "disqus.com",
+        "c.disquscdn.com", 
+    ],
+
+    "img-src": [
+        "c.disquscdn.com", 
+        "referrer.disqus.com",
+    ],
+
+    "script-src": [
+        "c.disquscdn.com",
+        "disqus.com", 
+        // "savjee.disqus.com", 
+    ],
+
+    "style-src": [
+        "c.disquscdn.com",
+    ]
+};
+
+const csp_preset_google_analytics = {
+    "img-src": [
+        "www.google-analytics.com",
+    ],
+   
+    "script-src": [
+        "www.google-analytics.com",
+    ],
+};
+
+const csp_preset_cloudflare_web_analytics = {
+    "script-src": [
+        "static.cloudflareinsights.com",
+    ],
+};
+
+const csp_preset_youtube_embed = {
+    "frame-src": [
+        "www.youtube.com",
+    ],
+}
+
+const csp_policy = getCSP({
+    directives: {
+        "default-src": [
+            SELF,
+        ],
+
+        "font-src": [
+            SELF, // No external fonts anymore
+        ],
+
+        "img-src": [
+            SELF,
+            "i.ytimg.com",
+            "img.youtube.com",
+            "data:",
+        ],
+
+        "script-src": [
+            SELF,
+            "savjee.disqus.com",
+        ],
+
+        "style-src": [
+            SELF,
+            "'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs='",
+        ],
+
+        "form-action": [
+            // Only allow forms that post to my newsletter site
+            "newsletter.savjee.be",
+        ],
+
+        "block-all-mixed-content": [],
+        // "upgrade-insecure-requests": [],
+    },
+    reportUri: 'https://savjee.report-uri.com/r/d/csp/reportOnly',
+    presets: [
+        csp_preset_disqus,
+        csp_preset_google_analytics,
+        csp_preset_cloudflare_web_analytics,
+        csp_preset_youtube_embed,
+    ]
+});
+
 module.exports = function (config) {
+    config.addLiquidShortcode("csp_policy", () => {
+        return csp_policy;
+    });
     config.addPlugin(syntaxHighlight);
     config.addPlugin(pluginSass, {
         watch: [

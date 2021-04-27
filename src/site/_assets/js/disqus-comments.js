@@ -23,3 +23,9 @@ window.load_disqus = function () {
 		console.error("Could not load comments because target or trigger is not defined.");
 	}
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('disqus_trigger').addEventListener('click', function(){
+	  load_disqus();
+  });
+});

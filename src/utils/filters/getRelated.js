@@ -1,4 +1,8 @@
 module.exports = (collection, inputTags, id) => {
+    if(inputTags === undefined){
+        return [];
+    }
+
     if(!Array.isArray(inputTags)){
         console.warn("getRelated: Tags is not an array");
         return [];

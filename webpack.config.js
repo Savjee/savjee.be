@@ -1,7 +1,6 @@
 const path = require('path');
 module.exports = {
   entry: [
-      "./src/site/_assets/js/analytics.js",
       './src/site/_assets/js/disqus-comments.js',
       './node_modules/instant.page/instantpage.js'
   ],

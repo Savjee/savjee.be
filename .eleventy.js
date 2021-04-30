@@ -30,6 +30,7 @@ module.exports = function (config) {
     config.addLiquidFilter("reverse", require('./src/utils/filters/reverse'));
     config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
     config.addLiquidFilter("getRelated", require('./src/utils/filters/getRelated'));
+    config.addLiquidFilter("htmlImageSize", require('./src/utils/filters/htmlImageSize'));
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')

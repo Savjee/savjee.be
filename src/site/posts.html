@@ -25,7 +25,8 @@ quote: Overview of blog posts on Savjee.be
                 {% if post.data.thumbnail %}
                     <div class="timeline-heading">
                         <a href='{{ post.url }}'>
-                            <img class="img-responsive" src="{{post.data.upload_directory}}/thumb_timeline.jpg" loading="lazy"/>
+                            {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+                            <img class="img-responsive" src="{{thumbnailUrl}}" loading="lazy" {{thumbnailUrl | htmlImageSize }} /> 
                         </a>
                     </div>
                 {% endif %}

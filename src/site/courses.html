@@ -17,7 +17,8 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
     <div class="display-flex">
       <div class="course-thumbnail">
         <a href="{{course.url}}">
-          <img src="{{course.url}}thumb.jpg" loading="lazy">
+          {% assign thumbnailUrl = course.url | append: "thumb.jpg" %}
+          <img src="{{thumbnailUrl}}" loading="lazy" {{ thumbnailUrl | htmlImageSize }}>
         </a>
       </div>
 

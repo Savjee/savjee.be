@@ -24,9 +24,9 @@ quote: Overview of blog posts on Savjee.be
             <div class="timeline-panel">
                 {% if post.data.thumbnail %}
                     <div class="timeline-heading">
-                        <a href='{{ post.url }}'>
+                        <a href='{{ post.url }}' aria-label="Read post: {{ post.data.title }}">
                             {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                            <img class="img-responsive" src="{{thumbnailUrl}}" loading="lazy" {{thumbnailUrl | htmlImageSize }} /> 
+                            <img class="img-responsive" src="{{thumbnailUrl}}" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
                         </a>
                     </div>
                 {% endif %}

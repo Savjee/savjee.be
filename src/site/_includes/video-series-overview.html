@@ -7,9 +7,9 @@
 
         <div class="next-to-each-other">
             <div class="thumb-wrapper">
-                <a href="{{vidsInSerie[0].url}}">
-                    <img src="/assets/img/play-button.svg" class="playbtn">
-                    <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg">
+                <a href="{{vidsInSerie[0].url}}" aria-label="Play the first video in the series '{{ serie.title }}'">
+                    <img src="/assets/img/play-button.svg" class="playbtn" alt="Play button">
+                    <img class="thumb" src="https://i.ytimg.com/vi/{{vidsInSerie[0].data.videoId}}/mqdefault.jpg" alt="Thumbnail for video '{{ vidsInSerie[0].data.title }}'">
                 </a>
 
                 <small>{{vidsInSerie.size}} videos</small>

@@ -28,7 +28,7 @@ This tiny chip uses the ModelGauge  algorithm to measure a battery's capacity. I
 
 It works through an i2c interface, and it can report the battery's percentage and voltage. It also has an interrupt pin, so you can have it wake your microcontroller when the battery dips below a certain level.
 
-And even more good news: it's available as a breakout board for DIY projects, such as [this one from DFRobot](https://www.dfrobot.com/product-1734.html):
+And even more good news: it's available as a breakout board for DIY projects, such as [this one from DFRobot](https://www.dfrobot.com/product-1734.html?tracking=6099f25f89161):
 
 ![](/uploads/2021-04-28-max17043-battery-monitoring/dfrobot-fuel-gauge-i2c.jpg)
 

@@ -1,0 +1,17 @@
+---
+layout: page
+title: "Newsletter"
+---
+
+<p>Monthly newsletter with the latest Simply Explained content and other cool stuff I found on the Internet. Check out the past issues here, and signup if you want your curiosity tickled every month ;)</p>
+
+{% include components/newsletter-box.html, noDescription: true %}
+
+
+<h2>Archive</h2>
+
+{%- for newsletter in collections.newsletter reversed -%}
+    <p>
+        <a href="{{newsletter.url}}">{{newsletter.data.title}}</a>  <small>({{newsletter.date | date: "%Y-%m" }})</small>
+    </p>
+{% endfor %}

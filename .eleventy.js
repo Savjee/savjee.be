@@ -20,6 +20,7 @@ module.exports = function (config) {
     config.addLayoutAlias("video", "layouts/video.html");
     config.addLayoutAlias("page", "layouts/page.html");
     config.addLayoutAlias("course", "layouts/course.html");
+    config.addLayoutAlias("newsletter", "layouts/newsletter.html");
 
     config.addFilter("md", function (content = "") {
         return markdownIt({ html: true }).render(content);

@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/newsletter.html",
+  "permalink": "newsletter/issue/{{ number }}/index.html"
+}

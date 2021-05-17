@@ -8,5 +8,10 @@
 			</div>
 		</form>
 	</div>
-	<small>No more than once a month.<br>No spam, only highlights about my work.</small>
+	{%- unless noDescription -%}
+	<small>
+		Monthly overview of my work and  other cool things I found on the Internet.<br/>
+		<a href="/newsletter">Check out past editions.</a>
+	</small>
+	{%- endunless -%}
 </div>

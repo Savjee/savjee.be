@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: about.html
 title: About me
 ---
 

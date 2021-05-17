@@ -55,6 +55,10 @@ module.exports = function (config) {
             });
     });
 
+    config.addCollection('newsletter', (collectionApi) => {
+       return collectionApi.getFilteredByGlob('src/site/newsletter/**/*.md');
+    });
+
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedLiquidShortcode("bibtex", require('./src/utils/shortcode/bibtex'));
 

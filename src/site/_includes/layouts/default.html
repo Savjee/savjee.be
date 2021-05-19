@@ -73,7 +73,7 @@
             <div class="menu-main-nav-container">
                 <ul id="menu-main-nav" class="menu">
                     <li>
-                        <a href="/posts.html" {%- if page.url contains "/posts/" -%}class="active"{%endif%}>
+                        <a href="/posts/" {%- if page.url contains "/posts/" or page.url contains "/20" -%}class="active"{%endif%}>
                             Posts
                         </a>
                     </li>

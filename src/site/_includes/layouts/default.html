@@ -72,10 +72,26 @@
         <nav role="navigation" class="flex-vcenter">
             <div class="menu-main-nav-container">
                 <ul id="menu-main-nav" class="menu">
-                    <li><a href="/posts.html">Posts</a></li>
-                    <li><a href="/videos/">Videos</a></li>
-                    <li><a href="/courses/">Courses</a></li>
-                    <li><a href="/newsletter/">Newsletter</a></li>
+                    <li>
+                        <a href="/posts.html" {%- if page.url contains "/posts/" -%}class="active"{%endif%}>
+                            Posts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/videos/" {%- if page.url contains "/videos/" -%}class="active"{%endif%}>
+                            Videos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/courses/" {%- if page.url contains "/courses/" -%}class="active"{%endif%}>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/newsletter/" {%- if page.url contains "/newsletter/" -%}class="active"{%endif%}>
+                            Newsletter
+                        </a>
+                    </li>
                     <!-- <li><a href="/about.html">About Me</a></li> -->
                 </ul>
             </div>

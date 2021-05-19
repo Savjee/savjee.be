@@ -60,7 +60,7 @@ module.exports = function (config) {
     });
 
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
-    config.addPairedLiquidShortcode("bibtex", require('./src/utils/shortcode/bibtex'));
+    config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
 
     config.addPassthroughCopy("src/site/assets");
 

@@ -13,6 +13,8 @@ However, when using it together with Arduino, all your code runs on a single cor
 
 <!--more-->
 
+{% include youtube-embed.html, videoId:"WQGAs9MwXno" %}
+
 ## Why?
 There are several use cases for wanting to multitask on a microcontroller. For instance: you might have a microcontroller that reads a temperature sensor, shows it on an LCD, and send it to the cloud.
 

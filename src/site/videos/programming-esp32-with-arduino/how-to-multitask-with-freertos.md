@@ -3,7 +3,7 @@ layout: video
 collection: videos
 title: "How to Multitask with FreeRTOS?"
 videoId: WQGAs9MwXno
-order: 21
+order: 24
 series: Programming ESP32 with Arduino
 uploadDate: 2021-02-09
 not_featureable: true

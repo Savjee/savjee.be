@@ -3,7 +3,7 @@ layout: video
 collection: videos
 title: "Keep WiFi Connection Alive with a FreeRTOS Task"
 videoId: YSGPcm-qxDA
-order: 23
+order: 26
 series: Programming ESP32 with Arduino
 uploadDate: 2021-02-09
 not_featureable: true

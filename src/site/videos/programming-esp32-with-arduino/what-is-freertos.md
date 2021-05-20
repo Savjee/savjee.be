@@ -3,7 +3,7 @@ layout: video
 collection: videos
 title: "What is FreeRTOS?"
 videoId: kP-pP6FEu8I
-order: 20
+order: 23
 series: Programming ESP32 with Arduino
 uploadDate: 2021-02-09
 not_featureable: true

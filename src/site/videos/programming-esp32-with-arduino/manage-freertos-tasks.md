@@ -3,7 +3,7 @@ layout: video
 collection: videos
 title: "Manage FreeRTOS tasks - Suspend, Delay, Resume, Delete"
 videoId: jJaGRCgDo9s
-order: 22
+order: 25
 series: Programming ESP32 with Arduino
 uploadDate: 2021-02-09
 not_featureable: true

@@ -111,7 +111,7 @@ header {
             ul li a{
                 color: #fff;
 
-                &:hover{
+                &:hover, &.active{
                     color: #fff;
                 }
 

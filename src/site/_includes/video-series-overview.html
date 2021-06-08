@@ -22,7 +22,7 @@
         <div class="video-serieList">
             <ol class="no-margin">
                 {% for vid in vidsInSerie %}
-                    {% unless vid.hide %}
+                    {% unless vid.data.hide %}
                         <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
                     {% endunless %}
                 {% endfor %}

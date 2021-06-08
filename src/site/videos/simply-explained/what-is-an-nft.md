@@ -6,8 +6,6 @@ videoId: FkUn86bH34M
 order: 42
 series: Simply explained
 uploadDate: 2021-06-08
-hide: true
-not_featureable: true
 ---
 
 NFT's are an innovation in the blockchain/cryptocurrency space that allows you to track who owns a particular item. Something tricky with digital files because they can easily be copied.  

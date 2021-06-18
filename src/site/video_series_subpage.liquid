@@ -5,6 +5,8 @@ pagination:
     size: 1
     alias: serie
 permalink: "videos/{{ serie.title | slug }}/"
+renderData:
+    title: "{{ serie.title }}"
 ---
 
 <small><a href="/videos">&larr; All Videos</a></small>

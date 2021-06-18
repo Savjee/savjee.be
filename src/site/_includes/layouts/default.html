@@ -4,6 +4,11 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
+    {% comment %} Subpages for video series can't set "title" directly {% endcomment%}
+    {% if title == nil %}
+        {% assign title = renderData.title %}
+    {%endif%}
+
     <title>{{title}} | Savjee.be</title>
 
     <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self';frame-src disqus.com c.disquscdn.com https://*.disquscdn.com www.google.com www.youtube.com www.youtube-nocookie.com accounts.google.com;img-src 'self' c.disquscdn.com referrer.disqus.com https://*.disquscdn.com www.google-analytics.com www.gstatic.com ssl.gstatic.com i.ytimg.com img.youtube.com i.imgur.com data:;script-src 'self' c.disquscdn.com disqus.com savjee.disqus.com https://*.disquscdn.com www.google.com www.google-analytics.com www.gstatic.com apis.google.com;style-src 'self' c.disquscdn.com https://*.disquscdn.com 'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs=';object-src 'none'; base-uri 'self';"> -->

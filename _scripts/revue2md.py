@@ -97,6 +97,8 @@ def fetch_latest_issue():
                         .join(output) \
                         .replace('“','"') \
                         .replace('”','"') \
+                        .replace('’', "'") \
+                        .replace("…", "...") \
                         .replace("?utm_campaign=Simply%20Explained&utm_medium=email&utm_source=Revue%20newsletter", "")
 
     print()

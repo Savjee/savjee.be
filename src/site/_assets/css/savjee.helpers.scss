@@ -29,6 +29,10 @@
     font-weight: normal;
 }
 
+.no-wrap{
+    white-space:nowrap;
+}
+
 @media (max-width: 767px) {
 	.hide-mobile {
         display: none;

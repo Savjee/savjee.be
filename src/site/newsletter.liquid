@@ -12,6 +12,6 @@ title: "Newsletter"
 
 {%- for newsletter in collections.newsletter reversed -%}
     <p>
-        <a href="{{newsletter.url}}">{{newsletter.data.title}}</a>  <small>({{newsletter.date | date: "%Y-%m" }})</small>
+        <a href="{{newsletter.url}}">{{newsletter.data.title}}</a>  <small class="no-wrap">({{newsletter.date | date: "%Y-%m" }})</small>
     </p>
 {% endfor %}

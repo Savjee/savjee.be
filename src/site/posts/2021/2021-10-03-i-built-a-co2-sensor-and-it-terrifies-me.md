@@ -34,7 +34,7 @@ I started my search for a CO2 sensor on AliExpress, but then I came across [a tw
 * Microcontroller: LilyGO TTGO T-Display (ESP32 with built-in TFT display)
 * Optional temperature & humidity sensor: DHT22
 
-Sure, buying all these components on AliExpress would be a lot cheaper, -but I wanted to buy from a local business-. Okay, not really. I wanted instant gratification and ordering from a local company meant I only had to wait a day (versus a few weeks with AliExpress).
+Sure, buying all these components on AliExpress would be a lot cheaper, ~~but I wanted to buy from a local business~~. Okay, not really. I wanted instant gratification and ordering from a local company meant I only had to wait a day (versus a few weeks with AliExpress).
 
 ![](/uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/controlco2-space-sensor-kit-1.jpg)
 

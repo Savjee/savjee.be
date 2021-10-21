@@ -2,7 +2,7 @@
 layout: post
 title: "Secure Home Assistant Access with Cloudflare and Ubiquiti Dream Machine"
 quote:
-tags: [Home Assistant, Smart Home, Ubiquiti]
+tags: [Home Assistant, Smart Home, Ubiquiti, Cloudflare]
 thumbnail: /uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/thumb_timeline.jpg
 upload_directory: /uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine
 ---

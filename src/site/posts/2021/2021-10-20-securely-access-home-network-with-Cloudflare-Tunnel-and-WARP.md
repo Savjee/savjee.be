@@ -2,7 +2,7 @@
 layout: post
 title: "Securely access home network with Cloudflare Tunnel and WARP"
 quote: 
-tags: [Proxmox]
+tags: [Cloudflare, Proxmox]
 upload_directory: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/
 thumbnail: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/thumb_timeline.jpg
 ---

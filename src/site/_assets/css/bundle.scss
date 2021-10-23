@@ -1,3 +1,7 @@
+// TODO: loading bootstrap first isn't ideal.
+//       I do this because some styles are overwritten.
+@import '~bootstrap/dist/css/bootstrap-grid.min';
+
 @import 'savjee';
 @import 'savjee.typography';
 @import 'savjee.helpers';
@@ -14,7 +18,9 @@
 
 // External dependencies
 @import 'lib/pure-tables-min';
-@import 'lib/bootstrap-grid';
 
-@import '../../../../node_modules/prism-themes/themes/prism-coldark-cold.css' (prefers-color-scheme: light);
-@import '../../../../node_modules/prism-themes/themes/prism-coldark-dark.css' (prefers-color-scheme: dark);
+// Prism code highlighting themes
+@import '~prism-themes/themes/prism-coldark-cold';
+@media (prefers-color-scheme: dark) {
+    @import '~prism-themes/themes/prism-coldark-dark';
+}

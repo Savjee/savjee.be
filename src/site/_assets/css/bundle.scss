@@ -16,5 +16,8 @@
 @import 'lib/pure-tables-min';
 @import 'lib/bootstrap-grid';
 
-@import '../../../../node_modules/prism-themes/themes/prism-coldark-cold.css' (prefers-color-scheme: light);
-@import '../../../../node_modules/prism-themes/themes/prism-coldark-dark.css' (prefers-color-scheme: dark);
+// Prism code highlighting themes
+@import '~prism-themes/themes/prism-coldark-cold';
+@media (prefers-color-scheme: dark) {
+    @import '~prism-themes/themes/prism-coldark-dark';
+}

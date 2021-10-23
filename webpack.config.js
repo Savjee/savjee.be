@@ -1,8 +1,10 @@
 const path = require('path');
+
 module.exports = {
   entry: [
       './src/site/_assets/js/disqus-comments.js',
-      './node_modules/instant.page/instantpage.js'
+      './node_modules/instant.page/instantpage.js',
+      './src/site/_assets/css/bundle.scss',
   ],
   module: {
     rules: [
@@ -15,6 +17,25 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
+        },
+        {
+            test: /\.scss$/,
+            exclude: /(node_modules)/,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: { outputPath: 'css/', name: '[name].min.css' }
+                },
+
+                {
+                  loader: 'sass-loader',
+                  options: {
+                    sassOptions: {
+                        outputStyle: 'compressed'
+                    }
+                  }
+                },
+            ]
         }
     ]
   },

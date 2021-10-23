@@ -23,6 +23,7 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
     "babel-loader": "^8.2.2",
+    "bootstrap": "^4.6.0",
     "eleventy-plugin-bibtex": "^0.1.1",
     "file-loader": "^6.2.0",
     "html-minifier": "^4.0.0",

@@ -2,36 +2,52 @@
 layout: null
 permalink: atom.xml
 ---
-<?xml version='1.0'?>
-<feed xmlns='http://www.w3.org/2005/Atom'>
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
 	<title>savjee.be</title>
-	<link href='https://savjee.be/'/>
-	<link type='application/atom+xml' rel='self' href='https://savjee.be/atom.xml'/>
-	<updated>{{ "now" | date: "%Y-%m-%dT%H:%M:00Z" }}</updated>
-	<id>https://savjee.be/</id>
+    <subtitle>Personal blog of Xavier Decuyper. In-depth, technical blog posts, and Simply Explained videos.</subtitle>
+    
+    <link rel="self" type="application/atom+xml" href="https://savjee.be/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://savjee.be/"/>
+    
+    <updated>{{ "now" | date: "%Y-%m-%dT%H:%M:00Z" }}</updated>
+    <id>https://savjee.be/</id>
 
-	<author>
-		<name>Xavier Decuyper</name>
-		<email>hi@savjee.be</email>
-	</author>
+    <author>
+        <name>Xavier Decuyper</name>
+        <email>hi@savjee.be</email>
+    </author>
 
-	{% for post in collections.posts limit:40 %}
-	<entry>
-		<title type="html">{{ post.data.title | escape | strip }}</title>
-		<link type='text/html' href='https://savjee.be{{ post.url }}'/>
-		<id>https://savjee.be{{ post.url }}</id>
-		<updated>{{ post.date | date: "%Y-%m-%dT%H:%M:00Z"}}</updated>
+    <webfeeds:icon>https://savjee.be/assets/img/logo-rounded.svg</webfeeds:icon>
+    <webfeeds:logo>https://savjee.be/assets/img/logo-rounded.svg</webfeeds:logo>
+    <webfeeds:accentColor>E80001</webfeeds:accentColor>
 
-		<author>
-			<name>Xavier Decuyper</name>
-			<uri>https://savjee.be/</uri>
-		</author>
+    {% for post in collections.posts limit:40 -%}
+        <entry>
+            <title type="html">{{ post.data.title | escape | strip }}</title>
+            <link type="text/html" href="https://savjee.be{{ post.url }}"/>
+            <id>https://savjee.be{{ post.url }}</id>
+            <updated>{{ post.date | date: "%Y-%m-%dT%H:%M:00Z"}}</updated>
 
-		<content type='html'>
-			<![CDATA[
-				{{ post.data.page.excerpt | strip }}
-			]]>
-		</content>
-	</entry>
-  {% endfor %}
+            <author>
+                <name>Xavier Decuyper</name>
+                <uri>https://savjee.be/</uri>
+            </author>
+
+            {%- if post.data.tags -%}
+                {%- for tag in post.data.tags %}
+                    <category term="{{tag}}" />
+                {%- endfor %}
+            {%- endif %}
+
+            <content type="html">
+                <![CDATA[
+                    {{ post.data.page.excerpt | strip }}
+                    {% if post.data.thumbnail %}
+                        <img src="https://savjee.be{{post.data.thumbnail}}" class="webfeedsFeaturedVisual">
+                    {% endif %}
+                ]]>
+            </content>
+        </entry>
+    {% endfor %}
 </feed>

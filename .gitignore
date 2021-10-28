@@ -1,5 +1,6 @@
 _site/
 !_site/_redirects
+!_site/_headers
 _tmp/
 .DS_Store
 node_modules/

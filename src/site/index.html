@@ -6,49 +6,49 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 ---
 
 <div class="container home-box">
-	<div class="row">
-		<div class="col-md-5 text-center">
-			<a href="/about">
-				<img src="/assets/img/me.png" alt="Photo of me" class="fluid-image me" width="600" height="714">
-			</a>
-		</div>
-		<div class="col-md-7 d-flex align-items-center">
-			<div>
-				<h1>Hi there, I'm Xavier.</h1>
-				<h3>I'm a full-stack developer & <a href="/videos">YouTuber</a>.</h3>
-				<p>I love taking complicated topics and explaining them in plain-English.</p>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-5 text-center">
+            <a href="/about">
+                <img src="/assets/img/me.png" alt="Photo of me" class="fluid-image me" width="600" height="714">
+            </a>
+        </div>
+        <div class="col-md-7 d-flex align-items-center">
+            <div>
+                <h1>Hi there, I'm Xavier.</h1>
+                <h3>I'm a full-stack developer & <a href="/videos">YouTuber</a>.</h3>
+                <p>I love taking complicated topics and explaining them in plain-English.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div>
-	<hr>
-	{% include components/latest-content.html %}	
-	<hr>
-	{% include components/newsletter-box.html %}
-	<hr>
+    <hr>
+    {% include components/latest-content.html %}    
+    <hr>
+    {% include components/newsletter-box.html %}
+    <hr>
 </div>
 
 {% comment %}*********** Structured data for Google ***********{% endcomment %}
 <script type="application/ld+json">
 [
-	{
-		"@context": "http://schema.org",
-		"@type": "WebSite",
-		"name": "Savjee",
-		"url": "https://savjee.be/"
-	},
-	{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"url": "https://savjee.be/",
-		"logo": "https://savjee.be/assets/img/logo.svg",
-		"sameAs": [
-			"https://www.facebook.com/savjee",
-			"https://www.youtube.com/savjee",
-			"https://twitter.com/Savjee"
-		]
-	}
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "Savjee",
+        "url": "https://savjee.be/"
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://savjee.be/",
+        "logo": "https://savjee.be/assets/img/logo.svg",
+        "sameAs": [
+            "https://www.facebook.com/savjee",
+            "https://www.youtube.com/savjee",
+            "https://twitter.com/Savjee"
+        ]
+    }
 ]
 </script>

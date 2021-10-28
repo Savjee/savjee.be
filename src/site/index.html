@@ -24,60 +24,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 
 <div>
 	<hr>
-
-	<div class="row">
-		<div class="col-md-6">
-			<h3 class="no-margin">Latest posts</h3>
-			{% assign latestPosts = collections.posts | getFeatureable %}
-			{% for post in latestPosts limit: 3 %}
-				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-					{%- if post.data.upload_directory -%}
-						{% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-					{%- else -%}
-						{% assign postThumb = nil %}
-					{%- endif -%}
-					{% include 
-							components/bookmark-box.html, 
-							url: post.url,
-							title: post.data.title,
-							imageUrl: postThumb,
-							imageLeft: true,
-							imageWidth: 700,
-							imageHeight: 368
-					%}
-				{% if forloop.index > 2 %}</div>{% endif %}
-			{% endfor %}
-
-			<p>
-				<a href="/posts/">📝 More posts</a>
-			</p>
-		</div>
-
-		<div class="col-md-6">
-			<h3 class="no-margin">Latest videos</h3>
-
-			{% assign latestVideos = collections.videos | reverse | getFeatureable %}
-			{% for vid in latestVideos limit: 3 %}
-				{% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-					{% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
-					{% include 
-						components/bookmark-box.html, 
-						url: vid.url,
-						title: vid.data.title,
-						imageUrl: ytThumb,
-						imageLeft: false,
-						imageWidth: 320,
-						imageHeight: 180
-					%}
-				{% if forloop.index > 2 %}</div>{% endif %}
-			{% endfor %}
-
-			<p class="text-md-right">
-				<a href="/videos/">More videos 📹</a>
-			</p>
-		</div>
-	</div>
-	
+	{% include components/latest-content.html %}	
 	<hr>
 	{% include components/newsletter-box.html %}
 	<hr>

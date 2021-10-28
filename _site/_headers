@@ -1,2 +1,8 @@
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+
+/*
+  Referrer-Policy: no-referrer
+  Feature-Policy: accelerometer 'none'; ambient-light-sensor 'none'; battery 'none'; camera 'none'; display-capture 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'
+  Referrer-Policy: no-referrer-when-downgrade
+  X-Content-Type-Options: nosniff

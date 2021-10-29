@@ -320,7 +320,7 @@ reportedObj["myVariableName"] = "MyValue";
 If you want to see the resulting JSON on the serial console, you can use the `serializeJson` method:
 
 ```cpp
-serializeJson(doc, Serial);
+serializeJson(jsonDoc, Serial);
 ```
 
 ## Loop/Setup function

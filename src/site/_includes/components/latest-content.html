@@ -10,7 +10,7 @@
                     {% assign postThumb = nil %}
                 {%- endif -%}
                 {% include 
-                        components/bookmark-box.html, 
+                        "components/bookmark-box.html", 
                         url: post.url,
                         title: post.data.title,
                         imageUrl: postThumb,
@@ -34,7 +34,7 @@
             {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
                 {% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
                 {% include 
-                    components/bookmark-box.html, 
+                    "components/bookmark-box.html", 
                     url: vid.url,
                     title: vid.data.title,
                     imageUrl: ytThumb,

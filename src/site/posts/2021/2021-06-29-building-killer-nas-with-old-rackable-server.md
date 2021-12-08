@@ -35,7 +35,7 @@ And then there are the OpenMediaVault issues. It would often crash without reaso
 Time to look for a better solution. So I made a wishlist:
 
 * Room for expansion. My storage needs will only increase over time.
-* Swap OpenMediaVault for Unraid
+* Swap OpenMediaVault for UnRAID 
 * No external enclosures. Use SATA ports!
 * I have a short-depth 19" server rack, so it would be cool if the new solution were rack-mountable.
 
@@ -67,11 +67,11 @@ Some users on the ServeTheHome Forum reported that you could swap out the mother
 
 
 ## Testing the hardware
-The server shipped from Poland and arrived in Belgium about 3 days later. I started by verifying if the hardware was working correctly. I was particularly interested in the SATA backplane and the RAID controller. If those were broken, I could effectively throw away the entire thing.
+The server shipped from Poland and arrived in Belgium about 3 days later. I started by verifying if the hardware was working correctly. I was particularly interested in the SATA backplane. If that was broken, I could effectively throw away the entire thing.
 
 I inserted a few SSDs into the slots, and the RAID controller detected them. Unfortunately, the controller can't pass through the raw disks. Even in JBOD mode, it messes up the SMART stats and serial numbers. So I need to buy a separate SATA controller or HBA card. More on that later. 
 
-I did test the backplane by using a reverse breakout cable to convert a single SF8087 port into 4 SATA ports. I plugged them into a motherboard, and the drives showed up with a 6Gbps link! That's exactly what I needed.
+I then tested the backplane separately by using a reverse breakout cable to convert a single SF8087 port into 4 SATA ports. I plugged them into a motherboard, and the drives showed up with a 6Gbps link! That's exactly what I needed.
 
 ![The SATA backplane of the server.](/uploads/2021-06-29-building-killer-nas-with-old-rackable-server/rackable-arima-backplane.jpg)
 _The SATA backplane of the server._

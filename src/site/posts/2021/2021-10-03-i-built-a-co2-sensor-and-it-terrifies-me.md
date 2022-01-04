@@ -50,7 +50,7 @@ Not long after, it went into alarm mode. The display started flashing red, indic
 ![](/uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/controlco2-space-sensor-kit-3.gif)
 
 ## 3D printed case
-This wouldn't be a DIY project without some 3D printing. I was going to design one myself, but the creators of the kit already did that. No point in reinventing the wheel, so I downloaded their STL files, sent it to my printer and an hour later, I had a nice cloud-shaped case with two buttons on the front:
+This wouldn't be a DIY project without some 3D printing. I was going to design one myself, but the creators of the kit already did that. No point in reinventing the wheel, so I downloaded [their STL files](https://github.com/controlco2/3D-print), sent it to my printer and an hour later, I had a nice cloud-shaped case with two buttons on the front:
 
 ![](/uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/controlco2-space-sensor-kit-4.jpg)
 

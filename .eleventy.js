@@ -22,6 +22,7 @@ module.exports = function (config) {
     config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
     config.addLiquidFilter("getRelated", require('./src/utils/filters/getRelated'));
     config.addLiquidFilter("htmlImageSize", require('./src/utils/filters/htmlImageSize'));
+    config.addLiquidFilter("groupByYear", require('./src/utils/filters/groupByYear'));
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')

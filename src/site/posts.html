@@ -5,56 +5,36 @@ quote: Overview of blog posts on Savjee.be
 ---
 
 <div class="md:max-w-3xl mx-auto">
-    {% assign lastYear = 0 %}
-
-    {% for post in collections.posts %}
-        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-
-        {% if forloop.first == true %}
-            {% assign lastYear = this_year %}
-            <div class="container2">
-                <div class="page-header text-center">
-                    <h1 class='text-center'>{{this_year}}</h1>
-                </div>
-                <ul class="timeline">
-        {% endif %}
-
-        <li class="timeline{% cycle '-panel', '-inverted' %}">
-            <div class="timeline-panel">
-                {% if post.data.thumbnail %}
-                    <div class="timeline-heading">
-                        <a href='{{ post.url }}' aria-label="Read post: {{ post.data.title }}">
-                            {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                            <img class="img-responsive" src="{{thumbnailUrl}}" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
-                        </a>
-                    </div>
-                {% endif %}
-
-                <div class="timeline-body">
-                    <p><a href='{{ post.url }}'>{{ post.data.title }}</a></p>
-                </div>
+    {% assign groupedPosts = collections.posts | groupByYear %}
+    
+    {% for yearObj in groupedPosts %}
+        <div class="container2">
+            <div class="page-header text-center">
+                <h1 class='text-center'>{{ yearObj.year }}</h1>
             </div>
-        </li>
+            <ul class="timeline">
+                {% for post in yearObj.posts %}
+                    <li class="timeline{% cycle '-panel', '-inverted' %}">
+                        <div class="timeline-panel">
+                            {% if post.data.thumbnail %}
+                                <div class="timeline-heading">
+                                    <a href='{{ post.url }}' aria-label="Read post: {{ post.data.title }}">
+                                        {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+                                        <img class="img-responsive" src="{{thumbnailUrl}}" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
+                                    </a>
+                                </div>
+                            {% endif %}
 
-        {% if forloop.last == true %}
-            <li class="clearfix"></li>
+                            <div class="timeline-body">
+                                <p><a href='{{ post.url }}'>{{ post.data.title }} {{this_year}}</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    {% if forloop.last == true %}
+                        <li class="clearfix"></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
-            </div>
-        {% else %}
-            {% if this_year != lastYear %}
-                {% assign lastYear = this_year %}
-
-                <li class="clearfix"></li>
-                </ul>
-                </div>
-
-                <div class="container2">
-                    <div class="page-header text-center">
-                        <h1 id="timeline" class='text-center'>{{this_year}}</h1>
-                    </div>
-
-                    <ul class="timeline">
-            {% endif %}
-        {% endif %}
+        </div>
     {% endfor %}
 </div>

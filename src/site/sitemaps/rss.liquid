@@ -15,19 +15,15 @@ permalink: rss.xml
       <link>https://savjee.be/</link>
     </image>
 
-    <webfeeds:icon>https://savjee.be/assets/img/logo-rounded.svg</webfeeds:icon>
-    <webfeeds:logo>https://savjee.be/assets/img/logo-rounded.svg</webfeeds:logo>
-    <webfeeds:accentColor>E80001</webfeeds:accentColor>
-
     <lastBuildDate>Wed, 12 Jan 2022 09:43:16 GMT</lastBuildDate>
-    <atom:link href="https://savjee.be/atom.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://savjee.be/rss.xml" rel="self" type="application/rss+xml" />
 
     {% for post in collections.posts limit:40 -%}
         <item>
-            <title>{{ post.data.title | escape | strip }}</title>
-            <link href="https://savjee.be{{ post.url }}"/>
+            <title><![CDATA[{{ post.data.title | strip }}]]></title>
+            <link>https://savjee.be{{ post.url }}</link>
             <guid isPermaLink="true">https://savjee.be{{ post.url }}</guid>
-            <pubDate>{{ post.date | date: "%Y-%m-%dT%H:%M:00Z"}}</pubDate>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S GMT"}}</pubDate>
             <dc:creator>Xavier Decuyper</dc:creator>
 
             {%- if post.data.tags -%}

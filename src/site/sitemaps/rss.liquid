@@ -35,6 +35,7 @@ permalink: rss.xml
             {%- if post.data.thumbnail -%}
                 <media:content url="https://savjee.be{{post.data.upload_directory}}thumb_master.jpg" medium="image" />
             {%- endif -%}
+
             <content:encoded>
                 <![CDATA[
                     {{ post.data.page.excerpt | strip }}
@@ -42,7 +43,8 @@ permalink: rss.xml
                         <img src="https://savjee.be{{post.data.upload_directory}}/thumb_master.jpg" class="webfeedsFeaturedVisual">
                     {% endif %}
                 ]]>
-            </content>
+            </content:encoded>
         </item>
     {% endfor %}
-</feed>
+</channel>
+</rss>

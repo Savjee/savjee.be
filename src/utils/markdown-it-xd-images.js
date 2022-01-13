@@ -44,7 +44,7 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
 
     if(fileExists(webpPath) !== undefined){
         return `
-            <picture loading="lazy" width="${dimensions.width} height="${dimensions.height}">
+            <picture loading="lazy" width="${dimensions.width}" height="${dimensions.height}">
                 <source srcset="${imgSrc.substring(0, imgSrc.length - 3) + "webp"}" type="image/webp">
                 ${defaultRender}
             </picture>

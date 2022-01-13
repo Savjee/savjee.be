@@ -8,7 +8,7 @@ function fileExists(pathName){
     try{
         return statSync(pathName, {throwIfNoEntry: false});
     }catch(e){
-        return false;
+        return undefined;
     }
 }
 

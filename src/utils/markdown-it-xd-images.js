@@ -3,7 +3,13 @@
 const {statSync} = require("fs");
 
 function fileExists(pathName){
-    return statSync(pathName, {throwIfNoEntry: false});
+    // The try-catch here is for Cloudflare Pages, which runs on 
+    // Nodejs v12, and doesn't have the "throwIfNoEntry" option
+    try{
+        return statSync(pathName, {throwIfNoEntry: false});
+    }catch(e){
+        return false;
+    }
 }
 
 /**

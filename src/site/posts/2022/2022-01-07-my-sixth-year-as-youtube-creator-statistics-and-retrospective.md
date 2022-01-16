@@ -22,7 +22,7 @@ Let's start by looking at my YouTube channel. Here are the key metrics:
 * 168,647 new subscribers (↘️ down from 220,824 last year)
 * 573,258 hours watched (↗️ up from 220,824 last year)
 * 3:28 average time watched (➡️ equal to last year)
-* [10 members on YouTube](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ/join) (↗️ up from 8 last year)
+* [10 members on YouTube](https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ/join)(↗️ up from 8 last year)
 
 I'm very happy with these numbers. As mentioned in the introduction, this has been my most successful year on YouTube so far.
 

@@ -1,0 +1,50 @@
+---
+layout: null
+permalink: rss.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>savjee.be</title>
+    <description>Personal blog of Xavier Decuyper. In-depth, technical blog posts, and Simply Explained videos.</description>
+    <link>https://savjee.be/</link>
+    <image>
+      <url>https://savjee.be/assets/img/logo-rounded.svg</url>
+      <title>savjee.be</title>
+      <link>https://savjee.be/</link>
+    </image>
+
+    <lastBuildDate>Wed, 12 Jan 2022 09:43:16 GMT</lastBuildDate>
+    <atom:link href="https://savjee.be/rss.xml" rel="self" type="application/rss+xml" />
+
+    {% for post in collections.posts limit:40 -%}
+        <item>
+            <title><![CDATA[{{ post.data.title | strip }}]]></title>
+            <link>https://savjee.be{{ post.url }}</link>
+            <guid isPermaLink="true">https://savjee.be{{ post.url }}</guid>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S GMT"}}</pubDate>
+            <dc:creator>Xavier Decuyper</dc:creator>
+
+            {%- if post.data.tags -%}
+                {%- for tag in post.data.tags %}
+                    <category><![CDATA[{{tag}}]]></category>
+                {%- endfor %}
+            {%- endif %}
+
+            {%- if post.data.thumbnail -%}
+                <media:content url="https://savjee.be{{post.data.upload_directory}}thumb_master.jpg" medium="image" />
+            {%- endif -%}
+
+            <content:encoded>
+                <![CDATA[
+                    {{ post.data.page.excerpt | strip }}
+                    {% if post.data.thumbnail %}
+                        <img src="https://savjee.be{{post.data.upload_directory}}/thumb_master.jpg" class="webfeedsFeaturedVisual">
+                    {% endif %}
+                ]]>
+            </content:encoded>
+        </item>
+    {% endfor %}
+</channel>
+</rss>

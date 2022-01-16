@@ -102,14 +102,14 @@ Note that in the CSV file, all paths are relative to the `build` directory. That
 With the CSV file ready, you can generate a bin file for the NVS partition using `nvs_partition_gen.py`. It's a command-line tool made by Espressif and is included in ESP-IDF:
 
 ```
-~/esp/esp-idf/components/nvs_flash/nvs_partition_generator/nvs_partition_gen.py generate "../main/nvs.csv" certs.bin 12288
+~/esp/esp-idf/components/nvs_flash/nvs_partition_generator/nvs_partition_gen.py generate "../main/nvs.csv" certs.bin 16384
 ```
 
 The tool takes three parameters:
 
 * `../main/nvs.csv`→ The path to the CSV file we just created.
 * `certs.bin` → Path to the output file
-* `12288` → The size of the NVS partition in bytes.
+* `16384` → The size of the NVS partition in bytes.
 
 Once again, these paths are relative to the `build` directory, so the output will be stored there.
 

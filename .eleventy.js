@@ -23,6 +23,7 @@ module.exports = function (config) {
     config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
     config.addLiquidFilter("getRelated", require('./src/utils/filters/getRelated'));
     config.addLiquidFilter("htmlImageSize", require('./src/utils/filters/htmlImageSize'));
+    config.addLiquidFilter("groupByYear", require('./src/utils/filters/groupByYear'));
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')
@@ -101,7 +102,7 @@ module.exports = function (config) {
         .use(require("markdown-it-table-of-contents"), { includeLevel: [1, 2, 3] })
 
         // Lazy load all images by default (browser support needed)
-        .use(require('markdown-it-image-lazy-loading'), {
+        .use(require('./src/utils/markdown-it-xd-images'), {
             image_size: true,
             base_path: __dirname + '/src/site',
         });

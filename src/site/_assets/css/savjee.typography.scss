@@ -37,7 +37,7 @@ article {
         font-size: 1.17em;
     }
 
-    img + em{ // Captions for images
+    img + em, picture + em{ // Captions for images
         font-size: 0.8em;
     }
 

@@ -18,7 +18,7 @@ Missed the other parts? Read them here:
 * **Part 3: Transactions & mining rewards**
 * [Part 4: Signing transactions]({% link collections.posts, '2018-10-27-Signing-transactions-blockchain-javascript' %})
 
-{% include youtube-embed.html, videoId:'fRV6cGXVQ4I' %}
+{% include "youtube-embed.html", videoId:'fRV6cGXVQ4I' %}
 
 ## Restructuring the Block class
 Right now a block has the index, previousHash, timestamp, data, hash and nonce properties. The `index` property isn’t really useful, in fact I don’t even know why I added it to begin with. So let’s remove that and lets rename `data` to `transactions` which makes more sense.

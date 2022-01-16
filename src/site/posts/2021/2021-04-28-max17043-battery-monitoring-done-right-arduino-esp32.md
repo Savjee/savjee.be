@@ -12,7 +12,7 @@ Building a battery-powered IoT device? Then you'll want to monitor the battery's
 <!--more-->
 
 
-{% include youtube-embed.html, videoId:"mhmD-QA6kf0" %}
+{% include "youtube-embed.html", videoId:"mhmD-QA6kf0" %}
 
 ## The problem
 Many websites tell you to measure the battery level by measuring its voltage. Usually with a voltage divider to bring down the voltage so that an ADC can read it.

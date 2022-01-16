@@ -26,5 +26,5 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
 {% assign series = video_series %}
 
 {% for serie in series %}
-    {% include video-series-overview.html, serieTitle:serie.title %}
+    {% include "video-series-overview.html", serieTitle:serie.title %}
 {% endfor %}

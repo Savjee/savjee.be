@@ -59,7 +59,7 @@ pipelines:
 
 Don’t commit this file just yet and open a new tab instead! Note that I use environment variables to store the FTP username and password. I’ll later show you how to define these variables in BitBucket.
 
-{% include youtube-embed.html, videoId:'8HZhHtZebdw' %}
+{% include "youtube-embed.html", videoId:'8HZhHtZebdw' %}
 
 # Config file for s3_website
 For deploying a static website to Amazon S3 I have this ``bitbucket-pipelines.yml`` configuration file:
@@ -84,7 +84,7 @@ s3_bucket: bitbucket-pipelines
 
 Just as with the FTP configuration file: don’t commit this file just yet! We have to define the environment variables ``S3_ID`` and ``S3_SECRET`` first.
 
-{% include youtube-embed.html, videoId:'57pwPxJer1E' %}
+{% include "youtube-embed.html", videoId:'57pwPxJer1E' %}
 
 # Environment variables
 "Wait a minute Xavier!", you might say. "I’m not going to commit my credentials to my git repository!". And you would be correct. Committing sensitive credentials to git repositories is never a good idea. Instead you can use environment variables to store credentials outside of your git repository.
@@ -110,7 +110,7 @@ For deploying to Amazon S3 with s3_website you’ll need:
 
 In case you’re wondering: they don’t have to be in caps, but it’s sort of a convention for environment variables.
 
-{% include youtube-embed.html, videoId:'RVwkT4oHDd8' %}
+{% include "youtube-embed.html", videoId:'RVwkT4oHDd8' %}
 
 
 # Triggering a build

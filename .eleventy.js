@@ -1,10 +1,8 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 module.exports = function (config) {
     config.addPlugin(syntaxHighlight);
-    config.addPlugin(UpgradeHelper);
 
     // Savjee
     config.addLayoutAlias("default", "layouts/default.html");

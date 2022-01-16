@@ -1,5 +1,4 @@
 import { walk } from "@root/walk";
-import { Dirent } from "fs";
 import path from "path";
 import sharp from "sharp";
 import { stat } from "fs/promises";

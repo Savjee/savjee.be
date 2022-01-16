@@ -12,30 +12,10 @@ function random_number (min, max) {
 
 
 /**
- * Function that checks if a givin string is in the givin array
- *
- * @param	string	string
- * @param	array 	array
- * @return	bool
- */
-function inArray(string, array){
-	var output = false;
-
-	for(i=0; i <= array.length; i++){
-		if(string == array[i]){
-			output = true;
-		}
-	}
-
-	return output;
-}
-
-
-/**
  * Function that adds leading zero's to a givin number
  */
 function pad(number, length) {
-	var str = '' + number;
+	let str = '' + number;
 
 	while (str.length < length) {
 		str = '0' + str;
@@ -52,13 +32,13 @@ function pad(number, length) {
  * @param	integer		group
  */
 function colorLeds(amount, group){
-	var arr_colored = [];
+	let arr_colored = [];
 
 	while( arr_colored.length != amount ){
 
-		var num = random_number(0, arr_leds[group]);
+		let num = random_number(0, arr_leds[group]);
 
-		if( !inArray(num, arr_colored) ){
+		if(arr_colored.find(el => el === num) === undefined){
 
 			document.getElementById(group + '_' + num).className = 'active';
 
@@ -74,7 +54,7 @@ function colorLeds(amount, group){
 function clearLeds(){
 	var elements = document.getElementsByTagName('div');
 
-	for(i=0; i<=elements.length-1; i++){
+	for(let i=0; i<=elements.length-1; i++){
 		if(elements[i].className == 'active'){
 			elements[i].className = '';
 		}
@@ -85,7 +65,7 @@ function clearLeds(){
  * Function to update the time of the pixClock
  */
 function updateTime(){
-	var currentTime = new Date()
+	var currentTime = new Date();
 
 	var hour = pad( currentTime.getHours(), 2);
 	var minutes = pad( currentTime.getMinutes(), 2);
@@ -106,15 +86,3 @@ setInterval(function(){
 	clearLeds();
 	updateTime();
 }, 4000);
-
-// Google Analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-21432611-1']);
-_gaq.push(['_setDomainName', 'savjee.be']);
-_gaq.push(['_trackPageview']);
-
-(function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();

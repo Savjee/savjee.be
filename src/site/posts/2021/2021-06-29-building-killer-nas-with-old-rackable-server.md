@@ -232,7 +232,7 @@ Here's a breakdown of all the costs:
     </tr>
 </table>
 
-In total, I spent €440 (about $525), which is about the same as a good 4-bay Synology or QNAP NAS. I was able to recover €30 by selling the motherboard to a collector, and I've sold my old Home Assistant server for €160. That brings the total down to €256 or $305.
+In total, I spent €440 (about $525), which is about the same as a good 4-bay Synology or QNAP NAS. I was able to recover €30 by selling the motherboard to a collector, €10 for selling the original RAID controller, and I've sold my old Home Assistant server for €160. That brings the total down to €246 or $282.
 
 <table class='pure-table pure-table-bordered pure-table-striped'>
     <tr>
@@ -244,12 +244,16 @@ In total, I spent €440 (about $525), which is about the same as a good 4-bay S
         <td>- €30,00</td>
     </tr>
     <tr>
+        <td>Sold: RAID controller</td>
+        <td>- €10,00</td>
+    </tr>
+    <tr>
         <td>Sold: HP ProDesk Mini (old server)</td>
         <td>- €160,00</td>
     </tr>
     <tr>
         <td><b>Net cost:</b></td>
-        <td>€254,07</td>
+        <td>€244,07</td>
     </tr>
 </table>
 

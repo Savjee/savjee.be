@@ -45,8 +45,8 @@ const walkFunc = async (err, pathname, dirent) => {
 
     if(dirent.name.endsWith('.jpg') || dirent.name.endsWith('.png')){
         if(webpExists !== false){
-            // console.log("Skip:", pathname);
-            // return false;
+            console.log("Skip:", pathname);
+            return false;
         }
     }
 

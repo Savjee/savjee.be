@@ -51,6 +51,7 @@ module.exports = function (config) {
 
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
+    config.addPairedShortcode("xd_img", require('./src/utils/shortcode/xd_img'));
 
     config.addPassthroughCopy("src/site/assets");
 

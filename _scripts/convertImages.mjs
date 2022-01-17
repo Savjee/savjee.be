@@ -74,6 +74,7 @@ const walkFunc = async (err, pathname, dirent) => {
 };
 
 await walk("./src/site/uploads/", walkFunc);
+await walk("./src/site/assets/", walkFunc);
 
 console.log(perfData.join("\n"));
 console.log("Done");

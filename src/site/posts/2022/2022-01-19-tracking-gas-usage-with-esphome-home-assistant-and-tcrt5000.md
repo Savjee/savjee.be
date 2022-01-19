@@ -6,7 +6,7 @@ upload_directory: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistan
 thumbnail: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/thumb_timeline.jpg
 ---
 
-In 2019, [I built an energy monitor]({% link collections.posts, "2019/2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib.md" %}) to keep track of our electricity consumption. Then, in 2021, [Home Assistant added an Energy Management feature](https://www.home-assistant.io/blog/2021/08/04/home-energy-management/) that keeps track of electricity and gas usage. So naturally, I had to make my gas meter smart as well.
+In 2019, I built an energy monitor to keep track of our electricity consumption. Then, in 2021, [Home Assistant added an Energy Management feature](https://www.home-assistant.io/blog/2021/08/04/home-energy-management/) that keeps track of electricity and gas usage. So naturally, I had to make my gas meter smart as well.
 
 <!--more-->
 

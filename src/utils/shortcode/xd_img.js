@@ -1,7 +1,8 @@
 const {statSync} = require("fs");
 const path = require("path");
 
-const reg = /\<img.*src=["'](.*?)["']/mi;
+const regImgSrc = /\<img.*src=["'](.*?)["']/mi;
+const regYouTube = /i\.ytimg\.com\/vi\/(.*)\/(.*)\.jpg/mi;
 
 /**
  * This paired shortcode takes HTML code for an image as input, and wraps
@@ -18,7 +19,7 @@ const reg = /\<img.*src=["'](.*?)["']/mi;
  * @returns {string}
  */
 module.exports = function (originalHTML) {
-    const matches = reg.exec(originalHTML);
+    const matches = regImgSrc.exec(originalHTML);
 
     if(matches === null){
         throw new Error("Could not find the source of the image: "
@@ -39,9 +40,7 @@ module.exports = function (originalHTML) {
     // the form: i.ytimg.com/vi/VIDEO_ID/FORMAT.jpg, we extract the videoId and
     // format and add the correct WebP version.
     if(isYouTubeThumbnail){
-        const reg = /i\.ytimg\.com\/vi\/(.*)\/(.*)\.jpg/mi;
-        const matches = reg.exec(imgSrc);
-
+        const matches = regYouTube.exec(imgSrc);
         if(matches === null) return originalHTML;
 
         const videoId = matches[1];

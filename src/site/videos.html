@@ -11,7 +11,10 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
         <div class="col-md-4 col-sm-6 col-xs-1 {% if forloop.index > 3 %}d-none d-sm-block{% endif %}">
             <div class="card">
                 <a href="{{vid.url}}">
-                    <img class="thumb" src="https://i.ytimg.com/vi/{{vid.data.videoId}}/mqdefault.jpg" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
+
+                    {% xd_img %}
+                        <img class="thumb" src="https://i.ytimg.com/vi/{{vid.data.videoId}}/mqdefault.jpg" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
+                    {% endxd_img %}
                     <div class="content">
                         {{ vid.data.title | truncate:100 }}
                     </div>

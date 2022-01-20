@@ -29,7 +29,7 @@ I chose Ubuntu Server 13.10 as my Linux distro as I'm already familiar with it.
 # Preparations
 Before you can install OpenVPN make sure your VPS is up and running. Also enable ``TUN/TAP`` and ``PPP`` in the [SolusVM Control Panel](https://vpscp.ramnode.com/). You can find these settings on the home page of the control panel under the tab 'Settings':
 
-<img src='/uploads/openvpn-ramnode/tuntap.png' alt='Enable TUN/TAP in the SolusVM CP'>
+![Enable TUN/TAP in the SolusVM CP](/uploads/openvpn-ramnode/tuntap.png)
 
 # Installing OpenVPN
 Let's start by updating our packages and installing all updates:

@@ -65,11 +65,11 @@ Now that the server is prepared you need to enable logging on your S3 bucket. I 
 
 Your log bucket could become pretty big if you don't regularly remove old logs. Fortunately Amazon can take care of this automatically. Go to your log bucket in the Console and open its properties. Under "Lifecycle" you can define when files should be removed from your bucket. Add a new rule, give it a name and set it to remove files that are older than 3 days.
 
-<img src="/uploads/awstats-s3/lifecycle-rule.png">
+![](/uploads/awstats-s3/lifecycle-rule.png)
 
 Now that the log bucket is set up, go to the properties of your website's bucket and enable logging. Select your log bucket as the target and specify a prefix if you want.
 
-<img src="/uploads/awstats-s3/logging.png">
+![](/uploads/awstats-s3/logging.png)
 
 That's it for S3. The last thing to do is connecting AWStats with S3.
 

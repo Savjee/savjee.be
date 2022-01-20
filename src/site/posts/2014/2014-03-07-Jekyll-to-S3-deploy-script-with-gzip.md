@@ -150,7 +150,7 @@ This section provides the rest of the script with 3 functions to echo text in co
 
 It's not a real requirement but it makes the output look good:
 
-<img src='/uploads/jekyll-s3-deploy-gzip/1.png'>
+![](/uploads/jekyll-s3-deploy-gzip/1.png)
 
 ## Gzipping
 Because we want to gzip content, we have to find each HTML, CSS and Javascript document in the ``SITE_DIR`` directory and compress it with gzip:
@@ -165,6 +165,6 @@ Because we want to gzip content, we have to find each HTML, CSS and Javascript d
 # File size comparison
 Does gzip really matter? Does it really compress webpages with a large factor? Well, yes it does:
 
-<img src="/uploads/jekyll-s3-deploy-gzip/2.png">
+![](/uploads/jekyll-s3-deploy-gzip/2.png)
 
 Notice that the difference in size for small webpages isn't that great. But once pages become bigger, the advantage of gzip becomes clear.

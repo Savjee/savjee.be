@@ -18,7 +18,7 @@ I desperately wanted one but found it hard to get my hands on one! So I decided 
 # Tix?
 Before I began implementing a Tix clock, I needed to understand how they worked and how they represent time.
 
-<img src='/uploads/tixclock/howto-read.gif'>
+![](/uploads/tixclock/howto-read.gif)
 
 This image is really all you need to learn how to read a Tix clock. Simply **count** the amount of LEDs turned on in each segment and you know the time!
 
@@ -106,11 +106,11 @@ Sadly I have no knowledge of how to write a screensaver, how to work with Xcode 
 
 Here's a picture of the screensaver running on my [Hackintosh]({% link collections.posts, '2012-12-28-building-a-hackintosh' %}):
 
-<img src='/uploads/tixclock/hackintosh-screensaver.jpg'>
+![](/uploads/tixclock/hackintosh-screensaver.jpg)
 
 # Demo, Download & Source
 
-<img src='/uploads/tixclock/screenshot.png'>
+![](/uploads/tixclock/screenshot.png)
 
 * See my Tix clock in action [right here](/uploads/tixclock/tixclock.html)!
 

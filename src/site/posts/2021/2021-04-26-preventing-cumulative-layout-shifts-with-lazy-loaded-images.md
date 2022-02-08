@@ -2,7 +2,7 @@
 layout: post
 title: "Preventing Cumulative Layout Shifts with lazy loaded images (Eleventy + markdown-it)"
 quote: 
-tags: [Eleventy, Web Vitals]
+tags: [Eleventy, Web Vitals, Web Performance]
 ---
 
 There's nothing more annoying than a website shifting down just as you're about to click on a button or link. This is called a layout shift, and Google has declared war on them. They've added layout shifts to the Core Web Vitals, and if your website has a lot of them, [it will get penalized in the search results](https://developers.google.com/search/blog/2020/11/timing-for-page-experience).

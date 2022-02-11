@@ -64,7 +64,16 @@ This board also packs a ton of extra features, although I won't be using any of 
 
 ## ESPHome
 
-With all the hardware done, I started working on the ESPHome configuration. I started by using the built-in [pulse_counter component](https://esphome.io/components/sensor/pulse_counter.html), but quickly discovered that the digital output of my sensor isn't sensitive enough. The glass cover of my gas meter is so reflective that the digital output of the sensor is always 1.
+With all the hardware done, I started working on the ESPHome configuration. 
+
+My first attempt at getting this to work was tricky: the digital output of the sensor was always `HIGH`. This was caused by infrared light being reflected by the glass cover of my meter.
+
+---
+
+<details>
+    <summary>Read about my original (hacky) implementation.</summary>
+
+I started by using the built-in [pulse_counter component](https://esphome.io/components/sensor/pulse_counter.html), but quickly discovered that the digital output of my sensor isn't sensitive enough. The glass cover of my gas meter is so reflective that the digital output of the sensor is always 1.
 
 Luckily, the analog output is more varied. The output voltage is around 0.25V when the mirror is not facing the sensor, and when it is, the voltage drops to 0.18V. That drop of 0.07V should be enough to build my own pulse counter.
 
@@ -72,7 +81,7 @@ Why did I have to build my own pulse counter? Because the built-in version only 
 
 Here's what I came up with:
 
-```yaml
+ ```yaml
 ---
 substitutions:
   devicename: "gas-meter"
@@ -157,6 +166,69 @@ update_interval: 100ms
 filters:
   - throttle_average: 1sec
 ```
+</details>
+
+---
+
+After publishing this blog post, a reader reached out to me with a solution: replace the sensor’s cap with a custom designed one:
+
+![3D printed cover for the TCRT5000](/uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/tcrt5000-3d-printed-cover.jpg)
+
+You can [download the STL file for it here](/uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/tcrt5000-cover.stl). This little cap makes sure that the infrared light stays separated from the sensor until it hits my meter’s glass cover. 
+
+Now I could write the ESPHome configuration for it. Normally you would use a [pulse_counter](https://esphome.io/components/sensor/pulse_counter.html) to count how many times the sensor is triggered. Unfortunately for me, the sensor sometimes rapidly switches from ON to OFF for no good reason, resulting in bad readings. To overcome this, ESPHome has an `internal_filter` option that can ignore pulses shorter than a given timeframe. Unfortunately, on the ESP32 that interval can only be set to 13us, and I needed about 100 milliseconds.
+
+So I implemented my own `pulse_counter` by using a global variable, a `binary_sensor` with a `delayed_on` filter and a template sensor:
+
+```yaml
+---
+substitutions:
+  devicename: "gas-meter"
+  friendly_name: "Gas meter"
+
+packages:
+  device: !include "devices/olimex-poe-iso.yaml"
+
+# Enable encryption (not yet a default setting for my devices)
+api:
+  encryption:
+    key: !secret esphome_encryption_key
+
+globals:
+  - id: total_pulses
+    type: int
+    restore_value: false
+    initial_value: '0'
+
+# This is mainly here because the internal_filter of the pulse_counter on ESP32
+# can only be set to a maximum of 13us, which is way too low. The TCRT5000
+# sometimes rapidly switches from ON to OFF, causing a lot of "ghost" pulses.
+# The delayed_on filter will make sure that the sensor stayed ON for at least
+# 100ms before increasing the counter.
+binary_sensor:
+  - platform: gpio
+    id: internal_pulse_counter
+    pin: GPIO32
+    internal: true
+    filters:
+      - delayed_on: 100ms
+    on_press:
+      then:
+        - lambda: id(total_pulses) += 1;
+
+sensor:
+  - platform: template
+    name: "Gas used"
+    device_class: gas
+    unit_of_measurement: "m³"
+    state_class: "total_increasing"
+    icon: "mdi:fire"
+    accuracy_decimals: 2
+    lambda: |-
+        return id(total_pulses) * 0.01;
+```
+*Side note: if you're interested in learning how I structure my YAML files for ESPHome, check out [this post]({% link collections.posts, "2021-05-27-how-i-structure-my-esphome-config-files.md" %}).*
+
 
 ## Integrating with Home Assistant
 

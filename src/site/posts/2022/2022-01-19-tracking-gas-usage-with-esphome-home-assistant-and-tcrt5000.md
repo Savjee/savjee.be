@@ -170,7 +170,7 @@ filters:
 
 ---
 
-After publishing this blog post, a reader reached out to me with a solution: replace the sensor’s cap with a custom designed one:
+After publishing this blog post, a reader reached out with a solution: replace the sensor’s cap with a custom designed one:
 
 ![3D printed cover for the TCRT5000](/uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/tcrt5000-3d-printed-cover.jpg)
 

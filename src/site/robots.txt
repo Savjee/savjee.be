@@ -1,2 +1,6 @@
 User-agent: *
 Disallow:
+
+sitemap: https://savjee.be/sitemap-blogposts.txt
+sitemap: https://savjee.be/sitemap-videos.txt
+sitemap: https://savjee.be/rss.xml

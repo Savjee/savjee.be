@@ -143,6 +143,8 @@ binary_sensor:
     internal: true
     filters:
       - invert:
+      # Debounce the contact sensor to prevent rapid on/off/on events
+      - delayed_on_off: 500ms
 ```
 
 With these two components, we can now make the `cover` component that will be exposed to Home Assistant.
@@ -195,6 +197,8 @@ binary_sensor:
     internal: true
     filters:
       - invert:
+      # Debounce the contact sensor to prevent rapid on/off/on events
+      - delayed_on_off: 500ms
 
 # The relay in the Shelly 1 that will deliver the pulse to
 # the garage door opener (not exposed to HA)

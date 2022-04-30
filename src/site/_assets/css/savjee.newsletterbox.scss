@@ -1,6 +1,8 @@
 @import "savjee.colors";
 
-.box.newsletter-subscribe{
+// I use "nwsltr-sub" because the adblock list
+// "Fanboy Annoyances" blocks the class name "newsletter-subscribe"
+.box.nwsltr-sub{
     input{
 		border: solid 1px #fff;
 		font-size: 1em;
@@ -31,7 +33,7 @@
 }
 
 @media (max-width: 767px) {
-    .box.newsletter-subscribe{
+    .box.nwsltr-sub{
         input{
             width: 100%;
         }

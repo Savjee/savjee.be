@@ -3,7 +3,9 @@ const path = require('path');
 module.exports = {
   entry: [
       './src/site/_assets/js/disqus-comments.js',
+      './src/site/_assets/js/table-of-contents.js',
       './node_modules/instant.page/instantpage.js',
+      './node_modules/tocbot/dist/tocbot.min.js',
       './src/site/_assets/css/bundle.scss',
   ],
   module: {

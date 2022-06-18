@@ -55,7 +55,7 @@
     {% endif %}
 </head>
 
-<body>
+<body {% if toc_enabled %}class="toc_enabled"{% endif %}>
 
 <header class="site-header" role="banner">
     <div class="container">
@@ -101,11 +101,17 @@
         </nav>
     </div>
 </header>
+    
+<div class="toc" style="position: fixed; right: 10px; top: 200px; display:none;">
+    <h1>Table of contents</h1>
+    <div class="js-toc"></div>
+</div>
+    
 
 {% unless fullwidth %}
 <div class='container {% if wider %}wider{% endif %}'>
 {% endunless %}
-
+    
     {{ content }}
 
 {% unless fullwidth %}
@@ -124,6 +130,67 @@
     </p>
 </footer>
 
+<style>
+    .toc h1{
+        font-size: 1em;
+    }
+    .toc>.toc-list{
+        overflow:hidden;
+        position:relative
+    }
+    .toc-list{
+        color: #D1D1D1;
+        font-size: 0.9em;
+    }
+    .toc-list li{
+        list-style:none;
+        padding:  3px 0;
+        border-left: solid 2px #EEE;
+    }
+    .toc-list li.is-active-li{
+        border-color: #E80000;
+    }
+    .toc-list{
+        margin:0;
+        padding-left:10px
+    }
+    a.toc-link{
+        color:currentColor;
+        height:100%;
+        padding-left:  10px;
+    }
+    .is-collapsible{
+        max-height:1000px;
+        overflow:hidden;
+        transition:all 300ms ease-in-out
+    }
+    .is-collapsed{
+        max-height:0
+    }
+    .is-position-fixed{
+        position:fixed !important;
+        top:0
+    }
+    .toc-list li a:hover{
+        color: #000;
+    }
+    .toc-list .is-active-link{
+        color: #000;
+        font-weight:700;
+    }
+    .toc-link::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 1px;
+      color: transparent;
+      overflow: hidden;
+      visibility: hidden;
+    }
+    .is-active-link::before{
+        background-color:#54BC4B
+    }
+</style>
 <script defer src="/assets/main.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ To check the integrity of a file that was uploaded in multiple parts, you can ca
 
 <!--more-->
 
-# The solution
+## The solution
 So if you want to check if your files where transferred correctly, you have to compute the ETag hash in the same way that Amazon does. Luckily there is [this bash script](https://gist.github.com/emersonf/7413337) which splits up your files (like the multipart upload) and calculates the correct ETag hash.
 
 To use it:
@@ -30,13 +30,13 @@ chmod +x s3etag.sh
 
 The script should return the same hash as Amazon has calculate. If not, your file got corrupted somewhere and needs to be re-uploaded.
 
-# Background information
-## Multipart & ETag
+## Background information
+### Multipart & ETag
 Multipart uploading splits big files into smaller pieces and uploads them one by one. After receiving all the parts, Amazon will stitch them back together. If one of the parts fail to upload, you just hit "retry" for that piece. You don't have to re-upload the entire file! Great for unstable connections!
 
 Each file on S3 gets an ETag, which is essentially the md5 checksum of that file. Comparing md5 hashes is really simple but Amazon calculates the checksum differently if you've used the multipart upload feature. Instead of calculating the hash of the entire file, Amazon calculates the hash of each part and combines that into a single hash.
 
-## Manually compute the ETag
+### Manually compute the ETag
 This is what an ETag looks like:
 
 <pre>57f456164b0e5f365aaf9bb549731f32-95</pre>

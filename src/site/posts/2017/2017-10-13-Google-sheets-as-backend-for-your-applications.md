@@ -10,14 +10,14 @@ Or maybe not? He used to manage his orders with Excel, so that got me thinking. 
 
 <!--more-->
 
-# Google Sheets API
+## Google Sheets API
 I quickly found that the API for Google Sheets is actually very extensive! Not only does it allow you to read and write data from and to your spreadsheets, you can also extend the UI and even create your own formula's. Wicked!
 
 After a quick look at the documentation I found that I can get the data inside my spreadsheet with the ``spreadsheets.values.get`` API call and that I could create new rows by using ``spreadsheets.values.append``. Pretty easy!
 
 Making things even easier: Google already has a client library for many programming languages, including node.js.
 
-# Not so usable after all
+## Not so usable after all
 So let's take a look at the output of this API. I've create a simple spreadsheet that could be used as a guestbook or something. This is what it looks like:
 
 ![Example Google Sheet](/uploads/google-sheet-as-backend/google-spreadsheet-example.png)
@@ -53,7 +53,7 @@ Google returns all of our data inside a multidimensional array. That's not so fl
 That's not really nice. What if we want to add a column later? Or what if we switch the order of columns to make it more logical? It would break our implementation!
 
 
-# Developing a small library
+## Developing a small library
 So I thought: let's write a small library that solves this problem and makes working with data in Google Sheets really easy.
 
 The library is called [google-sheets-node](https://github.com/Savjee/google-sheets-wrapper) and it's written in Typescript. It's essentially a small data mapper that fetches data from Google Sheets through the official client library.
@@ -78,7 +78,7 @@ So how does it do that? Well the library assumes that the first row in your spre
 ![Library uses a header row](/uploads/google-sheet-as-backend/google-spreadsheet-headerrow.png)
 *The first row gets a special treatment!*
 
-# Authentication
+## Authentication
 Let's now see how you can use this library in your own node.js applications. We'll start by authenticating ourselves. To do that follow [the official instructions by Google](https://developers.google.com/sheets/api/quickstart/nodejs) and create some credentials.
 
 After following these steps, you'll get a ``credentials.json`` file. Store it somewhere and create a new environment variable called ``GOOGLE_APPLICATION_CREDENTIALS`` that contains the path to this file. Like so:
@@ -88,7 +88,7 @@ export GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/credentials.json
 {% endhighlight %}
 
 
-# Using the library: reading data
+### Using the library: reading data
 Finally we can start using the library! First we'll start by creating a new instance of it. You have to pass the ID of sheet that you want to use, as well as the range in which your data is stored:
 
 {% highlight js %}
@@ -107,7 +107,7 @@ let data = await sheet.getRows();
 
 This will fetch all your data and transform it into easy to use objects!
 
-# Using the library: writing data
+### Using the library: writing data
 Reading data is easy, but it works in the other direction as well. If you want to write data to your spreadsheets, simply create an array of objects and give that to the ``appendRows()`` function and your done!
 
 {% highlight js %}
@@ -131,10 +131,10 @@ The order of the fields is not important because we're using regular objects. Ho
 
 On the other hand: you can omit rows. They will be inserted as blank cells.
 
-# Conclusion
+## Conclusion
 Since the, I've used Google Sheets as a simple database on a handful of small projects. It's a perfect solution for when you quickly need to throw something together and don't have time to create a nice front-end for non-tech savvy people.
 
 It does have it's limitations though. You cannot query for data and the API is not super fast. So don't try to use this for large datasets that you want to manipulate!
 
-# Source code
+## Source code
 The source code for my wrapper is [available on GitHub](https://github.com/Savjee/google-sheets-wrapper). It's not perfect, it was written in a hurry but it works! Feel free to improve it and send me a pull request ;)

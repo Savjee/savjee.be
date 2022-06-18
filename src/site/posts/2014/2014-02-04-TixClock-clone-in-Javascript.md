@@ -15,14 +15,14 @@ I desperately wanted one but found it hard to get my hands on one! So I decided 
 
 <!--more-->
 
-# Tix?
+## Tix?
 Before I began implementing a Tix clock, I needed to understand how they worked and how they represent time.
 
 ![](/uploads/tixclock/howto-read.gif)
 
 This image is really all you need to learn how to read a Tix clock. Simply **count** the amount of LEDs turned on in each segment and you know the time!
 
-# HTML structure
+## HTML structure
 After I cleared up my confusion on how to read Tix clocks, I started working on the HTML skeleton:
 
 {% highlight html %}
@@ -52,7 +52,7 @@ After I cleared up my confusion on how to read Tix clocks, I started working on 
 
 I created a div for every LED and gave it a unique ID. I used the following ID format: ``[Group number of LED]_[Number of LED in that group]``. So the first LED in the first group get's the ID ``0_0``.
 
-# CSS
+## CSS
 A Tix clock is all about color, so I added CSS to mimic the looks of a real clock. I used a black background and standard HTML color names for the red, green and blue LEDs:
 
 {% highlight css %}
@@ -79,7 +79,7 @@ Let's go crazy and throw some CSS3 in here as well! When you look at an active L
 
 It's silly I know. But it makes my Tix clock look much more like a real one! I'm not a good designer but this does the trick!
 
-# Javascript
+## Javascript
 After doing the design I started working on the code that would make my Tix clock tick! The Javascript code I wrote is very simple and has no dependencies. I'm not going to copy-paste all the code in this post but instead I'm going to give an overview of the functions I wrote:
 
 * ``random_number()`` to generate a random number between two values (used to randomly pick a LED to turn on)
@@ -99,7 +99,7 @@ setInterval(function(){
 {% endhighlight %}
 
 
-# Screensaver
+## Screensaver
 After successfully implementing my own Tix clock I wanted to use it as a screensaver for my Macs!
 
 Sadly I have no knowledge of how to write a screensaver, how to work with Xcode or how to program Objective-C. Luckily though I found [WebSaver on GitHub](https://github.com/tlrobinson/WebSaver) and within a few minutes I had a working Tix clock screensaver for OS X!
@@ -108,7 +108,7 @@ Here's a picture of the screensaver running on my [Hackintosh]({% link collectio
 
 ![](/uploads/tixclock/hackintosh-screensaver.jpg)
 
-# Demo, Download & Source
+## Demo, Download & Source
 
 ![](/uploads/tixclock/screenshot.png)
 

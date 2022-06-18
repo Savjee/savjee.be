@@ -26,12 +26,12 @@ It's an ideal server for running a personal OpenVPN server. It's cheap (only $24
 
 I chose Ubuntu Server 13.10 as my Linux distro as I'm already familiar with it.
 
-# Preparations
+## Preparations
 Before you can install OpenVPN make sure your VPS is up and running. Also enable ``TUN/TAP`` and ``PPP`` in the [SolusVM Control Panel](https://vpscp.ramnode.com/). You can find these settings on the home page of the control panel under the tab 'Settings':
 
 ![Enable TUN/TAP in the SolusVM CP](/uploads/openvpn-ramnode/tuntap.png)
 
-# Installing OpenVPN
+## Installing OpenVPN
 Let's start by updating our packages and installing all updates:
 
 {% highlight bash %}
@@ -45,7 +45,7 @@ Next, we install OpenVPN and the required RSA dependencies.
 sudo apt-get install openvpn easy-rsa
 {% endhighlight %}
 
-# Generating and configuring server certificates
+### Generating and configuring server certificates
 OpenVPN's encryption relies on server and client certificates. So let's start by generating a certificate for the server. Copy the example config files to the correct directory:
 
 {% highlight bash %}
@@ -89,7 +89,7 @@ cp SavjeeVPN.crt SavjeeVPN.key ca.crt dh1024.pem /etc/openvpn/
 {% endhighlight %}
 
 
-# Generating client certificates
+### Generating client certificates
 Clients that connect to an OpenVPN server also need a key. Generate them like this:
 
 {% highlight bash %}
@@ -105,7 +105,7 @@ Now all you have to do is download these files to the client (in a safe way!):
 * ``/etc/openvpn/easy-rsa/keys/client1.key``
 
 
-# Configuring routing & firewall
+## Configuring routing & firewall
 Since OpenVPN routes all traffic from the client through the server, we need to configure some network related stuff. First, make sure that port forwarding is enabled in the kernel. If the output of the following command is ``1`` you're all set:
 
 <pre>cat /proc/sys/net/ipv4/ip_forward</pre>
@@ -145,7 +145,7 @@ The script has to run every time the server boots up, so I've added it to my cro
 
 **NOTE:** Most guides on the internet make changes to the ``eth0`` interface. However in OpenVZ the default interface is called ``venet0``.
 
-# Configuring & starting OpenVPN
+## Configuring & starting OpenVPN
 All the preparations are done! For the final step we need to create a configuration file for the OpenVPN server. Fortunately OpenVPN comes with some example config files that we can use. Copy and extract them to the correct directory:
 
 <pre>
@@ -168,7 +168,7 @@ Finally, we can start OpenVPN and start using it!
 service openvpn start
 {% endhighlight %}
 
-# Performance
+## Performance
 The performance of the small and cheap VPS surprises me. The SSD makes disk operations extremely fast. But that's not the most important aspect. I'm using the VPS as a VPN server so network throughput and latency are far more important!
 
 To test transfer speeds I uploaded [a 100mb test file from CacheFly](http://cachefly.cachefly.net/100mb.test) to my VPS and downloaded it a few times in different locations. It consistently maxes out my home (30mbps) and school connection (30-50mbps)!

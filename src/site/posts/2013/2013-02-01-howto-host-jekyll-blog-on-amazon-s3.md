@@ -13,7 +13,7 @@ A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-
 
 {% include "youtube-embed.html", videoId:'g9NbuTcos18' %}
 
-# Hosting on Amazon S3
+## Hosting on Amazon S3
 Since Jekyll websites are static, you can host them practically everywhere. But why would you choose S3 as a hosting provider?
 
 * S3 is **reliable**. Amazon's SLA [guarantees](http://aws.amazon.com/s3-sla/) 99.9% uptime, not bad! 
@@ -26,7 +26,7 @@ Since Jekyll websites are static, you can host them practically everywhere. But 
 
 Now that you know the advantages of S3, let's set it up!
 
-# Creating a bucket
+### Creating a bucket
 Before you can host a website on S3 you need to create a bucket. 
 
 1. Login to the [AWS Management Console](https://console.aws.amazon.com/) and select S3
@@ -47,7 +47,7 @@ By default, the option to host a static website in your bucket is disabled. To e
 
 Your S3 account is all set!
 
-# Automatic deployments to S3
+### Automatic deployments to S3
 Every time you update your blog it has to be uploaded to S3. This can be a tedious task so let's automate it!
 
 I choose to use the command line S3 client, [s3cmd](http://s3tools.org/s3cmd). You can install it by downloading the package and running:
@@ -128,7 +128,7 @@ That's it. Everytime I want to publish my blog I run ``sh _deploy.sh`` and sit b
 
 *Note: I initially used reduced redundancy storage for hosting my website. This raised by bill to a whopping 0.01 dollars ;). Amazon's free tier gives you 5GB of **standard** storage, not reduced storage. So use that if you're eligible for the free tier.* 
 
-# DNS changes
+### DNS changes
 Once you uploaded your website to S3 and enabled website hosting you can access your website through a very long URL. Like this one: [www.savjee.be.s3-website-eu-west-1.amazonaws.com](http://www.savjee.be.s3-website-eu-west-1.amazonaws.com). No way a user can remember that!
 
 Hooking up your own domain is a bit more difficult. A website is usually accessible directly (savjee.be) or through it's www subdomain (www.savjee.be). Make a new CNAME record from your www subdomain to the super long URL Amazon gives you. 
@@ -137,7 +137,7 @@ To map your root domain to S3 you'll need a third party service to redirect requ
 
 *[You could also use Amazon Route 53](http://aws.typepad.com/aws/2012/12/root-domain-website-hosting-for-amazon-s3.html). This is probably a better and more reliable option. I might use this in the future.*
 
-# Performance benefits of S3
+## Performance benefits of S3
 S3 is a cheap way to host your website but how does it perform? To test this, I used Pingdom's [Full Page Test](http://tools.pingdom.com/fpt/). I benchmarked my old Wordpress installation, Jekyll on my old hosting provider and Jekyll on S3. All tests were performed 5 times and the average was taken. (Test location was Amsterdam, Netherlands. Speeds can vary in different parts of the world)
 
 The results speak for themselves. Wordpress was incredibly slow on my cheap web hosting plan, taking almost 5 seconds to render a page. We can't compare this to S3 because Wordpress doesn't run on it. But it does give you a good idea of how slow my blog was before I moved to Jekyll. Load times like these are simply unacceptable!
@@ -148,10 +148,10 @@ The static version is much better, bringing the average load time down from almo
 
 According to Pingdom: "Your website is faster than 97% of all tested websites". If you test from a US based location it's slightly less: "Your website is faster than 84% of all tested websites".
 
-# Even faster?
+## Even faster?
 The performance of Amazon S3 will vary depending on the bucket location. Since mine is located in Ireland, the best speeds will be achieved by visitors coming from Europe. To supercharge your website for everyone you could serve it through Amazon's CDN, [CloudFront](http://aws.amazon.com/cloudfront/).
 
 I'm already pretty happy with the performance of my website, so I'm not going to use CloudFront. Follow [this guide](http://vvv.tobiassjosten.net/development/jekyll-blog-on-amazon-s3-and-cloudfront/) if you want to go for über speed. 
 
-# Conclusion
+## Conclusion
 Unless you have a really, really good web host, hosting your static website on Amazon S3 is a no-brainer. It's fast, cheap and has amazing uptime.

@@ -13,7 +13,7 @@ In this post I'll tell you why I hate these social buttons so much. I'll also wa
 
 <!--more-->
 
-# Impact on performance
+## Impact on performance
 So why do I hate these social buttons so badly? Let me demonstrate my hate towards these buttons. I created two empty HTML pages and inserted the code for a Share button and Tweet button. The results speak for themselves:
 
 <table class="pure-table pure-table-bordered pure-table-striped">
@@ -34,7 +34,6 @@ So why do I hate these social buttons so badly? Let me demonstrate my hate towar
     	<td>DOM Content Loaded</td>
     	<td>243 ms</td>
     </tr>
-
     <tr>
     	<th rowspan="4">Twitter Tweet button</th>
     	<td>Load Time</td>
@@ -78,7 +77,6 @@ Still, they add a lot of bulk to your webpages. I compared these numbers with th
 		<td>DOM Content Loaded</td>
 		<td>314ms</td>
 	</tr>
-
 	<tr>
     	<th rowspan="4">
     		Savjee.be (with Google Analytics disabled)
@@ -109,7 +107,7 @@ I'm sorry, but that's unacceptable to me!
 Many might not care about loading an additional 57 or 147 KB. But I do! I hate loading more resources than actually necessary. These buttons might not have a big impact on modern computers with high-speed internet connections. The story is different when you load these social buttons on a smartphone with a much slower Egde or 3G connection. I want my website to be fast no matter where you live, what device you're using or how fast your internet connection is.
 
 
-# Easy solution: static!
+## Easy solution: static!
 The simplest solution to this problem is using static share buttons. I've used a static Tweet button on my website for a couple of months now. The idea is easy: create a button and use the Twitter share URL like this:
 
 {% highlight html %}
@@ -126,7 +124,7 @@ Facebook has a similar URL that allows you to share stories:
 <pre>https://www.facebook.com/sharer/sharer.php?u=URL_TO_PAGE</pre>
 
 
-# Making the buttons count!
+## Making the buttons count!
 I also want my static social buttons to show the amount of shares or tweets my page got. This involves some Javascript and JSONP magic. (And yes, I realize that this makes my buttons dynmic, not very static…)
 
 [JSONP](http://en.wikipedia.org/wiki/JSONP) or “JSON with padding” is a Javascript technique that allows you to fetch data from a server on a different domain. Technically this isn't allowed by most browsers. JSONP takes advantage of the fact that browsers do not enforce the same-origin policy on ``<script>`` tags.
@@ -197,7 +195,7 @@ I borrowed most of the code from [David Walsh's blog post](http://davidwalsh.nam
 Note that you can use a regular Ajax request for retrieving the share count from Facebook. This works because Facebook sets the Access-Control-Allow-Origin header to ``*``. Sadly you can't use the same technique for Twitter since they don't set that header. Shame!
 
 
-# Designing the buttons
+## Designing the buttons
 I started looking around for a design for my social buttons. I wanted a simple design that's flat and didn't include any images (retina-friendly!). I found a nice set of social buttons on [Dribble](https://dribbble.com/shots/1025655-Clean-Sharrre-Buttons-Freebie?list=tags&tag=css&offset=2) designed by [Maki Myers](http://www.makimyers.co.uk/).
 I downloaded his code and refactored it so it doesn't use floats or relative positioning.
 
@@ -305,7 +303,7 @@ The buttons are rendered correctly on every type of device. No need for responsi
 }
 {% endhighlight %}
 
-# Result & Limitations
+## Result & Limitations
 Here's a screenshot of the finished product:
 ![Screenshot of the static buttons](/uploads/creating-static-social-buttons/screenshot_buttons.png)
 
@@ -317,5 +315,5 @@ Then check out [this gist](https://gist.github.com/jonathanmoore/2640302) for ad
 Sadly, you can't have a static Like button. This requires the Facebook SDK.
 
 
-# Source
+## Source
 The source code is available on GitHub. Check it out: [https://github.com/Savjee/static-social-buttons](https://github.com/Savjee/static-social-buttons).

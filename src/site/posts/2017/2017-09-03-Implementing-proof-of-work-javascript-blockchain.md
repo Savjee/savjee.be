@@ -18,7 +18,7 @@ This blog post is part of a whole series:
 * [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %})
 * [Part 4: Signing transactions]({% link collections.posts, '2018-10-27-Signing-transactions-blockchain-javascript' %})
 
-# The problem
+## The problem
 Right now we can create blocks and add them to our blockchain really quickly. And this creates 3 problems:
 
 * First of all: people can create blocks incredibly fast and **spam** our blockchain. A flood of blocks would overload our blockchain and would make it unusable.
@@ -32,7 +32,7 @@ Clearly we need a solution for these problems. Enter: proof-of-work.
 {% include "youtube-embed.html", videoId:'HneatE69814' %}
 
 
-# What is proof-of-work?
+## What is proof-of-work?
 Proof-of-work is a mechanism that existed before the first blockchain was created. It's a simple technique that prevents abuse by requiring a certain amount of computing work. That amount of work is key to prevent spam and tampering. Spamming is no longer worth it if it requires a lot of computing power.
 
 Bitcoin implements proof-of-work by requiring that the hash of a block starts with a specific number of zero's. This is also called the difficulty.
@@ -43,7 +43,7 @@ To fix this problem, blockchains add a ``nonce`` value. This is a number that ge
 
 In case of Bitcoin, the proof-of-work mechanism ensures that only 1 block can be added every 10 minutes. You can imagine spammers having a hard time to fool the network if they need so much compute power just to create a new block, let alone tamper with the entire chain.
 
-# Implementing proof-of-work
+## Implementing proof-of-work
 So how do you implement it? Let's start by modifying our block class and adding the ``nonce`` variable in it's constructor. I'll initialize it's value and set it 0.
 
 {% highlight js %}
@@ -112,7 +112,7 @@ class Block {
 {% endhighlight %}
 
 
-# Blockchain modifications
+## Blockchain modifications
 Now that our blocks have a nonce and can be mined, we need to make sure that our blockchain supports this new behaviour as well. Let's start by adding a new property to our blockchain to keep track of the difficulty of the chain. I'll start by setting it to 2 (meaning that the hashes of blocks should start with 2 zero's).
 
 {% highlight js %}
@@ -135,7 +135,7 @@ addBlock(newBlock) {
 And that's it! Our blockchain now has proof-of-work and protection against spam and attempts to tamper with it.
 
 
-# Testing it
+## Testing it
 Let's now test our blockchain and see what effects proof-of-work has on adding new blocks to our chain. I'll use the same code as before. We'll start by creating a new instance of our blockchain and then adding 2 simple blocks to it.
 
 {% highlight js %}
@@ -152,17 +152,17 @@ If you run this, you'll see that adding new blocks is still very fast. That's be
 
 If you increase the difficulty to 5, you'll see that a modern computer takes about 10 seconds to mine a block. Increase it further and you'll have a great protection from attackers.
 
-# Disclaimer
+## Disclaimer
 Just as before a quick warning: this is by no means a complete blockchain implementation. It still lacks many features (like a P2P network). This is just to show how blockchains work internally.
 
 Also: mining blocks in Javascript is not really fast because it just uses a single thread.
 
-# Next up
+## Next up
 * [Part 1: Implementing a basic blockchain]({% link collections.posts, '2017-07-19-Writing-tiny-blockchain-in-JavaScript' %})
 * **Part 2: Implementing proof-of-work**
 * [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %})
 
-# Conclusion & source code
+## Conclusion & source code
 Proof-of-work is essential for the security and integrity of blockchains. Without it, we couldn't trust it enough to store information it.
 
 The source code of this project is available [on Github](https://github.com/SavjeeTutorials/SavjeeCoin).

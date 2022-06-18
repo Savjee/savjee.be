@@ -12,7 +12,7 @@ Sounds like fun? I agree!
 
 <!--more-->
 
-# Current situation
+## Current situation
 So let's take a look at the services/servers that are currently required for my original anagram solver:
 
   * **A webserver with PHP**: this server handles all incoming requests, runs some magic and queries the database.
@@ -21,7 +21,7 @@ So let's take a look at the services/servers that are currently required for my 
 
 I hosted the anagram solver on a cheap webhosting package. This meant regular slow downs as the servers received more traffic and an unreliable MySQL database. To top it off, I was paying a fixed amount every month to keep the service running. It didn't matter if the solver got 10 hits or 10 million, I was still paying the same price.
 
-# AWS alternatives
+## AWS alternatives
 I began searching for AWS alternatives to these requirements. The most easiest solution is to install these services on an EC2 instance. However, that would mean being responsible for the setup, maintenance and scalability of a server. No servers!
 
 Instead I discovered **Amazon Lambda**:
@@ -42,7 +42,7 @@ The final part is a place for the front-end to live. The current anagram solver 
 
 So that's it! Replace the webserver with S3 and CloudFront, replace PHP with Lambda and replace MySQL with DynamoDB. How hard can it be? In the next sections I'll dive deeper into each transition but let’s first take a look at the pro’s and cons of this serverless approach.
 
-# Pro's and cons
+## Pro's and cons
 Is it really worth it to remove the need for a server? As it turns out: yes!
 
 The obviously biggest advantage of this approach is that you don’t have to worry about allocating resources, availability, maintenance, security patches, uptime, ... Amazon will handles these aspects for you! Besides that it’s also worth noting that you only pay for what you use. If my anagram solver wasn't used during an entire month, I would pay exactly nothing.
@@ -50,7 +50,7 @@ The obviously biggest advantage of this approach is that you don’t have to wor
 The only disadvantage of this approach - that I could come up with - is that you’re completely dependant on AWS. If Amazon would decide to stop with DynamoDB, you'll be left with no drop-in alternatives. You would have to export your data and import into a different database engine such as MongoDB. The same thing goes for Lambda functions.
 
 
-# DynamoDB
+## DynamoDB
 The anagram solver needs a dictionary of words to be able to solve anagrams. I created a very simple DyanmoDB table to store my dictionaries. For each word in the dictionary, I store a special ``alpha`` version of the word with it. This is basically the same word with it's individual letters sorted alphabetically. So for the word ``dog`` I get the ``alpha`` version: ``dgo``. I'll go more in detail about how I actually solve anagrams later.
 
 ![](/uploads/anagram-aws/dynamodb-structure.png)
@@ -66,7 +66,7 @@ The next day I checked the pipeline and saw that it was still running. I wondere
 
 So after this adventure I created a PHP script that groups 20 words together and send them to DynamoDB using [the official PHP SDK](https://aws.amazon.com/sdk-for-php/). After sending these words, the script pauses itself for 1 second to stay under my DyanmoDB write provision. It took the script almost 14 hours to completely import the dictionary but at least it was free!
 
-# Lambda
+## Lambda
 After uploading the dictionary to DyanmoDB, I reprogrammed the anagram solver's logic into a Lambda function. I choose to use Node.js as programming language because I'm more familiar with Javascript. Python was an interesting option but I decided to stick to the language I knew best. Java wasn't a real contender in my eyes because it has very long warm up times (up to 3 seconds for cold requests).
 
 The logic for the anagram solver is very simple: take a string as input, re-arrange the letters of the input in alphabetic order and check if that string exists in the database. If it does, we can return the solutions for the anagram. If not, .... Well, I'm sorry!
@@ -129,10 +129,10 @@ exports.handler = function(event, context) {
 };
 {% endhighlight %}
 
-## Performance of Lambda
+### Performance of Lambda
 Lambda functions written in Node.js are pretty fast (once they're actively being used and warmed up). The initial startup time for this function is about 700ms. That's quite a lot but consecutive runs are much faster and take 100-200ms to complete. Much better!
 
-# API Gateway
+## API Gateway
 At this point I already replaced the database and main logic of the anagram solver. The only thing that's left is to make the Lambda function available through an openly accessible API. The preferred way of doing this is through Amazon's API Gateway.
 
 Connecting AWS Lambda with an API should be easy and straightforward but it's not. I ran into a lot of issue's with the management console and got a lot of "Service errors" without much of an explanation. I initially linked Lambda manually to an API but after a few days, the automatic linking started to work!
@@ -170,7 +170,7 @@ API Gateway was pretty easy to set up and works really well! Here's a nice graph
 ![](/uploads/anagram-aws/api-gateway-overview.png)
 *Amazon visualises the your API's internal flow.*
 
-# S3 & CloudFront
+## S3 & CloudFront
 Now that we have an API it's time to develop a front-end so that it’s easy for everyone to solve their anagrams. I asked my friend [Cédric](http://www.berlez.be/) to develop a simple front-end. However, these where the rules:
 
   * Only use HTML, CSS and Javascript, no server-side languages (It should be a static website so it can be hosted on S3)
@@ -187,7 +187,7 @@ To make things even faster I created a new CloudFront distribution so the front-
 All done!
 
 
-# Scalability
+## Scalability
 So how scalable is this serverless application anyway? Well let's take a look at the individual AWS services and how scalable they are:
 
   * **DyanmoDB** scales very nicely and distributes your data automatically across multiple machines as needed. It can store unlimited data and can serve up to 10,000 reads/second. If that's not enough you can ask Amazon to raise that limit.
@@ -202,7 +202,7 @@ So how scalable is this serverless application anyway? Well let's take a look at
 
 Basically it comes down to money. You pay for what you use so if you have an unlimited budget, you'll have an architecture that scale infinitely.
 
-# Final result
+## Final result
 Here's a screenshot of the new version of "Xavier's anagram solver":
 
 ![](/uploads/anagram-aws/final-result.png)
@@ -211,7 +211,7 @@ Here's a screenshot of the new version of "Xavier's anagram solver":
 
 Want to see it in action? Go to [anagram.savjee.be](http://anagram.savjee.be) and start solving those riddles!
 
-# Conclusion
+## Conclusion
 Let's wrap up this post. This was my first experience with building an serverless application that runs entirely on AWS and I must say I'm impressed. The idea of running a service without managing servers or services is pretty nice. I also don't have to worry about taking backups of my database. I now pay for what I've consumed and not a fixed amount every month. 
 
 ![](/uploads/anagram-aws/overview-serverless-anagramsolver.png)

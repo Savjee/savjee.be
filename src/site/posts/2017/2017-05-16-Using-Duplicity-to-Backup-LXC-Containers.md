@@ -10,7 +10,7 @@ So it was time to revisit my backup strategy: I started using Duplicity to take 
 
 <!--more-->
 
-# Why duplicity
+## Why duplicity
 [Duplicity](http://duplicity.nongnu.org/) is a command line tool that allows you take incremental backups using the rsync algorithm. That means that it only copies the bits that have changed since the last full backup. This makes the backup space efficient but also bandwidth efficient.
 
 It's a very complete tool. Not only does it take backups, it can also encrypts them with GnuPG, it can upload your backups to several cloud services and it handles restores as well. This happens in 1 go, so you don't have to worry about transferring your backups to and from the cloud.
@@ -43,7 +43,7 @@ Here is a simple price comparison between B2 and S3 (not taking free tiers into 
 
 B2 is 4 times cheaper compared to the regular storage class of Amazon S3. So that means I can cut my costs down or keep more backups for the same price. Download prices are pretty high across the board but I rarely need to restore a backup.
 
-# Installing Duplicity
+## Installing Duplicity
 After deciding where to store my backups, I installed Duplicity on my Ubuntu Server:
 
 <pre>sudo apt-get install duplicity</pre>
@@ -56,7 +56,7 @@ sudo apt-get install duplicity
 </pre>
 
 
-# Backing up LXC containers
+## Backing up LXC containers
 To make a backup with Duplicity, simply give it a source and a destination for your backup. The basic syntax is:
 
 <pre>duplicity [SOURCE_DIRECTORY] [DESINATION]</pre>
@@ -67,7 +67,7 @@ Here is a more practical example: taking a backup of my Nginx container and uplo
 
 When you run this command for the first time, Duplicity will take a full copy of your directory. Subsequent runs will only backup incrementally. Simple!
 
-## Backing up to B2
+### Backing up to B2
 If you want to backup to an external service, it gets a bit more complicated because you have to provide an access key to authenticate yourself. In case of Backblaze B2 you need your account id and an application key (both can be obtained through the web interface).
 
 Here is the same example but this time uploading your backup to a B2 bucket:
@@ -76,7 +76,7 @@ Here is the same example but this time uploading your backup to a B2 bucket:
 
 This syntax might look a bit different if you are using another cloud provider. Luckily the documentation has an example for each supported service.
 
-## Rotating backups
+### Rotating backups
 In normal situations you want to limit the amount of backups that you keep around. This option is integrated into Duplicity and it can rotate backups for you. When used, Duplicity will remove backups after a certain period of time.
 
 To rotate your backups you have to run a separate command. In my case I always start by taking a new backup and when it's finished, I run the ``remove-older-than`` command:
@@ -93,7 +93,7 @@ For those reasons, I ask Duplicity to force a full backup each month by adding a
 
 Note that here I use ``30D`` to represent a month, but you could also use ``1M``.
 
-## Ignoring certain system files
+### Ignoring certain system files
 In case of LXC containers: not all files should be backed up. Temporary files and caches should be excluded from the backup. They only make backups larger. With Duplicity you can exclude files based on a regex pattern or you can create a file that contains a bunch of patterns it should ignore. I chose to use the latter and created a ``exclude-backup.txt`` file that contains the paths that Duplicity should ignore:
 
 <pre>**/rootfs/tmp
@@ -111,12 +111,12 @@ After creating the ignore file, I pass it to Duplicity with the exclude option:
 
 <pre>duplicity --exclude-filelist /root/exclude-backup.txt [SOURCE] [DISTINATION]</pre>
 
-## Encrypting backups
+### Encrypting backups
 The last thing I wanted to do was to encrypt my backups before uploading them to the cloud. It's not that I don't trust the people at Backblaze, but I like to know that nobody but me can read my data.
 
 Duplicity uses GnuPG to encrypt backups either symmetrically or asymmetrically. I choose to use a simple passphrase to encrypt my backups. All you have to do is set a ``PASSPHRASE`` environment variable and you're done!
 
-# Throwing it all together
+## Throwing it all together
 After I figured out all of the options that Duplicity takes, I rewrote my backup script:
 
 {% highlight bash %}
@@ -163,7 +163,7 @@ After creating the script I configured cron to trigger it every day. This is wha
 
 As you can see, Duplicity has created a "full" backup which contains a complete copy of my container. The subsequent days it switches to incremental backups and creates smaller files that only contain the changes.
 
-# Summary
+## Summary
 With Duplicity I've made my backup process simpler and more space efficient. I don't have to worry about how to take incremental backups or how to upload my files to a cloud storage providers. Duplicity handles all of this for me.
 
 The script that I use to backup my LXC containers is available [on GitHub](https://github.com/Savjee/lxc-backup-duplicity).

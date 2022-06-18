@@ -11,7 +11,7 @@ I wondered if BitBucket Pipelines could replace [my Jenkins server]({% link coll
 
 <!--more-->
 
-# Enable BitBucket Pipelines
+## Enable BitBucket Pipelines
 The first thing you need to do is enable [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines) for your project. This has to be done for every project where you want to use Pipelines. Go to the left column and open up “Pipelines”. Obviously this is only available if you have been invited to the beta.
 
 ![](/uploads/bitbucket-pipelines-ftp-s3/enable-1.png)
@@ -34,7 +34,7 @@ This will create a new file in the root of your repository called ``bitbucket-pi
 After clicking the "create bitbucket-pipelines.yml" button, BitBucket will automatically open up the editor so you can paste their sample configuration file in it. But before you commit this sample configuration file, let’s change it!
 
 
-# Config file for FTP deployments
+## Config file for FTP deployments
 To deploy a website to an FTP server, I use [git-ftp](https://github.com/git-ftp/git-ftp). It's a wonderful tool that allows you to upload only changed or removed files to an FTP server. [I have previously used this tool with Jenkins as well]({% link collections.posts, '2016-02-25-Use-Jenkins-and-git-ftp-to-deploy-website-to-shared-webhosting' %})!
 
 So I modified two parts of Pipelines configuration file. First of all, I choose to use the [debian-git](https://hub.docker.com/r/samueldebruyn/debian-git/) Docker image because it already has git installed and because I'm somewhat familiar with Debian. And secondly, I defined the steps that Pipelines should run through:
@@ -61,7 +61,7 @@ Don’t commit this file just yet and open a new tab instead! Note that I use en
 
 {% include "youtube-embed.html", videoId:'8HZhHtZebdw' %}
 
-# Config file for s3_website
+## Config file for s3_website
 For deploying a static website to Amazon S3 I have this ``bitbucket-pipelines.yml`` configuration file:
 
 {% highlight yaml %}
@@ -86,7 +86,7 @@ Just as with the FTP configuration file: don’t commit this file just yet! We h
 
 {% include "youtube-embed.html", videoId:'57pwPxJer1E' %}
 
-# Environment variables
+## Environment variables
 "Wait a minute Xavier!", you might say. "I’m not going to commit my credentials to my git repository!". And you would be correct. Committing sensitive credentials to git repositories is never a good idea. Instead you can use environment variables to store credentials outside of your git repository.
 
 1. Go to the Settings of your repository
@@ -113,13 +113,13 @@ In case you’re wondering: they don’t have to be in caps, but it’s sort of 
 {% include "youtube-embed.html", videoId:'RVwkT4oHDd8' %}
 
 
-# Triggering a build
+## Triggering a build
 Triggering a build is as easy as making a commit to your git repository. After each commit BitBucket will run through all the steps that you’ve defined in ``bitbucket-pipelines.yml``. You can see the status of your builds at any time by going to the Pipelines section. Here you’ll find an overview of all the previous builds and you can see more detailed information for each build, including a console output of the Docker container which was used to run your pipeline.
 
 ![The output of one BitBucket Pipelines build](/uploads/bitbucket-pipelines-ftp-s3/build-output.png)
 
 
-# Conclusion
+## Conclusion
 BitBucket Pipelines is already a great service in my eyes. However there is one thing to consider: the price. Right now Pipelines is freely available during the beta with limits on how long you can keep your tasks running. Atlassian does note that it will communicate detailed pricing information later on. I wouldn’t be surprised if they would limit the free features of this service.
 
 Anyway, for now BitBucket Pipelines is a great replacement for my Jenkins server. I’ve moved over all my Jenkins jobs to this platform and they are working wonderfully. I’m not ditching Jenkins just yet though!

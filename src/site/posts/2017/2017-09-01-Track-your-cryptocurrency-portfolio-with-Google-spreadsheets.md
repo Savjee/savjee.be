@@ -10,22 +10,22 @@ Instead I made a simple spreadsheet in Google Drive and added a little Google Sc
 
 <!--more-->
 
-# Why?
+## Why?
 I have accounts on a few exchanges that allow me to buy different coins. Not having a central place to check up on my portfolio makes it very time consuming to check your positions.
- 
-# Google Spreadsheets
+
+## Google Spreadsheets
 I immediately thought that a spreadsheet could be a great solution to my problem. Just enter all of my purchases and sales in a Google spreadsheet and done! However, a spreadsheet can not update the value of your coins dynamically. For that it needs to fetch the prices of each coin from an API. I was certain that I needed to write a simple web app for this...
 
 
-# Enter Google Apps Script
+## Enter Google Apps Script
 Just as was about to give up on using a spreadsheet, I discovered that Google offers the ability to write scripts inside their documents. These scripts have full access to the internet, they can update data in the documents, they run on Google's servers and they can run on a schedule.
 
 That sounds exactly like what I need!
 
-# My spreadsheet
+## My spreadsheet
 So let's take a look at how I constructed my spreadsheet. It consists out of 2 sheets:
 
-## Sheet 1: overview of coins
+### Sheet 1: overview of coins
 To calculate profits/losses I need to know the current price of each coin that I own. So I started by creating a table for all the coins that I'm currently tracking or that I currently own.
 
 ![](/uploads/cryptocurrency-portfolio-google-sheets/sheet-1.png)
@@ -36,7 +36,7 @@ For each coin I keep track of the current price, the amount I have invested in i
 Without some scripting magic, the price of the coin is obviously not updated dynamically so bear with me.
 
 
-## Sheet 2: purchases
+### Sheet 2: purchases
 Next, I created a sheet for all my purchases. Every purchase is a single row and contains details about when I bought the coins, how many I bought, at what price I bought them and what their current value is.
 
 The real-time value of a coin is retrieved from the first sheet by using a ``VLOOKUP()`` function.
@@ -48,7 +48,7 @@ The real-time value of a coin is retrieved from the first sheet by using a ``VLO
 I also added some columns for when I sell a coin. This allows the spreadsheet to calculate my definitive profits/losses.
 
 
-# The script
+## The script
 Now let's make all of this dynamic! We need a way to update the first sheet with the real-time prices of each coin. If we update that sheet, the other sheet will also update because of the ``VLOOKUP()`` function.
 
 Google Apps Script to the rescue! I wrote a small script that talks to the [coinmarketcap.com API](https://coinmarketcap.com/api/) and fetches a list of all the coins along with their prices in Euro (you could do the same for USD).
@@ -101,7 +101,7 @@ function formatPercent(value){
 The script is pretty efficient. It reads the data from the spreadsheet as a multi-dimensional array. It then updates the values in the array with the data from the API. Afterwards it dumps all of this new data into the spreadsheet in 1 go! (Much better then my original version that updated each cell individually. Sorry Google for the wasted cycles...)
 
 
-# Running it periodically
+## Running it periodically
 The final step is to make sure that the script runs periodically so that our spreadsheet always has the latest information. Luckily Google has our back (again)!
 
 You can set up a trigger that will execute your function when a certain event occurs. This can be an event in the spreadsheet or on a time interval.
@@ -112,13 +112,13 @@ I configured the trigger so that the script runs every 5 minutes. You can even a
 
 And that's it! My spreadsheet now updates itself every 5 minutes without me having to do anything. Everything runs on Google's servers: I can even close the spreadsheet and it will still update itself!
 
-# Conclusion
+## Conclusion
 I've been using Google Drive and it's suite of office products for a while now. I always considered them great tools for collaboration.
 
 Discovering Google Apps Script was huge for me. It's incredibly powerful and it really allows you to make documents that come alive and integrate with other services. I'll definitely use this feature more in the future!
 
 
-# Get it for yourself
+## Get it for yourself
 Want to use this simple spreadsheet for yourself? Here is the link to the spreadsheet:
 
 [https://docs.google.com/spreadsheets/d/180gVT258omc4YE5ixtwbVPLS4q56ma9-70OHrKc2hoo/edit?usp=sharing](https://docs.google.com/spreadsheets/d/180gVT258omc4YE5ixtwbVPLS4q56ma9-70OHrKc2hoo/edit?usp=sharing)

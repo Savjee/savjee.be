@@ -17,12 +17,12 @@ My first smartphone was an iPhone 3G back in 2008. I upgraded to new phone almos
 
 Since buying the OnePlus One I was really happy with my smartphone. I got used to the big screen and loved the performance. Android Lollipop was treating me great also. I liked the vibrant colors, the playful animations and the overall design of the OS. So yes, I was sceptical to return to iOS.
 
-# Hardware
+## Hardware
 After using the Samsung Galaxy S3, S4 and the OnePlus One I can say that the build quality of the iPhone is lightyears ahead of that of my previous phones. The S3 and S4 are made of plastic and feel cheap compared to the iPhone. The OnePlus One is better, it feels rugged and even a little premium with the nice metal band around the phone. Still, these phones are no match to the iPhone 6. For example: the buttons on the iPhone 6 are very tactile and don't wobble at all. It **feels** more premium (even though it can bend, hah) than the previous phones I've owned.
 
 Specification wise it's the other way around. On paper the iPhone 6 is much less powerful than the OnePlus One. The One has a quad-core CPU running at 2.5GHz and 2GB of RAM. The iPhone on the other hand has a dual-core CPU running at 1.4GHz and 1GB RAM. On paper the iPhone would be no match, but in reality it actually feels a bit more responsive than the One!
 
-## Home button, TouchID & other buttons
+### Home button, TouchID & other buttons
 Before buying the OnePlus One I was used to having a physical homebutton on my Samsung devices. After I bought the  One I got used to the touch sensitive buttons really fast and actually enjoyed it more. Because they don't require you to actually press down, I found that I could double tap faster on a touch button than on a physical one. 
 
 On the iPhone you have a physical home button with TouchID. At first I really didn't want to use the fingerprint reader. I hadn't used a PIN code or unlock pattern on any of my previous phones anyway. But I changed my mind when my employer required me to put a 8 digit long PIN code on the phone. Do you know how long it takes to enter a 8 digit PIN code? TouchID takes the pain out of this. I press the homebutton to wake the phone from sleep and simply hold my finger on the button for half a second. TouchID is pretty fast and usually works at the first try (I hear it's even faster on the 6S). I can also use it to make purchases from the App Store so I don't have to enter my long AppleID password. Another nice time saver! One issue I have with TouchID is that it can only recognise a maximum of five fingers. I know that that's more than enough but I sometimes share my phone with my girlfriend. I have 3 fingerprints in the system (both my thumbs and one index finger) while she has both her thumbs recognised.
@@ -34,17 +34,17 @@ One thing I really really miss about my OnePlus One is the double tap to wake fe
 
 I also miss Android's back button. Nearly all Android phones have a physical (or touch-sensitive) back button that can be used throughout the system. It's located conveniently at the bottom left or bottom right of the screen. The iPhone doesn't have a physical back button. Instead, the back button is usually located at the top left of the screen and requires me to stretch my thumb to reach it (yes, I have small hands). It's annoying for me as an Android user. To easy the pain Apple added a swipe gesture. I can swipe from left to right to trigger the back button in most apps. Frustrating for a while but I got used to this pretty fast as well.
 
-## Signal quality
+### Signal quality
 This might seem as a very weird point in this post, but I would like to discuss the signal quality of my Android phones compared to the iPhone. I'm raising this point because I was really disappointed by the mobile reception on the train. I spend a little over 2 hours commuting every day and my Samsung devices and the OnePlus would struggle to keep a 3G or 4G connection on the train. They often display a "No service" message and switch very slowly between Edge, 3G and 4G. I hate it! While I'm using Twitter, reading my email or visiting webpages I often get an error message saying I have no internet connection.
 
 You might argue that it's the fault of my carrier, not my phone. But as I got my iPhone I noticed that it was very fast at switching between network modes (3G & 4G). Fetching tweets, reading email and surfing the web is doable again on the train. There are still places where mobile data is really slow or drops out completely, but I have never seen a "No service" message on my iPhone (yet). This lead me to the conclusion that Android manufactures have some tweaking to do on their basebands? Or maybe they deliberately don't do this to prevent the battery from draining quickly.
 
-# Software
+## Software
 Hardware isn't everything. Software is even more important these days. I'll be very careful when discussing iOS vs Android to prevent a fanboy war in the comments. Both platforms have stuff I love and hate. So let's go!
 
 In this section I'll talk about the notification system of both platforms, the integration between iOS and Google services, customisation, battery life, Android Wear support for iOS and app availability.
 
-## Notifications
+### Notifications
 The notification system of both platforms is very alike and yet has small differences. On iOS an incoming notification wakes the screen. This is particularly useful when the phone is laying besides me on my desk. It's a feature that I didn't have on Android and come to love in iOS.
 
 Another difference is that Android groups multiple notifications of an app together into just 1 notification. This way you can swipe once to dismiss all notifications of that app. I liked that feature a lot, but it limits the amount of information you can see in your notification. What I do miss about Android's notification system is the fact that it showed icons in the status bar. On iOS you have to swipe down to see unopened notifications in Notification Center.
@@ -59,7 +59,7 @@ Both platforms allow you to perform simple actions on your notifications. These 
 ![](/uploads/switch-android-ios/notification-actions.png)
 *You can perform actions on certain notifications.*
 
-## App deep linking
+### App deep linking
 After I switched to Android I noticed that it sometimes asked me how I wanted to open a particular URL. For example: if I tap a search result on Google that leads to Twitter, Android will ask me if I want to open that tweet or profile with the Twitter app.   Ofcourse I do! Apps usually provide a way better experience compared to a website.
 
 This feature is called deep linking and it wasn’t available on iOS when I was using it a couple of years ago. I’m not exactly sure when Apple added this feature to iOS, but they did a great job with it! To give a simple example: when I click a Quora link in an email, it opens it opens it up in the Quora app where I get a great experience!
@@ -69,7 +69,7 @@ This feature is called deep linking and it wasn’t available on iOS when I was 
 
 Note that iOS changes the topbar to include a link to the app which redirected you. It also allows you to visit the actual mobile website if you’re into that. On Android deeplinking works the same way, although it asks you if you want to allow this behaviour once or always.
 
-## Integration with Google services
+### Integration with Google services
 I'm a heavy user of Google's services: I use Gmail, Google Calendar, Google Contacts, Google Drive, Google Play Music, Google Play Books, Google Now, Google Analytics, ... Needless to say all these services integrate very well with Android. They're baked into the OS and allow for seamless usage.
 
 Luckily most of these service work very well with the iPhone as well. It only took a minute to configure my Gmail account to grab my emails, contacts and calendars. iOS has built-in integration for all three and this makes the setup really easy. Sadly though, you can't receive push notifications for Gmail if you use the stock Mail application. Google dropped Exchange support for Gmail and now uses IMAP on the iPhone. To get push notifications for Gmail you are forced to get their inferior Gmail app! Bleh!
@@ -93,7 +93,7 @@ I’m a heavy user of Google’s Music service. I was tired of syncronizing my m
 
 I also use Google Photo's on my iPhone to make a backup of my pictures and to view them on all my devices. This is probably one of the best and most "magical" Google service I have every used. It uploads all your pictures to the cloud, performs some magic voodoo on it and then makes them searchable. I've uploaded all my photo's to the service and I can ask it retrieve all pictures that have a car in it (for example). It may sound stupid but it's amazing that they pulled this off and I use it more then I thought I would. Only one remark: the iOS app starts uploading photo's the moment it has a WiFi connection and doesn't care if your phone is charging or not. This can drain the battery really quickly if you took a lot of photos in between being connected to WiFi. I realise this might have something to do with Apple's restrictions (limited multitasking support) but it would be great if it could only backup when my phone is charging (just like on Android). 
 
-## Customisation
+### Customisation
 When you're looking online for reasons why Android is better than iOS you'll find that customisability almost always pops up. Every reviewer on the planet somehow thinks that this is super important and that it's something Apple really should adres in iOS.
 
 For me it’s not that important. I didn’t customise my Android devices much. I did play around with different roms but that usually led to instability. The thing I miss most about my Android setup is my nearly empty homescreen with the [Today Calendar widget](https://play.google.com/store/apps/details?id=com.underwood.agenda&hl=en). When unlocking my phone I got an overview of all my appointments for the coming days. Widgets are obviously not available in iOS so I searched for an alternative. The "Today" section in Notification Center is a solution but I have to swipe down every time I want to see it. I really miss this one widget!
@@ -134,7 +134,7 @@ I really miss [aCalendar](https://play.google.com/store/apps/details?id=org.with
 
 I also couldn't find a solution for texting from my Mac. I can't use iOS's Continuity feature because my MacBook Pro is too old (Late 2008, only bluetooth 2.1). I don’t feel like buying a new computer just to use this feature so I might upgrade the AirPort card in my machine at some point.
 
-# Personal conclusion
+## Personal conclusion
 After this (quite long) blog post it's time to reach a conclusion. Switching back to iOS required some time to get adjusted and find my way through the system. I miss certain parts of Android (widgets in particular) but it's not holding me back. Android Wear integration is limited on iOS but might get extended in the future.
 
 In my opinion iOS is generally more polished and a little more stable compared to Android. That being said, I do miss the vibrant material design colors and nice animations that Google introduced in Android Lollipop. Apple is slowly opening up iOS for more customisations but compared to Android it's still limited. I'll keep using the iPhone for the coming months and I might review this post when Android M is available for my OnePlus One. Might take a few months though…

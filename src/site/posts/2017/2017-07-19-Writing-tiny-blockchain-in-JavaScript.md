@@ -21,12 +21,12 @@ This blog post is part of a whole series:
 * [Part 4: Signing transactions]({% link collections.posts, '2018-10-27-Signing-transactions-blockchain-javascript' %})
 
 
-# Blockchains
+## Blockchains
 A blockchain is a public database that consists out of blocks that anyone can read. Nothing special, but they have an interesting property: they are immutable. Once a block has been added to the chain, it cannot be changed anymore without invalidating the rest of the chain.
 
 That is the reason why cryptocurrencies are based on blockchains. You don't want people changing their transactions after they've made them!
 
-# Building a Block
+## Building a Block
 A blockchain consists out of many blocks that are linked together (that makes a lot of sense, right?). The chaining of blocks happens in a way that allows us to detect when someone has manipulated any of the previous blocks.
 
 So how do we ensure the integrity? Well each block contains a hash that is computed based on its contents. It also contains the hash of the previous block.
@@ -52,7 +52,7 @@ class Block {
 
 I start by requiring the [crypto-js library](https://github.com/brix/crypto-js) because the sha256 hash function is not available in JavaScript. After that I define a constructor that initializes the properties of my block. Each block is given an ``index`` that tells us at what position the block sits on the chain. We also include a timestamp, some data to store in our block and finally the hash of the previous block.
 
-# Building the chain
+## Building the chain
 Now we can start chaining blocks together in a Blockchain class! Here's what that could look like in JavaScript:
 
 {% highlight js %}
@@ -100,7 +100,7 @@ In the constructor I initialize the chain by creating an array that contains the
 
 Finally I've created a method ``isChainValid()`` to make sure that nobody has messed with the blockchain. It loops over all the blocks and checks if the hash of each block is correct. It also checks if each block points to the correct previous block by comparing the ``previousHash`` value. If everything checks out it returns true and if something is wrong it returns false.
 
-# Using the blockchain
+## Using the blockchain
 With our Blockchain class finished, we can actually start using it!
 
 {% highlight js %}
@@ -111,7 +111,7 @@ savjeeCoin.addBlock(new Block(2, "20/07/2017", { amount: 8 }));
 
 Here I'm just creating a new instance of a Blockchain and naming it SavjeeCoin. Afterwards I add some dummy blocks onto the chain. Blocks can contain any data that you want, but in this case I opted for an object with an ``amount`` property.
 
-# Trying to manipulate it
+## Trying to manipulate it
 In the introduction I said that blockchains are immutable. Blocks cannot be changed once they are added. Let's test that!
 
 {% highlight js %}
@@ -129,12 +129,12 @@ I'll start by verifying the integrity of our chain by running ``isChainValid()``
 
 After that I take the first block on the chain (index = 1) and I manipulate the amount. I then recheck the integrity of the chain and this time it detects that something is wrong. Our chain is no longer valid.
 
-# Conclusion
+## Conclusion
 This implementation is far from complete. It doesn't implement proof-of-work or a P2P network to communicate with other miners.
 
 It does however demonstrate how a blockchain works. Many people think that it's very complex, but this post demonstrates that the basic concepts of a blockchain are easy to understand and to implement.
 
-# Next up
+## Next up
 This blockchain is not complete and not fully secure. Keep reading:
 
 * **Part 1: Implementing a basic blockchain**

@@ -11,12 +11,12 @@ This blog [is powered by the static website generator Jekyll]({% link collection
 
 <!--more-->
 
-# Update: January 24th 2016
+## Update: January 24th 2016
 You can now get a free certificate from AWS Certificate Manager and link it to CloudFront in just a couple of minutes! No manually action required! Check out my video tutorial here:
 
 {% include "youtube-embed.html", videoId:'JbQbwum196g' %}
 
-# Getting ready
+## Getting ready
 I'll assume that you already know how to get a SSL certificate. It's not that hard, not expensive and in some cases even free! I've used [a free StartSSL certificate](https://www.startssl.com/) for my blog.
 
 Before you can use your own certificate in CloudFront, you have to upload it to IAM (Identity & Access Management). Uploading a certificate is only possible by command line. 
@@ -48,7 +48,7 @@ Make sure that you add ``file://`` before every path, otherwise the tools will c
 
 Now that the certificate has been uploaded, disable the IAM user we created previously.
 
-# Enabling the certificate
+## Enabling the certificate
 All that's left is to enable the certificate. Login to the [AWS Management Console](https://console.aws.amazon.com/console/home), go to CloudFront and edit the settings of your distribution.
 
   * Enable the option "Custom SSL Certificate (stored in AWS IAM)" in the section "SSL Certificate"
@@ -58,7 +58,7 @@ All that's left is to enable the certificate. Login to the [AWS Management Conso
 
 Done! Save the settings and wait for the changes to be propagated across the network. After a few minutes [my blog was accessible over HTTPS](https://www.savjee.be)! Just remember to upload a new certificate before it expires.
 
-# Deleting a certificate
+## Deleting a certificate
 If you want to delete a certificate from IAM you can use the ``delete-server-certificate`` command like this:
 
 <pre>aws iam delete-server-certificate --server-certificate-name savjeeSSL2015</pre>

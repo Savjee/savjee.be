@@ -17,7 +17,7 @@ The downside for this flexibility is performance and efficiency. Wordpress made 
 
 Before I switched to Wordpress I made every single web page by hand in TextMate. It seems like a lot of work but I only had a few pages. It gave me complete control over my website. Every page could be entirely different. I choose where to include a big script and where not to. In Wordpress you don't have this flexibility!
 
-# The solution
+## The solution
 Luckily for me, I found the perfect solution: "a blog-aware, static site generator" called [Jekyll](https://github.com/mojombo/jekyll).
 
 It's the best of both worlds! It meant that I could keep my blog AND my static files. But why would you prefer a static website?
@@ -28,7 +28,7 @@ It's the best of both worlds! It meant that I could keep my blog AND my static f
 
 The only downside to Jekyll is that it's not very user-friendly. It doesn't have a nice web interface where you can write posts. If you're not comfortable with HTML, CSS and a terminal, Jekyll is nothing for you.
 
-# Installing Jekyll
+## Installing Jekyll
 Before you can start blogging with Jekyll you have to install it first. The GitHub wiki of Jekyll provides [detailed installation instructions](https://github.com/mojombo/jekyll/wiki/install), so I'd suggest you take a look. 
 
 On OS X you have to update RubyGems first:
@@ -67,7 +67,7 @@ If you want to use code highlighting on your blog, you should also install RDisc
 sudo gem install rdiscount
 {% endhighlight %}
 
-# The structure of a Jekyll site
+## The structure of a Jekyll site
 Now that Jekyll is installed you can start setting up your website. The file structure of your website should look something like this:
 
 <pre>
@@ -98,7 +98,7 @@ Your website's theme goes into ``_layouts/``, Jekyll plugins go into ``_plugins/
 
 The best way to start a Jekyll blog is to look at existing blogs. The official wiki has [a huge list](https://github.com/mojombo/jekyll/wiki/Sites) of websites that use Jekyll and have published the source code. (At some point in the future I'll upload my blog to GitHub as well. Just not right now.)
 
-# Permalinks
+## Permalinks
 When moving from Wordpress to Jekyll you'll run into another problem: permalinks. If you change your URL structure, you'll break every link to your blog. Luckily Jekyll allows you to set the structure of links that it generates. I added this to my ``_config.yml`` file (If you don't have the config file yet, just create it and add this line):
 <pre>
 permalink: /:year/:month/:title/
@@ -120,7 +120,7 @@ This makes my old Wordpress URL's compatible with the new Jekyll URL's. Keep in 
 
 If you don't like this you can use a ``.htaccess`` file to rewrite the Wordpress URLs to Jekyll URLs. (Sorry, no additional details. I don't use it myself since this website is hosted on Amazon S3 and htaccess files are not supported)
 
-# Writing blog posts
+## Writing blog posts
 Blog posts in Jekyll are written in [Markdown](http://daringfireball.net/projects/markdown/), "an easy-to-read and easy-to-write plain text format". The Markdown syntax is also easy to learn.
 
 To compose Markdown files you just need a basic text editor. If you are a developer, you can use your code editor. Or you could use an editor that is designed with Markdown in mind, like iA Writer.
@@ -129,7 +129,7 @@ iA Writer is a dead simple text editor for Markdown documents. It let's you focu
 
 Remember to save all your posts in the ``_posts/`` folder. Simply run ``Jekyll`` to regenerate your website with your new post.
 
-# Compressing CSS while building site
+## Compressing CSS while building site
 To improve performance of the website even further I wanted to compress CSS code. To achieve this, I added the plugin [jekyll-cssminify](https://github.com/donaldducky/jekyll-cssminify). Simply download the ``CssMinify.rb`` file and place it in the ``_plugins`` folder of your Jekyll site.
 
 CssMinify has a few dependencies that have to be installed before you can use it:
@@ -149,7 +149,7 @@ That's it! Everytime Jekyll generates my website, the stylesheets are compressed
 *Note: be sure to remove the space between { and %. I added this because Jekyll replaced it with the name of my compressed CSS file.*
 
 
-# Future & conclusion
+## Future & conclusion
 To increase the uptime and performance of my blog [I moved it to Amazon S3]({% link collections.posts, '2013-02-01-howto-host-jekyll-blog-on-amazon-s3' %}). I can automatically deploy my blog to S3 in a matter of seconds.
 
 Moving your blog over to Jekyll can be a lot of work depending on the size of your blog. But if you're comfortable with a terminal and want a high performance blog it's definitely worth it!

@@ -10,7 +10,7 @@ But instead of installing everything straight onto the server, I figured it woul
 
 <!--more-->
 
-# The Scaleway Cloud Server
+## The Scaleway Cloud Server
 Let's first take a look at the [Scaleway offering](https://www.scaleway.com/pricing/). I ordered their most basic server and this is what you'll get for €2.99 a month:
 
   * 2 x86 64bit Cores
@@ -25,7 +25,7 @@ This particular Scaleway server has 2 dedicated cores of an [Intel Atom C2750](h
 
 I opted for Ubuntu Server 14.04 as a virtualization host because it <del>is</del> was the latest LTS release. Sadly this is post is already outdated now because Ubuntu 16.04 (LTS) has been released since I deployed my server.
 
-# What is LXC? What are containers?
+## What is LXC? What are containers?
 Before we dive in, let's take a look at what LXC is and what it isn't. Feel free to skip this section if you already know what containers are. According to Wikipedia, LXC is:
 
 > an operating-system-level virtualization method for running multiple isolated Linux systems (containers) on a control host using a single Linux kernel.
@@ -36,7 +36,7 @@ Because each VM is essentially an entire virtual computer you can mix different 
 
 Containers on the other hand are much more lightweight. Each containers shares the operating system with other containers. In fact software that runs inside a container runs at near bare-metal speeds. You can compare them to sandboxes: software in containers run isolated yet directly on the hardware. 
 
-# Benefits of containers
+## Benefits of containers
 The benefits of using containers is comparable to the benefits of using virtual machines.
 
   * Each container is completely isolated from the host and from other containers. This means that if something bad happens to one container, it doesn't affect the others.
@@ -56,7 +56,7 @@ There are however some downsides to containers:
   * The security of containers can be compromised if there is a vulnerability in the kernel of the host. This could result in containers being able to exploit these vulnerabilities and harm the host. However, this is also an issue for hypervisors like Xen and ESXi. 
 
 
-# Installing LXC & creating containers
+## Installing LXC & creating containers
 Installing LXC on Ubuntu is pretty straightforward, just run:
 
 <pre>sudo apt-get install lxc</pre>
@@ -93,7 +93,7 @@ I repeated this process a number of times and created a container for each servi
 
 I then installed the software in each container and tested it. The BOINC container worked straight away. My wiki and Jenkins installations however didn't seem to work. They weren't accessible from the internet. Why?
 
-# LXC networking: the basics
+## LXC networking: the basics
 To answer that question, I'll give you a quick overview of how networking works in LXC. When you install LXC it automatically creates a new internal network. By default this is the ``10.0.3.0`` network and it acts as a NAT bridge. Each container you create will connect to this network and because it uses NAT, every container will be able to access the internet.
 
 ![](/uploads/getting-started-lxc/lxc.png)
@@ -107,7 +107,7 @@ You can compare LXC's network setup with your own home network. Your internet ro
 
 Getting back to my situation: my Jenkins container opens up port 8080 for its web interface. The Nginx container opens up ports 80 and 443. How do I make sure that these ports are accessible from the internet? We forward the ports!
 
-# Port forwarding
+## Port forwarding
 With port forwarding we are essentially telling our host where it should direct traffic coming from certain ports. In this case I want to tell the host that all traffic on ports 80 and 443 should go to the Nginx container. That way Nginx can handle the incoming HTTP(S) requests.
 
 To do this, we use ``iptables`` on the host. We tell it to forward all traffic coming from ports 80 or 443 to the same ports of the Nginx container with the IP ``10.0.3.100``:
@@ -127,7 +127,7 @@ A few things to note about this command:
 You might notice that I don't have a port open for Jenkins or netdata. Both however expose a port to access their web interfaces. Well that's because I use my Nginx container as a reverse proxy for these services. 
 
 
-# Nginx as reverse proxy for containers
+## Nginx as reverse proxy for containers
 Instead of letting the outside world talk directly to my Jenkins and netdata instances, I let all requests go through my Nginx container. There are a couple of reasons for this.
 
 To start with, Nginx is a very fast web server. All calls to static resources can be handled and cached by Nginx so they won't hit the application servers. Take Jenkins as an example: the built-in Getty web server won't have to deal with static resource requests. Nginx can cache things like stylesheets, scripts and images, leaving only the dynamic parts up to the application. 
@@ -170,7 +170,7 @@ With this configuration I tell Nginx that all requests to ``/jenkins/`` should b
 
 In the same fashion I also created a reverse proxy configuration for my wiki and for netdata. After doing this, I secured all my applications with a single SSL certificate for my server. Done!
 
-# Other configurations
+## Other configurations
 You can configure a lot of different aspects of your container. LXC keeps a ``config`` file for each container. If you're looking for detailed information on all available configuration parameters, make sure to bookmark the [lxc.container.conf man page](https://linuxcontainers.org/lxc/manpages/man5/lxc.container.conf.5.html). In this section I'll only detail how you can limit container resources like CPU and memory and how you can automatically start containers when the host system boots.
 
 The first thing I did was making sure that all my containers would start if my host system would every be restarted. It's quite essential that your server can recover from downtime without manual intervention. There are three parameters that you can configure to achieve this.
@@ -216,7 +216,7 @@ lxc.cgroup.cpuset.cpus = 0,1
 lxc.cgroup.cpuset.cpus = 2,3
 </pre>
 
-# Backing up to Amazon S3
+## Backing up to Amazon S3
 Another important part that I wanted to do differently with my new server was backups. Previously I had created a simple PHP script that backed up my wiki data to Amazon S3. But that was it. My config files for Nginx, OpenVPN and Jenkins data where not backed up. Thank god nothing happened to my server in the past 2 years!
 
 This time however, I'm not leaving anything to chance. I want to **backup everything**. With LXC (and any other virtualization technology) that's actually really easy! If you backup a container you backup everything. You'll get the entire container in a tarball ready to be deployed somewhere else.
@@ -259,7 +259,7 @@ done
 
 It compresses every container (even inactive ones) to a tarball and puts it in ``/root/lxc-backup/``. It then uploads the tarball to an Amazon S3 bucket with the wonderful [s3cmd](http://s3tools.org/s3cmd) tool. I originally uploaded backups to [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) (see commented out code) but I stopped doing that because they don't (yet) have lifecycle rules. In the future I'll probably switch to B2 for all my backup needs because it's a fourth the price of S3!
 
-# A GUI for LXC
+## A GUI for LXC
 So far I've shown you how to manage LXC container with the command line. It is also possible to manage LXC with a web interface but there are very few open source projects out there. The only working GUI I could find was [LWP or LXC Web Panel](http://claudyus.github.io/LXC-Web-Panel/). It's a web interface written in Python that allows you to create, edit, start, stop, freeze and backup containers.
 
 The tool is fine for managing containers but in my experience it was a lot slower compared to the command line. For that reason I removed it again from my server and kept using the command line. 
@@ -270,7 +270,7 @@ The tool is fine for managing containers but in my experience it was a lot slowe
 I would love it if someone would pickup this project and further improve it. As far as I could tell, there aren't any other lightweight LXC web GUI's. Lightweight is key here. There are administrations panels that can manage LXC (like oVirt) but they require a lot of resources to run. That's just not worth it for a personal setup like mine.
 
 
-# Wrapping up
+## Wrapping up
 So that's it for this post. I've showed you how I configured my new server and how I use LXC to isolate the different services I run on it. It has been a smooth experience so far. No downtime of the host since I started. As for the future: I'm considering to upgrade both the host and the containers to Ubuntu server 16.04, but let's not fix things if they aren't broken!
 
 Using LXC means that experimenting with new software won't screw up my other services. It's far better compared to my old setup where everything was running directly on the host. In the beginning I frequently ran into trouble when I was trying stuff out. Better don't do that if you rely on the server!

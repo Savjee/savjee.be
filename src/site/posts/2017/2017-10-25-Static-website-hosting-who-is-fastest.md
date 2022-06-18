@@ -13,7 +13,7 @@ Well let's find out!
 
 This blog post is about a benchmark I did in 2017. [I repeated this in 2020 with more tests & more providers]({% link collections.posts, '2020-05-28-benchmarking-static-website-hosting-providers.md' %}).
 
-# What I tested
+## What I tested
 I started by creating an account on a few public clouds that allow you to host static websites. Static websites are built using only HTML, CSS and Javascript so basic storage is sufficient. I ended up creating an account on these services:
 
 * Pay-as-you-go
@@ -32,7 +32,7 @@ To test the performance of each service, I signed up for Pingdom's free 14-days 
 
 On the last day I terminated the checks and downloaded the raw data CSV for analysing.
 
-# Some more details
+## Some more details
 Let's talk a bit about how I configured each service.
 
 **Netlify, GitHub Pages and Firebase Hosting** are the simplest options for hosting a static website. Just give them your files and they will host them for you. There is almost no configuration and you don't get to mess with settings. So I didn't!
@@ -42,7 +42,7 @@ Let's talk a bit about how I configured each service.
 I tried to keep the default settings for each service as much as possible. I only changed **CloudFront's** configuration to enable HTTPS.
 
 
-# Expectations
+## Expectations
 So before we dive into the results: what are my expectations?
 
 * **Payed service** will outperform the free alternatives. It would make sense because you pay for them to be fast!
@@ -57,7 +57,7 @@ So before we dive into the results: what are my expectations?
 
 Enough with the expectations. Let's see how they actually stack up against each other...
 
-# Results
+## Results
 So what did the results look like? Well here is the overview on Pingdom:
 
 ![Pingdom's Dashboard](/uploads/static-website-hosting-who-is-fastest/pingdom.png)
@@ -97,7 +97,7 @@ We can also make some other interesting observations:
 * **Google's multiregional bucket** recorded a higher maximum then a regional bucket. That's a bit weird, but again it's probably an error in the measurement. If you look more closely you see that for the vast majority of measurements, the multiregion bucket performs slightly better.
 * **GitHub Pages** is comparable to Firebase Hosting and Google Storage buckets. Very strong performance from a free service with no real hard limits.
 
-# Conclusions
+## Conclusions
 So time to draw some conclusions. All these services are great options for hosting your static websites.
 
 The best all-round performer is without a doubt **Firebase hosting**. Not only is it fast, it was the most consistent during my test.
@@ -111,7 +111,7 @@ Closely after them is **CloudFront** and **Google's Storage** buckets. Again I w
 **S3** (without CloudFront) was considerably slower then the others, but that's to be expected given that it doesn't use a CDN by default.
 
 
-# Which one should you choose?
+## Which one should you choose?
 That's a bit tricky. If you want a completely free solution then you should definitely consider GitHub Pages. You do have to make your website open source though.
 
 Don't want to make your website open source but still want to host it for free? Well then Firebase Hosting is probably your best bet. It's not completely free, but it does have a free tier that should be sufficient for small websites. Netlify is also an option here and should perform well for most of the time.
@@ -119,5 +119,5 @@ Don't want to make your website open source but still want to host it for free? 
 For payed solutions there isn't really much of a difference. If you're after speed both AWS CloudFront and Google's storage buckets are great options. Choosing between these is difficult, so try to pick one you're already familiar with or the one with the cheapest pricing.
 
 
-# Download the data
+## Download the data
 Want to do your own analysis? [The raw CSV exports from Pingdom are available on GitHub](https://github.com/Savjee/static-website-hosting-benchmark).

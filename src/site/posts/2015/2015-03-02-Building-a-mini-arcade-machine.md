@@ -14,14 +14,14 @@ But when I came across the Internet Archive's [Internet Arcade](https://archive.
 
 ![Raspberry Pi with two arcade buttons](/uploads/mini-arcade/p1_rpibuttons.jpg)
 
-# The design
+## The design
 
 ![Sketch of the mini arcade cabinet](/uploads/mini-arcade/p1_arcade_sketch.png)
 
 I didn't want to build a full scale arcade cabinet since they take up a lot of space. I found several projects online of smaller, bartop arcade cabinets. We looked at several designs but ultimately decided to follow [this great Instructable](http://www.instructables.com/id/2-Player-Bartop-Arcade-Machine-Powered-by-Pi/). It's a very well written post with drawings and dimensions of the wood panels.
 
 
-# Parts & costs
+## Parts & costs
 Most of the budget for the arcade went to the arcade joysticks, the buttons and the Pi. I ordered the new [Raspberry Pi 2](http://www.raspberrypi.org/products/raspberry-pi-2-model-b/) as brain for my machine. It has a faster and more compatible processor then it's predecessor. The Pi will be connected to an old 19" display with built-in speakers. 
 
 Finding joysticks and buttons for the arcade was a little bit more difficult. I couldn't find any retailers that shipped these components to Belgium for a reasonable price. Most of them don't ship to Belgium or charge a ridiculous amount of money for it. 
@@ -71,7 +71,7 @@ Here's the complete price list of the project:
 
 (I already owned a 12V power supply for the LED's and an old 19" screen with built-in speakers.)
 
-# Drilling & sawing the control and side panels
+## Drilling & sawing the control and side panels
 My arcade machine is intended for 2 players so I need cutouts for 2 joysticks and 12 buttons. After drilling the holes I tested if everything fits:
 
 ![The arcade's control panel](/uploads/mini-arcade/p1_controlpanel.jpg)
@@ -85,7 +85,7 @@ Working out the rough edges with a rasp:
 
 We didn't just cut the side panels and control panel. The front panel, marquee and bottom are also finished. Only the screen cutout and back panel remains. That's for next weekend ;).
 
-# Setting up the Pi
+## Setting up the Pi
 I started setting up the Raspberry Pi in between the wood sawing sessions. I found two operating systems for the Pi that are built for emulating classic games: [PiPlay](http://piplay.org/) and [RetroPie](http://blog.petrockblock.com/retropie/). Both have about the same features and come with support for many emulators. I choose RetroPie because it had a stable build for the Raspberry Pi 2 (PiPlay for the Pi 2 was in beta). 
 
 RetroPie can be used to emulate many game systems including: MAME (for all those classic arcade games), NES, SNES, GameBoy and PlayStation 1. Check out the full [list of supported systems](http://blog.petrockblock.com/retropie/arcade-systems-game-consoles-and-home-computers-in-retropie/).
@@ -123,5 +123,5 @@ That's it! Start Emulation Station, select the system you want to emulate, selec
 
 ![Screenshot of Emulation Station](/uploads/mini-arcade/p1_emulationstation.png)
 
-# Part 2
+## Part 2
 [Continue reading part 2]({% link collections.posts, '2015-04-11-Building-a-mini-arcade-machine-part2' %}) and discover how I assembled all the individual pieces, wired everything up and configured the software for the arcade (EmulationStation & RetroArch).

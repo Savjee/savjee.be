@@ -19,7 +19,7 @@ While you can upload your own MP3s to get around these limitations it's not a ni
 
 When I discovered BitTorrent Sync, I thought: this is the best tool for syncing my music collection between machines!
 
-# Why BitTorrent Sync?
+## Why BitTorrent Sync?
 [BitTorrent Sync](http://www.bittorrent.com/sync) is a free tool that allows you to sync files between your devices **without using any cloud service**. It currently supports Windows, OS X, Linux, iOS and Android. It's essentially a Dropbox alternative that runs on your hardware only. Like the BitTorrent protocol, everything is peer-to-peer. And because there is no central service, you can store and sync as much data as you want, for free!
 
 This makes BitTorrent Sync incredibly interesting for syncing an iTunes library:
@@ -30,7 +30,7 @@ This makes BitTorrent Sync incredibly interesting for syncing an iTunes library:
 There is however one downside to this solution: because there is no central place to store your data, you can only sync computers when they're online. When new content is added to one machine, it has to stay online until at least one other machine has finished syncing the new data. This might be a deal breaker for some use cases, but in case of an iTunes library it's not that important.
 
 
-# Setup
+## Setup
 Setting everything up is very simple. In short: every machine that has your secret key can sync your folder. So all you have to do is select the folder to sync, generate a secret and use that secret to configure the remaining machines. Done!
 
 1. Open BitTorrent Sync
@@ -44,7 +44,7 @@ That's it! Our first machine is configured and ready to start syncing as soon as
 
 ![](/uploads/itunes-bittorrent-sync/setup-2.png)
 
-# Read only key
+## Read only key
 Though this setup works perfectly, I was worried that the library might get corrupted when two machines are using iTunes at the same time. To prevent this from happening I made my Hackintosh a kind of 'master' and my MacBook a 'slave'.
 
 I always add new music on my Hackintosh and copy it over to my MacBook. This means that my MacBook doesn't need to sync it's changes back to my Hackintosh. The way to set this is up in BitTorrent Sync is by using a Read-only secret.
@@ -60,10 +60,10 @@ I always add new music on my Hackintosh and copy it over to my MacBook. This mea
 So I ended up copying the Read-only secret to my MacBook. That way, my MacBook never uploads local changes to my Hackintosh.
 Note that this isn't a requirement. I just feel safer doing it like this ;)
 
-# First sync
+## First sync
 Depending on how large your iTunes library is, it can be quite a while before BitTorrent Sync finishes the first sync. To speed things up you could sync over LAN (through an ethernet cable, not WiFi!). Alternatively you could copy your iTunes library to an external HDD and place it on all your other computers. I picked the last option and it makes your first sync really fast. All BTSync then has to do is index your folder and verify that everything is in sync.
 
-# What about mobile?
+## What about mobile?
 BitTorrent Sync is also available for [iOS](https://itunes.apple.com/us/app/bittorrent-sync/id665156116) and [Android](https://play.google.com/store/apps/details?id=com.bittorrent.sync) devices. I wondered if it was possible to stream my iTunes library to my iPad through BTSync. After scanning the QR code of my folder's secret, my iPad was all set up! This is how the iTunes folder looks on the iPad:
 
 ![](/uploads/itunes-bittorrent-sync/ipad-1.png)
@@ -78,12 +78,12 @@ You can even listen to songs from within the app. Simply select a song, wait for
 
 Songs start playing pretty quickly but they don't stream. The file has to be downloaded completely before it can be played. This might take some time depending on your internet connection.
 
-# Other supported devices
+## Other supported devices
 Besides running on Windows, OS X, iOS and Android, BitTorrent Sync also runs on Linux. That opens the door to a lot of possibilities. You could install BitTorrent Sync on a Linux based NAS devices ([such as this one](http://www.qnap.com/en/index.php?sn=9136#Q2)) or on your [Raspberry Pi](http://blog.bittorrent.com/2013/05/23/how-i-created-my-own-personal-cloud-using-bittorrent-sync-owncloud-and-raspberry-pi/)!
 
 These devices can be kept running 24/7 to ensure you'll always have access to your music collection.
 
-# Perfect solution? 
+## Perfect solution? 
 For me, BitTorrent Sync is the best solution for syncing an iTunes library between machines. It's fast, free and places no limits on file sizes. I've been using it for about a month now and I haven't had a single issue!
 
 I'm definitely going to use BitTorrent Sync a lot more in the future! Not just for syncing my iTunes library.

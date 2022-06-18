@@ -10,14 +10,14 @@ During this internship we held daily stand-up meetings (a must for every Agile t
 
 <!--more-->
 
-# Take it from here
+## Take it from here
 When my internship ended I was wondering what more I could do with Slack for me personally. A few days went by with me having no idea what I could use it for. However, ideas are everywhere and sometimes hiding behind a corner. Every day I get a bunch of emails from my server. A  mail from [fail2ban](http://www.fail2ban.org/), warning me that someone is trying to brute-force their way into my server and that it stopped them. Or a mail of one of my backup scripts to alert me when something went wrong.
 
 When these things happen I want to know as fast as possible. So there was my idea! I decided to use Slack as a way to get relevant information pushed straight to me. I started by pushing all my server notifications to Slack instead of relying on email!
 
 (There are more platforms out there that can be used to push notifications to you. For example: you could use services like [Pushbullet](https://docs.pushbullet.com/).)
 
-# Using PHP to access the Slack API
+## Using PHP to access the Slack API
 Slack allows external developers to use and extend it's service. Through [the Slack API](https://api.slack.com/) you can send messages and create bots. There are different API's but the Webhook API suits my needs perfectly: it doesn't require authentication and is specifically intended to deliver messages to chat channels.
 
 I wrote a simple PHP class to send messages to Slack through [cURL](http://php.net/manual/en/book.curl.php). I know that there are many PHP classes that already do this, but I wanted some experience with cURL in PHP.
@@ -61,7 +61,7 @@ $slack = new SlackConnect('https://hooks.slack.com/services/XXXXXX/XXXXX/XXXXXXX
 $slack->sendMessage($message);
 {% endhighlight %}
 
-## Configure fail2ban
+### Configure fail2ban
 Now all that's left is telling fail2ban to send all notifications to my PHP script. So I started with creating a new fail2ban action ``slack.conf`` in ``/etc/fail2ban/action.d/`` with these contents:
 
 <pre>
@@ -133,7 +133,7 @@ action = %(action_slack)s
 
 Done! Restart fail2ban to apply the changes. Shortly after the restart you should see the "jail has been started successfully" notification in Slack.
 
-# What I use it for
+## What I use it for
 Right now I'm using my SlackConnect class for pushing a variety of notifications to Slack:
 
   * I use it to keep track of all my server notifications. This includes fail2ban notifications and the output of my backup scripts. Both of these get pushed to separate channels on Slack.
@@ -146,10 +146,10 @@ Each of these scripts push their messages to a separate channel on my Slack acco
 
 ![](/uploads/fail2ban-slack-notifications/slack-notifications-settings.png)
 
-# Wrap-up
+## Wrap-up
 As you can see, Slack is an amazing tool. Not only for team collaboration but also for individual use. And it gets even better. When you use an Android device and own a smartwatch, you'll get your notifications pushed straight to your wrist!
 
 ![](/uploads/fail2ban-slack-notifications/slack-android-wear.png)
 
-# Source code
+## Source code
 The source code for SlackConnect is [on GitHub](https://github.com/Savjee/SlackConnect/)

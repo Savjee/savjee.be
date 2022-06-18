@@ -13,7 +13,7 @@ The past weeks I've looked into ways to speed up my blog even further without us
 
 <!--more-->
 
-# Why gzip?
+## Why gzip?
 Let's start with the why: "Why would you want to serve a gzipped copy of your website to users?"
 
 * Gzipping your content means **smaller** content. Smaller content = faster downloads = less loading time and a happy user!
@@ -23,14 +23,14 @@ Gzip is very effective in compressing HTML and CSS files since most text is repe
 
 The first question I asked myself was: "How much smaller is gzip going to make my webpages?". I took an uncompressed version of my [Hackintosh blog post]({% link collections.posts, '2012-12-28-building-a-hackintosh' %}) and compared it to the compressed version. The uncompressed page was 10217 bytes long while the compressed version was just 4538 bytes long. That's a **44% reduction** for a pretty small page!
 
-# One way road
+## One way road
 Serving gzipped content from S3 is a one way road. It's all or nothing. Once enabled, all your visitors **have to support** gzip compression.
 
 Regular web servers can be configured to only serve gzipped content to clients who support it. On S3 you don't have this option.
 
 Luckily though, [gzip support is included in all recent browsers](http://schroepl.net/projekte/mod_gzip/browser.htm). Dropping support for very old browsers (or bad proxies) isn't a big deal for me. All of my visitors are running pretty recent versions of browsers anyway and web crawlers like Googlebot can also handle gzip.
 
-# Deploying
+## Deploying
 When you want to deploy a gzipped website to S3 you have to **compress every file before uploading it**! I use a bash script to deploy my website to S3, so it would be nice to make everything automated. So let's modify my original script with these new requirements: 
 
 * Gzip all HTML, CSS and Javascript resources before uploading them to S3.
@@ -40,7 +40,7 @@ Beside enabling gzip I also had a "nice to have" feature:
 
 * Support for my live and staging environments (www.savjee.be and staging.savjee.be).
 
-# Implementation
+## Implementation
 Here is the new script that I currently use to automatically deploy my website to S3:
 
 {% highlight bash %}
@@ -139,20 +139,20 @@ With one command I can deploy my website to my staging environment (``sh _deploy
 
 Let's take a more detailed look at the script:
 
-## Configuration section
+### Configuration section
 The configuration section is used to define a few variables that are used later on:
 
 * The ``LIVE_BUCKET`` and ``STAGING_BUCKET`` variables store the names of the S3 buckets to deploy to
 * ``SITE_DIR`` stores the location of the generated website (If you use Jekyll this is ``_site/`` by default)
 
-## Color section
+### Color section
 This section provides the rest of the script with 3 functions to echo text in color. It's something I found in [a blog post of Fizer Khan on shell scripts](http://www.fizerkhan.com/blog/posts/What-I-learned-from-other-s-shell-scripts.html#colors-your-echo).
 
 It's not a real requirement but it makes the output look good:
 
 ![](/uploads/jekyll-s3-deploy-gzip/1.png)
 
-## Gzipping
+### Gzipping
 Because we want to gzip content, we have to find each HTML, CSS and Javascript document in the ``SITE_DIR`` directory and compress it with gzip:
 
 * The script uses the ``find`` command to look for all HTML, CSS and Javascript files inside my generated website directory. 
@@ -162,7 +162,7 @@ Because we want to gzip content, we have to find each HTML, CSS and Javascript d
 * Finally, the script fixes the extension. Gzip automatically appends ``.gz`` after it's finished compressing a file. The file ``index.html`` becomes ``index.html.gz`` once compressed. Even though browsers understand gzipped content, you can't serve them with a ``.gz`` extension. So each file is renamed so it has the original file extension.
 
 
-# File size comparison
+## File size comparison
 Does gzip really matter? Does it really compress webpages with a large factor? Well, yes it does:
 
 ![](/uploads/jekyll-s3-deploy-gzip/2.png)

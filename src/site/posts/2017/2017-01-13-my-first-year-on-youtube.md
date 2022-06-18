@@ -9,7 +9,7 @@ Exactly one year ago I started my YouTube channel. It was something I wanted to 
 
 <!--more-->
 
-# About my channel
+## About my channel
 Lets start with some background information on my channel. I have a passion for teaching people. At school I was always eager to give presentations about topics where I knew a lot about. I love to learn about new technologies and then spread my knowledge back to others. In fact it was this passion that drove me to create my own blog and write in-depth articles about some of my projects. 
 
 I've been blogging for a couple of years but I noticed something: I watch way more video's than that I read blog posts. Sometimes a video can be so much clearer compared to text. 
@@ -18,7 +18,7 @@ So in the beginning of 2016 I finally decided to start my own YouTube channel. I
 
 {% include "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
 
-# Equipment: what I use
+## Equipment: what I use
 You might be wondering what equipment I use to make these videos. So here is the list of hardware and software that I currently use to make my video's:
 
 * MacBook Pro or my Hackintosh
@@ -38,7 +38,7 @@ After I created my first three video's I wanted to create an intro for all my vi
 
 And finally I use **BackBlaze B2** to backup all my finished videos. This includes the ScreenFlow project, as well as the exported video, preparations I have made and the thumbnail design. B2 is an excellent place to store your backups because it's very cheap. 
 
-# Keeping things on track with Trello
+## Keeping things on track with Trello
 A lot of work goes into each video.  I use Trello to keep track of what I need to do. It's a very visual way to see how far along I am on certain videos. I can quickly glance my Trello board and see how many videos I'm working on, how many are finished and waiting to be published. 
 
 ![](/uploads/first-year-on-youtube/trello.png)
@@ -55,7 +55,7 @@ When I start working on a video it goes to the "In the pipeline" list and I atta
 
 When a video is finished it moves to the "On hold" column. These videos are not yet available on YouTube, they are still marked as private. Sometimes I finish more than 1 video per day, but I don't publish them straight away. Instead I'm trying to release videos on a regular schedule. So if I'm ahead of schedule, this list fills up with videos that can be published.
 
-# Statistics
+## Statistics
 So what have I accomplished during my first year on YouTube? Here are some numbers:
 
 * 1 year on YouTube
@@ -71,22 +71,22 @@ I'm most proud of the average view duration and the total watched minutes. Both 
 
 Personally I think that these are the important metrics for my channel. They remind me that people actually watch my videos and learn from them. After all, that is the goal of my channel. The goal is not to get the most views or subscribers, but to actually teach people new things. 
 
-# What have I learned?
+## What have I learned?
 So far I've learned a lot about creating educational videos for YouTube. I'll sum them up here for you, but remember: I've only been on YouTube for a year so my advice might not be top notch.
 
-## Stop doubting, just start!
+### Stop doubting, just start!
 The first thing I learned was to stop doubting myself and just start making video's. I wanted to start a YouTube channel for a while now, but I was always afraid that people would not like my video's. I was doubting myself and thinking "What if people think I'm stupid?"
 
 This kind of thinking is stupid and I realise that now. The best advice I can give anyone who is in the shame shoes as I was: **just start**. Starting a YouTube channel is easy and free: you've got nothing to lose. After your first few videos you'll quickly discover if people like or hate your content. In my case the responses were largely positive and I knew that I was doing something right.
 
-## Reduce distractions
+### Reduce distractions
 People are easily distracted and you have limited time to grab their attention. My first few videos started with long slideshows where I talked about technicalities. Later on I switched that around and made the introduction shorter. So I don't use the introduction to talk about technicalities. Those details should come later in the video.
 
 The human attention span is decreasing. So it's important that you capture people's interest as quickly as possible. Having a long and boring introduction would scare them away. I try to make my introductions as short as possible and I'm even thinking about removing my intro animation for that reason. 
 
 I also keep my slides and my screen simple and tidy. I prefer people listen to what I say than being focused on what is written on a slide. I also clean up my screen whenever I start recording. I will often hide my Dock and clean up my menu bar. It's almost like "forcing" people to look at what really matters and preventing them from getting distracted with something that is irrelevant like what's in your Dock or what's on your desktop. 
 
-## Quality matters, or doesn't it?
+### Quality matters, or doesn't it?
 A lot of big Youtubers say that video quality is not important when you are starting a channel. I agree with them, but I believe that videos should have a minimum quality level. Nobody likes to watch a tutorial video that is narrated by a unnatural sounding computer voice for instance. 
 
 In my case the audio quality is the most important aspect. For the first few video's I used the internal microphone of my MacBook. And while it's not bad, it's not great either. My voice sounded flat and the microphone picked up a lot of echo from the room. After a couple of months I found a more decent microphone that my granddad used in the past and even later I ordered a USB microphone.
@@ -99,12 +99,12 @@ That doesn't mean that I won't improve quality in the future. I like to know tha
 
 The most important part of educational videos is not the video quality and to some extend it isn't the audio quality either. Instead it's the way you explain stuff. I try to explain things in a easy way and with real world examples. I'm convinced that is more important than anything else.
 
-## Gradually improve
+### Gradually improve
 Rome wasn't built in one day, so don't try to build the perfect channel in a day. As said before, I started with 720p recordings, a bad microphone and long introductions. But after a few videos that improved. 
 
 The thing to take away here is that you'll learn things by doing them. You can't start with the perfect video and the perfect channel. It takes a few videos to realise that you're doing something wrong. 
 
-# Goals & Improvements for 2017
+## Goals & Improvements for 2017
 Every year I try to set new goals for my blog and I figured I should do the same for my YouTube channel. I thought about several goals. I could set the goal to double the amount of views but that is silly. View count doesn't tell you much. 
 
 The purpose of my YouTube channel is to teach people. To do that people should watch my videos completely. So the goal for this year is to **increase the average percent viewed**. If people watch longer, they'll likely also learn more. I don't have a concrete plan to accomplish this but I have a few idea's that I would like to try, so stay tuned for that ;)
@@ -115,7 +115,7 @@ I also want to **buy some acoustic foam** to put on my walls. This should hopefu
 
 And finally I want to **experiment with new ideas**. For example: should I record and upload in 60fps instead of 30? Would it make a big difference for screen recordings? I'm also thinking about making the introduction of each video a bit more personal by pointing a camera at me instead of showing a static image.
 
-# Conclusion
+## Conclusion
 My channel is far from perfect but that is fine. I'll keep improving the channel with each new video. It's a work in progress and as time goes by I will learn more and receive more feedback.
 
 I would like to thank everyone who watched one of my video's and who has subscribed to my channel. I hope the videos are helping people out. Make some noise in the comments, let me know what you like about my videos and what you dislike. Give me suggestions, feedback and tips!

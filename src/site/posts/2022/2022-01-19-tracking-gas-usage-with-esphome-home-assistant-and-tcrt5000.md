@@ -28,7 +28,7 @@ Unfortunately, I got no measurements. The reed switch didn't get closed by the m
 
 I then found [a forum post](https://www.flukso.net/content/elster-bk-g4m-positioning-sensor) that suggested the magnet inside my meter is very weak or isn't a magnet at all. It could be a mirror instead.
 
-## TCRT5000: optical measurement
+### TCRT5000: optical measurement
 
 So how can I detect a mirror passing? One solution would be to shine a laser on the dial and measure how much light is being reflected. More light reflects when the mirror passes in front of the laser.
 

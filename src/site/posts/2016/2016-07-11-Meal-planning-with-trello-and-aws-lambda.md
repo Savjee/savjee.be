@@ -11,14 +11,14 @@ So a couple of weeks ago I decided to make a digital version of our weekly meal 
 
 <!--more-->
 
-# The original
+## The original
 Here is a picture of our original and analog week menu:
 
 ![](/uploads/meal-planning-trello-lambda/old-meal-planner.jpg)
 
 It has the days of the week on the left and the meals we're going to eat on the right. Can't get any simpler than this! Now on to our digital solution!
 
-# Enter Trello
+## Enter Trello
 I quickly thought about using Trello as our new week menu planner. I started by creating a new board and added a "Backlog" column. The backlog column is an idea bin: it comes in handy when we don't know what we want to eat the following week. If that occurs, we browse through the list and just name the things we would like to eat again. 
 
 We then created a card for each meal that we can prepare and put it in our idea bin. For some meals we added a description so that we know exactly how we made something or what ingredients we need.
@@ -34,7 +34,7 @@ There were however two "pain points" I wanted to address (and automate):
 
 Luckily for me, Trello has a very extensive API that I could use to fix these annoyances.
 
-# Automating it with AWS Lambda
+## Automating it with AWS Lambda
 In the past I would have created a simple PHP script, upload it to my server and set up a cronjob for it to run periodically. But lately I've been using AWS Lambda for nearly everything. It's just nicer: I don't have to worry about my server's uptime, security, configuration or any other stuff.
 
 I started by creating a Lambda function that reshuffles the columns in the correct order, starting with the current day. Here is a snippet of the Lambda function (full source is available on Github, see the bottom of this post):
@@ -73,7 +73,7 @@ getAllCardsOnTrello(function (cards) {
 });
 {% endhighlight %}
 
-# Creating a scheduled task
+## Creating a scheduled task
 After creating the Lambda function, I needed a way to trigger it each day (shortly after midnight) so that it could update our board. Luckily Amazon offers Scheduled Events, a service powered by CloudWatch. To enable it, follow these steps:
 
 1. Go to the [CloudWatch console](https://console.aws.amazon.com/cloudwatch/)
@@ -94,7 +94,7 @@ The schedule is now displayed in the CloudWatch console:
 
 That's it! CloudWatch now triggers my Lambda function every day at 5 minutes past midnight. The function then reorganizes my board and gets it ready for the day.
 
-# Wrapping up
+## Wrapping up
 That's it for this post! I'm very happy that we started to use Trello for our weekly meal planning. It allows me to check what's for dinner when I'm on my way home. 
 
 There is however a lot of things we can improve or extend. Here are some idea's (on the top of my head):

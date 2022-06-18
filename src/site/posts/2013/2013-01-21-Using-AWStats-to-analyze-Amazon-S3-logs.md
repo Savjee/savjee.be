@@ -15,7 +15,7 @@ I quickly found [AWStats](http://awstats.sourceforge.net/), a log analyzer simil
 
 <!--more-->
 
-# Installing & configuring AWStats on Ubuntu Server 12.10
+## Installing & configuring AWStats on Ubuntu Server 12.10
 Because AWStats can't be installed on S3, you're going to need a small server for it. I choose a small VPS with Ubuntu Server on it.
 
 Only one command is needed to install AWStats on Ubuntu Server:
@@ -44,7 +44,7 @@ There's just one change left. Amazon not only logs what requests have been made 
 
 <pre>SkipHosts="REGEX[^10.]"</pre>
 
-# Installing & configuring Apache
+## Installing & configuring Apache
 AWStats needs a web server to serve it's reports. If Apache isn't installed yet, run:
 <pre>sudo apt-get install apache2</pre>
 
@@ -60,7 +60,7 @@ Options ExecCGI -MultiViews +SymLinksIfOwnerMatch
 
 After restarting Apache (``sudo service apache2 reload``) you can go to ``http://yourhost.com/awstats/awstats.pl?config=savjee.be`` and see an empty report.
 
-# Enable logging on S3
+## Enable logging on S3
 Now that the server is prepared you need to enable logging on your S3 bucket. I didn't want to pollute my website's bucket, so I created a new bucket just for logs, logs.savjee.be.
 
 Your log bucket could become pretty big if you don't regularly remove old logs. Fortunately Amazon can take care of this automatically. Go to your log bucket in the Console and open its properties. Under "Lifecycle" you can define when files should be removed from your bucket. Add a new rule, give it a name and set it to remove files that are older than 3 days.
@@ -73,7 +73,7 @@ Now that the log bucket is set up, go to the properties of your website's bucket
 
 That's it for S3. The last thing to do is connecting AWStats with S3.
 
-# Connecting the dots
+## Connecting the dots
 Our server needs to frequently fetch the log files from our log bucket and process them with AWStats. There are several ways to access S3 buckets from the command line. I choose to use ``s3cmd`` because it's easy to use (I use it to automatically deploy my blog to S3). To install it, run:
 
 <pre>sudo apt-get install s3cmd</pre>
@@ -135,7 +135,7 @@ sudo /usr/lib/cgi-bin/awstats.pl -config=${config_name} -update >> $log_file
 
 Put the script on your server and make sure to change the configuration options at the top of the script before you continue. (Contribute to the script: [gist.github.com/4580498](https://gist.github.com/4580498))
 
-# Cron
+## Cron
 And finally, add the bash script to your cron so it can run automatically. Run: 
 
 <pre>sudo crontab -e</pre>

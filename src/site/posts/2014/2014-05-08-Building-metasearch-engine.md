@@ -15,7 +15,7 @@ In this post I'll walk you through the technical aspects of building a meta-sear
 
 <!--more-->
 
-# Overall setup & goals
+## Overall setup & goals
 Before we dive into the technical aspects of building a meta-search engine, let's take a look at the goals that I had for this project:
 
 * First of all, the search engine needed to be able to search very quickly through a few million items. People don't like waiting for search results!
@@ -32,14 +32,14 @@ The setup that I came up with is pretty small, yet efficient enough to run on a 
 * **Sphinx**. Searching directly on a large, busy database isn't a great idea. To handle search queries, I choose to use Sphinx. This open source search server can index large databases and quickly search through them.
 
 
-# Crawlers
+## Crawlers
 The crawlers are PHP scripts that are running continuously in the background, scraping data from several websites. I wrote one crawler for every website I wanted to index. The data that they gather (id, title, description, url, ...) is stored in the MariaDB database. Each entry gets a ``last_updated`` attribute to keep track of how long it has been since it was last updated.
 
 Choosing PHP for the crawlers might seem like a stupid idea. After all, it's an interpreted language that isn't really known for its speed. During the development I rewrote one of the crawlers in Java using [jsoup](http://jsoup.org/). Performance of the Java version was a lot better than the PHP crawlers (up to 3 times faster) but the crawlers used far more memory. In fact, I wasn't able to run multiple Java crawlers simultaneously on my VPS (maybe my Java skills are to blame?). So I decided to stick to the language I knew best (and felt most comfortable with) and to sacrifice some performance for it.
 
 The PHP crawlers use [cURL](http://www.php.net/manual/en/book.curl.php) to fetch web pages and [Simple HTML DOM Parser](http://simplehtmldom.sourceforge.net/) to extract the contents of them. I choose to use cURL because it allows you to control things like timeout and redirects ([it's also faster](http://stackoverflow.com/questions/5844299/using-file-get-contents-or-curl) than ``file_get_contents``).
 
-## Keeping the crawlers running
+### Keeping the crawlers running
 The crawlers are written to keep running, even in the case of errors. However, it sometimes happens that one of the scripts crashes. To keep the scripts running, I triggered **each crawler** every 5 minutes with a cronjob.
 
 You might think, wait a minute! That means that after 10minutes you'd have two instances of the same script running. You would be correct! When I was testing the scripts I didn't realise this and ended up with many instances of every crawler. To fix this, I used this piece of PHP code:
@@ -58,7 +58,7 @@ This code tries to lock the current PHP file. If it fails to lock the current fi
 */5 * * * * /usr/bin/php /zoekertjesland/crawlers/crawler_2dehands.php >> /zoekertjesland/logs/crawler_2dehands.txt
 </pre>
 
-# MariaDB
+## MariaDB
 The site originally used a MySQL back-end to store all the data of an item. I choose InnoDB as the storage engine because it uses row locking. This enables multiple crawlers to update data simultaneously, without having to wait on each other. 
 
 This is the data that was stored for each item:
@@ -73,7 +73,7 @@ This is the data that was stored for each item:
 
 After a few months of running the website, my hosting provider launched [a new VPS platform](http://www.versio.nl/?pa=16767awybe). I decided to move since the new platform gave users more RAM for about the same price. While I was moving I switched from MySQL to MariaDB. There wasn't a real benefit to it. I just wanted to work with something that was getting a lot of attention. The switch was painless as MariaDB is a drop-in replacement for MySQL!
 
-# Sphinx
+## Sphinx
 After a few hours of running the crawlers, the database was populated with well over 3 million items. I figured this number might grow rapidly when I would write new crawlers for new websites. Searching through this database was painfully slow since InnoDB didn't support full text search indexes at the time.
 
 I quickly found a popular, open source search server: [Sphinx](http://sphinxsearch.com/). It fetches data from a source (in this case the MariaDB database) and creates an index that can be searched in milliseconds. It also has [an amazing set of features](http://sphinxsearch.com/docs/current.html#features) and is small and efficient.
@@ -130,7 +130,7 @@ searchd
 
 I won't go into much detail here. Setting up Sphinx is really easy if you read [the documentation](http://sphinxsearch.com/docs/current.html). This post isn't a guide on setting everything up. It's just to show the architecture of a meta-search engine.
 
-# Keeping the index fresh
+## Keeping the index fresh
 There is one problem though. What happens to second hand items that where sold and removed from the original websites? They are still stored in the database and even worse, they are being displayed to users as results!
 
 At first I thought about writing a script that visits the URL of each item and verify that it is still alive. But this would be a time and bandwidth consuming activity with 3 million items!
@@ -139,7 +139,7 @@ The solution was much simpler though. The crawlers took between 1 and 2 days to 
 
 To keep the database clean, all I had to do was write a script that removes all items that haven't been updated in the last 2 days. This script runs everyday and keeps the index fresh. It's a very simple and efficient solution. Broken links where rarely encountered by users.
 
-# The front-end
+## The front-end
 Every search engine needs a front-end and the one I built was pretty simple. The homepage featured a Google-like design with just a search box and submit button.
 
 ![The homepage of Zoekertjesland](/uploads/building-metasearch-engine/homepage.png)
@@ -152,7 +152,7 @@ The results page was simple as well. It was generated by PHP and featured some f
 
 So far I've talked about the front and back-end. Let's talk about the bridge between the two!
 
-# Journey of a query
+## Journey of a query
 A lot happens behind the scenes when a user sends a query to the search engine. Let me explain how the independent systems work together to show up results. This is the sequence diagram for a query on Zoekertjesland:
 
 ![Sequence diagram of a search query](/uploads/building-metasearch-engine/search-query.png)
@@ -163,7 +163,7 @@ When the request is made, Sphinx looks up all the matching items in its index. B
 
 This proces is actually quite fast. Result pages where rendered within 0.1 to 0.2 seconds. Keep in mind that all these services where running on a VPS with moderate specs, not on dedicated hardware.
 
-# Looking back
+## Looking back
 Zoekertjesland has been an amazing project for me. I launched it when I was 18 years old. The idea was simple but I quickly stumbled upon a few problems that required some creative problem solving skills. I'm glad that I was able to make everything work. 
 
 Over the course of **2 years**, Zoekertjesland welcomed over **21,500 unique visitors**. They came to find great second hand deals and stayed on the website for more than **5 minutes**. In its lifetime, the search engine processed **40,105 unique search queries**.

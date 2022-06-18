@@ -16,14 +16,14 @@ Sadly though, I couldn't find a working S3 backup script for DokuWiki that was w
 
 Before we can start backing up to S3 we need a bucket to store our backups in!
 
-# Creating a bucket
+## Creating a bucket
 1. Login to the [S3 Management Console](https://console.aws.amazon.com/s3/)
 2. Hit the "Create Bucket" button
 3. Give your bucket a name and create it
 
 All done! We now have a place to store our backups.
 
-# Lifecycle rule
+### Lifecycle rule
 We don't want backups to be kept forever. In my case I want to keep 30 days worth of backups. Amazon offers Lifecycle Rules to automatically archive or remove files from your bucket after a certain amount of days.
 
 To set them up, go to the S3 Management Console:
@@ -42,7 +42,7 @@ To set them up, go to the S3 Management Console:
 After confirmation, your rule is added:
 ![Delete backups](/uploads/dokuwiki-backup-s3/lifecycle-rule.png)
 
-# Creating new IAM user
+## Creating new IAM user
 You don't want a backup script to have full access to all your S3 buckets. To solve this problem you can create a new user that only has access to your backup bucket:
 
 1. Go to the [IAM Console](https://console.aws.amazon.com/iam/)
@@ -92,7 +92,7 @@ In the IAM console:
 
 Apply the policy to finish!
 
-# The script
+## The script
 The actual PHP script uses [PharData](http://www.php.net//manual/en/class.phardata.php) to create a tar archive for every folder you wish to backup (for DokuWiki: data/ and conf/). Those individual archives are then added to a master archive which is compressed with gzip.
 
 Because this script uses PharData, PHP 5.3 is required! It also uses the [S3 PHP class](https://github.com/tpyo/amazon-s3-php-class).

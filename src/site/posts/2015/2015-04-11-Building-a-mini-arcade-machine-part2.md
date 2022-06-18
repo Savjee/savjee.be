@@ -10,14 +10,14 @@ About a month ago I started building a mini arcade machine. A lot has happened s
 
 <!--more-->
 
-# Putting it together
+## Putting it together
 
-## Wood
+### Wood
 Putting the painted pieces of wood together wasn't very difficult. We got a lot of help from my father in law. Practically all pieces are screwed on to both sides of the arcade. This ensures that everything is strong and can stand up to a beating if someone loses a game!
 
 ![](/uploads/mini-arcade-pt2/wood.jpg)
 
-## Wiring the buttons & LEDs
+### Wiring the buttons & LEDs
 
 Before we started inserting the buttons in the holes, I checked if all LEDs where working. I also indicated the polarity of the LED's on the connectors. That way I knew where the positive and negative leads should go.
 
@@ -31,7 +31,7 @@ Getting everything connected in the cabinet was a bit of a pain because we had a
 
 Luckily though the wiring itself is pretty easy and straightforward. I connecting the buttons randomly to the different ports on the USB controller. How you wire the buttons isn't really important since they have to be configured later on. You do have to pay a little more attention to the joysticks though. They should be wired to one of two ports on the USB controller.
 
-# VGA to HDMI
+### VGA to HDMI
 In the previous post I installed and configured RetroPie on my Raspberry Pi. I hooked up the Pi to my television with HDMI and tested if everything worked correctly. Everything worked great!
 
 Last weekend however, I connected the Pi to the old VGA display in the cabinet. After booting up the Pi, the screen came on but displayed nothing. Complete darkness. Obviously the problem had to be related to the HDMI to VGA converter. As it turns out, I needed to enable HDMI safe mode to get the picture up and running.
@@ -44,7 +44,7 @@ hdmi_safe=1
 
 After a reboot, the screen turned on and I was greeted by EmulationStation's splash screen.
 
-# Configuring RetroArch & EmulationStation
+## Configuring RetroArch & EmulationStation
 After finishing the wiring and the cabinet, we couldn't wait to play games! Before you can play you need to configure the joysticks and buttons. RetroPie ships with RetroArch, a development interface for game emulators. It allows you to configure your input method once and then use it across all supported game emulators. Neat!
 
 To configure the buttons and the joysticks I needed to know the ID's of each button. To get this, I fired up ``jstest`` with this command:
@@ -84,7 +84,7 @@ input_enable_hotkey_btn = 12
 input_exit_emulator_btn = 6
 </pre>
 
-# Fixing the autofire problem
+### Fixing the autofire problem
 After configuring both RetroArch and EmulationStation I stumbled upon a weird issue. When you move one of the joysticks in a particular direction it autofires. The pi thinks I'm rapidly moving the joysticks in one particular direction instead of just holding it down. This caused all sorts of issue's. Some games where very hard to play because of it. Also navigating around EmulationStation was so fast that I jumped up and down the list of games.
 
 I confirmed the problem by running ``jstest –event /dev/input/js0``. When moving the joystick down, it fills the screen with events. This should trigger just one event!
@@ -101,7 +101,7 @@ sudo ./install.sh
 
 After installing the kernel, the script prompted me to reboot my Pi. I confirmed by typing 'Y' and a few minutes later the Pi had restarted into the new kernel. Autofiring problem: solved!
 
-# Finding great multiplayer games
+## Finding great multiplayer games
 When you're building a 2-player arcade you obviously want some multiplayer games on it! I searched around on the internet and found some fun multiplayer games. Here's the short list of co-op games we currently play:
 
 For NES:
@@ -124,7 +124,7 @@ For SEGA Genesis:
 
 Definitely leave a comment if you know another great multiplayer game for any of those classic game consoles!
 
-# The finished arcade
+## The finished arcade
 Here is the finished arcade in action:
 
 <!-- <a href="http://imgur.com/X9TuKxm"><img src="https://i.imgur.com/X9TuKxm.gif" title="source: imgur.com" /></a> -->
@@ -142,7 +142,7 @@ And here are some more pictures:
 ![](/uploads/mini-arcade-pt2/final_3.jpg)
 
 
-# Conclusion
+## Conclusion
 This was probably one of the coolest projects I ever did! I usually spend my free time developing software, not sawing wood. I never created something physical like this before. It required not only my IT skills but also my handyman skills!
 
 We're both very happy with how the arcade turned out. We'll continue to tweak it in the future. We want to add a nice marquee, make a better support for the screen, add more games and hold a game tournament with friends!

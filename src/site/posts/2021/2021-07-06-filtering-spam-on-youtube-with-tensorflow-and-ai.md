@@ -5,6 +5,7 @@ quote:
 tags: [TensorFlow, AI, YouTube channel]
 upload_directory: /uploads/2021-07-06-filtering-spam-on-youtube-with-tensorflow-and-ai/
 thumbnail: /uploads/2021-07-06-filtering-spam-on-youtube-with-tensorflow-and-ai/humb_timeline.jpg
+toc_enabled: true
 ---
 
 My YouTube channel has been attracting a lot of spammers. They try to trick people by saying they know how to profit from trading cryptocurrencies or that they can recover lost wallet keys.

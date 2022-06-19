@@ -5,6 +5,7 @@ quote: The ESP32 camera is the cheapest microcontroller with a built-in camera t
 tags: [ESP32]
 thumbnail: /uploads/2021-02-23-esp32-cam-cropping-images-on-device/thumb_timeline.jpg
 upload_directory: /uploads/2021-02-23-esp32-cam-cropping-images-on-device
+toc_enabled: true
 ---
 
 The [ESP32 camera](https://www.amazon.com/gp/product/B07S5PVZKV/ref=as_li_tl?ie=UTF8&tag=savjee-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B07S5PVZKV&linkId=edec0ccdc158ed893332f501c90459a4) is the cheapest microcontroller with a built-in camera that you can buy. The [OV2640](http://www.uctronics.com/download/OV2640_DS.pdf) sensor has a max resolution of 1600x1200, but sometimes you don't need the entire image.

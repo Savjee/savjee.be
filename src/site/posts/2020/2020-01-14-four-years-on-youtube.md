@@ -3,6 +3,7 @@ layout: post
 title: "Retrospective: 4 years on YouTube"
 quote: 
 tags: [YouTube channel]
+toc_enabled: true
 ---
 
 Every year I sit down and take a look at how my YouTube channel has been doing. I reflect, evaluate, and set goals for the coming year. This year is no exception. January 13th, 2020, marks my fourth year on YouTube. Time to do a little retrospective.

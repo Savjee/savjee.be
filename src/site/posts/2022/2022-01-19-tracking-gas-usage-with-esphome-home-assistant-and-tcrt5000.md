@@ -4,6 +4,7 @@ title: "Tracking gas usage with ESPHome, Home Assistant, and TCRT5000"
 tags: [Home Assistant, ESPHome, ESP32]
 upload_directory: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/
 thumbnail: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/thumb_timeline.jpg
+toc_enabled: true
 ---
 
 In 2019, I built an energy monitor to keep track of our electricity consumption. Then, in 2021, [Home Assistant added an Energy Management feature](https://www.home-assistant.io/blog/2021/08/04/home-energy-management/) that keeps track of electricity and gas usage. So naturally, I had to make my gas meter smart as well.
@@ -28,7 +29,7 @@ Unfortunately, I got no measurements. The reed switch didn't get closed by the m
 
 I then found [a forum post](https://www.flukso.net/content/elster-bk-g4m-positioning-sensor) that suggested the magnet inside my meter is very weak or isn't a magnet at all. It could be a mirror instead.
 
-### TCRT5000: optical measurement
+## TCRT5000: optical measurement
 
 So how can I detect a mirror passing? One solution would be to shine a laser on the dial and measure how much light is being reflected. More light reflects when the mirror passes in front of the laser.
 

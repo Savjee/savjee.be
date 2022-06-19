@@ -4,6 +4,7 @@ title: "My Sixth Year as YouTube Creator (statistics + retrospective)"
 tags: [YouTube channel]
 upload_directory: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/
 thumbnail: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/thumb_timeline.jpg
+toc_enabled: true
 ---
 
 Every new year I reflect on the previous year and set new goals. Last year has been my most successful year on YouTube so far, and I'd like to share some statistics and thoughts. I will also go over how my email newsletter is doing and where I'm headed. And finally, I'll set myself some goals for 2022.

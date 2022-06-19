@@ -4,6 +4,7 @@ title: "EZStore: a tiny serverless datastore for IoT data (DynamoDB + Lambda)"
 quote: 
 tags: [AWS, IOT]
 not_featureable: true
+toc_enabled: true
 ---
 
 I've been working on a few IoT projects recently, and while prototyping, I need a simple but flexible data store. I just want to push data to an API and query and visualize it later on.

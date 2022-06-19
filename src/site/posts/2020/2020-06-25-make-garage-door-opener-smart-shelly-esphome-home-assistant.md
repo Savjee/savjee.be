@@ -5,6 +5,7 @@ quote:
 tags: [Home Assistant, Smart Home, DIY, ESPHome, Shelly]
 thumbnail: /uploads/2020-06-smart-garage-door-shelly-home-assistant/poster-750.jpg
 upload_directory: /uploads/2020-06-smart-garage-door-shelly-home-assistant
+toc_enabled: true
 ---
 
 I've been adding more and more devices to my smart home lately, so naturally, my garage door opener had to follow. But instead of swapping it out for a new unit, I used a Shelly 1 and a cheap door contact sensor to make it smart for less than $20!
@@ -315,7 +316,7 @@ My default ESPHome configuration also sends additional data to Home Assistant: t
 ![Additional entities that could help spot/debug problems](/uploads/2020-06-smart-garage-door-shelly-home-assistant/home-assistant-other-garage-entities.png)
 *Additional entities that could help spot/debug problems*
 
-## Automation examples
+### Automation examples
 Once these entities are in Home Assistant, you can start automating! 
 
 We always keep our garage door closed but occasionally forget it. So the first automation I made is one that alerts us when the garage was left open longer than 5 minutes:
@@ -414,7 +415,7 @@ This is what it looks like on my phone:
 ![Actionable notification on iOS](/uploads/2020-06-smart-garage-door-shelly-home-assistant/actionable-notification.png)
 *Actionable notification on iOS*
 
-## Automating lights
+### Automating lights
 
 Here's another conventient automation: when the garage door opens (and it's dark outside), turn on the lights. Then, 30 seconds after the garage was closed, turn them off again.
 

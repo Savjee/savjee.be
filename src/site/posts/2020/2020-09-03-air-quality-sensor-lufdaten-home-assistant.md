@@ -5,6 +5,7 @@ quote:
 tags: [Home Assistant, Smart Home, DIY]
 thumbnail: /uploads/2020-09-03-air-quality-luftdaten-home-assistant/poster-750.jpg
 upload_directory: /uploads/2020-09-03-air-quality-luftdaten-home-assistant
+toc_enabled: true
 ---
 
 Luftdaten (now Sensor Community) is a global sensor network that measures air quality around the world. Best of all: it's open-source and anyone can build a sensor.

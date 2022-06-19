@@ -4,6 +4,7 @@ title: "ESP-IDF: Storing AWS IoT certificates in the NVS partition (for OTA)"
 quote: 
 tags: [AWS, ESP-IDF, ESP32]
 not_featureable: true
+toc_enabled: true
 ---
 
 When using AWS IoT Core, most tutorials will tell you to include device certificates in your firmware. While that does work, it means you won't be able to run over-the-air updates.

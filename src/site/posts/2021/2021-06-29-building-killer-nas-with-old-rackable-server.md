@@ -5,6 +5,7 @@ quote:
 tags: [Unraid, Proxmox]
 upload_directory: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/
 thumbnail: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/thumb_timeline.jpg
+toc_enabled: true
 ---
 
 Like many others, I'm generating a lot of digital data. Constantly taking photos, writing scripts, taking notes, coding projects, and making videos. I'm storing all these files on Google Drive, which has been very reliable but also a bit risky. What if Google closes my account? Or loses my files?

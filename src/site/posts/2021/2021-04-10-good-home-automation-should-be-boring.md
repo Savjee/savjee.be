@@ -5,6 +5,7 @@ quote:
 tags: [Home Assistant, Smart Home, ESPHome, Shelly]
 thumbnail: /uploads/2021-04-10-good-home-automation-should-be-boring/thumb_timeline.jpg
 upload_directory: /uploads/2021-04-10-good-home-automation-should-be-boring
+toc_enabled: true
 ---
 
 I'm a huge fan of Home Assistant to automate various things around the house. I often look at other people's setup for inspiration, and one thing struck me. Many people have cluttered dashboards and use Home Assistant to track just about any metric they can.

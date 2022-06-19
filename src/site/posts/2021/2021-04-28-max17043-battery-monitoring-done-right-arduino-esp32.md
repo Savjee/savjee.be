@@ -5,6 +5,7 @@ quote:
 tags: [ESP32, Arduino]
 thumbnail: /uploads/2021-04-28-max17043-battery-monitoring/thumb_timeline.jpg
 upload_directory: /uploads/2021-04-28-max17043-battery-monitoring
+toc_enabled: true
 ---
 
 Building a battery-powered IoT device? Then you'll want to monitor the battery's percentage. Here's how to do it properly. 

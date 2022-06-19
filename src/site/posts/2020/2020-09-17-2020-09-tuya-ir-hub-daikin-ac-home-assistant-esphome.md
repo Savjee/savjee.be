@@ -5,6 +5,7 @@ quote:
 tags: [Home Assistant, Smart Home, ESPHome]
 thumbnail: /uploads/2020-09-tuya-ir-hub-daikin-ac-home-assistant-esphome/thumb_timeline.jpg
 upload_directory: /uploads/2020-09-tuya-ir-hub-daikin-ac-home-assistant-esphome
+toc_enabled: true
 ---
 
 The release of [ESPHome v1.15](https://esphome.io/changelog/v1.15.0.html#changelog-version-1-15-0-september-13-2020) brought better support for infrared climate control. This was enough to finally make my YTF IR Hub useable. Here's how I flashed ESPHome onto it and how I configured it for my Daikin AC and Home Assistant.

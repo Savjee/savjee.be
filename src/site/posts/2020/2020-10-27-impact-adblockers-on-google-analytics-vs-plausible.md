@@ -5,6 +5,7 @@ quote:
 tags: []
 thumbnail: /uploads/2020-10-27-effect-adblockers-on-google-analytics-vs-plausible/thumb_timeline.jpg
 upload_directory: /uploads/2020-10-27-effect-adblockers-on-google-analytics-vs-plausible
+toc_enabled: true
 ---
 
 Adblocker usage is quickly rising, with some estimates saying that almost 25% of internet users have one installed. Not only do they block advertisements, but also analytics scripts (like Google Analytics, Matomo, etc.)

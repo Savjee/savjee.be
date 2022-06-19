@@ -5,6 +5,7 @@ quote:
 tags: [AWS, static-webhosting-benchmark, static-webhosting]
 thumbnail: /uploads/2020-05-28-benchmaring-static-website-hosting-providers/poster-750.jpg
 upload_directory: /uploads/2020-05-28-benchmaring-static-website-hosting-providers
+toc_enabled: true
 ---
 
 Static websites are still a hot topic. They are fast, and they're incredibly secure because there isn't a CMS to hack. Once you build a static website, however, the question becomes: Where do I host?

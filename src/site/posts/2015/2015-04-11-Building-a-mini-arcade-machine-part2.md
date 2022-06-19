@@ -4,6 +4,7 @@ title:  Building a Mini Arcade Machine (Part 2)
 quote:
 thumbnail: true
 upload_directory: /uploads/mini-arcade-pt2
+toc_enabled: true
 ---
 
 About a month ago I started building a mini arcade machine. A lot has happened since my first post. In the last couple of weeks my girlfriend and I sanded and painted all the wood panels. This last weekend we put the panels together and wired all the buttons, LEDs and joysticks. We slowly watched our arcade machine come to life!

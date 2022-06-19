@@ -5,6 +5,7 @@ quote:
 tags: [Cloudflare, Proxmox]
 upload_directory: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/
 thumbnail: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/thumb_timeline.jpg
+toc_enabled: true
 ---
 
 When Cloudflare announced that their Tunnel service would become free, I saw an opportunity to strengthen the security of my Home Assistant instance. Until now, I have been using Cloudflare's CDN to connect to my HA instance, but that required opening ports on my router and setting complicated firewall rules.

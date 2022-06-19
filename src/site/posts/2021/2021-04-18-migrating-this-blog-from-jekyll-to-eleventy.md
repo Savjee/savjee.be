@@ -5,16 +5,13 @@ quote:
 tags: [Eleventy, Jekyll]
 thumbnail: /uploads/2021-04-18-migrating-this-blog-from-jekyll-to-eleventy/thumb_timeline.jpg
 upload_directory: /uploads/2021-04-18-migrating-this-blog-from-jekyll-to-eleventy
+toc_enabled: true
 ---
 
 
 Jekyll has been powering this site for many years now. It replaced my WordPress setup, and I haven't looked back. Over the last few months, I have become fed up with Jekyll. It's slowing me down. Time to replace it with something new and shiny!
 
 <!--more-->
-
-**Table of contents**
-
-[[TOC]]
 
 ## Why I'm ditching Jekyll
 There are two reasons for me to ditch Jekyll.

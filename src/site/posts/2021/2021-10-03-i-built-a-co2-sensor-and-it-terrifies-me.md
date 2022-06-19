@@ -5,6 +5,7 @@ quote:
 tags: [Home Assistant, ESPHome]
 upload_directory: /uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/
 thumbnail: /uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/humb_timeline.jpg
+toc_enabled: true
 ---
 
 Governments are pushing CO2 sensors to fight the COVID-19 pandemic, but proper ventilation is equally important for our health and even our cognitive performance. 
@@ -12,14 +13,6 @@ Governments are pushing CO2 sensors to fight the COVID-19 pandemic, but proper v
 In this blog post we'll look at a DIY CO2 sensor: how it runs ESPHome, how it integrates with Home Assistant, how it works and what safe CO2 levels are.
 
 <!--more-->
-
----
-
-**Table of contents**
-
-[[TOC]]
-
----
 
 There are many commercially available indoor CO2 sensors you can buy. They are inexpensive, but sadly, they're very dumb. I want a sensor that can communicate with Home Assistant so I can track CO2 levels over time and generate warnings when levels are getting too high.
 

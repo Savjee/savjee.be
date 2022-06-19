@@ -5,6 +5,7 @@ quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measur
 thumbnail: /uploads/2020-02-11-home-energy-monitor-v2/poster-750.jpg
 upload_directory: /uploads/2020-02-11-home-energy-monitor-v2
 tags: [ESP32, DIY, Energy, FreeRTOS, AWS, Home Assistant]
+toc_enabled: true
 ---
 
 My DIY home energy monitor has been running for almost a year now. It's been recording my electricity consumption every second and everything is neatly archived in my AWS account.
@@ -14,13 +15,6 @@ Still, though, there is room for improvement. It's time to look back, evaluate &
 <!--more-->
 
 [Read more about Energy Monitor v1 here.]({% link collections.posts, '2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib.md' %})
-
----
-
-**Table of contents:**
-[[toc]]
-
----
 
 
 ## What could be improved

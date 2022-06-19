@@ -100,11 +100,8 @@ module.exports = function (config) {
         // Makes sure that each external link opens in a new tab 
         .use(require("markdown-it-link-attributes"), milaOptions)
 
-        // Generates anchors for all headings
+        // Generates anchors for all headings (used for table of contents)
         .use(require('markdown-it-anchor'))
-        
-        // Generate table of contents when asked (needs anchors to work)
-        .use(require("markdown-it-table-of-contents"), { includeLevel: [1, 2, 3] })
 
         // Lazy load all images by default (browser support needed)
         .use(require('./src/utils/markdown-it-xd-images'), {

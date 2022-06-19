@@ -5,6 +5,7 @@ quote:
 thumbnail: /uploads/2019-12-04-esp32-tips-to-increase-battery-life/poster-750.jpg
 upload_directory: /uploads/2019-12-04-esp32-tips-to-increase-battery-life
 tags: [ESP32, Tutorial, Arduino]
+toc_enabled: true
 ---
 
 Running an ESP32 on a battery is a tricky operation. The chip is a powerhouse, and with power comes great responsibility. In this post, I’ll outline how I got an ESP32 to run for over 15 weeks (and counting) on a single 1000mAh battery.
@@ -13,13 +14,6 @@ Running an ESP32 on a battery is a tricky operation. The chip is a powerhouse, a
 
 Before we begin: the code samples shown in this post are for use with the [Arduino framework](https://github.com/espressif/arduino-esp32). This was not tested with `esp-idf` directly.
 
-
----
-
-**Table of contents:**
-[[toc]]
-
----
 
 ## Tip 1: Use the right battery & board
 Want to increase battery life? Then pick an ESP32 board that has a built-in battery connector. These boards likely use a much more efficient LDO voltage regulator.

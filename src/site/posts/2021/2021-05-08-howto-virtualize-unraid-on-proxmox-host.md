@@ -5,16 +5,13 @@ quote:
 tags: [Proxmox, Unraid]
 upload_directory: /uploads/2021-05-08-howto-virtualize-unraid-on-proxmox-host
 thumbnail: /uploads/2021-05-08-howto-virtualize-unraid-on-proxmox-host/thumb_timeline.jpg
+toc_enabled: true
 ---
 
 
 Here's how to run Unraid as a virtual machine under Proxmox. This is useful when you're already using Proxmox and if you want to use Unraid as a NAS.
 
 <!--more-->
-
-**Table of contents**
-
-[[TOC]]
 
 ## Step 1: Prepare the Unraid USB drive
 Unlike other storage systems, Unraid can't be installed on a virtual disk. Heck, they don't even provide an ISO. Instead, Unraid runs of a USB drive.

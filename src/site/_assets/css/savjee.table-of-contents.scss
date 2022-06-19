@@ -1,81 +1,63 @@
 @import "savjee.colors";
 
-.toc{
-  display: none;
+$toc_width: 300px;
+$toc_padding: 20px;
 
-  &.visible{
-    display:block;
-  }
-  
+.toc{
+  position: absolute;
+  width: $toc_width;
+  right: -$toc_width;
+  background-color: $codeBoxBackground;
+  padding: $toc_padding;
+
   h1{
     font-size: 1em;
-  }
-
-  &>.toc-list{
-    overflow:hidden;
-    position:relative;
+    margin:0;
   }
 
   .toc-list{
     color: $mainTextColor;
     font-size: 0.9em;
-    margin:0;
-    padding-left:10px;
+    margin: 0;
+    padding:0;
+
+    ul{
+      padding-left: $toc_padding;
+    }
 
     li{
-      list-style:none;
-      padding:  3px 0;
-      border-left: solid 2px #EEE;
+      list-style: disclosure-closed;
+      padding: 3px 0;
 
-      a:hover{
-        color: #000;
-      }
+      a {
+        color: $mainTextColor;
 
-      &.is-active-li{
-        border-color: #E80000;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
-
-    .is-active-link{
-      font-weight:700;
-    }
-  }
-
-  a.toc-link{
-    color: $mainTextColor;
-    height: 100%;
-    padding-left: 10px;
-  }
-
-  .is-collapsible{
-    max-height:1000px;
-    overflow:hidden;
-    transition:all 300ms ease-in-out;
-  }
-  .is-collapsed{
-    max-height:0;
-  }
-
-  .is-position-fixed{
-    position:fixed !important;
-    top:0
   }
 }
 
 // Darkmode support
 @media (prefers-color-scheme: dark) {
   .toc{
+    background-color: $headerBackgroundDarkMode;
+
     .toc-list{
       color: $mainTextColorDarkMode;
-    }
 
-    a.toc-link{
-      color: $mainTextColorDarkMode;
+      li{
+        a{
+          color: $mainTextColorDarkMode;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: $containerWidth+(2*$toc_width)) {
   .toc {
         display: none !important;
     }

@@ -1,8 +1,14 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
+const pluginTOC = require('eleventy-plugin-toc')
 
 module.exports = function (config) {
     config.addPlugin(syntaxHighlight);
+    config.addPlugin(pluginTOC, {
+        wrapper: "div",
+        ul: true,
+        wrapperClass: "toc-list",
+    });
 
     // Savjee
     config.addLayoutAlias("default", "layouts/default.html");

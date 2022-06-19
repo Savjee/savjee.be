@@ -7,6 +7,13 @@ layout: default
         <a href="{{ page.url }}">{{ title }}</a>
     </h1>
 
+    {% if toc_enabled %}
+    <aside class="toc">
+        <h1>Contents</h1>
+        {{ content | toc }}
+    </aside>
+    {% endif %}
+
     <div class='post-description'>
         {{ content }}
     </div>

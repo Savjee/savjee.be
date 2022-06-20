@@ -31,6 +31,11 @@ jobs:
     - name: Eleventy build
       run: npm run build
 
+    - name: Check HTML
+      uses: chabad360/htmlproofer@master
+      with:
+        directory: "./_site"
+
     # Notify on Slack!
     - uses: 8398a7/action-slack@v3
       with:

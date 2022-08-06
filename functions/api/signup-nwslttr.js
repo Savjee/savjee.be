@@ -22,7 +22,7 @@ export async function onRequestPost({request, env}) {
       error: null,
     }));
   }catch(e){
-    return new Response(JSON.stringify(e));
+    return new Response("Something went wrong: " + e);
   }
   
 }

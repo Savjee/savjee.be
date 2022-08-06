@@ -1,9 +1,10 @@
 export async function onRequestPost(request) {
+  var err = "";
   try{
     const url = "https://www.getrevue.co/api/v2/subscribers";
     //const token = env.REVUE_TOKEN;
     const body = await request.json();
-    
+
     const response = await fetch(url,  {
       body: JSON.stringify(body),
       method: 'POST',

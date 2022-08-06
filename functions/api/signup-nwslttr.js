@@ -1,4 +1,5 @@
 export async function onRequestPost({request, env}) {
+  var err = "";
   try{
     const body = await request.json();
 
@@ -14,7 +15,7 @@ export async function onRequestPost({request, env}) {
       },
     });
 
-    console.log(response);
+    err = await response.text();
     console.log(await response.json());
 
     return new Response(JSON.stringify({
@@ -22,7 +23,7 @@ export async function onRequestPost({request, env}) {
       error: null,
     }));
   }catch(e){
-    return new Response("Something went wrong: " + e);
+    return new Response("Something went wrong: " + e + " " + err);
   }
   
 }

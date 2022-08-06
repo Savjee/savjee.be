@@ -1,8 +1,8 @@
-export async function onRequestPost(request) {
+export async function onRequestPost({request, env}) {
   var err = "";
   try{
     const url = "https://www.getrevue.co/api/v2/subscribers";
-    //const token = env.REVUE_TOKEN;
+    const token = env.REVUE_TOKEN;
     const body = await request.json();
 
     const response = await fetch(url,  {
@@ -10,7 +10,7 @@ export async function onRequestPost(request) {
       method: 'POST',
       headers: {
         'content-type': 'application/json;charset=UTF-8',
-        'Authorization': 'Token ' + REVUE_TOKEN,
+        'Authorization': 'Token ' + token,
       },
     });
 

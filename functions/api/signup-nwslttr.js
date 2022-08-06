@@ -15,15 +15,14 @@ export async function onRequestPost({request, env}) {
       },
     });
 
-    err = await response.text();
-    console.log(await response.json());
+    err = await response.json();
 
     return new Response(JSON.stringify({
       success: true,
       error: null,
     }));
   }catch(e){
-    return new Response("Something went wrong: " + e + " " + err);
+    return new Response("Something went wrong: " + e + " " + JSON.stringify(err));
   }
   
 }

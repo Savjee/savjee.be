@@ -24,6 +24,13 @@ export async function onRequestPost({request, env}) {
 
   const res = await response.json();
   if(res.error){
+    if(res.error.email && res.error.email[0] === "This email address has already been confirmed"){
+      return new Response(JSON.stringify({
+        success: true,
+        error: "Already subscribed",
+      }));
+    }
+    
     return new Response(JSON.stringify({
       success: false,
       error: res.error,

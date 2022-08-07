@@ -1,5 +1,6 @@
 export async function onRequestPost({request, env}) {
   try{
+    return new Reponse(JSON.stringify(request));
     const url = "https://www.getrevue.co/api/v2/subscribers";
     const token = env.REVUE_TOKEN;
     const body = await request.json();

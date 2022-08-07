@@ -36,10 +36,11 @@ export async function onRequestPost({request, env}) {
         // }));
       }
 
-      return new Response(JSON.stringify({
-        success: false,
-        error: res.error,
-      }), { status: 500});
+      return Response.redirect("/newsletter/signup/failed", 500);
+      // return new Response(JSON.stringify({
+      //   success: false,
+      //   error: res.error,
+      // }), { status: 500});
     }
 
     return Response.redirect("/newsletter/signup/success", 200);
@@ -48,6 +49,6 @@ export async function onRequestPost({request, env}) {
     //   error: null,
     // }));
   }catch(e){
-    return new Response("Error: " + JSON.stringify(e));
+    return new Response("Error: " + JSON.stringify(e) + " " + e);
   }
 }

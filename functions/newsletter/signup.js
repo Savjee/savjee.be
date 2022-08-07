@@ -65,14 +65,16 @@ export async function onRequestPost({request, env})
     if(res.error.email 
       && res.error.email[0] === 'This email address has already been confirmed'){
       // TODO: try to resend the confirmation email
+      await notify(email, 'already signed up');
       return redirect(`${baseUrl}/already`);
     }
 
     console.error("Received error from Revue:", JSON.stringify(res));
+    await notify(email, 'error from Revue: ' + JSON.stringify(res));
     return redirect(`${baseUrl}/failed`);
   }
 
-  await notify(email);
+  await notify(email, 'ok');
   return redirect(`${baseUrl}/success`);
 }
 
@@ -87,7 +89,7 @@ function redirect(url){
   return Response.redirect(url, 303);
 }
 
-function notify(email){
+function notify(email, reason = ""){
   return fetch(new Request("https://api.mailchannels.net/tx/v1/send", {
     "method": "POST",
     "headers": {
@@ -104,7 +106,7 @@ function notify(email){
         "subject": "New subscriber!",
         "content": [{
           "type": "text/plain",
-          "value": `This email address tried signing up for the newsletter: ${email}`,
+          "value": `Tried signing up for the newsletter: ${email}, status: ${reason}`,
         }],
     }),
   }));

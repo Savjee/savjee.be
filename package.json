@@ -13,6 +13,7 @@
     "start": "npm run start:eleventy & npm run start:webpack",
     "start:eleventy": "eleventy --serve",
     "start:webpack": "webpack --mode development --watch",
+    "start:cf": "npx wrangler pages dev -- npm run start",
     "build": "npm run build:webpack && npm run build:eleventy",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",

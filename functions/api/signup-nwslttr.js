@@ -5,7 +5,7 @@ export async function onRequestPost({request, env}) {
     const body = await request.json();
 
     if(!body.email){
-      return Response.redirect("/newsletter/signup/failed", 400);
+      return Response.redirect("/newsletter/signup/failed", 303);
 
       // return new Response(JSON.stringify({
       //   success: false,
@@ -28,7 +28,7 @@ export async function onRequestPost({request, env}) {
     const res = await response.json();
     if(res.error){
       if(res.error.email && res.error.email[0] === "This email address has already been confirmed"){
-        return Response.redirect("/newsletter/signup/already", 200);
+        return Response.redirect("/newsletter/signup/already", 303);
 
         // return new Response(JSON.stringify({
         //   success: true,
@@ -36,14 +36,14 @@ export async function onRequestPost({request, env}) {
         // }));
       }
 
-      return Response.redirect("/newsletter/signup/failed", 500);
+      return Response.redirect("/newsletter/signup/failed", 303);
       // return new Response(JSON.stringify({
       //   success: false,
       //   error: res.error,
       // }), { status: 500});
     }
 
-    return Response.redirect("/newsletter/signup/success", 200);
+    return Response.redirect("/newsletter/signup/success", 303);
     // return new Response(JSON.stringify({
     //   success: true,
     //   error: null,

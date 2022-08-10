@@ -27,16 +27,12 @@ export async function onRequestPost({request, env})
     const baseUrl = `https://${url.host}/newsletter/signup`;
 
     // Extract form data
-    const formBody = await request.formData().catch(async _ => {
+    const formBody = await request.formData().catch(_ => {
       console.error('No form data provided');
-      await sendToNewRelic(request, "NO FORM DATA");
       return redirect(`${baseUrl}/failed`);
     });
 
-    const formData = Object.fromEntries(formBody)
-    const { email } = formData;
-
-    await sendToNewRelic(request, formData);
+    const { email } = Object.fromEntries(formBody)
 
     if(!email){
       console.error('No email address provided');
@@ -83,7 +79,7 @@ export async function onRequestPost({request, env})
     await notify(email, 'ok');
     return redirect(`${baseUrl}/success`);
   }catch(e){
-    await sendToNewRelic(request, "Catched error:" + JSON.stringify(e));
+    return redirect(`${baseUrl}/failed?reason=internal`);
   }
 }
 
@@ -100,37 +96,23 @@ function redirect(url){
 
 function notify(email, reason = ""){
   return fetch(new Request("https://api.mailchannels.net/tx/v1/send", {
-    "method": "POST",
-    "headers": {
+    method: "POST",
+    headers: {
         "content-type": "application/json",
     },
-    "body": JSON.stringify({
-        "personalizations": [
+    body: JSON.stringify({
+        personalizations: [
           {"to": [ {"email": "hi@savjee.be", "name": "Xavier Decuyper"}]}
         ],
-        "from": {
-          "email": "bot@savjee.be",
-          "name": "Savjee Website Bot",
+        from: {
+          email: "bot@savjee.be",
+          name: "Savjee Website Bot",
         },
-        "subject": "New subscriber!",
-        "content": [{
-          "type": "text/plain",
-          "value": `Tried signing up for the newsletter: ${email}, status: ${reason}`,
+        subject: "New subscriber!",
+        content: [{
+          type: "text/plain",
+          value: `Tried signing up for the newsletter: ${email}, status: ${reason}`,
         }],
     }),
   }));
-}
-
-function sendToNewRelic(request, formData){
-  const url = "https://log-api.newrelic.com/log/v1?Api-Key=db0192b362ce65ea1b231ca97765d41eFFFFNRAL";
-  return fetch(new Request(url), {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      requestObj: request,
-      formData: formData,
-    })
-  })
 }

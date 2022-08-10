@@ -26,7 +26,7 @@ export async function onRequestPost({request, env})
   const baseUrl = `https://${url.host}/newsletter/signup`;
 
   // Extract form data
-  const formBody = await request.formData().catch(_ => {
+  const formBody = await request.formData().catch(async _ => {
     console.error('No form data provided');
     await sendToNewRelic(request, "NO FORM DATA");
     return redirect(`${baseUrl}/failed`);

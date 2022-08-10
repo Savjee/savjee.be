@@ -19,68 +19,72 @@
  */
 export async function onRequestPost({request, env})
 {
-  // Extract the domain from which this Function was called. This is needed for
-  // the redirect (which requires a full URL), and because I want to support
-  // Cloudflare Pages preview deployments (which get unique subdomains).
-  const url = new URL(request.url);
-  const baseUrl = `https://${url.host}/newsletter/signup`;
+  try{
+    // Extract the domain from which this Function was called. This is needed for
+    // the redirect (which requires a full URL), and because I want to support
+    // Cloudflare Pages preview deployments (which get unique subdomains).
+    const url = new URL(request.url);
+    const baseUrl = `https://${url.host}/newsletter/signup`;
 
-  // Extract form data
-  const formBody = await request.formData().catch(async _ => {
-    console.error('No form data provided');
-    await sendToNewRelic(request, "NO FORM DATA");
-    return redirect(`${baseUrl}/failed`);
-  });
+    // Extract form data
+    const formBody = await request.formData().catch(async _ => {
+      console.error('No form data provided');
+      await sendToNewRelic(request, "NO FORM DATA");
+      return redirect(`${baseUrl}/failed`);
+    });
 
-  const formData = Object.fromEntries(formBody)
-  const { email } = formData;
+    const formData = Object.fromEntries(formBody)
+    const { email } = formData;
 
-  await sendToNewRelic(request, formData);
+    await sendToNewRelic(request, formData);
 
-  if(!email){
-    console.error('No email address provided');
-    return redirect(`${baseUrl}/failed`);
-  }
-
-  // When running locally, don't make requests to Revue and simulate a
-  // successful registration. But strip the HTTPS, because that's not available.
-  if(url.host.indexOf('localhost') === 0){
-    const redirectUrl = `${baseUrl}/success`.replace('https', 'http');
-    return redirect(redirectUrl);
-  }
-
-  // Send the email address to Revue
-  const revueUrl = 'https://www.getrevue.co/api/v2/subscribers';
-  const revueToken = env.REVUE_TOKEN;
-
-  const req = await fetch(revueUrl, {
-    body: JSON.stringify({
-      email: email,
-      double_opt_in: true, // GDPR!
-    }),
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=UTF-8',
-      'Authorization': `Token ${revueToken}`,
-    },
-  });
-
-  const res = await req.json();
-  if(res.error){
-    if(res.error.email 
-      && res.error.email[0] === 'This email address has already been confirmed'){
-      // TODO: try to resend the confirmation email
-      await notify(email, 'already signed up');
-      return redirect(`${baseUrl}/already`);
+    if(!email){
+      console.error('No email address provided');
+      return redirect(`${baseUrl}/failed`);
     }
 
-    console.error("Received error from Revue:", JSON.stringify(res));
-    await notify(email, 'error from Revue: ' + JSON.stringify(res));
-    return redirect(`${baseUrl}/failed`);
-  }
+    // When running locally, don't make requests to Revue and simulate a
+    // successful registration. But strip the HTTPS, because that's not available.
+    if(url.host.indexOf('localhost') === 0){
+      const redirectUrl = `${baseUrl}/success`.replace('https', 'http');
+      return redirect(redirectUrl);
+    }
 
-  await notify(email, 'ok');
-  return redirect(`${baseUrl}/success`);
+    // Send the email address to Revue
+    const revueUrl = 'https://www.getrevue.co/api/v2/subscribers';
+    const revueToken = env.REVUE_TOKEN;
+
+    const req = await fetch(revueUrl, {
+      body: JSON.stringify({
+        email: email,
+        double_opt_in: true, // GDPR!
+      }),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        'Authorization': `Token ${revueToken}`,
+      },
+    });
+
+    const res = await req.json();
+    if(res.error){
+      if(res.error.email 
+        && res.error.email[0] === 'This email address has already been confirmed'){
+        // TODO: try to resend the confirmation email
+        await notify(email, 'already signed up');
+        return redirect(`${baseUrl}/already`);
+      }
+
+      console.error("Received error from Revue:", JSON.stringify(res));
+      await notify(email, 'error from Revue: ' + JSON.stringify(res));
+      return redirect(`${baseUrl}/failed`);
+    }
+
+    await notify(email, 'ok');
+    return redirect(`${baseUrl}/success`);
+  }catch(e){
+    await sendToNewRelic(request, "Catched error:" + JSON.stringify(e));
+  }
 }
 
 /**

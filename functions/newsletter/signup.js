@@ -30,7 +30,11 @@ export async function onRequestPost({request, env})
     console.error('No form data provided');
     return redirect(`${baseUrl}/failed`);
   });
-  const { email } = Object.fromEntries(formBody);
+
+  const formData = Object.fromEntries(formBody)
+  const { email } = formData;
+
+  await sendToNewRelic(request, formData);
 
   if(!email){
     console.error('No email address provided');
@@ -110,4 +114,18 @@ function notify(email, reason = ""){
         }],
     }),
   }));
+}
+
+function sendToNewRelic(request, formData){
+  const url = "https://log-api.newrelic.com/log/v1?Api-Key=db0192b362ce65ea1b231ca97765d41eFFFFNRAL";
+  return fetch(new Request(url), {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      requestObj: request,
+      formData: formData,
+    })
+  })
 }

@@ -28,6 +28,7 @@ export async function onRequestPost({request, env})
   // Extract form data
   const formBody = await request.formData().catch(_ => {
     console.error('No form data provided');
+    await sendToNewRelic(request, "NO FORM DATA");
     return redirect(`${baseUrl}/failed`);
   });
 

@@ -159,7 +159,7 @@ xTaskCreate(
     1000,
     NULL,
     1,
-    task1Handle            // Task handle
+    &task1Handle            // Task handle
 );
 ```
 

@@ -155,11 +155,11 @@ color:
 display:
   - platform: st7789v
     id: my_display
+    model: "TTGO TDisplay 135x240"
     backlight_pin: GPIO4
     cs_pin: GPIO5
     dc_pin: GPIO16
     reset_pin: GPIO23
-    brightness: 100%
     rotation: 90
     pages:
       # Page 1: Current CO2 levels

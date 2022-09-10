@@ -12,6 +12,8 @@ Sounds like fun? I agree!
 
 <!--more-->
 
+> **Update 2022**: The anagram solver was rewritten and now runs without a database on Cloudflare Pages and R2. [Read the updated blog post here]({% link collections.posts, "2022-09-10-serverless-anagram-solver-with-cloudflare-r2-and-pages.md" %}).
+
 ## Current situation
 So let's take a look at the services/servers that are currently required for my original anagram solver:
 

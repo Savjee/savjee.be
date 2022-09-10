@@ -7,7 +7,7 @@
                 </div>
             {% endunless %}
             
-            {%- if imageUrl -%}
+            {%- if imageUrl != nil -%}
                 <div class="image-container">
                     {% xd_img %}
                         <img src="{{imageUrl}}" 

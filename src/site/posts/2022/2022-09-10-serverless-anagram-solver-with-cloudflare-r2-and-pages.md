@@ -3,6 +3,7 @@ layout: post
 title: "Serverless Anagram Solver with Cloudflare R2 and Pages"
 tags: ["Anagram solver", "Cloudflare", "Cloudflare Pages", "Cloudflare Workers"]
 not_featureable: true
+toc_enabled: true
 ---
 
 Six years ago, I reworked my anagram solver so it would run on top of AWS Lambda and DynamoDB. However, this year I realized I didn't need server-side code or a database at all. I could make it completely static by pre-computing anagram solutions.

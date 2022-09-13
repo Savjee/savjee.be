@@ -233,7 +233,7 @@ Here's a breakdown of all the costs:
     </tr>
 </table>
 
-In total, I spent €440 (about $525), which is about the same as a good 4-bay Synology or QNAP NAS. I was able to recover €30 by selling the motherboard to a collector, €10 for selling the original RAID controller, and I've sold my old Home Assistant server for €160. That brings the total down to €234 or $247.
+In total, I spent €440 (about $525), which is about the same as a good 4-bay Synology or QNAP NAS. I was able to recover €30 by selling the motherboard to a collector, €10 for selling the original RAID controller, and I've sold my old Home Assistant server for €160. That brings the total down to €166 or $167.
 
 <table class='pure-table pure-table-bordered pure-table-striped'>
     <tr>
@@ -253,16 +253,20 @@ In total, I spent €440 (about $525), which is about the same as a good 4-bay S
         <td>- €10,00</td>
     </tr>
     <tr>
+        <td>Sold: Yottamaster 4-bay USB enclosure</td>
+        <td>- €68,00</td>
+    </tr>
+    <tr>
         <td>Sold: HP ProDesk Mini (old server)</td>
         <td>- €160,00</td>
     </tr>
     <tr>
         <td><b>Net cost:</b></td>
-        <td>€234,07</td>
+        <td><b>€166,07</b></td>
     </tr>
 </table>
 
-The USB enclosure and other old components are still listed for sale, so that might drop even further.
+The other old components are still listed for sale, so that might drop even further.
 
 ## The end result
 And here's the server inside my home cabinet:

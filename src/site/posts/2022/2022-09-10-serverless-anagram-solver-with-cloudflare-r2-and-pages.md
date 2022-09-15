@@ -169,9 +169,18 @@ And that was it. The anagram solver is now powered by Cloudflare Pages and R2. A
 ## Rough edges
 I'm slowly using Cloudflare for more and more projects. But in this case, I encountered some rough edges.
 
-First up: when you use Functions inside your Pages project, your function will process **ALL** requests to your website. Even though the function is linked to the path `/api/*`.
+<hr>
+
+<details>
+    <summary><i>The first issue I encountered has been fixed by Cloudflare, so this is no longer applicable (click to view more details).</i></summary>
+
+First up: when you use Functions inside your Pages project, your function will process <b>ALL</b> requests to your website. Even though the function is linked to the path <code>/api/*</code>.<br>
 
 My website receives around 2000 visits per day. Let's assume the average page loads 10 resources (HTML, JavaScript, CSS, images). That means the function will get called 20,000 times for no good reason! This is so silly that I double checked this [with the community](https://community.cloudflare.com/t/unexplainable-functions-request-count/410108/4). It appears to be a limitation that Cloudflare is going to address soon, but weirdly the limitation [is not documented](https://developers.cloudflare.com/pages/platform/known-issues/).
+
+</details>
+
+<hr>
 
 Secondly: Cloudflare gives you 100,000 free requests for functions inside your Pages projects. Given the limitation I just mentioned, I [requested an increase of this quota](https://docs.google.com/forms/d/e/1FAIpQLSe4N0BjIxu9AuissCAtYjXUovViXmdx2zopjzASaJi_SImJsw/viewform), just to be sure. But Cloudflare doesn't seem to monitor this form at all. It's been over a month, and I haven't received a reply or an increased quota. Weird!
 

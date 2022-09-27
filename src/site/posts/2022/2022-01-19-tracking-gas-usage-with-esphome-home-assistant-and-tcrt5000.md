@@ -88,13 +88,30 @@ substitutions:
   devicename: "gas-meter"
   friendly_name: "Gas meter"
 
-packages:
-  device: !include "devices/olimex-poe-iso.yaml"
+esphome:
+  platform: ESP32
+  board: esp32-poe-iso
+  name: $devicename
+  comment: $friendly_name
+  build_path: .builds/$devicename
 
-# Enable encryption (not yet a default setting for my devices)
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+
 api:
+  password: !secret esphome_api_password
   encryption:
     key: !secret esphome_encryption_key
+
+ota:
+  password: !secret esphome_api_password
+
+logger:
 
 globals:
   - id: last_pulse_value
@@ -187,13 +204,30 @@ substitutions:
   devicename: "gas-meter"
   friendly_name: "Gas meter"
 
-packages:
-  device: !include "devices/olimex-poe-iso.yaml"
+esphome:
+  platform: ESP32
+  board: esp32-poe-iso
+  name: $devicename
+  comment: $friendly_name
+  build_path: .builds/$devicename
 
-# Enable encryption (not yet a default setting for my devices)
+ethernet:
+  type: LAN8720
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO17_OUT
+  phy_addr: 0
+  power_pin: GPIO12
+
 api:
+  password: !secret esphome_api_password
   encryption:
     key: !secret esphome_encryption_key
+
+ota:
+  password: !secret esphome_api_password
+
+logger:
 
 globals:
   - id: total_pulses

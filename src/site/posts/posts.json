@@ -1,4 +1,4 @@
 {
   "layout": "layouts/default.html",
-  "permalink": "{{ page.date | date: '%Y/%m/' }}/{{page.fileSlug}}/index.html"
+  "permalink": "post/{{page.fileSlug}}/index.html"
 }

@@ -17,7 +17,8 @@
     "build": "npm run build:webpack && npm run build:eleventy",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
-    "build:images": "npx ts-node src/build/image_pipeline.ts"
+    "build:images": "npx ts-node src/build/image_pipeline.ts",
+    "lint:css": "npx stylelint '**/*.scss'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -40,6 +41,8 @@
     "sass": "^1.55.0",
     "sass-loader": "^13.0.0",
     "sharp": "^0.30.7",
+    "stylelint": "^14.13.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "ts-node": "^10.4.0",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1"

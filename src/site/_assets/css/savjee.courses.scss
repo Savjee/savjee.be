@@ -1,40 +1,48 @@
-.badge{
-
+.badge {
 	margin: 0 10px;
 	padding: 5px 10px;
 	border-radius: 3px;
 	border: solid 1px #000;
 
-	a{
+	a {
 		text-decoration: none;
 	}
 
-	&.udemy{
-		border-color:#E85356;
+	&.udemy {
+		border-color: #e85356;
 		color: #fff;
 	}
 
-	&.skillshare{
-		border-color: #117A83;
+	&.skillshare {
+		border-color: #117a83;
 		color: #fff;
 	}
 }
 
-.course-container{
-	border: solid 1px #DDDDDD;
+.course-container {
+	border: solid 1px #ddd;
 
-	div.course-thumbnail, .course-thumbnail img{
+	div.course-thumbnail,
+	.course-thumbnail img {
 		min-width: 270px;
 		width: 270px;
 	}
 
-	div.course-description{
+	.platforms {
+		font-size: 0.8em;
+
+		a {
+			color: #6b6b6b;
+		}
+	}
+
+	div.course-description {
 		padding: 25px;
 
-		.course-title{
-			margin:0;
+		.course-title {
+			margin: 0;
 
-			a{
+			a {
 				color: #000;
 				font-weight: 400;
 				text-decoration: none;
@@ -44,35 +52,26 @@
 		}
 	}
 
-	.course-preview{
+	.course-preview {
 		padding: 0 15px;
 		font-size: 0.9em;
 	}
 
-	.platforms{
-		font-size: 0.8em;
-		// margin-top: -7px;
-
-		a{
-			color: #6b6b6b;
-		}
-	}
-
-	&:hover{
+	&:hover {
 		border-color: #4c4c4c;
 	}
 }
 
 @media (max-width: 650px) {
-    .course-container{
+    .course-container {
     	.display-flex {
-    		display:block;
+    		display: block;
     	}
 
-    	.course-thumbnail{
+    	.course-thumbnail {
     		width: 100% !important;
 
-    		img{
+    		img {
     			width: 100%;
     		}
     	}
@@ -80,10 +79,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.course-container{
-		div.course-description{
-			.course-title{
-				a{
+	.course-container {
+		div.course-description {
+			.course-title {
+				a {
 					color: #fff;
 				}
 			}

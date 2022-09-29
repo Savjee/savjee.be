@@ -8,5 +8,8 @@
     "scss/at-rule-no-unknown": true,
 
     "indentation": null
-  }
+  },
+  "ignoreFiles": [
+    "src/site/_assets/css/lib/**"
+  ]
 }

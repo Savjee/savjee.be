@@ -1,13 +1,13 @@
 @import "savjee.colors";
 
-.box{
+.box {
     background-color: $codeBoxBackground;
     padding: 40px 30px;
     margin-bottom: 30px;
 }
 
 @media (prefers-color-scheme: dark) {
-    .box{
+    .box {
         background-color: $headerBackgroundDarkMode;
     }
 }

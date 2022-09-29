@@ -3,22 +3,22 @@
 header {
     background-color: $headerBackground;
 
-    .container{
-        display:flex;
+    .container {
+        display: flex;
     }
 
-    .logo{
+    .logo {
         margin-right: 10px;
         width: 60px;
         height: 60px;
 
-        img{
+        img {
             height: 60px;
             width: 60px;
         }
     }
 
-    .brand-name{
+    .brand-name {
         font-size: 19px;
         font-weight: 100;
 
@@ -28,7 +28,7 @@ header {
         }
     }
 
-    nav{
+    nav {
         flex: 1; // Grow to fill out the space
         text-align: right;
 
@@ -37,11 +37,11 @@ header {
             margin: 0;
             padding: 0;
 
-            li{
+            li {
                 display: inline-block;
                 margin: 2px 10px 0 0;
 
-                a{
+                a {
                     padding: 5px 10px;
                     text-transform: uppercase;
                     color: #423e45;
@@ -50,7 +50,8 @@ header {
                     font-weight: bold;
                     text-decoration: none;
 
-                    &:hover, &.active{
+                    &:hover,
+                    &.active {
                         color: #423e45;
                         &:after{
                             text-decoration: none;
@@ -58,7 +59,7 @@ header {
                         }
                     }
 
-                    &:after{
+                    &:after {
                         transition: width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
                         content: '';
                         position: absolute;
@@ -70,7 +71,7 @@ header {
                     }
                 }
 
-                &:last-child{
+                &:last-child {
                     margin-right: 0;
                     a{
                         padding-right: 0;
@@ -83,16 +84,16 @@ header {
 
 @media (max-width: 650px) {
     header {
-        .container{
+        .container {
             flex-wrap: wrap;
         }
 
-        .flex-vcenter{
+        .flex-vcenter {
             flex-basis: 100%;
-            text-align:center;
+            text-align: center;
         }
 
-        nav{
+        nav {
             text-align: center;
             margin-top: 15px;
         }
@@ -100,22 +101,23 @@ header {
 }
 
 @media (prefers-color-scheme: dark) {
-    header{
+    header {
         background-color: $headerBackgroundDarkMode;
 
-        .brand-name a{
+        .brand-name a {
             color: #fff;
         }
 
         nav {
-            ul li a{
+            ul li a {
                 color: #fff;
 
-                &:hover, &.active{
+                &:hover,
+                &.active {
                     color: #fff;
                 }
 
-                &:after{
+                &:after {
                     background-color: #fff;
                 }
             }

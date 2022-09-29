@@ -43,7 +43,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter/slim@v4.9.6
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_CSS: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

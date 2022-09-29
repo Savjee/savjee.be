@@ -2,44 +2,45 @@
 
 // I use "nwsltr-sub" because the adblock list
 // "Fanboy Annoyances" blocks the class name "newsletter-subscribe"
-.box.nwsltr-sub{
-    input{
-		border: solid 1px #fff;
+.nwsltr-sub-float,
+.box.nwsltr-sub {
+    input {
 		font-size: 1em;
 		padding: 10px;
 		border: solid 1px $codeBoxBorder;
+		width: 50%;
+		margin-bottom: 0.8em;
 	}
 
-	button[type=submit]{
+	button[type="submit"] {
 		font-size: 1em;
 		padding: 10px 15px;
 		margin-bottom: 0.8em;
-		background-color:$codeBoxBorder;
+		background-color: $codeBoxBorder;
 		border: none;
 	}
 
-	button[type=submit]:hover{
-		cursor:pointer;
+	button[type="submit"]:hover{
+		cursor: pointer;
 	}
 
-	h2{
-		margin-top:0;
+	h2 {
+		margin-top: 0;
 	}
-	
-	input{
-		width: 50%;
-		margin-bottom: 0.8em;
+}
+
 	}
 }
 
 @media (max-width: 767px) {
-    .box.nwsltr-sub{
-        input{
+    .box.nwsltr-sub {
+        input {
             width: 100%;
         }
-       	button[type=submit]{
-            display:block;
-            margin: 0 auto 10px auto;
+
+       	button[type="submit"] {
+            display: block;
+            margin: 0 auto 10px;
         }
     }
 }

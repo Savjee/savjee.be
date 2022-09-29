@@ -18,16 +18,6 @@ header {
         }
     }
 
-    .brand-name {
-        font-size: 19px;
-        font-weight: 100;
-
-        a {
-            color: #565656;
-            text-decoration: none;
-        }
-    }
-
     nav {
         flex: 1; // Grow to fill out the space
         text-align: right;
@@ -50,34 +40,46 @@ header {
                     font-weight: bold;
                     text-decoration: none;
 
-                    &:hover,
-                    &.active {
-                        color: #423e45;
-                        &:after{
-                            text-decoration: none;
-                            width: 13px;
-                        }
-                    }
-
-                    &:after {
+                    &::after {
                         transition: width 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-                        content: '';
+                        content: "";
                         position: absolute;
                         bottom: 0;
                         left: 10px;
-                        width: 0px;
+                        width: 0;
                         height: 2px;
                         background-color: #423e45;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: #423e45;
+
+                        &::after {
+                            text-decoration: none;
+                            width: 13px;
+                        }
                     }
                 }
 
                 &:last-child {
                     margin-right: 0;
-                    a{
+
+                    a {
                         padding-right: 0;
                     }
                 }
             }
+        }
+    }
+
+    .brand-name {
+        font-size: 19px;
+        font-weight: 100;
+
+        a {
+            color: #565656;
+            text-decoration: none;
         }
     }
 }
@@ -117,7 +119,7 @@ header {
                     color: #fff;
                 }
 
-                &:after {
+                &::after {
                     background-color: #fff;
                 }
             }

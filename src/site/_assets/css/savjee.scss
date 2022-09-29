@@ -21,27 +21,30 @@ body {
     margin: 0 auto;
     position: relative;
 
-    &.video{
+    &.video {
         max-width: 1080px;
     }
 
-    &.single{
+    &.single {
         padding-top: 0;
     }
 
-    &.wider{
+    &.wider {
         max-width: 960px;
     }
 }
 
-pre, code {
+pre,
+code {
     overflow-x: auto;
     word-break: normal !important;
     word-wrap: normal !important;
     white-space: pre !important;
 }
 
-pre, p code, li code {
+pre,
+p code,
+li code {
     background-color: $codeBoxBackground !important;
     border: solid 1px $codeBoxBorder !important;
 }
@@ -54,7 +57,8 @@ pre {
     padding: 1em;
 }
 
-p code, li code {
+p code,
+li code {
     padding: 2px 5px;
     margin: 0 2px;
 }
@@ -62,7 +66,7 @@ p code, li code {
 article {
     margin: 0 0 35px;
 
-    img{
+    img {
         max-width: 100%;
         height: auto;
         display: block;
@@ -70,19 +74,21 @@ article {
         margin-right: auto;
     }
 
-    img + em, picture + em {
+    img + em,
+    picture + em {
         text-align: center;
         display: block;
     }
 
-    .post-title{
+    .post-title {
         text-decoration: none;
-        a{
+
+        a {
             text-decoration: none !important;
         }
     }
 
-    .post-description{
+    .post-description {
         a {
             text-decoration: underline;
         }
@@ -93,31 +99,31 @@ article {
     }
 }
 
-.related-posts{
+.related-posts {
     background-color: $codeBoxBackground;
     padding: 40px 30px;
     margin-bottom: 30px;
 
-    h2{
-        margin-top:0;
+    h2 {
+        margin-top: 0;
     }
 
-    ul{
+    ul {
         margin-bottom: 0;
     }
 
-    li{
+    li {
         padding-bottom: 20px;
 
-        &:last-child{
-            padding:0;
+        &:last-child {
+            padding: 0;
         }
     }
 }
 
 @media (max-width: 767px) {
-    .related-posts{
-        ul{
+    .related-posts {
+        ul {
             list-style: none;
             padding: 0;
         }
@@ -133,8 +139,8 @@ a {
     transition: color 0.25s ease-in-out;
     text-decoration: none;
 
-    &:hover{
-        color: rgba(0, 121, 152, 0.5);
+    &:hover {
+        color: rgb(0, 121, 152 / 50%);
     }
 }
 
@@ -142,7 +148,7 @@ hr {
     border: none;
     border-top: solid 1px #ddd;
     margin-top: 20px;
-    padding: 0 0 15px 0;
+    padding: 0 0 15px;
 }
 
 blockquote {
@@ -151,7 +157,7 @@ blockquote {
     margin: 0;
     padding: 20px;
 
-    p{
+    p {
         display: inline;
     }
 }
@@ -159,13 +165,14 @@ blockquote {
 footer {
     margin: 30px 0;
 
-    p{
+    p {
         text-align: center;
         font-size: 0.7em;
         line-height: 10px;
     }
 
-    p, a{
+    p,
+    a {
         color: #959595;
     }
 }
@@ -176,27 +183,29 @@ footer {
         background: $bodyBackgroundDarkMode;
     }
 
-    pre, p code, li code {
+    pre,
+    p code,
+    li code {
         background-color: $headerBackgroundDarkMode !important;
     }
 
-    article h1 a{
+    article h1 a {
         color: #cec7c8;
     }
 
-    pre{
+    pre {
         background-color: #202020;
     }
 
-    a{
+    a {
         color: $linkColorDarkMode;
 
-        &:hover{
+        &:hover {
             color: $linkColor;
         }
     }
 
-    .related-posts{
+    .related-posts {
         background-color: $headerBackgroundDarkMode;
     }
 

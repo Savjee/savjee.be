@@ -3,35 +3,35 @@
 $toc_width: 300px;
 $toc_padding: 20px;
 
-.toc{
+.toc {
   position: absolute;
   width: $toc_width;
   right: -$toc_width;
   background-color: $codeBoxBackground;
   padding: $toc_padding;
 
-  h1{
+  h1 {
     font-size: 1em;
-    margin:0;
+    margin: 0;
   }
 
-  .toc-list{
+  .toc-list {
     color: $mainTextColor;
     font-size: 0.9em;
     margin: 0;
-    padding:0;
+    padding: 0;
 
-    ul{
+    ul {
       padding-left: $toc_padding;
     }
 
-    li{
+    li {
       padding: 3px 0;
 
       a {
         color: $mainTextColor;
 
-        &:hover{
+        &:hover {
           text-decoration: underline;
         }
       }
@@ -41,14 +41,14 @@ $toc_padding: 20px;
 
 // Darkmode support
 @media (prefers-color-scheme: dark) {
-  .toc{
+  .toc {
     background-color: $headerBackgroundDarkMode;
 
-    .toc-list{
+    .toc-list {
       color: $mainTextColorDarkMode;
 
-      li{
-        a{
+      li {
+        a {
           color: $mainTextColorDarkMode;
         }
       }
@@ -56,7 +56,7 @@ $toc_padding: 20px;
   }
 }
 
-@media (max-width: $containerWidth+(2*$toc_width)) {
+@media (max-width: $containerWidth + (2 * $toc_width)) {
   .toc {
         display: none !important;
     }

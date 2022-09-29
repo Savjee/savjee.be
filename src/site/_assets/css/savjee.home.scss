@@ -1,29 +1,29 @@
-.home-box{
+.home-box {
     img.me {
         max-height: 340px;
         width: auto;
         height: auto;
     }
 
-    h1{
-        margin:20px 0 0 0;
+    h1 {
+        margin: 20px 0 0;
     }
 
-    h3{
-        margin-top:10px;
+    h3 {
+        margin-top: 10px;
         margin-bottom: 35px;
         font-weight: 300;
         font-size: 1.3em;
     }
 
-    p{
-        font-weight:300;
+    p {
+        font-weight: 300;
     }
 }
 
 @media (max-width: 767px) {
-	.home-box{
-        img.me{
+	.home-box {
+        img.me {
             width: 200px;
             height: 238px;
         }

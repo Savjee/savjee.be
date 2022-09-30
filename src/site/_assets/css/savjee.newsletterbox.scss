@@ -7,7 +7,7 @@
     input {
 		font-size: 1em;
 		padding: 10px;
-		border: solid 1px $codeBoxBorder;
+		border: solid 1px $codebox-border;
 		width: 50%;
 		margin-bottom: 0.8em;
 	}
@@ -16,7 +16,7 @@
 		font-size: 1em;
 		padding: 10px 15px;
 		margin-bottom: 0.8em;
-		background-color: $codeBoxBorder;
+		background-color: $codebox-border;
 		border: none;
 	}
 

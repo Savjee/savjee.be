@@ -10,11 +10,11 @@ body {
     margin: 0;
     padding: 0;
     font-size: $base_fontsize;
-    color: $mainTextColor;
+    color: $main-text-color;
 }
 
 .container {
-    max-width: $containerWidth;
+    max-width: $container-width;
     padding: 20px;
     margin: 0 auto;
     position: relative;
@@ -43,8 +43,8 @@ code {
 pre,
 p code,
 li code {
-    background-color: $codeBoxBackground !important;
-    border: solid 1px $codeBoxBorder !important;
+    background-color: $codebox-background !important;
+    border: solid 1px $codebox-border !important;
 }
 
 figure {
@@ -62,7 +62,7 @@ li code {
 }
 
 a {
-    color: $linkColor;
+    color: $link-color;
     transition: color 0.25s ease-in-out;
     text-decoration: none;
 
@@ -108,7 +108,7 @@ article {
 }
 
 .related-posts {
-    background-color: $codeBoxBackground;
+    background-color: $codebox-background;
     padding: 40px 30px;
     margin-bottom: 30px;
 
@@ -173,14 +173,14 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        color: $mainTextColorDarkMode;
-        background: $bodyBackgroundDarkMode;
+        color: $main-text-color-darkmode;
+        background: $body-background-darkmode;
     }
 
     pre,
     p code,
     li code {
-        background-color: $headerBackgroundDarkMode !important;
+        background-color: $header-background-darkmode !important;
     }
 
     article h1 a {
@@ -192,15 +192,15 @@ footer {
     }
 
     a {
-        color: $linkColorDarkMode;
+        color: $link-color-darkmode;
 
         &:hover {
-            color: $linkColor;
+            color: $link-color;
         }
     }
 
     .related-posts {
-        background-color: $headerBackgroundDarkMode;
+        background-color: $header-background-darkmode;
     }
 
     blockquote {

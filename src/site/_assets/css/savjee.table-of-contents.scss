@@ -1,14 +1,14 @@
 @import "savjee.colors";
 
-$toc_width: 300px;
-$toc_padding: 20px;
+$toc-width: 300px;
+$toc-padding: 20px;
 
 .toc {
   position: absolute;
-  width: $toc_width;
-  right: -$toc_width;
-  background-color: $codeBoxBackground;
-  padding: $toc_padding;
+  width: $toc-width;
+  right: -$toc-width;
+  background-color: $codebox-background;
+  padding: $toc-padding;
 
   h1 {
     font-size: 1em;
@@ -16,20 +16,20 @@ $toc_padding: 20px;
   }
 
   .toc-list {
-    color: $mainTextColor;
+    color: $main-text-color;
     font-size: 0.9em;
     margin: 0;
     padding: 0;
 
     ul {
-      padding-left: $toc_padding;
+      padding-left: $toc-padding;
     }
 
     li {
       padding: 3px 0;
 
       a {
-        color: $mainTextColor;
+        color: $main-text-color;
 
         &:hover {
           text-decoration: underline;
@@ -42,21 +42,21 @@ $toc_padding: 20px;
 // Darkmode support
 @media (prefers-color-scheme: dark) {
   .toc {
-    background-color: $headerBackgroundDarkMode;
+    background-color: $header-background-darkmode;
 
     .toc-list {
-      color: $mainTextColorDarkMode;
+      color: $main-text-color-darkmode;
 
       li {
         a {
-          color: $mainTextColorDarkMode;
+          color: $main-text-color-darkmode;
         }
       }
     }
   }
 }
 
-@media (max-width: $containerWidth + (2 * $toc_width)) {
+@media (max-width: $container-width + (2 * $toc-width)) {
   .toc {
         display: none !important;
     }

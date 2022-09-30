@@ -1,19 +1,22 @@
-$bodyBackgroundDarkMode: #222;
+$body-background-darkmode: #222;
 
-$mainBrandColor: #54bc4b;
+// Main colors
+$main-brand-color: #54bc4b;
+$main-text-color: #2a2f35;
+$main-text-color-darkmode: #fff;
 
-$mainTextColor: #2a2f35;
-$mainTextColorDarkMode: #fff;
+// Codeboxes
+$codebox-background: #f8f8f8;
+$codebox-background-darkmode: #505050;
+$codebox-border: #d1d1d1;
 
-$codeBoxBackground: #f8f8f8;
-$codeBoxBackgroundDarkMode: #505050;
-$codeBoxBorder: #d1d1d1;
+// Links
+$link-color: #007998;
+$link-color-darkmode: #1cd1ff;
 
-$linkColor: #007998;
-$linkColorDarkMode: #1cd1ff;
-
-$headerBackground: #f8f8f8;
-$headerBackgroundDarkMode: #323232;
+// Header
+$header-background: #f8f8f8;
+$header-background-darkmode: #323232;
 
 // Other parameters
-$containerWidth: 760px;
+$container-width: 760px;

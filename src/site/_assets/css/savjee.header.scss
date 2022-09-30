@@ -1,7 +1,7 @@
 @import "savjee.colors";
 
 header {
-    background-color: $headerBackground;
+    background-color: $header-background;
 
     .container {
         display: flex;
@@ -104,7 +104,7 @@ header {
 
 @media (prefers-color-scheme: dark) {
     header {
-        background-color: $headerBackgroundDarkMode;
+        background-color: $header-background-darkmode;
 
         .brand-name a {
             color: #fff;

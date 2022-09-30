@@ -12,7 +12,7 @@ fullwidth: true
         </div>
     </div>
     
-    <div class="videoNavigation">
+    <div class="video-navigation">
         <div class="container">
             {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
             {% assign videoIndex = vidsInSerie | indexOf: page %}
@@ -36,7 +36,7 @@ fullwidth: true
             {% endif %}
 
             {% if nextVideo %}
-                <div class="nextVideo">
+                <div class="next-video">
                         {% unless nextVideo.data.hide %}
                         <div class="video-">
                             <a href="{{nextVideo.url}}">

@@ -7,7 +7,7 @@
     border-radius: 5px;
     width: 100%;
     text-align: center;
-    background-color: $codeBoxBackground;
+    background-color: $codebox-background;
     font: inherit;
     cursor: pointer;
     font-weight: bold;
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
     #comments > button {
-        background-color: $headerBackgroundDarkMode;
+        background-color: $header-background-darkmode;
         color: #fff;
     }
 }

@@ -2,6 +2,7 @@
   background-color: $base-color;
 
 	&:hover {
+			/* stylelint-disable scss/no-global-function-names */
 			background-color: darken($base-color, 10%);
 	}
 }

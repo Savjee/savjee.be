@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Elevent build
 
 on: [push]
 
@@ -6,15 +6,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        # Cloudflare Pages uses NodeJS 12 as default
+        node-version: [12.x, latest]
+
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '15.x'
+        node-version: ${{ matrix.node-version }}
 
     - name: Cache node_modules
       id: cache-node-modules

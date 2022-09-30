@@ -3,8 +3,6 @@
 
 /* ----------------- Main site styles ----------------- */
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -63,6 +61,16 @@ li code {
     margin: 0 2px;
 }
 
+a {
+    color: $linkColor;
+    transition: color 0.25s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        color: rgb(0 121 152 / 50%);
+    }
+}
+
 article {
     margin: 0 0 35px;
 
@@ -80,6 +88,10 @@ article {
         display: block;
     }
 
+    h1 a {
+        color: #404040;
+    }
+
     .post-title {
         text-decoration: none;
 
@@ -92,10 +104,6 @@ article {
         a {
             text-decoration: underline;
         }
-    }
-
-    h1 a {
-        color: #404040;
     }
 }
 
@@ -127,20 +135,6 @@ article {
             list-style: none;
             padding: 0;
         }
-    }
-}
-
-a {
-    color: $linkColor;
-    -webkit-transition: color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out;
-    transition: color 0.25s ease-in-out;
-    text-decoration: none;
-
-    &:hover {
-        color: rgb(0, 121, 152 / 50%);
     }
 }
 

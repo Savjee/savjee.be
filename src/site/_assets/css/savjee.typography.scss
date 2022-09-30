@@ -1,7 +1,19 @@
 $base_fontsize: 18px;
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+    font-family:
+        // Replacement for -apple-system and BlinkMacSystemFont
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
     font-weight: 400;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;

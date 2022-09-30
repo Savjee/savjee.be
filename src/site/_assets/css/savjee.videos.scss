@@ -99,7 +99,6 @@
 
 .video-serieList {
     column-count: 2;
-    -moz-column-count: 2;
     font-size: 0.85em;
 }
 
@@ -125,14 +124,14 @@
     }
 
     .card {
-        box-shadow: 0 4px 8px 0 rgb(0, 0, 0 / 20%);
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
         transition: 0.3s;
         line-height: 1.5;
         height: 100%;
         width: 100%;
 
         &:hover {
-            box-shadow: 0 8px 16px 0 rgb(0, 0, 0 / 20%);
+            box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
         }
 
         a {
@@ -150,7 +149,6 @@
 @media (max-width: 767px) {
     .video-serieList {
         column-count: 1;
-        -moz-column-count: 1;
     }
 
     // Previous and Next video shouldn't be in 2 column layout anymore

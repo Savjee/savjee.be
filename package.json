@@ -18,7 +18,8 @@
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
-    "lint:css": "npx stylelint '**/*.scss'"
+    "lint:css": "npx stylelint '**/*.scss'",
+    "lint:js": "npx eslint \"**/*.{js,ts}\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -26,9 +27,12 @@
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@types/sharp": "^0.30.5",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
     "babel-loader": "^8.2.3",
     "bootstrap": "^4.6.0",
     "eleventy-plugin-bibtex": "^0.1.1",
+    "eslint": "^8.24.0",
     "fast-glob": "^3.2.12",
     "file-loader": "^6.2.0",
     "html-minifier": "^4.0.0",

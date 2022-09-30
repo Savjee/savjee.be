@@ -19,3 +19,6 @@ jobs:
 
       - name: Lint CSS
         run: npm run lint:css
+
+      - name: Lint Javascript and Typescript
+        run: npm run lint:js

@@ -18,6 +18,7 @@
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
+    "lint": "npm run lint:css & npm run lint:js",
     "lint:css": "npx stylelint '**/*.scss'",
     "lint:js": "npx eslint \"**/*.{js,ts}\""
   },

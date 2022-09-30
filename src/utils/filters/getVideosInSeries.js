@@ -10,7 +10,7 @@
 module.exports = (collection, serieName) => {
     if (!Array.isArray(collection)) {
         throw new Error("getVideosInSeries: first parameter is not an array");
-    };
+    }
     if (typeof serieName !== "string") {
         throw new Error("getVideosInSeries: second parameter should be a string");
     }

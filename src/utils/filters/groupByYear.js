@@ -18,7 +18,7 @@
 module.exports = (collection) => {
     if (!Array.isArray(collection)) {
         throw new Error("groupBy: first parameter is not an array");
-    };
+    }
 
     const output = [];
 

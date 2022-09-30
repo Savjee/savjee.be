@@ -1,7 +1,7 @@
 const {statSync} = require("fs");
 const path = require("path");
 
-const regImgSrc = /\<img.*src=["'](.*?)["']/mi;
+const regImgSrc = /<img.*src=["'](.*?)["']/mi;
 const regYouTube = /i\.ytimg\.com\/vi\/(.*)\/(.*)\.jpg/mi;
 
 /**

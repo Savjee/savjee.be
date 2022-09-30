@@ -1,5 +1,3 @@
-'use strict';
-
 const {statSync} = require("fs");
 
 function fileExists(pathName){

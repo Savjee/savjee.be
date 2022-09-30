@@ -19,15 +19,15 @@
  */
 export async function onRequestPost({request, env})
 {
-  try{
-    // Extract the domain from which this Function was called. This is needed for
-    // the redirect (which requires a full URL), and because I want to support
-    // Cloudflare Pages preview deployments (which get unique subdomains).
-    const url = new URL(request.url);
-    const baseUrl = `https://${url.host}/newsletter/signup`;
+  // Extract the domain from which this Function was called. This is needed for
+  // the redirect (which requires a full URL), and because I want to support
+  // Cloudflare Pages preview deployments (which get unique subdomains).
+  const url = new URL(request.url);
+  const baseUrl = `https://${url.host}/newsletter/signup`;
 
+  try{
     // Extract form data
-    const formBody = await request.formData().catch(_ => {
+    const formBody = await request.formData().catch(() => {
       console.error('No form data provided');
       return redirect(`${baseUrl}/failed`);
     });

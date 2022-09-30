@@ -11,7 +11,7 @@
 module.exports = (collection) => {
     if (!Array.isArray(collection)) {
         throw new Error("getFeatureableVideos: first parameter is not an array");
-    };
+    }
 
     return collection
         .filter(m => m.data.not_featureable === undefined || m.data.not_featureable === false);

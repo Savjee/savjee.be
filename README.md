@@ -1,4 +1,8 @@
 # Savjee.be
+
+[![Eleventy build](https://github.com/Savjee/savjee.be/actions/workflows/eleventy-build.yml/badge.svg)](https://github.com/Savjee/savjee.be/actions/workflows/eleventy-build.yml)
+[![Lint Code Base](https://github.com/Savjee/savjee.be/actions/workflows/linter.yml/badge.svg)](https://github.com/Savjee/savjee.be/actions/workflows/linter.yml)
+
 This is the source code of my blog, [www.savjee.be](https://www.savjee.be). It's a static website built with [Eleventy](https://www.11ty.dev/).
 
 ## Don't copy my content

@@ -1,5 +1,5 @@
 ---
-name: Lint Code Base
+name: CI
 
 on:
   push:
@@ -48,7 +48,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy:
-    name: Deploy
+    name: Build & deploy
     runs-on: ubuntu-latest
     needs: linting
     steps:
@@ -76,6 +76,9 @@ jobs:
 
       - name: Publish
         uses: cloudflare/pages-action@1
+        # Only deploy the master branch to Cloudflare via GitHub Actions. Other
+        # branches are built by Cloudflare itself, because that's faster.
+        if: github.ref == 'refs/heads/master'
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

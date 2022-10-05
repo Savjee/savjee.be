@@ -6,10 +6,12 @@ on:
   pull_request:
 
 jobs:
-  build:
+  linting:
     name: Lint Code Base
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        lint_commands: ["lint:css", "lint:js"]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -17,8 +19,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint CSS
-        run: npm run lint:css
-
-      - name: Lint Javascript and Typescript
-        run: npm run lint:js
+      - name: ${{ matrix.lint_commands }}
+        run: npm run ${{ matrix.lint_commands }}

@@ -39,7 +39,8 @@ jobs:
         run: npm run ${{ matrix.lint_commands }}
 
       # Send a message to Slack if the linters failed
-      - uses: 8398a7/action-slack@v3
+      - name: Notify on failure
+        uses: 8398a7/action-slack@v3
         if: ${{ failure() }}
         with:
           status: ${{ job.status }}

@@ -20,7 +20,8 @@
     "build:images": "npx ts-node src/build/image_pipeline.ts",
     "lint": "npm run lint:css & npm run lint:js",
     "lint:css": "npx stylelint '**/*.scss'",
-    "lint:js": "npx eslint \"**/*.{js,ts}\""
+    "lint:js": "npx eslint \"**/*.{js,ts}\"",
+    "lint:brokenlinks": "npx blcl ./_site/ -ro --exclude-external"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -32,6 +33,7 @@
     "@typescript-eslint/parser": "^5.38.1",
     "babel-loader": "^8.2.3",
     "bootstrap": "^4.6.0",
+    "broken-link-checker-local": "^0.2.1",
     "eleventy-plugin-bibtex": "^0.1.1",
     "eslint": "^8.24.0",
     "fast-glob": "^3.2.12",

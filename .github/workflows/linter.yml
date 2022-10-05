@@ -11,13 +11,29 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lint_commands: ["lint:css", "lint:js"]
+        lint_commands: ["lint:css", "lint:js", "lint:brokenlinks"]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
+
+      - name: Build site
+        run: npm run build
 
       - name: ${{ matrix.lint_commands }}
         run: npm run ${{ matrix.lint_commands }}

@@ -37,8 +37,15 @@ jobs:
 
       - name: ${{ matrix.lint_commands }}
         run: npm run ${{ matrix.lint_commands }}
-        # Allow linters to fail when not on master branch
-        continue-on-error: ${{ github.ref != 'refs/heads/master' }}
+
+      # Send a message to Slack if the linters failed
+      - uses: 8398a7/action-slack@v3
+        if: ${{ failure() }}
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy:
     name: Deploy

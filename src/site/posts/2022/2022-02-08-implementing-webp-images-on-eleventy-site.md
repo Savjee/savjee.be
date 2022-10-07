@@ -2,6 +2,7 @@
 layout: post
 title: "How WebP Images Reduced My Bandwidth Usage by 50%"
 tags: [Eleventy, Web Performance]
+not_featureable: true
 upload_directory: /uploads/2022-02-implementing-webp-images-on-eleventy-site/
 thumbnail: /uploads/2022-02-implementing-webp-images-on-eleventy-site/thumb_timeline.jpg
 toc_enabled: true

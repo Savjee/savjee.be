@@ -52,7 +52,11 @@ script:
       - service: input_text.set_value
         entity_id: input_text.xtodo_todos
         data:
-          value: "{{states('input_text.xtodo_todos')}}\n{{ todo }}"
+          value: >-
+            {%- if states('input_text.xtodo_todos') |length != 0 -%}
+            {{states('input_text.xtodo_todos')}}\n
+            {%- endif -%}
+            {{ todo }}
 {% endhighlight %}
 
 It's a very simple script, but it centralizes the logic in one place. It can now be used in any automation you want. 
@@ -130,12 +134,15 @@ packages:
           - service: input_text.set_value
             entity_id: input_text.xtodo_todos
             data:
-              value: "{{states('input_text.xtodo_todos')}}\n{{ todo }}"
-
+              value: >-
+                {%- if states('input_text.xtodo_todos') |length != 0 -%}
+                {{states('input_text.xtodo_todos')}}\n
+                {%- endif -%}
+                {{ todo }}
 {% endhighlight %}
 
 
-And here's a link to the iOS Shortcut: [https://www.icloud.com/shortcuts/2e07c55b391f4862949d4ceab7f441a0](https://www.icloud.com/shortcuts/2e07c55b391f4862949d4ceab7f441a0)
+And here's a link to the iOS Shortcut: [https://www.icloud.com/shortcuts/f31e9022a6d247e8869e0be9b4d8e1e4](https://www.icloud.com/shortcuts/f31e9022a6d247e8869e0be9b4d8e1e4)
 
 
 ## Conclusion

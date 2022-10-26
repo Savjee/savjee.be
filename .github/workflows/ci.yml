@@ -40,7 +40,6 @@ jobs:
 
       - uses: jackyef/bundlewatch-gh-action@master
         with:
-          build-script: yarn build:minify
           bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
 
       # Send a message to Slack if the linters failed

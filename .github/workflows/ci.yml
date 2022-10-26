@@ -38,6 +38,11 @@ jobs:
       - name: ${{ matrix.lint_commands }}
         run: npm run ${{ matrix.lint_commands }}
 
+      - uses: jackyef/bundlewatch-gh-action@master
+        with:
+          build-script: yarn build:minify
+          bundlewatch-github-token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+
       # Send a message to Slack if the linters failed
       - name: Notify on failure
         uses: 8398a7/action-slack@v3

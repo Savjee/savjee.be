@@ -20,7 +20,8 @@
     "build:images": "npx ts-node src/build/image_pipeline.ts",
     "lint:css": "npx stylelint '**/*.scss'",
     "lint:js": "npx eslint \"**/*.{js,ts}\"",
-    "lint:brokenlinks": "npx blcl ./_site/ -ro --exclude-external"
+    "lint:brokenlinks": "npx blcl ./_site/ -ro --exclude-external",
+    "lint:bundlewatch": "npx bundlewatch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -33,6 +34,7 @@
     "babel-loader": "^8.2.3",
     "bootstrap": "^4.6.0",
     "broken-link-checker-local": "^0.2.1",
+    "bundlewatch": "^0.3.3",
     "eleventy-plugin-bibtex": "^0.1.1",
     "eslint": "^8.24.0",
     "fast-glob": "^3.2.12",
@@ -56,5 +58,17 @@
   },
   "dependencies": {
     "eleventy-plugin-toc": "^1.1.5"
-  }
+  },
+  "bundlewatch" : {
+    "files": [
+      {
+        "path": "_site/assets/**/*.js",
+        "maxSize": "10kB"
+      },
+      {
+        "path": "_site/assets/**/*.css",
+        "maxSize": "20kB"
+      }
+    ]
+    }
 }

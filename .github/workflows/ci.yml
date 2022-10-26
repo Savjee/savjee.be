@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lint_commands: ["lint:css", "lint:js", "lint:brokenlinks"]
+        lint_commands: ["lint:css", "lint:js", "lint:brokenlinks", "lint:bundlewatch"]
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3

@@ -269,7 +269,7 @@ sensor:
 
 All that's left now it to add the sensor to Home Assistant and configure it for the Energy dashboard. As always, it was automatically discovered, and all I had to do was give Home Assistant the API password. 
 
-A few hours later, my energy distribution card showed my gas usage:
+A few hours later, and after adding the sensor to the Energy dashboard, my energy distribution card showed my gas usage:
 
 ![](/uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/home-assistant-energy-distribution-card-animation.gif)
 

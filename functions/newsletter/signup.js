@@ -39,6 +39,15 @@ export async function onRequestPost({request, env})
       return redirect(`${baseUrl}/failed`);
     }
 
+    // Make an attempt at validating the email address. Doesn't need to be 100%
+    // fool-proof, as Revue will validate as well.
+    // Source: https://emailregex.com
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(emailRegex.test(email) === false){
+      console.error("No valid email address provided");
+      return redirect(`${baseUrl}/failed`);
+    }
+
     // When running locally, don't make requests to Revue and simulate a
     // successful registration. But strip the HTTPS, because that's not available.
     if(url.host.indexOf('localhost') === 0){

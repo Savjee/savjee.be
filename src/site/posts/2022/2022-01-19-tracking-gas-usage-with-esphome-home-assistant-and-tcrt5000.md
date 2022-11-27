@@ -115,14 +115,14 @@ logger:
 
 globals:
   - id: last_pulse_value
-    type: int
+    type: float
     restore_value: false
-    initial_value: '0'
+    initial_value: '0.0'
 
   - id: total_pulses
-    type: int
+    type: float
     restore_value: false
-    initial_value: '0'
+    initial_value: '0.0'
 
 sensor:
   # This sensor exposes the total_pulses variable to Home Assistant and

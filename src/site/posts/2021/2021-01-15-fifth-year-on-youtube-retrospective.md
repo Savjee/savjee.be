@@ -67,7 +67,7 @@ So here are my actual goals for 2021:
 That's it. No goals for subscriber count or view counts. Simply Explained is my hobby, my side-project. I don't depend on the money it generates. So it should be all about me and what I love: educating people on whatever topic I find interesting. Sounds a bit selfish, but I believe it's the only way for me to stay creative and have fun while doing it.
 
 # Introspective
-To round up this post, I wanted to do a little introspective. Fellow YouTuber, Ali Abdaal, [does this every year and published a list of questions that can help you get started](http://email.aliabdaal.com/issues/the-most-important-thing-i-do-each-year-295509?utm_campaign=Sunday%20Snippets&utm_medium=email&utm_source=Revue%20newsletter). Here are a few that I choose to answer and publish on this blog:
+To round up this post, I wanted to do a little introspective. Fellow YouTuber, Ali Abdaal, [does this every year and published a list of questions that can help you get started](http://email.aliabdaal.com/issues/the-most-important-thing-i-do-each-year-295509). Here are a few that I choose to answer and publish on this blog:
 
 **When have you felt proud of yourself in 2020? what were you doing?**
 

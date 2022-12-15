@@ -20,8 +20,8 @@
 export async function onRequestPost({request, env})
 {
   try{
-    // Extract the domain from which this Function was called. This is needed for
-    // the redirect (which requires a full URL), and because I want to support
+    // Extract the domain from which this Function was called. Needed for the
+    // redirect (which requires a full URL), and because I want to support
     // Cloudflare Pages preview deployments (which get unique subdomains).
     const url = new URL(request.url);
     const baseUrl = `https://${url.host}/newsletter/signup`;
@@ -55,37 +55,7 @@ export async function onRequestPost({request, env})
       return redirect(redirectUrl);
     }
 
-    // Send the email address to Revue
-    const revueUrl = 'https://www.getrevue.co/api/v2/subscribers';
-    const revueToken = env.REVUE_TOKEN;
-
-    const req = await fetch(revueUrl, {
-      body: JSON.stringify({
-        email: email,
-        double_opt_in: true, // GDPR!
-      }),
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        'Authorization': `Token ${revueToken}`,
-      },
-    });
-
-    const res = await req.json();
-    if(res.error){
-      if(res.error.email 
-        && res.error.email[0] === 'This email address has already been confirmed'){
-        // TODO: try to resend the confirmation email
-        await notify(email, 'already signed up');
-        return redirect(`${baseUrl}/already`);
-      }
-
-      console.error("Received error from Revue:", JSON.stringify(res));
-      await notify(email, 'error from Revue: ' + JSON.stringify(res));
-      return redirect(`${baseUrl}/failed`);
-    }
-
-    await notify(email, 'ok');
+    await notify(email);
     return redirect(`${baseUrl}/success`);
   }catch(e){
     return redirect(`${baseUrl}/failed?reason=internal`);
@@ -103,7 +73,7 @@ function redirect(url){
   return Response.redirect(url, 303);
 }
 
-function notify(email, reason = ""){
+function notify(email){
   return fetch(new Request("https://api.mailchannels.net/tx/v1/send", {
     method: "POST",
     headers: {
@@ -120,7 +90,7 @@ function notify(email, reason = ""){
         subject: "New subscriber!",
         content: [{
           type: "text/plain",
-          value: `Tried signing up for the newsletter: ${email}, status: ${reason}`,
+          value: `Signed up for newsletter. Add to Substack: ${email}`,
         }],
     }),
   }));

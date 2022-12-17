@@ -59,6 +59,7 @@ layout: default
             "https://savjee.be{{upload_directory}}/thumb_master.jpg"
         ],
         {% endif %}
+        "dateModified": "{{ page.inputPath | getGitCommitDateFromPath }}",
         "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
     },
     {

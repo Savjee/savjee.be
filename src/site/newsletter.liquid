@@ -1,0 +1,20 @@
+---
+layout: page
+title: "Newsletter"
+---
+
+<p>Monthly newsletter with the latest Simply Explained content and other cool stuff I found on the Internet. Check out the past issues here, and signup if you want your curiosity tickled every month ;)</p>
+
+{% include "components/newsletter-box.html", noDescription: true %}
+
+
+{% assign newslettersByYear = collections.newsletter | groupByYear %}
+{% for yearObj in newslettersByYear reversed %}
+    <h2>{{ yearObj.year }}</h2>
+
+    {% for newsletter in yearObj.posts reversed %}
+        <p>
+            <a href="{{newsletter.url}}">{{newsletter.data.title}}</a>  <small class="no-wrap">({{newsletter.date | date: "%Y-%m" }})</small>
+        </p>
+    {% endfor %}
+{% endfor %}

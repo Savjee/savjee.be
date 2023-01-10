@@ -1,0 +1,59 @@
+$base_fontsize: 18px;
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+article {
+    line-height: 1.7;
+
+    p{
+        margin: 0 0 1em 0;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        margin:0;
+    }
+
+    h3, h4, h5, h6{
+        margin: 1em 0 0 0;
+    }
+
+    h1{ // Post titles only
+        margin: 1em 0 1em 0;
+        font-size: 2em;
+        line-height: 1.3;
+    }
+
+    h2{
+        margin: 1.5em 0 0 0;
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: 1.17em;
+    }
+
+    img + em, picture + em{ // Captions for images
+        font-size: 0.8em;
+    }
+
+    // Didicated code block
+    pre{
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    // Inline codeblock
+    p code, li code {
+        font-size: 0.8em;
+    }
+    
+    // APA citations for videos
+    .csl-bib-body{
+        font-size: 0.8em;
+    }
+}

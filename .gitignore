@@ -1,9 +1,6 @@
-_site
-_drafts
-_asset-cache
-.idea
-.jekyll-metadata
-_scripts/tmp
-.jekyll-cache
+_site/
+!_site/_redirects
+!_site/_headers
+_tmp/
 .DS_Store
-.sass-cache/
+node_modules/

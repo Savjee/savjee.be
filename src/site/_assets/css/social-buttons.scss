@@ -1,0 +1,55 @@
+@mixin social-button-instance($base-color) {
+  background-color: $base-color;
+		&:hover {
+			background-color: darken($base-color, 10%);
+		}
+}
+
+.socialbutton-wrapper {
+	text-align: center;
+	margin: 20px 0;
+	padding: 10px 0;
+	border-top: solid 1px #e4e4e4;
+	border-bottom: solid 1px #e4e4e4;
+
+	a {
+		text-decoration: none;
+	}
+
+  	.only-smartphone {
+		display: none;
+	}
+
+  	.socialbutton {
+		width: 70px;
+		height: 55px;
+		margin-bottom: 0;
+		display: inline-block;
+		margin: 5px;
+
+		p {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			padding-top: 15px;
+
+			>img, >svg {
+				height: 25px;
+			}
+		}
+
+		&.twitter{ @include social-button-instance(#5BC2F0); }
+		&.facebook { @include social-button-instance(#435D96); }
+		&.pocket { @include social-button-instance(#EF3E56); }
+		&.whatsapp { @include social-button-instance(#25D366); }
+		&.reddit{@include social-button-instance(#333333); }
+	}
+}
+
+@media (max-width: 767px) {
+	.socialbutton-wrapper {
+		.only-smartphone {
+			display: inline-block;
+		}
+	}
+}

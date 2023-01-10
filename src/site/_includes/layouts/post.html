@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<article class='post'>
+    <h1 class='post-title'>
+        <a href="{{ page.url }}">{{ title }}</a>
+    </h1>
+
+    {% if toc_enabled == true %}
+        <aside class="toc">
+            <h1>Contents</h1>
+            {{ content | toc }}
+        </aside>
+    {% endif %}
+
+    <div class='post-description'>
+        {{ content }}
+    </div>
+</article>
+
+<p class="text-center">
+    <small>Posted on
+        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+    </small>
+</p>
+
+{% include "components/share-buttons.html" %}
+
+{% assign related_posts = collections.posts | getRelated: tags, page.inputPath %}
+{% if related_posts.size > 0 %}
+	<div class="related-posts">
+		<h2>You May Also Enjoy</h2>
+		
+		<ul>
+			{% for post in related_posts limit:4 %}
+				<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+    
+    <hr>
+{% endif %}
+
+{% include "components/newsletter-box.html" %}
+
+<hr>
+
+{% include "components/disqus-comments.html" %}
+
+<script type="application/ld+json">
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ title }}",
+        {% if thumbnail %}
+        "image": [
+            "https://savjee.be{{upload_directory}}/thumb_master.jpg"
+        ],
+        {% endif %}
+        "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Blog",
+                "item": "https://savjee.be/blog/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{ title }}"
+            }
+        ]
+    }
+]
+</script>

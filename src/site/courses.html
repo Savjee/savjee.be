@@ -1,0 +1,49 @@
+---
+layout: page
+title: Courses
+paginate:
+collection: courses
+quote: 
+---
+
+<p>Short explainer videos on YouTube only get you so far. That's why I've created
+these courses to help you learn certain topics in-depth. Enjoy!</p>
+
+
+{% for course in collections.courses %}
+
+  <div class="course-container">
+
+    <div class="display-flex">
+      <div class="course-thumbnail">
+        <a href="{{course.url}}" aria-label="Open the course '{{ course.data.title }}'">
+          {% assign thumbnailUrl = course.url | append: "thumb.jpg" %}
+
+          {% xd_img %}
+            <img src="{{thumbnailUrl}}" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for the course '{{ course.data.title }}'">
+          {% endxd_img %}
+        </a>
+      </div>
+
+      <div class="course-description flex-vcenter">
+
+        <div class="course-title">
+          <a href="{{course.url}}">{{course.data.title}}</a>
+        </div>
+
+        <div class="platforms">
+          {% if course.data.link_udemy %}
+             <a href="{{course.data.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+           {% endif %}
+           
+           {% if course.data.link_skillshare %}
+               <a href="{{course.data.link_skillshare}}">Skillshare</a>
+           {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <br>
+{% endfor %}

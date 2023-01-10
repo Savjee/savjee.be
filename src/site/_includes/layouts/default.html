@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    {% comment %} Subpages for video series can't set "title" directly {% endcomment%}
+    {% if title == nil %}
+        {% assign title = renderData.title %}
+    {%endif%}
+
+    <title>{{title}} | Savjee.be</title>
+
+    {% assign seo_description_tmp = quote | default: page.excerpt %}
+    {% assign seo_description_tmp2 = seo_description_tmp | md | strip_html %}
+    {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
+    {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
+    {% assign seo_description = seo_description_tmp4 | escape %}
+
+    <link rel="alternate" type="application/rss+xml" title="savjee.be Feed" href="https://savjee.be/atom.xml">
+    <meta name="description" content="{{ seo_description }}"/>
+
+    {% if tags %}
+    <meta name="keywords" content="{{ tags | join: ", " }}"/>
+    {% endif %}
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='shortcut icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='/assets/favicon/favicon.ico' type='image/x-icon'>
+
+    <link rel="preload" href="/assets/css/bundle.min.css" as="stylesheet" />
+    <link rel="preload" href="/assets/main.js" as="script" />
+
+    <link rel="stylesheet" href="/assets/css/bundle.min.css">
+    <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d"/>
+
+    <meta name="twitter:site" content="@Savjee">
+    <meta name="twitter:creator" content="@Savjee">
+    <meta name="twitter:url" content="https://savjee.be{{page.url}}">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{ seo_description }}">
+
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:site_name" content="Savjee.be"/>
+    <meta property="og:url" content="https://savjee.be{{page.url}}"/>
+    <meta property="og:description" content="{{ seo_description }}"/>
+    <meta property="og:type" content="article">
+    <meta property="fb:app_id" content="805673586165209"/>
+
+    <link rel="canonical" href="https://savjee.be{{ page.url | replace:'index.html',''}}">
+
+    {% if thumbnail %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:src" content="https://savjee.be{{upload_directory}}/thumb_twitter.jpg">
+        <meta property="og:image" content="https://savjee.be{{upload_directory}}/thumb_facebook.jpg"/>
+    {% else %}
+        <meta name="twitter:card" content="summary">
+    {% endif %}
+</head>
+
+<body {% if toc_enabled %}class="toc_enabled"{% endif %}>
+
+<header class="site-header" role="banner">
+    <div class="container">
+        <div class="logo flex-vcenter">
+            <a href='/'>
+                <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="60" height="60">
+            </a>
+        </div>
+
+        <div class="brand-name flex-vcenter">
+            <a href="/" title="Savjee.be" rel="home">
+                <span>Savjee</span><br>
+                <span class="font-normal">Simply Explained</span>
+            </a>
+        </div>
+
+        <nav role="navigation" class="flex-vcenter">
+            <div class="menu-main-nav-container">
+                <ul id="menu-main-nav" class="menu">
+                    <li>
+                        <a href="/blog/" {%- if page.url contains "/blog/" -%}class="active"{%endif%}>
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/videos/" {%- if page.url contains "/videos/" -%}class="active"{%endif%}>
+                            Videos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/courses/" {%- if page.url contains "/courses/" -%}class="active"{%endif%}>
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/newsletter/" {%- if page.url contains "/newsletter/" -%}class="active"{%endif%}>
+                            Newsletter
+                        </a>
+                    </li>
+                    <!-- <li><a href="/about.html">About Me</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+    
+    
+
+{% unless fullwidth %}
+<div class='container {% if wider %}wider{% endif %}'>
+{% endunless %}
+    
+    {{ content }}
+
+{% unless fullwidth %}
+</div>
+{% endunless %}
+
+<footer>
+    <p>Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper</p>
+
+    <p>
+        <a href="/about">About</a> - 
+        <a href="/atom.xml">RSS</a> - 
+        <a href="https://github.com/Savjee" rel='noopener' target='_blank'>Github</a> - 
+        <a href="https://twitter.com/Savjee/" rel='noopener' target='_blank'>Twitter</a> - 
+        <a href="https://simplyexplained.com/" rel='noopener' target='_blank'>YouTube</a>
+    </p>
+</footer>
+
+<script defer src="/assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="bookmarkbox">
+    <a href="{{url}}">
+        <div class="bookmark-contents">
+            {% unless imageLeft %}
+                <div class="text-container align-self-center">
+                    {{ title | truncate:100 }}
+                </div>
+            {% endunless %}
+            
+            {%- if imageUrl != nil -%}
+                <div class="image-container">
+                    {% xd_img %}
+                        <img src="{{imageUrl}}" 
+                            alt="" 
+                            loading="lazy"
+                            {%- if imageWidth and imageHeight -%}
+                                width="{{imageWidth}}"
+                                height="{{imageHeight}}"
+                            {%- endif -%}
+                        />
+                    {% endxd_img %}
+                </div>
+            {%- endif -%}
+
+            {% if imageLeft %}
+            <div class="align-self-center text-container">
+                {{ title | truncate:100 }}
+            </div>
+            {% endif %}
+        </div>
+    </a>
+</div>

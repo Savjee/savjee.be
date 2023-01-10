@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class='post'>
+	<h1 class='post-title'>
+		<a href="{{ page.url }}">{{ title }}</a>
+	</h1>
+
+	<p class="no-margin">
+		Available on:
+
+		{% if link_udemy %}
+          <a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+        {% endif %}
+        
+        {% if link_skillshare %}
+            <a href="{{link_skillshare}}">Skillshare</a>
+        {% endif %}
+	</p>
+	<hr>
+
+	<div class='post-description'>
+		{{ content }}
+	</div>
+</article>
+
+{% comment %} *********** Structured data for Google *********** {% endcomment %}
+<script type="application/ld+json">
+[
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+	  	{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Courses",
+			"item": "https://savjee.be/courses/"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "{{ title }}"
+		}
+	]
+    }
+]
+</script>

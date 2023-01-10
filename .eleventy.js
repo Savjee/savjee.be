@@ -22,12 +22,15 @@ module.exports = function (config) {
         return markdownIt({ html: true }).render(content);
     });
 
-    config.addLiquidFilter("getVideosInSeries", require('./src/utils/filters/getVideosInSeries'));
-    config.addLiquidFilter("getFeatureable", require('./src/utils/filters/getFeaturable'));
-    config.addLiquidFilter("indexOf", require('./src/utils/filters/indexOf'));
-    config.addLiquidFilter("getRelated", require('./src/utils/filters/getRelated'));
-    config.addLiquidFilter("htmlImageSize", require('./src/utils/filters/htmlImageSize'));
-    config.addLiquidFilter("groupByYear", require('./src/utils/filters/groupByYear'));
+    // Add custom filters
+    [
+        "getVideosInSeries", "getFeatureable", "indexOf", "getRelated",
+        "htmlImageSize", "groupByYear",
+    ].forEach((filterName) => {
+        config.addLiquidFilter(filterName, 
+            require('./src/utils/filters/' + filterName));
+    });
+    
 
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')

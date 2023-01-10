@@ -3,7 +3,7 @@ layout: default
 fullwidth: true
 ---
 
-<article class='post'>
+<article class="post">
     <div class="videobackdrop">
         <div class="container video">
             <div class="videowrapper">
@@ -28,7 +28,7 @@ fullwidth: true
                     <div class="video-">
                         <a href="{{ prevVideo.url }}">
                             <p><strong>&larr; Previous video</strong><br>
-                                <span class="hide-overflow-text">{{prevVideo.data.title}}</span>
+                                <span class="hide-overflow-text">{{ prevVideo.data.title | escape_once }}</span>
                             </p>
                         </a>
                     </div>
@@ -42,7 +42,7 @@ fullwidth: true
                             <a href="{{nextVideo.url}}">
                                 <p>
                                     <strong>Next video &rarr;</strong><br>
-                                    <span class="hide-overflow-text">{{nextVideo.data.title}}</span>
+                                    <span class="hide-overflow-text">{{ nextVideo.data.title | escape_once }}</span>
                                 </p>
                             </a>
                         </div>
@@ -53,8 +53,8 @@ fullwidth: true
     </div>
 
     <div class="container">
-        <h1 class='post-title'>
-            <a href="{{ page.url }}">{{ title }}</a>
+        <h1 class="post-title">
+            <a href="{{ page.url }}">{{ title | escape_once }}</a>
         </h1>
 
         <div class="post-description">

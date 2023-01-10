@@ -2,21 +2,21 @@
 layout: default
 ---
 
-<article class='post'>
+<article class="post">
     <small><a href="/newsletter">&larr; Other newsletters issues</a></small>
 
-    <h1 class='post-title no-margin-top'>
+    <h1 class="post-title no-margin-top">
         <a href="{{ page.url }}">{{ title }}</a>
     </h1>
 
-    <div class='post-description'>
+    <div class="post-description">
         {{ content }}
     </div>
 </article>
 
 <p class="text-center">
     <small>Sent on
-        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+        <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
     </small>
 </p>
 

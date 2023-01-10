@@ -25,7 +25,7 @@
             <ol class="no-margin">
                 {% for vid in vidsInSerie %}
                     {% unless vid.data.hide %}
-                        <li><a href="{{vid.url}}">{{vid.data.title}}</a></li>
+                        <li><a href="{{vid.url}}">{{vid.data.title | escape_once}}</a></li>
                     {% endunless %}
                 {% endfor %}
             </ol>

@@ -86,7 +86,9 @@ module.exports = function (config) {
     // Markdown option: external links should be opened in a 
     // new tab and not expose personal details
     const milaOptions = {
-        pattern: /^https?:/,
+        matcher(href) {
+            return href.match(/^https?:\/\//);
+        },
         attrs: {
             target: "_blank",
             rel: "noopener noreferrer"

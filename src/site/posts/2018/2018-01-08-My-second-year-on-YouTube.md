@@ -2,7 +2,7 @@
 layout: post
 title: My second year on YouTube
 quote:
-tags: [YouTube channel]
+tags: ["Yearly review", "YouTube channel"]
 ---
 
 Exactly 2 years ago I started my YouTube channel and a year ago I published a blog post called "[My first year on YouTube]({% link collections.posts, '2017-01-13-my-first-year-on-youtube' %})" where I wrote about what I had achieved and what my goals were for the upcoming year. So this year I’m doing the same and also adding the goals for my blog & Udemy.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Sixth Year as YouTube Creator (statistics + retrospective)"
-tags: [YouTube channel]
+tags: ["Yearly review", "YouTube channel"]
 upload_directory: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/
 thumbnail: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/thumb_timeline.jpg
 toc_enabled: true

@@ -2,7 +2,7 @@
 layout: post
 title: Three years on YouTube
 quote:
-tags: [YouTube channel]
+tags: ["Yearly review", "YouTube channel"]
 ---
 
 It's been three years since I started my YouTube channel, Simply Explained. In previous years ([2017]({% link collections.posts, '2017-01-13-my-first-year-on-youtube' %}), [2018]({% link collections.posts, '2018-01-08-My-second-year-on-YouTube' %})) I wrote blog posts where I reflected on what I did right, wrong and what I would improve. This year is no exception, so here we go!

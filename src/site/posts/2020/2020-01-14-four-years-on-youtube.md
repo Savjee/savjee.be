@@ -2,7 +2,7 @@
 layout: post
 title: "Retrospective: 4 years on YouTube"
 quote: 
-tags: [YouTube channel]
+tags: ["Yearly review", "YouTube channel"]
 toc_enabled: true
 ---
 

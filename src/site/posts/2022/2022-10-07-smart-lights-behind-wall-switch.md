@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Smart lights behind a wall switch (Shelly + ESPHome)"
-tags_: ["Home Assistant", "ESPHome", "Shelly"]
+tags: ["Home Assistant", "ESPHome", "Shelly"]
 quote:
 thumbnail: /uploads/2022-10-smart-lights-behind-wall-switch/thumb_timeline.jpg
 upload_directory: /uploads/2022-10-smart-lights-behind-wall-switch

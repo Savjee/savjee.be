@@ -3,6 +3,8 @@ const markdownIt = require("markdown-it");
 const pluginTOC = require('eleventy-plugin-toc')
 
 module.exports = function (config) {
+
+    // ----------------------- Plugins -----------------------
     config.addPlugin(syntaxHighlight);
     config.addPlugin(pluginTOC, {
         wrapper: "div",
@@ -10,37 +12,39 @@ module.exports = function (config) {
         wrapperClass: "toc-list",
     });
 
-    // Savjee
-    config.addLayoutAlias("default", "layouts/default.html");
-    config.addLayoutAlias("post", "layouts/post.html");
-    config.addLayoutAlias("video", "layouts/video.html");
-    config.addLayoutAlias("page", "layouts/page.html");
-    config.addLayoutAlias("course", "layouts/course.html");
-    config.addLayoutAlias("newsletter", "layouts/newsletter.html");
 
-    config.addFilter("md", function (content = "") {
-        return markdownIt({ html: true }).render(content);
+    // ----------------------- Layouts -----------------------
+    [
+        "default", "post", "video", "page", "course", "newsletter",
+    ].forEach((layoutName) => {
+        config.addLayoutAlias(layoutName, `layouts/${layoutName}.html`);
     });
 
-    // Add custom filters
+
+    // ----------------------- Custom filters -----------------------
     [
         "getVideosInSeries", "getFeatureable", "indexOf", "getRelated",
-        "htmlImageSize", "groupByYear",
+        "htmlImageSize", "groupByYear", "md",
     ].forEach((filterName) => {
         config.addLiquidFilter(filterName, 
             require('./src/utils/filters/' + filterName));
     });
     
 
+    // ----------------------- Collections -----------------------
+    config.addCollection('courses', (collectionApi) => {
+        return collectionApi.getFilteredByGlob('src/site/courses/**/*.md');
+     });
+
+    config.addCollection('newsletter', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('src/site/newsletter/**/*.md');
+    });
+
     config.addCollection('posts', (collectionApi) => {
         return collectionApi.getFilteredByGlob('src/site/posts/**/*.md')
             .sort(function (a, b) {
                 return b.date - a.date;
             });
-    });
-
-    config.addCollection('courses', (collectionApi) => {
-       return collectionApi.getFilteredByGlob('src/site/courses/**/*.md');
     });
 
     config.addCollection('videos', (collectionApi) => {
@@ -54,31 +58,33 @@ module.exports = function (config) {
             });
     });
 
-    config.addCollection('newsletter', (collectionApi) => {
-       return collectionApi.getFilteredByGlob('src/site/newsletter/**/*.md');
-    });
 
+    // ----------------------- Custom shortcodes -----------------------
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
     config.addPairedShortcode("xd_img", require('./src/utils/shortcode/xd_img'));
 
-    config.addPassthroughCopy("src/site/assets");
 
-    // Ignore all files starting with underscore (private files such as
-    // thumbnail designs)
-    config.addPassthroughCopy("src/site/uploads/**/(?!_)*");
+    // ----------------------- File copies -----------------------
+    [
+        "src/site/assets",
+        "src/site/robots.txt",
+       
+        // Ignore all files starting with underscore (private files such as
+        // thumbnail designs)
+        "src/site/uploads/**/(?!_)*",
 
-    // Copy all resource files for courses (except the markdown files themselves)
-    config.addPassthroughCopy("src/site/courses/**/*[^md]");
-    config.addPassthroughCopy("src/site/projects/**/*[^md]");
-    config.addPassthroughCopy("src/site/videos/**/*[^md]");
-    config.addPassthroughCopy("src/site/robots.txt");
+        // Copy all resource files (except the markdown files themselves)
+        "src/site/courses/**/*[^md]",
+        "src/site/projects/**/*[^md]",
+        "src/site/videos/**/*[^md]",
+    ].forEach(path => config.addPassthroughCopy(path));
+
     
     // Extract excerpt for each post containing the <!--more--> tag
     // Used to construct SEO <meta> tags in <head>
     config.setFrontMatterParsingOptions({
         excerpt: true,
-        // Optional, default is "---"
         excerpt_separator: "<!--more-->"
     });
 
@@ -119,14 +125,7 @@ module.exports = function (config) {
         });
 
     config.setLibrary("md", markdownLib);
-
-    // Custom "md" tag to render Markdown. This is used for the page excerpt,
-    // which sometimes contains a markdown link.
-    // Markdown excerpt > HTML > liquid strip_html filter
-    config.addFilter("md", function (content = "") {
-        return markdownIt({ html: true }).render(content);
-    });
-
+    
     return {
         dir: { input: 'src/site', output: '_site', data: '_data' },
     };

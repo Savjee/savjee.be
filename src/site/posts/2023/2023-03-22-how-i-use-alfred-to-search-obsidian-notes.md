@@ -68,7 +68,7 @@ with subprocess.Popen(COMMAND, stdout=subprocess.PIPE, text=True) as proc:
         results.append({
             "title": os.path.basename(path),
             "subtitle": path.replace(VAULT_PATH, ""),
-            "arg": path,
+            "arg": path.replace("\n", ""),
             "type": "file:skipcheck"
         })
 

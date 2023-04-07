@@ -1,6 +1,6 @@
 User-agent: *
 Disallow:
 
-sitemap: https://savjee.be/sitemap-blogposts.txt
-sitemap: https://savjee.be/sitemap-videos.txt
-sitemap: https://savjee.be/rss.xml
+sitemap: https://simplyexplained.com/sitemap-blogposts.txt
+sitemap: https://simplyexplained.com/sitemap-videos.txt
+sitemap: https://simplyexplained.com/rss.xml

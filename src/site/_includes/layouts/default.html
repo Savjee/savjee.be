@@ -58,55 +58,54 @@
     {% endif %}
 </head>
 
-<body {% if toc_enabled %}class="toc_enabled"{% endif %}>
+<body class="border-t-2 border-savjeered">
 
-<header class="site-header">
-    <div class="container">
-        <div class="logo flex-vcenter">
+<header class="py-6">
+    <!-- TODO: Fix the container width. Should match the design. -->
+    <div class="container mx-auto flex flex-row items-center w-9/12">
+        <div class="">
             <a href="/">
-                <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="60" height="60">
+                <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="80" height="80">
             </a>
         </div>
 
-        <div class="brand-name flex-vcenter">
-            <a href="/" title="Savjee.be" rel="home">
-                <span>Savjee</span><br>
-                <span class="font-normal">Simply Explained</span>
+        <div class="">
+            <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium">
+                Simply<br>Explained
             </a>
         </div>
 
-        <nav class="flex-vcenter">
-            <div class="menu-main-nav-container">
-                <ul id="menu-main-nav" class="menu">
-                    <li>
-                        <a href="/blog/" {% if page.url contains "/blog/" -%}class="active"{%endif%}>
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/videos/" {% if page.url contains "/videos/" -%}class="active"{%endif%}>
-                            Videos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/courses/" {% if page.url contains "/courses/" -%}class="active"{%endif%}>
-                            Courses
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/newsletter/" {% if page.url contains "/newsletter/" -%}class="active"{%endif%}>
-                            Newsletter
-                        </a>
-                    </li>
-                    <!-- <li><a href="/about.html">About Me</a></li> -->
-                </ul>
-            </div>
+        <nav class="grow">
+            <ul class="flex flex-row justify-end gap-10">
+                <li>
+                    <a href="/videos/" class="text-savjeered font-bold no-underline" {% if page.url contains "/videos/" -%}class="active"{%endif%}>
+                        Videos
+                    </a>
+                </li>
+                <li>
+                    <a href="/newsletter/" class="text-savjeered font-bold no-underline" {% if page.url contains "/newsletter/" -%}class="active"{%endif%}>
+                        Newsletter
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog/" class="text-savjeered font-bold no-underline" {% if page.url contains "/blog/" -%}class="active"{%endif%}>
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="/courses/" class="text-savjeered font-bold no-underline" {% if page.url contains "/courses/" -%}class="active"{%endif%}>
+                        Courses
+                    </a>
+                </li>
+            </ul>
         </nav>
     </div>
 </header>
     
-    
-
+    <div class="container mx-auto">
+        {{ content }}
+    </div>
+{% comment %}
 {% unless fullwidth %}
 <div class="container {% if wider %}wider{% endif %}">
 {% endunless %}
@@ -116,6 +115,7 @@
 {% unless fullwidth %}
 </div>
 {% endunless %}
+{% endcomment %}
 
 <footer>
     <p>Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper</p>
@@ -125,7 +125,7 @@
         <a href="/atom.xml">RSS</a> - 
         <a href="https://github.com/Savjee" rel="noopener" target="_blank">Github</a> -
         <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank">Twitter</a> -
-        <a href="https://simplyexplained.com/" rel="noopener" target="_blank">YouTube</a>
+        <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" rel="noopener" target="_blank">YouTube</a>
     </p>
 </footer>
 

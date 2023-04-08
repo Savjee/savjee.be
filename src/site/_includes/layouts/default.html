@@ -9,7 +9,7 @@
         {% assign title = renderData.title %}
     {%endif%}
 
-    <title>{{ title | escape_once }} | Savjee.be</title>
+    <title>{{ title | escape_once }} | Simply Explained.be</title>
 
     {% assign seo_description_tmp = quote | default: page.excerpt %}
     {% assign seo_description_tmp2 = seo_description_tmp | md | strip_html %}
@@ -17,7 +17,7 @@
     {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
     {% assign seo_description = seo_description_tmp4 | escape %}
 
-    <link rel="alternate" type="application/rss+xml" title="savjee.be Feed" href="https://savjee.be/atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="https://simplyexplained.com/atom.xml">
     <meta name="description" content="{{ seo_description }}">
 
     {% if tags %}
@@ -28,31 +28,38 @@
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
 
-    <link rel="preload" href="/assets/css/bundle.min.css" as="stylesheet" />
-    <link rel="preload" href="/assets/main.js" as="script" />
+    <!-- TODO: self host -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/css/bundle.min.css">
+    <!-- TODO: Re-enable these -->
+    <!-- <link rel="preload" href="/assets/css/bundle.min.css" as="stylesheet" /> -->
+    <!-- <link rel="preload" href="/assets/main.js" as="script" /> -->
+
+    <!-- <link rel="stylesheet" href="/assets/css/bundle.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/main.css">
     <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d">
 
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
-    <meta name="twitter:url" content="https://savjee.be{{page.url}}">
+    <meta name="twitter:url" content="https://simplyexplained.com{{page.url}}">
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{ seo_description }}">
 
     <meta property="og:title" content="{{title}}">
-    <meta property="og:site_name" content="Savjee.be">
-    <meta property="og:url" content="https://savjee.be{{page.url}}">
+    <meta property="og:site_name" content="Simply Explained">
+    <meta property="og:url" content="https://simplyexplained.com{{page.url}}">
     <meta property="og:description" content="{{ seo_description }}">
     <meta property="og:type" content="article">
     <meta property="fb:app_id" content="805673586165209">
 
-    <link rel="canonical" href="https://savjee.be{{ page.url | replace:"index.html",""}}">
+    <link rel="canonical" href="https://simplyexplained.com{{ page.url | replace:"index.html",""}}">
 
     {% if thumbnail %}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image:src" content="https://savjee.be{{upload_directory}}/thumb_twitter.jpg">
-        <meta property="og:image" content="https://savjee.be{{upload_directory}}/thumb_facebook.jpg">
+        <meta name="twitter:image:src" content="https://simplyexplained.com{{upload_directory}}/thumb_twitter.jpg">
+        <meta property="og:image" content="https://simplyexplained.com{{upload_directory}}/thumb_facebook.jpg">
     {% else %}
         <meta name="twitter:card" content="summary">
     {% endif %}
@@ -60,9 +67,9 @@
 
 <body class="border-t-2 border-savjeered">
 
-<header class="py-6">
+<header class="py-6 border-b border-savjeelightgrey">
     <!-- TODO: Fix the container width. Should match the design. -->
-    <div class="container mx-auto flex flex-row items-center w-9/12">
+    <div class="mx-auto flex flex-row items-center max-w-5xl">
         <div class="">
             <a href="/">
                 <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="80" height="80">
@@ -102,9 +109,11 @@
     </div>
 </header>
     
-    <div class="container mx-auto">
-        {{ content }}
-    </div>
+<div class="mx-auto max-w-5xl">
+    {{ content }}
+</div>
+
+
 {% comment %}
 {% unless fullwidth %}
 <div class="container {% if wider %}wider{% endif %}">

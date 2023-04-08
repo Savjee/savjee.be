@@ -1,17 +1,87 @@
 @tailwind base;
 
 @layer base {
+
+    /* Links in headers should not have style*/
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+      @apply text-savjeeblack font-bold no-underline
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-bold
+    }
+
     h1 {
-      @apply text-2xl;
+      /* TODO: this is actually for page titles, should not be the default! */
+      @apply text-4xl mt-14 pb-8
     }
+
+    article img{
+      @apply py-8 mx-auto max-w-full
+    }
+
+    article ul{
+      @apply list-disc list-outside
+    }
+
+    article ol{
+      @apply list-decimal list-outside
+    }
+
+    article h1{
+      @apply text-2xl
+    }
+
+    /* ---- For the small underline beneath H1 and main navigation items ---- */
+    article.page h1{
+      @apply text-4xl
+    }
+
+    article.page h1 a{
+      @apply relative
+    }
+    
+    article.page h1 a:after{
+      transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      content: "";
+      @apply absolute h-2 w-20 left-0 -bottom-3  bg-savjeeblue
+    }
+
     h2 {
-      @apply text-xl;
+      @apply text-xl pt-8;
     }
+    
     h3 {
-      @apply text-lg;
+      @apply text-lg pt-6;
     }
+
+    h4{
+      @apply pt-4
+    }
+    
     a {
-      @apply text-savjeered underline font-semibold;
+      @apply text-savjeered font-semibold underline;
+    }
+
+    a:hover{
+      @apply no-underline;
+    }
+
+    p{
+      @apply text-base pb-4
+    }
+
+    pre{
+      @apply bg-savjeelightgrey p-4 my-4 border border-savjeeblack text-sm
+      
+    }
+
+    pre, code{
+      @apply overflow-x-auto whitespace-pre
+    }
+
+    article p code{
+      @apply bg-savjeelightgrey py-0.5 px-1 border border-savjeeblack text-sm
     }
 }
 

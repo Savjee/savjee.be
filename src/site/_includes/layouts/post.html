@@ -2,24 +2,24 @@
 layout: default
 ---
 
-<article class='post'>
-    <h1 class='post-title'>
+<article class="max-w-3xl mx-auto">
+    <h1>
         <a href="{{ page.url }}">{{ title }}</a>
     </h1>
 
+    {% comment %}
     {% if toc_enabled == true %}
         <aside class="toc">
             <h1>Contents</h1>
             {{ content | toc }}
         </aside>
     {% endif %}
+    {% endcomment %}
 
-    <div class='post-description'>
-        {{ content }}
-    </div>
+    {{ content }}
 </article>
 
-<p class="text-center">
+<p class="">
     <small>Posted on
         <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
     </small>

@@ -16,6 +16,21 @@
       @apply text-4xl mt-14 pb-8
     }
 
+    nav li a{
+      @apply relative
+    }
+
+    nav li a:after{
+      content: '';
+      transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      @apply absolute -bottom-2 left-0 h-1 w-0 bg-savjeered
+    }
+
+    nav li a:hover:after, 
+    nav li a.active:after{
+      @apply w-5
+    }
+
     article img{
       @apply py-8 mx-auto max-w-full
     }
@@ -48,15 +63,41 @@
     }
 
     h2 {
-      @apply text-xl pt-8;
+      @apply text-3xl pt-8;
     }
     
     h3 {
-      @apply text-lg pt-6;
+      @apply text-2xl pt-6;
     }
 
     h4{
-      @apply pt-4
+      @apply text-xl pt-4
+    }
+
+    button, 
+    button[type=submit],
+    button.secondary:hover{
+      @apply bg-savjeered text-savjeewhite border border-savjeered py-2 px-6 rounded-md font-bold
+    }
+
+    button.secondary,
+    button:hover, 
+    button[type=submit]:hover {
+      @apply bg-savjeewhite text-savjeered border border-savjeered
+    }
+
+    input, 
+    input[type=text]{
+       @apply border border-savjeelightgrey4 py-2.5 px-4 outline-none
+    }
+
+    input:focus, 
+    input:active{
+      @apply border-savjeered outline-none
+    }
+
+    hr{
+      @apply border-savjeelightgrey4
     }
     
     a {
@@ -71,12 +112,14 @@
       @apply text-base pb-4
     }
 
-    pre{
+    pre,
+    pre[class*=language-]{
       @apply bg-savjeelightgrey p-4 my-4 border border-savjeeblack text-sm
       
     }
 
-    pre, code{
+    pre,
+    code{
       @apply overflow-x-auto whitespace-pre
     }
 

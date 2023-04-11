@@ -85,22 +85,22 @@
         <nav class="grow">
             <ul class="flex flex-row justify-end gap-10">
                 <li>
-                    <a href="/videos/" class="text-savjeered font-bold no-underline" {% if page.url contains "/videos/" -%}class="active"{%endif%}>
+                    <a href="/videos/" class="text-savjeered font-bold no-underline {% if page.url contains "/videos/" -%}active{%endif%}">
                         Videos
                     </a>
                 </li>
                 <li>
-                    <a href="/newsletter/" class="text-savjeered font-bold no-underline" {% if page.url contains "/newsletter/" -%}class="active"{%endif%}>
+                    <a href="/newsletter/" class="text-savjeered font-bold no-underline {% if page.url contains "/newsletter/" -%}active{%endif%}">
                         Newsletter
                     </a>
                 </li>
                 <li>
-                    <a href="/blog/" class="text-savjeered font-bold no-underline" {% if page.url contains "/blog/" -%}class="active"{%endif%}>
+                    <a href="/blog/" class="text-savjeered font-bold no-underline {% if page.url contains "/blog/" -%}active{%endif%}">
                         Blog
                     </a>
                 </li>
                 <li>
-                    <a href="/courses/" class="text-savjeered font-bold no-underline" {% if page.url contains "/courses/" -%}class="active"{%endif%}>
+                    <a href="/courses/" class="text-savjeered font-bold no-underline {% if page.url contains "/courses/" -%}active{%endif%}">
                         Courses
                     </a>
                 </li>
@@ -126,16 +126,69 @@
 {% endunless %}
 {% endcomment %}
 
-<footer>
-    <p>Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper</p>
+<footer class="mt-20 border-t border-savjeelightgrey text-sm py-10">
+    <div class="mx-auto max-w-5xl">
 
-    <p>
+        <div class="flex flex-row">
+            <div class="">
+                <div class="mx-auto flex flex-row items-center max-w-5xl">
+                    <a href="/">
+                        <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="40" height="40">
+                    </a>
+            
+                    <div class="text-sm">
+                        <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium">
+                            Simply<br>Explained
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 text-center">
+                <p>
+                    <a href="/videos" class="no-underline text-sm pr-8">Videos</a>
+                    <a href="/newsletter" class="no-underline text-sm pr-8">Newsletter</a>
+                    <a href="/blog" class="no-underline text-sm pr-8">Blog</a>
+                    <a href="/courses" class="no-underline text-sm">Courses</a>
+                </p>
+            </div>
+            <div>
+                <p class="uppercase font-semibold text-sm text-savjeeblue">Follow me</p>
+                <div class="flex items-center">
+                    <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" class="pr-4" rel="noopener" target="_blank">
+                        {% include "icons/youtube.html" %}
+                    </a>
+                    <a href="https://twitter.com/Savjee/" class="pr-4" rel="noopener" target="_blank">
+                        {% include "icons/twitter.html" %}
+                    </a>
+                    <a href="https://www.instagram.com/simplyexplained_com/" class="pr-4" rel="noopener" target="_blank">
+                        {% include "icons/instagram.html" %}
+                    </a>
+                    <a href="https://www.tiktok.com/@simplyexplained_com?lang=en" class="pr-4" rel="noopener" target="_blank">
+                        {% include "icons/tiktok.html" %}
+                    </a>
+                    <a href="https://github.com/Savjee" class="pr-4" rel="noopener" target="_blank">
+                        {% include "icons/github.html" %}
+                    </a>
+                    <a href="/atom.xml" rel="noopener" target="_blank">
+                        {% include "icons/rss.html" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-10">
+            <hr>
+            <p class="pt-5 text-sm text-savjeeblue">Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- <p>
         <a href="/about">About</a> - 
         <a href="/atom.xml">RSS</a> - 
         <a href="https://github.com/Savjee" rel="noopener" target="_blank">Github</a> -
         <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank">Twitter</a> -
         <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" rel="noopener" target="_blank">YouTube</a>
-    </p>
+    </p> -->
 </footer>
 
 <script defer src="/assets/main.js"></script>

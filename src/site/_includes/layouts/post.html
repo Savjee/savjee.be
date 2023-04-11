@@ -1,13 +1,15 @@
 ---
-layout: default
+layout: narrow 
 ---
 
-<article class="max-w-3xl mx-auto">
+<article>
     <h1>
         <a href="{{ page.url }}">{{ title }}</a>
     </h1>
 
+
     {% comment %}
+    TODO: re-enable ToC?
     {% if toc_enabled == true %}
         <aside class="toc">
             <h1>Contents</h1>
@@ -20,9 +22,8 @@ layout: default
 </article>
 
 <p class="">
-    <small>Posted on
-        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
-    </small>
+    Posted on
+    <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
 </p>
 
 {% include "components/share-buttons.html" %}
@@ -43,8 +44,6 @@ layout: default
 {% endif %}
 
 {% include "components/newsletter-box.html" %}
-
-<hr>
 
 {% include "components/disqus-comments.html" %}
 

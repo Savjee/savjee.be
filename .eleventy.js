@@ -16,7 +16,7 @@ module.exports = function (config) {
 
     // ----------------------- Layouts -----------------------
     [
-        "default", "post", "video", "page", "course", "newsletter",
+        "default", "narrow", "post", "video", "page", "course", "newsletter",
     ].forEach((layoutName) => {
         config.addLayoutAlias(layoutName, `layouts/${layoutName}.html`);
     });

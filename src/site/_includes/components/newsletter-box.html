@@ -1,17 +1,18 @@
-<div class="box text-center nwsltr-sub">
-	<h2>💌 Subscribe to my newsletter</h2>
+<div class="bg-savjeelightgrey2 p-6">
+	<h4 class="p-0">Subscribe to my newsletter</h4>
+	{%- unless noDescription -%}
+	<p>
+		Monthly newsletter with cool stuff I found on the internet (related to science, technology, biology, and other nerdy things)!
+		<a href="/newsletter">Check out past editions</a>.
+	</p>
+	{%- endunless -%}
+
 	<div>
 		<form action="/newsletter/signup" method="post">
-			<div>
-				<input placeholder="Your email address" type="email" name="email" required>
+			<div class="flex">
+				<input placeholder="Your email address" type="email" name="email" class="flex-1 mr-3" required>
 				<button type="submit">Subscribe</button>
 			</div>
 		</form>
 	</div>
-	{%- unless noDescription -%}
-	<small>
-		Monthly newsletter with cool stuff I found on the internet<br/>(related to science, technology, biology, and other nerdy things)!<br/>
-		<a href="/newsletter">Check out past editions.</a>
-	</small>
-	{%- endunless -%}
 </div>

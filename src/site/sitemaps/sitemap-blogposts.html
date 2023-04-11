@@ -7,5 +7,5 @@ permalink: sitemap-blogposts.txt
 
     This was done so there is exactly 1 URL per line. Adding
     more linebreaks will result in a file with empty lines.
-{% endcomment %}{% for post in collections.posts %}https://simplyexplained.com{{ post.url }}
+{% endcomment %}{% for post in collections.posts %}{% baseUrl %}{{ post.url }}
 {% endfor %}

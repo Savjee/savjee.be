@@ -17,7 +17,7 @@
     {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
     {% assign seo_description = seo_description_tmp4 | escape %}
 
-    <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="https://simplyexplained.com/atom.xml">
+    <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="{% baseUrl %}/atom.xml">
     <meta name="description" content="{{ seo_description }}">
 
     {% if tags %}
@@ -34,32 +34,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <!-- TODO: Re-enable these -->
-    <!-- <link rel="preload" href="/assets/css/bundle.min.css" as="stylesheet" /> -->
+    <link rel="preload" href="/assets/css/bundle.min.css" as="stylesheet" />
     <!-- <link rel="preload" href="/assets/main.js" as="script" /> -->
 
-    <!-- <link rel="stylesheet" href="/assets/css/bundle.min.css"> -->
+    <link rel="stylesheet" href="/assets/css/bundle.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d">
 
     <meta name="twitter:site" content="@Savjee">
     <meta name="twitter:creator" content="@Savjee">
-    <meta name="twitter:url" content="https://simplyexplained.com{{page.url}}">
+    <meta name="twitter:url" content="{% baseUrl %}{{page.url}}">
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{ seo_description }}">
 
     <meta property="og:title" content="{{title}}">
     <meta property="og:site_name" content="Simply Explained">
-    <meta property="og:url" content="https://simplyexplained.com{{page.url}}">
+    <meta property="og:url" content="{% baseUrl %}{{page.url}}">
     <meta property="og:description" content="{{ seo_description }}">
     <meta property="og:type" content="article">
     <meta property="fb:app_id" content="805673586165209">
 
-    <link rel="canonical" href="https://simplyexplained.com{{ page.url | replace:"index.html",""}}">
+    <link rel="canonical" href="{% baseUrl %}{{ page.url | replace:"index.html",""}}">
 
     {% if thumbnail %}
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image:src" content="https://simplyexplained.com{{upload_directory}}/thumb_twitter.jpg">
-        <meta property="og:image" content="https://simplyexplained.com{{upload_directory}}/thumb_facebook.jpg">
+        <meta name="twitter:image:src" content="{% baseUrl %}{{upload_directory}}/thumb_twitter.jpg">
+        <meta property="og:image" content="{% baseUrl %}{{upload_directory}}/thumb_facebook.jpg">
     {% else %}
         <meta name="twitter:card" content="summary">
     {% endif %}

@@ -55,7 +55,7 @@ layout: narrow
         "headline": "{{ title }}",
         {% if thumbnail %}
         "image": [
-            "https://simplyexplained.com{{upload_directory}}/thumb_master.jpg"
+            "{% baseUrl %}{{upload_directory}}/thumb_master.jpg"
         ],
         {% endif %}
         "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
@@ -68,7 +68,7 @@ layout: narrow
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Blog",
-                "item": "https://simplyexplained.com/blog/"
+                "item": "{% baseUrl %}/blog/"
             },
             {
                 "@type": "ListItem",

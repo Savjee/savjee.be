@@ -27,7 +27,6 @@
     "@babel/preset-env": "^7.20.2",
     "@types/sharp": "^0.31.1",
     "babel-loader": "^9.1.2",
-    "bootstrap": "^4.6.0",
     "eleventy-plugin-bibtex": "^0.1.1",
     "fast-glob": "^3.2.12",
     "file-loader": "^6.2.0",

@@ -1,24 +1,24 @@
 // TODO: loading bootstrap first isn't ideal.
 //       I do this because some styles are overwritten.
-@import '~bootstrap/dist/css/bootstrap-grid.min';
+// @import '~bootstrap/dist/css/bootstrap-grid.min';
 
-@import 'savjee';
-@import 'savjee.typography';
-@import 'savjee.helpers';
-@import 'savjee.header';
-@import 'savjee.videos';
-@import 'savjee.courses';
-@import 'savjee.home';
-@import 'savjee.bookmarkbox';
-@import 'savjee.box';
-@import 'savjee.newsletterbox';
-@import 'savjee.comments';
-@import 'timeline';
-@import 'social-buttons';
-@import 'savjee.table-of-contents';
+// @import 'savjee';
+// @import 'savjee.typography';
+// @import 'savjee.helpers';
+// @import 'savjee.header';
+// @import 'savjee.videos';
+// @import 'savjee.courses';
+// @import 'savjee.home';
+// @import 'savjee.bookmarkbox';
+// @import 'savjee.box';
+// @import 'savjee.newsletterbox';
+// @import 'savjee.comments';
+// @import 'timeline';
+// @import 'social-buttons';
+// @import 'savjee.table-of-contents';
 
-// External dependencies
-@import 'lib/pure-tables-min';
+// // External dependencies
+// @import 'lib/pure-tables-min';
 
 // Prism code highlighting themes
 @import '~prism-themes/themes/prism-coldark-cold';

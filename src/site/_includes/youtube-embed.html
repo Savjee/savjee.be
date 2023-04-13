@@ -1,14 +1,13 @@
 <div class="videowrapper">
   {% comment %}
     The inline CSS has this hash:
-    'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs='
     Remember to change it in the CSP when changing the style.
   {% endcomment %}
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}?showinfo=0"
-    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/{{videoId}}?autoplay=1><picture><source srcset='https://i.ytimg.com/vi_webp/{{videoId}}/maxresdefault.webp' type='image/webp'><img src='https://img.youtube.com/vi/{{videoId}}/maxresdefault.jpg'></picture><span>&#x25B6;</span></a>"
+    
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen class="mx-auto absolute top-0 left-0 w-full h-full"
+    allowfullscreen class="w-full h-auto aspect-video"
     title="Embedded YouTube video"
     loading="lazy"></iframe>
 </div>

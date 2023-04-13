@@ -1,16 +1,9 @@
 ---
 layout: default
-fullwidth: true
 ---
 
-<article class="post">
-    <div class="videobackdrop">
-        <div class="container video">
-            <div class="videowrapper">
-                {% include "youtube-embed.html", videoId:videoId %}
-            </div>
-        </div>
-    </div>
+<article>
+    {% include "youtube-embed.html", videoId:videoId %}
     
     <div class="videoNavigation">
         <div class="container">
@@ -52,19 +45,15 @@ fullwidth: true
         </div>
     </div>
 
-    <div class="container">
-        <h1 class="post-title">
-            <a href="{{ page.url }}">{{ title | escape_once }}</a>
-        </h1>
+    <h1>
+        <a href="{{ page.url }}">{{ title | escape_once }}</a>
+    </h1>
 
-        <div class="post-description">
-            {{ content }}
-        </div>
-
-        <hr>
-            {% include "components/newsletter-box.html" %}
-        <hr>
+    <div>
+        {{ content }}
     </div>
+
+    {% include "components/newsletter-box.html" %}
 </article>
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}

@@ -4,12 +4,11 @@ layout: narrow
 
 <article>
     <h1>
-        <a href="{{ page.url }}">{{ title }}</a>
+        {{ title }}
     </h1>
 
-
     {% comment %}
-    TODO: re-enable ToC?
+    TODO: re-enable
     {% if toc_enabled == true %}
         <aside class="toc">
             <h1>Contents</h1>
@@ -40,7 +39,6 @@ layout: narrow
 		</ul>
 	</div>
     
-    <hr>
 {% endif %}
 
 {% include "components/newsletter-box.html" %}

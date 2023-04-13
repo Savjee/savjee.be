@@ -3,7 +3,7 @@ layout: page
 title: "Newsletter"
 ---
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-2 gap-8 mb-8">
     <p>Monthly newsletter with the latest Simply Explained content and other 
         cool stuff I found on the Internet. Check out the past issues here, 
         and signup if you want your curiosity tickled every month ;)</p>
@@ -16,11 +16,11 @@ title: "Newsletter"
 
 {% assign newslettersByYear = collections.newsletter | groupByYear %}
 {% for yearObj in newslettersByYear reversed %}
-    <h4>{{ yearObj.year }}</h4>
+    <h3 class="">{{ yearObj.year }}</h3>
 
     {% for newsletter in yearObj.posts reversed %}
-        <p>
-            <a href="{{newsletter.url}}" class="text-lg no-underline">{{newsletter.data.title}}</a><br>
+        <p class="py-3 leading-tight">
+            <a href="{{newsletter.url}}" class="no-underline hover:underline">{{newsletter.data.title}}</a><br>
             <span class="text-savjeelightgrey3 text-sm">Sent on {{newsletter.date | date: "%B %e, %Y" }}</span>
         </p>
         <hr>

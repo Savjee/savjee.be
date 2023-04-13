@@ -12,7 +12,7 @@ I'm a huge fan of Home Assistant to automate various things around the house. I 
 
 That's quite different from my setup. So, here's how I approach home automation.
 
-<!-- more-->
+<!--more-->
 
 _Disclaimer: this is my personal opinion. Everyone has different tastes, and Home Assistant can cater to all. Also, note that these concepts apply to other home automation software too._
 

@@ -23,14 +23,13 @@ module.exports = {
       'savjeelightgrey4': '#CCCCCC',
     },
     fontSize: {
-      sm: ['14px', '20px'],
-      base: ['16px', '32px'],
-      lg: ['20px', '28px'],
-      xl: ['24px', '32px'],
-      '4xl': ['60px', '84px'], // H1
+      '4xl': ['60px', '84px'], // Page title
       '3xl': ['48px', '67px'], // H2
       '2xl': ['36px', '44px'], // H3
-      'xl': ['24px', '44px'], // H4
+      'xl':  ['28px', '44px'], // H4
+      'lg':  ['24px', '28px'],
+      'base':['18px', '36px'],
+      'sm':  ['14px', '20px'],
     }
   },
   plugins: [],

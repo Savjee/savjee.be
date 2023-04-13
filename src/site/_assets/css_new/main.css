@@ -2,20 +2,33 @@
 
 @layer base {
 
-    /* Links in headers should not have style*/
-    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-      @apply text-savjeeblack font-bold no-underline
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      @apply font-bold
+    /* -------------------- Typography -------------------- */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      @apply text-savjeeblue font-bold no-underline font-sans
     }
 
     h1 {
-      /* TODO: this is actually for page titles, should not be the default! */
-      @apply text-4xl mt-14 pb-8
+      @apply text-2xl mt-14 pb-8
     }
 
+    h2 {
+      @apply text-xl pt-10;
+    }
+    
+    h3 {
+      @apply text-lg pt-8 font-semibold;
+    }
+
+    h4{
+      @apply text-base pt-6 font-semibold
+    }
+
+    /* -------------------- Main navigation -------------------- */
     nav li a{
       @apply relative
     }
@@ -31,47 +44,58 @@
       @apply w-5
     }
 
+    /* -------------------- Article content -------------------- */
     article img{
       @apply py-8 mx-auto max-w-full
     }
 
+    article ul,
+    article ol{
+      @apply list-outside ml-8 my-6 text-base
+    }
+
     article ul{
-      @apply list-disc list-outside
+      @apply list-disc
     }
 
     article ol{
-      @apply list-decimal list-outside
+      @apply list-decimal
     }
 
-    article h1{
-      @apply text-2xl
+    article li + article li{
+      @apply pt-6
+    }
+
+    a {
+      @apply text-savjeered font-semibold underline;
+    }
+
+    a:hover{
+      @apply no-underline;
+    }
+
+    p{
+      @apply text-base
+    }
+
+    p+p{
+      @apply pt-4
+    }
+
+    blockquote{
+      @apply bg-savjeelightgrey border-l-4 border-savjeered p-4 my-4
     }
 
     /* ---- For the small underline beneath H1 and main navigation items ---- */
-    article.page h1{
-      @apply text-4xl
-    }
-
-    article.page h1 a{
-      @apply relative
+    h1.bigtitle,
+    h1.bigtitle a{
+      @apply relative text-savjeeblue no-underline text-4xl font-bold
     }
     
-    article.page h1 a:after{
+    h1.bigtitle a:after{
       transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
       content: "";
       @apply absolute h-2 w-20 left-0 -bottom-3  bg-savjeeblue
-    }
-
-    h2 {
-      @apply text-3xl pt-8;
-    }
-    
-    h3 {
-      @apply text-2xl pt-6;
-    }
-
-    h4{
-      @apply text-xl pt-4
     }
 
     button, 
@@ -99,22 +123,10 @@
     hr{
       @apply border-savjeelightgrey4
     }
-    
-    a {
-      @apply text-savjeered font-semibold underline;
-    }
-
-    a:hover{
-      @apply no-underline;
-    }
-
-    p{
-      @apply text-base pb-4
-    }
 
     pre,
     pre[class*=language-]{
-      @apply bg-savjeelightgrey p-4 my-4 border border-savjeeblack text-sm
+      @apply bg-savjeelightgrey2 p-4 my-4 border border-savjeelightgrey4 text-sm
       
     }
 

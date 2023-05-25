@@ -1,13 +1,7 @@
 <div class="videowrapper">
-  {% comment %}
-    The inline CSS has this hash:
-    Remember to change it in the CSP when changing the style.
-  {% endcomment %}
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}?showinfo=0"
-    
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen class="w-full h-auto aspect-video"
-    title="Embedded YouTube video"
-    loading="lazy"></iframe>
+  <lite-youtube 
+    videoid="{{ videoId }}" 
+    playlabel="{{ videoDescription | default: 'Play embedded YouTube video of Simply Explained' }}"
+    class="max-w-none"
+    ></lite-youtube>
 </div>

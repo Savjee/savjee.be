@@ -1,3 +1,5 @@
+@import "../../../../node_modules/lite-youtube-embed/src/lite-yt-embed.css";
+
 @tailwind base;
 
 @layer base {

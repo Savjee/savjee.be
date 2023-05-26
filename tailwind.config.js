@@ -27,9 +27,14 @@ module.exports = {
       '3xl': ['48px', '67px'], // H2
       '2xl': ['36px', '44px'], // H3
       'xl':  ['28px', '44px'], // H4
-      'lg':  ['24px', '28px'],
+      'lg':  ['20px', '24px'],
       'base':['18px', '36px'],
       'sm':  ['14px', '20px'],
+    },
+    extend: {
+      maxWidth: {
+        '320': '320px'
+      }
     }
   },
   plugins: [],

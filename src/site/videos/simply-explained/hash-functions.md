@@ -6,6 +6,7 @@ videoId: cczlpiiu42M
 order: 13
 series: Simply explained
 uploadDate: 2018-04-03
+duration_seconds: 448
 ---
 
 You might have found out that [there is a website that checks if your online accounts have been compromised by hackers](https://haveibeenpwned.com). So you enter in your email address and OH NO… You have been pwned! Hackers now know the passwords that you used on all these services…

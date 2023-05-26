@@ -6,6 +6,7 @@ videoId: MTfwhbfMnNc
 order: 31
 series: Simply explained
 uploadDate: 2020-04-19
+duration_seconds: 282
 ---
 
 When efficiency increases, consumption drops, right? Errr... No.. So far, increased efficiency has mostly lead to increased consumption.  

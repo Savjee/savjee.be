@@ -11,7 +11,7 @@ quote: Overview of blog posts
 {% for post in collections.posts limit: 20 %}
     <div class="flex items-center mb-8 pb-8 border-b border-savjeelightgrey">
         {% if post.data.thumbnail %}
-        <div class="pr-8">
+        <div class="max-w-320 w-full pr-8">
             <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
                 {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
                 {% xd_img %}
@@ -27,42 +27,10 @@ quote: Overview of blog posts
             <p class="text-sm p-0">
                 {{  post.data.page.excerpt | md | strip_html | truncate: 200 }}
             </p>
+
+            <div class="text-sm text-savjeelightgrey3">
+                {% include "components/tags.html" tags: post.data.tags %}
+            </div>
         </div>
     </div>
 {% endfor %}
-
-<div class="md:max-w-3xl mx-auto">
-    
-    {% for yearObj in groupedPosts %}
-        <div class="container2">
-            <div class="page-header text-center">
-                <h1 class="text-center">{{ yearObj.year }}</h1>
-            </div>
-            <ul class="timeline">
-                {% for post in yearObj.posts %}
-                    <li class="timeline{% cycle '-panel', '-inverted' %}">
-                        <div class="timeline-panel">
-                            {% if post.data.thumbnail %}
-                                <div class="timeline-heading">
-                                    <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
-                                        {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                                        {% xd_img %}
-                                            <img src="{{thumbnailUrl}}" class="img-responsive" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
-                                        {% endxd_img %}
-                                    </a>
-                                </div>
-                            {% endif %}
-
-                            <div class="timeline-body">
-                                <p><a href="{{ post.url }}">{{ post.data.title }} {{this_year}}</a></p>
-                            </div>
-                        </div>
-                    </li>
-                    {% if forloop.last == true %}
-                        <li class="clearfix"></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-    {% endfor %}
-</div>

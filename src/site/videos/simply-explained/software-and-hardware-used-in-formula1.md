@@ -6,6 +6,7 @@ videoId: QuDxbjfxFfc
 order: 32
 series: Simply explained
 uploadDate: 2020-06-09
+duration_seconds: 349
 ---
 
 F1 cars have a lot of hardware and software on board. In this video, I explore what hardware the cars run on, the software that powers them, and the tools used at the factories.

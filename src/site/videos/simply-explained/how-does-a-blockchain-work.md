@@ -6,6 +6,8 @@ videoId: SSo_EIwHSd4
 order: 2
 series: Simply explained
 uploadDate: 2017-11-13
+tags: ["Blockchain"]
+duration_seconds: 360
 ---
 
 Everyone is talking about blockchains and cryptocurrencies these days. But what is this blockchain thing?

@@ -6,6 +6,8 @@ videoId: SfFSxThtzhE
 order: 22
 series: Simply explained
 uploadDate: 2019-02-18
+tags: ["Privacy"]
+duration_seconds: 502
 ---
 
 We know public WiFi shouldn't be trusted, but why? What are the risks when do you connect to a coffeeshop network and how can you protect yourself for them?

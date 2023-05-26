@@ -1,0 +1,22 @@
+<div class="flex py-4">
+    <div class="w-full max-w-320 pr-8">
+        <a href="{{vid.url}}">
+            {% xd_img %}
+                <img src="https://i.ytimg.com/vi/{{vid.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
+            {% endxd_img %}
+        </a>
+    </div>
+    <div>
+        <div class="mb-2 text-lg">
+            <a href="{{video.url}}" class="no-underline hover:underline">{{ video.data.title }}</a>
+        </div>
+
+        <div class="text-sm text-savjeelightgrey3 mb-4">
+            {% include "components/video-duration-and-tags.html" video: vid %}
+        </div>
+
+        <div>
+            {{ video.content | md | strip_html | truncate: 200 }}
+        </div>
+    </div>
+</div>

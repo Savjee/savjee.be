@@ -6,6 +6,7 @@ videoId: 6FyXURRVmR0
 order: 36
 series: Simply explained
 uploadDate: 2020-11-25
+duration_seconds: 295
 ---
 
 What is a cache? How does it work, and why is it important?

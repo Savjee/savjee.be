@@ -6,6 +6,8 @@ videoId: npfNcZKednA
 order: 34
 series: Simply explained
 uploadDate: 2020-08-11
+tags: ["SpaceX", "Starlink"]
+duration_seconds: 688
 ---
 
 SpaceX plans to launch 12,000 satellites to provide world-wide internet coverage with Starlink. Is that a good idea? How fast can satellite be? Is it safe to have that satellites many in orbit? And, why has nobody attempted this before? 

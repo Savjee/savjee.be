@@ -67,7 +67,7 @@
 
 <body class="border-t-2 border-savjeered">
 
-<header class="py-6 mb-12 border-b border-savjeelightgrey">
+<header class="py-6 border-b border-savjeelightgrey">
     <!-- TODO: Fix the container width. Should match the design. -->
     <div class="mx-auto flex flex-row items-center max-w-5xl">
         <div class="mr-4">
@@ -108,23 +108,8 @@
         </nav>
     </div>
 </header>
-    
-<div class="mx-auto max-w-5xl">
-    {{ content }}
-</div>
 
-
-{% comment %}
-{% unless fullwidth %}
-<div class="container {% if wider %}wider{% endif %}">
-{% endunless %}
-    
-    {{ content }}
-
-{% unless fullwidth %}
-</div>
-{% endunless %}
-{% endcomment %}
+{{ content }}
 
 <footer class="mt-20 border-t border-savjeelightgrey text-sm py-10">
     <div class="mx-auto max-w-5xl">

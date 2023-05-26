@@ -6,6 +6,7 @@ videoId: bs0xswK0eZk
 order: 8
 series: Simply explained
 uploadDate: 2018-01-16
+duration_seconds: 400
 ---
 
 Two huge security issue's found in almost all modern processors. How do they work and what can we do about it? Let's find out!

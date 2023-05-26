@@ -6,6 +6,8 @@ videoId: S57uhCQBEk0
 order: 23
 series: Simply explained
 uploadDate: 2019-03-05
+tags: ["Decentralization"]
+duration_seconds: 408
 ---
 
 **Summary** | 

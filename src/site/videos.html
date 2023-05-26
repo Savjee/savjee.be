@@ -1,33 +1,46 @@
 ---
-layout: page
+layout: default
 title: Videos
 quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
 ---
+{% assign featuredVideos = collections.videos | reverse | getFeatureable | slice: 0,6 %}
 
-{% assign latestVideos = collections.videos | reverse | getFeatureable %}
+<div class="bg-savjeelightgrey2 py-16 mb-8">
+    <div class="mx-auto max-w-5xl">
+        <h1 class="bigtitle my-0">
+            <a href="{{ page.url }}">{{ title }}</a>
+        </h1>
 
-<div class="row latest-videos">
-    {% for vid in latestVideos limit: 6 %}
-        <div class="col-md-4 col-sm-6 col-xs-1 {% if forloop.index > 3 %}d-none d-sm-block{% endif %}">
-            <div class="card">
-                <a href="{{vid.url}}">
-
-                    {% xd_img %}
-                        <img class="thumb" src="https://i.ytimg.com/vi/{{vid.data.videoId}}/mqdefault.jpg" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
-                    {% endxd_img %}
-                    <div class="content">
-                        {{ vid.data.title | truncate:100 }}
+        <div class="grid grid-cols-3 gap-8">
+            {% for vid in featuredVideos %}
+                <div>
+                    <a href="{{vid.url}}" class="mb-2">
+                        {% xd_img %}
+                            <img src="https://i.ytimg.com/vi/{{vid.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
+                        {% endxd_img %}
+                    </a>
+                    <div>
+                        <a href="{{vid.url}}" class="no-underline hover:underline">
+                            <div class="truncate">
+                                {{ vid.data.title | truncate:100 }}
+                            </div>
+                        </a>
+                        
+                        <div class="text-sm text-savjeelightgrey3">
+                            {% include "components/video-duration-and-tags.html" video: vid %}
+                        </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 </div>
 
-<hr>
-
-{% assign series = video_series %}
-
-{% for serie in series %}
-    {% include "video-series-overview.html", serieTitle:serie.title %}
-{% endfor %}
+<div class="mx-auto max-w-5xl">
+    {% for vid in collections.videos reversed %}
+        {% if featuredVideos contains vid %}
+        {% continue %}
+        {% endif %}
+        {% include "components/preview-video.html" video: vid %}
+    {% endfor %}
+</div>

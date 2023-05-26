@@ -6,6 +6,7 @@ videoId: 0buKQHokLK8
 order: 37
 series: Simply explained
 uploadDate: 2020-12-08
+duration_seconds: 458
 ---
 
 NoSQL databases power some of the biggest sites. They're fast and super scalable but how do they work?

@@ -6,6 +6,7 @@ videoId: cqZhNzZoMh8
 order: 10
 series: Simply explained
 uploadDate: 2018-02-13
+duration_seconds: 374
 ---
 
 Not all cryptocurrencies have their own blockchains. Instead they run on top of other platforms like ERC20 tokens run on top of Ethereum. This video explains what these tokens are and why ERC20 was created.

@@ -6,6 +6,8 @@ videoId: rrAjCHm7qRU
 order: 30
 series: Simply explained
 uploadDate: 2020-01-27
+tags: ["Privacy"]
+duration_seconds: 361
 ---
 
 How does Facebook know that you doubted to buy something on another website? They use tracking pixels! A small image that is added to other websites & track your activity and interests. Let's Simply Explain how they work.

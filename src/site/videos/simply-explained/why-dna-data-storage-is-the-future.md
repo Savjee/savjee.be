@@ -6,6 +6,7 @@ videoId: aPWA-n9oo4k
 order: 25
 series: Simply explained
 uploadDate: 2019-06-17
+duration_seconds: 591
 ---
 
 The fact that I have blue eyes, blond hair and that I have an average height is all encoded in my DNA. It’s nature’s way of storing data, but could we also use it to store digital data like documents, photos, music, and videos? And if we could, why would we? 

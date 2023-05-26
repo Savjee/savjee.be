@@ -6,6 +6,8 @@ videoId: aQWflNQuP_o
 order: 15
 series: Simply explained
 uploadDate: 2018-05-30
+tags: ["Blockchain"]
+duration_seconds: 428
 ---
 We've all heard about Blockchains but how can they be used in the real world? How can we apply them? What problems can they solve?
 

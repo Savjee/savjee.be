@@ -68,6 +68,10 @@
       @apply pt-6
     }
 
+    article ul li ul { /* Nested lists */
+      @apply mt-0
+    }
+
     a {
       @apply text-savjeered font-semibold underline;
     }

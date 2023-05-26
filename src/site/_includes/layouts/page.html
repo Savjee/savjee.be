@@ -4,9 +4,11 @@ layout: default
 
 <div class="mx-auto max-w-5xl">
 	<article>
+		{% unless no_title %}
 		<h1 class="bigtitle">
 			<a href="{{ page.url }}">{{ title }}</a>
 		</h1>
+		{% endunless %}
 		
 		{{ content }}
 	</article>

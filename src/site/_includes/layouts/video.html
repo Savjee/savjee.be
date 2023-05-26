@@ -1,59 +1,21 @@
 ---
-layout: page 
+layout: page
+no_title: true
 ---
 
-<article>
-    {% include "youtube-embed.html", videoId:videoId %}
-    
-    <div class="videoNavigation">
-        <div class="container">
-            {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
-            {% assign videoIndex = vidsInSerie | indexOf: page %}
+{% include "youtube-embed.html", videoId:videoId %}
 
-            {% assign prevIndex = videoIndex | minus: 1 %}
-            {% assign nextIndex = videoIndex | plus: 1 %}
-
-            {% assign prevVideo = vidsInSerie[prevIndex] %}
-            {% assign nextVideo = vidsInSerie[nextIndex] %}
-            
-            {% if prevVideo %}
-                <div class="previousVideo">
-                    <div class="video-">
-                        <a href="{{ prevVideo.url }}">
-                            <p><strong>&larr; Previous video</strong><br>
-                                <span class="hide-overflow-text">{{ prevVideo.data.title | escape_once }}</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            {% endif %}
-
-            {% if nextVideo %}
-                <div class="nextVideo">
-                        {% unless nextVideo.data.hide %}
-                        <div class="video-">
-                            <a href="{{nextVideo.url}}">
-                                <p>
-                                    <strong>Next video &rarr;</strong><br>
-                                    <span class="hide-overflow-text">{{ nextVideo.data.title | escape_once }}</span>
-                                </p>
-                            </a>
-                        </div>
-                        {% endunless %}
-                </div>
-            {% endif %}
-        </div>
-    </div>
-
+<article class="pt-8">
+    <p>
+        <a href="/videos" class="no-underline">&larr; Back to videos</a>
+    </p>
     <h1>
-        <a href="{{ page.url }}">{{ title | escape_once }}</a>
+        {{ title | escape_once }}
     </h1>
 
-    <div>
+    <div class="max-w-3xl">
         {{ content }}
     </div>
-
-    {% include "components/newsletter-box.html" %}
 </article>
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}

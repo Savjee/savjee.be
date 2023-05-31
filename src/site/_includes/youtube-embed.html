@@ -1,7 +1,22 @@
-<div class="videowrapper">
-  <lite-youtube 
-    videoid="{{ videoId }}" 
-    playlabel="{{ videoDescription | default: 'Play embedded YouTube video of Simply Explained' }}"
-    class="max-w-none"
-    ></lite-youtube>
+<div class="relative group hover:cursor-pointer youtube-embed" data-videoid="{{videoId}}">
+  <div class="player absolute top-0 bottom-0 left-0 right-0"></div>
+
+  {% comment %} Backdrop {% endcomment %}
+  <div class="absolute inset-0 bg-savjeeblack opacity-40 group-hover:opacity-10 transition-opacity"></div>
+
+  {% comment %} Play Button {% endcomment %}
+  <div class="absolute inset-0 items-center justify-center flex">
+    <div class="play-button w-20 h-14"></div>
+  </div>
+
+  {% comment %} Thumbnail (with WebP support) {% endcomment %}
+  {% xd_img %}
+    <img
+      src="https://i.ytimg.com/vi/{{videoId}}/maxresdefault.jpg"
+      class="w-full py-0"
+      loading="lazy"
+      width="320"
+      height="180"
+      alt="Thumbnail for video '{{ videoDescription }}'">
+  {% endxd_img %}
 </div>

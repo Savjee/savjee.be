@@ -5,7 +5,7 @@ title: How cookies can track you
 videoId: QWw7Wd2gUJk
 order: 16
 series: Simply explained
-uploadDate: 2018-06-18
+date: 2018-06-18
 tags: ["Privacy"]
 duration_seconds: 411
 ---

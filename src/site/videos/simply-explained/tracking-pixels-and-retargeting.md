@@ -5,7 +5,7 @@ title: "Tracking Pixels & Retargeting"
 videoId: rrAjCHm7qRU
 order: 30
 series: Simply explained
-uploadDate: 2020-01-27
+date: 2020-01-27
 tags: ["Privacy"]
 duration_seconds: 361
 ---

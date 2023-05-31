@@ -5,7 +5,7 @@ title: "DNS: The Internet's Phonebook"
 videoId: FJYa6C-MXno
 order: 24
 series: Simply explained
-uploadDate: 2019-05-06
+date: 2019-05-06
 duration_seconds: 443
 ---
 

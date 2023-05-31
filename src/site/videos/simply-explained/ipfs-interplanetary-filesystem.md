@@ -5,7 +5,7 @@ title: IPFS - Interplanetary filesystem
 videoId: 5Uj6uR3fp-U
 order: 14
 series: Simply explained
-uploadDate: 2018-05-15
+date: 2018-05-15
 tags: ["Decentralization", "P2P"]
 duration_seconds: 555
 ---

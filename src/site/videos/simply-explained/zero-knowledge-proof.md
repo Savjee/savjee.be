@@ -5,7 +5,7 @@ title: Zero Knowledge Proof
 videoId: OcmvMs4AMbM
 order: 21
 series: Simply explained
-uploadDate: 2019-01-14
+date: 2019-01-14
 tags: ["Privacy"]
 duration_seconds: 618
 ---

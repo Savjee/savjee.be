@@ -5,7 +5,7 @@ title: Smart contracts
 videoId: ZE2HxTmxfrI
 order: 3
 series: Simply explained
-uploadDate: 2017-11-20
+date: 2017-11-20
 tags: ["Blockchain"]
 duration_seconds: 257
 ---

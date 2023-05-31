@@ -5,7 +5,7 @@ title: "How mRNA Vaccines Work"
 videoId: WOvvyqJ-vwo
 order: 39
 series: Simply explained
-uploadDate: 2020-12-30
+date: 2020-12-30
 duration_seconds: 266
 tags: ["mRNA vaccines", "COVID-19"]
 ---

@@ -5,9 +5,10 @@ title: "mRNA Vaccines: Questions & Misconceptions"
 videoId: CfZjK2eIDFM
 order: 40
 series: Simply explained
-uploadDate: 2021-01-27
+date: 2021-01-27
 tags: ["mRNA vaccines", "COVID-19"]
 duration_seconds: 466
+not_featureable: true
 ---
 
 There are a lot of questions and misconceptions about mRNA vaccines (especially for SARS-CoV-2 or COVID19). In this video, I'm answering 10 of the most frequently asked questions from my viewers.

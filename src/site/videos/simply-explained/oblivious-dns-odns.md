@@ -5,9 +5,10 @@ title: "Oblivious DNS over HTTPS"
 videoId: TFvRp5SUgfE
 order: 38
 series: Simply explained
-uploadDate: 2020-12-21
+date: 2020-12-21
 tags: ["Privacy"]
-duration_seconds: 289 
+duration_seconds: 289
+not_featureable: true
 ---
 
 Oblivious DNS is a privacy-friendly version of the DNS protocol. Preventing third-parties from keeping track of the sites you visit.

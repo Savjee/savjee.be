@@ -5,7 +5,7 @@ title: "Solid - A Better Web"
 videoId: qWVTjMsv7AE
 order: 41
 series: Simply explained
-uploadDate: 2021-03-11
+date: 2021-03-11
 duration_seconds: 441
 tags: ["Decentralization"]
 ---

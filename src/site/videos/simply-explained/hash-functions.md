@@ -5,7 +5,7 @@ title: Hash functions
 videoId: cczlpiiu42M
 order: 13
 series: Simply explained
-uploadDate: 2018-04-03
+date: 2018-04-03
 duration_seconds: 448
 ---
 

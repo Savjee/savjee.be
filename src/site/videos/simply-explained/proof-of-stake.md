@@ -5,7 +5,7 @@ title: Proof-of-Stake (vs. Proof-of-work)
 videoId: M3EFi_POhps
 order: 12
 series: Simply explained
-uploadDate: 2018-03-20
+date: 2018-03-20
 tags: ["Blockhain"]
 duration_seconds: 479
 ---

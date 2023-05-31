@@ -5,7 +5,7 @@ title: Ethereum's Constantinople Update & Difficulty Bomb
 videoId: rfg408lSAj0
 order: 18
 series: Simply explained
-uploadDate: 2018-09-11
+date: 2018-09-11
 tags: ["Ethereum", "Blockchain scaling"]
 duration_seconds: 437
 ---

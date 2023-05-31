@@ -5,7 +5,7 @@ title: IOTA's Tangle Network
 videoId: CZxH1V_zoug
 order: 6
 series: Simply explained
-uploadDate: 2017-12-26
+date: 2017-12-26
 duration_seconds: 336
 ---
 

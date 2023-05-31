@@ -5,7 +5,7 @@ title: "Bitcoin is worthless (but so is your “real” money)"
 videoId: IjEw5uwg-Qc
 order: 27
 series: Simply explained
-uploadDate: 2019-09-03
+date: 2019-09-03
 tags: ["Bitcoin"]
 duration_seconds: 286
 ---

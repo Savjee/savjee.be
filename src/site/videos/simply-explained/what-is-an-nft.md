@@ -5,7 +5,7 @@ title: "What is an NFT?"
 videoId: FkUn86bH34M
 order: 42
 series: Simply explained
-uploadDate: 2021-06-08
+date: 2021-06-08
 tags: ["Blockchain", "Decentralization", "DeFi"]
 duration_seconds: 214
 ---

@@ -5,7 +5,7 @@ title: "Mining Difficulty"
 videoId: o1gOyhU6XEw
 order: 28
 series: Simply explained
-uploadDate: 2019-09-23
+date: 2019-09-23
 tags: ["Blockchain"]
 duration_seconds: 332
 ---

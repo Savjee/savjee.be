@@ -5,7 +5,7 @@ title: What is a Bitcoin hard fork?
 videoId: XCo6yyutYAM
 order: 4
 series: Simply explained
-uploadDate: 2017-12-04
+date: 2017-12-04
 tags: ["Bitcoin"]
 duration_seconds: 281
 ---

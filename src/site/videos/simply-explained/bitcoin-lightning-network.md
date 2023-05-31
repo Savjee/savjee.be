@@ -5,7 +5,7 @@ title: Bitcoin's Lightning Network
 videoId: rrr_zPmEiME
 order: 5
 series: Simply explained
-uploadDate: 2017-12-12
+date: 2017-12-12
 tags: ["Bitcoin", "Blockchain scaling"]
 duration_seconds: 334
 ---

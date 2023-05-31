@@ -5,7 +5,7 @@ title: Blockchains&#58; How can they be used?
 videoId: aQWflNQuP_o
 order: 15
 series: Simply explained
-uploadDate: 2018-05-30
+date: 2018-05-30
 tags: ["Blockchain"]
 duration_seconds: 428
 ---

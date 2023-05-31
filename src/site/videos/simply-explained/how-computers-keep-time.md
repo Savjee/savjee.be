@@ -5,7 +5,7 @@ title: How do computers keep time?
 videoId: U612mx16j7U
 order: 17
 series: Simply explained
-uploadDate: 2018-07-17
+date: 2018-07-17
 duration_seconds: 487
 ---
 

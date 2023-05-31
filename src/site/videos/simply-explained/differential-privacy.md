@@ -5,7 +5,7 @@ title: Differential privacy
 videoId: gI0wk1CXlsQ
 order: 9
 series: Simply explained
-uploadDate: 2018-01-25
+date: 2018-01-25
 tags: ["Privacy"]
 duration_seconds: 419
 ---

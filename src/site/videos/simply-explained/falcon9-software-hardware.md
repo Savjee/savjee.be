@@ -5,7 +5,7 @@ title: Software &amp; hardware in Falcon 9, Falcon Heavy and Dragon
 videoId: N5faA2MZ6jY
 order: 11
 series: Simply explained
-uploadDate: 2018-02-27
+date: 2018-02-27
 tags: ["SpaceX"]
 ---
 

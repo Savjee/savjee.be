@@ -5,7 +5,7 @@ title: Meltdown &amp; Spectre
 videoId: bs0xswK0eZk
 order: 8
 series: Simply explained
-uploadDate: 2018-01-16
+date: 2018-01-16
 duration_seconds: 400
 ---
 

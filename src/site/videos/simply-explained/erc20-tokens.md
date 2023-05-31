@@ -5,7 +5,7 @@ title: ERC20 tokens
 videoId: cqZhNzZoMh8
 order: 10
 series: Simply explained
-uploadDate: 2018-02-13
+date: 2018-02-13
 duration_seconds: 374
 ---
 

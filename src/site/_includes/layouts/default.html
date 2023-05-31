@@ -9,7 +9,7 @@
         {% assign title = renderData.title %}
     {%endif%}
 
-    <title>{{ title | escape_once }} | Simply Explained.be</title>
+    <title>{{ title | escape_once }} | Simply Explained</title>
 
     {% assign seo_description_tmp = quote | default: page.excerpt %}
     {% assign seo_description_tmp2 = seo_description_tmp | md | strip_html %}

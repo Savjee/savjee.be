@@ -25,11 +25,13 @@ module.exports = function (config) {
     // ----------------------- Custom filters -----------------------
     [
         "getVideosInSeries", "getFeatureable", "indexOf", "getRelated",
-        "htmlImageSize", "groupByYear", "md", "startsWith"
+        "htmlImageSize", "groupByYear", "startsWith"
     ].forEach((filterName) => {
         config.addLiquidFilter(filterName, 
             require('./src/utils/filters/' + filterName));
     });
+
+
     
 
     // ----------------------- Collections -----------------------
@@ -127,6 +129,10 @@ module.exports = function (config) {
         });
 
     config.setLibrary("md", markdownLib);
+
+    config.addLiquidFilter("md", (content = "") => {
+        return markdownLib.render(content);
+    });
     
     return {
         dir: { input: 'src/site', output: '_site', data: '_data' },

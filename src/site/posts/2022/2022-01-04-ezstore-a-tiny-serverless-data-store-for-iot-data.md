@@ -2,7 +2,7 @@
 layout: post
 title: "EZStore: a tiny serverless datastore for IoT data (DynamoDB + Lambda)"
 quote: 
-tags: [AWS, IOT]
+tags: [AWS, IoT, DynamoDB, Lambda, NoSQL]
 not_featureable: true
 toc_enabled: true
 ---

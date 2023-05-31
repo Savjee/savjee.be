@@ -19,6 +19,8 @@ const regYouTube = /i\.ytimg\.com\/vi\/(.*)\/(.*)\.jpg/mi;
  * @returns {string}
  */
 module.exports = function (originalHTML) {
+    // Strip all double whitepaces from the input HTML (including new lines)
+    originalHTML = originalHTML.replace(/\s{2,}/g, ' ');
     const matches = regImgSrc.exec(originalHTML);
 
     if(matches === null){

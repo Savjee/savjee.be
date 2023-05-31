@@ -9,28 +9,7 @@ quote: Overview of blog posts
 </h1>
 
 {% for post in collections.posts limit: 20 %}
-    <div class="flex items-center mb-8 pb-8 border-b border-savjeelightgrey">
-        {% if post.data.thumbnail %}
-        <div class="max-w-320 w-full pr-8">
-            <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
-                {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                {% xd_img %}
-                    <img src="{{thumbnailUrl}}" class="w-full" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
-                {% endxd_img %}
-            </a>
-        </div>
-        {% endif %}
-        <div>
-            <p class="pb-0">
-                <a href="{{ post.url }}" class="no-underline">{{ post.data.title }}</a>
-            </p>
-            <p class="text-sm p-0">
-                {{  post.data.page.excerpt | md | strip_html | truncate: 200 }}
-            </p>
-
-            <div class="text-sm text-savjeelightgrey3">
-                {% include "components/tags.html" tags: post.data.tags %}
-            </div>
-        </div>
+    <div class="mb-8 pb-8 border-b border-savjeelightgrey">
+        {% include "components/preview-blogpost.html" post: post %}
     </div>
 {% endfor %}

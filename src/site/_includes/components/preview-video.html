@@ -1,8 +1,8 @@
-<div class="flex py-4">
+<div class="flex items-center py-4">
     <div class="w-full max-w-320 pr-8">
-        <a href="{{vid.url}}">
+        <a href="{{video.url}}">
             {% xd_img %}
-                <img src="https://i.ytimg.com/vi/{{vid.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
+                <img src="https://i.ytimg.com/vi/{{video.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
             {% endxd_img %}
         </a>
     </div>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="text-sm text-savjeelightgrey3 mb-4">
-            {% include "components/video-duration-and-tags.html" video: vid %}
+            {% include "components/video-duration-and-tags.html" video: video %}
         </div>
 
         <div>

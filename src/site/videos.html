@@ -11,15 +11,15 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
             <a href="{{ page.url }}">{{ title }}</a>
         </h1>
 
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 gap-8 gap-y-10">
             {% for vid in featuredVideos %}
                 <div>
-                    <a href="{{vid.url}}" class="mb-2">
+                    <a href="{{vid.url}}">
                         {% xd_img %}
                             <img src="https://i.ytimg.com/vi/{{vid.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
                         {% endxd_img %}
                     </a>
-                    <div>
+                    <div class="mt-2">
                         <a href="{{vid.url}}" class="no-underline hover:underline">
                             <div class="truncate">
                                 {{ vid.data.title | truncate:100 }}
@@ -37,9 +37,10 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
 </div>
 
 <div class="mx-auto max-w-5xl">
-    {% for vid in collections.videos reversed %}
+    {% assign videos = collections.videos | sort: "date" %}
+    {% for vid in videos reversed %}
         {% if featuredVideos contains vid %}
-        {% continue %}
+            {% continue %}
         {% endif %}
         {% include "components/preview-video.html" video: vid %}
     {% endfor %}

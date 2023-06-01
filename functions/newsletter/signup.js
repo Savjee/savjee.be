@@ -55,7 +55,7 @@ export async function onRequestPost({request, env})
       return redirect(redirectUrl);
     }
 
-    await notify(email);
+    await notify(email, request);
     return redirect(`${baseUrl}/success`);
   }catch(e){
     return redirect(`${baseUrl}/failed?reason=internal`);
@@ -73,7 +73,7 @@ function redirect(url){
   return Response.redirect(url, 303);
 }
 
-function notify(email){
+function notify(email, req){
   return fetch(new Request("https://api.mailchannels.net/tx/v1/send", {
     method: "POST",
     headers: {
@@ -90,7 +90,10 @@ function notify(email){
         subject: "New subscriber!",
         content: [{
           type: "text/plain",
-          value: `Signed up for newsletter. Add to Substack: ${email}`,
+          value: `Signed up for newsletter. Add to Substack: ${email}
+          
+                  Headers:
+                  ${JSON.stringify(req, null, 4)}`,
         }],
     }),
   }));

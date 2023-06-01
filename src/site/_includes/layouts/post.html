@@ -2,7 +2,7 @@
 layout: narrow 
 ---
 
-<article>
+<article class="relative">
     <h1>
         {{ title }}
     </h1>
@@ -17,6 +17,10 @@ layout: narrow
     {% endif %}
     {% endcomment %}
 
+    <div class="absolute -left-16">
+        {% include "components/share-buttons-vertical.html" %}
+    </div>
+
     {{ content }}
 </article>
 
@@ -25,7 +29,6 @@ layout: narrow
     <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
 </p>
 
-{% include "components/share-buttons.html" %}
 
 {% assign related_posts = collections.posts | getRelated: tags, page.inputPath %}
 {% if related_posts.size > 0 %}

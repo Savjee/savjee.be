@@ -6,21 +6,24 @@ layout: narrow
     <a href="/newsletter" class="no-underline">&larr; Back to newsletters</a>
 </p>
 
-<h1>
+<h1 class="pb-2">
     {{ title }}
 </h1>
 
-<article>
-    <div class="">
+<div class="mb-10 text-sm text-savjeelightgrey3">
+    Sent on
+    <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+</div>
+
+<article class="relative">
+    <div class="absolute -left-16">
+        {% include "components/share-buttons-vertical.html" %}
+    </div>
+
+    <div>
         {{ content }}
     </div>
 </article>
-
-<p class="text-center">
-    <small>Sent on
-        <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    </small>
-</p>
 
 {% include "components/share-buttons.html" %}
 

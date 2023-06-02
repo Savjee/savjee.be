@@ -5,7 +5,6 @@ module.exports = {
       './src/site/_assets/js/disqus-comments.js',
       './src/site/_assets/js/static-youtube-embed.js',
       './node_modules/instant.page/instantpage.js',
-      './node_modules/lite-youtube-embed/src/lite-yt-embed.js',
       './src/site/_assets/css/bundle.scss',
   ],
   module: {

@@ -8,8 +8,18 @@ quote: Overview of blog posts
     <a href="/blog/">Blog</a>
 </h1>
 
-{% for post in collections.posts limit: 20 %}
-    <div class="mb-8 pb-8 border-b border-savjeelightgrey">
-        {% include "components/preview-blogpost.html" post: post %}
+
+<div>
+    {% assign maxPosts = 15 %}
+
+    {% for post in collections.posts %}
+        <div class="mb-8 pb-8 border-b border-savjeelightgrey {% if forloop.index > maxPosts %}hidden more-item{% endif %}">
+            {% include "components/preview-blogpost.html" post: post %}
+        </div>
+    {% endfor %}
+
+    <div class="text-center py-8">
+        <button class="secondary load-more-button">Load more</button>
     </div>
-{% endfor %}
+
+</div>

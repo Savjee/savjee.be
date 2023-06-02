@@ -37,11 +37,30 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
 </div>
 
 <div class="mx-auto max-w-5xl">
+    {% assign shownVideos = 0 %}
+    {% assign maxVideos = 6 %}
+
     {% assign videos = collections.videos | sort: "date" %}
     {% for vid in videos reversed %}
         {% if featuredVideos contains vid %}
             {% continue %}
         {% endif %}
+
+        {% assign shownVideos = shownVideos | plus: 1 %}
+
+        {% if shownVideos > maxVideos %}
+            <div class="more-item hidden">
+        {% else %}
+            <div class="more-item">
+        {% endif %}
+
         {% include "components/preview-video.html" video: vid %}
+
+        </div>
     {% endfor %}
+
+    <div class="text-center py-8">
+        <button class="secondary load-more-button">Load more</button>
+    </div>
 </div>
+

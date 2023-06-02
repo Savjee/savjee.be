@@ -4,6 +4,7 @@ module.exports = {
   entry: [
       './src/site/_assets/js/disqus-comments.js',
       './src/site/_assets/js/static-youtube-embed.js',
+      './src/site/_assets/js/load-more.js',
       './node_modules/instant.page/instantpage.js',
       './src/site/_assets/css/bundle.scss',
   ],

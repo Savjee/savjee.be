@@ -13,12 +13,13 @@
     "start": "npm run start:eleventy & npm run start:webpack & npm run start:tailwind",
     "start:eleventy": "eleventy --serve",
     "start:webpack": "webpack --mode development --watch",
-    "start:tailwind": "npx tailwindcss -i src/site/_assets/css_new/main.css -o _site/assets/css/main.css --watch",
+    "start:tailwind": "npm run build:tailwind -- --watch",
     "start:cf": "npx wrangler pages dev -- npm run start",
-    "build": "npm run build:webpack && npm run build:eleventy",
+    "build": "npm run build:tailwind; npm run build:webpack; npm run build:eleventy",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
-    "build:images": "npx ts-node src/build/image_pipeline.ts"
+    "build:images": "npx ts-node src/build/image_pipeline.ts",
+    "build:tailwind": "npx tailwindcss -i src/site/_assets/css_new/main.css -o _site/assets/css/main.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

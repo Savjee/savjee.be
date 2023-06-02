@@ -142,6 +142,23 @@
     article p code{
       @apply bg-savjeelightgrey py-0.5 px-1 border border-savjeeblack text-sm
     }
+    
+    /* -------------------- Tables -------------------- */
+    table{
+      @apply w-full my-6 border border-savjeelightgrey3
+    }
+
+    th{
+      @apply bg-savjeelightgrey3 text-savjeewhite text-left
+    }
+
+    tr{
+      @apply even:bg-savjeelightgrey2
+    }
+
+    th, td{
+      @apply p-2
+    }
 }
 
 @tailwind components;

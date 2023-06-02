@@ -51,7 +51,7 @@ When writing this blog post, I was reminded of a quote of his:
 ### Don't measure
 His last sentence is very important: "don't measure". I've fallen for the numbers game too often. Settings goals for how many subscribers I should reach or how many views a new video should get. However, these goals aren't doing me any good (and now I understand why).
 
-I would feel bad about myself when a video "only" got a few thousand views. Am I not making the right kind of content? Should I only make content related to cryptocurrencies (which are some of [my most popular videos]({% link collections.videos, "simply-explained/how-does-a-blockchain-work.md" %})))? Or should I stick to making videos about hot topics?
+I would feel bad about myself when a video "only" got a few thousand views. Am I not making the right kind of content? Should I only make content related to cryptocurrencies (which are some of [my most popular videos]({% link collections.videos, "how-does-a-blockchain-work.md" %})))? Or should I stick to making videos about hot topics?
 
 Making videos and educating people is something that I love to do. Simply Explained is my hobby, something I love to work on, but that doesn't feel like actual work. But making videos that are requested by others is less fun and almost feels like work. Likewise, making videos about hot topics brings a certain pressure. You want to be one of the first to cover something new, but how long does that "newness" last?
 
@@ -73,7 +73,7 @@ To round up this post, I wanted to do a little introspective. Fellow YouTuber, A
 
 I'll highlight two occasions. First, when we moved to our new house, I felt really proud of having achieved this (don't get me wrong: it's not a mansion). I feel proud to own my home and be able to renovate it and change it to our likings.
 
-Secondly, I felt really proud of [the video I made about mRNA vaccines]({% link collections.videos, "simply-explained/mrna-vaccines.md" %}). I always make videos about technology, and stepping out of this comfort zone was scary but very rewarding.
+Secondly, I felt really proud of [the video I made about mRNA vaccines]({% link collections.videos, "mrna-vaccines.md" %}). I always make videos about technology, and stepping out of this comfort zone was scary but very rewarding.
 
 **How did you suffer differently in 2020?**
 

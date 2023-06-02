@@ -179,7 +179,7 @@ Because shortcodes don't have access to collections, it takes two parameters. Fi
 This works for other collections as well:
 
 {% highlight md %}
-[mRNA Vaccines - Simply Explained]({% link collections.videos, 'simply-explained/mrna-vaccines.md' %})
+[mRNA Vaccines - Simply Explained]({% link collections.videos, 'mrna-vaccines.md' %})
 {% endhighlight %}
 
 Once again I used the search & replace feature to migrate from the Jekyll syntax to my shortcode:

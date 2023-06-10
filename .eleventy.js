@@ -36,7 +36,7 @@ module.exports = function (config) {
 
     // ----------------------- Collections -----------------------
     config.addCollection('courses', (collectionApi) => {
-        return collectionApi.getFilteredByGlob('src/site/courses/**/*.md');
+        return collectionApi.getFilteredByGlob('src/site/courses/**/index.md');
      });
 
     config.addCollection('newsletter', (collectionApi) => {

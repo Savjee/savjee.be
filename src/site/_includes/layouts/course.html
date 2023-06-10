@@ -1,29 +1,41 @@
 ---
-layout: default
+layout: page 
 ---
 
-<article class="post">
-	<h1 class="post-title">
-		<a href="{{ page.url }}">{{ title }}</a>
-	</h1>
+{{ page.url }}
 
-	<p class="no-margin">
-		Available on:
+{% assign videos_in_course = collections.all | filterArrayStartsWith: page.url %}
 
-		{% if link_udemy %}
-          <a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-        {% endif %}
-        
-        {% if link_skillshare %}
-            <a href="{{link_skillshare}}">Skillshare</a>
-        {% endif %}
-	</p>
-	<hr>
+<div class="flex">
+	<article>
+		<h1 class="post-title">
+			<a href="{{ page.url }}">{{ title }}</a>
+		</h1>
+	
+		<p class="no-margin">
+			Available on:
+	
+			{% if link_udemy %}
+			  <a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
+			{% endif %}
+			
+			{% if link_skillshare %}
+				<a href="{{link_skillshare}}">Skillshare</a>
+			{% endif %}
+		</p>
+		<hr>
+	
+		<div class="post-description">
+			{{ content }}
+		</div>
+	</article> 
 
-	<div class="post-description">
-		{{ content }}
-	</div>
-</article> 
+	<aside>
+		{% for vid in videos_in_course %}
+			{{ vid.data.title }}<br>
+		{% endfor %}
+	</aside>
+</div>
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">

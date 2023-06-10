@@ -78,6 +78,7 @@ module.exports = function (config) {
         "src/site/courses/**/*[^md]",
         "src/site/projects/**/*[^md]",
         "src/site/videos/**/*[^md]",
+        "src/site/newsletter/assets/**/*[^md]",
     ].forEach(path => config.addPassthroughCopy(path));
 
     

@@ -1,3 +1,5 @@
+@import "lib/poppins.css";
+
 @tailwind base;
 
 @layer base {

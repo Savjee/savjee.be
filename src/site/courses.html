@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Courses
-paginate:
-collection: courses
 quote: 
 ---
 
@@ -17,7 +15,7 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
     <div class="display-flex">
       <div class="course-thumbnail">
         <a href="{{course.url}}" aria-label="Open the course '{{ course.data.title }}'">
-          {% assign thumbnailUrl = course.url | append: "thumb.jpg" %}
+          {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
 
           {% xd_img %}
             <img src="{{thumbnailUrl}}" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for the course '{{ course.data.title }}'">

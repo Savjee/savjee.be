@@ -1,6 +1,5 @@
 ---
 layout: course
-collection: videos
 title: TypeScript Design Patterns
 
 link_udemy: https://www.udemy.com/typescript-design-patterns/

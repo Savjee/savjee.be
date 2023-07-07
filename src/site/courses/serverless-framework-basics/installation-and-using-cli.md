@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Installation and using the CLI
 videoId: cKwY6My9D0c
 order: 4
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Environment variables
 videoId: 1_sOPBgRAww
 order: 11
-series: Serverless Framework
 uploadDate: 2017-07-04
 ---
 

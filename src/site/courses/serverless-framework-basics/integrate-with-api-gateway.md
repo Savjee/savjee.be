@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Integrate with API Gateway
 videoId: 6n4l_aLfY4Y
 order: 8
-series: Serverless Framework
 uploadDate: 2017-06-13
 ---
 

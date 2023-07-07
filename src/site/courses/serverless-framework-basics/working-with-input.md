@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Working with input
 videoId: J-vFdrDf6lM
 order: 9
-series: Serverless Framework
 uploadDate: 2017-06-20
 ---
 

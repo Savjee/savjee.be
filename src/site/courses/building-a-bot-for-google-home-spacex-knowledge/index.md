@@ -1,7 +1,7 @@
 ---
 layout: course
 title: Building a Google Home bot! (With SpaceX knowledge)
-
+order: 1
 link_udemy: https://www.udemy.com/building-your-own-action-on-google/?couponCode=SAVJEE
 ---
 

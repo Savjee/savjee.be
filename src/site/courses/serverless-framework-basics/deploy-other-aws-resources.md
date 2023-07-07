@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Deploy other AWS resources
 videoId: P-QPUdQnc3E
 order: 10
-series: Serverless Framework
 uploadDate: 2017-06-27
 ---
 

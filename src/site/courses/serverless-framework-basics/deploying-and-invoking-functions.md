@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Deploying and invoking functions
 videoId: c1D1Ev0qA7k
 order: 7
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

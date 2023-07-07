@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Creating first project
 videoId: jZ-AdfA618U
 order: 6
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

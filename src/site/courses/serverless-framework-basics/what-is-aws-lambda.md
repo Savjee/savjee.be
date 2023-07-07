@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: What is Lambda?
 videoId: 4T_50kGJKfw
 order: 2
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

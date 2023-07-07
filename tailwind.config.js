@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
-        "Poppins2", ...defaultTheme.fontFamily.sans
+        ...defaultTheme.fontFamily.sans
       ]
     },
     colors: {
@@ -21,6 +21,7 @@ module.exports = {
       'savjeelightgrey2': '#F5F5F5',
       'savjeelightgrey3': '#7F7F7F',
       'savjeelightgrey4': '#CCCCCC',
+      'savjeelightgrey5': '#FAFAFA'
     },
     fontSize: {
       '4xl': ['60px', '84px'], // Page title

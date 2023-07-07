@@ -2,17 +2,19 @@
 layout: page 
 ---
 
-{{ page.url }}
+{% assign videos_in_course = collections.all 
+								| where: "data.courseName" 
+								| where: "data.courseName", courseName 
+								| sort: "data.order" 
+								| where: "data.order" %}
 
-{% assign videos_in_course = collections.all | filterArrayStartsWith: page.url %}
+{% include "youtube-embed.html", videoId:videoId %}
+
+Course name: "{{courseName}}" / Videos: {{ videos_in_course | size }}
 
 <div class="flex">
-	<article>
-		<h1 class="post-title">
-			<a href="{{ page.url }}">{{ title }}</a>
-		</h1>
-	
-		<p class="no-margin">
+	<article class="pr-8">
+		<p">
 			Available on:
 	
 			{% if link_udemy %}
@@ -23,16 +25,24 @@ layout: page
 				<a href="{{link_skillshare}}">Skillshare</a>
 			{% endif %}
 		</p>
-		<hr>
 	
-		<div class="post-description">
+		<div>
 			{{ content }}
 		</div>
 	</article> 
 
-	<aside>
+	<aside class="p-6 bg-savjeelightgrey5 w-80 min-w-fit">
+		<p class="font-bold">
+			{{ videos_in_course | size }} videos | X min.
+		</p>
 		{% for vid in videos_in_course %}
-			{{ vid.data.title }}<br>
+			<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0">
+				{% if page.url == vid.url %}
+					{{forloop.index}}. {{ vid.data.title }}	
+				{% else %}
+					<a href="{{vid.url}}" class="no-underline font-light">{{forloop.index}}. {{ vid.data.title }}</a>
+				{% endif %}
+			</div>
 		{% endfor %}
 	</aside>
 </div>

@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Configure AWS credentials
 videoId: tgb_MRVylWw
 order: 5
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

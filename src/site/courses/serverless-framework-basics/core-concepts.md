@@ -1,10 +1,7 @@
 ---
-layout: video
-collection: videos
 title: Core concepts
 videoId: wP7a9IosX3g
 order: 3
-series: Serverless Framework
 uploadDate: 2017-06-06
 ---
 

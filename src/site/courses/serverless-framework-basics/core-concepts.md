@@ -1,6 +1,7 @@
 ---
 title: Core concepts
 videoId: wP7a9IosX3g
+duration: 249
 order: 3
 uploadDate: 2017-06-06
 ---

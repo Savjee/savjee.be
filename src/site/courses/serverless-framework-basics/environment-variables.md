@@ -1,6 +1,7 @@
 ---
 title: Environment variables
 videoId: 1_sOPBgRAww
+duration: 292
 order: 11
 uploadDate: 2017-07-04
 ---

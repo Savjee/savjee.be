@@ -1,6 +1,7 @@
 ---
 title: Configure AWS credentials
 videoId: tgb_MRVylWw
+duration: 244
 order: 5
 uploadDate: 2017-06-06
 ---

@@ -1,6 +1,7 @@
 ---
 title: Creating first project
 videoId: jZ-AdfA618U
+duration: 422
 order: 6
 uploadDate: 2017-06-06
 ---

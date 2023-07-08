@@ -1,6 +1,7 @@
 ---
 title: Working with input
 videoId: J-vFdrDf6lM
+duration: 527
 order: 9
 uploadDate: 2017-06-20
 ---

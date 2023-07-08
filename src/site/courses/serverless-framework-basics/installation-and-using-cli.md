@@ -1,6 +1,7 @@
 ---
 title: Installation and using the CLI
 videoId: cKwY6My9D0c
+duration: 201
 order: 4
 uploadDate: 2017-06-06
 ---

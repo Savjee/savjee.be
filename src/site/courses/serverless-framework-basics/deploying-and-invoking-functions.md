@@ -1,6 +1,7 @@
 ---
 title: Deploying and invoking functions
 videoId: c1D1Ev0qA7k
+duration: 340
 order: 7
 uploadDate: 2017-06-06
 ---

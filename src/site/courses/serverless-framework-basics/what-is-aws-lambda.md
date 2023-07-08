@@ -1,6 +1,7 @@
 ---
 title: What is Lambda?
 videoId: 4T_50kGJKfw
+duration: 192
 order: 2
 uploadDate: 2017-06-06
 ---

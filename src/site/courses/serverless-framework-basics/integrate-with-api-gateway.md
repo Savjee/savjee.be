@@ -1,6 +1,7 @@
 ---
 title: Integrate with API Gateway
 videoId: 6n4l_aLfY4Y
+duration: 341
 order: 8
 uploadDate: 2017-06-13
 ---

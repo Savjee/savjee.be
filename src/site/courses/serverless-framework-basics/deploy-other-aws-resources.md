@@ -1,6 +1,7 @@
 ---
 title: Deploy other AWS resources
 videoId: P-QPUdQnc3E
+duration: 563
 order: 10
 uploadDate: 2017-06-27
 ---

@@ -1,6 +1,7 @@
 ---
 title: Introduction to the Serverless framework
 videoId: lUTGk64jppM
+duration: 96
 order: 1
 tags: ["Serverless", "AWS Lambda"]
 uploadDate: 2017-06-06

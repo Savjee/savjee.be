@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Tracking Pixels & Retargeting"
 videoId: rrAjCHm7qRU
+duration: 361
 order: 30
 series: Simply explained
 date: 2020-01-27

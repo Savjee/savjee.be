@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Oblivious DNS over HTTPS"
 videoId: TFvRp5SUgfE
+duration: 289
 order: 38
 series: Simply explained
 date: 2020-12-21

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Jevons Paradox & The Rebound Effect"
 videoId: MTfwhbfMnNc
+duration: 282
 order: 31
 series: Simply explained
 date: 2020-04-19

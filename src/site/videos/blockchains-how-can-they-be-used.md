@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Blockchains&#58; How can they be used?
 videoId: aQWflNQuP_o
+duration: 427
 order: 15
 series: Simply explained
 date: 2018-05-30

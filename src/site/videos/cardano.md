@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Cardano
 videoId: Do8rHvr65ZA
+duration: 481
 order: 7
 series: Simply explained
 date: 2018-01-08

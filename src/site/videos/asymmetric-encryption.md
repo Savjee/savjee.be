@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Asymetric encryption
 videoId: AQDCe585Lnc
+duration: 280
 order: 1
 series: Simply explained
 date: 2017-10-30

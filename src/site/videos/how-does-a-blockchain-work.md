@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: How does a blockchain work
 videoId: SSo_EIwHSd4
+duration: 359
 order: 2
 series: Simply explained
 date: 2017-11-13

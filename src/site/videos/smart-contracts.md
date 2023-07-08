@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Smart contracts
 videoId: ZE2HxTmxfrI
+duration: 257
 order: 3
 series: Simply explained
 date: 2017-11-20

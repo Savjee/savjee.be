@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "How Do NoSQL Databases Work?"
 videoId: 0buKQHokLK8
+duration: 458
 order: 37
 series: Simply explained
 date: 2020-12-08

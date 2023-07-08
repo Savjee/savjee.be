@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "A Simple Scam Trick"
 videoId: G3pT_Vsx3mk
+duration: 142
 order: 33
 series: Simply explained
 date: 2020-07-19

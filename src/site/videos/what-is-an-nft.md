@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "What is an NFT?"
 videoId: FkUn86bH34M
+duration: 214
 order: 42
 series: Simply explained
 date: 2021-06-08

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Why DNA Data Storage is the Future"
 videoId: aPWA-n9oo4k
+duration: 590
 order: 25
 series: Simply explained
 date: 2019-06-17

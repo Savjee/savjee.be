@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: How do computers keep time?
 videoId: U612mx16j7U
+duration: 487
 order: 17
 series: Simply explained
 date: 2018-07-17

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: IPFS - Interplanetary filesystem
 videoId: 5Uj6uR3fp-U
+duration: 555
 order: 14
 series: Simply explained
 date: 2018-05-15

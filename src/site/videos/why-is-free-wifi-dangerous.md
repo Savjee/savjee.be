@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Why is Free WiFi Dangerous?
 videoId: SfFSxThtzhE
+duration: 501
 order: 22
 series: Simply explained
 date: 2019-02-18

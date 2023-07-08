@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Solid - A Better Web"
 videoId: qWVTjMsv7AE
+duration: 441
 order: 41
 series: Simply explained
 date: 2021-03-11

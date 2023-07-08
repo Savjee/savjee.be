@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Mastodon & The Fediverse Explained
 videoId: S57uhCQBEk0
+duration: 408
 order: 23
 series: Simply explained
 date: 2019-03-05

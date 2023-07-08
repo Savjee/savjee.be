@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: How cookies can track you
 videoId: QWw7Wd2gUJk
+duration: 410
 order: 16
 series: Simply explained
 date: 2018-06-18

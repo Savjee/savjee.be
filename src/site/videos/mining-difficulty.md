@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Mining Difficulty"
 videoId: o1gOyhU6XEw
+duration: 332
 order: 28
 series: Simply explained
 date: 2019-09-23

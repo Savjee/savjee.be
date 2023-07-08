@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Software &amp; hardware in Falcon 9, Falcon Heavy and Dragon
 videoId: N5faA2MZ6jY
+duration: 592
 order: 11
 series: Simply explained
 date: 2018-02-27

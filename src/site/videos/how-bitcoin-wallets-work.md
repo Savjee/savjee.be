@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "How Bitcoin Wallets Work"
 videoId: GSTiKjnBaes
+duration: 245
 order: 26
 series: Simply explained
 date: 2019-08-06

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "SpaceX & Starlink: Is Satellite Internet a Good Idea?"
 videoId: npfNcZKednA
+duration: 688
 order: 34
 series: Simply explained
 date: 2020-08-11

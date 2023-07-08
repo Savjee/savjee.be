@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Does GDPR kill blockchains?
 videoId: 5I3wYAwbKMM
+duration: 569
 order: 20
 series: Simply explained
 date: 2018-11-20

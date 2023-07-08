@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Caching"
 videoId: 6FyXURRVmR0
+duration: 295
 order: 36
 series: Simply explained
 date: 2020-11-25

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Zero Knowledge Proof
 videoId: OcmvMs4AMbM
+duration: 618
 order: 21
 series: Simply explained
 date: 2019-01-14

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Hash functions
 videoId: cczlpiiu42M
+duration: 448
 order: 13
 series: Simply explained
 date: 2018-04-03

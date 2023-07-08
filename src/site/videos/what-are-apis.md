@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "What Are APIs?"
 videoId: OVvTv9Hy91Q
+duration: 408
 order: 29
 series: Simply explained
 date: 2019-11-12

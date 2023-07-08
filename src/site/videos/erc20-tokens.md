@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: ERC20 tokens
 videoId: cqZhNzZoMh8
+duration: 373
 order: 10
 series: Simply explained
 date: 2018-02-13

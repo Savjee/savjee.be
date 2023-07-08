@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Ethereum's Constantinople Update & Difficulty Bomb 
 videoId: rfg408lSAj0
+duration: 437
 order: 18
 series: Simply explained
 date: 2018-09-11

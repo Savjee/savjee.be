@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Differential privacy
 videoId: gI0wk1CXlsQ
+duration: 419
 order: 9
 series: Simply explained
 date: 2018-01-25

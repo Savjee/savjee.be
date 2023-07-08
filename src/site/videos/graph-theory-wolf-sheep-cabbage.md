@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: ! 'Graph Theory: Wolf, Sheep & Cabbage'
 videoId: pBT-8gqhHzo
+duration: 470
 order: 19
 series: Simply explained
 date: 2018-09-18

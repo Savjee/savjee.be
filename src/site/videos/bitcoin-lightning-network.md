@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Bitcoin's Lightning Network
 videoId: rrr_zPmEiME
+duration: 334
 order: 5
 series: Simply explained
 date: 2017-12-12

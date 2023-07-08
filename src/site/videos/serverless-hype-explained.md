@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "The Serverless Hype Explained!"
 videoId: tgFiOzVEL0Q
+duration: 428
 order: 35
 series: Simply explained
 date: 2020-09-27

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "DNS: The Internet's Phonebook"
 videoId: FJYa6C-MXno
+duration: 442
 order: 24
 series: Simply explained
 date: 2019-05-06

@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "mRNA Vaccines: Questions & Misconceptions"
 videoId: CfZjK2eIDFM
+duration: 465
 order: 40
 series: Simply explained
 date: 2021-01-27

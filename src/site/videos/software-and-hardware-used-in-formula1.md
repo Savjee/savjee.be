@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "Software & Hardware Used in Formula 1"
 videoId: QuDxbjfxFfc
+duration: 348
 order: 32
 series: Simply explained
 date: 2020-06-09

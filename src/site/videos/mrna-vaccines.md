@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: "How mRNA Vaccines Work"
 videoId: WOvvyqJ-vwo
+duration: 266
 order: 39
 series: Simply explained
 date: 2020-12-30

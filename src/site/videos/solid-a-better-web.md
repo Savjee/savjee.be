@@ -7,7 +7,6 @@ duration: 441
 order: 41
 series: Simply explained
 date: 2021-03-11
-duration_seconds: 441
 tags: ["Decentralization"]
 ---
 

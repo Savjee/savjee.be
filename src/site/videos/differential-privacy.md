@@ -8,7 +8,6 @@ order: 9
 series: Simply explained
 date: 2018-01-25
 tags: ["Privacy"]
-duration_seconds: 419
 ---
 
 Companies are collecting more and more data about us and that can cause harm. With differential privacy companies can learn more about their users without violating our privacy.

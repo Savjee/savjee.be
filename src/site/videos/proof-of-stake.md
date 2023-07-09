@@ -8,7 +8,6 @@ order: 12
 series: Simply explained
 date: 2018-03-20
 tags: ["Blockhain"]
-duration_seconds: 479
 ---
 
 Cryptocurrencies like Bitcoin and Ethereum uses enormous amounts of energy. That's because of the proof-of-work algorithm. In this video I'll explain how the proof-of-stake algorithm works. An alternative consensus algorithm that uses a lot less energy!

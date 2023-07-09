@@ -8,7 +8,6 @@ order: 40
 series: Simply explained
 date: 2021-01-27
 tags: ["mRNA vaccines", "COVID-19"]
-duration_seconds: 466
 not_featureable: true
 ---
 

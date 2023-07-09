@@ -7,7 +7,6 @@ duration: 400
 order: 8
 series: Simply explained
 date: 2018-01-16
-duration_seconds: 400
 ---
 
 Two huge security issue's found in almost all modern processors. How do they work and what can we do about it? Let's find out!

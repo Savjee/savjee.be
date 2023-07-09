@@ -7,7 +7,6 @@ duration: 266
 order: 39
 series: Simply explained
 date: 2020-12-30
-duration_seconds: 266
 tags: ["mRNA vaccines", "COVID-19"]
 ---
 

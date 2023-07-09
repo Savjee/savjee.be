@@ -8,7 +8,6 @@ order: 4
 series: Simply explained
 date: 2017-12-04
 tags: ["Bitcoin"]
-duration_seconds: 281
 ---
 
 Recently we’ve heard about a Bitcoin hard fork. But what is a hard ford?

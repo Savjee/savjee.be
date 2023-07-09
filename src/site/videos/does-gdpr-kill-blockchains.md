@@ -8,7 +8,6 @@ order: 20
 series: Simply explained
 date: 2018-11-20
 tags: ["Privacy", "Blockchain"]
-duration_seconds: 570
 ---
 
 Will the new European privacy law kill blockchains? On first sight they seem incompatible with each other. So let's take a closer look!

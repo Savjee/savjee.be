@@ -7,7 +7,6 @@ duration: 295
 order: 36
 series: Simply explained
 date: 2020-11-25
-duration_seconds: 295
 not_featureable: true
 ---
 

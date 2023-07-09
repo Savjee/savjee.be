@@ -7,7 +7,6 @@ duration: 590
 order: 25
 series: Simply explained
 date: 2019-06-17
-duration_seconds: 591
 tags: ["Data storage"]
 ---
 

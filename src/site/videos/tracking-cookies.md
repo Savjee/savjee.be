@@ -8,7 +8,6 @@ order: 16
 series: Simply explained
 date: 2018-06-18
 tags: ["Privacy"]
-duration_seconds: 411
 ---
 
 Cookies can be used to invade your privacy and track you around the internet. But what are cookies and how do they work? They were initially invented to make our lives easier and are used to keep us logged in and to store things like shopping carts and preferences on our computers instead of on servers.

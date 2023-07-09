@@ -7,7 +7,6 @@ duration: 428
 order: 35
 series: Simply explained
 date: 2020-09-27
-duration_seconds: 428
 ---
 
 Why are "serverless" cloud products so popular right now? What makes them different from using traditional server infrastructure? In this video, I'll go over all the pros and cons of going for a serverless architecture. On it, you can run your website or any web application.

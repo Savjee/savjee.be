@@ -8,7 +8,6 @@ order: 14
 series: Simply explained
 date: 2018-05-15
 tags: ["Decentralization", "P2P"]
-duration_seconds: 555
 ---
 
 IPFS, the Interplanetary Filesystem wants to make the web more decentralized by running it on top of a P2P network. 

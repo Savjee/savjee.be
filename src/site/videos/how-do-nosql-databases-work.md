@@ -7,7 +7,6 @@ duration: 458
 order: 37
 series: Simply explained
 date: 2020-12-08
-duration_seconds: 458
 tags: ["NoSQL"]
 ---
 

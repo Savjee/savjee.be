@@ -8,7 +8,6 @@ order: 21
 series: Simply explained
 date: 2019-01-14
 tags: ["Privacy"]
-duration_seconds: 618
 ---
 
 Protecting your online privacy could become a lot easier with Zero Knowledge Proof. A technique that allows you to prove things without disclosing what it is you're proving.

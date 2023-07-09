@@ -8,7 +8,6 @@ order: 23
 series: Simply explained
 date: 2019-03-05
 tags: ["Decentralization"]
-duration_seconds: 408
 ---
 
 **Summary** | 

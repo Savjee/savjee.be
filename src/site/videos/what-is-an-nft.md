@@ -8,7 +8,6 @@ order: 42
 series: Simply explained
 date: 2021-06-08
 tags: ["Blockchain", "Decentralization", "DeFi"]
-duration_seconds: 214
 ---
 
 NFT's are an innovation in the blockchain/cryptocurrency space that allows you to track who owns a particular item. Something tricky with digital files because they can easily be copied.  

@@ -7,7 +7,6 @@ duration: 336
 order: 6
 series: Simply explained
 date: 2017-12-26
-duration_seconds: 336
 ---
 
 How does IOTA's tangle work and how does it compare to a traditional blockchain like the one Bitcoin uses? In this video I'll explain this topic in a simple way!

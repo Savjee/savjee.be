@@ -8,7 +8,6 @@ order: 38
 series: Simply explained
 date: 2020-12-21
 tags: ["Privacy"]
-duration_seconds: 289
 not_featureable: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: page 
+layout: default 
 ---
 
 {% assign videos_in_course = collections.all 
@@ -8,64 +8,108 @@ layout: page
 								| sort: "data.order" 
 								| where: "data.order" %}
 
-{% include "youtube-embed.html", videoId:videoId %}
+{% assign durations = videos_in_course | map: "data.duration" | compact %}
 
-Course name: "{{courseName}}" / Videos: {{ videos_in_course | size }}
+{% assign total_duration = 0%}
+{% for duration in durations %}
+	{% assign total_duration = total_duration | plus: duration %}
+{% endfor %}
 
-<div class="flex">
-	<article class="pr-8">
-		<p">
-			Available on:
-	
-			{% if link_udemy %}
-			  <a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-			{% endif %}
-			
-			{% if link_skillshare %}
-				<a href="{{link_skillshare}}">Skillshare</a>
-			{% endif %}
-		</p>
-	
-		<div>
-			{{ content }}
-		</div>
-	</article> 
+<div class="mx-auto max-w-5xl">
+	{% include "youtube-embed.html", videoId:videoId %}
 
-	<aside class="p-6 bg-savjeelightgrey5 w-80 min-w-fit">
-		<p class="font-bold">
-			{{ videos_in_course | size }} videos | X min.
-		</p>
-		{% for vid in videos_in_course %}
-			<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0">
-				{% if page.url == vid.url %}
-					{{forloop.index}}. {{ vid.data.title }}	
-				{% else %}
-					<a href="{{vid.url}}" class="no-underline font-light">{{forloop.index}}. {{ vid.data.title }}</a>
+	<a href="/courses/">< Back to courses</a>
+
+	<div class="flex">
+		<article class="flex-1 pr-8">
+			<h1 class="mt-0">
+				{{ title }}
+			</h1>
+
+			{% if order == 1 %}
+			<p>
+				Available on:
+		
+				{% if link_udemy %}
+				<a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
 				{% endif %}
+				
+				{% if link_skillshare %}
+					<a href="{{link_skillshare}}">Skillshare</a>
+				{% endif %}
+			</p>
+			{% endif %} 
+		
+			<div>
+				{{ content }}
 			</div>
-		{% endfor %}
-	</aside>
-</div>
+		</article> 
 
-{% comment %} *********** Structured data for Google *********** {% endcomment %}
-<script type="application/ld+json">
-[
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-	  	{
-			"@type": "ListItem",
-			"position": 1,
-			"name": "Courses",
-			"item": "{% baseUrl %}/courses/"
+		<aside class="w-80">
+			<div class="p-6 bg-savjeelightgrey5">
+				<p class="font-bold">
+					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.
+				</p>
+				{% for vid in videos_in_course %}
+					<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0 flex">
+						<div class="flex-1 pr-4">
+							{% if page.url == vid.url %}
+								{{forloop.index}}. {{ vid.data.title }}	
+							{% else %}
+								<a href="{{vid.url}}" class="no-underline font-light">{{forloop.index}}. {{ vid.data.title }}</a>
+							{% endif %}
+						</div>
+						<div class="text-savjeelightgrey3">
+							{{ vid.data.duration | divided_by: 60, true | prepend: '00' | slice: -2, 2 }}:{{ vid.data.duration | modulo: 60 | prepend: '00' | slice: -2, 2 }}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			
+		</aside>
+	</div>
+
+	{% comment %} *********** Structured data for Google *********** {% endcomment %}
+	<script type="application/ld+json">
+	[
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Courses",
+					"item": "{% baseUrl %}/courses/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "{{ title }}"
+				}
+			]
 		},
 		{
-			"@type": "ListItem",
-			"position": 3,
-			"name": "{{ title }}"
+			"@context": "http://schema.org/",
+			"@type": "VideoObject",
+			"name": "{{ title }}",
+			"description": "{{ content | md | strip_html | truncatewords: 40 }}",
+			"thumbnailURL": [
+				"http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
+			],
+			"uploadDate": "{% if date %}{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+			"embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "{{ courseName }}",
+			"provider": {
+				"@type": "Organization",
+				"name": "Simply Explained",
+				"sameAs": "{% baseUrl %}"
+			}
 		}
 	]
-    }
-]
-</script>
+	</script>
+</div>

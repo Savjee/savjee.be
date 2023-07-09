@@ -1,5 +1,4 @@
 ---
-layout: course
 title: Complete guide to building a GraphQL API
 
 link_udemy: https://www.udemy.com/complete-guide-to-building-a-graphql-api/?couponCode=SAVJEE

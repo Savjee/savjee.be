@@ -23,7 +23,11 @@ layout: default
 	<div class="flex">
 		<article class="flex-1 pr-8">
 			<h1 class="mt-0">
-				{{ title }}
+				{% if order == 1 %}
+					{{ courseName }}
+				{% else %}
+					{{ title }}
+				{% endif %}
 			</h1>
 
 			{% if order == 1 %}

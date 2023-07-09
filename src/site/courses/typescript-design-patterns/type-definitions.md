@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Type Definitions
 videoId: cqv5nhARjr8
+duration: 454
 order: 9
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

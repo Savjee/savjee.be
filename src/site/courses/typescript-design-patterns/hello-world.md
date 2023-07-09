@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Hello World
 videoId: 5IOK_ksHnCo
+duration: 288
 order: 3
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

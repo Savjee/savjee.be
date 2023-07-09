@@ -1,6 +1,9 @@
 ---
-layout: course
-title: TypeScript Design Patterns
+title: Introduction
+videoId: Gd76yF1Dkg4
+duration: 182
+order: 1
+uploadDate: 2016-12-19
 
 link_udemy: https://www.udemy.com/typescript-design-patterns/
 link_skillshare: https://skl.sh/2Ha3f5W
@@ -26,3 +29,11 @@ Simple example: how do you write a system that allows user to order a product an
 ## Requirements
 * You should have basic knowledge of object oriented programming. Know the basics of classes, interfaces and inheritance.
 * Basic knowledge of TypeScript/JavaScript (or any other object-oriented language)
+
+
+This is an introduction video to my "Learning TypeScript" series. In the next videos I will show you how to start using TypeScript. I'll discuss the benefits of TypeScript and how to use it step by step.
+
+TypeScript compiles to regular JavaScript so it can run in any browser or on node.js. There's no reason not to use it!
+
+# Useful resources
+* <a href="https://www.typescriptlang.org/" target="_blank">TypeScript website</a>

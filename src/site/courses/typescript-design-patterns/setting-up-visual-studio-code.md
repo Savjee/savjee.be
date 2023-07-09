@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Setting up Visual Studio Code
 videoId: fxTKHG-S8RY
+duration: 351
 order: 4
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

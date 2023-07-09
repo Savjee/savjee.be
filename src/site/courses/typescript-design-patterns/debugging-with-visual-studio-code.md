@@ -3,6 +3,7 @@ layout: video
 collection: videos
 title: Debugging with Visual Studio Code
 videoId: H1lgYojMCaQ
+duration: 412
 order: 10
 series: Learning TypeScript
 uploadDate: 2016-12-19

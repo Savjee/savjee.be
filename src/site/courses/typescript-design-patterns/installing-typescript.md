@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Installing TypeScript
 videoId: EI73ycybieU
+duration: 189
 order: 2
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

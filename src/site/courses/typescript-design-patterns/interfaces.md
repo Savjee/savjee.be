@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Interfaces
 videoId: NeUrwZVi4IE
+duration: 343
 order: 6
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

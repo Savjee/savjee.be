@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Classes
 videoId: AaT8Y8vpXXU
+duration: 401
 order: 7
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

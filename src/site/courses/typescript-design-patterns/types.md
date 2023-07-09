@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Basic types
 videoId: Q6pePpv-C-E
+duration: 425
 order: 5
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

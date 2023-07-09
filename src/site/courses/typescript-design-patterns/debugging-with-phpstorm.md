@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Debugging with PhpStorm
 videoId: 1oqfWk_5nHo
+duration: 402
 order: 11
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

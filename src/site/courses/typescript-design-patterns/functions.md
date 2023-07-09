@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Functions
 videoId: 5fJ2nV3P0XI
+duration: 381
 order: 8
-series: Learning TypeScript
 uploadDate: 2016-12-19
 ---
 

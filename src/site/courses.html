@@ -4,44 +4,42 @@ title: Courses
 quote: 
 ---
 
-<p>Short explainer videos on YouTube only get you so far. That's why I've created
+<p class="max-w-2xl">Short explainer videos on YouTube only get you so far. That's why I've created
 these courses to help you learn certain topics in-depth. Enjoy!</p>
 
+<div class="grid grid-cols-3 gap-8 gap-y-10">
+  {% for course in collections.courses %}
+    {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
+    {% assign videos_in_course = collections.all 
+                                            | where: "data.courseName" 
+                                            | where: "data.courseName", course.data.courseName 
+                                            | sort: "data.order" 
+                                            | where: "data.order" %}
 
-{% for course in collections.courses %}
+    {% assign durations = videos_in_course | map: "data.duration" | compact %}
 
-  <div class="course-container">
+    {% assign total_duration = 0%}
+    {% for duration in durations %}
+    {% assign total_duration = total_duration | plus: duration %}
+    {% endfor %}
 
-    <div class="display-flex">
-      <div class="course-thumbnail">
-        <a href="{{course.url}}" aria-label="Open the course '{{ course.data.title }}'">
-          {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
-
+    <div>
+      <a href="{{course.url}}">
           {% xd_img %}
-            <img src="{{thumbnailUrl}}" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for the course '{{ course.data.title }}'">
+              <img src="{{ thumbnailUrl }}" class="w-full py-0" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for course '{{ course.data.courseName }}'">
           {% endxd_img %}
-        </a>
-      </div>
-
-      <div class="course-description flex-vcenter">
-
-        <div class="course-title">
-          <a href="{{course.url}}">{{course.data.title}}</a>
-        </div>
-
-        <div class="platforms">
-          {% if course.data.link_udemy %}
-             <a href="{{course.data.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-           {% endif %}
-           
-           {% if course.data.link_skillshare %}
-               <a href="{{course.data.link_skillshare}}">Skillshare</a>
-           {% endif %}
-        </div>
-
+      </a>
+      <div class="mt-2">
+          <a href="{{course.url}}" class="no-underline hover:underline">
+              <div class="truncate">
+                  {{ course.data.courseName | truncate:100 }}
+              </div>
+          </a>
+          
+          <div class="text-sm text-savjeelightgrey3">
+              {% include "components/video-duration-and-tags.html" video: course, duration: total_duration %}
+          </div>
       </div>
     </div>
-  </div>
-
-  <br>
-{% endfor %}
+  {% endfor%}
+</div>

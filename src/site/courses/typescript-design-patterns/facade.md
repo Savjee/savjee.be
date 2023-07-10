@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Facade pattern
 videoId: KQdiA2HtOxU
+duration: 421
 order: 4
-series: TypeScript Design Patterns
 uploadDate: 2017-04-06
 ---
 

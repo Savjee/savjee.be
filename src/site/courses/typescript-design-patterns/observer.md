@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Observer pattern
 videoId: GioexP_s5Yc
+duration: 730
 order: 3
-series: TypeScript Design Patterns
 uploadDate: 2017-04-06
 ---
 

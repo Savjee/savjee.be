@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: State pattern
 videoId: gMyRtqwxr10
+duration: 746
 order: 6
-series: TypeScript Design Patterns
 uploadDate: 2017-04-06
 ---
 

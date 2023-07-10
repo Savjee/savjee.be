@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Decorator pattern
 videoId: WPOLDEk1LF0
+duration: 551
 order: 2
-series: TypeScript Design Patterns
 uploadDate: 2017-04-06
 ---
 

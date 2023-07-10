@@ -1,10 +1,8 @@
 ---
-layout: video
-collection: videos
 title: Adapter pattern
 videoId: beU4i949YXU
+duration: 347
 order: 5
-series: TypeScript Design Patterns
 uploadDate: 2017-04-06
 ---
 

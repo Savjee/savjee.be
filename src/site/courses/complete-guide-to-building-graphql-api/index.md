@@ -1,8 +1,10 @@
 ---
-title: Complete guide to building a GraphQL API
-
+title: Introduction 
+order: 1
+duration: 98
 link_udemy: https://www.udemy.com/complete-guide-to-building-a-graphql-api/?couponCode=SAVJEE
 link_skillshare: https://skl.sh/2H1uXia
+tags: ["GraphQL", "API"]
 ---
 
 Everything you need to know to build your own GraphQL API.

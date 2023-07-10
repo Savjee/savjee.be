@@ -1,5 +1,5 @@
-{% if video.data.duration_seconds %}
-    {{ video.data.duration_seconds | divided_by: 60 | floor }} mins {% if video.data.tags %}|{% endif %} 
+{% if duration %}
+    {{ duration | divided_by: 60 | floor }} mins {% if video.data.tags %}|{% endif %} 
 {% endif %}
 
 {% include "components/tags.html" tags: video.data.tags %}

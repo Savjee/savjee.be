@@ -4,6 +4,7 @@ videoId: mhmD-QA6kf0
 duration: 262
 order: 20
 uploadDate: 2021-05-20
+section: "Hardware"
 ---
 
 Battery-powered IoT projects require you to monitor your battery's percentage. Measuring battery voltage is not ideal, because the voltage doesn't drop linearly.

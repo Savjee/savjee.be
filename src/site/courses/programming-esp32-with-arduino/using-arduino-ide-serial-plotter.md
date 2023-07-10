@@ -4,6 +4,7 @@ videoId: mtP86o1gjgM
 duration: 377
 order: 5
 uploadDate: 2020-05-22
+section: "Arduino IDE"
 ---
 
 Now while you're writing code, you might want to print out certain things to a console. Like the raw value of a temperature sensor or from the ADC, or from the built-in touch sensor. This can be useful while getting started or while debugging your program.

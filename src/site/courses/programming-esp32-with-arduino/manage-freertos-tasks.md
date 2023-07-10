@@ -4,6 +4,7 @@ videoId: jJaGRCgDo9s
 duration: 347
 order: 25
 uploadDate: 2021-02-09
+section: "FreeRTOS"
 ---
 
 Once you have FreeRTOS tasks running, you might want to manage them. The scheduler can stop, suspend, and resume individual tasks. You can control tasks from within or you can use task handles to control them from anywhere in your code.

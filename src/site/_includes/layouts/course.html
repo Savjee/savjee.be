@@ -16,7 +16,8 @@ layout: default
 {% endfor %}
 
 <div class="mx-auto max-w-5xl mt-12">
-	{% include "youtube-embed.html", videoId:videoId %}
+	{% assign videoDesc = courseName | append: " - " | append: title %}
+	{% include "youtube-embed.html", videoId:videoId, videoDescription: videoDesc %}
 
 	<p class="mt-12 mb-5">
 		<a href="/courses/" class="no-underline">← Back to courses</a>
@@ -56,12 +57,26 @@ layout: default
 				<p class="font-bold">
 					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.
 				</p>
+
+				{% assign last_seen_section = "" %}
 				{% for vid in videos_in_course %}
+					{% if last_seen_section != vid.data.section and vid.data.section != null %}
+						<div class="font-bold text-sm text-savjeelightgrey3 mt-8 uppercase">
+							{{vid.data.section}}
+						</div>
+					{% endif %}
+
+					{% assign last_seen_section = vid.data.section %}
+
 					<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0 flex">
 						<div class="flex-1 pr-4">
 							{% if page.url == vid.url or vid.data.paywalled == true %}
-								{{forloop.index}}. {{ vid.data.title }}
-								{% if vid.data.paywalled == true %}🔒{% endif %}
+								{% if vid.data.paywalled == true %}
+									<img src="/assets/img/icon-lock.svg" class="inline h-3 pr-1">
+								{% else %}
+									{{ forloop.index }}
+								{% endif %}
+								{{ vid.data.title }}
 							{% else %}
 								<a href="{{vid.url}}" class="no-underline font-light">{{forloop.index}}. {{ vid.data.title }}</a>
 							{% endif %}

@@ -4,6 +4,7 @@ videoId: 6zbEVAXVBjI
 duration: 415
 order: 12
 uploadDate: 2020-05-22
+section: "Internet of Thing"
 ---
 
 The ESP32 is an amazing chip for building IoT devices because it has WiFi built-in.

@@ -1,7 +1,7 @@
 ---
-title: Fields & Arguments
+title: Aliases & Arguments
 order: 5
-duration: 256
+duration: 203
 paywalled: true
 section: "Core concepts"
 ---

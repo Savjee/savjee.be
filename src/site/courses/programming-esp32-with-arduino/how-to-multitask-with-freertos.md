@@ -4,6 +4,7 @@ videoId: WQGAs9MwXno
 duration: 384
 order: 24
 uploadDate: 2021-02-09
+section: "FreeRTOS"
 ---
 
 Run multiple tasks on the ESP32 with FreeRTOS. For instance: blinking two LED's at different intervals or increment two counters at the same time.

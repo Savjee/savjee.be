@@ -4,6 +4,7 @@ videoId: YSGPcm-qxDA
 duration: 375
 order: 26
 uploadDate: 2021-02-09
+section: "FreeRTOS"
 ---
 
 Does your ESP32 need a constant WiFi connection? Use a FreeRTOS task to constantly check your connection, and re-establish it when needed.

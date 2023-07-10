@@ -4,6 +4,7 @@ videoId: vzPV3hax03Y
 duration: 177
 order: 22
 uploadDate: 2021-05-20
+section: "Hardware"
 ---
 
 This water-proof sensor can detect if there's an object within its range using infrared light. The range is configurable up to 2 meters and the sensor is waterproof.

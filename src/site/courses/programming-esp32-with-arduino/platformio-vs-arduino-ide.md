@@ -4,6 +4,7 @@ videoId: iKLJv6rvpTs
 duration: 174
 order: 6
 uploadDate: 2020-05-22
+section: "PlatformIO"
 ---
 
 When you're writing Arduino code for your ESP32, you're likely use the Arduino IDE. And while it is a great tool for beginning users, it lacks some more advanced features that are really nice to have.

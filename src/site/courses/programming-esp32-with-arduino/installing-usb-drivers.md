@@ -4,6 +4,7 @@ videoId: JmDxP4O4Trk
 duration: 77
 order: 2
 uploadDate: 2020-05-22
+section: "Introduction"
 ---
 
 ESP32 development boards have a built-in USB to UART controller, so you don't need a standalone USB to TTL controller to flash a program to the ESP32.

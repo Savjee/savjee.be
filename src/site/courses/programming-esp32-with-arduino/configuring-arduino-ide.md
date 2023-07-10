@@ -4,6 +4,7 @@ videoId: wNtGHCrO7E4
 duration: 206
 order: 3
 uploadDate: 2020-05-22
+section: "Arduino IDE"
 ---
 
 By default, the Arduino IDE only supports official Arduino boards. You can easily add support for the ESP32 by using the Boards Manager.

@@ -4,6 +4,7 @@ videoId: F1fQ8m3S8-4
 duration: 544
 order: 13
 uploadDate: 2020-05-22
+section: "Internet of Thing"
 ---
 
 Once you have your ESP32 connected to WiFi, you can send data to external services to keep track of them. One of those is ThingSpeak.

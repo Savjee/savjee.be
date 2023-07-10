@@ -4,6 +4,7 @@ videoId: zIHPogas1cU
 duration: 290
 order: 11
 uploadDate: 2020-05-22
+section: "Hardware"
 ---
 
 An ESP32 can only control low power peripherals (3V). To control higher powered devices, like a light or outlet, you'll need a relay board.

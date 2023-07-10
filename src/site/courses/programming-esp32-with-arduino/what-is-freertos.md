@@ -4,6 +4,7 @@ videoId: kP-pP6FEu8I
 duration: 156
 order: 23
 uploadDate: 2021-02-09
+section: "FreeRTOS"
 ---
 
 Want to multitask on your ESP32? By using FreeRTOS you won't have to worry about scheduling your tasks and making sure that all of them are given enough processing time.

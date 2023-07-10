@@ -4,6 +4,7 @@ videoId: tkDJQkB9eEY
 duration: 328
 order: 4
 uploadDate: 2020-05-22
+section: "Arduino IDE"
 ---
 
 When learning a new programming language, the first thing that people teach you is the Hello World. In case of Arduino and ESP32's it's blinking an LED light.

@@ -4,6 +4,7 @@ videoId: A5CB4t9sukM
 duration: 156
 order: 1
 uploadDate: 2020-05-22
+tags: ["ESP32", "Arduino"]
 ---
 
 In this video I want to go over some of the reasons why - in my opinion - the ESP32 is an incredible microcontroller and why you should use in your IoT projects.

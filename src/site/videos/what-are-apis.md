@@ -7,6 +7,7 @@ duration: 408
 order: 29
 series: Simply explained
 date: 2019-11-12
+tags: ["API"]
 ---
 
 APIs are very technical, and yet they are used everywhere. Simply put: APIs allow different apps and services to work together in various ways. In this video, I'll highlight four ways in which APIs can be used: to access data, to hide complexity, to extend functionality, and for security/privacy reasons.

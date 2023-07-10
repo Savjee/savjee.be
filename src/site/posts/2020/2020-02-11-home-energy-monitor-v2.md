@@ -4,7 +4,7 @@ title: "Home Energy Monitor: V2"
 quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measures total electricity consumption in the entire house.
 thumbnail: /uploads/2020-02-11-home-energy-monitor-v2/poster-750.jpg
 upload_directory: /uploads/2020-02-11-home-energy-monitor-v2
-tags: [ESP32, DIY, Energy, FreeRTOS, AWS, Home Assistant]
+tags: [ESP32, DIY, Energy, FreeRTOS, AWS, Home Assistant, GraphQL]
 toc_enabled: true
 ---
 

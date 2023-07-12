@@ -4,10 +4,10 @@ videoId: Gd76yF1Dkg4
 duration: 182
 order: 1
 uploadDate: 2016-12-19
-
-link_udemy: https://www.udemy.com/typescript-design-patterns/
-link_skillshare: https://skl.sh/2Ha3f5W
 tags: ["Typescript"]
+available_platforms:
+    - name: YouTube
+      url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiQyjtcrtvDkeQMJIrv5ABbm
 ---
 
 Object oriented design patterns help you create more robust and flexible software. In this course I will show you how to use these patterns in TypeScript.

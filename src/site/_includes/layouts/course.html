@@ -25,7 +25,7 @@ layout: default
 
 	<div class="flex">
 		<article class="flex-1 overflow-auto pr-8">
-			<h1 class="mt-0">
+			<h1 class="mt-0 pb-4">
 				{% if order == 1 %}
 					{{ courseName }}
 				{% else %}
@@ -34,17 +34,15 @@ layout: default
 			</h1>
 
 			{% if order == 1 %}
-			<p>
-				Available on:
-		
-				{% if link_udemy %}
-				<a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-				{% endif %}
-				
-				{% if link_skillshare %}
-					<a href="{{link_skillshare}}">Skillshare</a>
-				{% endif %}
-			</p>
+				<div class="pb-10">
+					<span class="pr-4">Available on</span>
+
+					{%- for platform in available_platforms -%}
+						<a href="{{platform.url}}" class="bg-savjeered text-savjeewhite px-4 py-2 rounded-3xl no-underline mr-2">
+							{{- platform.name -}}
+						</a>	
+					{% endfor %}
+				</div>
 			{% endif %} 
 		
 			<div>

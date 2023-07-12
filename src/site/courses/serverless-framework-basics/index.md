@@ -5,6 +5,9 @@ duration: 96
 order: 1
 tags: ["Serverless", "AWS Lambda"]
 uploadDate: 2017-06-06
+available_platforms:
+    - name: YouTube
+      url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiT5b4OsmIBiMbsPjfp4kfg3
 ---
 
 Overview of all the topics that will be addressed in my series on the Serverless framework.

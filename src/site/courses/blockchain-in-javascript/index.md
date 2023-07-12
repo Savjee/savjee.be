@@ -5,6 +5,9 @@ duration: 891
 order: 1
 uploadDate: 2017-07-18
 tags: ["Blockchain"]
+available_platforms:
+    - name: YouTube
+      url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4
 ---
 
 Learn how to write your own Blockchain with JavaScript. In this video I'll show you what is behind a blockchain by using simple code. It's not a complete implementation, but enough to understand how blockchains work and how they guarantee that blocks can never be changed.

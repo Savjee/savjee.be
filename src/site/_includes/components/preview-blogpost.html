@@ -2,10 +2,7 @@
     {% if post.data.thumbnail %}
     <div class="max-w-320 w-full pr-8">
         <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
-            {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-            {% xd_img %}
-                <img src="{{thumbnailUrl}}" class="w-full" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
-            {% endxd_img %}
+            {% include "components/blogpost-thumbnail.html", post: post %}
         </a>
     </div>
     {% endif %}

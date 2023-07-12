@@ -1,9 +1,7 @@
 <div class="flex items-center py-4">
     <div class="w-full max-w-320 pr-8">
         <a href="{{video.url}}">
-            {% xd_img %}
-                <img src="https://i.ytimg.com/vi/{{video.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
-            {% endxd_img %}
+            {% include "components/youtube-thumbnail.html", video: video %}
         </a>
     </div>
     <div>

@@ -15,9 +15,7 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
             {% for vid in featuredVideos %}
                 <div>
                     <a href="{{vid.url}}">
-                        {% xd_img %}
-                            <img src="https://i.ytimg.com/vi/{{vid.data.videoId}}/maxresdefault.jpg" class="w-full py-0" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
-                        {% endxd_img %}
+                        {% include "components/youtube-thumbnail.html", video: vid %} 
                     </a>
                     <div class="mt-2">
                         <a href="{{vid.url}}" class="no-underline hover:underline">

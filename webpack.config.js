@@ -6,7 +6,6 @@ module.exports = {
       './src/site/_assets/js/static-youtube-embed.js',
       './src/site/_assets/js/load-more.js',
       './node_modules/instant.page/instantpage.js',
-      './src/site/_assets/css/bundle.scss',
   ],
   module: {
     rules: [
@@ -20,25 +19,6 @@ module.exports = {
                 }
             }
         },
-        {
-            test: /\.scss$/,
-            exclude: /(node_modules)/,
-            use: [
-                {
-                    loader: 'file-loader',
-                    options: { outputPath: 'css/', name: '[name].min.css' }
-                },
-
-                {
-                  loader: 'sass-loader',
-                  options: {
-                    sassOptions: {
-                        outputStyle: 'compressed'
-                    }
-                  }
-                },
-            ]
-        }
     ]
   },
   output: {

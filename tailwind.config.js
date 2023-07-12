@@ -38,6 +38,9 @@ module.exports = {
       }
     }
   },
+  safelist: [
+    "csl-bib-body"
+  ],
   plugins: [],
 }
 

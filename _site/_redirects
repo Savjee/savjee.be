@@ -1,7 +1,8 @@
 /posts.html /blog/ 301
 /posts/ /blog/ 301
-/about.html /about/ 301
-/contact.html /about/ 301
+/about.html / 301
+/about/ / 301
+/contact.html / 301
 
 /2022/09/serverless-anagram-solver-with-cloudflare-r2-and-pages/* /blog/serverless-anagram-solver-with-cloudflare-r2-and-pages/ 301
 /2022/07/integrate-home-assistant-with-apple-reminders/* /blog/integrate-home-assistant-with-apple-reminders/ 301

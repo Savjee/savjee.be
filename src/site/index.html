@@ -7,7 +7,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 
 <div class="relative w-full aspect-[16/7]">
     <div class="absolute left-0 right-0 top-0 bottom-0 -z-10">
-        <img src="/assets/img/home-banner.jpg">
+        <img src="/assets/img/home-banner.jpg" {{ "/assets/img/home-banner.jpg" | htmlImageSize }}>
     </div>
     <div class="h-full mx-auto max-w-5xl flex justify-end items-center">
         <div class="w-96 right-0">
@@ -21,48 +21,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
 </div>
 
 <div class="max-w-5xl mx-auto mt-16">
-    {% assign latest_video = collections.videos | reverse | getFeatureable | first %}
-    {% assign latest_post = collections.posts | getFeatureable | first %}
-
-    <div class="flex gap-8 items-center">
-        <div class="flex-none max-w-lg">
-            <a href="{{latest_video.url}}">
-                {% include "components/youtube-thumbnail.html", video: latest_video %} 
-            </a>
-        </div>
-        <div>
-            <h2 class="text-xl font-extrabold m-0 p-0">{{ latest_video.data.title }}</h2>
-            <p>{{ latest_video.content | md | strip_html | truncate: 200 }}</p>
-
-            <div class="flex items-center mt-5">
-                <div>
-                    <a href="{{latest_video.url}}" class="no-underline hover:underline">Watch now</a>
-                </div>
-                <div class="pl-3 ml-3 border-l border-savjeelightgrey4">
-                    <a href="/videos" class="no-underline hover:underline">More videos</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex gap-8 items-center mt-20">
-        <div>
-            <h2 class="text-xl font-extrabold m-0 p-0">{{ latest_post.data.title }}</h2>
-            <p>{{ latest_post.content | md | strip_html | truncate: 200 }}</p>
-
-            <div class="flex items-center mt-5">
-                <div>
-                    <a href="{{latest_post.url}}" class="no-underline hover:underline">Read more</a>
-                </div>
-                <div class="pl-3 ml-3 border-l border-savjeelightgrey4">
-                    <a href="/blog" class="no-underline hover:underline">More posts</a>
-                </div>
-            </div>
-        </div>
-        <div class="flex-none max-w-lg">
-            {% include "components/blogpost-thumbnail.html", post: latest_post, highquality: true %}
-        </div>
-    </div>
+    {% include "components/latest-content.html" %}
 </div>
 
 <div class="bg-savjeelightgrey5 mt-20 py-20">
@@ -70,7 +29,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
     <div class="max-w-5xl mx-auto">
         <div class="text-center">
             <h2 class="pt-0 text-3xl font-extrabold">About me</h2>
-            <p class="max-w-3xl mx-auto mt-6">
+            <p class="max-w-2xl mx-auto mt-6">
                 By looking at this website and my content you probably think that I'm a developer and a passionate geek. Spot on! 
                 Here are some facts that you probably don't know about me: I'm 29 years old and I live in a country that is so tiny you might not even spot it on a map!
             </p>
@@ -92,7 +51,10 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
                 <p>Feel free to reach out to me on Twitter (<a href="https://twitter.com/Savjee">@Savjee</a>) and let me know. I'd love hearing from you!</p>
             </div>
             <div class="flex-none max-w-md">
-                <img src="/assets/img/about-me-2.jpeg">
+                {% xd_img %}
+                    <img src="/assets/img/about-me-2.jpg" {{ "/assets/img/about-me-2.jpg" | htmlImageSize }}>
+                {% endxd_img %}
+                
             </div>
         </div>
     </div>

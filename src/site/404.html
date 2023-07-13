@@ -5,13 +5,15 @@ title: 404 - Page not found
 wider: true
 ---
 
-<div class="container">
-    <h1>{{title}}</h1>
-    <p>Oops. Seems like the page you're looking for doesn't exist anymore...</p>
+<div class="mx-auto max-w-5xl">
+        <h1>{{title}}</h1>
+        <p>Oops. Seems like the page you're looking for doesn't exist anymore...</p>
 
-    <p>Have a look at my recent content and you might get surprised!</p>
+        <p>Have a look at my recent content and you might get surprised!</p>
 </div>
 
-<hr>
-{% include "components/latest-content.html" %}
-<hr>
+<div class="bg-savjeelightgrey5 py-20 mt-8">
+        <div class="mx-auto max-w-5xl">
+                {% include "components/latest-content.html" %}
+        </div>
+</div>

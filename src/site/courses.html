@@ -8,6 +8,9 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
 
 <div class="grid grid-cols-3 gap-8 gap-y-10">
   {% for course in collections.courses %}
+    {% if course.data.archived %}
+      {% continue %}
+    {% endif %}
     {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
     {% assign videos_in_course = collections.all 
                                             | where: "data.courseName" 

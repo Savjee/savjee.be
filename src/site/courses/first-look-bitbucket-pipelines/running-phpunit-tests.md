@@ -3,7 +3,7 @@ title: Running PHPUnit tests
 videoId: 2cMa0HJq3Tk
 duration: 370
 order: 2
-uploadDate: 2016-05-27
+date: 2016-05-27
 ---
 
 In this video I'll show you how to run PHPUnit tests on BitBucket Pipelines. Running your unit tests after each commit is a great idea if you want to improve the stability of your application.

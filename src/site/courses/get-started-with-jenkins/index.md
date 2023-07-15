@@ -3,7 +3,7 @@ title: Introduction
 videoId: WWcijE7ifcA
 duration: 123
 order: 1
-uploadDate: 2016-03-15
+date: 2016-03-15
 ---
 
 

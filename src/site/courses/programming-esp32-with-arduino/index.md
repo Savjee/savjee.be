@@ -3,7 +3,7 @@ title: "Why ESP32's Are the Best Microcontrollers"
 videoId: A5CB4t9sukM
 duration: 156
 order: 1
-uploadDate: 2020-05-22
+date: 2020-05-22
 tags: ["ESP32", "Arduino"]
 section: "Introduction"
 available_platforms:

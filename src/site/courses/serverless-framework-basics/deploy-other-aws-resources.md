@@ -3,7 +3,7 @@ title: Deploy other AWS resources
 videoId: P-QPUdQnc3E
 duration: 563
 order: 10
-uploadDate: 2017-06-27
+date: 2017-06-27
 ---
 
 Learn how to deploy other AWS resources by specifying them in the serverless.yml file. Whenever you deploy your app, Serverless will provision these resources through CloudFormation. It will also make sure that your application is always in a consistent state and will rollback changes if something goes wrong.

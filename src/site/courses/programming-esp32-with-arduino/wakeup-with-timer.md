@@ -3,7 +3,7 @@ title: "Wakeup From Sleep With a Timer"
 videoId: vln1NXpd77s
 duration: 237
 order: 15
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Deep sleep"
 ---
 

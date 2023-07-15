@@ -3,7 +3,7 @@ title: Introduction
 videoId: wAX8VA7FH8M
 duration: 111
 order: 1
-uploadDate: 2017-04-06
+date: 2017-04-06
 tags: ["Typescript"]
 available_platforms:
     - name: Udemy

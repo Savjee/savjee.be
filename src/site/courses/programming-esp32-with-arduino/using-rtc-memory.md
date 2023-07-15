@@ -3,7 +3,7 @@ title: "Using RTC Memory to Store Data During Sleep"
 videoId: ij-hjzv6QKY
 duration: 184
 order: 17
-uploadDate: 2020-05-22
+date: 2020-05-22
 tags: ["ESP32"]
 section: "Deep sleep"
 ---

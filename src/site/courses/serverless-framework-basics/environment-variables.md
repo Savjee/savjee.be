@@ -3,7 +3,7 @@ title: Environment variables
 videoId: 1_sOPBgRAww
 duration: 292
 order: 11
-uploadDate: 2017-07-04
+date: 2017-07-04
 ---
 
 Learn how to use environment variables with Serverless and AWS Lambda. These allow you to store things like database connection settings and API keys. Environment variables can be shared across multiple functions or you can limit them to specific functions only.

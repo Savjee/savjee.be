@@ -3,7 +3,7 @@ title: Creating a front-end for Lambda functions
 videoId: mfAT38B_uhw
 duration: 663
 order: 9
-uploadDate: 2016-08-01
+date: 2016-08-01
 ---
 
 In this video I'll show you how to create a front-end for your Lambda functions. I'm going to build a HTML front-end for the guestbook functions that I showed you in the previous 2 video's.

@@ -3,7 +3,7 @@ title: "Using Touch Pins"
 videoId: 4YY7TutRrQE
 duration: 231
 order: 9
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Hardware"
 ---
 

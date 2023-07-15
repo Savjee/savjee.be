@@ -3,7 +3,7 @@ title: "IR Proximity Sensor (adjustable)"
 videoId: vzPV3hax03Y
 duration: 177
 order: 22
-uploadDate: 2021-05-20
+date: 2021-05-20
 section: "Hardware"
 ---
 

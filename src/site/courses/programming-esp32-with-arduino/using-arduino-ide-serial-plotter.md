@@ -3,7 +3,7 @@ title: "Using Arduino Serial Plotter"
 videoId: mtP86o1gjgM
 duration: 377
 order: 5
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Arduino IDE"
 ---
 

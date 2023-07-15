@@ -3,7 +3,7 @@ title: "Manage FreeRTOS tasks - Suspend, Delay, Resume, Delete"
 videoId: jJaGRCgDo9s
 duration: 347
 order: 25
-uploadDate: 2021-02-09
+date: 2021-02-09
 section: "FreeRTOS"
 ---
 

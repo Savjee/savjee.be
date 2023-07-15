@@ -3,7 +3,7 @@ title: Facade pattern
 videoId: KQdiA2HtOxU
 duration: 421
 order: 4
-uploadDate: 2017-04-06
+date: 2017-04-06
 ---
 
 The facade pattern is used to hide a lot of complexity behind a single method.

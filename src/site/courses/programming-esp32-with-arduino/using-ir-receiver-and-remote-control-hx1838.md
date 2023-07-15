@@ -3,7 +3,7 @@ title: "Using IR Receiver (HX1838) + Remote Control"
 videoId: 6JDmT31zSJk
 duration: 414
 order: 19
-uploadDate: 2020-10-25
+date: 2020-10-25
 section: "Hardware"
 ---
 

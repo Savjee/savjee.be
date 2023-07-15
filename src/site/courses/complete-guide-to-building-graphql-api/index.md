@@ -2,11 +2,15 @@
 title: Introduction 
 order: 1
 duration: 98
-link_udemy: https://www.udemy.com/complete-guide-to-building-a-graphql-api/?couponCode=SAVJEE
-link_skillshare: https://skl.sh/2H1uXia
+available_platforms:
+    - name: Udemy
+      url: https://www.udemy.com/complete-guide-to-building-a-graphql-api/?couponCode=SAVJEE
+    - name: Skillshare
+      url: https://skl.sh/2H1uXia
 tags: ["GraphQL", "API"]
 videoId: EkxwX5bWXt0
 section: "Introduction"
+date: 2017-10-01
 ---
 
 Everything you need to know to build your own GraphQL API.

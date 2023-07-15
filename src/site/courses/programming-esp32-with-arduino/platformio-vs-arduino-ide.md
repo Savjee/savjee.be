@@ -3,7 +3,7 @@ title: "Why Use PlatformIO Instead of Arduino IDE"
 videoId: iKLJv6rvpTs
 duration: 174
 order: 6
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "PlatformIO"
 ---
 

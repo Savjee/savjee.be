@@ -3,7 +3,7 @@ title: Using scheduled events to trigger Lambda functions
 videoId: 1nxIKzFBkRY
 duration: 362
 order: 6
-uploadDate: 2016-08-01
+date: 2016-08-01
 ---
 
 In this video I'll show you how to use scheduled events to trigger Lambda functions on a regular interval. This can be useful if you have to perform maintenance on a database, send out periodic emails, checking the status of different services, ...

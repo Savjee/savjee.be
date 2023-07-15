@@ -3,7 +3,7 @@ title: State pattern
 videoId: gMyRtqwxr10
 duration: 746
 order: 6
-uploadDate: 2017-04-06
+date: 2017-04-06
 ---
 
 The state pattern is used to keep track of the state of a process. In this video I'll use an order on Amazon.com as an example.

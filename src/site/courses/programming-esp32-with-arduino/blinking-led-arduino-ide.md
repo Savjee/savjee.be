@@ -3,7 +3,7 @@ title: "Blinking LED"
 videoId: tkDJQkB9eEY
 duration: 328
 order: 4
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Arduino IDE"
 ---
 

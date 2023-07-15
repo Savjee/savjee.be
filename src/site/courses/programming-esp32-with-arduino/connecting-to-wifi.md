@@ -3,7 +3,7 @@ title: "Connecting to WiFi"
 videoId: 6zbEVAXVBjI
 duration: 415
 order: 12
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Internet of Thing"
 ---
 

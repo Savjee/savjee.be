@@ -3,7 +3,7 @@ title: Basic implementation
 videoId: zVqczFZr124
 duration: 891
 order: 1
-uploadDate: 2017-07-18
+date: 2017-07-18
 tags: ["Blockchain"]
 available_platforms:
     - name: YouTube

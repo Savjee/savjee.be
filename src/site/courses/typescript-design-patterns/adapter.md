@@ -3,7 +3,7 @@ title: Adapter pattern
 videoId: beU4i949YXU
 duration: 347
 order: 5
-uploadDate: 2017-04-06
+date: 2017-04-06
 ---
 
 The adapter pattern allows you to make different classes with different interfaces work together, without changing their source code.

@@ -3,7 +3,7 @@ title: "VL53l0x: Time-of-Flight Distance Sensor"
 videoId: SWBI6_rxmT8
 duration: 234
 order: 21
-uploadDate: 2021-05-20
+date: 2021-05-20
 section: "Hardware"
 ---
 

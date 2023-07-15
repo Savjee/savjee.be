@@ -1,7 +1,10 @@
 ---
 title: Building a Google Home bot! (With SpaceX knowledge)
 order: 1
-link_udemy: https://www.udemy.com/building-your-own-action-on-google/?couponCode=SAVJEE
+date: 2018-05-01
+available_platforms:
+    - name: Udemy
+      url: https://www.udemy.com/building-your-own-action-on-google/?couponCode=SAVJEE
 ---
 
 Chatbots are awesome to ask quick questions, but how do you create one yourself? In this course you’ll learn how you can extend the Google Assistant by creating your own “Action on Google”.

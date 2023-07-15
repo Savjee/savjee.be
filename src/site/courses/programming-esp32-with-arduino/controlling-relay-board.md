@@ -3,7 +3,7 @@ title: "Controlling a Relay Board"
 videoId: zIHPogas1cU
 duration: 290
 order: 11
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Hardware"
 ---
 

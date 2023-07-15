@@ -3,7 +3,7 @@ title: "How to Multitask with FreeRTOS?"
 videoId: WQGAs9MwXno
 duration: 384
 order: 24
-uploadDate: 2021-02-09
+date: 2021-02-09
 section: "FreeRTOS"
 ---
 

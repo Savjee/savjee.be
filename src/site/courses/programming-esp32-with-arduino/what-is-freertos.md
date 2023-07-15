@@ -3,7 +3,7 @@ title: "What is FreeRTOS?"
 videoId: kP-pP6FEu8I
 duration: 156
 order: 23
-uploadDate: 2021-02-09
+date: 2021-02-09
 section: "FreeRTOS"
 ---
 

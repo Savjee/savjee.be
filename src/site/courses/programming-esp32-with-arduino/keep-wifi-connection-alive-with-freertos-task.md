@@ -3,7 +3,7 @@ title: "Keep WiFi Connection Alive with a FreeRTOS Task"
 videoId: YSGPcm-qxDA
 duration: 375
 order: 26
-uploadDate: 2021-02-09
+date: 2021-02-09
 section: "FreeRTOS"
 ---
 

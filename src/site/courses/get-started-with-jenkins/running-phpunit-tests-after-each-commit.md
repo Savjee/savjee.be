@@ -3,7 +3,7 @@ title: Running PHPUnit tests after each commit
 videoId: 68cDNUz7uro
 duration: 639
 order: 5
-uploadDate: 2016-03-15
+date: 2016-03-15
 ---
 
 In this video I'll show you how you can run PHPUnit tests on each Jenkins build. Unit testing ensures that your project remains stable and doesn't contain any regressions.

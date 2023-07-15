@@ -3,7 +3,7 @@ title: Introduction
 videoId: Gd76yF1Dkg4
 duration: 182
 order: 1
-uploadDate: 2016-12-19
+date: 2016-12-19
 tags: ["Typescript"]
 available_platforms:
     - name: YouTube

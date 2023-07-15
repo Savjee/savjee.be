@@ -3,7 +3,7 @@ title: Introduction
 videoId: fSUEk6iMW88
 duration: 227
 order: 1
-uploadDate: 2016-08-01
+date: 2016-08-01
 ---
 
 In this video I'll give you an overview of this series: getting started with Lambda.

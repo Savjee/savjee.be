@@ -3,7 +3,7 @@ title: "Touch Pins as Wakeup Source"
 videoId: oGdKPxXJtL8
 duration: 321
 order: 16
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Deep sleep"
 ---
 

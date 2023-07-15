@@ -3,7 +3,7 @@ title: "Connect and Send Data to ThingSpeak"
 videoId: F1fQ8m3S8-4
 duration: 544
 order: 13
-uploadDate: 2020-05-22
+date: 2020-05-22
 section: "Internet of Thing"
 ---
 

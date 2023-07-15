@@ -3,7 +3,7 @@ title: Using environment variables
 videoId: RVwkT4oHDd8
 duration: 299
 order: 3
-uploadDate: 2016-05-27
+date: 2016-05-27
 ---
 
 In this video I'll show you how to use environment variables to keep things like credentials safe and out of your git repository. Why? Well usernames and passwords don't belong in your git repository. They shouldn't be available to everyone.

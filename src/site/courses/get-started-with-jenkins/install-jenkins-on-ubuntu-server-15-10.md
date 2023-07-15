@@ -3,7 +3,7 @@ title: Installing Jenkins on Ubuntu Server 15.10
 videoId: AXlN-f6Uk64
 duration: 281
 order: 2
-uploadDate: 2016-03-15
+date: 2016-03-15
 ---
 
 In this video I'll show you how you can install Jenkins on Ubuntu Server 15.10. The same instructions will also work for the latest release of Ubuntu Server (16.10).

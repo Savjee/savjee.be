@@ -3,7 +3,7 @@ title: Integrate with GitHub - build after each commit
 videoId: Z3S2gMBUkBo
 duration: 454
 order: 13
-uploadDate: 2016-03-15
+date: 2016-03-15
 ---
 
 Integrate Jenkins with GitHub and trigger a build every time you make a commit to GitHub. This is essential for starting to use continuous integration within your project or team!

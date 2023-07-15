@@ -3,7 +3,7 @@ title: "Correctly Measure Battery Level - MAX17048"
 videoId: mhmD-QA6kf0
 duration: 262
 order: 20
-uploadDate: 2021-05-20
+date: 2021-05-20
 section: "Hardware"
 ---
 

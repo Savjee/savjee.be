@@ -3,7 +3,7 @@ title: Implementing proof-of-work
 videoId: HneatE69814
 duration: 403
 order: 2
-uploadDate: 2017-10-03
+date: 2017-10-03
 ---
 
 Adding the proof-of-work mechanism to our homemade Javascript blockchain.

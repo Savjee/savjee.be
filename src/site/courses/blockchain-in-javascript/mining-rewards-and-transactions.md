@@ -3,7 +3,7 @@ title: Mining transactions &amp; rewards
 videoId: fRV6cGXVQ4I
 duration: 731
 order: 3
-uploadDate: 2018-01-30
+date: 2018-01-30
 ---
 
 Implementing miner rewards and basic transactions in our Javascript based blockchain.

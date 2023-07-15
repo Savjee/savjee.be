@@ -3,7 +3,7 @@ title: Observer pattern
 videoId: GioexP_s5Yc
 duration: 730
 order: 3
-uploadDate: 2017-04-06
+date: 2017-04-06
 ---
 
 Often when information in one part of application changes, other parts need to be updates. This is the problem that the Observer pattern solves very efficiently.

@@ -48,10 +48,6 @@
     }
 
     /* -------------------- Article content -------------------- */
-    article img{
-      @apply py-8 mx-auto max-w-full
-    }
-
     article ul,
     article ol{
       @apply list-outside ml-8 my-6 text-base
@@ -87,6 +83,14 @@
 
     p+p{
       @apply pt-4
+    }
+
+    article img{
+      @apply py-8 mx-auto max-w-full
+    }
+    
+    article img+em, article picture+em{
+      @apply block text-center text-sm -mt-6 text-savjeelightgrey3 pb-8
     }
 
     blockquote{

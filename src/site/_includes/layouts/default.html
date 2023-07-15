@@ -4,11 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    {% comment %} Subpages for video series can't set "title" directly {% endcomment%}
-    {% if title == nil %}
-        {% assign title = renderData.title %}
-    {%endif%}
-
     <title>{{ title | escape_once }} | Simply Explained</title>
 
     {% assign seo_description_tmp = quote | default: page.excerpt %}
@@ -30,7 +25,6 @@
 
     <!-- TODO: Re-enable these -->
     <link rel="preload" href="/assets/css/main.css" as="stylesheet" />
-    <!-- <link rel="preload" href="/assets/main.js" as="script" /> -->
 
     <link rel="stylesheet" href="/assets/css/main.css">
     <meta name="p:domain_verify" content="ee843ddad91f8b4384f2f3a13a714e2d">
@@ -107,7 +101,6 @@
 
 <footer class="mt-20 border-t border-savjeelightgrey text-sm py-10">
     <div class="mx-auto max-w-5xl">
-
         <div class="flex flex-row">
             <div class="">
                 <div class="mx-auto flex flex-row items-center max-w-5xl">

@@ -133,24 +133,30 @@
             <div>
                 <p class="uppercase font-semibold text-sm text-savjeeblue">Follow me</p>
                 <div class="flex items-center">
-                    <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://www.youtube.com/@simplyexplained" class="pr-4" rel="noopener" target="_blank">
                         {% include "icons/youtube.html" %}
                     </a>
                     <a href="https://twitter.com/Savjee/" class="pr-4" rel="noopener" target="_blank">
                         {% include "icons/twitter.html" %}
                     </a>
+                    <a rel="me" href="https://mastodon.world/@simplyexplained" class="pr-4" target="_blank">
+                        {% include "icons/mastodon.html" %}
+                    </a>
                     <a href="https://www.instagram.com/simplyexplained_com/" class="pr-4" rel="noopener" target="_blank">
                         {% include "icons/instagram.html" %}
                     </a>
-                    <a href="https://www.tiktok.com/@simplyexplained_com?lang=en" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://www.tiktok.com/@simplyexplained_com" class="pr-4" rel="noopener" target="_blank">
                         {% include "icons/tiktok.html" %}
                     </a>
-                    <!-- <a href="https://github.com/Savjee" class="pr-4" rel="noopener" target="_blank">
+                    
+                    {% comment %}
+                    <a href="https://github.com/Savjee" class="pr-4" rel="noopener" target="_blank">
                         {% include "icons/github.html" %}
-                    </a> -->
+                    </a>
                     <a href="/atom.xml" rel="noopener" target="_blank">
                         {% include "icons/rss.html" %}
                     </a>
+                    {% endcomment %}
                 </div>
             </div>
         </div>
@@ -160,14 +166,6 @@
             <p class="pt-5 text-sm text-savjeeblue">Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper. All rights reserved.</p>
         </div>
     </div>
-
-    <!-- <p>
-        <a href="/about">About</a> - 
-        <a href="/atom.xml">RSS</a> - 
-        <a href="https://github.com/Savjee" rel="noopener" target="_blank">Github</a> -
-        <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank">Twitter</a> -
-        <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ" rel="noopener" target="_blank">YouTube</a>
-    </p> -->
 </footer>
 
 <script defer src="/assets/main.js"></script>

@@ -7,7 +7,8 @@ title: Courses
 these courses to help you learn certain topics in-depth. Enjoy!</p>
 
 <div class="grid grid-cols-3 gap-8 gap-y-10">
-  {% for course in collections.courses %}
+  {% assign courses = collections.courses | sort: "data.date" | reverse %}
+  {% for course in courses %}
     {% if course.data.archived %}
       {% continue %}
     {% endif %}

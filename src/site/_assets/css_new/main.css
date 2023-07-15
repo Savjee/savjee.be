@@ -174,7 +174,7 @@
 
   /* For the static YouTube player */
   .play-button{
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjAuMTk3IiBoZWlnaHQ9IjYyIj48ZGVmcz48cGF0aCBpZD0iQSIgZD0iTTI5My44MDIgMTUwdjU0bDUyLjE5Ny0yNi43NjZ6Ii8+PGZpbHRlciB4PSItMTMuNCUiIHk9Ii05LjMlIiB3aWR0aD0iMTI2LjglIiBoZWlnaHQ9IjEyNS45JSIgaWQ9IkIiPjxmZU9mZnNldCBkeT0iMiIgaW49IlNvdXJjZUFscGhhIi8+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwICAgMCAwIDAgMCAwICAgMCAwIDAgMCAwICAwIDAgMCAwLjUgMCIvPjwvZmlsdGVyPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjg5LjgwMiAtMTQ4KSIgZmlsbC1ydWxlPSJldmVub2RkIj48dXNlIGZpbGw9IiMwMDAiIGZpbHRlcj0idXJsKCNCKSIgeGxpbms6aHJlZj0iI0EiLz48dXNlIGZpbGw9IiNmZmYiIHhsaW5rOmhyZWY9IiNBIi8+PC9nPjwvc3ZnPg==');
     @apply w-full h-full bg-no-repeat border-none;
   }
 

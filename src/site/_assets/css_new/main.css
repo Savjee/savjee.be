@@ -1,3 +1,6 @@
+@import "prism-themes/themes/prism-coldark-cold.css";
+@import "prism-themes/themes/prism-coldark-dark.css" (prefers-color-scheme: dark);
+
 @tailwind base;
 
 @layer base {

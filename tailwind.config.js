@@ -33,14 +33,26 @@ module.exports = {
       'sm':  ['14px', '20px'],
     },
     extend: {
-      maxWidth: {
-        '320': '320px'
-      }
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': theme('colors.savjeeblack'),
+            '--tw-prose-headings': theme('colors.savjeeblack'),
+            '--tw-prose-links': theme('colors.savjeered'),
+            '--tw-prose-hr': theme('colors.savjeelightgrey4'),
+            '--tw-prose-pre-code': theme('colors.savjeelightgrey2'),
+            '--tw-prose-pre-bg': theme('colors.savjeelightgrey2'),
+            '--tw-prose-pre-code': theme('colors.savjeeblack'),
+          }
+        }
+      }),
     }
   },
   safelist: [
     "csl-bib-body"
   ],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

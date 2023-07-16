@@ -2,20 +2,22 @@
 layout: narrow 
 ---
 
-<p>
-    <a href="/newsletter" class="no-underline">&larr; Back to newsletters</a>
-</p>
-
-<h1 class="pb-2">
-    {{ title }}
-</h1>
-
-<div class="mb-10 text-sm text-savjeelightgrey3">
-    Sent on
-    <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+<div class="prose max-w-none">
+    <p>
+        <a href="/newsletter" class="no-underline">&larr; Back to newsletters</a>
+    </p>
+    
+    <h1 class="pb-2">
+        {{ title }}
+    </h1>
+    
+    <div class="mb-10 text-sm text-savjeelightgrey3">
+        Sent on
+        <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    </div>
 </div>
 
-<article class="relative">
+<article class="prose max-w-none relative">
     <div class="absolute -left-16">
         {% include "components/share-buttons-vertical.html" %}
     </div>

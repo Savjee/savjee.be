@@ -1,0 +1,13 @@
+<div class="relative">
+    {% if item.url | startsWith: "/blog" %}
+      {% include "components/preview-blogpost.html" item: item %}
+    {% endif %}
+
+    {% if item.url | startsWith: "/videos/" %}
+      {% include "components/preview-video.html" video: item %}
+    {% endif %}
+
+    {% if item.url | startsWith: "/courses/" %}
+      Course: <a href="{{item.url}}">{{ item.data.courseName }}</a>
+    {% endif %}
+</div>

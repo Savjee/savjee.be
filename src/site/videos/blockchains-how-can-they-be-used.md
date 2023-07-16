@@ -1,7 +1,7 @@
 ---
 layout: video
 collection: videos
-title: Blockchains&#58; How can they be used?
+title: "Blockchains: How can they be used?"
 videoId: aQWflNQuP_o
 duration: 427
 order: 15

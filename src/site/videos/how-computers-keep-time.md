@@ -7,6 +7,7 @@ duration: 487
 order: 17
 series: Simply explained
 date: 2018-07-17
+tags: ["Computer basics"]
 ---
 
 My first laptop lost track of time, so that got me thinking: how do computers keep track of time? Can they do it forever? And why don't they lose track of time when we turn them off?

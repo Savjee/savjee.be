@@ -8,6 +8,7 @@ order: 36
 series: Simply explained
 date: 2020-11-25
 not_featureable: true
+tags: ["Computer basics"]
 ---
 
 What is a cache? How does it work, and why is it important?

@@ -50,7 +50,7 @@ layout: default
 			</div>
 		</article> 
 
-		<aside class="w-80">
+		<nav class="w-80" role="navigation" aria-label="Table of contents">
 			<div class="p-6 bg-savjeelightgrey5">
 				<p class="font-bold">
 					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.
@@ -86,7 +86,7 @@ layout: default
 				{% endfor %}
 			</div>
 			
-		</aside>
+		</nav>
 	</div>
 
 	{% comment %} *********** Structured data for Google *********** {% endcomment %}

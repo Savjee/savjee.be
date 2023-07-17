@@ -23,20 +23,12 @@ module.exports = {
       'savjeelightgrey4': '#CCCCCC',
       'savjeelightgrey5': '#FAFAFA'
     },
-    fontSize: {
-      '4xl': ['60px', '84px'], // Page title
-      '3xl': ['48px', '67px'], // H2
-      '2xl': ['36px', '44px'], // H3
-      'xl':  ['28px', '44px'], // H4
-      'lg':  ['20px', '24px'],
-      'base':['18px', '36px'],
-      'sm':  ['14px', '20px'],
-    },
     extend: {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             '--tw-prose-body': theme('colors.savjeeblack'),
+            '--tw-prose-quotes': theme('colors.savjeeblack'),
             '--tw-prose-headings': theme('colors.savjeeblack'),
             '--tw-prose-links': theme('colors.savjeered'),
             '--tw-prose-hr': theme('colors.savjeelightgrey4'),

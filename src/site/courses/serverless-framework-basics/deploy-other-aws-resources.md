@@ -35,5 +35,5 @@ resources:
 
 You can provision almost any resource on AWS this way. Want to deploy another resource that wasn't shown in this video? Luckily Amazon has a bunch of examples on it's website: <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html" target="_blank">AWS Resource Types Reference</a>.
 
-# Useful resources
+## Useful resources
 * <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html" target="_blank">AWS Resource Types Reference</a>

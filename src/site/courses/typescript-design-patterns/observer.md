@@ -10,5 +10,5 @@ Often when information in one part of application changes, other parts need to b
 
 In this example we'll program a weather station that notifies a fan and a temperature display every time a new measurement was taken.
 
-# Source code
+## Source code
 Source code used in this video can be found on <a href="https://github.com/SavjeeTutorials/typescript-design-patterns" target="_blank">GitHub</a>.

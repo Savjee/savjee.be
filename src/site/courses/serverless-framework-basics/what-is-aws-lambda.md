@@ -10,5 +10,5 @@ What is so special about AWS Lambda? In this video we will look at why people li
 
 I'll describe what the service is, what it can be used for and why it is much better then running virtual machines or containers.
 
-# Useful resources
+## Useful resources
 * <a href="https://aws.amazon.com/lambda/" target="_blank">Official Lambda product page</a>

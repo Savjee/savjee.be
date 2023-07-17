@@ -12,7 +12,7 @@ In this video we will refactor our Javascript blockchain so that it will only ac
 
 We'll use the `ecp256k1` elliptic curve to generate a keypair. The same algorithm used in Bitcoin. But you can use other algorithms as well.
 
-# Source code
+## Source code
 The code used in this video is [available on GitHub](https://github.com/SavjeeTutorials/SavjeeCoin).
 
 Feel free to fork it, improve it and open pull requests!

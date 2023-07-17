@@ -60,7 +60,7 @@ module.exports.handler = (event, context, callback) => {
 }
 {% endhighlight %}
 
-# Useful resources
+## Useful resources
 * <a href="https://serverless.com/framework/docs/providers/aws/guide/functions#environment-variables" target="_blank">Serverless documentation on environment variables</a>
 * <a href="http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html" target="_blank">AWS documentation on environment variables</a>
 

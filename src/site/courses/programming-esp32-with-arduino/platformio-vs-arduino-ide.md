@@ -18,5 +18,5 @@ PlatformIO is an alternative to the Arduino IDE that includes additional feature
 One important thing to note: PlatformIO is not an IDE! Instead, it's a plugin that you have to install in your IDE of choice. They support Visual Studio Code, Atom, Cloud9, Eclipse, Emacs, NetBeans, Sublime Text, and they even support Vim!
 
 
-# Useful links
+## Useful links
 * PlatformIO Homepage: [https://platformio.org](https://platformio.org/)

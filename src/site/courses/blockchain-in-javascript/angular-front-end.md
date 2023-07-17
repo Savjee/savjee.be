@@ -10,6 +10,6 @@ Blockchains are hard to understand, so let's visualize their inner workings by b
 
 A [live demo of the front-end is available here](https://savjee.github.io/savjeecoin-frontend/).
 
-# Source code
+## Source code
 The code used in this video is [available on GitHub](https://github.com/Savjee/savjeecoin-frontend).
 Feel free to fork, modify & improve it. Pull requests are appreciated!

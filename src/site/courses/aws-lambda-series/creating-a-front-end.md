@@ -10,7 +10,7 @@ In this video I'll show you how to create a front-end for your Lambda functions.
 
 The static front-end that I create in this video is written in HTML and Javascript and can be hosted anywhere you'd like. I've chosen to host it on Amazon S3 for scalability reasons.
 
-# Source code
+## Source code
 Source code of the front-end that I create in this video can be found on <a href="https://github.com/SavjeeTutorials/getting-started-with-lambda/tree/master/09-creating-a-front-end" target="_blank">GitHub</a>.
 
 

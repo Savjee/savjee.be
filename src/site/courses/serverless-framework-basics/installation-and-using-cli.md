@@ -12,5 +12,5 @@ Before you begin, make sure that you have installed node.js on your machine. Aft
 
 <pre>npm install -g serverless</pre>
 
-# Useful resources
+## Useful resources
 * <a href="https://nodejs.org/en/" target="_blank">Node.js homepage</a>

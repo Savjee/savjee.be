@@ -36,5 +36,5 @@ This is an introduction video to my "Learning TypeScript" series. In the next vi
 
 TypeScript compiles to regular JavaScript so it can run in any browser or on node.js. There's no reason not to use it!
 
-# Useful resources
+## Useful resources
 * <a href="https://www.typescriptlang.org/" target="_blank">TypeScript website</a>

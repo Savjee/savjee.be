@@ -10,7 +10,7 @@ Implementing miner rewards and basic transactions in our Javascript based blockc
 
 Mining rewards steadily introduce new coins into the system.
 
-# Source code
+## Source code
 The code used in this video is [available on GitHub](https://github.com/SavjeeTutorials/SavjeeCoin). It's in `src/main-v3.js`.
 
 Feel free to fork it, improve it and open pull requests!

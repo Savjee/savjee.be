@@ -8,5 +8,5 @@ date: 2016-03-15
 
 Setup Jenkins to post to your Slack channel whenever a build starts, ends, fails or succeeds. That way you can bring your entire team up-to-date. 
 
-# Useful resources
+## Useful resources
 * <a href="https://github.com/jenkinsci/slack-plugin" target="_blank">Slack plugin for Jenkins (on GitHub)</a>

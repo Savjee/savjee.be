@@ -42,6 +42,7 @@
     "prism-themes": "^1.9.0",
     "sharp": "^0.31.3",
     "tailwindcss": "^3.3.1",
+    "tailwindcss-base-font-size": "^1.0.0",
     "ts-node": "^10.4.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"

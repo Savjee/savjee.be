@@ -24,6 +24,9 @@ module.exports = {
       'savjeelightgrey5': '#FAFAFA'
     },
     extend: {
+      maxWidth: {
+        '320': '320px'
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -45,6 +48,9 @@ module.exports = {
   ],
   plugins: [
     require('@tailwindcss/typography'),
+    require('tailwindcss-base-font-size')({
+      baseFontSize: 18,
+    }),
   ],
 }
 

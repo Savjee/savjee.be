@@ -7,14 +7,14 @@
     </div>
     {% endif %}
     <div>
-        <p class="pb-0">
+        <p class="text-xl">
             <a href="{{ post.url }}" class="no-underline">{{ post.data.title }}</a>
         </p>
-        <p class="text-sm p-0">
+        <p class="py-3">
             {{ post.content | md | strip_html | truncate: 200 }}
         </p>
 
-        <div class="text-sm text-savjeelightgrey3">
+        <div class="text-base text-savjeelightgrey3">
             {% include "components/tags.html" tags: post.data.tags %}
         </div>
     </div>

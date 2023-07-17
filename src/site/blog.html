@@ -1,25 +1,30 @@
 ---
-layout: narrow 
+layout: page 
 title: Blog
 quote: Overview of blog posts
+pagination:
+  data: collections.posts
+  size: 15
+  alias: posts
 ---
 
-<h1 class="bigtitle mb-12">
-    <a href="/blog/">Blog</a>
-</h1>
-
-
 <div>
-    {% assign maxPosts = 15 %}
-
-    {% for post in collections.posts %}
-        <div class="mb-8 pb-8 border-b border-savjeelightgrey {% if forloop.index > maxPosts %}hidden more-item{% endif %}">
+    {% for post in posts %}
+        <div class="mb-8 pb-8 border-b border-savjeelightgrey">
             {% include "components/preview-blogpost.html" post: post %}
         </div>
     {% endfor %}
 
-    <div class="text-center py-8">
-        <button class="secondary load-more-button">Load more</button>
+    <div class="flex items-center justify-center mt-20">
+        {% if pagination.href.previous %}
+        <div>
+            <a href="{{ pagination.href.previous }}">Previous page</a>
+        </div>
+        {% endif %}
+        {% if pagination.href.next %}
+        <div class="{% if pagination.href.previous %}pl-6 ml-6 border-l border-savjeelightgrey4{% endif%}">
+            <a href="{{ pagination.href.next }}">Next page</a>
+        </div>
+        {% endif %}
     </div>
-
 </div>

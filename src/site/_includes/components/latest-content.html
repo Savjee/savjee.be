@@ -8,7 +8,9 @@
         </a>
     </div>
     <div>
-        <h2 class="text-xl font-extrabold m-0 p-0">{{ latest_video.data.title }}</h2>
+        <h2 class="m-0 p-0 mb-5">
+            <a href="{{ latest_video.url}}" class="no-underline text-savjeeblack text-3xl font-extrabold">{{ latest_video.data.title }}</a>
+        </h2>
         <p>{{ latest_video.content | md | strip_html | truncate: 200 }}</p>
 
         <div class="flex items-center mt-5">
@@ -24,7 +26,9 @@
 
 <div class="flex gap-8 items-center mt-20">
     <div>
-        <h2 class="text-xl font-extrabold m-0 p-0">{{ latest_post.data.title }}</h2>
+        <h2 class="m-0 p-0 mb-5">
+            <a href="{{latest_post.url}}" class="no-underline text-savjeeblack text-3xl font-extrabold">{{ latest_post.data.title }}</a>
+        </h2>
         <p>{{ latest_post.content | md | strip_html | truncate: 200 }}</p>
 
         <div class="flex items-center mt-5">
@@ -37,6 +41,8 @@
         </div>
     </div>
     <div class="flex-none max-w-lg">
-        {% include "components/blogpost-thumbnail.html", post: latest_post, highquality: true %}
+        <a href="{{ latest_post.url }}">
+            {% include "components/blogpost-thumbnail.html", post: latest_post, highquality: true %}
+        </a>
     </div>
 </div>

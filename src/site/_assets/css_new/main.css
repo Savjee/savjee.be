@@ -30,7 +30,7 @@
     /* ---- For the small underline beneath H1 and main navigation items ---- */
     h1.bigtitle,
     h1.bigtitle a{
-      @apply relative text-savjeeblue no-underline text-4xl font-bold
+      @apply relative text-savjeeblue no-underline text-6xl font-bold mb-14
     }
     
     h1.bigtitle a:after{
@@ -63,6 +63,10 @@
 
     article img+em, article picture+em{
       @apply block text-center text-sm -mt-6 text-savjeelightgrey3 pb-8
+    }
+
+    hr{
+      @apply border-savjeelightgrey4
     }
 
     /* pre,

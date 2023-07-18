@@ -2,9 +2,15 @@
 layout: default
 title: Videos
 quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
+pagination:
+  data: collections.videos
+  size: 15
+  alias: videos
 ---
-{% assign featuredVideos = collections.videos | reverse | getFeatureable | slice: 0,6 %}
 
+{% assign featuredVideos = collections.videos | getFeatureable | slice: 0,6 %}
+
+{% if pagination.pageNumber == 0 %}
 <div class="bg-savjeelightgrey2 py-10 mb-8">
     <div class="mx-auto max-w-5xl">
         <h1 class="bigtitle my-0">
@@ -33,32 +39,26 @@ quote: Simply Explained is taking complicated topics and explaining them in a si
         </div>
     </div>
 </div>
+{% else %}
+    <div class="mx-auto max-w-5xl">
+        <h1 class="bigtitle my-0 pt-10 mb-8">
+            <a href="{{ page.url }}">{{ title }}</a>
+        </h1>
+    </div>
+{% endif %}
 
 <div class="mx-auto max-w-5xl">
-    {% assign shownVideos = 0 %}
-    {% assign maxVideos = 6 %}
-
-    {% assign videos = collections.videos | sort: "date" %}
-    {% for vid in videos reversed %}
+    {% for vid in videos  %}
         {% if featuredVideos contains vid %}
             {% continue %}
         {% endif %}
 
-        {% assign shownVideos = shownVideos | plus: 1 %}
-
-        {% if shownVideos > maxVideos %}
-            <div class="more-item hidden">
-        {% else %}
-            <div class="more-item">
-        {% endif %}
-
-        {% include "components/preview-video.html" video: vid %}
-
+        <div class="more-item py-3">
+            {% include "components/preview-video.html" video: vid %}
         </div>
     {% endfor %}
-
-    <div class="text-center py-8">
-        <button class="secondary load-more-button">Load more</button>
-    </div>
 </div>
 
+<div class="mt-20">
+    {% include "components/paginator.html" %} 
+</div>

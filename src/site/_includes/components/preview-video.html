@@ -1,20 +1,20 @@
-<div class="flex items-center py-4">
+<div class="flex items-center">
     <div class="w-full max-w-320 pr-8">
         <a href="{{video.url}}">
             {% include "components/youtube-thumbnail.html", video: video %}
         </a>
     </div>
     <div>
-        <div class="mb-2 text-lg">
+        <div class="text-xl">
             <a href="{{video.url}}" class="no-underline hover:underline">{{ video.data.title }}</a>
         </div>
 
-        <div class="text-sm text-savjeelightgrey3 mb-4">
-            {% include "components/video-duration-and-tags.html" video: video %}
-        </div>
-
-        <div>
+        <div class="py-3">
             {{ video.content | md | strip_html | truncate: 200 }}
         </div>
+
+        <div class="text-base text-savjeelightgrey3 mb-4">
+            {% include "components/video-duration-and-tags.html" video: video %}
+        </div>        
     </div>
 </div>

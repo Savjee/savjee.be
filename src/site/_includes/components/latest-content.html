@@ -1,4 +1,4 @@
-{% assign latest_video = collections.videos | reverse | getFeatureable | first %}
+{% assign latest_video = collections.videos | getFeatureable | first %}
 {% assign latest_post = collections.posts | getFeatureable | first %}
 
 <div class="flex gap-8 items-center">

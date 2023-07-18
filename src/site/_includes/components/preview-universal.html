@@ -8,6 +8,6 @@
     {% endif %}
 
     {% if item.url | startsWith: "/courses/" %}
-      Course: <a href="{{item.url}}">{{ item.data.courseName }}</a>
+      {% include "components/preview-course.html", course: item %}
     {% endif %}
 </div>

@@ -101,11 +101,11 @@
 
   /* -------------------- Citations -------------------- */
   .csl-bib-body a {
-    @apply font-normal no-underline text-sm
+    @apply font-normal no-underline text-sm 
   }
 
   .csl-bib-body .csl-entry{
-    @apply pb-4
+    @apply pb-4 leading-none
   }
 }
 

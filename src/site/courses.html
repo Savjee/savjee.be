@@ -46,3 +46,30 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
     </div>
   {% endfor%}
 </div>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {%- for course in courses %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "Course",
+          "url":"{% baseUrl %}{{course.url}}",
+          "name": "{{ course.data.courseName }}",
+          "description": "{{ course.data.courseName }}",
+          "provider": {
+            "@type": "Organization",
+            "name": "Simply Explained",
+            "sameAs": "{% baseUrl %}"
+         }
+        }
+      }
+      {%- unless forloop.last -%},{% endunless -%}
+      {% endfor -%}
+    ]
+  }
+  </script>

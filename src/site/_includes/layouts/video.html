@@ -32,7 +32,9 @@ no_title: true
             "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
         ],
         "uploadDate": "{% if date %}{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
-        "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+        "embedUrl": "https://www.youtube.com/embed/{{videoId}}",
+        "contentUrl": "https://www.youtube.com/watch?v={{videoId}}",
+        "duration": "PT{{duration | divided_by: 3600, true}}H{{ duration | divided_by: 60, true }}M{{ duration | modulo: 60 }}S"
     },
     {
       "@context": "https://schema.org",
@@ -45,11 +47,6 @@ no_title: true
       },{
         "@type": "ListItem",
         "position": 2,
-        "name": "{{series}}",
-        "item": "{% baseUrl %}/videos/{{series | slug }}"
-      },{
-        "@type": "ListItem",
-        "position": 3,
         "name": "{{ title }}"
       }]
     }

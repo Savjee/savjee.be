@@ -52,12 +52,8 @@ module.exports = function (config) {
 
     config.addCollection('videos', (collectionApi) => {
          return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
-
-            // Sort on the "uploadDate" that I've manually put it
-            // Fallback to the "date" that Eleventy generates (based
-            // on file creation date).
             .sort((a, b) => {
-                return a.data.uploadDate - b.data.uploadDate;
+                return b.date - a.date;
             });
     });
 

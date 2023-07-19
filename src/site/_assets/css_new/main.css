@@ -4,6 +4,10 @@
 @tailwind base;
 
 @layer base {
+  .containerX{
+    @apply px-4 mx-auto max-w-5xl
+  }
+
     /* -------------------- Main navigation -------------------- */
     nav li a{
       @apply relative

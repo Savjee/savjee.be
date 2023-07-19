@@ -15,7 +15,7 @@ layout: default
 	{% assign total_duration = total_duration | plus: duration %}
 {% endfor %}
 
-<div class="mx-auto max-w-5xl mt-12">
+<div class="containerX mt-12">
 	{% assign videoDesc = courseName | append: " - " | append: title %}
 	{% include "youtube-embed.html", videoId:videoId, videoDescription: videoDesc %}
 

@@ -20,12 +20,12 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
     </div>
 </div>
 
-<div class="max-w-5xl mx-auto mt-16">
+<div class="containerX mt-16">
     {% include "components/latest-content.html" %}
 </div>
 
 <div class="bg-savjeelightgrey5 mt-20 py-20">
-    <div class="max-w-5xl mx-auto">
+    <div class="containerX">
         <div class="text-center">
             <h2 class="pt-0 text-3xl font-extrabold">About me</h2>
             <p class="max-w-2xl mx-auto mt-6 prose font-medium">
@@ -34,7 +34,7 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
             </p>
         </div>
 
-        <div class="flex mt-16 gap-32 items-center prose max-w-none">
+        <div class="flex flex-col md:flex-row mt-16 gap-32 items-center prose max-w-none">
             <div>
                 <p>Besides this blog, I also have <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ">a YouTube channel</a> 
                     and I've created <a href="/courses">a few e-learning courses</a>. 
@@ -49,11 +49,10 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
                     
                 <p>Feel free to reach out to me on Twitter (<a href="https://twitter.com/Savjee">@Savjee</a>) and let me know. I'd love hearing from you!</p>
             </div>
-            <div class="flex-none max-w-md">
+            <div class="hidden md:block flex-none max-w-md">
                 {% xd_img %}
                     <img src="/assets/img/about-me-2.jpg" {{ "/assets/img/about-me-2.jpg" | htmlImageSize }}>
                 {% endxd_img %}
-                
             </div>
         </div>
     </div>

@@ -12,12 +12,12 @@ pagination:
 
 {% if pagination.pageNumber == 0 %}
 <div class="bg-savjeelightgrey2 py-10 mb-8">
-    <div class="mx-auto max-w-5xl">
+    <div class="containerX">
         <h1 class="bigtitle my-0">
             <a href="{{ page.url }}">{{ title }}</a>
         </h1>
 
-        <div class="grid grid-cols-3 gap-8 gap-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-10">
             {% for vid in featuredVideos %}
                 <div>
                     <a href="{{vid.url}}">
@@ -40,14 +40,14 @@ pagination:
     </div>
 </div>
 {% else %}
-    <div class="mx-auto max-w-5xl">
+    <div class="containerX px-4 md:px-0">
         <h1 class="bigtitle my-0 pt-10 mb-8">
             <a href="{{ page.url }}">{{ title }}</a>
         </h1>
     </div>
 {% endif %}
 
-<div class="mx-auto max-w-5xl">
+<div class="containerX">
     {% for vid in videos  %}
         {% if featuredVideos contains vid %}
             {% continue %}

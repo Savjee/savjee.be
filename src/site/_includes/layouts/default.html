@@ -103,19 +103,17 @@
 {{ content }}
 
 <footer class="mt-20 border-t border-savjeelightgrey text-sm py-10">
-    <div class="containerX">
-        <div class="flex flex-row items-center">
-            <div class="">
-                <div class="mx-auto flex flex-row items-center max-w-5xl">
-                    <a href="/">
-                        <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="40" height="40">
+    <div class="containerX text-center md:text-left">
+        <div class="flex flex-col gap-8 items-center md:flex-row">
+            <div class="mx-auto flex flex-row items-center max-w-5xl">
+                <a href="/">
+                    <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="40" height="40">
+                </a>
+        
+                <div class="text-sm text-left">
+                    <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium">
+                        Simply<br>Explained
                     </a>
-            
-                    <div class="text-sm">
-                        <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium">
-                            Simply<br>Explained
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="flex-1 text-center">
@@ -127,26 +125,26 @@
                 </p>
             </div>
             <div>
-                <p class="uppercase font-semibold text-sm text-savjeeblue">Follow me</p>
-                <div class="flex items-center">
-                    <a href="https://www.youtube.com/@simplyexplained" class="pr-4" rel="noopener" target="_blank">
+                <p class="mb-2 uppercase font-semibold text-sm text-savjeeblue">Follow me</p>
+                <div class="flex gap-8 md:gap-4 items-center">
+                    <a href="https://www.youtube.com/@simplyexplained" rel="noopener" target="_blank">
                         {% include "icons/youtube.html" %}
                     </a>
-                    <a href="https://twitter.com/Savjee/" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank">
                         {% include "icons/twitter.html" %}
                     </a>
-                    <a rel="me" href="https://mastodon.world/@simplyexplained" class="pr-4" target="_blank">
+                    <a rel="me" href="https://mastodon.world/@simplyexplained" target="_blank">
                         {% include "icons/mastodon.html" %}
                     </a>
-                    <a href="https://www.instagram.com/simplyexplained_com/" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://www.instagram.com/simplyexplained_com/" rel="noopener" target="_blank">
                         {% include "icons/instagram.html" %}
                     </a>
-                    <a href="https://www.tiktok.com/@simplyexplained_com" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://www.tiktok.com/@simplyexplained_com" rel="noopener" target="_blank">
                         {% include "icons/tiktok.html" %}
                     </a>
                     
                     {% comment %}
-                    <a href="https://github.com/Savjee" class="pr-4" rel="noopener" target="_blank">
+                    <a href="https://github.com/Savjee" rel="noopener" target="_blank">
                         {% include "icons/github.html" %}
                     </a>
                     <a href="/atom.xml" rel="noopener" target="_blank">
@@ -157,8 +155,8 @@
             </div>
         </div>
 
-        <div class="pt-0">
-            <p class="pt-5 text-sm text-savjeelightgrey3">Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper. All rights reserved.</p>
+        <div>
+            <p class="pt-6 text-sm text-savjeelightgrey3">Copyright 2011-{{ "now" | date: "%Y" }}, Xavier Decuyper. All rights reserved.</p>
         </div>
     </div>
 </footer>

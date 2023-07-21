@@ -23,9 +23,9 @@ layout: default
 		<a href="/courses/" class="no-underline">← Back to courses</a>
 	</p>
 
-	<div class="flex">
+	<div class="flex flex-col md:flex-row">
 		<article class="flex-1 overflow-auto pr-8 prose">
-			<h1 class="mt-0 pb-4">
+			<h1 class="mt-0">
 				{% if order == 1 %}
 					{{ courseName }}
 				{% else %}
@@ -34,7 +34,7 @@ layout: default
 			</h1>
 
 			{% if order == 1 %}
-				<div class="pb-10">
+				<div class="pb-6 -mt-6">
 					<span class="pr-4">Available on</span>
 
 					{%- for platform in available_platforms -%}
@@ -50,7 +50,7 @@ layout: default
 			</div>
 		</article> 
 
-		<nav class="w-80" role="navigation" aria-label="Table of contents">
+		<nav class="order-first w-full md:w-80 md:order-none" role="navigation" aria-label="Table of contents">
 			<div class="p-6 bg-savjeelightgrey5">
 				<p class="font-bold">
 					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.

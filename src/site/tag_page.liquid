@@ -11,8 +11,10 @@ permalink: /tag/{{ tag | slugify }}/
 
 {% assign taglist = collections[tag] | sort: "date" | reverse %}
 
+<div >
 {% for post in taglist | reverse %}
-  <div class="my-8 pb-8 border-b border-savjeelightgrey4">
+  <div class="my-8 pb-8 border-b border-savjeelightgrey4 last:border-none">
     {% include "components/preview-universal.html", item: post %}
   </div>
 {% endfor %}
+</div>

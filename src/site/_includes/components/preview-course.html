@@ -1,7 +1,7 @@
 {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
 
-<div class="flex items-center">
-    <div class="w-full max-w-320 pr-8">
+<div class="flex flex-col md:flex-row items-center">
+    <div class="w-full max-w-320 pr-8 pb-6">
         <a href="{{course.url}}">
             <img src="{{ thumbnailUrl }}" class="w-full py-0" loading="lazy" alt="Thumbnail for course '{{ course.data.courseName }}'">
         </a>

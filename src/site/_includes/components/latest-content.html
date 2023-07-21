@@ -1,8 +1,8 @@
 {% assign latest_video = collections.videos | getFeatureable | first %}
 {% assign latest_post = collections.posts | getFeatureable | first %}
 
-<div class="flex gap-8 items-center">
-    <div class="flex-none max-w-lg">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+    <div class="flex-none w-full md:max-w-lg">
         <a href="{{latest_video.url}}">
             {% include "components/youtube-thumbnail.html", video: latest_video %}
         </a>
@@ -24,8 +24,8 @@
     </div>
 </div>
 
-<div class="flex gap-8 items-center mt-20">
-    <div>
+<div class="flex flex-col md:flex-row gap-8 items-center mt-20">
+    <div class="order-2 md:order-none">
         <h2 class="m-0 p-0 mb-5">
             <a href="{{latest_post.url}}" class="no-underline text-savjeeblack text-3xl font-extrabold">{{ latest_post.data.title }}</a>
         </h2>
@@ -40,7 +40,7 @@
             </div>
         </div>
     </div>
-    <div class="flex-none max-w-lg">
+    <div class="order-1 md:order-none w-full flex-none md:max-w-lg">
         <a href="{{ latest_post.url }}">
             {% include "components/blogpost-thumbnail.html", post: latest_post, highquality: true %}
         </a>

@@ -6,7 +6,7 @@ title: Courses
 <p class="max-w-2xl pb-12">Short explainer videos on YouTube only get you so far. That's why I've created
 these courses to help you learn certain topics in-depth. Enjoy!</p>
 
-<div class="grid grid-cols-3 gap-8 gap-y-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-10">
   {% assign courses = collections.courses | sort: "data.date" | reverse %}
   {% for course in courses %}
     {% if course.data.archived %}

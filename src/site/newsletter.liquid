@@ -20,11 +20,10 @@ title: "Newsletter"
         <h3 class="text-2xl font-bold pb-4 pt-16">{{ yearObj.year }}</h3>
 
         {% for newsletter in yearObj.posts reversed %}
-            <p class="py-3 leading-tight">
+            <div class="py-3 leading-tight border-b border-b-savjeelightgrey4 last:border-none">
                 <a href="{{newsletter.url}}" class="no-underline hover:underline">{{newsletter.data.title}}</a><br>
                 <span class="text-savjeelightgrey3 text-sm">Sent on {{newsletter.date | date: "%B %e, %Y" }}</span>
-            </p>
-            <hr>
+            </div>
         {% endfor %}
     {% endfor %}
 </div>

@@ -4,7 +4,6 @@ videoId: ij-hjzv6QKY
 duration: 184
 order: 17
 date: 2020-05-22
-tags: ["ESP32"]
 section: "Deep sleep"
 ---
 

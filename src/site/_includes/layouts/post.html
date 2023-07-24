@@ -18,7 +18,7 @@ layout: narrow
     {% endcomment %}
 
     <div class="md:absolute md:-left-16">
-        {% include "components/share-buttons-vertical.html" %}
+        {% render "components/share-buttons-vertical.html", page: page, title: title %}
     </div>
 
     {{ content }}

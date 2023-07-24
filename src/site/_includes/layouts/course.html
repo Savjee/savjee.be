@@ -17,7 +17,7 @@ layout: default
 
 <div class="containerX mt-12">
 	{% assign videoDesc = courseName | append: " - " | append: title %}
-	{% include "youtube-embed.html", videoId:videoId, videoDescription: videoDesc %}
+	{% render "youtube-embed.html", videoId:videoId, videoDescription: videoDesc %}
 
 	<p class="mt-12 mb-5">
 		<a href="/courses/" class="no-underline">← Back to courses</a>

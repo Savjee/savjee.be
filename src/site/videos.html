@@ -21,7 +21,7 @@ pagination:
             {% for vid in featuredVideos %}
                 <div>
                     <a href="{{vid.url}}">
-                        {% include "components/youtube-thumbnail.html", video: vid %} 
+                        {% render "components/youtube-thumbnail.html", video: vid %} 
                     </a>
                     <div class="mt-2">
                         <a href="{{vid.url}}" class="no-underline hover:underline">
@@ -31,7 +31,7 @@ pagination:
                         </a>
                         
                         <div class="text-sm text-savjeelightgrey3">
-                            {% include "components/video-duration-and-tags.html" video: vid, duration: vid.data.duration %}
+                            {% render "components/video-duration-and-tags.html" video: vid, duration: vid.data.duration %}
                         </div>
                     </div>
                 </div>
@@ -54,11 +54,11 @@ pagination:
         {% endif %}
 
         <div class="more-item py-3">
-            {% include "components/preview-video.html" video: vid %}
+            {% render "components/preview-video.html" video: vid %}
         </div>
     {% endfor %}
 </div>
 
 <div class="mt-20">
-    {% include "components/paginator.html" %} 
+    {% render "components/paginator.html", pagination: pagination %} 
 </div>

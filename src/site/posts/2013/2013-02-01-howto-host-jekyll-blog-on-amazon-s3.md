@@ -11,7 +11,7 @@ A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-
 
 <!--more-->
 
-{% include "youtube-embed.html", videoId:'g9NbuTcos18' %}
+{% render "youtube-embed.html", videoId:'g9NbuTcos18' %}
 
 ## Hosting on Amazon S3
 Since Jekyll websites are static, you can host them practically everywhere. But why would you choose S3 as a hosting provider?

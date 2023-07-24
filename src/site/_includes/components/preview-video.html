@@ -1,7 +1,7 @@
 <div class="md:flex md:gap-8 items-center">
     <div class="w-full md:max-w-320">
         <a href="{{video.url}}">
-            {% include "components/youtube-thumbnail.html", video: video %}
+            {% render "components/youtube-thumbnail.html", video: video %}
         </a>
     </div>
     <div>
@@ -14,7 +14,7 @@
         </div>
 
         <div class="text-base text-savjeelightgrey3 mb-4">
-            {% include "components/video-duration-and-tags.html" video: video %}
+            {% render "components/video-duration-and-tags.html" video: video %}
         </div>        
     </div>
 </div>

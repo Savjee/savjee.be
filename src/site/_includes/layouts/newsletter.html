@@ -19,7 +19,7 @@ layout: narrow
 
 <article class="px-4 md:px-0 prose max-w-none relative">
     <div class="md:absolute md:-left-16">
-        {% include "components/share-buttons-vertical.html" %}
+        {% render "components/share-buttons-vertical.html", page: page, title: title %}
     </div>
 
     <div>
@@ -29,7 +29,7 @@ layout: narrow
 
 <br>
 
-{% include "components/newsletter-box.html" %}
+{% render "components/newsletter-box.html" %}
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">

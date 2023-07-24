@@ -17,6 +17,9 @@
       loading="lazy"
       width="320"
       height="180"
-      alt="Thumbnail for video '{{ videoDescription }}'">
+      {%- if videoDescription -%}
+        alt="Thumbnail for video '{{ videoDescription }}'"
+      {%- endif -%}
+    >
   {% endxd_img %}
 </div>

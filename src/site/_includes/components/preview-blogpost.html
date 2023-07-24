@@ -2,7 +2,7 @@
     {% if post.data.thumbnail %}
     <div class="max-w-320 w-full pb-6 md:pr-8 md:pb-0">
         <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
-            {% include "components/blogpost-thumbnail.html", post: post %}
+            {% render "components/blogpost-thumbnail.html", post: post %}
         </a>
     </div>
     {% endif %}
@@ -15,7 +15,7 @@
         </p>
 
         <div class="text-base text-savjeelightgrey3">
-            {% include "components/tags.html" tags: post.data.tags %}
+            {% render "components/tags.html" tags: post.data.tags %}
         </div>
     </div>
 </div>

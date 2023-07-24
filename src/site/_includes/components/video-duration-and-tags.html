@@ -2,4 +2,4 @@
     {{ duration | divided_by: 60 | floor }} mins {% if video.data.tags %}|{% endif %} 
 {% endif %}
 
-{% include "components/tags.html" tags: video.data.tags %}
+{% render "components/tags.html", tags: video.data.tags %}

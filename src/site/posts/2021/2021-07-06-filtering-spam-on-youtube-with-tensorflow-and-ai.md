@@ -15,7 +15,7 @@ I've been marking these comments as spam, thinking that YouTube would learn to r
 <!--more-->
 
 <small><em>Don't want to read this post? Watch the video:</small></em>
-{% include "youtube-embed.html", videoId:"zSEYC3CCA1I" %}
+{% render "youtube-embed.html", videoId:"zSEYC3CCA1I" %}
 
 ## The plan
 The idea is simple: use the YouTube Data API to fetch the latest comments and run them through a text classifier trained to recognize spam. Then, if it's confident enough that a comment is spam, use another YouTube API to flag and delete it!

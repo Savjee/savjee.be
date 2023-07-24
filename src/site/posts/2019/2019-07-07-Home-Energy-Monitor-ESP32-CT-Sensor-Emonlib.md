@@ -25,7 +25,7 @@ Before jumping in, I set myself these goals for the project:
 
 With those in mind, I started building my own home energy monitoring device!
 
-{% include "youtube-embed.html", videoId:"ah3ezprtgmc" %}
+{% render "youtube-embed.html", videoId:"ah3ezprtgmc" %}
 
 ## The parts
 I started by looking for parts on AliExpress. I’m no expert in electrical circuits so I followed this [guide](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/how-to-build-an-arduino-energy-monitor-measuring-current-only?redirected=true) from [OpenEnergyMonitor](https://openenergymonitor.org) and ultimately landed on these parts:

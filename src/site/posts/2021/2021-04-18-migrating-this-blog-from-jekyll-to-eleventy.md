@@ -92,11 +92,11 @@ Liquid includes are also slightly different between Jekyll and Eleventy. I chang
 
 {% highlight liquid %}
 <!-- Jekyll -->
-{% include youtube-embed.html videoId='y6yD2-ZIllQ' %}
+{% render youtube-embed.html videoId='y6yD2-ZIllQ' %}
 {{include.videoId}}
 
 <!-- Eleventy -->
-{% include "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
+{% render "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
 {{videoId}}
 {% endhighlight %}
 

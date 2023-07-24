@@ -1,13 +1,34 @@
-<div class="relative">
-    {% if item.url | startsWith: "/blog" %}
-      {% include "components/preview-blogpost.html" item: item %}
-    {% endif %}
+{% assign thumbnailUrl = item | getThumbnailUrl %}
 
-    {% if item.url | startsWith: "/videos/" %}
-      {% include "components/preview-video.html" video: item %}
-    {% endif %}
+<div class="md:flex md:gap-8 items-center">
 
-    {% if item.url | startsWith: "/courses/" %}
-      {% include "components/preview-course.html", course: item %}
-    {% endif %}
+  {% if thumbnailUrl %}
+    <div class="w-full md:max-w-320 relative">
+        {% if item.url | startsWith: "/videos/" %}
+          <div class="absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 justify-center flex">
+              <div class="play-button w-14 h-14"></div>
+          </div>
+        {% endif %}
+        <a href="{{item.url}}">
+          {% xd_img %}
+              <img src="{{thumbnailUrl}}" class="w-full" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ item.data.title }}'" /> 
+          {% endxd_img %}
+        </a>
+    </div>
+  {% endif %}
+
+  <div>
+      <div class="text-xl">
+          <a href="{{item.url}}" class="no-underline hover:underline">{{ item | getTitle }}</a>
+      </div>
+
+      <div class="py-3">
+        {{ item.content |  md | strip_html | truncate: 200 }}
+      </div>
+
+      <div class="text-base text-savjeelightgrey3 mb-4">
+          {% render "components/video-duration-and-tags.html", video: item %}
+      </div>        
+  </div>
+
 </div>

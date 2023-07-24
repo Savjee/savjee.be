@@ -24,7 +24,8 @@ module.exports = function (config) {
     // ----------------------- Custom filters -----------------------
     [
         "getVideosInSeries", "getFeatureable", "indexOf", "getRelated",
-        "htmlImageSize", "groupByYear", "startsWith", "filterArrayStartsWith"
+        "htmlImageSize", "groupByYear", "startsWith", "filterArrayStartsWith",
+        "getThumbnailUrl", "getTitle"
     ].forEach((filterName) => {
         config.addLiquidFilter(filterName, 
             require('./src/utils/filters/' + filterName));

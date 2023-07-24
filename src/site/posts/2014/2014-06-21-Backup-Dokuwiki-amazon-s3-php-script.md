@@ -2,7 +2,6 @@
 layout: post
 title: Backup DokuWiki to Amazon S3 with PHP
 quote: 
-upload_directory: dokuwiki-backup-s3
 tags: [AWS]
 ---
 

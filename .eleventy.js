@@ -56,6 +56,18 @@ module.exports = function (config) {
             });
     });
 
+    config.addCollection("tags", function (collection) {
+        const tags = new Set();    
+        for (const item of collection.getAll()) {
+          if ("tags" in item.data) {
+            for (const tag of item.data.tags) {
+              tags.add(tag);
+            }
+          }
+        }
+    
+        return [...tags].sort();
+      });
 
     // ----------------------- Custom shortcodes -----------------------
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));

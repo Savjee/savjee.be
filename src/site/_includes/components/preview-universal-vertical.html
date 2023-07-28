@@ -4,9 +4,13 @@
   {% if thumbnail != null %}
   <div class="w-full pb-6 md:pb-2">
       <a href="{{ item.url }}">
-        {% xd_img %}
-            <img src="{{ thumbnail }}" class="w-full" loading="lazy" {{thumbnail | htmlImageSize }} alt="Thumbnail for '{{ item | getTitle }}'" /> 
-        {% endxd_img %}
+        {% if item.url | startsWith: "/videos/" %}
+            {% render "components/youtube-thumbnail.html", video: item %} 
+        {% else %}
+            {% xd_img %}
+                <img src="{{ thumbnail }}" class="w-full" loading="lazy" {{thumbnail | htmlImageSize }} alt="Thumbnail for '{{ item | getTitle }}'" /> 
+            {% endxd_img %}
+        {% endif %}
       </a>
   </div>
   {% endif %}

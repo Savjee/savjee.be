@@ -19,22 +19,7 @@ pagination:
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-10">
             {% for vid in featuredVideos %}
-                <div>
-                    <a href="{{vid.url}}">
-                        {% render "components/youtube-thumbnail.html", video: vid %} 
-                    </a>
-                    <div class="mt-2">
-                        <a href="{{vid.url}}" class="no-underline hover:underline">
-                            <div class="truncate">
-                                {{ vid.data.title | truncate:100 }}
-                            </div>
-                        </a>
-                        
-                        <div class="text-sm text-savjeelightgrey3">
-                            {% render "components/video-duration-and-tags.html" video: vid, duration: vid.data.duration %}
-                        </div>
-                    </div>
-                </div>
+                {% render "components/preview-universal-vertical.html", item: vid, duration: vid.data.duration %}
             {% endfor %}
         </div>
     </div>

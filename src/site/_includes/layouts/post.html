@@ -24,22 +24,35 @@ layout: narrow
     {{ content }}
 </article>
 
-<p class="">
+
+<div class="text-sm text-savjeelightgrey3 py-10 text-center">
     Posted on
     <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
-</p>
-
+</div>
 
 {% assign related_posts = collections.all | getRelated: tags, page.inputPath %}
 {% if related_posts.size > 0 %}
-	<div class="my-16">
-		<p class="text-2xl font-bold">You May Also Enjoy</p>
-		
-		<ul>
-			{% for post in related_posts limit:4 %}
-				<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-			{% endfor %}
-		</ul>
+	<div class="my-6">
+		<p class="text-4xl font-bold pb-5 text-savjeeblack">You May Also Enjoy</p>
+       
+        <div class="grid grid-cols-2 gap-8">
+            {% comment %} Make sure we only show related items that have a thumbnail! {% endcomment %}
+            {% assign shownItems = 0 %}
+            {% for post in related_posts %}
+                {% assign thumbnailUrl = post | getThumbnailUrl %}
+                {% unless thumbnailUrl %}
+                    {% continue %}
+                {% endunless %}
+            
+                {% if shownItems == 2 %}
+                    {% break %}
+                {% endif %}
+                {% assign shownItems = shownItems | plus: 1 %}
+                <div>
+                    {% render "components/preview-universal-vertical.html", item: post %} 
+                </div>
+            {% endfor %}
+        </div>
 	</div>
 {% endif %}
 

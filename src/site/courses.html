@@ -28,23 +28,9 @@ these courses to help you learn certain topics in-depth. Enjoy!</p>
     {% endfor %}
 
     <div>
-      <a href="{{course.url}}">
-          {% xd_img %}
-              <img src="{{ thumbnailUrl }}" class="w-full py-0" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for course '{{ course.data.courseName }}'">
-          {% endxd_img %}
-      </a>
-      <div class="mt-2">
-          <a href="{{course.url}}" class="no-underline hover:underline">
-              <div class="truncate">
-                  {{ course.data.courseName | truncate:100 }}
-              </div>
-          </a>
-          
-          <div class="text-sm text-savjeelightgrey3">
-              {% include "components/video-duration-and-tags.html" video: course, duration: total_duration %}
-          </div>
-      </div>
+      {% render "components/preview-universal-vertical.html", item: course, duration: total_duration %}
     </div>
+
   {% endfor%}
 </div>
 

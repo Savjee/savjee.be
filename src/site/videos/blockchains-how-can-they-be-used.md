@@ -13,6 +13,8 @@ We've all heard about Blockchains but how can they be used in the real world? Ho
 
 Well, in this video I'll give you 9 examples:
 
+<!--more-->
+
 * Cryptocurrencies
 * Smart odometers
 * Notary

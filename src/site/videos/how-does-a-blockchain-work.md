@@ -14,6 +14,8 @@ Everyone is talking about blockchains and cryptocurrencies these days. But what 
 
 A blockchain is a way of storing data so that cannot be changed anymore. This is called immutability and a very useful feature when dealing with very important data like bank records or transactions.
 
+<!--more-->
+
 # Sources & other links
 
 {% bibtex %}

@@ -14,6 +14,8 @@ IPFS, the Interplanetary Filesystem wants to make the web more decentralized by 
 
 Let's take a look at how IPFS works, how it can solve issue's like censorship and if it would really work across multiple planets!
 
+<!--more-->
+
 # Sources
 {% bibtex %}
 @online{src,

@@ -13,6 +13,8 @@ Cardano (ADA) is gaining a lot of traction, but what makes it so special? In thi
 
 It boils down to: Scalability, Interoperability and Sustainability.
 
+<!--more-->
+
 Watch the video to learn more!
 
 # Sources

@@ -14,6 +14,8 @@ mRNA vaccines have to potential to end the COVID19 pandemic. How do they work? A
 
 The main idea of mRNA vaccines is to trick our bodies to produce part of a virus. This kickstarts our immune response, without getting us sick. All that's needed is a part of the virus's DNA or RNA, packaged into mRNA. Cool!
 
+<!--more-->
+
 # Follow-up: Questions & Answers
 This video has sparked a lot of questions from viewers. I published [a follow-up video with answers to the most commonly asked questions.]({% link collections.videos, "mrna-vaccines-questions-and-misconceptions.md" %}).
 

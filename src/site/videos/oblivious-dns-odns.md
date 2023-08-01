@@ -17,6 +17,8 @@ It builds on top of DoH (DNS over HTTPS) and adds a proxy server to prevent trac
 
 Currently, ODNS is not yet widely supported, but that could quickly change! Especially if Apple would push it to their iOS and macOS customers.
 
+<!--more-->
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

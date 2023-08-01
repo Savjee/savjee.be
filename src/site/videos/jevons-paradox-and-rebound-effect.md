@@ -13,6 +13,9 @@ When efficiency increases, consumption drops, right? Errr... No.. So far, increa
 
 This is called Jevons Paradox, discovered by William Stanley Jevons in 1865. He was concerned that improved steam engines would make England run out of coal faster!
 
+<!--more-->
+
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

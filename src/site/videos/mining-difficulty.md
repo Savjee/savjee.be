@@ -12,6 +12,7 @@ tags: ["Blockchain"]
 
 Mining Bitcoin or Ethereum is a hard task for your computer. But why? And what does the difficulty have to do with the security of blockchains? Learn all about blockchains, consensus algorithms and why difficulty adjustment is crucial to keep everything operating at an optimal (and safe) level.
 
+<!--more-->
 
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:

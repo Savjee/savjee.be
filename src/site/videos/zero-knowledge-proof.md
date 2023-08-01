@@ -14,6 +14,9 @@ Protecting your online privacy could become a lot easier with Zero Knowledge Pro
 
 Need to have a certain age before you can signup for a service? You can deliver a proof that you meet the criteria without sharing your actual age. Or you could prove to your bank that your salary is sufficient to get a loan, without revealing your real salary.
 
+<!--more-->
+
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

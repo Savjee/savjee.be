@@ -14,6 +14,9 @@ My first laptop lost track of time, so that got me thinking: how do computers ke
 
 Turns out the answer is a combination of processor, quartz crystal and the internet. They all work together to keep time.
 
+<!--more-->
+
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

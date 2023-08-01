@@ -12,6 +12,8 @@ tags: ["Ethereum", "Blockchain scaling"]
 
 Ethereum is about to get another big update. It's called Constantinople and will increase the performance of the network and introduce some new features. It will also delay the difficulty bomb. Here we'll take a bird's eye look at the new update.
 
+<!--more-->
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

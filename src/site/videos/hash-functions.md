@@ -13,6 +13,8 @@ You might have found out that [there is a website that checks if your online acc
 
 But do they really know your password?
 
+<!--more-->
+
 Well as it turns out: that might not be the case... To understand why, let’s take a look at what options companies have to protect your password and safely store it so that even when hackers get access to their systems, your password stays safe. 
 
 There are 3 ways a company can store your password: they store it in plain text, use encryption on it or use what’s called a hash function.

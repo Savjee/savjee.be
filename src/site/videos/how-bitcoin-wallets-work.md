@@ -11,3 +11,5 @@ tags: ["Bitcoin", "Blockchain"]
 ---
 
 Wallets in cryptocurrency work in a weird way. They also have some weird properties like: they can be created offline and be used directly. Whut? Let's see how it all works, Simply Explained!
+
+<!--more-->

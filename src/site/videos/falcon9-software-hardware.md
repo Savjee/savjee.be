@@ -14,6 +14,8 @@ The Falcon 9, Falcon Heavy and Dragon are very advanced spacecrafts. So that got
 
 In this video we'll take a look at what programming languages, operating systems, tools and hardware SpaceX uses to get these vehicles into orbit around the around.
 
+<!--more-->
+
 # Sources
 {% bibtex %}
 @online{src,

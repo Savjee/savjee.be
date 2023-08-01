@@ -14,6 +14,8 @@ Learn how to write your own Blockchain with JavaScript. In this video I'll show 
 
 After creating our blockchain we'll try and tamper with it. This will demonstrate a blockchains ability to detect fraud.
 
+<!--more-->
+
 ## Blog post
 
 [Read my blog post]({% link collections.posts, "2017-07-19-Writing-tiny-blockchain-in-JavaScript.md" %}) if you want more information about this video.

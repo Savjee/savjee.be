@@ -12,6 +12,7 @@ In the series I'll cover topics like creating a function in Node.js, deploying t
 
 Lambda allows developers to deploy "serverless" applications. Obviously there are still servers involved, but you don't have to manage them yourself.
 
+<!--more-->
 
 ## Useful resources
 * <a href="https://aws.amazon.com/lambda/details/" target="_blank">Lambda product page</a>

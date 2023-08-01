@@ -11,3 +11,5 @@ not_featureable: true
 ---
 
 How can a scammer convince people that he can predict the stock market or the price of cryptocurrencies? The trick is surprisingly simple. Learn how it works & prevent getting fooled into giving your money to online criminals! 
+
+<!--more-->

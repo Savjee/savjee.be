@@ -11,6 +11,9 @@ date: 2020-06-09
 
 F1 cars have a lot of hardware and software on board. In this video, I explore what hardware the cars run on, the software that powers them, and the tools used at the factories.
 
+<!--more-->
+
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

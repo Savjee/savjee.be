@@ -16,6 +16,8 @@ Behind-the-scenes, they use a keyspace to distribute your data across multiple s
 
 NoSQL databases can operate in multiple modes: as key-value store, document store or wide column store.
 
+<!--more-->
+
 You can run your own NoSQL database with software like Cassandra, CouchDB, MongoDB or Scylla. You can also use a cloud version like AWS DynamoDB, Google Cloud BigTable or Azure CosmosDB.
 
 # Sources

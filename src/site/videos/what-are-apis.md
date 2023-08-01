@@ -12,6 +12,8 @@ tags: ["API"]
 
 APIs are very technical, and yet they are used everywhere. Simply put: APIs allow different apps and services to work together in various ways. In this video, I'll highlight four ways in which APIs can be used: to access data, to hide complexity, to extend functionality, and for security/privacy reasons.
 
+<!--more-->
+
 
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:

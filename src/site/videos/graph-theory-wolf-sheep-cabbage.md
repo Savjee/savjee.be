@@ -11,6 +11,8 @@ date: 2018-09-18
 
 Use Graph Theory to transport a wolf🐺 , sheep 🐑 and cabbage 🥗 across a river. Or use it to figure out how you can cross the 7 bridges of Konigsberg without crossing the same bridge twice. Or how about figuring out how to get from point A to point B?
 
+<!--more-->
+
 Graph Theory is a field in mathemetatics that studies graphs. It can be applied to many problems and was invented in the 1736 by Leonhard Euler.
 
 

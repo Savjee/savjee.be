@@ -12,6 +12,8 @@ tags: ["Privacy"]
 
 Companies are collecting more and more data about us and that can cause harm. With differential privacy companies can learn more about their users without violating our privacy.
 
+<!--more-->
+
 # Sources
 {% bibtex %}
 

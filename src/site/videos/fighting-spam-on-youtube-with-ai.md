@@ -13,6 +13,8 @@ I'm sick of crypto-related spam comments on YouTube, so I trained a machine lear
 
 The filter is surprisingly effective, even though the training dataset is relatively small. I'll keep expanding the dataset and retrain the classifier so it becomes more accurate overtime.
 
+<!--more-->
+
 
 ## Source code
 Available on GitHub: [https://github.com/Savjee/yt-spam-classifier](https://github.com/Savjee/yt-spam-classifier)

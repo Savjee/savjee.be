@@ -10,8 +10,9 @@ date: 2019-03-05
 tags: ["Decentralization"]
 ---
 
-**Summary** | 
 Mastodon is a "federated" social network that works like Twitter. It puts the control of data into the user's hands, not in a single corporation.
+
+<!--more-->
 
 Music used in this video: [Intrics Leo by Yan Terrien](http://freemusicarchive.org/music/Yan_Terrien/Adelor_Dramax/04_Intrics_Leo)
 

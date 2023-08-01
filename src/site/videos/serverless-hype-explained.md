@@ -12,7 +12,9 @@ tags: ["Serverless", "Lambda", "Cloud"]
 
 Why are "serverless" cloud products so popular right now? What makes them different from using traditional server infrastructure? In this video, I'll go over all the pros and cons of going for a serverless architecture. On it, you can run your website or any web application.
 
-Want to learn how to build serverless applications with the Serverless framework? [Check out my (free) tutorial videos here.](https://www.youtube.com/watch?v=lUTGk64jppM&list=PLzvRQMJ9HDiT5b4OsmIBiMbsPjfp4kfg3&index=1)
+<!--more-->
+
+Want to learn how to build serverless applications with the Serverless framework? [Check out my free course here]({% link collections.courses, "serverless-framework-basics/index.md" %}).
 
 Examples of serverless products include: 
 

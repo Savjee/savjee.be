@@ -14,6 +14,8 @@ Cookies can be used to invade your privacy and track you around the internet. Bu
 
 However, clever companies can use cookies to track us around the internet. It can help them to build a profile of users and sell more targeted advertisements.
 
+<!--more-->
+
 In this video, I'll show you how cookies are working and why they're useful. Then we'll explore how cookies can be used to track people and finally, we'll discuss how you can prevent being followed.
 
 

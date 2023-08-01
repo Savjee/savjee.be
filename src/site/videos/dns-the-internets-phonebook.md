@@ -14,6 +14,8 @@ How does a computer know how to reach youtube.com? This domain name needs to be 
 
 The Domain Name System is an important protocol that helps make the internet accessible for everyone. It's safe to say that without DNS, the internet wouldn't have been as big as it is today.
 
+<!--more-->
+
 Music used in this video: [Oxygen Garden by Chris Zabriskie](https://freemusicarchive.org/music/Chris_Zabriskie/Divider/05_-_Oxygen_Garden)
 
 # Sources

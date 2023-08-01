@@ -12,6 +12,9 @@ tags: ["Privacy", "Blockchain"]
 
 Will the new European privacy law kill blockchains? On first sight they seem incompatible with each other. So let's take a closer look!
 
+<!--more-->
+
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

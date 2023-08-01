@@ -14,6 +14,9 @@ How does Facebook know that you doubted to buy something on another website? The
 
 Tracking pixels are small 1x1 images that are practically invisible, and yet, they can transfer your personal data to advertisement networks like the ones from Facebook, Google and Amazon.
 
+<!--more-->
+
+
 # Links
 
 * Brave browser: [https://brave.com/sav458](https://brave.com/sav458) (Affiliate link)

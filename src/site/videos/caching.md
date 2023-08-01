@@ -15,6 +15,8 @@ What is a cache? How does it work, and why is it important?
 
 Caches are used everywhere in our modern devices. It's found in many hardware components and throughout software. The goal of caching is to store data from slow memory into fast memory so it can be retrieved quicker.
 
+<!--more-->
+
 That's why browsers keep a cache: so they don't have to re-download everything from the internet over and over again.
 
 # Sources

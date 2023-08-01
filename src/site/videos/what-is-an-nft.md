@@ -14,6 +14,9 @@ NFT's are an innovation in the blockchain/cryptocurrency space that allows you t
 
 NFT's are essentially smart contracts that live on blockchains like Ethereum, Flow, or Tezos. They can also be programmed to give the creator a royalty of every sale of his NFT.
 
+<!--more-->
+
+
 ## Sources
 
 {% bibtex %}

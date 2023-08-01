@@ -12,6 +12,8 @@ tags: ["Bitcoin", "Blockchain scaling"]
 
 Bitcoin has a 7 transactions/second limit, far too low for becoming a major payment provider (VISA handles on average around 4000 transactions/second). So how can we solve this?
 
+<!--more-->
+
 One of the proposed solutions is by using the Lightning network. This reduces the load on the main blockchain by letting small transactions happen off-chain. By using this network, you directly exchange money with a counterparty, without hitting the main blockchain. Scalability through this system is virtually limitless.
 
 # Sources

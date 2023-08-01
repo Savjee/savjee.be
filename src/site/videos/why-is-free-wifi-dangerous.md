@@ -12,6 +12,9 @@ tags: ["Privacy"]
 
 We know public WiFi shouldn't be trusted, but why? What are the risks when do you connect to a coffeeshop network and how can you protect yourself for them?
 
+<!--more-->
+
+
 Music used in this video: [Ticker by Silent Partner](https://youtu.be/K0_VDom80DM)
 
 # Sources

@@ -12,6 +12,8 @@ tags: ["Bitcoin"]
 
 How can Bitcoin have any value? Is Ethereum worthless? Well, yeah! But so are your dollars, euros, yens. Money is a weird thing. It is not backed by gold or silver, but by our belief in it.
 
+<!--more-->
+
 Disclaimer: I'm trying to convince you to buy crypto. Just putting things into context.
 
 # Sources

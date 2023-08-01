@@ -14,6 +14,9 @@ The fact that I have blue eyes, blond hair and that I have an average height is 
  
 What are the pros and cons of DNA data storage and what problems does it solve? Before answering these questions though, let’s look at how we’ve been storing data up until today. 
 
+<!--more-->
+
+
 ## Data storage today
 The vast majority of data is currently stored on magnetic media like hard drives or tapes and some of it is stored on optical media like CDs and DVDs. However, our modern storage techniques have a few flaws: they are not robust, have a low information density and each media requires a special device to read and write data. Let’s look at each of these problems in more detail and see how DNA can help.
 

@@ -14,6 +14,8 @@ We have no privacy on the web anymore. Our data is stored with many third-partie
 
 Solid was started by the inventor of the web, Sir Tim Berners-Lee. I can't wait to see the next generation of apps and services being built on Solid.
 
+<!--more-->
+
 
 Special thanks to Ruben Verborgh for providing feedback on my script.
 Check out his blog for more in-depth content about Solid: [https://ruben.verborgh.org/](https://ruben.verborgh.org/)

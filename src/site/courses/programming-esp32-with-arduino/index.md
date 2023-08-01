@@ -13,6 +13,8 @@ available_platforms:
 
 In this video I want to go over some of the reasons why - in my opinion - the ESP32 is an incredible microcontroller and why you should use in your IoT projects.
 
+<!--more-->
+
 In a nutshell:
 
 * Dual-core CPU (clocked at 80, 160 or 240MHz)

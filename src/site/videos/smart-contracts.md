@@ -14,6 +14,8 @@ Smart contracts are tiny applications that run on a blockchain. The biggest smar
 
 These contracts allow you to lock up your funds and release them when certain conditions are met. With this technique we can implement many banking products without the need of central authority. Things like automatic payments and investment products could be handles by smart contracts.
 
+<!--more-->
+
 # Sources
 
 {% bibtex %}

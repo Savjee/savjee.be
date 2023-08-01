@@ -14,6 +14,9 @@ Recently we’ve heard about a Bitcoin hard fork. But what is a hard ford?
 
 Cryptocurrencies are being developped by large groups of people. It happens from time to time that people disagree about the direction of the project. When that happens, they have the option to copy the code and go their own way. This happened to Bitcoin a few times already, but most recently it happened with the Bitcoin Cash and Bitcoin Gold hard forks.
 
+<!--more-->
+
+
 # Sources
 
 {% bibtex %}

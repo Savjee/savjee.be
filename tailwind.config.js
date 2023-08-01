@@ -26,6 +26,9 @@ module.exports = {
       'darkmode-alt-bg': '#111b27'
     },
     extend: {
+      backgroundImage: {
+        'home-banner': "url('/assets/img/home-banner.jpg')"
+      },
       maxWidth: {
         '320': '320px'
       },

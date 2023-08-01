@@ -14,6 +14,7 @@ module.exports = {
     },
     colors: {
       'savjeered': '#E62643',
+      'savjeered-darkmode': '#FF4E6A',
       'savjeeblue': '#1E2546',
       'savjeeblack': '#333333',
       'savjeewhite': '#FFFFFF',
@@ -21,7 +22,8 @@ module.exports = {
       'savjeelightgrey2': '#F5F5F5',
       'savjeelightgrey3': '#7F7F7F',
       'savjeelightgrey4': '#CCCCCC',
-      'savjeelightgrey5': '#FAFAFA'
+      'savjeelightgrey5': '#FAFAFA',
+      'darkmode-alt-bg': '#111b27'
     },
     extend: {
       maxWidth: {
@@ -43,11 +45,12 @@ module.exports = {
         dark: {
           css: {
             '--tw-prose-body': theme('colors.savjeewhite'),
+            '--tw-prose-bold': theme('colors.savjeewhite'),
             '--tw-prose-quotes': theme('colors.savjeewhite'),
             '--tw-prose-headings': theme('colors.savjeewhite'),
-            '--tw-prose-links': theme('colors.savjeewhite'),
+            '--tw-prose-links': theme("colors.savjeered-darkmode"),
             '--tw-prose-hr': theme('colors.savjeelightgrey4'),
-            '--tw-prose-pre-bg': "#111b27",
+            '--tw-prose-pre-bg': theme('colors.darkmode-alt-bg'),
             '--tw-prose-pre-code': theme('colors.savjeewhite'),
             '--tw-prose-code': theme('colors.savjeewhite'),
           }

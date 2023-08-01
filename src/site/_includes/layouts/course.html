@@ -51,7 +51,7 @@ layout: default
 		</article> 
 
 		<nav class="order-first w-full md:w-80 md:order-none" role="navigation" aria-label="Table of contents">
-			<div class="p-6 bg-savjeelightgrey5">
+			<div class="p-6 bg-savjeelightgrey5 dark:bg-darkmode-alt-bg dark:text-savjeewhite">
 				<p class="font-bold">
 					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.
 				</p>
@@ -67,10 +67,14 @@ layout: default
 					{% assign last_seen_section = vid.data.section %}
 
 					<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0 flex">
+						{% if vid.data.paywalled == true %}
+						<div>
+							<svg width="16" height="16" viewBox="0 0 24 24" class="dark:fill-savjeewhite mr-1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M6 6c0-3.311 2.689-6 6-6s6 2.688 6 6v4h3v14h-18v-14h3v-4zm14 5h-16v12h16v-12zm-13-5v4h10v-4c0-2.76-2.24-5-5-5s-5 2.24-5 5z"/></svg>
+						</div>
+						{% endif %}
 						<div class="flex-1 pr-4">
 							{% if page.url == vid.url or vid.data.paywalled == true %}
 								{% if vid.data.paywalled == true %}
-									<img src="/assets/img/icon-lock.svg" class="inline h-3 pr-1">
 								{% else %}
 									{{ forloop.index }}.
 								{% endif %}

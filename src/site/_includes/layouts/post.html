@@ -33,7 +33,7 @@ layout: narrow
 {% assign related_posts = collections.all | getRelated: tags, page.inputPath %}
 {% if related_posts.size > 0 %}
 	<div class="my-6">
-		<p class="text-4xl font-bold pb-5 text-savjeeblack">You May Also Enjoy</p>
+		<p class="text-4xl font-bold pb-5 text-savjeeblack dark:text-savjeewhite">You May Also Enjoy</p>
        
         <div class="grid grid-cols-2 gap-8">
             {% comment %} Make sure we only show related items that have a thumbnail! {% endcomment %}

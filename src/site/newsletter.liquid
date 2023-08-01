@@ -6,7 +6,7 @@ quote: "Get your a monthly dose of science and technology news. Signup for the S
 
 <div>
     <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
-        <p>Get your a monthly dose of science and technology news.
+        <p class="prose dark:prose-dark">Get your a monthly dose of science and technology news.
             <br>Check out the past issues here, 
             and signup if you want your curiosity tickled every month 😉</p>
         
@@ -18,7 +18,7 @@ quote: "Get your a monthly dose of science and technology news. Signup for the S
 
     {% assign newslettersByYear = collections.newsletter | groupByYear %}
     {% for yearObj in newslettersByYear reversed %}
-        <h3 class="text-2xl font-bold pb-4 pt-16">{{ yearObj.year }}</h3>
+        <h3 class="text-2xl font-bold pb-4 pt-16 dark:text-savjeewhite">{{ yearObj.year }}</h3>
 
         {% for newsletter in yearObj.posts reversed %}
             <div class="py-3 leading-tight border-b border-b-savjeelightgrey4 last:border-none">

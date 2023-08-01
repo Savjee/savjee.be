@@ -16,7 +16,7 @@
     nav li a:after{
       content: '';
       transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
-      @apply absolute -bottom-2 left-0 h-1 w-0 bg-savjeered
+      @apply absolute -bottom-2 left-0 h-1 w-0 bg-savjeered dark:bg-savjeered-darkmode
     }
 
     nav li a:hover:after, 
@@ -25,7 +25,7 @@
     }
 
     a {
-      @apply text-savjeered font-semibold underline;
+      @apply text-savjeered dark:text-savjeered-darkmode font-semibold underline;
     }
 
     a:hover{
@@ -52,7 +52,7 @@
     button.secondary,
     button:hover, 
     button[type=submit]:hover {
-      @apply bg-savjeewhite text-savjeered border border-savjeered
+      @apply bg-savjeewhite text-savjeered dark:text-savjeered-darkmode border border-savjeered
     }
 
     input, 

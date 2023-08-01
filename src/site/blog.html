@@ -1,42 +1,21 @@
 ---
-layout: page
-title: Blog posts
-quote: Overview of blog posts on Savjee.be
+layout: page 
+title: Blog
+quote: Overview of blog posts
+pagination:
+  data: collections.posts
+  size: 15
+  alias: posts
 ---
 
-<div class="md:max-w-3xl mx-auto">
-    {% assign groupedPosts = collections.posts | groupByYear %}
-    
-    {% for yearObj in groupedPosts %}
-        <div class="container2">
-            <div class="page-header text-center">
-                <h1 class="text-center">{{ yearObj.year }}</h1>
-            </div>
-            <ul class="timeline">
-                {% for post in yearObj.posts %}
-                    <li class="timeline{% cycle '-panel', '-inverted' %}">
-                        <div class="timeline-panel">
-                            {% if post.data.thumbnail %}
-                                <div class="timeline-heading">
-                                    <a href="{{ post.url }}" aria-label="Read post: {{ post.data.title }}">
-                                        {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                                        {% xd_img %}
-                                            <img src="{{thumbnailUrl}}" class="img-responsive" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
-                                        {% endxd_img %}
-                                    </a>
-                                </div>
-                            {% endif %}
-
-                            <div class="timeline-body">
-                                <p><a href="{{ post.url }}">{{ post.data.title }} {{this_year}}</a></p>
-                            </div>
-                        </div>
-                    </li>
-                    {% if forloop.last == true %}
-                        <li class="clearfix"></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+<div>
+    {% for post in posts %}
+        <div class="mb-8 pb-8 border-b border-savjeelightgrey">
+            {% render "components/preview-universal.html", item: post %}
         </div>
     {% endfor %}
+
+    <div class="mt-20">
+        {% render "components/paginator.html", pagination: pagination %} 
+    </div>
 </div>

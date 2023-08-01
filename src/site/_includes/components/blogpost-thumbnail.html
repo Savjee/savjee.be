@@ -1,0 +1,9 @@
+{% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
+
+{% if highquality %}
+    {% assign thumbnailUrl = post.data.upload_directory | append: "/thumb_master.jpg" %}
+{% endif %}
+
+{% xd_img %}
+    <img src="{{thumbnailUrl}}" class="w-full" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ post.data.title }}'" /> 
+{% endxd_img %}

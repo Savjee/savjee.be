@@ -1,6 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
-const pluginTOC = require('eleventy-plugin-toc')
+const pluginTOC = require('eleventy-plugin-toc');
 
 module.exports = function (config) {
 
@@ -15,7 +15,7 @@ module.exports = function (config) {
 
     // ----------------------- Layouts -----------------------
     [
-        "default", "post", "video", "page", "course", "newsletter",
+        "default", "narrow", "post", "video", "page", "course", "newsletter",
     ].forEach((layoutName) => {
         config.addLayoutAlias(layoutName, `layouts/${layoutName}.html`);
     });
@@ -24,16 +24,19 @@ module.exports = function (config) {
     // ----------------------- Custom filters -----------------------
     [
         "getVideosInSeries", "getFeatureable", "indexOf", "getRelated",
-        "htmlImageSize", "groupByYear", "md",
+        "htmlImageSize", "groupByYear", "startsWith", "filterArrayStartsWith",
+        "getThumbnailUrl", "getTitle"
     ].forEach((filterName) => {
         config.addLiquidFilter(filterName, 
             require('./src/utils/filters/' + filterName));
     });
+
+
     
 
     // ----------------------- Collections -----------------------
     config.addCollection('courses', (collectionApi) => {
-        return collectionApi.getFilteredByGlob('src/site/courses/**/*.md');
+        return collectionApi.getFilteredByGlob('src/site/courses/**/index.md');
      });
 
     config.addCollection('newsletter', (collectionApi) => {
@@ -49,20 +52,29 @@ module.exports = function (config) {
 
     config.addCollection('videos', (collectionApi) => {
          return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
-
-            // Sort on the "uploadDate" that I've manually put it
-            // Fallback to the "date" that Eleventy generates (based
-            // on file creation date).
             .sort((a, b) => {
-                return a.data.uploadDate - b.data.uploadDate;
+                return b.date - a.date;
             });
     });
 
+    config.addCollection("tags", function (collection) {
+        const tags = new Set();    
+        for (const item of collection.getAll()) {
+          if ("tags" in item.data) {
+            for (const tag of item.data.tags) {
+              tags.add(tag);
+            }
+          }
+        }
+    
+        return [...tags].sort();
+      });
 
     // ----------------------- Custom shortcodes -----------------------
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
     config.addPairedShortcode("xd_img", require('./src/utils/shortcode/xd_img'));
+    config.addShortcode("baseUrl", () => "https://simplyexplained.com");
 
 
     // ----------------------- File copies -----------------------
@@ -126,6 +138,10 @@ module.exports = function (config) {
         });
 
     config.setLibrary("md", markdownLib);
+
+    config.addLiquidFilter("md", (content = "") => {
+        return markdownLib.render(content);
+    });
     
     return {
         dir: { input: 'src/site', output: '_site', data: '_data' },

@@ -15,6 +15,9 @@ const sizeOf = require('image-size');
  *    <img src="/logo.png" width="231" height="123" />
  */
 module.exports = (imagePath) => {
+    if(imagePath.includes("ytimg.com") && imagePath.includes("://")){
+        return `width="320" height="180"`;
+    }
     const basePath = __dirname + "/../../site/";
     const dimensions = sizeOf(basePath + imagePath);
 

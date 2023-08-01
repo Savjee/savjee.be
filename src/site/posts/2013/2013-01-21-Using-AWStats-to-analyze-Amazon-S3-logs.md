@@ -3,7 +3,6 @@ layout: post
 title:  Use AWStats to analyze Amazon S3 logs
 quote: How to configure AWStats to parse Amazon S3 logs and generate useful reports.
 keywords: Amazon S3, Access logs, S3 logs, AWStats, analyze logs
-upload_directory: awstats-s3
 tags: [AWS]
 ---
 

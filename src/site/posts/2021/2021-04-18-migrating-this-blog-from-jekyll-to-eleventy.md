@@ -92,11 +92,11 @@ Liquid includes are also slightly different between Jekyll and Eleventy. I chang
 
 {% highlight liquid %}
 <!-- Jekyll -->
-{% include youtube-embed.html videoId='y6yD2-ZIllQ' %}
+{% render youtube-embed.html videoId='y6yD2-ZIllQ' %}
 {{include.videoId}}
 
 <!-- Eleventy -->
-{% include "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
+{% render "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
 {{videoId}}
 {% endhighlight %}
 
@@ -179,7 +179,7 @@ Because shortcodes don't have access to collections, it takes two parameters. Fi
 This works for other collections as well:
 
 {% highlight md %}
-[mRNA Vaccines - Simply Explained]({% link collections.videos, 'simply-explained/mrna-vaccines.md' %})
+[mRNA Vaccines - Simply Explained]({% link collections.videos, 'mrna-vaccines.md' %})
 {% endhighlight %}
 
 Once again I used the search & replace feature to migrate from the Jekyll syntax to my shortcode:

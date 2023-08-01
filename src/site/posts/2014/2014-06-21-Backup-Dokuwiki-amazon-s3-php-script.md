@@ -2,7 +2,6 @@
 layout: post
 title: Backup DokuWiki to Amazon S3 with PHP
 quote: 
-upload_directory: dokuwiki-backup-s3
 tags: [AWS]
 ---
 
@@ -153,7 +152,7 @@ Using PharData is easy but has a limitation. When you archive a folder with ``bu
 
 If you want to contribute to this script, [fork it on GitHub](https://github.com/Savjee/dokuwiki-s3-backup)!
 
-# Cron
+## Cron
 The final step is to make sure that backups are taken periodically and automatically. I added a cronjob to run the script every day at 10pm:
 
 <pre>crontab -e</pre>

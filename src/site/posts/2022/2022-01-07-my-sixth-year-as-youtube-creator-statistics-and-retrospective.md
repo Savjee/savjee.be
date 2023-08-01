@@ -34,7 +34,7 @@ But these numbers only compare 2021 to 2020. Let's put everything into context a
 
 ![chart-videos-uploaded.svg](/uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/chart-videos-uploaded.svg)
 
-There's a clear downward trend of fewer videos being uploaded each year. There's a good reason for this: I started by uploading tutorials like "[how to host a website on AWS S3](https://www.youtube.com/watch?v=g9NbuTcos18)". These were short and easy to make videos, so I made more of them. Then, at the end of 2017, I made an animated explainer video on [asymmetric encryption]({% link collections.videos, "simply-explained/asymmetric-encryption.md" %}). It got more attention compared to my tutorials, but it also required more effort to make. I liked it so much that I only worked on explainer videos from 2018 onward (with the only exception of 2020).
+There's a clear downward trend of fewer videos being uploaded each year. There's a good reason for this: I started by uploading tutorials like "[how to host a website on AWS S3](https://www.youtube.com/watch?v=g9NbuTcos18)". These were short and easy to make videos, so I made more of them. Then, at the end of 2017, I made an animated explainer video on [asymmetric encryption]({% link collections.videos, "asymmetric-encryption.md" %}). It got more attention compared to my tutorials, but it also required more effort to make. I liked it so much that I only worked on explainer videos from 2018 onward (with the only exception of 2020).
 
 Interestingly, many creators think you need to upload a lot of videos to gain traction on YouTube. But that hasn't been my experience. Even though I uploaded fewer videos over the years, my views and subscribers have gone up:
 
@@ -42,7 +42,7 @@ Interestingly, many creators think you need to upload a lot of videos to gain tr
 
 ![chart-views-per-year.svg](/uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/chart-views-per-year.svg)
 
-Looking at 2021 in particular, Simply Explained gained less new subscribers compared to 2020, but it had 2.6 times more views (thanks to my video on [blockchains]({% link collections.videos, "simply-explained/how-does-a-blockchain-work.md" %}), [NFT's]({% link collections.videos, "simply-explained/what-is-an-nft.md" %}) and [mRNA vaccines]({% link collections.videos, "simply-explained/mrna-vaccines.md" %})). 
+Looking at 2021 in particular, Simply Explained gained less new subscribers compared to 2020, but it had 2.6 times more views (thanks to my video on [blockchains]({% link collections.videos, "how-does-a-blockchain-work.md" %}), [NFT's]({% link collections.videos, "what-is-an-nft.md" %}) and [mRNA vaccines]({% link collections.videos, "mrna-vaccines.md" %})). 
 
 I'm very proud of these numbers and the videos that make this possible. To me, each view represents a person who is curious, willing to learn and chose one of my videos to educate themself. That's huge!
 

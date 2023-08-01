@@ -3,15 +3,14 @@ layout: post
 title:  Hosting a static (Jekyll) blog on Amazon S3
 quote: Hosting your static Jekyll blog or website on Amazon S3 has a lot of advantages. Your website will be faster and won't go down and to tip it off, you can automatically deploy new versions to S3 in a matter of seconds.
 keywords: Blog, Amazon S3 hosting, static website, cheap hosting, deploy to Amazon S3, deploy with s3cmd, s3cmd, bash script
-upload_directory: host-blog-s3
-tags: [AWS, Jekyll]
+tags: [AWS, Jekyll, "Static webhosting"]
 ---
 
 A few weeks ago [I started using Jekyll]({% link collections.posts, '2013-01-14-moving-from-Wordpress-to-Jekyll' %}) for my blog and moved it to Amazon S3. I also [configured AWStats to analyze Amazon S3 access logs]({% link collections.posts, '2013-01-21-Using-AWStats-to-analyze-Amazon-S3-logs' %}). Yet, I never explained how I moved to S3, how I automatically deploy my website and what effects S3 has on a website's performance.
 
 <!--more-->
 
-{% include "youtube-embed.html", videoId:'g9NbuTcos18' %}
+{% render "youtube-embed.html", videoId:'g9NbuTcos18' %}
 
 ## Hosting on Amazon S3
 Since Jekyll websites are static, you can host them practically everywhere. But why would you choose S3 as a hosting provider?

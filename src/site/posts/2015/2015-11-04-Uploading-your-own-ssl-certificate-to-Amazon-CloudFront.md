@@ -14,7 +14,7 @@ This blog [is powered by the static website generator Jekyll]({% link collection
 ## Update: January 24th 2016
 You can now get a free certificate from AWS Certificate Manager and link it to CloudFront in just a couple of minutes! No manually action required! Check out my video tutorial here:
 
-{% include "youtube-embed.html", videoId:'JbQbwum196g' %}
+{% render "youtube-embed.html", videoId:'JbQbwum196g' %}
 
 ## Getting ready
 I'll assume that you already know how to get a SSL certificate. It's not that hard, not expensive and in some cases even free! I've used [a free StartSSL certificate](https://www.startssl.com/) for my blog.

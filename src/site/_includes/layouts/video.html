@@ -1,69 +1,22 @@
 ---
-layout: default
-fullwidth: true
+layout: page
+no_title: true
 ---
 
-<article class="post">
-    <div class="videobackdrop">
-        <div class="container video">
-            <div class="videowrapper">
-                {% include "youtube-embed.html", videoId:videoId %}
-            </div>
-        </div>
-    </div>
-    
-    <div class="videoNavigation">
-        <div class="container">
-            {% assign vidsInSerie = collections.videos | getVideosInSeries: series %}
-            {% assign videoIndex = vidsInSerie | indexOf: page %}
+<div class="mt-12">
+  {% render "youtube-embed.html", videoId:videoId %}
+</div>
 
-            {% assign prevIndex = videoIndex | minus: 1 %}
-            {% assign nextIndex = videoIndex | plus: 1 %}
+<article class="prose dark:prose-dark max-w-none pt-12">
+    <p>
+        <a href="/videos" class="no-underline">&larr; Back to videos</a>
+    </p>
+    <h1 class="mt-5">
+        {{ title | escape_once }}
+    </h1>
 
-            {% assign prevVideo = vidsInSerie[prevIndex] %}
-            {% assign nextVideo = vidsInSerie[nextIndex] %}
-            
-            {% if prevVideo %}
-                <div class="previousVideo">
-                    <div class="video-">
-                        <a href="{{ prevVideo.url }}">
-                            <p><strong>&larr; Previous video</strong><br>
-                                <span class="hide-overflow-text">{{ prevVideo.data.title | escape_once }}</span>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            {% endif %}
-
-            {% if nextVideo %}
-                <div class="nextVideo">
-                        {% unless nextVideo.data.hide %}
-                        <div class="video-">
-                            <a href="{{nextVideo.url}}">
-                                <p>
-                                    <strong>Next video &rarr;</strong><br>
-                                    <span class="hide-overflow-text">{{ nextVideo.data.title | escape_once }}</span>
-                                </p>
-                            </a>
-                        </div>
-                        {% endunless %}
-                </div>
-            {% endif %}
-        </div>
-    </div>
-
-    <div class="container">
-        <h1 class="post-title">
-            <a href="{{ page.url }}">{{ title | escape_once }}</a>
-        </h1>
-
-        <div class="post-description">
-            {{ content }}
-        </div>
-
-        <hr>
-            {% include "components/newsletter-box.html" %}
-        <hr>
+    <div class="max-w-3xl">
+        {{ content }}
     </div>
 </article>
 
@@ -78,8 +31,10 @@ fullwidth: true
         "thumbnailURL": [
             "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
         ],
-        "uploadDate": "{% if uploadDate %}{{ uploadDate | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
-        "embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+        "uploadDate": "{% if date %}{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+        "embedUrl": "https://www.youtube.com/embed/{{videoId}}",
+        "contentUrl": "https://www.youtube.com/watch?v={{videoId}}",
+        "duration": "PT{{duration | divided_by: 3600, true}}H{{ duration | divided_by: 60, true }}M{{ duration | modulo: 60 }}S"
     },
     {
       "@context": "https://schema.org",
@@ -88,15 +43,10 @@ fullwidth: true
         "@type": "ListItem",
         "position": 1,
         "name": "Videos",
-        "item": "https://savjee.be/videos/"
+        "item": "{% baseUrl %}/videos/"
       },{
         "@type": "ListItem",
         "position": 2,
-        "name": "{{series}}",
-        "item": "https://savjee.be/videos/{{series | slug }}"
-      },{
-        "@type": "ListItem",
-        "position": 3,
         "name": "{{ title }}"
       }]
     }

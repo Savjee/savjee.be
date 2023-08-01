@@ -1,0 +1,5 @@
+{% if duration %}
+    {{ duration | divided_by: 60 | floor }} mins {% if video.data.tags %}|{% endif %} 
+{% endif %}
+
+{% render "components/tags.html", tags: video.data.tags %}

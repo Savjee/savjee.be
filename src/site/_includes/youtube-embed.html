@@ -1,14 +1,25 @@
-<div class="videowrapper">
-  {% comment %}
-    The inline CSS has this hash:
-    'sha256-/AU/Y099B+CElpdg0HRn0OONsjXVQfTO/c0pkHSsBMs='
-    Remember to change it in the CSP when changing the style.
-  {% endcomment %}
+<div class="relative group hover:cursor-pointer youtube-embed" data-videoid="{{videoId}}">
+  <div class="player absolute top-0 bottom-0 left-0 right-0"></div>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{videoId}}?showinfo=0"
-    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/{{videoId}}?autoplay=1><picture><source srcset='https://i.ytimg.com/vi_webp/{{videoId}}/maxresdefault.webp' type='image/webp'><img src='https://img.youtube.com/vi/{{videoId}}/maxresdefault.jpg'></picture><span>&#x25B6;</span></a>"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen class="mx-auto absolute top-0 left-0 w-full h-full"
-    title="Embedded YouTube video"
-    loading="lazy"></iframe>
+  {% comment %} Backdrop {% endcomment %}
+  <div class="absolute inset-0 bg-savjeeblack opacity-40 group-hover:opacity-10 transition-opacity"></div>
+
+  {% comment %} Play Button {% endcomment %}
+  <div class="absolute inset-0 items-center justify-center flex">
+    <div class="play-button w-20 h-14 group-hover:grayscale-[30%]"></div>
+  </div>
+
+  {% comment %} Thumbnail (with WebP support) {% endcomment %}
+  {% xd_img %}
+    <img
+      src="https://i.ytimg.com/vi/{{videoId}}/maxresdefault.jpg"
+      class="w-full py-0"
+      loading="lazy"
+      width="320"
+      height="180"
+      {%- if videoDescription -%}
+        alt="Thumbnail for video '{{ videoDescription }}'"
+      {%- endif -%}
+    >
+  {% endxd_img %}
 </div>

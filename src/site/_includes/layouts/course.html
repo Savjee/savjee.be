@@ -1,49 +1,140 @@
 ---
-layout: default
+layout: default 
 ---
 
-<article class="post">
-	<h1 class="post-title">
-		<a href="{{ page.url }}">{{ title }}</a>
-	</h1>
+{% assign videos_in_course = collections.all 
+								| where: "data.courseName" 
+								| where: "data.courseName", courseName 
+								| sort: "data.order" 
+								| where: "data.order" %}
 
-	<p class="no-margin">
-		Available on:
+{% assign durations = videos_in_course | map: "data.duration" | compact %}
 
-		{% if link_udemy %}
-          <a href="{{link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-        {% endif %}
-        
-        {% if link_skillshare %}
-            <a href="{{link_skillshare}}">Skillshare</a>
-        {% endif %}
+{% assign total_duration = 0%}
+{% for duration in durations %}
+	{% assign total_duration = total_duration | plus: duration %}
+{% endfor %}
+
+<div class="containerX mt-12">
+	{% assign videoDesc = courseName | append: " - " | append: title %}
+	{% render "youtube-embed.html", videoId:videoId, videoDescription: videoDesc %}
+
+	<p class="mt-12 mb-5">
+		<a href="/courses/" class="no-underline">← Back to courses</a>
 	</p>
-	<hr>
 
-	<div class="post-description">
-		{{ content }}
+	<div class="flex flex-col md:flex-row">
+		<article class="flex-1 overflow-auto pr-8 prose dark:prose-dark">
+			<h1 class="mt-0">
+				{% if order == 1 %}
+					{{ courseName }}
+				{% else %}
+					{{ title }}
+				{% endif %}
+			</h1>
+
+			{% if order == 1 %}
+				<div class="pb-6 -mt-6">
+					<span class="pr-4">Available on</span>
+
+					{%- for platform in available_platforms -%}
+						<a href="{{platform.url}}" class="bg-savjeered text-savjeewhite px-4 py-2 rounded-3xl no-underline mr-2">
+							{{- platform.name -}}
+						</a>	
+					{% endfor %}
+				</div>
+			{% endif %} 
+		
+			<div>
+				{{ content }}
+			</div>
+		</article> 
+
+		<nav class="order-2 w-full md:w-80 md:order-none" role="navigation" aria-label="Table of contents">
+			<div class="p-6 bg-savjeelightgrey5 dark:bg-darkmode-alt-bg dark:text-savjeewhite">
+				<p class="font-bold">
+					{{ videos_in_course | size }} videos | {{total_duration | divided_by: 60, true }} min.
+				</p>
+
+				{% assign last_seen_section = "" %}
+				{% for vid in videos_in_course %}
+					{% if last_seen_section != vid.data.section and vid.data.section != null %}
+						<div class="font-bold text-sm text-savjeelightgrey3 mt-8 uppercase">
+							{{vid.data.section}}
+						</div>
+					{% endif %}
+
+					{% assign last_seen_section = vid.data.section %}
+
+					<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0 flex">
+						{% if vid.data.paywalled == true %}
+						<div>
+							<svg width="16" height="16" viewBox="0 0 24 24" class="dark:fill-savjeewhite mr-1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M6 6c0-3.311 2.689-6 6-6s6 2.688 6 6v4h3v14h-18v-14h3v-4zm14 5h-16v12h16v-12zm-13-5v4h10v-4c0-2.76-2.24-5-5-5s-5 2.24-5 5z"/></svg>
+						</div>
+						{% endif %}
+						<div class="flex-1 pr-4">
+							{% if page.url == vid.url or vid.data.paywalled == true %}
+								{% if vid.data.paywalled == true %}
+								{% else %}
+									{{ forloop.index }}.
+								{% endif %}
+								{{ vid.data.title }}
+							{% else %}
+								<a href="{{vid.url}}" class="no-underline font-light">{{forloop.index}}. {{ vid.data.title }}</a>
+							{% endif %}
+						</div>
+						<div class="text-savjeelightgrey3">
+							{{ vid.data.duration | divided_by: 60, true | prepend: '00' | slice: -2, 2 }}:{{ vid.data.duration | modulo: 60 | prepend: '00' | slice: -2, 2 }}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			
+		</nav>
 	</div>
-</article> 
 
-{% comment %} *********** Structured data for Google *********** {% endcomment %}
-<script type="application/ld+json">
-[
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-	  	{
-			"@type": "ListItem",
-			"position": 1,
-			"name": "Courses",
-			"item": "https://savjee.be/courses/"
+	{% comment %} *********** Structured data for Google *********** {% endcomment %}
+	<script type="application/ld+json">
+	[
+		{
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Courses",
+					"item": "{% baseUrl %}/courses/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "{{ title }}"
+				}
+			]
 		},
 		{
-			"@type": "ListItem",
-			"position": 3,
-			"name": "{{ title }}"
+			"@context": "http://schema.org/",
+			"@type": "VideoObject",
+			"name": "{{ title }}",
+			"description": "{{ content | md | strip_html | truncatewords: 40 }}",
+			"thumbnailURL": [
+				"http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
+			],
+			"uploadDate": "{% if date %}{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
+			"embedUrl": "https://www.youtube.com/embed/{{videoId}}"
+		},
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "{{ courseName }}",
+			"description": "{{ courseName }}",
+			"provider": {
+				"@type": "Organization",
+				"name": "Simply Explained",
+				"sameAs": "{% baseUrl %}"
+			}
 		}
 	]
-    }
-]
-</script>
+	</script>
+</div>

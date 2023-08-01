@@ -1,33 +1,49 @@
 ---
-layout: page
+layout: default
 title: Videos
 quote: Simply Explained is taking complicated topics and explaining them in a simple and straightforward way.
+pagination:
+  data: collections.videos
+  size: 15
+  alias: videos
 ---
 
-{% assign latestVideos = collections.videos | reverse | getFeatureable %}
+{% assign featuredVideos = collections.videos | getFeatureable | slice: 0,6 %}
 
-<div class="row latest-videos">
-    {% for vid in latestVideos limit: 6 %}
-        <div class="col-md-4 col-sm-6 col-xs-1 {% if forloop.index > 3 %}d-none d-sm-block{% endif %}">
-            <div class="card">
-                <a href="{{vid.url}}">
+{% if pagination.pageNumber == 0 %}
+<div class="bg-savjeelightgrey2 dark:bg-savjeeblack py-10 mb-8">
+    <div class="containerX">
+        <h1 class="bigtitle my-0">
+            <a href="{{ page.url }}">{{ title }}</a>
+        </h1>
 
-                    {% xd_img %}
-                        <img class="thumb" src="https://i.ytimg.com/vi/{{vid.data.videoId}}/mqdefault.jpg" loading="lazy" width="320" height="180" alt="Thumbnail for video '{{ vid.data.title }}'">
-                    {% endxd_img %}
-                    <div class="content">
-                        {{ vid.data.title | truncate:100 }}
-                    </div>
-                </a>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-10">
+            {% for vid in featuredVideos %}
+                {% render "components/preview-universal-vertical.html", item: vid, duration: vid.data.duration %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% else %}
+    <div class="containerX px-4 md:px-0">
+        <h1 class="bigtitle my-0 pt-10 mb-8">
+            <a href="{{ page.url }}">{{ title }}</a>
+        </h1>
+    </div>
+{% endif %}
+
+<div class="containerX">
+    {% for vid in videos  %}
+        {% if featuredVideos contains vid %}
+            {% continue %}
+        {% endif %}
+
+        <div class="more-item py-3">
+            {% render "components/preview-universal.html", item: vid %}
         </div>
     {% endfor %}
 </div>
 
-<hr>
-
-{% assign series = video_series %}
-
-{% for serie in series %}
-    {% include "video-series-overview.html", serieTitle:serie.title %}
-{% endfor %}
+<div class="mt-20">
+    {% render "components/paginator.html", pagination: pagination %} 
+</div>

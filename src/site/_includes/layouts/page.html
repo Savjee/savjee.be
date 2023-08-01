@@ -2,12 +2,14 @@
 layout: default
 ---
 
-<article class="post">
-	<h1 class="post-title">
-		<a href="{{ page.url }}">{{ title }}</a>
-	</h1>
-
-	<div class="post-description">
+<div class="containerX mt-10">
+	<article>
+		{% unless no_title %}
+		<h1 class="bigtitle">
+			<a href="{{ page.url }}">{{ title }}</a>
+		</h1>
+		{% endunless %}
+		
 		{{ content }}
-	</div>
-</article>
+	</article>
+</div>

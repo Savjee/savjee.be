@@ -1,0 +1,4 @@
+{
+    "liquid.format.enable": false,
+    "tailwindCSS.rootFontSize": 18,
+}

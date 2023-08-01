@@ -1,0 +1,12 @@
+<div class="flex items-center justify-center">
+    {% if pagination.href.previous %}
+    <div>
+        <a href="{{ pagination.href.previous }}">Previous page</a>
+    </div>
+    {% endif %}
+    {% if pagination.href.next %}
+    <div class="{% if pagination.href.previous %}pl-6 ml-6 border-l border-savjeelightgrey4{% endif%}">
+        <a href="{{ pagination.href.next }}">Next page</a>
+    </div>
+    {% endif %}
+</div>

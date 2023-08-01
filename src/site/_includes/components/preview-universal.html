@@ -1,0 +1,36 @@
+{% assign thumbnailUrl = item | getThumbnailUrl %}
+
+<div class="md:flex md:gap-8 items-center">
+
+  {% if thumbnailUrl %}
+    <div class="w-full pb-2 md:pb-0 md:max-w-320 relative">
+        {% if item.url | startsWith: "/videos/" %}
+          <a href="{{item.url}}">
+            <div class="absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 justify-center flex">
+                <div class="play-button w-14 h-14"></div>
+            </div>
+          </a>
+        {% endif %}
+        <a href="{{item.url}}">
+          {% xd_img %}
+              <img src="{{thumbnailUrl}}" class="w-full" loading="lazy" {{thumbnailUrl | htmlImageSize }} alt="Thumbnail for post '{{ item.data.title }}'" /> 
+          {% endxd_img %}
+        </a>
+    </div>
+  {% endif %}
+
+  <div>
+      <div class="text-xl">
+          <a href="{{item.url}}" class="no-underline hover:underline">{{ item | getTitle }}</a>
+      </div>
+
+      <div class="py-3 prose dark:prose-dark">
+        {{ item.content |  md | strip_html | truncate: 200 }}
+      </div>
+
+      <div class="text-base text-savjeelightgrey3 mb-4">
+          {% render "components/video-duration-and-tags.html", video: item %}
+      </div>        
+  </div>
+
+</div>

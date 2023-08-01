@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use Jenkins and git-ftp to deploy a website to shared webhosting
-thumbnail: uploads/jenkins-git-ftp/poster-750.jpg
+thumbnail: /uploads/jenkins-git-ftp/poster-750.jpg
 upload_directory: /uploads/jenkins-git-ftp
 tags: [CI/CD]
 ---

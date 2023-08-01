@@ -1,52 +1,66 @@
 ---
-layout: default
+layout: narrow 
 ---
 
-<article class='post'>
-    <h1 class='post-title'>
-        <a href="{{ page.url }}">{{ title }}</a>
+<article class="containerX relative prose dark:prose-dark max-w-none">
+    <h1>
+        {{ title }}
     </h1>
 
+    {% comment %}
+    TODO: re-enable
     {% if toc_enabled == true %}
         <aside class="toc">
             <h1>Contents</h1>
             {{ content | toc }}
         </aside>
     {% endif %}
+    {% endcomment %}
 
-    <div class='post-description'>
-        {{ content }}
+    <div class="md:absolute md:-left-16">
+        {% render "components/share-buttons-vertical.html", page: page, title: title %}
     </div>
+
+    {{ content }}
 </article>
 
-<p class="text-center">
-    <small>Posted on
-        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
-    </small>
-</p>
 
-{% include "components/share-buttons.html" %}
+<div class="text-sm text-savjeelightgrey3 py-10 text-center">
+    Posted on
+    <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+</div>
 
-{% assign related_posts = collections.posts | getRelated: tags, page.inputPath %}
+{% assign related_posts = collections.all | getRelated: tags, page.inputPath %}
 {% if related_posts.size > 0 %}
-	<div class="related-posts">
-		<h2>You May Also Enjoy</h2>
-		
-		<ul>
-			{% for post in related_posts limit:4 %}
-				<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-			{% endfor %}
-		</ul>
+	<div class="my-6">
+		<p class="text-4xl font-bold pb-5 text-savjeeblack dark:text-savjeewhite">You May Also Enjoy</p>
+       
+        <div class="grid grid-cols-2 gap-8">
+            {% comment %} Make sure we only show related items that have a thumbnail! {% endcomment %}
+            {% assign shownItems = 0 %}
+            {% for post in related_posts %}
+                {% assign thumbnailUrl = post | getThumbnailUrl %}
+                {% unless thumbnailUrl %}
+                    {% continue %}
+                {% endunless %}
+            
+                {% if shownItems == 2 %}
+                    {% break %}
+                {% endif %}
+                {% assign shownItems = shownItems | plus: 1 %}
+                <div>
+                    {% render "components/preview-universal-vertical.html", item: post %} 
+                </div>
+            {% endfor %}
+        </div>
 	</div>
-    
-    <hr>
 {% endif %}
 
-{% include "components/newsletter-box.html" %}
+<div class="my-12">
+    {% render "components/newsletter-box.html" %}
+</div>
 
-<hr>
-
-{% include "components/disqus-comments.html" %}
+{% render "components/disqus-comments.html" %}
 
 <script type="application/ld+json">
 [
@@ -56,7 +70,7 @@ layout: default
         "headline": "{{ title }}",
         {% if thumbnail %}
         "image": [
-            "https://savjee.be{{upload_directory}}/thumb_master.jpg"
+            "{% baseUrl %}{{upload_directory}}/thumb_master.jpg"
         ],
         {% endif %}
         "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
@@ -69,7 +83,7 @@ layout: default
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Blog",
-                "item": "https://savjee.be/blog/"
+                "item": "{% baseUrl %}/blog/"
             },
             {
                 "@type": "ListItem",

@@ -1,0 +1,120 @@
+@import "lib/prism-coldark-cold.css";
+@import "lib/prism-coldark-dark.css" (prefers-color-scheme: dark);
+
+@tailwind base;
+
+@layer base {
+  .containerX{
+    @apply px-4 mx-auto max-w-5xl
+  }
+
+    /* -------------------- Main navigation -------------------- */
+    nav li a{
+      @apply relative
+    }
+
+    nav li a:after{
+      content: '';
+      transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      @apply absolute -bottom-2 left-0 h-1 w-0 bg-savjeered dark:bg-savjeered-darkmode
+    }
+
+    nav li a:hover:after, 
+    nav li a.active:after{
+      @apply w-5
+    }
+
+    a {
+      @apply text-savjeered dark:text-savjeered-darkmode font-semibold underline;
+    }
+
+    a:hover{
+      @apply no-underline;
+    }
+    /* ---- For the small underline beneath H1 and main navigation items ---- */
+    h1.bigtitle,
+    h1.bigtitle a{
+      @apply relative text-savjeeblue dark:text-savjeewhite no-underline text-6xl font-bold mb-14
+    }
+    
+    h1.bigtitle a:after{
+      transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      content: "";
+      @apply absolute h-2 w-20 left-0 -bottom-3  bg-savjeeblue dark:bg-savjeewhite
+    }
+
+    button, 
+    button[type=submit],
+    button.secondary:hover{
+      @apply bg-savjeered text-savjeewhite border border-savjeered py-2 px-6 rounded-md font-bold
+    }
+
+    button.secondary,
+    button:hover, 
+    button[type=submit]:hover {
+      @apply bg-savjeewhite text-savjeered dark:text-savjeered-darkmode border border-savjeered
+    }
+
+    input, 
+    input[type=text]{
+       @apply border border-savjeelightgrey4 py-2.5 px-4 outline-none
+    }
+
+    input:focus, 
+    input:active{
+      @apply border-savjeered outline-none
+    }
+
+    article img{
+      @apply mx-auto
+    }
+
+    article img+em, article picture+em{
+      @apply block text-center text-sm -mt-6 text-savjeelightgrey3 pb-8
+    }
+
+    hr{
+      @apply border-savjeelightgrey4
+    }
+
+    /* pre,
+    pre[class*=language-]{
+      @apply bg-savjeelightgrey2 p-4 my-4 border border-savjeelightgrey4 text-sm
+      
+    } */
+/* 
+    pre,
+    code{
+      @apply overflow-x-auto whitespace-pre
+    }
+
+    article p code{
+      @apply bg-savjeelightgrey py-0.5 px-1 border border-savjeeblack text-sm
+    } */
+}
+
+@tailwind components;
+
+@layer components {
+
+  /* For the static YouTube player */
+  .play-button{
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjAuMTk3IiBoZWlnaHQ9IjYyIj48ZGVmcz48cGF0aCBpZD0iQSIgZD0iTTI5My44MDIgMTUwdjU0bDUyLjE5Ny0yNi43NjZ6Ii8+PGZpbHRlciB4PSItMTMuNCUiIHk9Ii05LjMlIiB3aWR0aD0iMTI2LjglIiBoZWlnaHQ9IjEyNS45JSIgaWQ9IkIiPjxmZU9mZnNldCBkeT0iMiIgaW49IlNvdXJjZUFscGhhIi8+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMiIvPjxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwICAgMCAwIDAgMCAwICAgMCAwIDAgMCAwICAwIDAgMCAwLjUgMCIvPjwvZmlsdGVyPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjg5LjgwMiAtMTQ4KSIgZmlsbC1ydWxlPSJldmVub2RkIj48dXNlIGZpbGw9IiMwMDAiIGZpbHRlcj0idXJsKCNCKSIgeGxpbms6aHJlZj0iI0EiLz48dXNlIGZpbGw9IiNmZmYiIHhsaW5rOmhyZWY9IiNBIi8+PC9nPjwvc3ZnPg==');
+    @apply w-full h-full bg-no-repeat border-none;
+  }
+
+  .player iframe{
+    @apply w-full h-full z-10 absolute;
+  }
+
+  /* -------------------- Citations -------------------- */
+  .csl-bib-body a {
+    @apply font-normal no-underline text-sm 
+  }
+
+  .csl-bib-body .csl-entry{
+    @apply pb-4 leading-none
+  }
+}
+
+@tailwind utilities;

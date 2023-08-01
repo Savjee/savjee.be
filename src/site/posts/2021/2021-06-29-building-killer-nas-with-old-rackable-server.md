@@ -2,7 +2,7 @@
 layout: post
 title: "Building a killer NAS with an old Rackable Server"
 quote: 
-tags: [Unraid, Proxmox]
+tags: [Unraid, Proxmox, Data storage]
 upload_directory: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/
 thumbnail: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/thumb_timeline.jpg
 toc_enabled: true
@@ -278,7 +278,7 @@ Old server, brand-new internals, and lots of room for expansion!
 ## I love enterprise gear
 While I was working with this server chassis, I fell in love with enterprise hardware. Everything is designed to be taken apart, serviced or replaced, and put back together. It all feels robust and well thought out. No fragile parts that might break and no proprietary screws. 
 
-I wish that all devices were like this.
+I wish all devices were like this.
 
 I feel like this might not be the last bit of enterprise gear that I buy on eBay.
 

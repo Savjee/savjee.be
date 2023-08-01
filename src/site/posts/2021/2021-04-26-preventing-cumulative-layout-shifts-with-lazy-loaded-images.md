@@ -10,7 +10,7 @@ There's nothing more annoying than a website shifting down just as you're about 
 
 Here's how to prevent (lazy loaded) images from triggering layout shifts.
 
-<!-- more -->
+<!--more-->
 
 ## What's a layout shift?
 Just to make it clear, here's what a layout shift looks like:

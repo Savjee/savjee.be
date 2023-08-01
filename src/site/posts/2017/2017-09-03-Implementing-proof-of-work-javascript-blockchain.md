@@ -29,7 +29,7 @@ Right now we can create blocks and add them to our blockchain really quickly. An
 
 Clearly we need a solution for these problems. Enter: proof-of-work.
 
-{% include "youtube-embed.html", videoId:'HneatE69814' %}
+{% render "youtube-embed.html", videoId:'HneatE69814' %}
 
 
 ## What is proof-of-work?

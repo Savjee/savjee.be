@@ -16,7 +16,7 @@ I've been blogging for a couple of years but I noticed something: I watch way mo
 
 So in the beginning of 2016 I finally decided to start my own YouTube channel. I would make video tutorials on whatever topics I'm interested in.
 
-{% include "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
+{% render "youtube-embed.html", videoId:'y6yD2-ZIllQ' %}
 
 ## Equipment: what I use
 You might be wondering what equipment I use to make these videos. So here is the list of hardware and software that I currently use to make my video's:

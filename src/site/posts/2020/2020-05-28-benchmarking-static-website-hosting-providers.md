@@ -2,7 +2,7 @@
 layout: post
 title: "Static webhosting benchmark: AWS, Google, Firebase, Netlify, GitHub & Cloudflare"
 quote:
-tags: [AWS, static-webhosting-benchmark, static-webhosting]
+tags: ["Static webhosting"]
 thumbnail: /uploads/2020-05-28-benchmaring-static-website-hosting-providers/poster-750.jpg
 upload_directory: /uploads/2020-05-28-benchmaring-static-website-hosting-providers
 toc_enabled: true

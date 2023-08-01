@@ -11,7 +11,7 @@ Almost everyone has heard about cryptocurrencies like Bitcoin and Ethereum, but 
 
 <!--more-->
 
-{% include "youtube-embed.html", videoId:'zVqczFZr124' %}
+{% render "youtube-embed.html", videoId:'zVqczFZr124' %}
 
 This blog post is part of a whole series:
 

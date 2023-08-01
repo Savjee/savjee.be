@@ -1,20 +1,30 @@
 ---
 layout: page
 title: "Newsletter"
+quote: "Get your a monthly dose of science and technology news. Signup for the Simply Explained newsletter if you want your curiosity tickled every month."
 ---
 
-<p>Monthly newsletter with the latest Simply Explained content and other cool stuff I found on the Internet. Check out the past issues here, and signup if you want your curiosity tickled every month ;)</p>
+<div>
+    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+        <p class="prose dark:prose-dark">Get your a monthly dose of science and technology news.
+            <br>Check out the past issues here, 
+            and signup if you want your curiosity tickled every month 😉</p>
+        
+        <div class="mt-4 md:mt-0">
+            {% render "components/newsletter-box.html", noDescription: true %}
+        </div>
+    </div>
 
-{% include "components/newsletter-box.html", noDescription: true %}
 
+    {% assign newslettersByYear = collections.newsletter | groupByYear %}
+    {% for yearObj in newslettersByYear reversed %}
+        <h3 class="text-2xl font-bold pb-4 pt-16 dark:text-savjeewhite">{{ yearObj.year }}</h3>
 
-{% assign newslettersByYear = collections.newsletter | groupByYear %}
-{% for yearObj in newslettersByYear reversed %}
-    <h2>{{ yearObj.year }}</h2>
-
-    {% for newsletter in yearObj.posts reversed %}
-        <p>
-            <a href="{{newsletter.url}}">{{newsletter.data.title}}</a>  <small class="no-wrap">({{newsletter.date | date: "%Y-%m" }})</small>
-        </p>
+        {% for newsletter in yearObj.posts reversed %}
+            <div class="py-3 leading-tight border-b border-b-savjeelightgrey4 last:border-none">
+                <a href="{{newsletter.url}}" class="no-underline hover:underline">{{newsletter.data.title}}</a><br>
+                <span class="text-savjeelightgrey3 text-sm">Sent on {{newsletter.date | date: "%B %e, %Y" }}</span>
+            </div>
+        {% endfor %}
     {% endfor %}
-{% endfor %}
+</div>

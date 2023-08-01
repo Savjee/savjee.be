@@ -1,35 +1,68 @@
 ---
 layout: default
-title: Simply Explained 
+title: Home
 wider: true
 quote: "Taking complicated topics and explaining them in a simple and straightforward way. That's what Simply Explained is all about. My blog posts are in-depth and technical while my videos are simple & in plain English."
 ---
 
-<div class="container home-box">
-    <div class="row">
-        <div class="col-md-5 text-center">
-            <a href="/about">
-                {% xd_img %}
-                    <img src="/assets/img/me.png" alt="Photo of me" class="fluid-image me" width="600" height="714">
-                {% endxd_img %}
-            </a>
+<div class="w-full bg-cover bg-no-repeat bg-center pt-10 text-center md:text-left" style="background-image: url('/assets/img/pexels-tranmautritam-326501.jpg');">
+    <div class="flex flex-col md:flex-row containerX items-center">
+        <div class="flex order-2 md:order-none justify-center w-3/4">
+            <img src="/assets/img/me.png" class="w-auto pt-10 md:pt-0 max-h-[300px] md:max-h-[500px]" {{ "/assets/img/me.png" | htmlImageSize }}>
         </div>
-        <div class="col-md-7 d-flex align-items-center">
-            <div>
-                <h1>Hi there, I'm Xavier.</h1>
-                <h3>I'm a full-stack developer & <a href="/videos">YouTuber</a>.</h3>
-                <p>I love taking complicated topics and explaining them in plain-English.</p>
+        <div class="order-1 md:order-none  max-w-full">
+            <div class="grow">
+    
+            </div>
+            <div class="mx-auto max-w-5xl flex justify-end items-center">
+                <div class="w-96 right-0">
+                    <p class="uppercase">Hi there</p>
+                    <p class="font-extrabold text-6xl text-savjeeblue">I'm Xavier.</p>
+                    <p class="font-medium text-xl pt-2 text-savjeeblue">I'm a full-stack developer & YouTuber.</p>
+                    <p class="text-savjeeblack pt-6">I love taking complicated topics and explaining them in plain-English.</p>
+                    <a href="/videos" class="inline-block text-savjeewhite hover:text-savjeered bg-savjeered hover:bg-savjeewhite border-2 border-savjeered rounded-md py-4 px-8 no-underline mt-8">Checkout my videos</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div>
-    <hr>
-    {% include "components/latest-content.html" %}    
-    <hr>
-    {% include "components/newsletter-box.html" %}
-    <hr>
+<div class="containerX mt-16">
+    {% render "components/latest-content.html", collections: collections %}
+</div>
+
+<div class="bg-savjeelightgrey5 dark:bg-savjeeblack mt-20 py-20">
+    <div class="containerX">
+        <div class="text-center">
+            <h2 class="pt-0 text-5xl font-extrabold text-savjeeblue dark:text-savjeewhite">About me</h2>
+            <p class="max-w-2xl mx-auto mt-6 prose dark:prose-dark font-medium">
+                By looking at this website and my content you probably think that I'm a developer and a passionate geek. Spot on! 
+                Here are some facts that you probably don't know about me: I'm 29 years old and I live in a country that is so tiny you might not even spot it on a map!
+            </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:mt-16 gap-4 md:gap-32 items-center prose dark:prose-dark max-w-none">
+            <div class="order-2 md:order-none">
+                <p>Besides this blog, I also have <a href="https://www.youtube.com/channel/UCnxrdFPXJMeHru_b4Q_vTPQ">a YouTube channel</a> 
+                    and I've created <a href="/courses">a few e-learning courses</a>. 
+                    One of my biggest passions is taking complex topics and simply explaining them. 
+                    I love doing extensive research and continuously rewrite my posts or video scripts until they make sense. 
+                    It's a messy and unstructured process but when I’m finally done, it gives me satisfaction knowing that I've helped people to understand new topics.
+                </p>
+
+                <p>I hope that you can feel all my passion when reading my blog posts or watching my videos. A lot of hard work has gone into them!</p>
+                    
+                <p>But enough about me! Let's talk about you. What is your story? What drives you? What gets you up in the morning? Is it the Simply Explained content or something else?</p>
+                    
+                <p>Feel free to reach out to me on Twitter (<a href="https://twitter.com/Savjee">@Savjee</a>) and let me know. I'd love hearing from you!</p>
+            </div>
+            <div class="order-1 md:order-none md:block flex-none max-w-md">
+                {% xd_img %}
+                    <img src="/assets/img/about-me-2.jpg" {{ "/assets/img/about-me-2.jpg" | htmlImageSize }} loading="lazy">
+                {% endxd_img %}
+            </div>
+        </div>
+    </div>
 </div>
 
 {% comment %}*********** Structured data for Google ***********{% endcomment %}
@@ -39,13 +72,13 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
         "@context": "http://schema.org",
         "@type": "WebSite",
         "name": "Savjee",
-        "url": "https://savjee.be/"
+        "url": "{% baseUrl %}"
     },
     {
         "@context": "http://schema.org",
         "@type": "Organization",
-        "url": "https://savjee.be/",
-        "logo": "https://savjee.be/assets/img/logo.svg",
+        "url": "{% baseUrl %}",
+        "logo": "{% baseUrl %}assets/img/logo.svg",
         "sameAs": [
             "https://www.facebook.com/savjee",
             "https://www.youtube.com/savjee",

@@ -1,0 +1,33 @@
+<div class="">
+  {% assign thumbnail = item | getThumbnailUrl %}
+
+  {% if thumbnail != null %}
+  <div class="w-full pb-2">
+      <a href="{{ item.url }}">
+        {% if item.url | startsWith: "/videos/" %}
+            {% render "components/youtube-thumbnail.html", video: item %} 
+        {% else %}
+            {% xd_img %}
+                <img src="{{ thumbnail }}" class="w-full" loading="lazy" {{thumbnail | htmlImageSize }} alt="Thumbnail for '{{ item | getTitle }}'" /> 
+            {% endxd_img %}
+        {% endif %}
+      </a>
+  </div>
+  {% endif %}
+  <div>
+      <p class="">
+          <a href="{{ item.url }}" class="no-underline">
+            <div class="truncate text-savjeered">
+                {{ item | getTitle }}
+            </div>
+        </a>
+      </p>
+      <div class="text-sm text-savjeelightgrey3 pt-1">
+        {% if duration %}
+            {% render "components/video-duration-and-tags.html", duration: duration, video: item %}
+        {% else %}
+            {% render "components/tags.html", tags: item.data.tags %}
+        {% endif %}
+      </div>
+  </div>
+</div>

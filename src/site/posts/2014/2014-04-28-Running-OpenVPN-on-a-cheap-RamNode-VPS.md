@@ -3,7 +3,6 @@ layout: post
 title: Running OpenVPN on a cheap RamNode VPS
 keywords: OpenVPN, VPN, privacy, online, VPS, server, ramnode, protect, tunnel
 quote: OpenVPN protects your privacy online. Get your own VPN running with a cheap RamNode VPS.
-upload_directory: openvpn-ramnode
 ---
 
 When I'm on the road and connecting to free public WiFi access points, I always use [OpenVPN](http://en.wikipedia.org/wiki/OpenVPN) to prevent my traffic from being intercepted by others. It's also very practical to circumvent the restrictive firewall at my school.
@@ -205,5 +204,5 @@ round-trip min/avg/max/stddev = 19.239/20.716/22.240/1.004 ms
 
 Ping times are pretty low! They're actually a bit better than Google's ping time. (Probably due to the extra time it takes to balance the load at Google?)
 
-# Conclusion
+## Conclusion
 Overall I'm very impressed with the basic VPS that [RamNode](https://clientarea.ramnode.com/aff.php?aff=1321) provides. The performance is great for running an OpenVPN server. Network throughput is high and latency is pretty low if you choose the location of your VPS wisely. And finally the price is very low. For just $24 dollars/year anyone can run an OpenVPN or simple webserver!

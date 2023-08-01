@@ -1,49 +1,63 @@
 ---
 layout: page
 title: Courses
-paginate:
-collection: courses
-quote: 
+quote: "In-depth video courses on a variety of topics."
 ---
 
-<p>Short explainer videos on YouTube only get you so far. That's why I've created
+<p class="max-w-2xl pb-12 prose dark:prose-dark">Short explainer videos on YouTube only get you so far. That's why I've created
 these courses to help you learn certain topics in-depth. Enjoy!</p>
 
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-10">
+  {% assign courses = collections.courses | sort: "data.date" | reverse %}
+  {% for course in courses %}
+    {% assign is_archived = course.data.archived | default: false %}
+    {% if is_archived %}
+      {% continue %}
+    {% endif %}
+    {% assign thumbnailUrl = course.url | append: "resources/thumb.jpg" %}
+    {% assign videos_in_course = collections.all 
+                                            | where: "data.courseName" 
+                                            | where: "data.courseName", course.data.courseName 
+                                            | sort: "data.order" 
+                                            | where: "data.order" %}
 
-{% for course in collections.courses %}
+    {% assign durations = videos_in_course | map: "data.duration" | compact %}
 
-  <div class="course-container">
+    {% assign total_duration = 0%}
+    {% for duration in durations %}
+    {% assign total_duration = total_duration | plus: duration %}
+    {% endfor %}
 
-    <div class="display-flex">
-      <div class="course-thumbnail">
-        <a href="{{course.url}}" aria-label="Open the course '{{ course.data.title }}'">
-          {% assign thumbnailUrl = course.url | append: "thumb.jpg" %}
-
-          {% xd_img %}
-            <img src="{{thumbnailUrl}}" loading="lazy" {{ thumbnailUrl | htmlImageSize }} alt="Thumbnail for the course '{{ course.data.title }}'">
-          {% endxd_img %}
-        </a>
-      </div>
-
-      <div class="course-description flex-vcenter">
-
-        <div class="course-title">
-          <a href="{{course.url}}">{{course.data.title}}</a>
-        </div>
-
-        <div class="platforms">
-          {% if course.data.link_udemy %}
-             <a href="{{course.data.link_udemy}}">Udemy</a>&nbsp;/&nbsp;
-           {% endif %}
-           
-           {% if course.data.link_skillshare %}
-               <a href="{{course.data.link_skillshare}}">Skillshare</a>
-           {% endif %}
-        </div>
-
-      </div>
+    <div>
+      {% render "components/preview-universal-vertical.html", item: course, duration: total_duration %}
     </div>
-  </div>
 
-  <br>
-{% endfor %}
+  {% endfor%}
+</div>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {%- for course in courses %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "Course",
+          "url":"{% baseUrl %}{{course.url}}",
+          "name": "{{ course.data.courseName }}",
+          "description": "{{ course.data.courseName }}",
+          "provider": {
+            "@type": "Organization",
+            "name": "Simply Explained",
+            "sameAs": "{% baseUrl %}"
+         }
+        }
+      }
+      {%- unless forloop.last -%},{% endunless -%}
+      {% endfor -%}
+    ]
+  }
+  </script>

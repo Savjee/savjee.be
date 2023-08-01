@@ -1,52 +1,48 @@
-<div class="row">
-    <div class="col-md-6">
-        <h3 class="no-margin">Latest posts</h3>
-        {% assign latestPosts = collections.posts | getFeatureable %}
-        {% for post in latestPosts limit: 3 %}
-            {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-                {%- if post.data.upload_directory -%}
-                    {% assign postThumb = post.data.upload_directory | append: "/thumb_timeline.jpg" %}
-                {%- else -%}
-                    {% assign postThumb = nil %}
-                {%- endif -%}
-                {% include 
-                        "components/bookmark-box.html", 
-                        url: post.url,
-                        title: post.data.title,
-                        imageUrl: postThumb,
-                        imageLeft: true,
-                        imageWidth: 700,
-                        imageHeight: 368
-                %}
-            {% if forloop.index > 2 %}</div>{% endif %}
-        {% endfor %}
+{% assign latest_video = collections.videos | getFeatureable | first %}
+{% assign latest_post = collections.posts | getFeatureable | first %}
 
-        <p>
-            <a href="/blog/">📝 More posts</a>
-        </p>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+    <div class="flex-none w-full md:max-w-lg">
+        <a href="{{latest_video.url}}">
+            {% include "components/youtube-thumbnail.html", video: latest_video %}
+        </a>
     </div>
+    <div>
+        <h2 class="m-0 p-0 mb-5">
+            <a href="{{ latest_video.url}}" class="no-underline text-savjeeblack dark:text-savjeewhite text-3xl font-extrabold">{{ latest_video.data.title }}</a>
+        </h2>
+        <p class="prose dark:prose-dark">{{ latest_video.content | md | strip_html | truncate: 200 }}</p>
 
-    <div class="col-md-6">
-        <h3 class="no-margin">Latest videos</h3>
+        <div class="flex items-center mt-5">
+            <div>
+                <a href="{{latest_video.url}}" class="no-underline hover:underline">Watch now</a>
+            </div>
+            <div class="pl-3 ml-3 border-l border-savjeelightgrey4">
+                <a href="/videos" class="no-underline hover:underline">More videos</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-        {% assign latestVideos = collections.videos | reverse | getFeatureable %}
-        {% for vid in latestVideos limit: 3 %}
-            {% if forloop.index > 2 %}<div class="hide-mobile ">{% endif %}
-                {% assign ytThumb = "https://i.ytimg.com/vi/" | append: vid.data.videoId | append: "/mqdefault.jpg" %}
-                {% include 
-                    "components/bookmark-box.html", 
-                    url: vid.url,
-                    title: vid.data.title,
-                    imageUrl: ytThumb,
-                    imageLeft: false,
-                    imageWidth: 320,
-                    imageHeight: 180
-                %}
-            {% if forloop.index > 2 %}</div>{% endif %}
-        {% endfor %}
+<div class="flex flex-col md:flex-row gap-8 items-center mt-20">
+    <div class="order-2 md:order-none">
+        <h2 class="m-0 p-0 mb-5">
+            <a href="{{latest_post.url}}" class="no-underline text-savjeeblack dark:text-savjeewhite text-3xl font-extrabold">{{ latest_post.data.title }}</a>
+        </h2>
+        <p class="prose dark:prose-dark">{{ latest_post.content | md | strip_html | truncate: 200 }}</p>
 
-        <p class="text-md-right">
-            <a href="/videos/">More videos 📹</a>
-        </p>
+        <div class="flex items-center mt-5">
+            <div>
+                <a href="{{latest_post.url}}" class="no-underline hover:underline">Read more</a>
+            </div>
+            <div class="pl-3 ml-3 border-l border-savjeelightgrey4">
+                <a href="/blog" class="no-underline hover:underline">More posts</a>
+            </div>
+        </div>
+    </div>
+    <div class="order-1 md:order-none w-full flex-none md:max-w-lg">
+        <a href="{{ latest_post.url }}">
+            {% include "components/blogpost-thumbnail.html", post: latest_post, highquality: true %}
+        </a>
     </div>
 </div>

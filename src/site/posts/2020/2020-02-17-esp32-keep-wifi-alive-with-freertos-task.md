@@ -11,7 +11,7 @@ What I need is something running in the background that is continuously monitori
 
 <!--more-->
 
-{% include "youtube-embed.html", videoId: "YSGPcm-qxDA" %}
+{% render "youtube-embed.html", videoId: "YSGPcm-qxDA" %}
 
 I created a FreeRTOS task that checks the WiFi connection every 10 seconds. WiFi up? Good, do nothing, and check again in 10 seconds. WiFi down? Connect it again!
 

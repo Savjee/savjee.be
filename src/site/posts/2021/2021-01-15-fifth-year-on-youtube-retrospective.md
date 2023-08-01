@@ -13,7 +13,7 @@ For the past 4 years, I have made a habit of reflecting on the previous year and
 
 Previous years: [2017]({% link collections.posts, "2017-01-13-my-first-year-on-youtube.md" %}), [2018]({% link collections.posts, "2018-01-08-My-second-year-on-YouTube.md" %}), [2019]({% link collections.posts, "2019-01-13-Three-years-on-YouTube.md" %}), [2020]({% link collections.posts, "2020-01-14-four-years-on-youtube.md" %}).
 
-# Stats for 2020
+## Stats for 2020
 Let’s start with the raw statistics for 2020 and see how they compare to the year before:
 
 * Fifth-year on YouTube (up from 4 years 🤪)
@@ -25,7 +25,7 @@ Let’s start with the raw statistics for 2020 and see how they compare to the y
 
 I'm pretty happy with these numbers.
 
-# (Achieved) Goals from 2019
+## (Achieved) Goals from 2019
 Last year I set myself these goals:
 
 * Reach 200k subscribers (46k to go)
@@ -41,7 +41,7 @@ I wasn't able to dedicate more time to my YouTube channel due to various side-pr
 
 As for my website: I did manage to redesign the homepage so it draws attention to my blog posts as well as my videos. 
 
-# Goals for 2021
+## Goals for 2021
 Setting new goals is always tricky. Last year, I listened to [an episode of The Knowledge Project with Naval Ravikant](https://fs.blog/knowledge-project/naval-ravikant/), the CEO and co-founder of AngelList. It turns out that there's a lot about happiness, society, and wealth that we can learn from him.
 
 When writing this blog post, I was reminded of a quote of his:
@@ -51,7 +51,7 @@ When writing this blog post, I was reminded of a quote of his:
 ### Don't measure
 His last sentence is very important: "don't measure". I've fallen for the numbers game too often. Settings goals for how many subscribers I should reach or how many views a new video should get. However, these goals aren't doing me any good (and now I understand why).
 
-I would feel bad about myself when a video "only" got a few thousand views. Am I not making the right kind of content? Should I only make content related to cryptocurrencies (which are some of [my most popular videos]({% link collections.videos, "simply-explained/how-does-a-blockchain-work.md" %})))? Or should I stick to making videos about hot topics?
+I would feel bad about myself when a video "only" got a few thousand views. Am I not making the right kind of content? Should I only make content related to cryptocurrencies (which are some of [my most popular videos]({% link collections.videos, "how-does-a-blockchain-work.md" %})))? Or should I stick to making videos about hot topics?
 
 Making videos and educating people is something that I love to do. Simply Explained is my hobby, something I love to work on, but that doesn't feel like actual work. But making videos that are requested by others is less fun and almost feels like work. Likewise, making videos about hot topics brings a certain pressure. You want to be one of the first to cover something new, but how long does that "newness" last?
 
@@ -66,14 +66,14 @@ So here are my actual goals for 2021:
 
 That's it. No goals for subscriber count or view counts. Simply Explained is my hobby, my side-project. I don't depend on the money it generates. So it should be all about me and what I love: educating people on whatever topic I find interesting. Sounds a bit selfish, but I believe it's the only way for me to stay creative and have fun while doing it.
 
-# Introspective
+## Introspective
 To round up this post, I wanted to do a little introspective. Fellow YouTuber, Ali Abdaal, [does this every year and published a list of questions that can help you get started](http://email.aliabdaal.com/issues/the-most-important-thing-i-do-each-year-295509). Here are a few that I choose to answer and publish on this blog:
 
 **When have you felt proud of yourself in 2020? what were you doing?**
 
 I'll highlight two occasions. First, when we moved to our new house, I felt really proud of having achieved this (don't get me wrong: it's not a mansion). I feel proud to own my home and be able to renovate it and change it to our likings.
 
-Secondly, I felt really proud of [the video I made about mRNA vaccines]({% link collections.videos, "simply-explained/mrna-vaccines.md" %}). I always make videos about technology, and stepping out of this comfort zone was scary but very rewarding.
+Secondly, I felt really proud of [the video I made about mRNA vaccines]({% link collections.videos, "mrna-vaccines.md" %}). I always make videos about technology, and stepping out of this comfort zone was scary but very rewarding.
 
 **How did you suffer differently in 2020?**
 

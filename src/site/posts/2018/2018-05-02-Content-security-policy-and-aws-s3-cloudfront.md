@@ -247,7 +247,7 @@ For me it costs $0.10 per month and my bill looks like this:
 
 For each region I'm being charged the minimum $0.01 for the amount of computing time my function uses and another $0.01 for the requests.
 
-# More info about headers
+## More info about headers
 Remember that each website requires slightly different headers and configuration. Make sure that you understand what each header does before implementing it. Here are the MDN articles for each header discussed in this post:
 
 * [strict-transport-security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
@@ -258,5 +258,5 @@ Remember that each website requires slightly different headers and configuration
 * [referrer-policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
 
 
-# Feedback
+## Feedback
 Alright, so that's where I'm at in terms of securing this website. What do you think? Did I miss something? Have suggestions for other security measurements? Let me know in the comments!

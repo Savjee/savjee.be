@@ -1,28 +1,35 @@
 ---
-layout: default
+layout: narrow 
 ---
 
-<article class="post">
-    <small><a href="/newsletter">&larr; Other newsletters issues</a></small>
-
-    <h1 class="post-title no-margin-top">
-        <a href="{{ page.url }}">{{ title }}</a>
+<div class="px-4 md:px-0 prose dark:prose-dark max-w-none">
+    <p>
+        <a href="/newsletter" class="no-underline">&larr; Back to newsletters</a>
+    </p>
+    
+    <h1 class="mb-3">
+        {{ title }}
     </h1>
+    
+    <div class="mb-10 text-sm text-savjeelightgrey3">
+        Sent on
+        <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    </div>
+</div>
 
-    <div class="post-description">
+<article class="px-4 md:px-0 prose dark:prose-dark max-w-none relative">
+    <div class="md:absolute md:-left-16">
+        {% render "components/share-buttons-vertical.html", page: page, title: title %}
+    </div>
+
+    <div>
         {{ content }}
     </div>
 </article>
 
-<p class="text-center">
-    <small>Sent on
-        <time class="date" datetime="{{ page.date | date: '%Y-%m-%dT00:00:00+01:00' }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    </small>
-</p>
+<br>
 
-{% include "components/share-buttons.html" %}
-
-{% include "components/newsletter-box.html" %}
+{% render "components/newsletter-box.html" %}
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">
@@ -35,13 +42,13 @@ layout: default
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Newsletter",
-                "item": "https://savjee.be/newsletter/"
+                "item": "{% baseUrl %}/newsletter/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "{{ title }}",
-                "item": "https://savjee.be{{page.url }}"
+                "item": "{% baseUrl %}/{{page.url }}"
             }
         ]
     }

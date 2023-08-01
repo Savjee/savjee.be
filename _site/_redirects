@@ -1,7 +1,8 @@
 /posts.html /blog/ 301
 /posts/ /blog/ 301
-/about.html /about/ 301
-/contact.html /about/ 301
+/about.html / 301
+/about/ / 301
+/contact.html / 301
 
 /2022/09/serverless-anagram-solver-with-cloudflare-r2-and-pages/* /blog/serverless-anagram-solver-with-cloudflare-r2-and-pages/ 301
 /2022/07/integrate-home-assistant-with-apple-reminders/* /blog/integrate-home-assistant-with-apple-reminders/ 301
@@ -83,3 +84,16 @@
 /2013/01/moving-from-Wordpress-to-Jekyll/* /blog/moving-from-Wordpress-to-Jekyll/ 301
 /2012/12/building-a-hackintosh/* /blog/building-a-hackintosh/ 301
 /2012/10/creating-one-WiFi-network-with-multiple-access-points/* /blog/creating-one-WiFi-network-with-multiple-access-points/ 301
+
+/videos/simply-explained/* /videos/:splat 301
+
+/videos/great-mac-apps/* /courses 301
+
+/videos/learning-typescript/* /courses/learning-typescript/:splat 301
+/videos/programming-esp32-with-arduino/* /courses/programming-esp32-with-arduino/:splat 301
+/videos/typescript-design-patterns/* /courses/typescript-design-patterns/:splat 301
+/videos/serverless-framework-basics/* /courses/serverless-framework-basics/:splat 301
+/videos/blockchain-in-javascript/* /courses/blockchain-in-javascript/:splat 301
+/videos/aws-lambda-series/* /courses/aws-lambda-series/:splat 301
+/videos/get-started-with-jenkins/* /courses/get-started-with-jenkins/:splat 301
+/videos/first-look-at-bitbucket-pipelines/* /courses/first-look-at-bitbucket-pipelines/:splat 301

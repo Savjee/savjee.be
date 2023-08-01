@@ -39,6 +39,18 @@ module.exports = {
             '--tw-prose-pre-bg': theme('colors.savjeelightgrey2'),
             '--tw-prose-pre-code': theme('colors.savjeeblack'),
           }
+        },
+        dark: {
+          css: {
+            '--tw-prose-body': theme('colors.savjeewhite'),
+            '--tw-prose-quotes': theme('colors.savjeewhite'),
+            '--tw-prose-headings': theme('colors.savjeewhite'),
+            '--tw-prose-links': theme('colors.savjeewhite'),
+            '--tw-prose-hr': theme('colors.savjeelightgrey4'),
+            '--tw-prose-pre-bg': "#111b27",
+            '--tw-prose-pre-code': theme('colors.savjeewhite'),
+            '--tw-prose-code': theme('colors.savjeewhite'),
+          }
         }
       }),
     }

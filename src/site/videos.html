@@ -11,7 +11,7 @@ pagination:
 {% assign featuredVideos = collections.videos | getFeatureable | slice: 0,6 %}
 
 {% if pagination.pageNumber == 0 %}
-<div class="bg-savjeelightgrey2 py-10 mb-8">
+<div class="bg-savjeelightgrey2 dark:bg-savjeeblack py-10 mb-8">
     <div class="containerX">
         <h1 class="bigtitle my-0">
             <a href="{{ page.url }}">{{ title }}</a>

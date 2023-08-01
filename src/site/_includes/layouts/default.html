@@ -53,16 +53,18 @@
     {% endif %}
 </head>
 
-<body class="border-t-4 md:border-t-2 border-savjeered">
+<body class="border-t-4 md:border-t-2 border-savjeered dark:bg-savjeeblack">
 
-<header class="py-6 border-b border-savjeelightgrey">
+    {{page.quote}}
+
+<header class="py-6 border-b border-savjeelightgrey dark:border-savjeeblue">
     <div class="containerX flex flex-1 grow flex-col md:flex-row mx-auto md:max-w-5xl md:items-center">
         <!-- Container for the logo + Menu button for mobile -->
-        <div class="flex flex-row w-full items-center">
+        <div class="flex flex-row w-full items-center -ml-3">
             <a href="/">
-                <img alt="Savjee Logo" src="/assets/img/logo2.svg" width="40" height="40">
+                <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="70" height="70">
             </a>
-            <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium ml-2 flex-1 grow">
+            <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue dark:text-savjeewhite no-underline font-medium ml-2 flex-1 grow">
                 Simply<br>Explained
             </a>
             <div class="md:hidden">
@@ -98,16 +100,16 @@
 
 {{ content }}
 
-<footer class="mt-20 border-t border-savjeelightgrey text-sm py-10">
+<footer class="mt-20 border-t border-savjeelightgrey dark:border-savjeeblue text-sm py-10">
     <div class="containerX text-center md:text-left">
         <div class="flex flex-col gap-8 items-center md:flex-row">
-            <div class="mx-auto flex flex-row items-center max-w-5xl">
+            <div class="mx-auto flex flex-row items-center">
                 <a href="/">
-                    <img alt="Savjee Logo" src="/assets/img/logo-rounded.svg" width="40" height="40">
+                    <img alt="Simply Explained Logo" src="/assets/img/logo-rounded.svg" width="40" height="40">
                 </a>
         
                 <div class="text-sm text-left">
-                    <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue no-underline font-medium">
+                    <a href="/" title="Simply Explained" rel="home" class="text-savjeeblue dark:text-savjeewhite ml-2 text-left no-underline font-medium">
                         Simply<br>Explained
                     </a>
                 </div>
@@ -121,29 +123,29 @@
                 </p>
             </div>
             <div>
-                <p class="mb-2 uppercase font-semibold text-sm text-savjeeblue">Follow me</p>
+                <p class="mb-2 uppercase font-semibold text-sm text-savjeeblue dark:text-savjeewhite">Follow me</p>
                 <div class="flex gap-8 md:gap-4 items-center">
-                    <a href="https://www.youtube.com/@simplyexplained" rel="noopener" target="_blank" aria-label="Visit Simply Explained on YouTube">
+                    <a href="https://www.youtube.com/@simplyexplained" rel="noopener" target="_blank" title="Visit Simply Explained on YouTube" aria-label="Visit Simply Explained on YouTube">
                         {% render "icons/youtube.html" %}
                     </a>
-                    <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank" aria-label="Visit Simply Explained on Twitter">
+                    <a href="https://twitter.com/Savjee/" rel="noopener" target="_blank" title="Visiit Simply Explained on Twitter" aria-label="Visit Simply Explained on Twitter">
                         {% render "icons/twitter.html" %}
                     </a>
-                    <a rel="me" href="https://mastodon.world/@simplyexplained" target="_blank" aria-label="Visit Simply Explained on Mastodon">
+                    <a rel="me" href="https://mastodon.world/@simplyexplained" target="_blank" title="Visit Simply Explained on Mastodon" aria-label="Visit Simply Explained on Mastodon">
                         {% render "icons/mastodon.html" %}
                     </a>
-                    <a href="https://www.instagram.com/simplyexplained_com/" rel="noopener" target="_blank" aria-label="Visit Simply Explained on Instagram">
+                    <a href="https://www.instagram.com/simplyexplained_com/" rel="noopener" target="_blank" title="Visit Simply Explained on Instagram" aria-label="Visit Simply Explained on Instagram">
                         {% render "icons/instagram.html" %}
                     </a>
-                    <a href="https://www.tiktok.com/@simplyexplained_com" rel="noopener" target="_blank" aria-label="Visit Simply Explained on TikTok">
+                    <a href="https://www.tiktok.com/@simplyexplained_com" rel="noopener" target="_blank" title="Visit Simply Explained on TikTok" aria-label="Visit Simply Explained on TikTok">
                         {% render "icons/tiktok.html" %}
                     </a>
                     
                     {% comment %}
-                    <a href="https://github.com/Savjee" rel="noopener" target="_blank" aria-label="Visit Simply Explained on GitHub">
+                    <a href="https://github.com/Savjee" rel="noopener" target="_blank" title="Visit Simply Explained on GitHub" aria-label="Visit Simply Explained on GitHub">
                         {% render "icons/github.html" %}
                     </a>
-                    <a href="/atom.xml" rel="noopener" target="_blank" aria-label="Open the Simply Explained RSS feed">
+                    <a href="/atom.xml" rel="noopener" target="_blank" title="Open the Simply Explained RSS feed" aria-label="Open the Simply Explained RSS feed">
                         {% render "icons/rss.html" %}
                     </a>
                     {% endcomment %}

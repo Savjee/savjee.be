@@ -34,13 +34,13 @@
     /* ---- For the small underline beneath H1 and main navigation items ---- */
     h1.bigtitle,
     h1.bigtitle a{
-      @apply relative text-savjeeblue no-underline text-6xl font-bold mb-14
+      @apply relative text-savjeeblue dark:text-savjeewhite no-underline text-6xl font-bold mb-14
     }
     
     h1.bigtitle a:after{
       transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
       content: "";
-      @apply absolute h-2 w-20 left-0 -bottom-3  bg-savjeeblue
+      @apply absolute h-2 w-20 left-0 -bottom-3  bg-savjeeblue dark:bg-savjeewhite
     }
 
     button, 

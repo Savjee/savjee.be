@@ -2,7 +2,7 @@
   {% assign thumbnail = item | getThumbnailUrl %}
 
   {% if thumbnail != null %}
-  <div class="w-full pb-6 md:pb-2">
+  <div class="w-full pb-2">
       <a href="{{ item.url }}">
         {% if item.url | startsWith: "/videos/" %}
             {% render "components/youtube-thumbnail.html", video: item %} 

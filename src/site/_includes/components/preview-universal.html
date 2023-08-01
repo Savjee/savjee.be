@@ -5,9 +5,11 @@
   {% if thumbnailUrl %}
     <div class="w-full pb-2 md:pb-0 md:max-w-320 relative">
         {% if item.url | startsWith: "/videos/" %}
-          <div class="absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 justify-center flex">
-              <div class="play-button w-14 h-14"></div>
-          </div>
+          <a href="{{item.url}}">
+            <div class="absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 justify-center flex">
+                <div class="play-button w-14 h-14"></div>
+            </div>
+          </a>
         {% endif %}
         <a href="{{item.url}}">
           {% xd_img %}

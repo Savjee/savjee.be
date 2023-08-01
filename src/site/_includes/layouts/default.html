@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{{ title | escape_once }} | Simply Explained</title>
-
-    {% assign seo_description_tmp = quote | default: page.excerpt %}
-    {% assign seo_description_tmp2 = seo_description_tmp | md | strip_html %}
-    {% assign seo_description_tmp3 = seo_description_tmp2 | truncate:350 %}
-    {% assign seo_description_tmp4 = seo_description_tmp3 | strip_newlines %}
-    {% assign seo_description = seo_description_tmp4 | escape %}
+    
+    {% assign fallback_description = content %}
+    {% assign description = quote | default: page.excerpt | default: fallback_description %}
 
     <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="{% baseUrl %}/atom.xml">
-    <meta name="description" content="{{ seo_description }}">
+    <meta name="description" content="{{ description | md | strip_html | truncate:350 | strip_newlines }}">
 
     {% if tags %}
     <meta name="keywords" content="{{ tags | join: ", " }}">

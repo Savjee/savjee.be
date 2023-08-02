@@ -3,7 +3,7 @@
 <div class="md:flex md:gap-8 items-center">
 
   {% if thumbnailUrl %}
-    <div class="w-full pb-2 md:pb-0 md:max-w-320 relative">
+    <div class="w-full pb-4 md:pb-0 md:max-w-320 relative">
         {% if item.url | startsWith: "/videos/" %}
           <a href="{{item.url}}">
             <div class="absolute left-0 right-0 mx-auto top-1/2 -translate-y-1/2 justify-center flex">
@@ -28,7 +28,7 @@
         {{ item.content |  md | strip_html | truncate: 200 }}
       </div>
 
-      <div class="text-base text-savjeelightgrey3 mb-4">
+      <div class="text-base text-savjeelightgrey3">
           {% render "components/video-duration-and-tags.html", video: item %}
       </div>        
   </div>

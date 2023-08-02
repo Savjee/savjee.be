@@ -16,10 +16,10 @@ The main idea of mRNA vaccines is to trick our bodies to produce part of a virus
 
 <!--more-->
 
-# Follow-up: Questions & Answers
+## Follow-up: Questions & Answers
 This video has sparked a lot of questions from viewers. I published [a follow-up video with answers to the most commonly asked questions.]({% link collections.videos, "mrna-vaccines-questions-and-misconceptions.md" %}).
 
-# Sources
+## Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 
 {% bibtex %}

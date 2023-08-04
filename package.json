@@ -15,11 +15,14 @@
     "start:webpack": "webpack --mode development --watch",
     "start:tailwind": "npm run build:tailwind -- --watch",
     "start:cf": "npx wrangler pages dev -- npm run start",
-    "build": "npm run build:tailwind; npm run build:webpack; npm run build:eleventy",
+    "verify:links": "grep -l -q -r \"\\[.*\\]\\(.*savjee.be.*\\)\" --include='*.md' --include='*.html' src || exit 1",
+    "build": "npm run lint && npm run verify:links && npm run build:tailwind && npm run build:webpack && npm run build:eleventy",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
-    "build:tailwind": "npx tailwindcss -i src/site/_assets/css_new/main.css -o _site/assets/css/main.css"
+    "build:tailwind": "npx tailwindcss -i src/site/_assets/css_new/main.css -o _site/assets/css/main.css",
+    "lint": "npm run lint:md-links",
+    "lint:md-links": "npx ts-node src/build/lint-markdown.ts"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

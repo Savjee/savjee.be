@@ -56,7 +56,7 @@ All that's left is to enable the certificate. Login to the [AWS Management Conso
 
 ![](/uploads/uploading-ssl-certificate-cloudfront/cloudfrontsettings.png)
 
-Done! Save the settings and wait for the changes to be propagated across the network. After a few minutes [my blog was accessible over HTTPS](https://www.savjee.be)! Just remember to upload a new certificate before it expires.
+Done! Save the settings and wait for the changes to be propagated across the network. After a few minutes [my blog was accessible over HTTPS]({% baseUrl %})! Just remember to upload a new certificate before it expires.
 
 ## Deleting a certificate
 If you want to delete a certificate from IAM you can use the ``delete-server-certificate`` command like this:

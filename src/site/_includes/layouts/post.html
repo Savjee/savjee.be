@@ -73,7 +73,14 @@ layout: narrow
             "{% baseUrl %}{{upload_directory}}/thumb_master.jpg"
         ],
         {% endif %}
-        "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}"
+        "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
+        "author": {
+            "@type": "Person",
+            "givenName": "Decuyper",
+            "familyName": "Xavier",
+            "name": "Xavier Decuyper",
+            "url": "https://simplyexplained.com"
+        }
     },
     {
         "@context": "https://schema.org",

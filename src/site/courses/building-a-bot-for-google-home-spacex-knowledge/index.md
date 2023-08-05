@@ -2,6 +2,7 @@
 title: Building a Google Home bot! (With SpaceX knowledge)
 order: 1
 date: 2018-05-01
+duration: 3600
 available_platforms:
     - name: Udemy
       url: https://www.udemy.com/building-your-own-action-on-google/?couponCode=SAVJEE

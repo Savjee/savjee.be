@@ -1,6 +1,10 @@
 import fg from "fast-glob";
 import {readFile} from "fs/promises";
 
+/**
+ * Go over all Markdown file in the repository and run checks on them. File
+ * contents is read once and then passed along to the check functions.
+ */
 (async () => {
     const files = await fg("src/**/*.md");
     const errors: boolean[] = [];
@@ -23,7 +27,8 @@ import {readFile} from "fs/promises";
     }
 
     console.log("All ok!");
- })();
+})();
+
 
 /**
  * Make sure that no links point towards "savjee.be" or "simplyexplained.com".
@@ -58,14 +63,3 @@ async function checkVideoDuration(path: string, markdownContents: string): Promi
     
     return false;
 }
-// Test cases
-/*
-[my link](https://savjee.be/lkdjfmldsq)
-[my link](http://savjee.be/lkdjfmldsq)
-[my link](https://savjee.be)
-[my link](https://savjee.be/lkdjfmldsq)
-[my link](http://www.savjee.be.s3-website-eu-west-1.amazonaws.com))
-
-(The full script is available [on GitHub](https://github.com/Savjee/savjee.be/blob/1a84362c4424ecd2ee7d368298ed30c218a2d66a/_deploy.sh))
-
-*/ 

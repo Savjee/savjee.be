@@ -16,7 +16,7 @@ So it was time to revisit my backup strategy: I started using Duplicity to take 
 It's a very complete tool. Not only does it take backups, it can also encrypts them with GnuPG, it can upload your backups to several cloud services and it handles restores as well. This happens in 1 go, so you don't have to worry about transferring your backups to and from the cloud.
 
 ## Backblaze B2
-Backups also need a place to be stored. I previously used the Standard Infrequent Access storage tier of Amazon S3. However, I found that Backblaze offers a similar service at a fourth the price! So while I was revamping my backup strategy, I also decided to start using [B2](https://www.backblaze.com/b2/cloud-storage.html) and migrate away from S3.
+Backups also need a place to be stored. I previously used the Standard Infrequent Access storage tier of Amazon S3. However, I found that Backblaze offers a similar service at a fourth the price! So while I was revamping my backup strategy, I also decided to start using [B2](https://www.backblaze.com/cloud-storage) and migrate away from S3.
 
 Here is a simple price comparison between B2 and S3 (not taking free tiers into account):
 

@@ -257,7 +257,7 @@ do
 done
 {% endhighlight %}
 
-It compresses every container (even inactive ones) to a tarball and puts it in ``/root/lxc-backup/``. It then uploads the tarball to an Amazon S3 bucket with the wonderful [s3cmd](http://s3tools.org/s3cmd) tool. I originally uploaded backups to [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html) (see commented out code) but I stopped doing that because they don't (yet) have lifecycle rules. In the future I'll probably switch to B2 for all my backup needs because it's a fourth the price of S3!
+It compresses every container (even inactive ones) to a tarball and puts it in ``/root/lxc-backup/``. It then uploads the tarball to an Amazon S3 bucket with the wonderful [s3cmd](http://s3tools.org/s3cmd) tool. I originally uploaded backups to [Backblaze B2](https://www.backblaze.com/cloud-storage) (see commented out code) but I stopped doing that because they don't (yet) have lifecycle rules. In the future I'll probably switch to B2 for all my backup needs because it's a fourth the price of S3!
 
 ## A GUI for LXC
 So far I've shown you how to manage LXC container with the command line. It is also possible to manage LXC with a web interface but there are very few open source projects out there. The only working GUI I could find was [LWP or LXC Web Panel](http://claudyus.github.io/LXC-Web-Panel/). It's a web interface written in Python that allows you to create, edit, start, stop, freeze and backup containers.

@@ -1,6 +1,9 @@
 User-agent: *
 Disallow:
 
+User-agent: GPTBot
+Disallow: /
+
 sitemap: https://simplyexplained.com/sitemap-blogposts.txt
 sitemap: https://simplyexplained.com/sitemap-videos.txt
 sitemap: https://simplyexplained.com/rss.xml

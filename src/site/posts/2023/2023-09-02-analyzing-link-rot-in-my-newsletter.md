@@ -5,7 +5,7 @@ tags: [Simply Explained, Simply Explained Newsletter]
 thumbnail: /uploads/2023-09-02-analyzing-link-rot-in-my-newsletter/thumb_timeline.jpg
 upload_directory: /uploads/2023-09-02-analyzing-link-rot-in-my-newsletter/
 ---
-I've been writing a monthly newsletter for the past 2.5 years. In every edition, I link to interesting articles related to science and technology. I thought it would be interesting to analyze how many of those links are still accessible, and how many have succumbed to link rot. Let's dive in!
+I've been writing [a monthly newsletter](/newsletter) for the past 2.5 years. In every edition, I link to interesting articles related to science and technology. I thought it would be interesting to analyze how many of those links are still accessible, and how many have succumbed to link rot. Let's dive in!
 
 <!--more-->
 

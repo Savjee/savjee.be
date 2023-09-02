@@ -31,19 +31,21 @@ layout: narrow
 </div>
 
 {% assign related_posts = collections.all | getRelated: tags, page.inputPath %}
-{% if related_posts.size > 0 %}
+{% assign related_posts_with_thumb = '' | split: '' %}
+{% for post in related_posts %}
+    {% assign thumbnailUrl = post | getThumbnailUrl %}
+    {% if thumbnailUrl %}
+        {% assign related_posts_with_thumb = related_posts_with_thumb | concat: post %}
+    {% endif %}
+{% endfor %}
+{% if related_posts_with_thumb.size > 0 %}
 	<div class="my-6">
 		<p class="text-4xl font-bold pb-5 text-savjeeblack dark:text-savjeewhite">You May Also Enjoy</p>
        
         <div class="grid grid-cols-2 gap-8">
             {% comment %} Make sure we only show related items that have a thumbnail! {% endcomment %}
             {% assign shownItems = 0 %}
-            {% for post in related_posts %}
-                {% assign thumbnailUrl = post | getThumbnailUrl %}
-                {% unless thumbnailUrl %}
-                    {% continue %}
-                {% endunless %}
-            
+            {% for post in related_posts_with_thumb %}
                 {% if shownItems == 2 %}
                     {% break %}
                 {% endif %}

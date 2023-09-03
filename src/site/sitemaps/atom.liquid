@@ -42,9 +42,9 @@ permalink: atom.xml
 
             <content type="html">
                 <![CDATA[
-                    {{ post.data.page.excerpt | strip }}
+                    {{ post.data.page.excerpt | md | strip_html | truncate:350 | strip_newlines }}
                     {% if post.data.thumbnail %}
-                        <img src="{% baseUrl %}{{post.data.upload_directory}}/thumb_master.jpg" class="webfeedsFeaturedVisual">
+                        <img src="{% baseUrl %}{{post.data.upload_directory}}thumb_master.jpg" class="webfeedsFeaturedVisual">
                     {% endif %}
                 ]]>
             </content>

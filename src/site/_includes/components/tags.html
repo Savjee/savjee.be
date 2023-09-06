@@ -1,5 +1,5 @@
 {% for tag in tags %}
-    <a href="/tag/{{tag | slugify}}" class="font-normal text-savjeelightgrey3">
+    <a href="/tag/{{tag | slugify}}/" class="font-normal text-savjeelightgrey3">
         {{- tag -}}
     </a>{% unless forloop.last %},{% endunless %}
 {% endfor %}

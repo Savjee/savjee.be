@@ -8,9 +8,10 @@
     
     {% assign fallback_description = content %}
     {% assign description = quote | default: page.excerpt | default: fallback_description %}
+    {% assign description = description | md | strip_html | truncate:250 | strip_newlines %}
 
     <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="{% baseUrl %}/atom.xml">
-    <meta name="description" content="{{ description | md | strip_html | truncate:350 | strip_newlines }}">
+    <meta name="description" content="{{ description }}">
 
     {% if tags %}
     <meta name="keywords" content="{{ tags | join: ", " }}">
@@ -33,12 +34,12 @@
     <meta name="twitter:creator" content="@Savjee">
     <meta name="twitter:url" content="{% baseUrl %}{{page.url}}">
     <meta name="twitter:title" content="{{title}}">
-    <meta name="twitter:description" content="{{ seo_description }}">
+    <meta name="twitter:description" content="{{ description }}">
 
     <meta property="og:title" content="{{title}}">
     <meta property="og:site_name" content="Simply Explained">
     <meta property="og:url" content="{% baseUrl %}{{page.url}}">
-    <meta property="og:description" content="{{ seo_description }}">
+    <meta property="og:description" content="{{ description }}">
     <meta property="og:type" content="article">
     <meta property="fb:app_id" content="805673586165209">
 

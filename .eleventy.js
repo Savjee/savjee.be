@@ -142,6 +142,12 @@ module.exports = function (config) {
     config.addLiquidFilter("md", (content = "") => {
         return markdownLib.render(content);
     });
+
+    config.setLiquidOptions({
+        strictFilters: true,
+        orderedFilterParameters: true,
+        lenientIf: true,
+      });
     
     return {
         dir: { input: 'src/site', output: '_site', data: '_data' },

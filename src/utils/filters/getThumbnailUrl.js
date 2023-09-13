@@ -18,7 +18,8 @@ module.exports = (item) => {
         if(!item.data.upload_directory){
             return null;
         }
-        return `${item.data.upload_directory}/thumb_timeline.jpg`;
+        return `${item.data.upload_directory}/thumb_timeline.jpg`
+                    .replace("//", "/");
     }
     
     if(url.startsWith("/videos/")){

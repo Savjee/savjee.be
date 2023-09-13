@@ -5,6 +5,7 @@ quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measur
 thumbnail: /uploads/2020-02-11-home-energy-monitor-v2/poster-750.jpg
 upload_directory: /uploads/2020-02-11-home-energy-monitor-v2
 tags: [ESP32, DIY, Energy, FreeRTOS, AWS, Home Assistant, GraphQL]
+meta_tags: ["esp32 current sensor", "esp32 power monitor"]
 toc_enabled: true
 ---
 

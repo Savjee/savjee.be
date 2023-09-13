@@ -3,6 +3,7 @@ layout: post
 title: "MAX17043: Battery Monitoring Done Right (Arduino & ESP32)"
 quote: 
 tags: [ESP32, Arduino]
+meta_tags: ["esp32 battery level", "esp32 battery monitor", "arduino battery monitor", "voltage measurement"]
 thumbnail: /uploads/2021-04-28-max17043-battery-monitoring/thumb_timeline.jpg
 upload_directory: /uploads/2021-04-28-max17043-battery-monitoring
 toc_enabled: true

@@ -2,6 +2,7 @@
 layout: post
 title: "Tracking gas usage with ESPHome, Home Assistant, and TCRT5000"
 tags: [Home Assistant, ESPHome, ESP32]
+meta_tags: ["home assistant gas meter", "track gas consumption", "natural gas", "utility meter"]
 upload_directory: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/
 thumbnail: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/thumb_timeline.jpg
 toc_enabled: true

@@ -5,6 +5,7 @@ quote: Have a router with limited WiFi range? Setup a second router to extend yo
 keywords: WiFi network, extend WiFi range, one network multiple routers, access points
 thumbnail: true
 upload_directory: /uploads/wifi-network-multiple-access-points
+meta_tags: ["WiFi network", "WiFi multiple access points", "Extend WiFi network", "WiFi repeaters", "same ssid", "multiple access points"]
 ---
 
 At home, I have a problem that I know is very common: the range on our WiFi router is not enough to cover every bit of the house. (Well actually it does cover our house, but in some places it’s just painfully slow!). Luckily there are a few solutions to have WiFi everywhere.

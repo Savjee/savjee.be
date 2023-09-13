@@ -13,8 +13,23 @@
     <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="{% baseUrl %}/atom.xml">
     <meta name="description" content="{{ description }}">
 
-    {% if tags %}
-    <meta name="keywords" content="{{ tags | join: ", " }}">
+    {% comment %}
+        My content has two types of tags:
+            - "tags", which are publically shown on the website, and allows people
+              to view similar content together and is used by the "You May Also Enjoy" section.
+            
+            - "meta_tags", which are tags that are there for SEO purposes and don't need to be shown
+              to the user.
+
+        Here, we merge both tag lists into one, before exposing them as meta tag.
+    {% endcomment %}
+    {% assign empty_list = "" | split: "" %}
+    {% assign exposed_tags = tags | default: empty_list %}
+    {% assign additional_tags = meta_tags | default: empty_list %}
+
+    {% assign all_tags =  exposed_tags | concat: additional_tags %}
+    {% if all_tags %}
+        <meta name="keywords" content="{{ all_tags | join: ", " }}">
     {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">

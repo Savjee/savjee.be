@@ -7,7 +7,8 @@ duration: 408
 order: 23
 series: Simply explained
 date: 2019-03-05
-tags: ["Decentralization"]
+tags: ["Decentralization", "Fediverse"]
+meta_tags: ["Mastodon", "Threads", "ActivityPub", "Federation"]
 ---
 
 Mastodon is a "federated" social network that works like Twitter. It puts the control of data into the user's hands, not in a single corporation.

@@ -2,6 +2,7 @@
 layout: post
 title: "How I Use Alfred to Search My Obsidian Notes Faster (with Spotlight!)"
 tags: [Obsidian, Alfred]
+meta_tags: ["macOS", "alfred obsidian", "Spotlight", "Search engine", "Note taking", "Second brain"]
 thumbnail: /uploads/2023-03-how-i-use-alfred-to-search-obsidian-notes/thumb_timeline.jpg
 upload_directory: /uploads/2023-03-how-i-use-alfred-to-search-obsidian-notes/
 ---

@@ -5,6 +5,7 @@ quote:
 thumbnail: /uploads/2020-01-06-multitasking-esp32-arduino-freertos/poster-750.jpg
 upload_directory: /uploads/2020-01-06-multitasking-esp32-arduino-freertos
 tags: [ESP32, Tutorial, Arduino, FreeRTOS]
+meta_tags: ["vtasksuspend", "vTaskDelay", "vTaskDelete", "vTaskCreate"]
 toc_enabled: true
 ---
 

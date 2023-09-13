@@ -2,6 +2,7 @@
 layout: post
 title: "Analyzing Link Rot in My Newsletter (After 31 Editions)"
 tags: [Simply Explained, Simply Explained Newsletter]
+meta_tags: ["Link rot", "Dead links", "Internet Archive", "Digital preservation", "Investigation"]
 thumbnail: /uploads/2023-09-02-analyzing-link-rot-in-my-newsletter/thumb_timeline.jpg
 upload_directory: /uploads/2023-09-02-analyzing-link-rot-in-my-newsletter/
 ---

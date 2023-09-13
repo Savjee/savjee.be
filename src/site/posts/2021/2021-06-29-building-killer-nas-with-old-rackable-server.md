@@ -3,6 +3,7 @@ layout: post
 title: "Building a killer NAS with an old Rackable Server"
 quote: 
 tags: [Unraid, Proxmox, Data storage]
+meta_tags: ["NAS", "Network Attached Storage", "Synology killer", "diy rackmount nas", "rackmount nas"]
 upload_directory: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/
 thumbnail: /uploads/2021-06-29-building-killer-nas-with-old-rackable-server/thumb_timeline.jpg
 toc_enabled: true

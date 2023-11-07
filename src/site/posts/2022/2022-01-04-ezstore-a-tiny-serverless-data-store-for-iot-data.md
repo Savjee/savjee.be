@@ -5,6 +5,8 @@ quote:
 tags: [AWS, IoT, DynamoDB, Lambda, NoSQL]
 not_featureable: true
 toc_enabled: true
+thumbnail: /uploads/2022-01-ezstore/thumb_timeline.jpg
+upload_directory: /uploads/2022-01-ezstore
 ---
 
 I've been working on a few IoT projects recently, and while prototyping, I need a simple but flexible data store. I just want to push data to an API and query and visualize it later on.

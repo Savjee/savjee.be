@@ -65,7 +65,7 @@
       @apply border-savjeered outline-none
     }
 
-    article img{
+    article img, article video{
       @apply mx-auto
     }
 

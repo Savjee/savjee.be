@@ -19,13 +19,13 @@
  */
 export async function onRequestPost({request, env})
 {
-  try{
     // Extract the domain from which this Function was called. Needed for the
     // redirect (which requires a full URL), and because I want to support
     // Cloudflare Pages preview deployments (which get unique subdomains).
     const url = new URL(request.url);
     const baseUrl = `https://${url.host}/newsletter/signup`;
 
+  try{
     // Extract form data
     const formBody = await request.formData().catch(_ => {
       console.error('No form data provided');
@@ -55,11 +55,9 @@ export async function onRequestPost({request, env})
       return redirect(redirectUrl);
     }
 
-    const data = await notify(email, request);
-
-    await notifySlack(email, request);
-    console.log(data);
-    return redirect(`${baseUrl}/success`);
+    // const data = await notify(email, request);
+    const data = await notifySlack(email, request);
+    return redirect(`${baseUrl }/success`);
   }catch(e){
     return redirect(`${baseUrl}/failed?reason=internal`);
   }
@@ -76,24 +74,18 @@ function redirect(url){
   return Response.redirect(url, 303);
 }
 
-async function notifySlack(email, req){
-  const response = await fetch(process.env.SLACK_WEBHOOK, {
+function notifySlack(email, req){
+  console.log("slack webhook:", process.env.SLACK_WEBHOOK);
+
+  return fetch(new Request(process.env.SLACK_WEBHOOK, {
     method: 'POST',
     body: JSON.stringify({
       text: "Someone subscribed to mailing list from simplyexplained.com: " + email,
     }),
     headers: {
-      'Content-Type': 'application/json'
+      'content-type': 'application/json'
     }
-  });
-
-  if (!response.ok) {
-    // If the response is not 2xx, throw an error
-    const errorText = await response.text();
-    console.error(`Server error: ${errorText}`);
-  }
-
-  return true;
+  }));
 }
 
 function notify(email, req){

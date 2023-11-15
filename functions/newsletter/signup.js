@@ -25,7 +25,7 @@ export async function onRequestPost({request, env})
     const url = new URL(request.url);
     const baseUrl = `https://${url.host}/newsletter/signup`;
 
-  // try{
+  try{
     // Extract form data
     const formBody = await request.formData().catch(_ => {
       console.error('No form data provided');
@@ -55,12 +55,11 @@ export async function onRequestPost({request, env})
       return redirect(redirectUrl);
     }
 
-    // const data = await notify(email, request);
     const data = await notifySlack(email, request, env);
     return redirect(`${baseUrl }/success`);
-  // }catch(e){
-    // return redirect(`${baseUrl}/failed?reason=internal`);
-  // }
+  }catch(e){
+    return redirect(`${baseUrl}/failed?reason=internal`);
+  }
 }
 
 /**
@@ -75,41 +74,13 @@ function redirect(url){
 }
 
 function notifySlack(email, req, env){
-  console.log("slack webhook:", env.SLACK_WEBHOOK);
-
   return fetch(new Request(env.SLACK_WEBHOOK, {
     method: 'POST',
     body: JSON.stringify({
-      text: "Someone subscribed to mailing list from simplyexplained.com: " + email,
+      text: "Someone subscribed to mailing list from the website: " + email,
     }),
     headers: {
       'content-type': 'application/json'
     }
-  }));
-}
-
-function notify(email, req){
-  return fetch(new Request("https://api.mailchannels.net/tx/v1/send", {
-    method: "POST",
-    headers: {
-        "content-type": "application/json",
-    },
-    body: JSON.stringify({
-        personalizations: [
-          {"to": [ {"email": "xavier@simplyexplained.com", "name": "Xavier Decuyper"}]}
-        ],
-        from: {
-          email: "xavier@savj.ee",
-          name: "Savjee Website Bot",
-        },
-        subject: "New subscriber!",
-        content: [{
-          type: "text/plain",
-          value: `Signed up for newsletter. Add to Substack: ${email}
-          
-                  Headers:
-                  ${JSON.stringify(req, null, 4)}`,
-        }],
-    }),
   }));
 }

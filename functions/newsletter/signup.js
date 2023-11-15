@@ -56,6 +56,8 @@ export async function onRequestPost({request, env})
     }
 
     const data = await notify(email, request);
+
+    await notifySlack(email, request);
     console.log(data);
     return redirect(`${baseUrl}/success`);
   }catch(e){
@@ -72,6 +74,26 @@ export async function onRequestPost({request, env})
  */
 function redirect(url){
   return Response.redirect(url, 303);
+}
+
+async function notifySlack(email, req){
+  const response = await fetch(process.env.SLACK_WEBHOOK, {
+    method: 'POST',
+    body: JSON.stringify({
+      text: "Someone subscribed to mailing list from simplyexplained.com: " + email,
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    // If the response is not 2xx, throw an error
+    const errorText = await response.text();
+    console.error(`Server error: ${errorText}`);
+  }
+
+  return true;
 }
 
 function notify(email, req){

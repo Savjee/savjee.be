@@ -55,7 +55,8 @@ export async function onRequestPost({request, env})
       return redirect(redirectUrl);
     }
 
-    await notify(email, request);
+    const data = await notify(email, request);
+    console.log(data);
     return redirect(`${baseUrl}/success`);
   }catch(e){
     return redirect(`${baseUrl}/failed?reason=internal`);
@@ -81,10 +82,10 @@ function notify(email, req){
     },
     body: JSON.stringify({
         personalizations: [
-          {"to": [ {"email": "hi@savjee.be", "name": "Xavier Decuyper"}]}
+          {"to": [ {"email": "xavier@simplyexplained.com", "name": "Xavier Decuyper"}]}
         ],
         from: {
-          email: "bot@savjee.be",
+          email: "xavier@savj.ee",
           name: "Savjee Website Bot",
         },
         subject: "New subscriber!",

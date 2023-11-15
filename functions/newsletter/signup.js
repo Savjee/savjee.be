@@ -25,7 +25,7 @@ export async function onRequestPost({request, env})
     const url = new URL(request.url);
     const baseUrl = `https://${url.host}/newsletter/signup`;
 
-  try{
+  // try{
     // Extract form data
     const formBody = await request.formData().catch(_ => {
       console.error('No form data provided');
@@ -58,9 +58,9 @@ export async function onRequestPost({request, env})
     // const data = await notify(email, request);
     const data = await notifySlack(email, request);
     return redirect(`${baseUrl }/success`);
-  }catch(e){
-    return redirect(`${baseUrl}/failed?reason=internal`);
-  }
+  // }catch(e){
+    // return redirect(`${baseUrl}/failed?reason=internal`);
+  // }
 }
 
 /**

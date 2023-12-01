@@ -10,7 +10,7 @@ When I was a kid, my sister and I had a tower of VHS tapes we watched endlessly.
 
 <!--more-->
 
-Here's our current media routine. We have two boys, one is 10 months old, and the other is 2 years old. The eldest is permitted a 30-minute TV session in the morning and another in the evening. He usually knows what he wants to watch, but he depends on us to operate the remote and navigate to the correct apps.
+Here's our current media routine. We have two boys, and the eldest is permitted a 30-minute TV session in the morning and another in the evening. He usually knows what he wants to watch, but he depends on us to operate the remote and navigate to the correct apps.
 
 This got me thinking: why not blend the old with the new? I wanted a way for my son to have a more active role in choosing what to watch, despite the digital format.
 

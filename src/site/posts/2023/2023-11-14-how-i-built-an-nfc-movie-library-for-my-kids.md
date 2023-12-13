@@ -231,7 +231,7 @@ The interesting bit here is the `tag_id`. I used this ID to create a mapping bet
 
 Here's the entire automation:
 
-```yaml
+{% highlight yaml %}
 - alias: "NFC Reader - Plex"
   description: ""
   mode: single
@@ -300,7 +300,8 @@ Here's the entire automation:
 	  target:
 	    entity_id: media_player.sonos_tv
 
-```
+{% endhighlight %}
+
 
 The automation is simple and fast. It takes the Apple TV about 5 seconds to turn on the TV, launch the Plex app and have it play the correct movie.
 

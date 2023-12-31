@@ -77,6 +77,10 @@
       @apply border-savjeelightgrey4
     }
 
+    code{
+      @apply whitespace-pre-wrap break-words
+    }
+
     /* pre,
     pre[class*=language-]{
       @apply bg-savjeelightgrey2 p-4 my-4 border border-savjeelightgrey4 text-sm

@@ -14,15 +14,15 @@ module.exports = (item) => {
         return url + "resources/thumb.jpg";
     }
 
-    if(url.startsWith("/blog/")){
+    if(url.startsWith("/blog/") && item.data?.upload_directory){
         if(!item.data.upload_directory){
             return null;
         }
         return `${item.data.upload_directory}/thumb_timeline.jpg`
                     .replace("//", "/");
     }
-    
-    if(url.startsWith("/videos/")){
+
+    if(url.startsWith('/videos/') && item.data?.videoId){
         return `https://i.ytimg.com/vi/${item.data.videoId}/maxresdefault.jpg`;
     }
 

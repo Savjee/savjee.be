@@ -68,7 +68,10 @@ layout: default
 
 					<div class="text-sm border-b py-3 border-savjeelightgrey last:border-0 flex">
 						{% if vid.data.paywalled == true %}
-						<div>
+						<div class="group relative cursor-pointer">
+							<div class="absolute invisible group-hover:visible w-60 bg-savjeewhite dark:bg-savjeelightgrey3 shadow-md text-sm rounded-md mt-6 py-2 px-4 z-10">
+								Buy this course to watch the video
+							</div>
 							<svg width="16" height="16" viewBox="0 0 24 24" class="dark:fill-savjeewhite mr-1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M6 6c0-3.311 2.689-6 6-6s6 2.688 6 6v4h3v14h-18v-14h3v-4zm14 5h-16v12h16v-12zm-13-5v4h10v-4c0-2.76-2.24-5-5-5s-5 2.24-5 5z"/></svg>
 						</div>
 						{% endif %}

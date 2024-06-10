@@ -15,7 +15,7 @@ Dark mode is popular, but can have a negative impact on your productivity. When 
 
 This video was inspired by someone calling me a freak for using a light color theme while coding. In the end, I think it’s all about preference. I enjoy using light mode during the day and dark mode at night. But then again, bugs are attracted to light, so maybe I should only use dark mode when coding...
 
-Anyway, don't think this personal if you prefer dark mode all the time.
+Anyway, don't take this personal if you prefer dark mode all the time.
 
 ## Sources
 

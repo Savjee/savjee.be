@@ -62,7 +62,9 @@ module.exports = {
     }
   },
   safelist: [
-    "csl-bib-body"
+    "csl-bib-body",
+    "footnote-ref",
+    "footnotes"
   ],
   plugins: [
     require('@tailwindcss/typography'),

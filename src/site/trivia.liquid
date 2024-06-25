@@ -1,0 +1,15 @@
+---
+layout: page
+title: "Trivia"
+quote: ""
+---
+
+<div>
+    <p>I honestly don't know how I come up with these questions...</p>
+    
+    {% for trivia in collections.trivia %}
+        <div class="py-3 leading-tight border-b border-b-savjeelightgrey4 last:border-none">
+            <a href="{{trivia.url}}" class="no-underline hover:underline">{{trivia.data.title}}</a>
+        </div>
+    {% endfor %}
+</div>

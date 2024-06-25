@@ -70,6 +70,10 @@ module.exports = function (config) {
         return [...tags].sort();
       });
 
+    config.addCollection('trivia', (collectionApi) => {
+        return collectionApi.getFilteredByGlob('src/site/trivia/**/*.md');
+    });
+
     // ----------------------- Custom shortcodes -----------------------
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
     config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
@@ -91,6 +95,7 @@ module.exports = function (config) {
         "src/site/projects/**/*[^md]",
         "src/site/videos/**/*[^md]",
         "src/site/newsletter/assets/**/*[^md]",
+        "src/site/trivia/**/*[^md]",
     ].forEach(path => config.addPassthroughCopy(path));
 
     
@@ -130,6 +135,8 @@ module.exports = function (config) {
         // Generate table of contents when asked (needs anchors to work)
         // Needed for inline [[TOC]]
         .use(require("markdown-it-table-of-contents"))
+
+        .use(require('markdown-it-footnote'))
 
         // Lazy load all images by default (browser support needed)
         .use(require('./src/utils/markdown-it-xd-images'), {

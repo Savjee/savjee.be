@@ -84,7 +84,7 @@ Clearly hamsters cannot compete with natural gas or nuclear energy...
 
 
 ## Hamster power station simulator
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="/assets/js/alpine-3.14.1.min.js"></script>
 
 <div x-data="{ ev_battery: 100, hamster_count: 20000, hamster_power: 0.5 }">
     <div class="flex">

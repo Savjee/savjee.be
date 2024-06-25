@@ -136,6 +136,8 @@ module.exports = function (config) {
         // Needed for inline [[TOC]]
         .use(require("markdown-it-table-of-contents"))
 
+        .use(require('markdown-it-footnote'))
+
         // Lazy load all images by default (browser support needed)
         .use(require('./src/utils/markdown-it-xd-images'), {
             image_size: true,

@@ -119,6 +119,14 @@
   .csl-bib-body .csl-entry{
     @apply pb-4 leading-none
   }
+
+  .footnote-ref a {
+    @apply text-savjeelightgrey3
+  }
+
+  section.footnotes{
+    @apply text-sm
+  }
 }
 
 @tailwind utilities;

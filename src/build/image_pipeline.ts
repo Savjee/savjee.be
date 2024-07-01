@@ -14,5 +14,6 @@ import { generate_webp_versions } from "./image_pipeline/webp_versions"
       "src/site/assets/**/*.(jpg|png)",
       "src/site/courses/**/*.(jpg|png)",
       "src/site/newsletter/assets/**/*.(jpg|png)",
+      "!src/site/assets/favicon/**",
    ]);
 })();

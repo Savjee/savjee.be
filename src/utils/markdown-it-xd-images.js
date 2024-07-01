@@ -31,7 +31,18 @@ module.exports = function lazy_loading_plugin(md, mdOptions) {
     const sizeOf = require('image-size');
     const path = require('path');
 
-    const imgSrc = token.attrGet('src');
+    let imgSrc = token.attrGet('src');
+
+    // Most images are loaded from /uploads/. However, some images use a path
+    // relative to its markdown file (path not starting with a forward slash).
+    // In that case, we need to construct a relative path from /src/site/
+    if(imgSrc?.substring(0,1) !== '/'){
+        imgSrc = path.join(
+            path.relative(mdOptions.base_path, path.dirname(env.page.inputPath)),
+            imgSrc
+        );
+    }
+
     const imgPath = path.join(mdOptions.base_path, imgSrc);
     const dimensions = sizeOf(imgPath);
 

@@ -12,12 +12,12 @@
   "scripts": {
     "start": "npm run start:eleventy & npm run start:webpack & npm run start:tailwind",
     "start:eleventy": "eleventy --serve --quiet",
-    "start:webpack": "webpack --mode development --watch",
+    "start:webpack": "esbuild src/site/_assets/js/all.js --bundle --outfile=_site/assets/main.js --watch",
     "start:tailwind": "npm run build:tailwind -- --watch",
     "start:cf": "npx wrangler pages dev -- npm run start",
     "build": "npm run lint:markdown && npm run build:tailwind && npm run build:webpack && npm run build:eleventy && npm run lint:markdown",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
-    "build:webpack": "webpack --mode production",
+    "build:webpack": "esbuild src/site/_assets/js/all.js --bundle --outfile=_site/assets/main.js",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
     "build:tailwind": "npx tailwindcss -i src/site/_assets/css/main.css -o _site/assets/css/main.css",
     "lint": "npm run lint:markdown",
@@ -26,14 +26,11 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
     "@tailwindcss/typography": "^0.5.9",
     "@types/sharp": "^0.32.0",
-    "babel-loader": "^9.1.2",
     "eleventy-plugin-bibtex": "^0.1.1",
+    "esbuild": "0.22.0",
     "fast-glob": "^3.2.12",
-    "file-loader": "^6.2.0",
     "image-size": "^1.0.0",
     "instant.page": "^5.1.0",
     "markdown-it": "^14.1.0",
@@ -45,9 +42,7 @@
     "sharp": "^0.33.4",
     "tailwindcss": "^3.3.1",
     "tailwindcss-base-font-size": "^1.0.0",
-    "ts-node": "^10.4.0",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "ts-node": "^10.4.0"
   },
   "dependencies": {
     "eleventy-plugin-toc": "^1.1.5"

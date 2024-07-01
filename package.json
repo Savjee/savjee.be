@@ -11,7 +11,7 @@
   "private": true,
   "scripts": {
     "start": "npm run start:eleventy & npm run start:webpack & npm run start:tailwind",
-    "start:eleventy": "eleventy --serve",
+    "start:eleventy": "eleventy --serve --quiet",
     "start:webpack": "webpack --mode development --watch",
     "start:tailwind": "npm run build:tailwind -- --watch",
     "start:cf": "npx wrangler pages dev -- npm run start",

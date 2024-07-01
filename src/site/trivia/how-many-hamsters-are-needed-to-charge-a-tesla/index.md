@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "How many hamsters are needed to charge a Tesla?"
 ---
 

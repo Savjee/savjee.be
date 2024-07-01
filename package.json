@@ -19,7 +19,7 @@
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:webpack": "webpack --mode production",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
-    "build:tailwind": "npx tailwindcss -i src/site/_assets/css_new/main.css -o _site/assets/css/main.css",
+    "build:tailwind": "npx tailwindcss -i src/site/_assets/css/main.css -o _site/assets/css/main.css",
     "lint": "npm run lint:markdown",
     "lint:markdown": "npx ts-node src/build/lint-markdown.ts"
   },

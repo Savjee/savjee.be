@@ -24,7 +24,7 @@ These contracts allow you to lock up your funds and release them when certain co
     date = 2017,
     author = {Alyssa Hertig},
     organization = {Coindesk},
-    url = {https://www.coindesk.com/information/ethereum-smart-contracts-work/},
+    url = {https://www.coindesk.com/learn/how-do-ethereum-smart-contracts-work/},
 }
 
 @online{src,

@@ -40,7 +40,7 @@ module.exports = function (config) {
      });
 
     config.addCollection('newsletter', (collectionApi) => {
-    return collectionApi.getFilteredByGlob('src/site/newsletter/**/*.md');
+        return collectionApi.getFilteredByGlob('src/site/newsletter/**/*.md');
     });
 
     config.addCollection('posts', (collectionApi) => {

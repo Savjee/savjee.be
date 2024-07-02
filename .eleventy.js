@@ -71,7 +71,10 @@ module.exports = function (config) {
       });
 
     config.addCollection('trivia', (collectionApi) => {
-        return collectionApi.getFilteredByGlob('src/site/trivia/**/*.md');
+        return collectionApi.getFilteredByGlob('src/site/trivia/**/*.md')
+            .sort(function (a, b) {
+                return b.date - a.date;
+            });
     });
 
     // ----------------------- Custom shortcodes -----------------------

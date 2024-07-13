@@ -365,7 +365,7 @@ I have no evidence or research to back any of these claims. But I genuinely beli
 ## Do you hate streaming services?
 It's not that I hate streaming services. I've had a Spotify subscription for years, and I occasionally subscribe to other streaming services. It's just that I don't watch that many movies or shows, so it's hard to justify the price.
 
-Instead, I buy our favorite movies on Blu-ray and put them on our Plex servers. This has 3 major benefits.
+Instead, I buy our favorite movies on Blu-ray and put them on our Plex server. This has 3 major benefits.
 
 First, my son watches a few movies over and over again (especially Pixar movies). A Disney+ subscription costs €10,99/month, but for that price I can buy 3-4 Blu-rays on second hand websites. They're very cheap and once you buy a disc, it's yours forever.
 

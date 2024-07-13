@@ -4,7 +4,7 @@ videoId: A5CB4t9sukM
 duration: 156
 order: 1
 date: 2020-05-22
-tags: ["ESP32", "Arduino"]
+tags: ["ESP32", "Arduino", "IoT"]
 section: "Introduction"
 available_platforms:
     - name: YouTube

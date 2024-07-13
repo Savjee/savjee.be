@@ -1,6 +1,8 @@
 ---
 title: "How many hamsters are needed to charge a Tesla?"
 date: 2024-06-25
+tags:
+    - Energy
 ---
 
 A friend and I were discussing the challenges of generating enough clean energy for the transition to electric vehicles.

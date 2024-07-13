@@ -349,8 +349,6 @@ On the hardware side, I want to replace the NFC reader with the PN532. It's a lo
 
 On the automation side, I want to make it possible for tags to play random episodes of TV shows. Right now, that's not possible with Plex deep links, so I'll use the Plex Integration as a workaround.
 
-And finally, I found [printable NFC cards](https://www.amazon.de/-/nl/dp/B0C65TQJ7J/) on Amazon that look amazing. You can insert these in any inkjet printer and have really beautiful, and uniform cards.
-
 ## Why physical media is great
 So why did I go through all this trouble to give my kids something tangible? Well, I see many advantages in a system like this.
 

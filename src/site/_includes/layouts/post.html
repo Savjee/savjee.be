@@ -26,8 +26,13 @@ layout: narrow
 
 
 <div class="text-sm text-savjeelightgrey3 py-10 text-center">
-    Posted on
-    <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+    {% if date_updated %}
+        Updated on
+        <time class='date' datetime='{{ date_updated | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ date_updated | date: "%B %d, %Y" }}</time>
+    {% else %}
+        Posted on
+        <time class='date' datetime='{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}'>{{ page.date | date: "%B %d, %Y" }}</time>
+    {% endif %}
 </div>
 
 {% assign related_posts = collections.all | getRelated: tags, page.inputPath %}
@@ -76,6 +81,9 @@ layout: narrow
         ],
         {% endif %}
         "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
+        {% if date_updated %}
+        "dateModified": "{{ date_updated | date: "%Y-%m-%dT00:00:00+01:00" }}",
+        {% endif %}
         "author": {
             "@type": "Person",
             "givenName": "Decuyper",

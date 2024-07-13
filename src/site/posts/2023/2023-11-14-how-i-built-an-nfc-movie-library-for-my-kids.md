@@ -4,6 +4,7 @@ title: "How I Built an NFC Movie Library for my Kids"
 tags: ["Home Assistant", ESPHome, Plex, NFC, Parenting]
 thumbnail: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/thumb_timeline.jpg
 upload_directory: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/
+date_updated: 2024-07-13
 ---
 
 When I was a kid, my sister and I had a tower of VHS tapes we watched endlessly. Fast-forward to today, and my children's movie collection is vastly different. It's completely digital and dispersed across services. I wanted to recreate the tangible magic of my childhood for them.
@@ -37,8 +38,8 @@ I connected the NFC reader to an ESP32 board and flashed ESPHome onto it. I then
 
 That's all the confirmation I needed. I went to AliExpress and bought the "production" hardware:
 
-* [100x NFC Tags (NTAG213)](https://s.click.aliexpress.com/e/_DdX8PEx): €11,61
-* [ESP32-C3 (Super Mini)](https://s.click.aliexpress.com/e/_DeNiv4J): €2,93
+* [50x PVC NFC Cards (NTAG215)](https://nl.aliexpress.com/item/1005006068115788.html): €9.43
+* [ESP32-C3 (Super Mini)](https://s.click.aliexpress.com/e/_DeNiv4J): €2.93
 
 I already had plenty of ESP32 boards lying around (LOLIN32 lite), but when I saw this "Super Mini" version, I had to have it. Look at this cutie:
 
@@ -188,10 +189,29 @@ I also made a nice box to store the NFC cards:
 
 
 ## Creating the "DVD" cards
+
+With the reader finished, only the "DVD" cards were left. I wanted to print directly onto the PVC cards, but my printer isn't capable of that.
+
+I went for the next best thing: I bought printable vinyl sticker paper and printed the movie covers on that.
+
+![](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/nfc-pvc-cards-printing.jpg)
+
+I then cut out the stickers and stuck them to the PVC cards.
+
+![](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/nfc-pvc-cards-front.jpg)
+
+I also designed a backside for the cards, which include a summary of the movie, release date, and the studio that worked on it.
+
+![](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/nfc-pvc-cards-back.jpg)
+
+<details>
+  <summary><small><i>My first iteration of the cards were simply printed on paper and laminated.</i></small></summary>
+
 With the reader finished, only the "DVD" cards were left. I printed small movie covers in booklet form, placed an NFC tag inside, and ran them through the laminator.
 
 ![](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/nfc-dvd-cards.jpg)
 *The booklet protects the NFC tag and allows me to recover it in the future.*
+</details>
 
 ## Home Assistant automation
 On to the last piece of the puzzle: creating an automation in Home Assistant that plays the correct movie when a tag is scanned.

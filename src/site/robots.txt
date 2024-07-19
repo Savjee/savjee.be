@@ -6,4 +6,5 @@ Disallow: /
 
 sitemap: https://simplyexplained.com/sitemap-blogposts.txt
 sitemap: https://simplyexplained.com/sitemap-videos.txt
+sitemap: https://simplyexplained.com/sitemap.txt
 sitemap: https://simplyexplained.com/rss.xml

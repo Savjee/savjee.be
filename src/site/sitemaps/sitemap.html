@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: sitemap.txt
+---
+{%- comment -%}
+    WARNING: DON'T CHANGE THE FORMATTING
+    This was done so there is exactly 1 URL per line. Adding
+    more linebreaks will result in a file with empty lines.
+{%- endcomment -%}
+{%- assign collection_names = 'trivia,posts,videos,courses,newsletter' | split: ',' -%}
+{%- for collection_name in collection_names -%}
+{%- for item in collections[collection_name] -%}
+{% baseUrl %}{{ item.url }}
+{% endfor -%}
+{%- endfor -%}

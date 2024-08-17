@@ -4,7 +4,7 @@ title: "How I Built an NFC Movie Library for my Kids"
 tags: ["Home Assistant", ESPHome, Plex, NFC, Parenting]
 thumbnail: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/thumb_timeline.jpg
 upload_directory: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/
-date_updated: 2024-07-13
+date_updated: 2024-08-17
 ---
 
 When I was a kid, my sister and I had a tower of VHS tapes we watched endlessly. Fast-forward to today, and my children's movie collection is vastly different. It's completely digital and dispersed across services. I wanted to recreate the tangible magic of my childhood for them.
@@ -281,7 +281,14 @@ Here's the entire automation:
         53-72-08-69-71-00-01:
           name: Coco
           plex_id: 3135
+        04-D3-F2-FD-9F-61-81:
+          name: Bing
+          playlist_id: 4586
+        04-36-F6-32-5F-61-80:
+          name: Bumba
+          playlist_id: 4587
 		# ...
+
   - if:
     # Make sure the scanned tag is in the mapping
     - alias: "NFC tag is in the mapping"
@@ -300,16 +307,32 @@ Here's the entire automation:
           entity_id: media_player.appletv_living
       - delay:
           seconds: 5
-
-	# Take the Plex ID from the mapping and send a deep link to the 
-	# Apple TV. This will automatically open the Plex app and start
-	# or resume the given movie.
-    - service: media_player.play_media
-      target:
-        entity_id: media_player.appletv_living
-      data:
-        media_content_type: url
-        media_content_id: "plex://play/?metadataKey=%2Flibrary%2Fmetadata%2F{{ NFC_MAPPING[trigger.event.data.tag_id].plex_id }}&server=xxxxxxxxxxxxxx"
+	
+    # If the matched tag has a "plex_id", play it as movie.
+    - if:
+        - condition: template
+          value_template: "{{ \"plex_id\" in NFC_MAPPING[trigger.event.data.tag_id] }}"
+      then:
+        - action: media_player.play_media
+          data:
+            media_content_type: url
+            media_content_id: >-
+              plex://play/?metadataKey=%2Flibrary%2Fmetadata%2F{{NFC_MAPPING[trigger.event.data.tag_id].plex_id}}&server=xxxxxxxxxxxxxx
+        target:
+          entity_id: media_player.appletv_living
+		  
+    # If the matched tag has a "playlist_id", play a random item of it.
+    - if:
+        - condition: template
+          value_template: "{{ \"playlist_id\" in NFC_MAPPING[trigger.event.data.tag_id] }}"
+      then:
+        - action: media_player.play_media
+          data:
+            media_content_type: url
+            media_content_id: >-
+              plex://play/?metadataKey=%2Fplaylists%2F{{NFC_MAPPING[trigger.event.data.tag_id].playlist_id}}&server=xxxxxxxxx
+        target:
+          entity_id: media_player.appletv_living
 
 	# Set an appropriate (low) volume on our Sonos Beam
 	# Volume controls on Apple TV only support up/down when using an eARC
@@ -341,13 +364,39 @@ The Apple TV also supports deep links for other services. Here are examples for 
 
 The only problem with these services is that they will require you to select a profile before the movie/show will start playing. With Plex, you can enable "auto login", but I haven't tried it for the other services.
 
+## Playing random episodes
+One issue I had with Plex deep links is that you can’t play a random episode of a TV show. I sidestepped this issue by not making any NFC cards for shows, but that was to the dismay of my sons.
+
+A couple of months after I made this system, I came across [a post on the Plex forum](https://forums.plex.tv/t/tip-how-to-create-an-autoplaylist-with-random-sort/472823) explaining how you can make smart playlists that shuffle themselves every time you open them. And it even worked with the deep links!
+
+The workaround is quite simple: start by making a “smart playlist” in Plex. Navigate to a library (movie or TV show) and change the first dropdown menu from “All” to “Advanced Filters”.
+
+Now configure the filters. I created one smart playlist for each show (by matching the show name), but you can mix shows as well.
+
+![](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/plex-smart-playlist.png)
+
+Finally, set change the sort order from "Title" to "Randomly". Now Plex will shuffle the playlist every time you open it, including when you use a deep link!
+
+You can find the playlist ID by navigating to the playlist in the Plex Web UI and then looking at the URL:
+```
+http://192.168.2.1:32400/web/index.html#!/server/{SERVER_ID}/playlist?key=%2Fplaylists%2F{PLAYLIST_ID}&context=source%3Acontent.playlists.video~0~0
+```
+
+For reference, the deep link for a playlist is slightly different to that of a movie:
+
+```
+plex://play/?metadataKey=%2Fplaylists%2F{PLAYLIST_ID_GOES_HERE}&server={SERVER_ID_GOES_HERE}
+```
+
 
 ## Future improvements
-I'm thrilled with my first iteration, but I have some things I'd like to tweak in the future.
+I'm thrilled with my first iteration, but I have ~~some things~~ one thing I'd like to tweak in the future.
 
 On the hardware side, I want to replace the NFC reader with the PN532. It's a lot smaller, and will allow me to make the enclosure smaller.
 
-On the automation side, I want to make it possible for tags to play random episodes of TV shows. Right now, that's not possible with Plex deep links, so I'll use the Plex Integration as a workaround.
+~~On the automation side, I want to make it possible for tags to play random episodes of TV shows. Right now, that's not possible with Plex deep links, so I'll use the Plex Integration as a workaround.~~
+
+~~And finally, I found [printable NFC cards](https://www.amazon.de/-/nl/dp/B0C65TQJ7J/) on Amazon that look amazing. You can insert these in any inkjet printer and have really beautiful, and uniform cards.~~
 
 ## Why physical media is great
 So why did I go through all this trouble to give my kids something tangible? Well, I see many advantages in a system like this.

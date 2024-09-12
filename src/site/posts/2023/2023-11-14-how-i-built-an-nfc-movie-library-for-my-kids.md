@@ -425,4 +425,14 @@ And finally, if you're a non-English speaker, Blu-rays will include a dubbed ver
 ## Conclusion & downloads
 We're really happy with this system, and I'm looking forward to when my youngest will be able to use it as well.
 
-Want to build your own? Here's [my Fusion360 design file](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/fusion-nfc-tag-reader-case.f3d) that you can use or improve upon.
+Want to build your own? Here are the design files:
+
+* Fusion360
+  * [Enclosure](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/fusion-nfc-tag-reader-case.f3d)
+  * [NFC Card holder](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/fusion-nfc-card-holder.f3d)
+* STLs
+  * [Enclosure top](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/stl-nfc-scanner-enclosure-top.stl)
+  * [Enclosure bottom](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/stl-nfc-scanner-enclosure-bottom.stl)
+  * [NFC Card holder](/uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/stl-nfc-card-holder.stl)
+
+Feel free to use them or improve upon them!

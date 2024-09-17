@@ -1,4 +1,4 @@
-<div class="relative group hover:cursor-pointer youtube-embed" data-videoid="{{videoId}}">
+<div class="relative group hover:cursor-pointer youtube-embed {% if shortform %}md:max-w-md mx-auto {% endif %}" data-videoid="{{videoId}}">
   <div class="player absolute top-0 bottom-0 left-0 right-0"></div>
 
   {% comment %} Backdrop {% endcomment %}
@@ -12,11 +12,18 @@
   {% comment %} Thumbnail (with WebP support) {% endcomment %}
   {% xd_img %}
     <img
-      src="https://i.ytimg.com/vi/{{videoId}}/maxresdefault.jpg"
-      class="w-full py-0"
       loading="lazy"
-      width="320"
-      height="180"
+      {% if shortform %}
+        src="https://i.ytimg.com/vi/{{videoId}}/oar2.jpg"
+        class="w-full aspect-[9/16]"
+        height="320"
+        width="180"
+      {% else %}
+        src="https://i.ytimg.com/vi/{{videoId}}/maxresdefault.jpg"
+        class="w-full py-0 aspect-[16/9]"
+        width="320"
+        height="180"
+      {% endif %}
       {%- if videoDescription -%}
         alt="Thumbnail for video '{{ videoDescription }}'"
       {%- endif -%}

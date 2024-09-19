@@ -1,6 +1,8 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const pluginTOC = require('eleventy-plugin-toc');
+const path = require('path');
+const getAssetInfo = require("./src/utils/getAssetInfo.js");
 
 module.exports = function (config) {
 
@@ -79,6 +81,7 @@ module.exports = function (config) {
 
     // ----------------------- Custom shortcodes -----------------------
     config.addShortcode("link", require('./src/utils/shortcode/link.js'));
+    config.addShortcode("assetUrl", require('./src/utils/shortcode/assetUrl.js'));
     config.addPairedShortcode("bibtex", require('eleventy-plugin-bibtex'));
     config.addPairedShortcode("xd_img", require('./src/utils/shortcode/xd_img'));
     config.addShortcode("baseUrl", () => "https://simplyexplained.com");
@@ -86,7 +89,10 @@ module.exports = function (config) {
 
     // ----------------------- File copies -----------------------
     [
-        "src/site/assets",
+        // Copy all assets, except for JS and CSS files. Those are handled
+        // below with cache-busting filenames.
+        // TODO: this does still copy CSS files!
+        "src/site/assets/**/*[^(js|css)]",
         "src/site/robots.txt",
        
         // Ignore all files starting with underscore (private files such as
@@ -100,6 +106,18 @@ module.exports = function (config) {
         "src/site/newsletter/assets/**/*[^md]",
         "src/site/trivia/**/*[^md]",
     ].forEach(path => config.addPassthroughCopy(path));
+
+    // -------
+    config.addPassthroughCopy("src/site/assets/", {
+        expand: true,
+        filter: ["**/*.js"],
+        rename: function(filePath) {
+            const assetInfo = getAssetInfo("src/site/assets/" + filePath);
+            const parsedPath = path.parse(filePath);
+            const newFileName = path.join(parsedPath.dir, assetInfo.filename);
+            return newFileName;
+        },
+    });
 
     
     // Extract excerpt for each post containing the <!--more--> tag

@@ -110,7 +110,7 @@ module.exports = function (config) {
     // Copy JS and CSS files but add a cache-busting hash to their filenames
     config.addPassthroughCopy("src/site/assets/", {
         expand: true,
-        filter: ["**/*.js", "**/*.css"],
+        filter: ["**/*.js", "**/main.css"],
         rename: function(filePath) {
             const assetInfo = getAssetInfo("src/site/assets/" + filePath);
             const parsedPath = path.parse(filePath);

@@ -17,7 +17,7 @@
     "build": "npm run lint:markdown && npm run build:tailwind && npm run build:eleventy && npm run lint:markdown",
     "build:eleventy": "ELEVENTY_PRODUCTION=true eleventy",
     "build:images": "npx ts-node src/build/image_pipeline.ts",
-    "build:tailwind": "npx tailwindcss -i src/site/_assets/css/main.css -o _site/assets/css/main.css",
+    "build:tailwind": "npx tailwindcss -i src/site/_assets/css/main.css -o src/site/assets/css/main.css",
     "lint": "npm run lint:markdown",
     "lint:markdown": "npx ts-node src/build/lint-markdown.ts"
   },

@@ -107,10 +107,10 @@ module.exports = function (config) {
         "src/site/trivia/**/*[^md]",
     ].forEach(path => config.addPassthroughCopy(path));
 
-    // -------
+    // Copy JS and CSS files but add a cache-busting hash to their filenames
     config.addPassthroughCopy("src/site/assets/", {
         expand: true,
-        filter: ["**/*.js"],
+        filter: ["**/*.js", "**/*.css"],
         rename: function(filePath) {
             const assetInfo = getAssetInfo("src/site/assets/" + filePath);
             const parsedPath = path.parse(filePath);

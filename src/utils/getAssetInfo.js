@@ -2,11 +2,17 @@ const { createHash } = require('node:crypto');
 const { readFileSync } = require('fs');
 const path = require('path');
 
+// To avoid hashing files multiple times, we cache hashes based on filepath
 const cache = [];
 
 /**
- * Returns the md5 hash for a given filepath. Used for cache busting only, so
- * the hash function is optimized for speed, not security.
+ * Given a filepath to a CSS or JS file, this function will return information
+ * about that file, including the md5 hash, the filename with hash, and the 
+ * public path to the file (absolute path).
+ * 
+ * There is intentionally no error handling in this function. If information is
+ * requested on a file that doesn't exist, it will throw an error which should
+ * break the build process.
  * 
  * @param {string} filePath 
  */

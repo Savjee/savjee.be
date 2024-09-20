@@ -12,9 +12,9 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
-        node-version: '15.x'
+        node-version: 'lts/*'
 
     - name: Cache node_modules
       id: cache-node-modules

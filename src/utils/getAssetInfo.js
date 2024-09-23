@@ -32,6 +32,7 @@ module.exports = function(filePath){
     const output = {
         hash: hash,
         filename: newFileName,
+        originalFilename: parsedPath.name + parsedPath.ext,
         publicPath: parsedPath.dir.replace('src/site', '') + '/' + newFileName,
     };
 

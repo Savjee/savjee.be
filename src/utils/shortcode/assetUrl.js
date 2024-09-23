@@ -1,4 +1,7 @@
 const getAssetInfo = require("../getAssetInfo");
+const fs = require("fs");
+
+const copiedFiles = new Set();
 
 /**
  * Returns the absolute URL to a given asset with the correct cache-busting
@@ -15,6 +18,15 @@ module.exports = (filePath) => {
         throw new Error("Hash: first parameter should be of type string");
     }
 
-    const assetInfo = getAssetInfo("src/site/assets/" + filePath);
-    return assetInfo.publicPath;
+    // 
+    if(filePath.startsWith('node_modules') && !copiedFiles.has(filePath)){
+        const assetInfo = getAssetInfo(filePath);
+        fs.copyFileSync(filePath, "src/site/assets/js/" + assetInfo.originalFilename);
+
+        copiedFiles.add(filePath);
+        return assetInfo.publicPath;
+    }else{
+        const assetInfo = getAssetInfo("src/site/assets/" + filePath);
+        return assetInfo.publicPath;
+    }
 };

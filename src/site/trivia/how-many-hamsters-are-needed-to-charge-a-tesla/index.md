@@ -75,7 +75,7 @@ Let's compare hamsters to gas and nuclear power stations^[Based on [this 2022 re
 
 A natural gas plant emits 450 grams of CO<sub>2</sub> per kWh. For 100kWh, that's 45,000 grams or 45 kg of CO<sub>2</sub>. Twice as clean as our hamsters.
 
-Nuclear does even better with CO<sub>2</sub> emissions of 6.4 *grams* per kWh or 0,0064 kg.
+Nuclear does even better with CO<sub>2</sub> emissions of 6.4 *grams* per kWh or 0.0064 kg.
 
 ![](/trivia/how-many-hamsters-are-needed-to-charge-a-tesla/hamsters-vs-gas-vs-nuclear.svg)
 

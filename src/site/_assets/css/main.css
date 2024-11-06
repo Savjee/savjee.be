@@ -57,7 +57,7 @@
 
     input, 
     input[type=text]{
-       @apply border border-savjeelightgrey4 py-2.5 px-4 outline-none
+       @apply border border-savjeelightgrey4 py-2.5 px-4 outline-none dark:text-savjeeblack
     }
 
     input:focus, 

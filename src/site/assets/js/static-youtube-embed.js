@@ -35,14 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Prefetch the YouTube player in the background
         addPrefetch("prefetch", embedUrl);
-        
-        embed.addEventListener('click', () => {
+
+        const createYouTubePlayer = function(){
             const iframe = document.createElement("iframe");
             iframe.src =  embedUrl
 
             const player = embed.parentNode.querySelector(".player");
             player.appendChild(iframe);
-            embed.removeEventListener("click");
-        });
+
+            embed.removeEventListener("click", createYouTubePlayer);
+        }
+        
+        embed.addEventListener('click', createYouTubePlayer, false);
     }
 });

@@ -39,3 +39,12 @@ jobs:
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       if: always()
+
+    - name: Google Chat Notification
+      uses: nakamuraos/google-chat-notifications@v3.4.0
+      with:
+        title: Eleventy build - simplyexplained.com
+        subtitle: ${{ github.event.head_commit.message }}
+        webhookUrl: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+        status: ${{ job.status }}
+      if: always()

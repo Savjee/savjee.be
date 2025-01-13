@@ -58,6 +58,7 @@ export async function onRequestPost({request, env})
     const data = await notifySlack(email, request, env);
     return redirect(`${baseUrl }/success`);
   }catch(e){
+    throw e;
     return redirect(`${baseUrl}/failed?reason=internal`);
   }
 }

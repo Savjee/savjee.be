@@ -74,7 +74,7 @@ function redirect(url){
 }
 
 function notifySlack(email, req, env){
-  return fetch(new Request(env.SLACK_WEBHOOK, {
+  return fetch(new Request(env.GOOGLE_CHAT_WEBHOOK, {
     method: 'POST',
     body: JSON.stringify({
       text: "Someone subscribed to mailing list from the website: " + email,

@@ -58,9 +58,9 @@ The foam monster, however, was a lot harder. I asked myself: what do foam monste
 
 None of these things were addressed in my initial outline, which made it feel hollow. I brainstormed a bit, and I came up with the following background story. 
 
-Foam monsters are made of foam.
-Foam comes from soap. 
-Foam appears whenever you're cleaning. 
+Foam monsters are made of foam.  
+Foam comes from soap.  
+Foam appears whenever you're cleaning.  
 So maybe foam monsters want things to be clean!
 
 Throw this into my first outline, and you get a story about a foam monster that comes out of a river and is angry because people polluted the river with trash.

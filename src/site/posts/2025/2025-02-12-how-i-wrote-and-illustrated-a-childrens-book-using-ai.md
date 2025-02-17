@@ -187,7 +187,7 @@ I don't want to brag, but I'm super proud of the end result!
 We ordered a few more copies and give them to our closest family and friends. I inscribed a personal message into each book, thanking everyone for the role they play in our lives.
 
 ## Time spent
-Overall, I spent a roughly 18 hours working on this project. Most of my time was spent writing the outline and story in Obsidian.
+Overall, I spent a roughly 15 hours working on this project. Most of my time was spent writing the outline and story in Obsidian.
 
 
 ![](/uploads/2025-02-how-i-wrote-childrens-book-with-ai/time-spent-writing-book.png)

@@ -18,11 +18,11 @@ eleventyExcludeFromCollections: true
         <h2 class="text-2xl font-bold mb-2">While you wait for the next edition...</h2>
         <p class="mb-6">Why not catch up on some of the recent issues? Here are a few to get you started:</p>
         
-        <div class="flex flex-col gap-y-12 not-prose">
+        <div class="not-prose">
             {% assign recent_issues = collections.newsletter | reverse %}
             {% for issue in recent_issues %}
                 {% if forloop.index <= 5 %}
-                    <div>
+                    <div class="mb-12">
                         <span class="text-sm opacity-60 block mb-1">Issue {{ issue.data.title | split: ":" | first }} &middot; {{ issue.date | date: "%B %Y" }}</span>
                         <a href="{{ issue.url }}" class="font-bold text-xl text-savjeered hover:underline decoration-2 underline-offset-4 leading-snug">{{ issue.data.title | split: ":" | last | strip }}</a>
                     </div>

@@ -22,6 +22,15 @@ no_title: true
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "thumbnailUrl": "{% baseUrl %}{{upload_directory}}/thumb_master.jpg",
+  "uploadDate": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
+  "embedUrl": "https://www.youtube.com/embed/{{ videoId }}"
+},
 [
 	{
         "@context": "http://schema.org/",

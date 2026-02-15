@@ -21,13 +21,15 @@ eleventyExcludeFromCollections: true
     <p class="mb-8">Why not catch up on some of the most popular recent issues? Here are a few to get you started:</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose">
-        {% assign recent_issues = collections.newsletter | reverse | limit: 4 %}
+        {% assign recent_issues = collections.newsletter | reverse %}
         {% for issue in recent_issues %}
-            <a href="{{ issue.url }}" class="block p-6 bg-savjeelightgrey2 dark:bg-darkmode-alt-bg border border-transparent hover:border-savjeered transition-colors rounded-lg group">
-                <p class="text-savjeered font-mono text-sm mb-2">Issue {{ issue.data.title | split: ":" | first }}</p>
-                <h3 class="text-xl font-bold group-hover:text-savjeered transition-colors">{{ issue.data.title | split: ":" | last | strip }}</h3>
-                <p class="text-sm text-savjeelightgrey4 mt-2">Sent on {{ issue.date | date: "%B %d, %Y" }}</p>
-            </a>
+            {% if forloop.index <= 4 %}
+                <a href="{{ issue.url }}" class="block p-6 bg-savjeelightgrey2 dark:bg-darkmode-alt-bg border border-transparent hover:border-savjeered transition-colors rounded-lg group">
+                    <p class="text-savjeered font-mono text-sm mb-2">Issue {{ issue.data.title | split: ":" | first }}</p>
+                    <h3 class="text-xl font-bold group-hover:text-savjeered transition-colors">{{ issue.data.title | split: ":" | last | strip }}</h3>
+                    <p class="text-sm text-savjeelightgrey4 mt-2">Sent on {{ issue.date | date: "%B %d, %Y" }}</p>
+                </a>
+            {% endif %}
         {% endfor %}
     </div>
 

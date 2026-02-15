@@ -22,9 +22,9 @@ eleventyExcludeFromCollections: true
             {% assign recent_issues = collections.newsletter | reverse %}
             {% for issue in recent_issues %}
                 {% if forloop.index <= 5 %}
-                    <div class="mb-12">
-                        <span class="text-sm opacity-60 block mb-1">Issue {{ issue.data.title | split: ":" | first }} &middot; {{ issue.date | date: "%B %Y" }}</span>
-                        <a href="{{ issue.url }}" class="font-bold text-xl text-savjeered hover:underline decoration-2 underline-offset-4 leading-snug">{{ issue.data.title | split: ":" | last | strip }}</a>
+                    <div style="border-left: 4px solid #E62643; padding-left: 1.5rem; margin-bottom: 3rem;">
+                        <span style="font-size: 0.875rem; opacity: 0.6; display: block; margin-bottom: 0.25rem;">Issue {{ issue.data.title | split: ":" | first }} &middot; {{ issue.date | date: "%B %Y" }}</span>
+                        <a href="{{ issue.url }}" style="font-weight: bold; font-size: 1.25rem; color: #E62643; text-decoration: none; line-height: 1.375;">{{ issue.data.title | split: ":" | last | strip }}</a>
                     </div>
                 {% endif %}
             {% endfor %}

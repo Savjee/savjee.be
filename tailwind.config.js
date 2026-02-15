@@ -5,7 +5,7 @@ module.exports = {
   content: [
     "src/site/_includes/**/*.html",
     "src/site/*.{html,liquid}",
-    "src/site/**/*.md",
+    "src/site/trivia/**/*.md",
   ],
   theme: {
     fontFamily: {

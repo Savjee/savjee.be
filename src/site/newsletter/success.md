@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
     <div class="mt-12 not-prose">
         <h2 class="text-2xl font-bold mb-2">While you wait for the next edition...</h2>
         <p class="mb-6">Why not catch up on some of the recent issues? Here are a few to get you started:</p>
-        
+        <br>
         <div class="flex flex-col">
             {% assign recent_issues = collections.newsletter | reverse %}
             {% for issue in recent_issues %}

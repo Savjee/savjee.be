@@ -5,6 +5,7 @@ duration: 237
 order: 15
 date: 2020-05-22
 section: "Deep sleep"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Deep sleep is great to save power, but you can't let the ESP32 sleep forever. At some point you will want to wake the ESP32 up from sleep to do something useful. The easiest way to do that is with a timer. You can put the ESP32 to sleep and ask the RTC - the Real Time Clock - to wake it up after a certain amount of time has passed.

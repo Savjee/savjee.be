@@ -9,6 +9,7 @@ section: "Introduction"
 available_platforms:
     - name: YouTube
       url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiQ3OIuBWCEW6yE0S0LUWhGU
+courseName: "Programming ESP32 with Arduino"
 ---
 
 In this video I want to go over some of the reasons why - in my opinion - the ESP32 is an incredible microcontroller and why you should use in your IoT projects.

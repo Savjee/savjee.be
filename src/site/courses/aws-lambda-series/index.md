@@ -4,6 +4,7 @@ videoId: fSUEk6iMW88
 duration: 227
 order: 1
 date: 2016-08-01
+courseName: "Get started with AWS Lambda"
 ---
 
 In this video I'll give you an overview of this series: getting started with Lambda.

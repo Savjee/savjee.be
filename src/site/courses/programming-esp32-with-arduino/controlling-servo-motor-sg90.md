@@ -5,6 +5,7 @@ duration: 299
 order: 18
 date: 2020-10-25
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Servo motors give you precise control over their movements. Ideal for moving arms or joints in your DIY project. In this video, I'll explain how to use the SG90 (a great cheap servo motor) with the ESP32. No additional hardware required!

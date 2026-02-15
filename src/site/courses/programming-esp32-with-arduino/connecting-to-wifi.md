@@ -5,6 +5,7 @@ duration: 415
 order: 12
 date: 2020-05-22
 section: "Internet of Thing"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 The ESP32 is an amazing chip for building IoT devices because it has WiFi built-in.

@@ -5,6 +5,7 @@ duration: 231
 order: 9
 date: 2020-05-22
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 The ESP32 has 10 capacitive touch sensors on board that can be used to detect if a person touches a wire or for example a piece of metal on the enclosure of your device.

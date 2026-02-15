@@ -5,6 +5,7 @@ duration: 210
 order: 14
 date: 2020-05-22
 section: "Deep sleep"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 The ESP32 is a very powerful microcontroller, with a fast processor, a lot of memory and with built-in WiFi and Bluetooth. Surely that must mean that it's not suitable for battery operation? Well actually, no. The ESP32 can run on batteries for a long time if you carefully manage how long you use the CPU and WiFi. 

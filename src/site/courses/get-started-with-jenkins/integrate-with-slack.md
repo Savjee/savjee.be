@@ -4,6 +4,7 @@ videoId: TWwvxn2-J7E
 duration: 393
 order: 12
 date: 2016-03-15
+courseName: "Get started with Jenkins"
 ---
 
 Setup Jenkins to post to your Slack channel whenever a build starts, ends, fails or succeeds. That way you can bring your entire team up-to-date. 

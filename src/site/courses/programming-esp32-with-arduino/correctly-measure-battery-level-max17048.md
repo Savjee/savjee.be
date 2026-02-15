@@ -5,6 +5,7 @@ duration: 262
 order: 20
 date: 2021-05-20
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Battery-powered IoT projects require you to monitor your battery's percentage. Measuring battery voltage is not ideal, because the voltage doesn't drop linearly.

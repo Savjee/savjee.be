@@ -4,6 +4,7 @@ videoId: 4T_50kGJKfw
 duration: 192
 order: 2
 date: 2017-06-06
+courseName: "Introduction to the Serverless framework"
 ---
 
 What is so special about AWS Lambda? In this video we will look at why people like Lambda so much.

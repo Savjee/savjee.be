@@ -4,6 +4,7 @@ videoId: tgb_MRVylWw
 duration: 244
 order: 5
 date: 2017-06-06
+courseName: "Introduction to the Serverless framework"
 ---
 
 Learn how to create AWS credentials and then use them with the Serverless framework. This is the final step before we can start deploying functions to AWS Lambda!

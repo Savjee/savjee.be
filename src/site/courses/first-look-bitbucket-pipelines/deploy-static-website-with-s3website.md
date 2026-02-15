@@ -4,6 +4,7 @@ videoId: 57pwPxJer1E
 duration: 271
 order: 5
 date: 2016-05-27
+courseName: "First look at BitBucket Pipelines"
 ---
 
 In this video I'll show you how you can deploy your website to Amazon S3 with s3_website and BitBucket Pipelines.

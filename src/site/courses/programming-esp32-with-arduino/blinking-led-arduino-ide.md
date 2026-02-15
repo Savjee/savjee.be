@@ -5,6 +5,7 @@ duration: 328
 order: 4
 date: 2020-05-22
 section: "Arduino IDE"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 When learning a new programming language, the first thing that people teach you is the Hello World. In case of Arduino and ESP32's it's blinking an LED light.

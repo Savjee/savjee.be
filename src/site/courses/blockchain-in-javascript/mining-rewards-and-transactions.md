@@ -4,6 +4,7 @@ videoId: fRV6cGXVQ4I
 duration: 731
 order: 3
 date: 2018-01-30
+courseName: "Implementing a Blockchain in Javascript"
 ---
 
 Implementing miner rewards and basic transactions in our Javascript based blockchain.

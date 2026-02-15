@@ -4,6 +4,7 @@ videoId: 1oqfWk_5nHo
 duration: 402
 order: 11
 date: 2016-12-19
+courseName: "Learning Typescript"
 ---
 
 In this video I'll show you how to debug TypeScript code with PhpStorm's built-in debugger. This will also work for WebStorm or IntelliJ.

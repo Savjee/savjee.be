@@ -5,6 +5,7 @@ duration: 414
 order: 19
 date: 2020-10-25
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Control your ESP32 projects with an infrared remote control. They're cheap & easy to use.

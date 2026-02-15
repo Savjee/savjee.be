@@ -5,6 +5,7 @@ duration: 290
 order: 11
 date: 2020-05-22
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 An ESP32 can only control low power peripherals (3V). To control higher powered devices, like a light or outlet, you'll need a relay board.

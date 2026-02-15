@@ -4,6 +4,7 @@ videoId: 5fJ2nV3P0XI
 duration: 381
 order: 8
 date: 2016-12-19
+courseName: "Learning Typescript"
 ---
 
 Learning how to create and use functions in TypeScript. I'll also discuss arrow functions, a great way to shorten your code and avoid issue's with "this" scope.

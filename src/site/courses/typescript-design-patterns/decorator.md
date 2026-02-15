@@ -4,6 +4,7 @@ videoId: WPOLDEk1LF0
 duration: 551
 order: 2
 date: 2017-04-06
+courseName: "TypeScript Design Patterns"
 ---
 
 With the Decorator pattern you can add behaviour to classes dynamically.

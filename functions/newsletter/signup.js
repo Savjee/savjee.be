@@ -48,16 +48,34 @@ export async function onRequestPost({request, env})
       return redirect(`${baseUrl}/failed`);
     }
 
-    // When running locally, don't make requests to Revue and simulate a
+    // When running locally, don't make requests to Google Chat and simulate a
     // successful registration. But strip the HTTPS, because that's not available.
     if(url.host.indexOf('localhost') === 0){
       const redirectUrl = `${baseUrl}/success`.replace('https', 'http');
+      console.log('Local run: email would be sent to Google Chat:', email);
       return redirect(redirectUrl);
     }
 
-    const data = await notifySlack(email, request, env);
-    return redirect(`${baseUrl }/success`);
+    // Server-side Bot Protection: Check for honeypot (full_name)
+    // Bots usually fill all fields. Humans won't see this one.
+    const { full_name } = Object.fromEntries(formBody);
+    if(full_name){
+      console.warn('Honeypot triggered by bot:', email);
+      // Return a fake success to not tip off the bot
+      return redirect(`${baseUrl}/success`);
+    }
+
+    const slackResponse = await notifySlack(email, request, env);
+    
+    if(slackResponse.ok){
+      return redirect(`${baseUrl}/success`);
+    } else {
+      const errorText = await slackResponse.text();
+      console.error('Google Chat API failed:', errorText);
+      return redirect(`${baseUrl}/failed?reason=webhook`);
+    }
   }catch(e){
+    console.error('Worker internal error:', e);
     return redirect(`${baseUrl}/failed?reason=internal`);
   }
 }
@@ -73,14 +91,17 @@ function redirect(url){
   return Response.redirect(url, 303);
 }
 
-function notifySlack(email, req, env){
-  return fetch(new Request(env.GOOGLE_CHAT_WEBHOOK, {
+async function notifySlack(email, req, env){
+  const botScore = req.cf?.botManagement?.score || 'unknown';
+  const country = req.cf?.country || 'unknown';
+  
+  return fetch(env.GOOGLE_CHAT_WEBHOOK, {
     method: 'POST',
     body: JSON.stringify({
-      text: "Someone subscribed to mailing list from the website: " + email,
+      text: `🏎️ *New Subscriber*\n*Email:* ${email}\n*Country:* ${country}\n*Bot Score:* ${botScore}`,
     }),
     headers: {
       'content-type': 'application/json'
     }
-  }));
+  });
 }

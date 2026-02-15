@@ -8,6 +8,8 @@ upload_directory: /uploads/2025-02-how-i-wrote-childrens-book-with-ai/
 
 I've always wanted to write a book. It's been on my bucket list for several years, but I never got around to it. Last summer I had a revelation: my kids love being read to, so why don't I write a story for them?
 
+Since [building a YouTube spam filter with TensorFlow]({% link collections.posts, "2021-07-06-filtering-spam-on-youtube-with-tensorflow-and-ai.md" %}), I've been fascinated by how AI can solve creative and practical problems. This project was the perfect chance to push that even further.
+
 Here's how I approached writing a children's book and how I used AI to illustrate it.
 <!--more-->
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tuya IR Hub: control Daikin AC (Home Assistant + ESPHome)"
+description: "How to flash ESPHome onto a Tuya IR Hub and configure it to control Daikin Air Conditioning units via Home Assistant's climate component."
 quote:
 tags: [Home Assistant, Smart Home, ESPHome]
 thumbnail: /uploads/2020-09-tuya-ir-hub-daikin-ac-home-assistant-esphome/thumb_timeline.jpg

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Multitasking on ESP32 with Arduino and FreeRTOS"
+description: "Master multitasking on the ESP32 by using FreeRTOS with the Arduino framework to run code on both cores and schedule tasks effectively."
 quote: 
 thumbnail: /uploads/2020-01-06-multitasking-esp32-arduino-freertos/poster-750.jpg
 upload_directory: /uploads/2020-01-06-multitasking-esp32-arduino-freertos

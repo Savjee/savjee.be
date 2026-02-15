@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Migrating This Blog From Jekyll to Eleventy"
+description: "Why and how I migrated my technical blog from Jekyll to Eleventy (11ty) to improve build times, developer experience, and site performance."
 quote: 
 tags: [Eleventy, Jekyll]
 thumbnail: /uploads/2021-04-18-migrating-this-blog-from-jekyll-to-eleventy/thumb_timeline.jpg

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Good Home Automation Should be Boring"
+description: "An opinionated look at why effective home automation should focus on invisibility and utility rather than cluttered dashboards and complex manual controls."
 quote: 
 tags: [Home Assistant, Smart Home, ESPHome, Shelly]
 thumbnail: /uploads/2021-04-10-good-home-automation-should-be-boring/thumb_timeline.jpg

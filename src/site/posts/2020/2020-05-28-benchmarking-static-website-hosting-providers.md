@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Static webhosting benchmark: AWS, Google, Firebase, Netlify, GitHub & Cloudflare"
+description: "A 2020 speed comparison and benchmark of the top static website hosting providers, including AWS S3/CloudFront, Google Cloud, Netlify, and Cloudflare Pages."
 quote:
 tags: ["Static webhosting"]
 thumbnail: /uploads/2020-05-28-benchmaring-static-website-hosting-providers/poster-750.jpg

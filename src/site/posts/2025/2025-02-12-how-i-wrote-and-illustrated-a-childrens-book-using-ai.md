@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bringing Foam Monsters to Life: How I Wrote and Illustrated a Children's Book Using AI"
+description: "A behind-the-scenes look at how I used AI tools to write and illustrate a custom children's book for my kids, from story concept to final illustrations."
 tags: [Parenting]
 thumbnail: /uploads/2025-02-how-i-wrote-childrens-book-with-ai/thumb_timeline.jpg
 upload_directory: /uploads/2025-02-how-i-wrote-childrens-book-with-ai/

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tracking gas usage with ESPHome, Home Assistant, and TCRT5000"
+description: "Turn your analog gas meter into a smart one. Learn how to track gas consumption using an ESP32, TCRT5000 sensor, and Home Assistant's energy dashboard."
 tags: [Home Assistant, ESPHome, ESP32]
 meta_tags: ["home assistant gas meter", "track gas consumption", "natural gas", "utility meter"]
 upload_directory: /uploads/2022-01-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "EZStore: a tiny serverless datastore for IoT data (DynamoDB + Lambda)"
+description: "Build a lightweight, serverless data store for your IoT projects using AWS Lambda and DynamoDB. Perfect for prototyping and storing telemetry data."
 quote: 
 tags: [AWS, IoT, DynamoDB, Lambda, NoSQL]
 not_featureable: true

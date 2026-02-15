@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Analyzing Link Rot in My Newsletter (After 31 Editions)"
+description: "A data-driven investigation into link rot. I analyzed 31 editions of my newsletter to see how many external links are still alive after 2.5 years."
 tags: [Simply Explained, Simply Explained Newsletter]
 meta_tags: ["Link rot", "Dead links", "Internet Archive", "Digital preservation", "Investigation"]
 thumbnail: /uploads/2023-09-02-analyzing-link-rot-in-my-newsletter/thumb_timeline.jpg

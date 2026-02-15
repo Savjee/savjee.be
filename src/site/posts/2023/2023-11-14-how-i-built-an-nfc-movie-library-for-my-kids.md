@@ -253,7 +253,7 @@ Here's the entire automation:
 
 {% highlight yaml %}
 - alias: "NFC Reader - Plex"
-  description: ""
+  description: "Learn how I built a physical NFC-powered movie library for my kids using Home Assistant, ESPHome, and Plex to bring back the tangible magic of VHS tapes."
   mode: single
   trigger:
   - platform: event

@@ -521,7 +521,7 @@ main();
 With this check complete, I felt confident to deploy my changes to production. I merged my eleventy branch into the master branch, and my CI workflow did the rest.
 
 ## Next steps
-Overall, the migration to Eleventy went pretty smoothly. But this was only the start. Now that I have a better platform to develop my site, here are some things I want to work on in the future:
+Overall, the migration to Eleventy went pretty smoothly. But this was only the start. Now that I have a better platform to develop my site, here are some things I want to work on in the future (like [implementing WebP images]({% link collections.posts, '2022/2022-02-08-implementing-webp-images-on-eleventy-site.md' %})!):
 
 * Migrate templates from Liquid to Nunjucks.
 * Tweak the typography. I want bolder fonts and tune the spacing between lines, paragraphs, and headings.

@@ -268,7 +268,7 @@ sensor:
 
 ## Integrating with Home Assistant
 
-All that's left now it to add the sensor to Home Assistant and configure it for the Energy dashboard. As always, it was automatically discovered, and all I had to do was give Home Assistant the API password. 
+All that's left now it to add the sensor to Home Assistant and configure it for the Energy dashboard. As always, it was automatically discovered, and all I had to do was give Home Assistant the API password. (I use a [modular setup for my ESPHome files]({% link collections.posts, '2021/2021-05-27-how-i-structure-my-esphome-config-files.md' %}) to make this easy). 
 
 A few hours later, and after adding the sensor to the Energy dashboard, my energy distribution card showed my gas usage:
 

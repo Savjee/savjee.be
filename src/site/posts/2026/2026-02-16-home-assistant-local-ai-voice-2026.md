@@ -39,8 +39,8 @@ The move toward local AI isn't just for enthusiasts; it’s a necessity for anyo
 
 To run local LLMs (Large Language Models) alongside Whisper (STT) and Piper (TTS), the hardware requirements have evolved:
 
-- **The Server:** While a Raspberry Pi 5 can handle basic voice pipelines, running optimized models like Llama 3 variants or specialized home automation LLMs really requires an N100 mini-PC or a dedicated Home Assistant Yellow/Green with an AI accelerator.
-- **The Satellites:** ESP32-S3 powered devices (like the Atom Echo or custom ESPHome builds) remain the gold standard for "the ears" of your home, offering excellent wake word detection at a low cost.
+- **The Server:** While a [Raspberry Pi 5](/posts/2026-02-16-rpi5-ai-kit-2026/) can handle basic voice pipelines, running optimized models like Llama 3 variants or specialized home automation LLMs really requires an N100 mini-PC or a dedicated Home Assistant Yellow/Green with an AI accelerator.
+- **The Satellites:** ESP32-S3 powered devices (like the Atom Echo or [custom ESPHome builds](/posts/2021-05-27-how-i-structure-my-esphome-config-files/)) remain the gold standard for "the ears" of your home, offering excellent wake word detection at a low cost.
 
 ## Getting Started
 
@@ -48,6 +48,8 @@ If you haven't made the jump yet, the process has never been easier:
 1. **Pipelines:** Install the **Whisper** (Speech-to-Text), **Piper** (Text-to-Speech), and **OpenWakeWord** add-ons.
 2. **Brain:** Select an LLM provider. While many use Ollama, the native Home Assistant integration for LocalAI has become the preferred route for most users in 2026.
 3. **Assist:** Configure your Voice Assistant pipeline to use these local components and start talking to your house.
+
+*Pro tip: Ensure your home automation is [boring yet effective](/posts/2021-04-10-good-home-automation-should-be-boring/) before adding complex voice layers.*
 
 ## Conclusion
 
@@ -58,6 +60,7 @@ The smart home is finally becoming "smart" instead of just "remote controlled." 
 ---
 
 *Related reading:*
-- [I built a CO2 sensor and it terrifies me](/trivia/i-built-a-co2-sensor-and-it-terrifies-me/)
-- [Secure Home Assistant Access](/posts/2020-03-31-secure-home-assistant-access-with-cloudflare-tunnels-and-teams/)
-- [Building a killer NAS for your local data](/posts/2021-02-12-back-to-the-basics-setting-up-a-killer-nas-with-true-nas-scale/)
+- [Building a killer NAS for your local data](/posts/2021-06-29-building-killer-nas-with-old-rackable-server/)
+- [Secure Home Assistant Access](/posts/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/)
+- [Tracking Gas Usage with ESPHome](/posts/2022-01-19-tracking-gas-usage-with-esphome-home-assistant-and-tcrt5000/)
+- [Integrating Apple Reminders into Home Assistant](/posts/2022-07-27-integrate-home-assistant-with-apple-reminders/)

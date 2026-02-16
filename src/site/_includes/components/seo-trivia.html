@@ -1,0 +1,31 @@
+{% if page.url contains "/trivia/" and layout == "page" %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ title }}",
+    {% if thumbnail %}
+    "image": [
+        "{% baseUrl %}{{upload_directory}}/thumb_master.jpg"
+    ],
+    {% endif %}
+    "datePublished": "{{ page.date | date: "%Y-%m-%dT00:00:00+01:00" }}",
+    {% if date_updated %}
+    "dateModified": "{{ date_updated | date: "%Y-%m-%dT00:00:00+01:00" }}",
+    {% endif %}
+    "author": {
+        "@type": "Person",
+        "name": "Xavier Decuyper",
+        "url": "https://simplyexplained.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Simply Explained",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://simplyexplained.com/assets/img/logo-rounded.svg"
+        }
+    }
+}
+</script>
+{% endif %}

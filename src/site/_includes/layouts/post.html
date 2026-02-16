@@ -85,11 +85,17 @@ layout: narrow
         "dateModified": "{{ date_updated | date: "%Y-%m-%dT00:00:00+01:00" }}",
         {% endif %}
         "author": {
+            "@id": "https://simplyexplained.com/#person",
             "@type": "Person",
             "givenName": "Decuyper",
             "familyName": "Xavier",
             "name": "Xavier Decuyper",
-            "url": "https://simplyexplained.com"
+            "url": "https://simplyexplained.com",
+            "sameAs": [
+                "https://twitter.com/Savjee",
+                "https://www.youtube.com/@simplyexplained",
+                "https://github.com/Savjee"
+            ]
         }
     },
     {

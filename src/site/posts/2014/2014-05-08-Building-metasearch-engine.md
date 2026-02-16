@@ -8,7 +8,7 @@ upload_directory: /uploads/building-metasearch-engine
 toc_enabled: true
 ---
 
-At the end of 2012 [I launched](http://www.nieuwsblad.be/article/detail.aspx?articleid=DMF20121112_00366062) a search engine that combined the offerings of six different second hand websites in Belgium. It was called 'Zoekertjesland' and indexed well over 3 million items.
+At the end of 2012 [I launched](https://web.archive.org/web/20121115000000*/http://www.nieuwsblad.be/article/detail.aspx?articleid=DMF20121112_00366062) a search engine that combined the offerings of six different second hand websites in Belgium. It was called 'Zoekertjesland' and indexed well over 3 million items.
 
 Last week however I unplugged the server and stopped the project. I'm a student and renting [a VPS](http://www.versio.nl/?pa=16767awybe) for 2 years without any income from the website is costly.
 
@@ -38,7 +38,7 @@ The crawlers are PHP scripts that are running continuously in the background, sc
 
 Choosing PHP for the crawlers might seem like a stupid idea. After all, it's an interpreted language that isn't really known for its speed. During the development I rewrote one of the crawlers in Java using [jsoup](http://jsoup.org/). Performance of the Java version was a lot better than the PHP crawlers (up to 3 times faster) but the crawlers used far more memory. In fact, I wasn't able to run multiple Java crawlers simultaneously on my VPS (maybe my Java skills are to blame?). So I decided to stick to the language I knew best (and felt most comfortable with) and to sacrifice some performance for it.
 
-The PHP crawlers use [cURL](http://www.php.net/manual/en/book.curl.php) to fetch web pages and [Simple HTML DOM Parser](http://simplehtmldom.sourceforge.net/) to extract the contents of them. I choose to use cURL because it allows you to control things like timeout and redirects ([it's also faster](http://stackoverflow.com/questions/5844299/using-file-get-contents-or-curl) than ``file_get_contents``).
+The PHP crawlers use [cURL](http://www.php.net/manual/en/book.curl.php) to fetch web pages and [Simple HTML DOM Parser](https://simplehtmldom.sourceforge.io/) to extract the contents of them. I choose to use cURL because it allows you to control things like timeout and redirects ([it's also faster](http://stackoverflow.com/questions/5844299/using-file-get-contents-or-curl) than ``file_get_contents``).
 
 ### Keeping the crawlers running
 The crawlers are written to keep running, even in the case of errors. However, it sometimes happens that one of the scripts crashes. To keep the scripts running, I triggered **each crawler** every 5 minutes with a cronjob.

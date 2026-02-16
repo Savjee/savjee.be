@@ -7,7 +7,7 @@ quote: OpenVPN protects your privacy online. Get your own VPN running with a che
 
 When I'm on the road and connecting to free public WiFi access points, I always use [OpenVPN](http://en.wikipedia.org/wiki/OpenVPN) to prevent my traffic from being intercepted by others. It's also very practical to circumvent the restrictive firewall at my school.
 
-I've always used a veriety of free OpenVPN services but these are unreliable, throttle transfer speeds and usually have other restrictions. To fix this, I ordered a cheap [OpenVZ](http://openvz.org/Main_Page) based VPS from [RamNode](https://clientarea.ramnode.com/aff.php?aff=1321) to run my own OpenVPN server. In this post I'll walk you through the steps I performed to install and configure OpenVPN on Ubuntu Server 13.10
+I've always used a veriety of free OpenVPN services but these are unreliable, throttle transfer speeds and usually have other restrictions. To fix this, I ordered a cheap [OpenVZ](https://en.wikipedia.org/wiki/OpenVZ) based VPS from [RamNode](https://clientarea.ramnode.com/aff.php?aff=1321) to run my own OpenVPN server. In this post I'll walk you through the steps I performed to install and configure OpenVPN on Ubuntu Server 13.10
 
 <!--more-->
 

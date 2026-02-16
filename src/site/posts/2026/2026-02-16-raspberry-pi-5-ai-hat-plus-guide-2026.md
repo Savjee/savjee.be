@@ -13,12 +13,12 @@ In this guide, we’ll break down the benchmarks, the real-world performance in 
 ![Raspberry Pi AI HAT+](/uploads/rpi5-ai-kit-2026.jpg)
 
 ## Why an AI Accelerator?
-If you’ve ever run object detection (Frigate) or a local Large Language Model (LLM) on a Raspberry Pi 5, you know the CPU hits 100% usage almost instantly. This leads to heat, lag, and potential crashes. An AI accelerator like the Hailo-based AI HAT+ offloads these mathematical "tensor" calculations to dedicated hardware.
+If you’ve ever run object detection (Frigate) or a local Large Language Model (LLM) on a Raspberry Pi 5, you know the CPU hits 100% usage almost instantly. This is similar to the challenges I faced when [cropping images on an ESP32-CAM](/2021/02/esp32-cam-cropping-images-on-device/)—hardware limitations force you to get creative with offloading tasks. An AI accelerator like the Hailo-based AI HAT+ offloads these mathematical "tensor" calculations to dedicated hardware.
 
 ## 26 TOPS vs 40 TOPS: The Real Difference
 The Raspberry Pi AI HAT+ collection now consists of two main models: the 26 TOPS (Hailo-8) and the new 40 TOPS AI HAT+ 2 (Hailo-10H). Despite the name, for standard **Computer Vision** (like object detection in Frigate), their performance is effectively identical. Both will process your camera feeds at roughly 26 TOPS of vision-specific performance, offloading the CPU from 100% to near zero.
 
-However, the AI HAT+ 2 introduces support for **Generative AI** (LLMs and VLMs). This allows the Pi 5 to run models like Qwen2:1.5B or DeepSeek-R1-Distill-Qwen-1.5B locally for voice control.
+However, the AI HAT+ 2 introduces support for **Generative AI** (LLMs and VLMs). This allows the Pi 5 to run models like Qwen2:1.5B or DeepSeek-R1-Distill-Qwen-1.5B locally for voice control. Much like how I used AI to [illustrate a children's book](/2025/02/how-i-wrote-and-illustrated-a-childrens-book-using-ai/), having this local power opens up new creative possibilities for automation.
 
 ### Benchmark Table: Home Assistant Tasks
 | Task | AI HAT+ (26 TOPS) | AI HAT+ 2 (40 TOPS) | Recommendation |

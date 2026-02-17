@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enable gzip for Jekyll blogs on Amazon S3
+description: "Speed up your Jekyll blog on Amazon S3 by enabling gzip compression. Deploy script included with step-by-step instructions for 44% smaller files."
 keywords: jekyll, ruby, S3, amazon, AWS, cloud, gzip, fast, compression
 quote: Speed up your Amazon S3 hosted Jekyll blog by enabling gzip compression.
 tags: [AWS, Jekyll]

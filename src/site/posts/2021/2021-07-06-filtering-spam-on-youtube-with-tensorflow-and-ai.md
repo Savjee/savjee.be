@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Filtering spam on YouTube with TensorFlow & AI"
+description: "Filter spam comments on YouTube using TensorFlow AI. Build a text classifier to automatically detect and delete scam comments from your channel."
 quote: 
 tags: [TensorFlow, AI, YouTube channel]
 upload_directory: /uploads/2021-07-06-filtering-spam-on-youtube-with-tensorflow-and-ai/

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My second year on YouTube
+description: "My second year on YouTube: 1.1M views, 19K subscribers, and lessons learned. A deep dive into my channel growth, stats, and goals for 2018."
 quote:
 tags: ["Yearly review", "YouTube channel"]
 ---

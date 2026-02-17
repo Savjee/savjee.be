@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building a killer NAS with an old Rackable Server"
+description: "Build a powerful NAS using an old rackable server with Proxmox and Unraid. DIY guide for a Synology alternative with MergerFS and SnapRAID."
 quote: 
 tags: [Unraid, Proxmox, Data storage]
 meta_tags: ["NAS", "Network Attached Storage", "Synology killer", "diy rackmount nas", "rackmount nas"]

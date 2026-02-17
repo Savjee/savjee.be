@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Backup DokuWiki to Amazon S3 with PHP
+description: "Automatically backup your DokuWiki to Amazon S3 with this PHP script. Includes S3 bucket setup, lifecycle rules, and cron job configuration."
 quote: 
 tags: [AWS]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Review - QCY Qy7 Bluetooth Earphones
+description: "Review of QCY Qy7 wireless Bluetooth earphones. Amazing value for €25 with decent sound quality and comfortable design despite some quirks."
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-qy7

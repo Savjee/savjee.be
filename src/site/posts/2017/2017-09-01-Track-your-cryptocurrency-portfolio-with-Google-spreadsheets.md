@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Track your cryptocurrency portfolio with Google Spreadsheets
+description: "Track your cryptocurrency portfolio automatically with Google Sheets and Apps Script. Auto-update prices from APIs and calculate profits/losses."
 quote:
 ---
 

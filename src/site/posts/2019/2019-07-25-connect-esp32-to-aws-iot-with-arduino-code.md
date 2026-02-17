@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Connect ESP32 to AWS IoT (with Arduino code)"
+description: "Connect your ESP32 to AWS IoT Core with Arduino code. Complete tutorial with WiFi setup, certificates, and sending MQTT messages without using AWS SDK."
 quote: 
 thumbnail: /uploads/2019-07-esp32-aws-iot-arduino/poster-750.jpg
 upload_directory: /uploads/2019-07-esp32-aws-iot-arduino

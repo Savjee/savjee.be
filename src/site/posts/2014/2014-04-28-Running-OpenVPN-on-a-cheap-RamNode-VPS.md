@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Running OpenVPN on a cheap RamNode VPS
+description: "Set up your own private OpenVPN server on a cheap RamNode VPS. Protect your privacy on public WiFi with this step-by-step installation guide for Ubuntu."
 keywords: OpenVPN, VPN, privacy, online, VPS, server, ramnode, protect, tunnel
 quote: OpenVPN protects your privacy online. Get your own VPN running with a cheap RamNode VPS.
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Sending Fail2ban (and other) notifications to a Slack chat channel
+description: "Send fail2ban and server notifications to Slack using PHP. Keep your server security alerts in a chat channel instead of email for faster response."
 quote: 
 ---
 

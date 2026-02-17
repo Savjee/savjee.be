@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Verifying Amazon S3 multi-part uploads with the ETag hash
+description: "Verify Amazon S3 multi-part uploads using the ETag hash. Check file integrity after uploading large files with this bash script for proper checksums."
 quote: 
 tags: [AWS]
 ---

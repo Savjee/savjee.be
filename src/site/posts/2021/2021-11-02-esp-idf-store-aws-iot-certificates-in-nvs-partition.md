@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ESP-IDF: Storing AWS IoT certificates in the NVS partition (for OTA)"
+description: "Store AWS IoT certificates in the NVS partition to enable OTA updates. ESP-IDF guide for secure certificate management and firmware deployment."
 quote: 
 tags: [AWS, ESP-IDF, ESP32]
 not_featureable: true

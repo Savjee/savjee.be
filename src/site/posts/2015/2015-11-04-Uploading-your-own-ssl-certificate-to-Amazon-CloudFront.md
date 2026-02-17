@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Uploading your own SSL certificate to Amazon CloudFront
+description: "Upload your own SSL certificate to Amazon CloudFront using SNI. Enable HTTPS on your Jekyll blog with this step-by-step guide with AWS CLI."
 quote: 
 tags: [AWS]
 ---

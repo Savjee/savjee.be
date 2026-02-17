@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Meal planning with Trello and AWS Lambda
+description: "Automate weekly meal planning with Trello and AWS Lambda. Create a digital meal planner that updates automatically when you plan meals."
 quote: 
 tags: [AWS]
 ---

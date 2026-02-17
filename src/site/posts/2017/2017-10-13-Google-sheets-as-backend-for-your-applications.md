@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google Sheets as a backend for your applications
+description: "Use Google Sheets as a backend database for your apps via the API. Build Slack bots and simple applications with spreadsheet integration."
 quote:
 ---
 

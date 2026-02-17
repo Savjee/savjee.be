@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Getting started  with LXC on a Scaleway cloud server
+description: "Use LXC containers on Scaleway cloud servers for service isolation. Complete guide to container setup, routing, and Nginx reverse proxy."
 quote: 
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How I Structure My ESPHome Config Files"
+description: "How I organize 24+ ESPHome devices with a modular YAML structure. Best practices for configuration files to avoid copy-paste and maintain consistency."
 quote: 
 tags: [ESPHome, Home Assistant]
 upload_directory: /uploads/2021-05-27-how-i-structure-my-esphome-config-files/

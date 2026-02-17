@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building a serverless anagram solver with AWS (DynamoDB, Lambda, S3, CloudFront and API gateway)
+description: "Build a completely serverless anagram solver with AWS Lambda, DynamoDB, S3, CloudFront, and API Gateway. No servers, just code."
 thumbnail: uploads/anagram-aws/poster-750.jpg
 upload_directory: /uploads/anagram-aws
 tags: [Anagram solver, AWS]

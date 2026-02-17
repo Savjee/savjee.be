@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "My Sixth Year as YouTube Creator (statistics + retrospective)"
+description: "My sixth year on YouTube: 9.9M views, 573K hours watched, and lessons learned. A deep dive into channel growth, stats, and goals for 2022."
 tags: ["Yearly review", "YouTube channel"]
 upload_directory: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/
 thumbnail: /uploads/2022-01-my-sixth-year-as-youtube-creator-statistics-and-retrospective/thumb_timeline.jpg

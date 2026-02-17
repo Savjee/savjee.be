@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "GitLab CI: Deploy to FTP / SFTP with lftp"
+description: "Deploy to FTP or SFTP using GitLab CI and lftp. Step-by-step guide with .gitlab-ci.yml configuration for automated website deployment to shared hosting."
 quote: How to use GitLab CI and lftp to deploy websites over FTP/SFTP to your web hosting account.
 tags: [CI/CD]
 ---

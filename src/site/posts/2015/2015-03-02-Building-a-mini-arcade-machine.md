@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Building a Mini Arcade Cabinet (Part 1)
+description: "Build your own mini arcade cabinet with a Raspberry Pi, joysticks, and buttons. Complete DIY guide with parts list, dimensions, and setup instructions."
 quote: 
 thumbnail: true
 upload_directory: /uploads/mini-arcade

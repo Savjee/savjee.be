@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Preventing Cumulative Layout Shifts with lazy loaded images (Eleventy + markdown-it)"
+description: "Prevent Cumulative Layout Shifts from lazy-loaded images in Eleventy. Learn how to reserve image space to improve Core Web Vitals and SEO rankings."
 quote: 
 tags: [Eleventy, Web Vitals, Web Performance]
 toc_enabled: true

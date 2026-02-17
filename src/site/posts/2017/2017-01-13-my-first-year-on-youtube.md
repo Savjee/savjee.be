@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My First Year on YouTube
+description: "My first year on YouTube: lessons learned from starting a channel, equipment I use, and advice for new creators. Complete retrospective on growth."
 quote: Exactly one year ago I started my YouTube channel. In this post I'll share my experience and go over the things I've learned throughout the year.
 tags: ["Yearly review", "YouTube channel"]
 ---

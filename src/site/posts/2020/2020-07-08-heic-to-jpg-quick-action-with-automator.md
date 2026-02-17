@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "HEIC to JPG: Build a Quick Action with Automator"
+description: "Easily convert HEIC photos to JPG on macOS by building a custom Quick Action with Automator. A simple, no-code way to handle Apple's high-efficiency format."
 quote:
 tags: [Automator, macOS]
 thumbnail: /uploads/2020-07-heic-to-jpg-quick-action/poster-750.jpg

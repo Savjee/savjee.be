@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing a tiny blockchain in JavaScript
+description: "Part 1: Build a simple blockchain in JavaScript to understand how Bitcoin works. Complete code implementation with blocks, hashing, and chaining logic."
 quote:
 thumbnail: /uploads/2017-07-blockchain-in-js-part1/poster-750.jpg
 upload_directory: /uploads/2017-07-blockchain-in-js-part1

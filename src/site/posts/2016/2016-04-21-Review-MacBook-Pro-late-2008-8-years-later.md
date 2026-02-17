@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MacBook Pro 2008, Review 8 Years Later
+description: "8-year retrospective on my MacBook Pro Late 2008. How it held up, specs review, and why it's still my daily driver after a decade."
 thumbnail: uploads/review-mbp-2008/poster-750.jpg
 upload_directory: /uploads/review-mbp-2008
 tags: [Review]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using Duplicity to Backup LXC Containers
+description: "Use Duplicity for incremental, encrypted backups of LXC containers to Backblaze B2. Save space and cost compared to full container copies."
 quote:
 ---
 

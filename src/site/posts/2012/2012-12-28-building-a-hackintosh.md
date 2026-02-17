@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Building a Hackintosh
+description: "Build a powerful Hackintosh for less than a Mac Pro. Complete guide with compatible hardware list, installation steps, and lessons learned from my build."
 quote: After 3 years of using my Macbook I wanted a new computer. The price of a Mac Pro is insane so I builded a much cheaper Hackintosh with great specs.
 keywords: Building Hackintosh, OS X on a PC, OSX86
 thumbnail: true

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implementing proof-of-work (Javascript blockchain, part 2)
+description: "Part 2: Add proof-of-work to your JavaScript blockchain. Prevent spam, tampering, and attacks with mining and computational difficulty."
 quote:
 thumbnail: /uploads/2017-09-implementing-proof-of-work-javascript-blockchain/poster-750.jpg
 upload_directory: /uploads/2017-09-implementing-proof-of-work-javascript-blockchain

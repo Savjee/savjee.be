@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Implement Content Security Policy with AWS S3 and CloudFront
+description: "Implement Content Security Policy and other security headers on AWS S3 + CloudFront using Lambda@Edge. Step-by-step guide with Node.js code examples."
 quote:
 tags: [AWS]
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "MAX17043: Battery Monitoring Done Right (Arduino & ESP32)"
+description: "Monitor battery percentage accurately with the MAX17043 fuel gauge chip. Better than voltage measurement for Arduino and ESP32 IoT projects."
 quote: 
 tags: [ESP32, Arduino]
 meta_tags: ["esp32 battery level", "esp32 battery monitor", "arduino battery monitor", "voltage measurement"]

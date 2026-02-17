@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Retrospective: 4 years on YouTube"
+description: "Reflecting on 4 years of YouTube: 3.2M views, 38K new subscribers, and lessons learned. A retrospective on channel growth and goals for 2020."
 quote: 
 tags: ["Yearly review", "YouTube channel"]
 toc_enabled: true

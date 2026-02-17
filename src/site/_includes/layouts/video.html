@@ -29,12 +29,18 @@ no_title: true
         "name": "{{ title }}",
         "description": "{{ content | strip_html | truncatewords: 40 }}",
         "thumbnailURL": [
-            "http://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
+            "https://i.ytimg.com/vi/{{videoId}}/maxresdefault.jpg",
+            "https://i.ytimg.com/vi/{{videoId}}/hqdefault.jpg"
         ],
         "uploadDate": "{% if date %}{{ date | date: "%Y-%m-%dT00:00:00+01:00" }}{% else %}2017-06-23{% endif %}",
         "embedUrl": "https://www.youtube.com/embed/{{videoId}}",
         "contentUrl": "https://www.youtube.com/watch?v={{videoId}}",
-        "duration": "PT{{duration | divided_by: 3600, true}}H{{ duration | divided_by: 60, true }}M{{ duration | modulo: 60 }}S"
+        "duration": "PT{% if duration %}{{duration | divided_by: 3600}}H{{ duration | divided_by: 60 | modulo: 60 }}M{{ duration | modulo: 60 }}S{% else %}0M0S{% endif %}",
+        "author": {
+            "@type": "Person",
+            "name": "Xavier Decuyper",
+            "url": "https://simplyexplained.com"
+        }
     },
     {
       "@context": "https://schema.org",

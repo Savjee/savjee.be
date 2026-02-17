@@ -166,3 +166,6 @@ Also: mining blocks in Javascript is not really fast because it just uses a sing
 Proof-of-work is essential for the security and integrity of blockchains. Without it, we couldn't trust it enough to store information it.
 
 The source code of this project is available [on Github](https://github.com/SavjeeTutorials/SavjeeCoin).
+
+## Related Content
+To understand the conceptual background of blockchains, watch: [How does a blockchain work](https://www.youtube.com/watch?v=SSo_EIwHSd4).

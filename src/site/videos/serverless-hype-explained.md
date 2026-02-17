@@ -16,6 +16,12 @@ Why are "serverless" cloud products so popular right now? What makes them differ
 
 Want to learn how to build serverless applications with the Serverless framework? [Check out my free course here]({% link collections.courses, "serverless-framework-basics/index.md" %}).
 
+# Hands-on Implementations
+See serverless in action with my real-world projects:
+- [Building a serverless anagram solver with AWS]({% link collections.posts, '2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway.md' %})
+- [Serverless Anagram Solver with Cloudflare R2 and Pages]({% link collections.posts, '2022-09-10-serverless-anagram-solver-with-cloudflare-r2-and-pages.md' %})
+- [EZStore: a tiny serverless datastore for IoT data]({% link collections.posts, '2022-01-04-ezstore-a-tiny-serverless-data-store-for-iot-data.md' %})
+
 Examples of serverless products include: 
 
 * AWS 

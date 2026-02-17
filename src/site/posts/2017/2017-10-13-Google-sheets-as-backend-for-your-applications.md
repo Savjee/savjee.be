@@ -138,3 +138,6 @@ It does have it's limitations though. You cannot query for data and the API is n
 
 ## Source code
 The source code for my wrapper is [available on GitHub](https://github.com/Savjee/google-sheets-wrapper). It's not perfect, it was written in a hurry but it works! Feel free to improve it and send me a pull request ;)
+
+## Related Content
+To learn more about APIs and how they work, watch: [What Are APIs?](https://www.youtube.com/watch?v=OVvTv9Hy91Q).

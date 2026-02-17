@@ -10,51 +10,51 @@ date: 2019-06-17
 tags: ["Data storage"]
 ---
 
-The fact that I have blue eyes, blond hair and that I have an average height is all encoded in my DNA. It’s nature’s way of storing data, but could we also use it to store digital data like documents, photos, music, and videos? And if we could, why would we? 
- 
-What are the pros and cons of DNA data storage and what problems does it solve? Before answering these questions though, let’s look at how we’ve been storing data up until today. 
+The fact that I have blue eyes, blond hair and that I have an average height is all encoded in my DNA. It's nature's way of storing data, but could we also use it to store digital data like documents, photos, music, and videos? And if we could, why would we?
+
+What are the pros and cons of DNA data storage and what problems does it solve? Before answering these questions though, let's look at how we've been storing data up until today.
 
 <!--more-->
 
 
 ## Data storage today
-The vast majority of data is currently stored on magnetic media like hard drives or tapes and some of it is stored on optical media like CDs and DVDs. However, our modern storage techniques have a few flaws: they are not robust, have a low information density and each media requires a special device to read and write data. Let’s look at each of these problems in more detail and see how DNA can help.
+The vast majority of data is currently stored on magnetic media like hard drives or tapes and some of it is stored on optical media like CDs and DVDs. However, our modern storage techniques have a few flaws: they are not robust, have a low information density and each media requires a special device to read and write data. Let's look at each of these problems in more detail and see how DNA can help.
 
 ## Problem 1: Robustness
-Let’s start with robustness, or rather lack thereof. Hard drives are pretty unreliable with 1-3% of drives dying within their first year. In subsequent years that can climb to almost 10%. Tape drives are a bit better and are designed to last for up to 30 years IF they are stored in a controlled environment.
+Let's start with robustness, or rather lack thereof. Hard drives are pretty unreliable with 1-3% of drives dying within their first year. In subsequent years that can climb to almost 10%. Tape drives are a bit better and are designed to last for up to 30 years IF they are stored in a controlled environment.
 
-You might wonder why robustness is so important. Well, humanity has generated more data in the last few years than in all of history. And yet, in a few hundred years from now, none of it would be left unless we keep copying it to newer drives. That’s a big problem for historical data which could be invaluable in the future. 
+You might wonder why robustness is so important. Well, humanity has generated more data in the last few years than in all of history. And yet, in a few hundred years from now, none of it would be left unless we keep copying it to newer drives. That's a big problem for historical data which could be invaluable in the future.
 
-DNA, on the other hand, is very robust. In 1991, the mummy of Ötzi the Iceman was found in the Alps. He died over 5000 years ago and yet we were still able to extract his DNA, read it and find out that he was lactose intolerant and that he has living relatives in Austria today. If Ötzi had been carrying a hard drive with him, we likely wouldn’t be able to read it 30 years after his death, let alone after 5000 years.
+DNA, on the other hand, is very robust. In 1991, the mummy of Ötzi the Iceman was found in the Alps. He died over 5000 years ago and yet we were still able to extract his DNA, read it and find out that he was lactose intolerant and that he has living relatives in Austria today. If Ötzi had been carrying a hard drive with him, we likely wouldn't be able to read it 30 years after his death, let alone after 5000 years.
 
-You could say that DNA is nature’s oldest and most robust storage media. It cannot be stored forever but it can easily last a few centuries.
+You could say that DNA is nature's oldest and most robust storage media. It cannot be stored forever but it can easily last a few centuries.
 
 ## Problem 2: Density
-The second problem that we currently face is information density. Facebook’s cold storage data center in Oregon is over 5700 square meters in size (62,000 square feet) and can store approximately 1 exabyte of data. That’s a thousand petabytes or 1 billion gigabytes.
+The second problem that we currently face is information density. Facebook's cold storage data center in Oregon is over 5700 square meters in size (62,000 square feet) and can store approximately 1 exabyte of data. That's a thousand petabytes or 1 billion gigabytes.
 
 It sounds impressive, but if you want to store all of the data that was generated in 2018, you would need 33,000 of these massive data centers. Yikes!
 
-How does DNA compare? Well, theoretically you can store 1 zettabyte of data in a single gram of DNA. That’s a billion terabytes, the equivalent of 71 million of the largest capacity hard drives available today. 
- 
-But that’s theory, currently, we can only store 215 petabytes per gram of DNA. Which means we can replace Facebook's entire data center with just 5 gram of DNA. 
+How does DNA compare? Well, theoretically you can store 1 zettabyte of data in a single gram of DNA. That's a billion terabytes, the equivalent of 71 million of the largest capacity hard drives available today.
 
-This insane density allows us to store all of the world’s data in a very small footprint. It also means we don’t have to choose what data we want to preserve for future generations. We can just store all of it all in DNA.
+But that's theory, currently, we can only store 215 petabytes per gram of DNA. Which means we can replace Facebook's entire data center with just 5 gram of DNA.
 
-Heck, you even say that we, humans, are huge data capsules. We have over 37 trillion cells in our bodies, each containing a copy of our entire DNA. And if you know that the human genome is 750mb, then we’re carrying 37 trillion times 750 megabytes. Which is a huge amount of information!
+This insane density allows us to store all of the world's data in a very small footprint. It also means we don't have to choose what data we want to preserve for future generations. We can just store all of it all in DNA.
+
+Heck, you even say that we, humans, are huge data capsules. We have over 37 trillion cells in our bodies, each containing a copy of our entire DNA. And if you know that the human genome is 750mb, then we're carrying 37 trillion times 750 megabytes. Which is a huge amount of information!
 
 ## Problem 3: Specialized Readers
-The final problem I’d like to highlight is that every advancement in storing data has required a new way to read it. 
+The final problem I'd like to highlight is that every advancement in storing data has required a new way to read it.
 
-The 3,5-inch floppy disks were very popular in the 80s and 90s. And yet, barely 40 years later we can hardly use them because our computers don’t have a reader for them anymore. The same goes for optical media such as CDs and DVDs.
+The 3,5-inch floppy disks were very popular in the 80s and 90s. And yet, barely 40 years later we can hardly use them because our computers don't have a reader for them anymore. The same goes for optical media such as CDs and DVDs.
 
-DNA, by contrast, was not a human invention. It’s been around since the beginning of life and has always had the same properties. DNA readers or “sequencers” built today can read all DNA, even old DNA, like the one from Ötzi. 
+DNA, by contrast, was not a human invention. It's been around since the beginning of life and has always had the same properties. DNA readers or "sequencers" built today can read all DNA, even old DNA, like the one from Ötzi.
 
-It’s also future-proof because DNA is becoming a key technology in areas such as biology, medicine, and forensics.
+It's also future-proof because DNA is becoming a key technology in areas such as biology, medicine, and forensics.
 
 ## How to store data in DNA?
-Alright, you probably agree with me that DNA is the future of data storage. But how do you actually store data in it? Traditionally we store data in binary form: meaning with zeros and ones. In a hard drive, the zeros are represented by areas which aren’t magnetized and ones by areas that are.
+Alright, you probably agree with me that DNA is the future of data storage. But how do you actually store data in it? Traditionally we store data in binary form: meaning with zeros and ones. In a hard drive, the zeros are represented by areas which aren't magnetized and ones by areas that are.
 
-DNA is instead made up of four base components: Adenine, Thymine, Cytosine, and Guanine also referred to as A, T, C, and G. 
+DNA is instead made up of four base components: Adenine, Thymine, Cytosine, and Guanine also referred to as A, T, C, and G.
 This means that we now have four distinct values instead of two, so we have to rework our binary files. Instead of storing each 0 or 1 individually, we store them in pairs of two, like this:
 
 ```
@@ -66,39 +66,43 @@ This means that we now have four distinct values instead of two, so we have to r
 
 Once we have that, we can encode the data into synthetic DNA. This is exactly like the real stuff, the only difference being that synthetic DNA is not stored inside a living cell.
 
-Now that our data is stored inside DNA, we can read it by using a DNA sequencer. This deconstructs the DNA and reads out all the A, T, C, G’s. This process, however, is not perfect and read errors might occur. 
+Now that our data is stored inside DNA, we can read it by using a DNA sequencer. This deconstructs the DNA and reads out all the A, T, C, G's. This process, however, is not perfect and read errors might occur.
 
-The sequencer might not be able to read a certain piece of DNA because it’s damaged or it might say it read an A instead of a T. And when that happens, how can we recover the data?
+The sequencer might not be able to read a certain piece of DNA because it's damaged or it might say it read an A instead of a T. And when that happens, how can we recover the data?
 
-In our own bodies, there are proteins active that find damaged or “mutated” DNA and try to repair it. If the damage is too big, they can even kill the entire cell to prevent spreading the bad DNA further. 
- 
-But that’s in organic DNA, in synthetic DNA we don’t have these proteins. So instead we can add error correcting codes to our data. The DNA Fountain method, for instance, uses fountain codes to correct errors, which is also used for broadcasting TV signals.
+In our own bodies, there are proteins active that find damaged or "mutated" DNA and try to repair it. If the damage is too big, they can even kill the entire cell to prevent spreading the bad DNA further.
+
+But that's in organic DNA, in synthetic DNA we don't have these proteins. So instead we can add error correcting codes to our data. The DNA Fountain method, for instance, uses fountain codes to correct errors, which is also used for broadcasting TV signals.
 
 ## Error-correcting codes
-How does an error correcting code work? Simple: imagine you want to store three digits: 5, 9 and 17 and that you want to be able to recover all three of them, even if one can’t be read. To do that, you store the sum of all three as well (5 + 9 + 17 = 31). Now when the number 9 gets corrupted, you can recalculate it by subtracting the numbers from the sum. This is a very simple error correcting code but it demonstrates how the concept works.
+How does an error correcting code work? Simple: imagine you want to store three digits: 5, 9 and 17 and that you want to be able to recover all three of them, even if one can't be read. To do that, you store the sum of all three as well (5 + 9 + 17 = 31). Now when the number 9 gets corrupted, you can recalculate it by subtracting the numbers from the sum. This is a very simple error correcting code but it demonstrates how the concept works.
 
-By adding fountain codes to your DNA encoded data, you can ensure that you can always read it back. Even when some A, T, C or G’s can’t be read correctly.
+By adding fountain codes to your DNA encoded data, you can ensure that you can always read it back. Even when some A, T, C or G's can't be read correctly.
 
 ## Copying DNA
-Okay so that’s reading DNA, but can we also copy DNA? Traditionally with hard drives, we have to read one drive and copy every single bit to another one. DNA, by contrast, can easily be copied millions of times with a Polymerase Chain Reaction. This technique is used in forensics for instance to make copies of scarce DNA samples. If you then screw something up, you still have some copies left. 
+Okay so that's reading DNA, but can we also copy DNA? Traditionally with hard drives, we have to read one drive and copy every single bit to another one. DNA, by contrast, can easily be copied millions of times with a Polymerase Chain Reaction. This technique is used in forensics for instance to make copies of scarce DNA samples. If you then screw something up, you still have some copies left.
 
 The same technique can be used with synthetic DNA that contains data. The only downside is that by copying DNA you add some noise and the quality is reduced. But thanks to our error-correcting codes we can overcome this issue.
 
 ## Drawbacks of DNA
 Using DNA as a storage medium seems like a no-brainer, but there are some drawbacks as well: mainly the cost of it all.
 
-Creating or synthesizing DNA is an expensive process: coming in at $3500 dollars per megabyte. A bit much if you know that a hard drive can do the same for less than a penny. 
- 
+Creating or synthesizing DNA is an expensive process: coming in at $3500 dollars per megabyte. A bit much if you know that a hard drive can do the same for less than a penny.
+
 However we have to see this in context. The first hard drive made by IBM in 1956, could store 5 megabytes at a price of $10.000 per megabyte. We have to start somewhere!
 
-Reading or sequencing DNA is a bit more affordable. You can have your own DNA sequenced for less than $1000. It is, however, time-consuming because the entire DNA has to be sequenced, even if you’re only interested in a small part of it. But that is changing: Microsoft has demonstrated a technique that allows us to randomly read parts of DNA.
+Reading or sequencing DNA is a bit more affordable. You can have your own DNA sequenced for less than $1000. It is, however, time-consuming because the entire DNA has to be sequenced, even if you're only interested in a small part of it. But that is changing: Microsoft has demonstrated a technique that allows us to randomly read parts of DNA.
 
 ## Conclusion
-So, time for a conclusion then: DNA data storage is the future but it will take some time before we can phase out our trusty hard drives. 
+So, time for a conclusion then: DNA data storage is the future but it will take some time before we can phase out our trusty hard drives.
 
-Costs have to come down first before it can be considered a viable alternative but as history has shown, that’s is only a matter of time. And when it does, it will allow us to store incredible amounts of data in a very small space and we’ll able to archive data for generations to come.
+Costs have to come down first before it can be considered a viable alternative but as history has shown, that's is only a matter of time. And when it does, it will allow us to store incredible amounts of data in a very small space and we'll able to archive data for generations to come.
 
 ---
+
+# Practical Example
+While DNA storage is still experimental, you can check out my practical modern storage setup:
+- [Building a killer NAS with an old rackable server]({% link collections.posts, '2021-06-29-building-killer-nas-with-old-rackable-server.md' %})
 
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
@@ -198,7 +202,7 @@ This video wouldn't be possible without the work of others. Here are the sources
 }
 
 @online{src,
-    title={DNA Data Storage – Setting the Data Density Record with DNA Fountain},
+    title={DNA Data Storage - Setting the Data Density Record with DNA Fountain},
     url={https://www.twistbioscience.com/company/blog/twistbiosiencednastoragefountain},
     author={Christiaan Colen},
     year={2017},
@@ -264,7 +268,7 @@ This video wouldn't be possible without the work of others. Here are the sources
 }
 
 @online{src,
-    title={Computer hard drives have shrunk like crazy over the last 60 years — here's a look back},
+    title={Computer hard drives have shrunk like crazy over the last 60 years - here's a look back},
     url={https://www.businessinsider.fr/us/computer-hard-drives-evolution-2016-10},
     author={Samantha Lee},
     organization={Samantha Lee},

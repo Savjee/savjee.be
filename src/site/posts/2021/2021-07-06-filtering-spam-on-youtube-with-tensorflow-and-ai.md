@@ -346,3 +346,6 @@ I'm now seeing more channels &mdash; such as [Graham Stephen](https://www.youtub
 This blog post only contains snippets of code. The entire codebase &mdash; including my initial tests with Apple's CoreML &mdash; is available on GitHub: [https://github.com/Savjee/yt-spam-classifier](https://github.com/Savjee/yt-spam-classifier)
 
 Feel free to fork it, use it yourself, improve it, and open up pull requests. But remember that this is my first substantial Python project, so be gentle ;)
+
+## Related Content
+If you prefer watching instead of reading, check out my video: [Fighting spam on YouTube with AI](https://www.youtube.com/watch?v=zSEYC3CCA1I).

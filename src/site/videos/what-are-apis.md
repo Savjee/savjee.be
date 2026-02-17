@@ -14,6 +14,9 @@ APIs are very technical, and yet they are used everywhere. Simply put: APIs allo
 
 <!--more-->
 
+# Practical Examples
+See APIs in action with my real-world implementations:
+- [Google Sheets as a backend for your applications]({% link collections.posts, '2017-10-13-Google-sheets-as-backend-for-your-applications.md' %})
 
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:

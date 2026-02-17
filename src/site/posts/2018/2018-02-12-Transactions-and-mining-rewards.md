@@ -186,3 +186,6 @@ There are however still some things missing: when sending money we don’t check
 I want to point out that is this by no means a complete blockchain implementation! It still lacks many features. This is just a proof-of-concept designed to help you understand how blockchains work internally.
 
 The source code of this project is available [on GitHub](https://github.com/SavjeeTutorials/SavjeeCoin).
+
+## Related Content
+For the conceptual explanation of how blockchains work, watch: [How does a blockchain work](https://www.youtube.com/watch?v=SSo_EIwHSd4).

@@ -287,3 +287,6 @@ I feel like this might not be the last bit of enterprise gear that I buy on eBay
 And that concludes my adventure of buying an old server and retrofitting it with modern hardware. This has been a very hands-on project, but I think it has been worth it.
 
 Would I recommend it? Absolutely. If you can buy a server on the cheap, have the necessary skills to cut metal, and have a bit of patience, go for it! Otherwise, stick with a pre-built NAS.
+
+## Related Content
+For a fascinating look at the future of data storage, watch: [Why DNA Data Storage is the Future](https://www.youtube.com/watch?v=aPWA-n9oo4k).

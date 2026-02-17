@@ -15,6 +15,9 @@ The filter is surprisingly effective, even though the training dataset is relati
 
 <!--more-->
 
+# In-Depth Tutorial
+For the complete implementation details, code samples, and setup instructions, check out my blog post:
+- [Filtering spam on YouTube with TensorFlow & AI]({% link collections.posts, '2021-07-06-filtering-spam-on-youtube-with-tensorflow-and-ai.md' %})
 
 ## Source code
 Available on GitHub: [https://github.com/Savjee/yt-spam-classifier](https://github.com/Savjee/yt-spam-classifier)

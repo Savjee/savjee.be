@@ -16,6 +16,13 @@ A blockchain is a way of storing data so that cannot be changed anymore. This is
 
 <!--more-->
 
+# Hands-on Tutorials
+Want to build your own blockchain? Check out my step-by-step tutorial series:
+- [Part 1: Implementing a basic blockchain]({% link collections.posts, '2017-07-19-Writing-tiny-blockchain-in-JavaScript' %})
+- [Part 2: Implementing proof-of-work]({% link collections.posts, '2017-09-03-Implementing-proof-of-work-javascript-blockchain' %})
+- [Part 3: Transactions & mining rewards]({% link collections.posts, '2018-02-12-Transactions-and-mining-rewards' %})
+- [Part 4: Signing transactions]({% link collections.posts, '2018-10-27-Signing-transactions-blockchain-javascript' %})
+
 # Sources & other links
 
 {% bibtex %}

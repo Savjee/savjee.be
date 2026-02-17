@@ -134,6 +134,9 @@ This implementation is far from complete. It doesn't implement proof-of-work or 
 
 It does however demonstrate how a blockchain works. Many people think that it's very complex, but this post demonstrates that the basic concepts of a blockchain are easy to understand and to implement.
 
+## Related Content
+If you want to understand the theory behind how blockchains work, check out my video: [How does a blockchain work](https://www.youtube.com/watch?v=SSo_EIwHSd4).
+
 ## Next up
 This blockchain is not complete and not fully secure. Keep reading:
 

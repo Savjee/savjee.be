@@ -245,3 +245,6 @@ This blockchain has some limitations. It still allows you to spend more coins th
 This by no means a complete blockchain implementation! It is for educational purposes only, to understand how a blockchain works on a technical level.
 
 The source code of this project is available [on GitHub](https://github.com/SavjeeTutorials/SavjeeCoin).
+
+## Related Content
+To understand the fundamental concepts of blockchain technology, watch: [How does a blockchain work](https://www.youtube.com/watch?v=SSo_EIwHSd4).

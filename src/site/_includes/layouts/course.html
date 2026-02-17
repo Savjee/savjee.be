@@ -136,6 +136,24 @@ layout: default
 				"@type": "Organization",
 				"name": "Simply Explained",
 				"sameAs": "{% baseUrl %}"
+			},
+			"offers": {
+				"@type": "Offer",
+				"category": "Paid",
+				"priceCurrency": "USD",
+				"price": "0",
+				"availability": "https://schema.org/InStock"
+			},
+			"educationalLevel": "Beginner",
+			"inLanguage": "en",
+			"hasCourseInstance": {
+				"@type": "CourseInstance",
+				"courseMode": "online",
+				"instructor": {
+					"@type": "Person",
+					"name": "Xavier Decuyper",
+					"@id": "{% baseUrl %}#person"
+				}
 			}
 		}
 	]

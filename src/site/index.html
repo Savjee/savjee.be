@@ -71,18 +71,85 @@ quote: "Taking complicated topics and explaining them in a simple and straightfo
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
-        "name": "Savjee",
-        "url": "{% baseUrl %}"
+        "name": "Simply Explained",
+        "url": "{% baseUrl %}",
+        "description": "Taking complicated topics and explaining them in a simple and straightforward way"
     },
     {
         "@context": "http://schema.org",
         "@type": "Organization",
+        "name": "Simply Explained",
         "url": "{% baseUrl %}",
         "logo": "{% baseUrl %}/assets/img/logo-rounded.svg",
+        "description": "In-depth technical tutorials and plain-English videos on blockchain, ESP32, Home Assistant, serverless & cloud. Created by developer & YouTuber Xavier Decuyper.",
         "sameAs": [
             "https://www.facebook.com/savjee",
-            "https://www.youtube.com/savjee",
-            "https://twitter.com/Savjee"
+            "https://www.youtube.com/@simplyexplained",
+            "https://twitter.com/Savjee",
+            "https://mastodon.world/@simplyexplained",
+            "https://www.instagram.com/simplyexplained_com/",
+            "https://www.tiktok.com/@simplyexplained_com"
+        ],
+        "founder": {
+            "@type": "Person",
+            "@id": "{% baseUrl %}#person",
+            "name": "Xavier Decuyper"
+        }
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "@id": "{% baseUrl %}#person",
+        "name": "Xavier Decuyper",
+        "givenName": "Xavier",
+        "familyName": "Decuyper",
+        "jobTitle": "Developer, YouTuber, Speaker & Educator",
+        "description": "Developer, YouTuber, and educator behind Simply Explained. Creates in-depth technical tutorials on blockchain, ESP32, and cloud architecture. Speaker at tech conferences.",
+        "url": "{% baseUrl %}",
+        "sameAs": [
+            "https://twitter.com/Savjee",
+            "https://www.youtube.com/@simplyexplained",
+            "https://github.com/Savjee",
+            "https://mastodon.world/@simplyexplained",
+            "https://www.linkedin.com/in/xavierdecuyper"
+        ]
+    },
+    {
+        "@context": "http://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Simply Explained?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Simply Explained is a platform created by Xavier Decuyper that takes complicated topics and explains them in plain English through blog posts, YouTube videos, and e-learning courses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What topics does Simply Explained cover?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The content covers a wide range of technical topics including blockchain, cryptocurrency, ESP32 microcontrollers, home automation, smart homes, and general technology tutorials."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are the Simply Explained courses free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all Simply Explained courses are completely free and designed for beginners who want to learn technical topics step by step."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is Xavier Decuyper?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Xavier Decuyper is a developer and YouTuber who founded Simply Explained. He is passionate about taking complex technical concepts and making them accessible to everyone."
+                }
+            }
         ]
     }
 ]

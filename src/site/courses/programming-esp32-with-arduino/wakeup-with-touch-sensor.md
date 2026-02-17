@@ -5,6 +5,7 @@ duration: 321
 order: 16
 date: 2020-05-22
 section: "Deep sleep"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Deep sleep is great to save power, but you can't let the ESP32 sleep forever. At some point, an external interrupt is needed to wake it up. One way you can do that is with the touch sensors. 

@@ -4,6 +4,7 @@ videoId: kWQ84S13-hw
 duration: 1120
 order: 4
 date: 2018-10-23
+courseName: "Implementing a Blockchain in Javascript"
 ---
 
 Transactions on a blockchain have to be signed. You do this with a public and private key. It prevents people from spending coins that aren't theirs.

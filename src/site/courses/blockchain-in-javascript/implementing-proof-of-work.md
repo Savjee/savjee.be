@@ -4,6 +4,7 @@ videoId: HneatE69814
 duration: 403
 order: 2
 date: 2017-10-03
+courseName: "Implementing a Blockchain in Javascript"
 ---
 
 Adding the proof-of-work mechanism to our homemade Javascript blockchain.

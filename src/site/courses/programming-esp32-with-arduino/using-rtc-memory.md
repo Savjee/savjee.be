@@ -5,6 +5,7 @@ duration: 184
 order: 17
 date: 2020-05-22
 section: "Deep sleep"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Using deep sleep is important for when you want to battery power your ESP32. One downside, however, is that during deep sleep, the main memory is powered down, so you lose everything that is stored in memory. That can be problematic if you want to keep track of some state while sleeping.

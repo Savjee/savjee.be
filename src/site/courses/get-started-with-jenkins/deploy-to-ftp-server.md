@@ -4,6 +4,7 @@ videoId: ZdUk3UeG8JQ
 duration: 458
 order: 8
 date: 2016-03-15
+courseName: "Get started with Jenkins"
 ---
 
 In this video I'll show you how you can use Jenkins to automatically deploy your code to a FTP server. You could use this to automatically upload your website to your hosting provider, each time you make a commit.

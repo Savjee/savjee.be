@@ -12,6 +12,7 @@ available_platforms:
       url: https://skl.sh/2Ha3f5W
     - name: YouTube
       url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiSk1pnrKewLklYfCdu9Qjhy
+courseName: "TypeScript Design Patterns"
 ---
 
 Design patterns are frequently used in OO programming languages, so what about TypeScript?

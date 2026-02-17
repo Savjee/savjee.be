@@ -5,6 +5,7 @@ duration: 234
 order: 21
 date: 2021-05-20
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Measure distance to an object by using a laser-based Time-of-Flight sensor. These sensors have a range of up to 2 meters and are pretty accurate.

@@ -4,6 +4,7 @@ videoId: cqv5nhARjr8
 duration: 454
 order: 9
 date: 2016-12-19
+courseName: "Learning Typescript"
 ---
 
 Use existing JavaScript frameworks like jQuery in your TypeScript projects. Type definitions bring great autocomplete to libraries and frameworks that weren't written in TypeScript.

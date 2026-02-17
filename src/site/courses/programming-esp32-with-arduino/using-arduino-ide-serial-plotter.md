@@ -5,6 +5,7 @@ duration: 377
 order: 5
 date: 2020-05-22
 section: "Arduino IDE"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Now while you're writing code, you might want to print out certain things to a console. Like the raw value of a temperature sensor or from the ADC, or from the built-in touch sensor. This can be useful while getting started or while debugging your program.

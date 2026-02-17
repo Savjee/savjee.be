@@ -11,6 +11,7 @@ tags: ["GraphQL", "API"]
 videoId: EkxwX5bWXt0
 section: "Introduction"
 date: 2017-10-01
+courseName: "Complete Guide to Building a GraphQL API"
 ---
 
 Everything you need to know to build your own GraphQL API.

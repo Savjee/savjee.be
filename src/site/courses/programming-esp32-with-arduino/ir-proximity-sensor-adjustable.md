@@ -5,6 +5,7 @@ duration: 177
 order: 22
 date: 2021-05-20
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 This water-proof sensor can detect if there's an object within its range using infrared light. The range is configurable up to 2 meters and the sensor is waterproof.

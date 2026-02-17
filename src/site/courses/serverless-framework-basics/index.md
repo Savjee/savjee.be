@@ -8,6 +8,7 @@ date: 2017-06-06
 available_platforms:
     - name: YouTube
       url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiT5b4OsmIBiMbsPjfp4kfg3
+courseName: "Introduction to the Serverless framework"
 ---
 
 Overview of all the topics that will be addressed in my series on the Serverless framework.

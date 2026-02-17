@@ -5,6 +5,7 @@ duration: 237
 order: 8
 date: 2020-05-22
 section: "PlatformIO"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Transcript is not available.

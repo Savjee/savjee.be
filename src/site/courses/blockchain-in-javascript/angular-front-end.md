@@ -4,6 +4,7 @@ videoId: AQV0WNpE_3g
 duration: 2997
 order: 5
 date: 2019-04-15
+courseName: "Implementing a Blockchain in Javascript"
 ---
 
 Blockchains are hard to understand, so let's visualize their inner workings by building a front-end application in Angular. I'll show you how to visualize blocks on the chain and the transactions inside them. We'll also make a UI to create new transactions and to mine new blocks.

@@ -5,6 +5,7 @@ duration: 375
 order: 26
 date: 2021-02-09
 section: "FreeRTOS"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Does your ESP32 need a constant WiFi connection? Use a FreeRTOS task to constantly check your connection, and re-establish it when needed.

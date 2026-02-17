@@ -4,6 +4,7 @@ videoId: jZ-AdfA618U
 duration: 422
 order: 6
 date: 2017-06-06
+courseName: "Introduction to the Serverless framework"
 ---
 
 Learn how to create your first Serverless project. I'll show you the project structure & main configuration file. Luckily, Serverless can create a boilerplate project for us.

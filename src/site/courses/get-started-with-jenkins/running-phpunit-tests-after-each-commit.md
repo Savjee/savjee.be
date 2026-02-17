@@ -4,6 +4,7 @@ videoId: 68cDNUz7uro
 duration: 639
 order: 5
 date: 2016-03-15
+courseName: "Get started with Jenkins"
 ---
 
 In this video I'll show you how you can run PHPUnit tests on each Jenkins build. Unit testing ensures that your project remains stable and doesn't contain any regressions.

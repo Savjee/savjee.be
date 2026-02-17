@@ -5,6 +5,7 @@ duration: 288
 order: 10
 date: 2020-05-22
 section: "Hardware"
+courseName: "Programming ESP32 with Arduino"
 ---
 In this video, I'll show you how to connect your ESP32 or any Arduino board to a DHT22 temperature and humidity sensor (sometimes also referred to as AM2302).
 

@@ -4,6 +4,7 @@ videoId: 5mtxVkZbJcg
 duration: 97
 order: 1
 date: 2016-05-27
+courseName: "First look at BitBucket Pipelines"
 ---
 
 In this video I'll give you an overview of this series: a first look at BitBucket Pipelines.

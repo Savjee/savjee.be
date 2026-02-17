@@ -4,6 +4,7 @@ videoId: _t-hZTX97AI
 duration: 435
 order: 7
 date: 2016-03-15
+courseName: "Get started with Jenkins"
 ---
 
 In this video I’m going to show you how you can use environment variables to safely store and use your credentials in Jenkins.

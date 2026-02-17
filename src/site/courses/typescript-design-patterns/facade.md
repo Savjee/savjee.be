@@ -4,6 +4,7 @@ videoId: KQdiA2HtOxU
 duration: 421
 order: 4
 date: 2017-04-06
+courseName: "TypeScript Design Patterns"
 ---
 
 The facade pattern is used to hide a lot of complexity behind a single method.

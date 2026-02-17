@@ -5,6 +5,7 @@ duration: 544
 order: 13
 date: 2020-05-22
 section: "Internet of Thing"
+courseName: "Programming ESP32 with Arduino"
 ---
 
 Once you have your ESP32 connected to WiFi, you can send data to external services to keep track of them. One of those is ThingSpeak.

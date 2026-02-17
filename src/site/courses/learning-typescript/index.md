@@ -8,6 +8,7 @@ tags: ["Typescript"]
 available_platforms:
     - name: YouTube
       url: https://www.youtube.com/playlist?list=PLzvRQMJ9HDiQyjtcrtvDkeQMJIrv5ABbm
+courseName: "Learning Typescript"
 ---
 
 Object oriented design patterns help you create more robust and flexible software. In this course I will show you how to use these patterns in TypeScript.

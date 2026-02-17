@@ -20,6 +20,11 @@ NoSQL databases can operate in multiple modes: as key-value store, document stor
 
 You can run your own NoSQL database with software like Cassandra, CouchDB, MongoDB or Scylla. You can also use a cloud version like AWS DynamoDB, Google Cloud BigTable or Azure CosmosDB.
 
+# Hands-on Examples
+See NoSQL databases in action with my real-world implementations:
+- [Building a serverless anagram solver with AWS]({% link collections.posts, '2016-01-20-Building-serverless-anagram-solver-with-aws-dynamodb-lambda-s3-cloudfront-api-gateway.md' %})
+- [EZStore: a tiny serverless datastore for IoT data]({% link collections.posts, '2022-01-04-ezstore-a-tiny-serverless-data-store-for-iot-data.md' %})
+
 # Sources
 This video wouldn't be possible without the work of others. Here are the sources I've used during my research & script writing:
 

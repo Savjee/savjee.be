@@ -214,7 +214,10 @@ Here's a screenshot of the new version of "Xavier's anagram solver":
 Want to see it in action? Go to [anagram.savjee.be](http://anagram.savjee.be) and start solving those riddles!
 
 ## Conclusion
-Let's wrap up this post. This was my first experience with building an serverless application that runs entirely on AWS and I must say I'm impressed. The idea of running a service without managing servers or services is pretty nice. I also don't have to worry about taking backups of my database. I now pay for what I've consumed and not a fixed amount every month. 
+Let's wrap up this post. This was my first experience with building an serverless application that runs entirely on AWS and I must say I'm impressed. The idea of running a service without managing servers or services is pretty nice. I also don't have to worry about taking backups of my database. I now pay for what I've consumed and not a fixed amount every month.
 
 ![](/uploads/anagram-aws/overview-serverless-anagramsolver.png)
 *Before and after.*
+
+## Related Content
+For a conceptual overview of serverless computing, watch: [The Serverless Hype Explained!](https://www.youtube.com/watch?v=tgFiOzVEL0Q).

@@ -296,3 +296,6 @@ Remember: EZStore is not meant as a general purpose IoT data store. It's a very 
 
 ## Open source!
 Want to use EZStore yourself? Or maybe improve its shortcomings? It's available on GitHub and I'm open to pull requests and suggestions: [https://github.com/Savjee/EZStore](https://github.com/Savjee/EZStore)
+
+## Related Content
+For a conceptual introduction to serverless computing, watch: [The Serverless Hype Explained!](https://www.youtube.com/watch?v=tgFiOzVEL0Q).

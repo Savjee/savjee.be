@@ -195,3 +195,6 @@ That being said, Cloudflare gets the benefit of the doubt, as their services are
 So that was it. My anagram solver now runs entirely on Cloudflare without the need of a database. You can check it out here: [https://anagram.savjee.be](https://anagram.savjee.be)
 
 The source code is available on GitHub: [https://github.com/Savjee/anagram-solver](https://github.com/Savjee/anagram-solver)
+
+## Related Content
+For an introduction to serverless concepts, watch: [The Serverless Hype Explained!](https://www.youtube.com/watch?v=tgFiOzVEL0Q).

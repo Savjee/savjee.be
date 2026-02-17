@@ -130,3 +130,6 @@ To get a copy of this spreadsheet in your own Google Drive: go to "File" and cli
 
 ## Buy crypto for yourself
 Want to start buying Bitcoin, Ethereum or Litecoin? [Consider buying them through my Coinbase referral link](https://www.coinbase.com/join/59284524822a3d0b19e11134). If you buy a $100 worth of crypto, you will get $10 for free (and I'll get a $10 dollar commision).
+
+## Related Content
+To understand how Bitcoin wallets and addresses work technically, watch: [How Bitcoin Wallets Work](https://www.youtube.com/watch?v=GSTiKjnBaes).

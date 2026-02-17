@@ -1,21 +1,23 @@
 ---
 layout: post
-title: "Building My Own Bookshelf: A Digital Guy Tackles the Physical World"
+title: "Building My Personal Display Shelf: A Digital Guy Tackles the Physical World"
 tags: ["DIY", "Home Improvement"]
 thumbnail: /uploads/2026-02-building-bookshelf/thumb_timeline.jpg
 upload_directory: /uploads/2026-02-building-bookshelf/
 ---
 
-I spend most of my time building things in the digital world. Code, apps, content—you name it. But recently, I had an opportunity to build something physical. Something I could touch, something that would live in my home.
+I spend most of my time building things in the digital world. Code, apps, content—you name it. But several years ago, I had an opportunity to build something physical. Something I could touch, something that would live in my home.
 
-A bookshelf.
+A shelf. Originally for books.
 
-Here's how I, a digital-native, built my first piece of furniture.
+Here's how I, a digital-native, built my first piece of furniture—and how it evolved into something much more personal.
 <!--more-->
 
 ## Why build it myself?
 
 I had a weird nook in my home office that was begging to be filled. The dimensions were awkward: 150cm wide, but only 83-100cm high (with a poster at 126cm that I didn't want to block). Depth was tricky too—I only had 30cm to work with, but the current closet was 50cm deep.
+
+At the time, I thought: "I need a place for my books." My collection wasn't massive yet, but I wanted something that could grow with me.
 
 Off-the-shelf shelves didn't fit. Custom-built? Too expensive. So I did what any reasonable person would do: I decided to build it myself.
 
@@ -40,7 +42,7 @@ Then came the math. How many books would fit? I turned to ChatGPT for some quick
 - **Books per shelf:** 57 books
 - **Total capacity:** 171 books (3 inner shelves)
 
-That's a lot of reading material.
+That's a lot of reading material—or so I thought at the time.
 
 ![](/uploads/2026-02-building-bookshelf/figma-sketch.jpg)
 *My Figma sketch helped me visualize the design before building.*
@@ -100,6 +102,37 @@ It took me a few hours, but I had a bookshelf. A real, honest-to-goodness piece 
 ![](/uploads/2026-02-building-bookshelf/finished-shelf.jpg)
 *The finished product, perfectly fitting in the nook.*
 
+## From bookshelf to personal museum
+
+Here's the thing: when I built this shelf, I had far fewer books than I do now. And while it *does* hold books, it's evolved into something much more personal.
+
+What started as a simple bookshelf has become a collection of memories and passions:
+
+**The F1 corner** — I'm a massive Formula 1 fan, so I've dedicated a section to my obsession. There's my F1 cap, some technical books about the sport, and my access card from the Belgian Grand Prix at Spa-Francorchamps.
+
+**A piece of computing history** — I'm a Mac guy, so I hunted down an original Macintosh Plus. And yes, it still works! I even got replica floppy disks to complete the experience. There's something special about booting up a machine from 1986.
+
+**Professional milestones** — My colleagues gave me some meaningful gifts over the years: one set when I celebrated my 10-year anniversary with the company, and another when I eventually left. Both have found a home on my shelf.
+
+**Family memories** — Father's Day gifts from my kids. Each one reminds me of a different stage of their childhood.
+
+**Childhood nostalgia** — A Tintin rocket model and the LEGO Saturn V from Apollo 11. Some things never get old.
+
+**Future reading** — Books for my children, carefully stored for when they're old enough to appreciate them.
+
+## The shelf that grew too fast
+
+Remember those calculations? 171 books of capacity? I thought that would last me years.
+
+But here's the reality: I've already run out of space. The shelf that was meant to solve my book storage problem is now overflowing—and I haven't even reached half of that theoretical 171-book capacity.
+
+Because I didn't just fill it with books. I filled it with pieces of myself. Every item tells a story. Every object represents a passion, a memory, or a moment in time.
+
+And honestly? I wouldn't have it any other way.
+
+![](/uploads/2026-02-building-bookshelf/filled-shelf.jpg)
+*The shelf today—filled with books, memories, and personal treasures.*
+
 ## The satisfaction of building
 
 Here's what surprised me most: how incredibly satisfying it was to build something with my hands.
@@ -125,6 +158,10 @@ Building this shelf taught me a few things:
 
 **Imperfections are okay.** In software, a bug is a bug. In physical building, small flaws are character. They tell a story. "Yeah, I made that."
 
+**Plans change.** I built this as a bookshelf. It became a personal museum. And that's fine. The best projects are the ones that grow with you.
+
+**You can never have enough space.** Trust me, you'll always find something else to fill it with.
+
 ![](/uploads/2026-02-building-bookshelf/filled-with-books.jpg)
 *Filled with books and perfectly fitting the space.*
 
@@ -134,8 +171,11 @@ Absolutely.
 
 In fact, I'm already eyeing other projects around the house. There's something deeply satisfying about building something that will last, that serves a purpose, and that exists in three dimensions rather than on a screen.
 
-And who knows? Maybe one day I'll invest in better tools. Maybe I'll take a woodworking class. For now, I'm happy with what I've learned and what I've built.
+And who knows? Maybe I'll build another shelf soon. One for books. Because clearly, this one has other priorities.
+
+![](/uploads/2026-02-building-bookshelf/shelf-overview.jpg)
+*My personal museum—one shelf, many stories.*
 
 If you've been thinking about building something yourself but feeling intimidated—go for it. Start small. Use your digital skills to plan and design, then embrace the messy, rewarding process of making something real.
 
-Your future self (and your future book collection) will thank you.
+Just don't blame me if you run out of space faster than you expected. It seems to be a recurring theme.

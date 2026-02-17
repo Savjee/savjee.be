@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ site.url }}/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    {%- assign current_time = "now" | date: "%Y-%m-%d" -%}
+    {%- assign collection_names = 'posts,videos,courses,newsletter,trivia' | split: ',' -%}
+    {%- for collection_name in collection_names -%}
+        {%- for item in collections[collection_name] reversed -%}
+            {%- if item.url -%}
+            <url>
+                <loc>{{ site.url }}{{ item.url }}</loc>
+                <lastmod>{{ item.date | date: "%Y-%m-%d" }}</lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.8</priority>
+            </url>
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endfor -%}
+</urlset>

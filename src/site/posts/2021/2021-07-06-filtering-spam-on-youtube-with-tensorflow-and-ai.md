@@ -338,8 +338,6 @@ And that's it! I deployed it inside an LXC container on my home server, using cr
 ## Conclusion
 I'm happy with how this turned out. It's been running for about a week, and it has processed 186 comments. 94 of these have been correctly identified as spam and have automatically been removed. 
 
-Fast forward to 2025: I've moved beyond simple text classification and started [using generative AI to write and illustrate children's books]({% link collections.posts, "2025-02-12-how-i-wrote-and-illustrated-a-childrens-book-using-ai.md" %}). It's incredible to see how the technology has evolved from basic embeddings to character-consistent creative tools!
-
 I'm somewhat surprised by those numbers. It means that half the comments posted on my videos are spam. On the flip side: it's only been running for a few days, so the spam ratio might not be this intense all the time.
 
 I'm now seeing more channels &mdash; such as [Graham Stephen](https://www.youtube.com/watch?v=lU1qpBwQFmc) &mdash; that suffer from high levels of spam comments. I've reached out to a few to offer help and retrain my classifier based on their spam comments. We'll see how that turns out!

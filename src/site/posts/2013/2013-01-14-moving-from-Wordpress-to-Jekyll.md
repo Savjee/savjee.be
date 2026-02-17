@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Moving from Wordpress to Jekyll
+description: "Switch from WordPress to Jekyll for better performance. Why static sites are faster, more secure, and portable than dynamic CMS platforms."
 quote: A few months ago I started a blog using Wordpress. Unsatisfied with the performance, I moved my blog over to Jekyll, a blog-aware static site generator.
 keywords: Wordpress to Jekyll, Jekyll blog, high performance, static website, static blog
 tags: [Jekyll]

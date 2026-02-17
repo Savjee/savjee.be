@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Use AWStats to analyze Amazon S3 logs
+description: "Configure AWStats to analyze Amazon S3 access logs. Track bandwidth usage and visitor statistics with this log analyzer setup guide."
 quote: How to configure AWStats to parse Amazon S3 logs and generate useful reports.
 keywords: Amazon S3, Access logs, S3 logs, AWStats, analyze logs
 tags: [AWS]

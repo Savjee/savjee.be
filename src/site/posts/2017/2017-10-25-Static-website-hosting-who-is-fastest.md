@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Static website hosting&#58; who's fastest? AWS, Google, Firebase, Netlify or GitHub?
+description: "Benchmark of static website hosting providers: AWS S3, Google Cloud, Firebase, Netlify, and GitHub Pages. Speed test results and comparison."
 quote:
 tags: ["Static webhosting"]
 ---

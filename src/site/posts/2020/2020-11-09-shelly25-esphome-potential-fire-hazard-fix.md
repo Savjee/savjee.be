@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Shelly 2.5 + ESPHome: potential fire hazard + fix"
+description: "Important safety fix for Shelly 2.5 devices running ESPHome. Learn how to configure GPIO16 to prevent internal short circuits and excessive heat buildup."
 quote:
 tags: [ESPHome, Shelly]
 thumbnail: /uploads/2020-11-09-shelly25-esphome-potential-fire-hazard-fix/thumb_timeline.jpg

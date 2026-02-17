@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How I Built an NFC Movie Library for my Kids"
+description: "I built an NFC movie library for my kids using Home Assistant, ESPHome, and Plex. Laminated cards with NFC tags let them pick movies autonomously."
 tags: ["Home Assistant", ESPHome, Plex, NFC, Parenting]
 thumbnail: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/thumb_timeline.jpg
 upload_directory: /uploads/2023-11-how-i-built-nfc-movie-library-for-my-kids/

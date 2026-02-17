@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Three years on YouTube
+description: "My third year on YouTube: 5.1M views, 95K subscribers, and channel rebranding. Lessons learned from transitioning to Simply Explained and goals for 2019."
 quote:
 tags: ["Yearly review", "YouTube channel"]
 ---

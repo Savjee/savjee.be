@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Home Assistant: Boot Raspberry Pi from USB SSD"
+description: "Speed up Home Assistant on Raspberry Pi by booting from a USB SSD instead of microSD. Fix slow I/O performance and lag with this hardware upgrade guide."
 quote: 
 thumbnail: /uploads/2019-12-03-home-assistant-pi-usb-boot/poster-750.jpg
 upload_directory: /uploads/2019-12-03-home-assistant-pi-usb-boot

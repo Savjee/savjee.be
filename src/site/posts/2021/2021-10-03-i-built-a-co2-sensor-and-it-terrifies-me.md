@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "I Built a CO2 Sensor and It Terrifies Me"
+description: "I built a DIY CO2 sensor with ESPHome and Home Assistant. Track indoor air quality and learn about safe CO2 levels for health and cognitive performance."
 quote: 
 tags: [Home Assistant, ESPHome]
 upload_directory: /uploads/2021-10-03-i-built-a-co2-sensor-and-it-terrifies-me/

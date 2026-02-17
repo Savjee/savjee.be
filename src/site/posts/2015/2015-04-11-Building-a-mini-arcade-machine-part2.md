@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Building a Mini Arcade Machine (Part 2)
+description: "Part 2 of building a mini arcade cabinet: assembling panels, wiring buttons and LEDs, and final setup. Complete DIY guide with wiring diagrams."
 quote:
 thumbnail: true
 upload_directory: /uploads/mini-arcade-pt2

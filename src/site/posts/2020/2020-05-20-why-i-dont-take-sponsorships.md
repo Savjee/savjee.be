@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why I don't take sponsorships"
+description: "An honest look at why I choose to stay independent on YouTube and decline sponsorships, especially from VPN providers, to maintain trust and objectivity."
 quote: 
 tags: [Simply Explained, YouTube channel]
 ---

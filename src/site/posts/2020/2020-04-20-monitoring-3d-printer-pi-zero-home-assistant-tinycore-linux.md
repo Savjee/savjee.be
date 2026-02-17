@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Monitoring my 3D printer with a Pi Zero, Home Assistant and TinyCore Linux"
+description: "Monitor your Prusa i3 MK3 3D printer with a Pi Zero and Home Assistant. Track print progress and build useful automations for your 3D printing setup."
 quote: 
 thumbnail: /uploads/2020-04-20-monitoring-3d-printer-pi-zero-home-assistant-tinycore-linux/poster-750.jpg
 upload_directory: /uploads/2020-04-20-monitoring-3d-printer-pi-zero-home-assistant-tinycore-linux

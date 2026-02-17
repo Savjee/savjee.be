@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Impact of Adblockers on Google Analytics (vs. Plausible)"
+description: "How much data is Google Analytics actually missing due to adblockers? I compared GA with Plausible Analytics to measure the real-world impact on traffic stats."
 quote:
 tags: []
 thumbnail: /uploads/2020-10-27-effect-adblockers-on-google-analytics-vs-plausible/thumb_timeline.jpg

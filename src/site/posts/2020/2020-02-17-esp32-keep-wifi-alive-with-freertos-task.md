@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ESP32: Keep WiFi connection alive with a FreeRTOS task"
+description: "Learn how to use FreeRTOS on the ESP32 to create a background task that monitors and automatically restores your WiFi connection for rock-solid stability."
 quote: 
 tags: [ESP32, FreeRTOS]
 ---

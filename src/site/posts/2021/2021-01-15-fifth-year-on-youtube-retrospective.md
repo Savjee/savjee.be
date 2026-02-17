@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Retrospective: My Fifth Year on YouTube"
+description: "My fifth year on YouTube retrospective: 3.8M views, 30 videos, and personal reflection. Channel growth, lessons learned, and goals for 2021."
 quote: For the past 4 years, I have made a habit of reflecting on the previous year and set goals for the new year. This year is no exception, but now I try to set better goals while reflecting on some personal things in life.
 tags: ["Yearly review", "YouTube channel"]
 not_featureable: true

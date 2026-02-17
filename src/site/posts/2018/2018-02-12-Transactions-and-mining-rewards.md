@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Transactions &amp; Mining Rewards (Javascript blockchain, part 3)
+description: "Part 3 of building a blockchain in JavaScript: implementing multiple transactions per block and mining rewards. Complete code walkthrough included."
 quote:
 thumbnail: /uploads/2018-02-transactions-and-mining-rewards/poster-750.jpg
 upload_directory: /uploads/2018-02-transactions-and-mining-rewards

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Secure Home Assistant Access with Cloudflare and Ubiquiti Dream Machine"
+description: "Securely expose your Home Assistant instance to the internet using Cloudflare and Ubiquiti Dream Machine. Multi-level security guide for remote access."
 quote:
 tags: [Home Assistant, Smart Home, Ubiquiti, Cloudflare]
 thumbnail: /uploads/2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine/thumb_timeline.jpg

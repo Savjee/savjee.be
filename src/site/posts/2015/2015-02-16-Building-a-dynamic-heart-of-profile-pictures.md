@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Building a dynamic heart of profile pictures
+description: "Build a dynamic heart animation with donor profile pictures using PHP, CSS3, and JavaScript. Complete guide for donation websites with visual rewards."
 quote:
 keywords: heart, profile pictures, facebook, PHP, animate, CSS3, JavaScript
 thumbnail: true

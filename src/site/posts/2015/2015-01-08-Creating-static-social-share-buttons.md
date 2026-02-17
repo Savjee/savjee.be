@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating static social share buttons
+description: "Create fast, lightweight social share buttons without external scripts. Improve website performance by avoiding heavy social network JavaScript dependencies."
 quote:
 thumbnail: true
 upload_directory: /uploads/creating-static-social-buttons

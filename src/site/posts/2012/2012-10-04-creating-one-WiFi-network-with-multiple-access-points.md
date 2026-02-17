@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Creating one WiFi network with multiple access points
+description: "Extend your WiFi coverage with multiple access points creating one seamless network. Setup guide for same SSID and roaming across routers."
 quote: Have a router with limited WiFi range? Setup a second router to extend your network and great WiFi coverage.
 keywords: WiFi network, extend WiFi range, one network multiple routers, access points
 thumbnail: true

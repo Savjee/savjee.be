@@ -1,6 +1,7 @@
 ---
 layout: post
 title: TixClock clone in Javascript
+description: "After struggling to get a Tix clock, I built my own using HTML, JavaScript, and made it into a screensaver. Learn how it works and create yours!"
 keywords: Tix, tixclock, javascript, html5, screensaver
 quote: After struggling to get my hands on a Tix clock, I decided to code my own Tix clock with HTML and Javascript.
 thumbnail: true

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Make Your Garage Door Opener Smart: Shelly 1, ESPHome and Home Assistant"
+description: "Learn how to make any garage door opener smart for under $20 using a Shelly 1, ESPHome, and Home Assistant. No cloud required, pure local control."
 quote:
 tags: [Home Assistant, Smart Home, DIY, ESPHome, Shelly]
 meta_tags: ["garage door opener", "smart garage door", "home assistant garage door", "esphome garage door"]

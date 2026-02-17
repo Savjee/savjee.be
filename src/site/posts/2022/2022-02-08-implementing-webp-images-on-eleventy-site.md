@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How WebP Images Reduced My Bandwidth Usage by 50%"
+description: "A guide to implementing WebP images in Eleventy. Learn how to optimize site performance and reduce bandwidth by up to 50% while maintaining compatibility."
 tags: [Eleventy, Web Performance]
 not_featureable: true
 upload_directory: /uploads/2022-02-implementing-webp-images-on-eleventy-site/

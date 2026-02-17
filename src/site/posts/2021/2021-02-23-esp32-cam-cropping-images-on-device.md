@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ESP32 Cam: cropping images on device"
+description: "A technical guide on how to crop images directly on the ESP32 Cam using raw RGB565 format before sending them to the cloud or IoT services."
 quote: The ESP32 camera is the cheapest microcontroller with a built-in camera that you can buy. The OV2640 sensor has a max resolution of 1600x1200, but sometimes you don't need the entire image. In this post I'll show how to crop the images on the ESP32 itself, before sending it of to your preferred (cloud) IoT service.
 tags: [ESP32]
 thumbnail: /uploads/2021-02-23-esp32-cam-cropping-images-on-device/thumb_timeline.jpg

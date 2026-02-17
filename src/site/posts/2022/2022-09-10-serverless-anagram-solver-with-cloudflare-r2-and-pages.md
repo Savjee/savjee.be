@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Serverless Anagram Solver with Cloudflare R2 and Pages"
+description: "How I rebuilt my anagram solver to be completely static. Using pre-computed solutions and Cloudflare R2/Pages for a fast, serverless experience."
 tags: ["Anagram solver", "Cloudflare", "Cloudflare Pages", "Cloudflare Workers"]
 not_featureable: true
 toc_enabled: true

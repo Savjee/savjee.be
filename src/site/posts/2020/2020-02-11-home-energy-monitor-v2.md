@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Home Energy Monitor: V2"
+description: "Building a DIY home energy monitor with ESP32 and SCT-013 sensors. V2 focuses on improved WiFi stability using FreeRTOS and better hardware design."
 quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measures total electricity consumption in the entire house.
 thumbnail: /uploads/2020-02-11-home-energy-monitor-v2/poster-750.jpg
 upload_directory: /uploads/2020-02-11-home-energy-monitor-v2

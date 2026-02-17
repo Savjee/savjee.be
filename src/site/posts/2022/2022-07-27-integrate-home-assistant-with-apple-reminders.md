@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Integrate Home Assistant with Apple Reminders"
+description: "A clever workaround to sync Home Assistant with Apple Reminders, allowing your home automations to create tasks on your iPhone and Mac."
 tags: [Home Assistant]
 upload_directory: /uploads/2022-07-integrate-home-assistant-with-apple-reminders/
 thumbnail: /uploads/2022-07-integrate-home-assistant-with-apple-reminders/thumb_timeline.jpg

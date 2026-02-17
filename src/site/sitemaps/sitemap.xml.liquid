@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign collection_names = 'trivia,posts,videos,courses,newsletter' | split: ',' -%}
+{%- for collection_name in collection_names -%}
+  {%- for item in collections[collection_name] -%}
+  <url>
+    <loc>{% baseUrl %}{{ item.url }}</loc>
+    {% if item.data.updated -%}
+    <lastmod>{{ item.data.updated | date: "%Y-%m-%d" }}</lastmod>
+    {%- elsif item.date -%}
+    <lastmod>{{ item.date | date: "%Y-%m-%d" }}</lastmod>
+    {%- endif %}
+    {% if item.url == '/' -%}
+    <priority>1.0</priority>
+    {%- else -%}
+    <priority>0.5</priority>
+    {%- endif %}
+  </url>
+  {%- endfor -%}
+{%- endfor -%}
+</urlset>

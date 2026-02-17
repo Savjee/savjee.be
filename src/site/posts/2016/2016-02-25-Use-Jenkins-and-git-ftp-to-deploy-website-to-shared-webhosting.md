@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Use Jenkins and git-ftp to deploy a website to shared webhosting
-description: "Automate deployments to shared webhosting with Jenkins and git-ftp. CI/CD setup for websites without shell access or SSH capabilities."
 thumbnail: /uploads/jenkins-git-ftp/poster-750.jpg
 upload_directory: /uploads/jenkins-git-ftp
 tags: [CI/CD]

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Deploying websites to FTP or Amazon S3 with BitBucket Pipelines
-description: "Deploy websites to FTP or Amazon S3 using BitBucket Pipelines. CI/CD setup with bitbucket-pipelines.yml configuration for automated deployments."
 quote: 
 tags: [AWS, CI/CD]
 ---

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Review EC Technology Bluetooth Sports Earphones
-description: "Review of EC Technology Bluetooth sports earphones. Comfortable, lightweight, and great sound quality. Comparison with Apple EarPods and QCY headphones."
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-ectechnology-headphones

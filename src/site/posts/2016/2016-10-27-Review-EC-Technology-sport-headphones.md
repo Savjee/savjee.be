@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Review EC Technology sports headphones
-description: "Review of EC Technology wireless sport headphones with over-ear support. Stay secure during workouts with comfortable, non-slip design."
 quote: 
 thumbnail: true
 upload_directory: /uploads/review-ectechnology-sport-headphones

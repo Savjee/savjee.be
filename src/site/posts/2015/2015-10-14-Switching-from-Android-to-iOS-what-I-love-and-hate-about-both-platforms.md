@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Switching from Android to iOS - What I love and hate about both platforms
-description: "After 3 years on Android, I switched to iPhone 6. Here's what I love and hate about both platforms, from hardware quality to app ecosystems."
 quote: 
 thumbnail: true
 upload_directory: /uploads/switch-android-ios

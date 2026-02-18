@@ -15,6 +15,10 @@ no_title: true
         {{ title | escape_once }}
     </h1>
 
+    <div class="flex gap-4 mb-8">
+        {% render "components/share-buttons-vertical.html" %}
+    </div>
+
     <div class="max-w-3xl">
         {{ content }}
     </div>

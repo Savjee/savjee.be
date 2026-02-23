@@ -1,20 +1,49 @@
 ---
 layout: page
 title: "Newsletter"
-quote: "Get your a monthly dose of science and technology news. Signup for the Simply Explained newsletter if you want your curiosity tickled every month."
+quote: "The internet’s weirdest smart stories, curated by a human. One high-signal email per month."
 ---
 
 <div>
-    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
-        <p class="prose dark:prose-dark">Get your a monthly dose of science and technology news.
-            <br>Check out the past issues here, 
-            and signup if you want your curiosity tickled every month 😉</p>
-        
-        <div class="mt-4 md:mt-0">
+    <div class="md:grid md:grid-cols-2 md:gap-8 items-start">
+        <div>
+            <h2 class="text-3xl font-bold pb-4 dark:text-savjeewhite">High-signal science & tech, once a month.</h2>
+            <p class="prose dark:prose-dark">
+                The internet’s weirdest smart stories — curated by a human.
+                <br>No AI slop. No spam. Just one monthly email with the most interesting science, tech, and nerdy finds worth your time.
+            </p>
+
+            <ul class="mt-6 space-y-2 dark:text-savjeewhite">
+                <li>✅ Human curated (AI helps with discovery, not copy-paste)</li>
+                <li>✅ 5-minute read, one email per month</li>
+                <li>✅ Weird but useful stories you likely missed</li>
+            </ul>
+
+            <p class="pt-6 text-savjeelightgrey3 dark:text-savjeelightgrey3">Published since 2021 • 60+ editions shipped</p>
+        </div>
+
+        <div class="mt-6 md:mt-0">
             {% render "components/newsletter-box.html", noDescription: true %}
         </div>
     </div>
 
+    <div class="mt-16">
+        <h3 class="text-2xl font-bold pb-4 dark:text-savjeewhite">What to expect</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-savjeelightgrey2 dark:bg-darkmode-alt-bg p-4">
+                <p class="font-bold dark:text-savjeewhite">Signal Picks</p>
+                <p class="text-sm dark:text-savjeelightgrey3">Short takes on the most interesting links of the month.</p>
+            </div>
+            <div class="bg-savjeelightgrey2 dark:bg-darkmode-alt-bg p-4">
+                <p class="font-bold dark:text-savjeewhite">Deep Context</p>
+                <p class="text-sm dark:text-savjeelightgrey3">One topic explained simply so you actually understand what matters.</p>
+            </div>
+            <div class="bg-savjeelightgrey2 dark:bg-darkmode-alt-bg p-4">
+                <p class="font-bold dark:text-savjeewhite">Nerd Gem</p>
+                <p class="text-sm dark:text-savjeelightgrey3">A surprising extra find that is too cool to miss.</p>
+            </div>
+        </div>
+    </div>
 
     {% assign newslettersByYear = collections.newsletter | groupByYear %}
     {% for yearObj in newslettersByYear reversed %}

@@ -3,6 +3,8 @@ layout: post
 title: "Running OpenClaw on Linux (Securely): My Practical Setup Guide"
 description: "A practical, security-focused guide for running OpenClaw on a Linux machine without buying dedicated Apple hardware. Covers VLAN isolation, memory setup, browser config, OAuth access, and maintenance."
 tags: [AI, Linux, Self-hosting, Security]
+thumbnail: /uploads/2026-02-openclaw-linux-guide/thumb_timeline.jpg
+upload_directory: /uploads/2026-02-openclaw-linux-guide/
 ---
 
 I wanted a practical OpenClaw setup that is:

@@ -1,44 +1,48 @@
 ---
 layout: page
 title: Speaking
-description: Xavier Decuyper gives clear, accessible talks that make complex tech understandable for a broad audience.
+description: Xavier Decuyper gives clear, practical talks that make complex tech understandable for broad audiences.
 ---
 
-<div class="max-w-3xl mb-12">
-    <h1 class="text-5xl font-extrabold text-savjeeblue dark:text-savjeewhite mb-6">Speaking</h1>
-    <p class="text-xl text-savjeeblack dark:text-savjeewhite leading-relaxed">
-        Simply Explained, but on stage. I give clear, practical talks that break down complex technical concepts for a broad audience.
+<div class="max-w-4xl mb-12">
+    <h1 class="text-5xl font-extrabold text-savjeeblue dark:text-savjeewhite mb-5">Speaking</h1>
+    <p class="text-xl leading-relaxed text-savjeeblack dark:text-savjeewhite">
+        Simply Explained, but on stage. I give practical talks that make complex tech understandable for broad audiences.
     </p>
 </div>
 
-## What I typically speak about
-
-- Making complex technologies easy to understand
-- Explaining blockchain and crypto concepts without hype
-- Helping technical teams communicate clearly with non-technical audiences
-
-## Past conferences
-
-<div class="space-y-6 mt-8">
-{% for talk in collections.talks %}
-    <div class="border-l-4 border-savjeered pl-6 py-2">
-        <h3 class="text-2xl font-bold text-savjeeblue dark:text-savjeewhite">
-            <a href="{{ talk.url }}" class="no-underline hover:underline">{{ talk.data.conference }}</a>
-        </h3>
-        <p class="text-savjeelightgrey3 mb-2">{{ talk.data.location }} • {{ talk.date | date: "%B %-d, %Y" }}</p>
-        <p class="mb-3">{{ talk.data.summary }}</p>
-        <a href="{{ talk.url }}" class="text-savjeered font-medium hover:underline">View talk details & recording →</a>
+<div class="grid md:grid-cols-3 gap-4 mb-14">
+    <div class="bg-savjeelightgrey5 dark:bg-darkmode-alt-bg rounded-lg p-5">
+        <h3 class="text-lg font-bold mb-2">Clarity first</h3>
+        <p class="m-0 text-sm text-savjeelightgrey3 dark:text-savjeewhite">No jargon overload. Clear mental models people remember.</p>
     </div>
+    <div class="bg-savjeelightgrey5 dark:bg-darkmode-alt-bg rounded-lg p-5">
+        <h3 class="text-lg font-bold mb-2">Technical depth</h3>
+        <p class="m-0 text-sm text-savjeelightgrey3 dark:text-savjeewhite">Accurate content for technical audiences, explained accessibly.</p>
+    </div>
+    <div class="bg-savjeelightgrey5 dark:bg-darkmode-alt-bg rounded-lg p-5">
+        <h3 class="text-lg font-bold mb-2">Actionable</h3>
+        <p class="m-0 text-sm text-savjeelightgrey3 dark:text-savjeewhite">People leave with ideas they can apply immediately.</p>
+    </div>
+</div>
+
+<h2 class="text-3xl font-bold mb-6">Past talks</h2>
+
+<div class="space-y-5">
+{% for talk in collections.talks %}
+    <article class="border border-savjeelightgrey4 dark:border-savjeelightgrey3/30 rounded-lg p-5">
+        <h3 class="text-2xl font-bold text-savjeeblue dark:text-savjeewhite mt-0 mb-1">
+            <a href="{{ talk.url }}" class="no-underline hover:underline">{{ talk.data.title }}</a>
+        </h3>
+        <p class="text-savjeelightgrey3 mb-3">{{ talk.data.conference }}{% if talk.data.location %} • {{ talk.data.location }}{% endif %} • {{ talk.date | date: "%B %-d, %Y" }}</p>
+        <p class="mb-0">{{ talk.data.summary }}</p>
+    </article>
 {% endfor %}
 </div>
 
-## Want me to speak at your event?
-
-I’m available for keynotes, workshops, and conference talks.
-
-<div class="bg-savjeeblue dark:bg-savjeelightgrey3 text-savjeewhite p-8 rounded-lg mt-12 text-center">
-    <h3 class="text-2xl font-bold mb-4">Let's connect</h3>
-    <p class="mb-6">Interested in having me speak at your conference, meetup, or company event?</p>
+<div class="bg-savjeeblue dark:bg-savjeelightgrey3 text-savjeewhite p-8 rounded-lg mt-14 text-center">
+    <h3 class="text-2xl font-bold mb-4">Want me to speak at your event?</h3>
+    <p class="mb-6">I’m available for keynotes, workshops, and conference talks.</p>
     <a href="mailto:hello@savjee.be" class="inline-block bg-savjeered hover:bg-savjeewhite hover:text-savjeered text-savjeewhite font-bold py-3 px-8 rounded-md no-underline transition-colors">
         Get in touch
     </a>

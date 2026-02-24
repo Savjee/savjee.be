@@ -3,9 +3,15 @@ layout: page
 no_title: true
 ---
 
-<article class="prose dark:prose-dark max-w-none mt-12">
+{% if videoId %}
+<div class="mt-12">
+  {% render "youtube-embed.html", videoId:videoId, videoDescription: title %}
+</div>
+{% endif %}
+
+<article class="prose dark:prose-dark max-w-none pt-12">
     <p>
-        <a href="/speaker/" class="no-underline">&larr; Back to speaking</a>
+        <a href="/speaker/" class="no-underline">&larr; Back to talks</a>
     </p>
 
     <h1 class="mt-5 mb-2">{{ title | escape_once }}</h1>
@@ -14,15 +20,7 @@ no_title: true
         {{ conference }}{% if location %} • {{ location }}{% endif %}{% if date %} • {{ date | date: "%B %-d, %Y" }}{% endif %}
     </p>
 
-    <div class="max-w-3xl pb-8">
+    <div class="max-w-3xl">
         {{ content }}
     </div>
-
-    {% if videoIds %}
-        <div class="space-y-8 not-prose">
-            {% for id in videoIds %}
-                {% render "youtube-embed.html", videoId:id, videoDescription: title %}
-            {% endfor %}
-        </div>
-    {% endif %}
 </article>

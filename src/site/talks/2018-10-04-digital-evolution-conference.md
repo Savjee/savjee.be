@@ -1,14 +1,13 @@
 ---
 layout: talk
-title: Blockchain & Smart Contracts Explained
+title: Blockchain & Smart Contracts, Clearly Explained
 conference: Digital Evolution Conference
 location: Malmö, Sweden
 date: 2018-10-04
-summary: A deep dive into how blockchain works, what smart contracts are, and where they are useful in the real world.
-videoIds:
-  - HNCwbKAY7AM
+summary: A clear deep dive into distributed ledgers, immutability, trust models, and smart contracts with practical examples.
+videoId: HNCwbKAY7AM
 ---
 
-This talk explains blockchain from first principles: distributed ledgers, immutability, trust models, and practical applications.
+This session explains how blockchain systems work under the hood, without assuming deep prior knowledge.
 
-The goal is to help both technical and non-technical attendees understand the trade-offs and potential of smart contracts.
+I cover the core mechanics, where smart contracts add value, and where traditional architectures are often still the better choice.

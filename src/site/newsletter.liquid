@@ -19,7 +19,9 @@ quote: "The internet’s weirdest smart stories, curated by a human. One high-si
                 <li>✅ Cool stories and other nerdy finds that will spark your curiosity</li>
             </ul>
 
-            <p class="pt-6 text-savjeelightgrey3 dark:text-savjeelightgrey3">Published since 2021 • 60+ editions shipped</p>
+            {% assign editionCount = collections.newsletter | size %}
+            {% assign roundedEditionCount = editionCount | divided_by: 5 | floor | times: 5 %}
+            <p class="pt-6 text-savjeelightgrey3 dark:text-savjeelightgrey3">Published since 2021 • {{ roundedEditionCount }}+ editions shipped</p>
         </div>
 
         <div class="mt-6 md:mt-0">

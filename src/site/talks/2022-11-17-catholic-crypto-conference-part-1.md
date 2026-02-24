@@ -1,11 +1,12 @@
 ---
 layout: talk
-title: Crypto Concepts Without Hype (Part 1)
+title: What is a Cryptocurrency?
 conference: Catholic Crypto Conference
 location: United States
 date: 2022-11-17
-summary: Part 1 of a beginner-friendly breakdown of crypto and blockchain concepts, focused on clear terminology and foundations.
+summary: A beginner-friendly introduction to blockchains and cryptocurrencies: what they are, how they work, and where they fit.
 videoId: vJfdO9QuroY
+permalink: /speaker/what-is-a-cryptocurrency/
 ---
 
 Part 1 lays the groundwork: core terms, building blocks, and the mental models needed to follow the rest of the conversation.

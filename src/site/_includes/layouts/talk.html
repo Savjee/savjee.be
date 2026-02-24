@@ -1,0 +1,28 @@
+---
+layout: page
+no_title: true
+---
+
+<article class="prose dark:prose-dark max-w-none mt-12">
+    <p>
+        <a href="/speaker/" class="no-underline">&larr; Back to speaking</a>
+    </p>
+
+    <h1 class="mt-5 mb-2">{{ title | escape_once }}</h1>
+
+    <p class="text-savjeelightgrey3">
+        {{ conference }}{% if location %} • {{ location }}{% endif %}{% if date %} • {{ date | date: "%B %-d, %Y" }}{% endif %}
+    </p>
+
+    <div class="max-w-3xl pb-8">
+        {{ content }}
+    </div>
+
+    {% if videoIds %}
+        <div class="space-y-8 not-prose">
+            {% for id in videoIds %}
+                {% render "youtube-embed.html", videoId:id, videoDescription: title %}
+            {% endfor %}
+        </div>
+    {% endif %}
+</article>

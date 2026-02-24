@@ -17,7 +17,6 @@ This guide is for technical people who want to run OpenClaw on Linux without buy
 This is a living guide. I update it as my setup evolves.
 <!--more-->
 
-[[TOC]]
 
 ## Installation
 

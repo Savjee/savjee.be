@@ -4,7 +4,7 @@ title: What is a Cryptocurrency?
 conference: Catholic Crypto Conference
 location: The Sheraton Valley Forge Hotel, King of Prussia, Pennsylvania, USA
 date: 2022-11-17
-summary: A beginner-friendly introduction to blockchains and cryptocurrencies: what they are, how they work, and where they fit.
+summary: "A beginner-friendly introduction to blockchains and cryptocurrencies: what they are, how they work, and where they fit."
 videoId: vJfdO9QuroY
 permalink: /speaker/what-is-a-cryptocurrency/
 ---

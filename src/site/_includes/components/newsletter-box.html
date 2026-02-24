@@ -1,11 +1,13 @@
 <div class="bg-savjeelightgrey2 dark:bg-darkmode-alt-bg dark:text-savjeewhite px-6 py-8">
-	<p class="p-0 {% unless noDescription%}pb-2{%endunless%} text-2xl font-bold">Subscribe to my newsletter</p>
+	<p class="p-0 {% unless noDescription%}pb-2{%endunless%} text-2xl font-bold">Join the Simply Explained Newsletter</p>
 	{%- unless noDescription -%}
 	<p class="py-2">
-		Monthly newsletter with cool stuff I found on the internet (related to science, technology, biology, and other nerdy things)!
-		<a href="/newsletter/">Check out past editions</a>.
+		One high-signal email per month with the best science and tech finds, curated by a human.
+		<a href="/newsletter/">Browse past editions</a>.
 	</p>
 	{%- endunless -%}
+
+	<p class="text-sm text-savjeelightgrey3 dark:text-savjeelightgrey3 pb-2">Free • Monthly • Unsubscribe anytime</p>
 
 	<div class="md:mt-4">
 		<form action="/newsletter/signup" method="post">

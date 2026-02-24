@@ -1,20 +1,33 @@
 ---
 layout: page
 title: "Newsletter"
-quote: "Get your a monthly dose of science and technology news. Signup for the Simply Explained newsletter if you want your curiosity tickled every month."
+quote: "The internet’s weirdest smart stories, curated by a human. One high-signal email per month."
 ---
 
 <div>
-    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
-        <p class="prose dark:prose-dark">Get your a monthly dose of science and technology news.
-            <br>Check out the past issues here, 
-            and signup if you want your curiosity tickled every month 😉</p>
-        
-        <div class="mt-4 md:mt-0">
+    <div class="md:grid md:grid-cols-2 md:gap-8 items-start">
+        <div>
+            <h2 class="text-3xl font-bold pb-4 dark:text-savjeewhite">The internet’s weirdest science & tech newsletter.</h2>
+            <p class="prose dark:prose-dark">
+                One entertaining 5-minute read per month with the internet’s weirdest smart stories.
+                <br>No AI slop. No spam. Just cool science, tech, and nerdy finds worth your time.
+            </p>
+
+            <ul class="mt-6 space-y-2 dark:text-savjeewhite">
+                <li>✅ Humanly curated</li>
+                <li>✅ 5-minute entertaining read, just once a month</li>
+                <li>✅ Cool stories and other nerdy finds that will spark your curiosity</li>
+            </ul>
+
+            {% assign editionCount = collections.newsletter | size %}
+            {% assign roundedEditionCount = editionCount | divided_by: 5 | floor | times: 5 %}
+            <p class="pt-6 text-savjeelightgrey3 dark:text-savjeelightgrey3">Published since 2021 • {{ roundedEditionCount }}+ editions shipped</p>
+        </div>
+
+        <div class="mt-6 md:mt-0">
             {% render "components/newsletter-box.html", noDescription: true %}
         </div>
     </div>
-
 
     {% assign newslettersByYear = collections.newsletter | groupByYear %}
     {% for yearObj in newslettersByYear reversed %}

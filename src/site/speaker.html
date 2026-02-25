@@ -1,0 +1,73 @@
+---
+layout: page
+title: Speaking
+description: Xavier Decuyper gives clear, practical talks that make complex tech understandable for broad audiences.
+permalink: /talks/
+---
+
+<section class="mt-2 md:mt-4 mb-12 md:mb-14">
+    <div class="grid gap-8 md:gap-10 md:grid-cols-[1.8fr_1fr] items-start">
+        <div>
+            <p class="text-2xl md:text-3xl leading-tight font-semibold text-savjeeblack dark:text-savjeewhite m-0">
+                Simply Explained, but on stage.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed text-savjeelightgrey3 dark:text-savjeelightgrey3 mt-4 mb-6 md:mb-8">
+                I give practical talks that make complex technology understandable for broad audiences — without dumbing it down.
+            </p>
+
+            <p>What audiences can expect</p>
+
+            <ul class="list-none p-0 m-0 space-y-3">
+                <li class="flex items-start gap-2">
+                    <span aria-hidden="true">✓</span>
+                    <span>No jargon overload. Strong mental models people remember.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span aria-hidden="true">✓</span>
+                    <span>Concepts stay technically honest while remaining accessible.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span aria-hidden="true">✓</span>
+                    <span>Attendees leave with ideas they can apply immediately.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="max-w-xs md:max-w-none mx-auto md:mx-0">
+            <img
+                src="/assets/img/about-me-2.webp"
+                alt="Xavier giving a conference talk"
+                class="w-full rounded-xl"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</section>
+
+<section class="mb-14 md:mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-5 md:mb-6 mt-0">Past talks</h2>
+
+    <div class="space-y-5 md:space-y-6">
+    {% for talk in collections.talks %}
+        <article class="border border-savjeelightgrey4 dark:border-savjeelightgrey3/30 rounded-xl p-5 md:p-6">
+            <h3 class="text-xl md:text-2xl font-bold mt-0 mb-2 leading-tight">
+                <a href="{{ talk.url }}" class="no-underline hover:underline text-savjeered">{{ talk.data.title }}</a>
+            </h3>
+
+            <p class="text-savjeelightgrey3 mb-4">
+                {{ talk.data.conference }}{% if talk.data.location %} • {{ talk.data.location }}{% endif %} • {{ talk.date | date: "%B %-d, %Y" }}
+            </p>
+
+            <p class="mb-0 text-lg leading-relaxed">{{ talk.data.summary }}</p>
+        </article>
+    {% endfor %}
+    </div>
+</section>
+
+<section class="bg-savjeeblue dark:bg-savjeelightgrey3 text-savjeewhite rounded-xl p-8 md:p-10 text-center mb-6">
+    <h2 class="text-3xl font-bold mt-0 mb-3">Want me to speak at your event?</h2>
+    <p class="mb-6 text-lg">I’m available for keynotes, workshops, and conference talks.</p>
+    <a href="mailto:hello@savjee.be" class="inline-block bg-savjeered hover:bg-savjeewhite hover:text-savjeered text-savjeewhite font-bold py-3 px-8 rounded-md no-underline transition-colors">
+        Get in touch
+    </a>
+</section>

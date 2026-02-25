@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Securely access home network with Cloudflare Tunnel and WARP"
-description: "Access your home network securely with Cloudflare Tunnel and WARP. Close router ports and create a safe VPN to your private network."
+title: "How to securely access your home network with Cloudflare Tunnel and WARP"
+description: "Learn how to securely access your home network with Cloudflare Tunnel and WARP, without opening router ports, using split tunneling for fast internet."
 quote: 
 tags: [Cloudflare, Proxmox]
 upload_directory: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/
@@ -11,11 +11,11 @@ toc_enabled: true
 
 When Cloudflare announced that their Tunnel service would become free, I saw an opportunity to strengthen the security of my Home Assistant instance. Until now, I have been using Cloudflare's CDN to connect to my HA instance, but that required opening ports on my router and setting complicated firewall rules.
 
-By using Cloudflare Tunnels together with Cloudflare WARP, I could close ports and access my entire home network in a much safer way. Here's how I did it.
+By using Cloudflare Tunnels together with Cloudflare WARP, I could close ports and access my entire home network in a much safer way. Here's how I did it. If your main goal is only secure Home Assistant access, this focused guide may also help: [Secure Home Assistant access with Cloudflare and Ubiquiti Dream Machine]({% link collections.posts, "2020-12-12-secure-home-assistant-access-with-cloudflare-and-ubiquiti-dream-machine.md" %}).
 
 <!--more-->
 
-## The setup
+## Cloudflare Tunnel and WARP setup overview
 The idea of Cloudflare Tunnels is simple: connect your home network to Cloudflare's network. Then use Cloudflare WARP to connect your devices to Cloudflare's network and let it route traffic to your home.
 
 ![Accessing private networks with Cloudflare Tunnel and WARP](/uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/cloudflare-setup.svg)
@@ -166,3 +166,10 @@ CNAME home-assistant.mydomain.com -> YOUR-TUNNEL-UUID-HERE.cfargotunnel.com
 You can create as many ingress rules as you want. Personally, I only expose my Home Assistant instance this way. To access other services (like my NAS or Unifi controller) I connect to WARP.
 
 Read more about this feature [on Cloudflare's Documentation website](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps).
+
+## FAQ
+### Do I need to open router ports for Cloudflare Tunnel?
+No. `cloudflared` opens an outbound tunnel to Cloudflare, so you can keep inbound router ports closed.
+
+### Is WARP sending all my traffic through home internet?
+Not if split tunneling is configured correctly. You can route private subnets home while normal internet traffic exits directly.

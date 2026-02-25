@@ -15,7 +15,6 @@ Running an ESP32 on a battery is a tricky operation. The chip is a powerhouse, a
 
 Before we begin: the code samples shown in this post are for use with the [Arduino framework](https://github.com/espressif/arduino-esp32). This was not tested with `esp-idf` directly.
 
-If you're building a power-sensitive sensor node, you might also like my [DIY Home Energy Monitor: ESP32 + CT Sensors + Emonlib]({% link collections.posts, "2019-07-07-Home-Energy-Monitor-ESP32-CT-Sensor-Emonlib.md" %}) and this guide on [MAX17043 battery monitoring on ESP32]({% link collections.posts, "2021-04-28-max17043-battery-monitoring-done-right-arduino-esp32.md" %}).
 
 ## Tip 1: Use the right battery & board
 Want to increase battery life? Then pick an ESP32 board that has a built-in battery connector. These boards likely use a much more efficient LDO voltage regulator.
@@ -208,10 +207,3 @@ I haven’t got my hands on one of these yet, so that’s for another time.
 The tips above have yielded me good battery life on several of my ESP32 projects. My main goals are always: reduce the number of WiFi connections and maximize the time you spend in deep sleep.
 
 Let me know in the comments below if you have additional tips and tricks.
-
-## FAQ
-### What saves the most battery on ESP32?
-Deep sleep and reducing WiFi connection frequency typically deliver the biggest battery-life gains.
-
-### Should I always use static IP and no DNS?
-Only when practical. It can reduce connection time, but dynamic networks and cloud services often require DHCP and DNS.

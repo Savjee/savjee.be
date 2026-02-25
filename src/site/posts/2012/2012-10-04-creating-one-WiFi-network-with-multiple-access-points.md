@@ -7,14 +7,13 @@ keywords: WiFi network, extend WiFi range, one network multiple routers, access 
 thumbnail: true
 upload_directory: /uploads/wifi-network-multiple-access-points
 meta_tags: ["WiFi network", "WiFi multiple access points", "Extend WiFi network", "WiFi repeaters", "same ssid", "multiple access points"]
-toc_enabled: true
 ---
 
 At home, I have a problem that I know is very common: the range on our WiFi router is not enough to cover every bit of the house. (Well actually it does cover our house, but in some places it’s just painfully slow!). Luckily there are a few solutions to have WiFi everywhere.
 
 <!--more-->
 
-## One WiFi network with multiple access points: quick overview
+## Quick overview
 Here is a quick overview of what you should do to extend your home network with a second access point:
 
 > To extend your home network:
@@ -29,7 +28,7 @@ Here is a quick overview of what you should do to extend your home network with 
 >
 > - Enjoy!
 
-## How to set up multiple access points with the same SSID
+## Full instructions
 To partially solve this problem we use a powerline to go from the front of the house to the back. There, the powerline is connected to a Dlink switch which in turn is connected to two computers over Ethernet. So far so good!
 
 The problem now is that we can’t use our mobile devices when we’re too far away from our main WiFi basestation. I didn’t want to use an extra router because that would create a separate WiFi network and would require us to switch between networks all the time.
@@ -47,12 +46,3 @@ Some people would suggest buying a WiFi repeater. However, a repeater uses WiFi 
 ![Diagram of the network setup](/uploads/wifi-network-multiple-access-points/network-diagram-wifi.png)
 
 I’ve tested this setup on a Macbook Pro (running both Windows and OS X), iPad and iPhone. All these devices switch without problem between these networks when needed. I have noticed that the iOS devices switch much quicker between AP’s then Windows or OS X machines.
-
-If you also need secure remote access to your home services while away, see [Securely access home network with Cloudflare Tunnel and WARP]({% link collections.posts, "2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP.md" %}).
-
-## FAQ
-### Can I use the same SSID on two routers?
-Yes. Use the same SSID, password, and security settings on both access points so clients can roam between them.
-
-### Should I use a repeater instead of a wired access point?
-A wired access point usually performs better because a repeater uses wireless backhaul, which adds overhead and latency.

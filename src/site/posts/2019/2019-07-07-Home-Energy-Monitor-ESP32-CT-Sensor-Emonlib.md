@@ -6,7 +6,6 @@ quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measur
 thumbnail: /uploads/2019-07-home-energy-monitor/poster-750.jpg
 upload_directory: /uploads/2019-07-home-energy-monitor
 tags: [ESP32, DIY, AWS]
-toc_enabled: true
 ---
 
 One day I was wondering: how much electricity is flowing through my apartment right now? Looking online I found various sensor devices like Smappee and Sense, but those are relatively expensive and even require a subscription. So I decided to build my own with an ESP32 and the SCT-013 sensor. My very own Fitbit for electricity consumption!
@@ -16,10 +15,8 @@ One day I was wondering: how much electricity is flowing through my apartment ri
 
 **Since this post I've made an improved version. [Read more about Home Energy Monitor V2 here.]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})**
 
-If you're optimizing battery-powered ESP32 devices, check out these [ESP32 battery life tips]({% link collections.posts, "2019-12-04-esp32-tips-to-increase-battery-life.md" %}).
 
-
-## DIY ESP32 CT sensor home energy monitor goals
+## Goal
 Before jumping in, I set myself these goals for the project:
 
 * Make a **non-invasive** energy monitor for the entire apartment. Meaning: no wire-cutting and not putting a meter between every socket and light bulb.
@@ -435,13 +432,6 @@ Buying an existing sensor is certainly possible but I had way too much fun build
 What do you think about this project? Would you like to see more DIY projects? Let me know!
 
 [Also check out the improved Home Energy Monitor V2.]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})
-
-## FAQ
-### Can I monitor whole-home electricity with one CT sensor?
-Yes, if you clamp the CT sensor over your main supply wire, you can estimate total consumption for the home.
-
-### Do I need EmonLib with ESP32 CT sensors?
-EmonLib is a practical option because it helps convert the AC waveform sampled by the ADC into usable current values.
 
 ## Downloads
 

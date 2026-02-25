@@ -2,11 +2,11 @@
 layout: talk
 title: What is DeFi?
 conference: Catholic Crypto Conference
-location: The Sheraton Valley Forge Hotel, King of Prussia, Pennsylvania, USA
+location: King of Prussia, USA
 date: 2022-11-17
 summary: "An introduction to decentralized finance with practical use cases including lending, DEXes, NFTs, and tokens."
 videoId: vocM1bRVZmg
-permalink: /speaker/what-is-defi/
+permalink: /talks/what-is-defi/
 ---
 
 Part 2 builds on the fundamentals and focuses on practical interpretation: what matters, what to ignore, and how to reason about claims.

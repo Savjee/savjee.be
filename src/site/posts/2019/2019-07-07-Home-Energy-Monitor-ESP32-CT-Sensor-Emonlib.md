@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "DIY Home Energy Monitor: ESP32 + CT Sensors + Emonlib"
-description: "How to build a custom electricity consumption monitor for your home using an ESP32, SCT-013 current transformers, and the EmonLib library."
+title: "DIY Home Energy Monitor with ESP32, CT Sensor (SCT-013), and EmonLib"
+description: "Build a DIY home energy monitor with ESP32, SCT-013 CT sensor, and EmonLib to measure whole-home electricity usage and send data to the cloud."
 quote: Building an energy monitor with ESP32, SCT-013 sensor and Emonlib. Measures total electricity consumption in the entire house.
 thumbnail: /uploads/2019-07-home-energy-monitor/poster-750.jpg
 upload_directory: /uploads/2019-07-home-energy-monitor

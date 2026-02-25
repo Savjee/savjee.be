@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "ESP32: Tips to increase battery life"
-description: "Get 15+ weeks of battery life from your ESP32 with these power-saving tips. Includes deep sleep, WiFi optimizations, and hardware recommendations for IoT projects."
+title: "ESP32 battery life tips: how to increase runtime on battery power"
+description: "Practical ESP32 battery life tips: deep sleep, WiFi timeouts, RTC memory, and hardware choices to increase runtime in battery-powered IoT projects."
 quote: 
 thumbnail: /uploads/2019-12-04-esp32-tips-to-increase-battery-life/poster-750.jpg
 upload_directory: /uploads/2019-12-04-esp32-tips-to-increase-battery-life

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Securely access home network with Cloudflare Tunnel and WARP"
-description: "Access your home network securely with Cloudflare Tunnel and WARP. Close router ports and create a safe VPN to your private network."
+title: "How to securely access your home network with Cloudflare Tunnel and WARP"
+description: "Learn how to securely access your home network with Cloudflare Tunnel and WARP, without opening router ports, using split tunneling for fast internet."
 quote: 
 tags: [Cloudflare, Proxmox]
 upload_directory: /uploads/2021-10-20-securely-access-home-network-with-Cloudflare-Tunnel-and-WARP/

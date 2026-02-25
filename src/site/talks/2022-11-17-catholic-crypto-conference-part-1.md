@@ -2,7 +2,7 @@
 layout: talk
 title: What is a Cryptocurrency?
 conference: Catholic Crypto Conference
-location: King of Prussia, USA
+location: Pennsylvania, USA
 date: 2022-11-17
 summary: "A beginner-friendly introduction to blockchains and cryptocurrencies: what they are, how they work, and where they fit."
 videoId: vJfdO9QuroY

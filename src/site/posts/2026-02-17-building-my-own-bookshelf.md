@@ -1,66 +1,72 @@
 ---
 layout: post
-title: "I Built a Bookshelf (and It Became Something Else)"
+title: "I Built a Bookshelf (and It Turned Into a Time Capsule)"
 tags: ["DIY", "Home Improvement"]
 thumbnail: /uploads/2026-02-building-bookshelf/thumb_timeline.jpg
 upload_directory: /uploads/2026-02-building-bookshelf/
 ---
 
-I build digital things all day. Code, systems, videos, content.
+I spend most of my time building things that live on screens.
 
-A while ago I wanted to build something that exists outside a screen.
+This time I wanted to build something I could actually touch.
 
-So I built a bookshelf.
+So I made a bookshelf for a weird little nook in my office.
 
-At least… that was the original plan.
+It started as a practical project.
+It ended up becoming something way more personal.
 <!--more-->
 
-## The problem
+## The problem: a space that nothing fits
 
-There’s an awkward nook in my office:
+The nook looked simple, but it wasn’t:
 
-- width: **150 cm**
-- height: between **83 and 100 cm**
-- depth available: about **30 cm**
+- **150 cm** wide
+- height between **83 and 100 cm**
+- only about **30 cm** depth available
 
-Regular furniture didn’t fit. Custom furniture was expensive.
-So I went for option three: build it myself.
+Anything off-the-shelf was either too deep, too tall, or both. Custom furniture would work, but the price didn’t make sense.
+
+So I did what every overconfident software guy does at least once: “I’ll build it myself.”
 
 ![](/uploads/2026-02-building-bookshelf/inspiration-video.jpg)
-*The YouTube video that gave me the push to start.*
+*The YouTube rabbit hole that started this whole thing.*
 
-## Planning it like a nerd
+## Planning a woodworking project like a software project
 
-I’m not a carpenter, but I do know how to plan.
+I’m not a trained carpenter, so I leaned on what I know: planning.
 
-I sketched the shelf in Figma to get proportions right and avoid dumb mistakes before buying wood.
+I mocked up the shelf in Figma first. Nothing fancy, just enough to check proportions and avoid obvious mistakes.
 
 ![](/uploads/2026-02-building-bookshelf/figma-sketch.jpg)
-*Quick Figma sketch to test the layout.*
+*Rough Figma sketch to validate dimensions before buying materials.*
 
-Then I estimated capacity:
+Then I did the classic nerd move: capacity math.
 
 - average book width: **2.5 cm**
 - usable shelf width: **144 cm**
-- about **57 books per shelf**
-- around **171 books total** (on paper)
+- around **57 books per shelf**
+- roughly **171 books total**
 
-And yes, I checked sag too.
+In theory, this shelf should have lasted a while.
 
-I used [The Sagulator](https://woodbin.com/calcs/sagulator/) (best name ever) with conservative numbers:
+## “Will it sag?”
+
+That question lived in my head for days.
+
+I used [The Sagulator](https://woodbin.com/calcs/sagulator/) (still one of the best tool names on the internet) with conservative assumptions:
 
 - unsupported span: **56 cm**
-- load: **~10 kg per shelf**
-- material thickness: **18 mm**
+- load per shelf: **~10 kg**
+- board thickness: **18 mm**
 
-Result: basically no meaningful sag.
+Outcome: negligible sag. Good enough for me.
 
 ![](/uploads/2026-02-building-bookshelf/sagulator-calculations.jpg)
-*Sanity check before committing to the build.*
+*Quick stress test before committing to the build.*
 
-## Materials and cost
+## Materials + cost
 
-I used two panels and cut everything from those.
+I built it from two large wooden panels and cut all parts from those.
 
 | Description | Cost |
 |-------------|------|
@@ -70,70 +76,76 @@ I used two panels and cut everything from those.
 | Set of wood drills + accessories | €9,99 |
 | **Total** | **€109,05** |
 
-For a custom shelf that actually fits the space: not bad.
+For custom furniture that fits perfectly: I’ll take that.
 
-## Build day
+## Build day (with very non-professional tools)
 
-Tools were basic: hand saw, drill, patience.
+No workshop. No table saw. No laser-guided anything.
 
-No workshop, no fancy setup.
+Just a hand saw, a drill, and patience.
 
-Cuts weren’t perfect, but assembly was straightforward and the end result was solid.
+The cuts were not machine-perfect, but assembly went smoothly and the structure came out solid.
 
 ![](/uploads/2026-02-building-bookshelf/finished-shelf.jpg)
-*Freshly built and perfectly fitted into the nook.*
+*Built, assembled, and finally in place.*
 
 ## It stopped being “just a bookshelf”
 
-Over time it turned into a personal display wall:
+At first it was meant for books.
 
-- **F1 stuff** (including my Spa access card)
-- an original **Macintosh Plus**
+Then it slowly became a display of things that matter to me:
+
+- Formula 1 items (including my Spa access card)
+- an old Macintosh Plus
 - gifts from colleagues
 - gifts from my kids
-- a few nostalgic pieces (Tintin rocket, LEGO Saturn V)
-- and yes, books too
+- nostalgic pieces like Tintin and LEGO Saturn V
+- and yes, still books
 
 ![](/uploads/2026-02-building-bookshelf/filled-shelf.jpg)
-*What it looks like now: less “library”, more “life in objects”.*
+*Some shelves store books. This one stores stories.*
 
-## The funny part
+## The ironic part
 
-I designed it for books and calculated capacity like a spreadsheet goblin.
+I did all the calculations. I planned for capacity.
 
-And I still ran out of space.
+And I still ran out of space faster than expected.
 
-Not because the math was wrong, but because the shelf became a place for memories as much as books.
+Not because the design failed — because the shelf turned into a memory wall as much as a bookshelf.
 
-## Why this was worth it
+## Why this project hit differently
 
-Building something physical gives a different kind of satisfaction than shipping software.
+Shipping software is satisfying.
 
-It’s imperfect, but it’s mine.
+But stepping back and looking at something physical you built yourself? Different feeling.
 
-You can spot small flaws if you look closely. I like that. It proves someone actually made it.
+It’s imperfect. You can spot little flaws. A cut here, a tiny misalignment there.
+
+I love that.
+
+It doesn’t look mass-produced. It looks made.
 
 ![](/uploads/2026-02-building-bookshelf/shelf-detail.jpg)
-*Not factory-perfect. Exactly the point.*
+*Not flawless. Still one of my favorite things in the room.*
 
 ## What I learned
 
-- If your space is weird, DIY often beats store-bought.
-- You can do a lot with very simple tools.
-- Planning upfront saves pain.
-- Small imperfections are fine.
-- Shelves fill up faster than expected. Always.
+- Weird spaces are often better solved with DIY.
+- You can get far with basic tools if you plan well.
+- Upfront thinking saves real pain later.
+- Minor imperfections are part of the charm.
+- Shelf space disappears faster than you think.
 
 ![](/uploads/2026-02-building-bookshelf/filled-with-books.jpg)
-*Built for books, then claimed by everything else too.*
+*Originally built for books. Now it carries a lot more than that.*
 
 ## Would I do it again?
 
-Absolutely.
+Without hesitation.
 
 I already have a shortlist of next projects.
 
 And if I build another shelf, I’m not pretending it’ll be only for books this time.
 
 ![](/uploads/2026-02-building-bookshelf/shelf-overview.jpg)
-*One shelf. Many stories.*
+*One custom shelf. A whole timeline on display.*

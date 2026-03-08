@@ -7,7 +7,7 @@
     <title>{{ title | escape_once }} | Simply Explained</title>
     
     {% assign fallback_description = content %}
-    {% assign description = quote | default: page.excerpt | default: fallback_description %}
+    {% assign description = description | default: quote | default: page.excerpt | default: fallback_description %}
     {% assign description = description | md | strip_html | truncate:250 | strip_newlines %}
 
     <link rel="alternate" type="application/rss+xml" title="Simply Explained Feed" href="{% baseUrl %}/atom.xml">

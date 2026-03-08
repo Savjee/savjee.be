@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Smart lights behind a wall switch (Shelly + ESPHome)"
-description: "Keep your physical wall switches functional even with smart bulbs. A guide on using Shelly and ESPHome to merge physical and smart lighting control."
+title: "Shelly light switch setup with ESPHome (keep smart bulbs + wall switch)"
+description: "Use a Shelly light switch with ESPHome so your wall switch still works with smart bulbs. Step-by-step wiring, config, and Home Assistant behavior."
 tags: ["Home Assistant", "ESPHome", "Shelly"]
-quote:
+quote: Use a Shelly light switch with ESPHome so your wall switch still works with smart bulbs — no more broken physical controls.
 thumbnail: /uploads/2022-10-smart-lights-behind-wall-switch/thumb_timeline.jpg
 upload_directory: /uploads/2022-10-smart-lights-behind-wall-switch
 ---

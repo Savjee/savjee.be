@@ -2,7 +2,7 @@
 layout: post
 title: "ESP32 battery life tips: how to increase runtime on battery power"
 description: "Practical ESP32 battery life tips: deep sleep, WiFi timeouts, RTC memory, and hardware choices to increase runtime in battery-powered IoT projects."
-quote: 
+quote: "Practical ESP32 battery life tips: deep sleep, WiFi shutdown, and hardware choices to run battery-powered projects for weeks."
 thumbnail: /uploads/2019-12-04-esp32-tips-to-increase-battery-life/poster-750.jpg
 upload_directory: /uploads/2019-12-04-esp32-tips-to-increase-battery-life
 tags: [ESP32, Tutorial, Arduino]

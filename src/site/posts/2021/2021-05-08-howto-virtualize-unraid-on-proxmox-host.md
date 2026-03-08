@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Howto Virtualize Unraid on a Proxmox host"
-description: "Run Unraid as a VM on Proxmox host. Complete guide to virtualize Unraid NAS for use as storage alongside your existing Proxmox setup."
-quote: 
+title: "Unraid on Proxmox: how to virtualize Unraid as a VM"
+description: "Run Unraid on Proxmox as a VM with this step-by-step setup guide. Great for combining Proxmox workloads with Unraid NAS storage on one host."
+quote: "Step-by-step guide to run Unraid on Proxmox as a VM, including USB boot setup and passthrough tips."
 tags: [Proxmox, Unraid]
 upload_directory: /uploads/2021-05-08-howto-virtualize-unraid-on-proxmox-host
 thumbnail: /uploads/2021-05-08-howto-virtualize-unraid-on-proxmox-host/thumb_timeline.jpg

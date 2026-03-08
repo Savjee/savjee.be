@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Converting a Chinese Thermostat to ESPHome"
+title: "Converting a Chinese Tuya Thermostat to ESPHome"
 description: "How I replaced the cloud firmware on a cheap BK7231N thermostat with ESPHome for full local control in Home Assistant."
-tags: [Home Assistant, ESPHome, Smart Home, DIY]
-meta_tags: ["esphome thermostat", "bk7231n esphome", "libretiny thermostat", "chinese thermostat home assistant", "tp4w thermostat esphome"]
-# thumbnail: /uploads/2026-02-converting-chinese-thermostat-to-esphome/thumb_timeline.jpg
-toc_enabled: true
+tags: [Home Assistant, ESPHome, Smart Home, Tuya, BK7231N]
+upload_directory: /uploads/2026-03-converting-tuya-thermostat-to-esphome/
+thumbnail: /uploads/2026-03-converting-tuya-thermostat-to-esphome/thumb_master.jpg
 not_featureable: true
 ---
 
@@ -19,7 +18,7 @@ But first, some context!
 
 The central heating in my office is controlled by a Tado thermostat, but the signal in that room is terrible. It regularly loses connection and stops heating entirely. Not great when you're trying to work in winter.
 
-To stop myself from freezing to death, I bought supplemental 800W infrared heater. I'd heard good things about IR heating, and after trying it I was immediately sold. It makes you feel warm almost instantly even though the room is still cold.
+To stop myself from freezing to death, I bought a supplemental 800W infrared heater. I'd heard good things about IR heating, and after trying it I was immediately sold. It makes you feel warm almost instantly even though the room is still cold.
 
 Only problem: the IR panel only has a basic on/off switch. No thermostat. I looked at Sonoff and Shelly relays, but even with mods, they don't look like a finished product you'd want to put in a wall socket.
 
@@ -32,7 +31,7 @@ It ticked all the boxes, except one. It's a Tuya device, meaning it can only be 
 
 [^1]: Some Tuya devices can be controlled locally with tools like tuya-local. However, I didn't consider them because they seem like a nightmare to setup, they don't support all devices, and have several limitations
 
-But hope is not lost! I knew some Tuya devices use Espressif microcontrollers, which are fully supported by ESPHome. So I conected the seller on AliExpress, and after a bit of back and forth, they replied the device is using a **BK7231N** microcontroller.
+But hope is not lost! I knew some Tuya devices use Espressif microcontrollers, which are fully supported by ESPHome. So I contacted the seller on AliExpress, and after a bit of back and forth, they replied the device is using a **BK7231N** microcontroller.
 
 I had never heard of that chip before, and feared it might be unsupported. But it turns out it's supported by ESPHome via [LibreTiny](https://github.com/libretiny-eu/libretiny). So I decided to buy it and see if I could flash ESPHome onto it.
 
@@ -67,12 +66,12 @@ LibreTiny has [a tool](https://upk.libretiny.eu/) to extract a device's pinout f
 
 Well that's a bummer. I would have to figure out the pinout myself.
 
-I mapped all output pins of the chip to input_booleans in Home Assistant. By turning each one on and off, I was able to determine which pin was connected to the relay. But figuring out how the display or themistor were connected was going to be much harder.
+I mapped all output pins of the chip to input_booleans in Home Assistant. By turning each one on and off, I was able to determine which pin was connected to the relay. But figuring out how the display or thermistor were connected was going to be much harder.
 
 ## Emailing the manufacturer (it actually worked!)
 I decided to try emailing the manufacturer and ask for some help (or more specifically, a pinout). Who knows, maybe they'd take pity on a random European suffering in a cold home office.
 
-AliExpress listed ezAIoT as the manufacturer but in typical AliExpress fashion, that turned out to be a front company reselling someone else's product. I emailed them asking for the pinout but it bounced immediately.
+AliExpress listed ezAIoT as the manufacturer but in typical AliExpress fashion, that turned out to be a front company reselling someone else's product. I emailed them asking for the pinout but the email bounced immediately.
 
 After reverse image searches, I found the actual manufacturer: [RTI-TEK](https://www.rti-tek.com/). I sent them an email and to my surprise, they got back to me with the **full schematics** of the thermostat! 
 
@@ -295,7 +294,7 @@ I tried a few things, but quickly gave up because I'm not going to use the butto
 If you happen to figure out how to get these buttons working, please let me know!
 
 ## The full ESPHome configuration
-Here's the complete config for reference (also [check out how I orgnise my ESPHome configuration files]({% link collections.posts, "2021-05-27-how-i-structure-my-esphome-config-files.md" %}) if you're confused by the `packages` and `substitutions`):
+Here's the complete config for reference (also [check out how I organize my ESPHome configuration files]({% link collections.posts, "2021-05-27-how-i-structure-my-esphome-config-files.md" %}) if you're confused by the `packages` and `substitutions`):
 
 ```yaml
 substitutions:

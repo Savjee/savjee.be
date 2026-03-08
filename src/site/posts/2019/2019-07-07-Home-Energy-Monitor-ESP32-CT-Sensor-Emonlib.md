@@ -13,7 +13,9 @@ One day I was wondering: how much electricity is flowing through my apartment ri
 <!--more-->
 
 
-**Since this post I've made an improved version. [Read more about Home Energy Monitor V2 here.]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})**
+> ⚠️ **Update:** This article describes the original version of this project.
+> I’ve since built a better version with several improvements.
+> 👉 **Read the upgraded guide:** [Home Energy Monitor V2]({% link collections.posts, '2020-02-11-home-energy-monitor-v2' %})
 
 
 ## Goal

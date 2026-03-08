@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Converting a Chinese Tuya Thermostat to ESPHome"
+title: "Converting a Tuya Thermostat to ESPHome"
 description: "How I replaced the cloud firmware on a cheap BK7231N thermostat with ESPHome for full local control in Home Assistant."
 tags: [Home Assistant, ESPHome, Smart Home, Tuya, BK7231N]
 upload_directory: /uploads/2026-03-converting-tuya-thermostat-to-esphome/

@@ -113,10 +113,19 @@
                         Trivia
                     </a>
                 </li>
-                <li>
-                    <a href="/courses/" class="text-savjeered dark:text-savjeered-darkmode font-bold no-underline {% if page.url contains "/courses/" -%}active{%endif%}">
-                        Courses
-                    </a>
+                <li class="relative">
+                    <details class="group" {% if page.url contains "/courses/" or page.url contains "/about/" or page.url contains "/talks/" %}open{% endif %}>
+                        <summary class="list-none cursor-pointer select-none text-savjeered dark:text-savjeered-darkmode font-bold no-underline flex items-center gap-1 {% if page.url contains "/courses/" or page.url contains "/about/" or page.url contains "/talks/" -%}active{%endif%}">
+                            More
+                            <span class="text-xs transition-transform duration-200 group-open:rotate-180">▾</span>
+                        </summary>
+                        <ul class="mt-3 md:absolute md:right-0 md:mt-4 md:min-w-52 md:rounded-xl md:border md:border-savjeelightgrey md:dark:border-savjeeblue md:bg-white md:dark:bg-savjeeblack md:shadow-xl md:p-2 space-y-2 md:space-y-0">
+                            <li>
+                                <a href="/courses/" class="block rounded-lg px-3 py-2 no-underline text-savjeered dark:text-savjeered-darkmode font-semibold hover:bg-savjeelightgrey5 dark:hover:bg-savjeeblue/20 {% if page.url contains "/courses/" -%}active{%endif%}">Courses</a>
+                            </li>
+                            {% comment %}Future entries for this menu: /talks/ and /about/{% endcomment %}
+                        </ul>
+                    </details>
                 </li>
             </ul>
         </nav>

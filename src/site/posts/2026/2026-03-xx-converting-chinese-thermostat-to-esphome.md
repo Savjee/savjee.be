@@ -24,7 +24,7 @@ To stop myself from freezing to death, I bought supplemental 800W infrared heate
 Only problem: the IR panel only has a basic on/off switch. No thermostat. I looked at Sonoff and Shelly relays, but even with mods, they don't look like a finished product you'd want to put in a wall socket.
 
 ## TP4W.WHITE
-That's how I landed on the **TP4W.WHITE**: a cheap thermostat that you can plug into a wall socket, looks decent, has a built-in relay, temperature sensor, and a nice LED display.
+That's how I landed on the [TP4W.WHITE](https://nl.aliexpress.com/item/1005009574418508.html): a cheap thermostat that you can plug into a wall socket, looks decent, has a built-in relay, temperature sensor, and a nice LED display.
 
 ![The TP4W.WHITE thermostat. Looks surprisingly decent for the price.](/uploads/2026-03-converting-tuya-thermostat-to-esphome/tp4w.white.jpeg)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Smart lights behind a wall switch (Shelly + ESPHome)"
-description: "Keep your physical wall switches functional even with smart bulbs. A guide on using Shelly and ESPHome to merge physical and smart lighting control."
+title: "Smart lights behind a wall switch (Shelly, Z-Wave, ESPHome)"
+description: "Keep your physical wall switches functional with smart bulbs (including Philips Hue). Guide for Shelly and similar in-wall modules with ESPHome/Home Assistant fallback logic."
 tags: ["Home Assistant", "ESPHome", "Shelly"]
 quote:
 thumbnail: /uploads/2022-10-smart-lights-behind-wall-switch/thumb_timeline.jpg
@@ -10,19 +10,21 @@ upload_directory: /uploads/2022-10-smart-lights-behind-wall-switch
 
 Using smart light bulbs means you can no longer use your physical wall switches because the bulbs need constant power. I think that's pretty dumb. Using a physical switch can be way faster than using an app to control the lights.
 
-Here's how you can put a Shelly in between the switch and bulb so that you can use both in harmony.
+Here's how you can put an in-wall module (like a Shelly, or a similar Z-Wave module) between the switch and bulb so that you can use both in harmony.
 
 <!--more-->
 
 > I believe home automation should only *add* functionality to your existing infrastructure, not take options away.
 > Installing smart lights is cool, but they should allow you to keep using the wall switches as well.
 
+> This setup also works perfectly with smart bulbs like **Philips Hue**, as long as you keep constant power to the bulb and use the in-wall module as an input/controller layer.
+
 ## Wiring
 Start by connecting the Shelly to the wall switch and the smart lights as intended. Connect the Shelly to mains power, the light bulb to the output terminal, and the switch to the `SW` input:
 
 ![](/uploads/2022-10-smart-lights-behind-wall-switch/shelly-wiring-diagram.svg)
 
-This is the standard setup for any Shelly switch. However, with the default firmware, the Shelly will toggle the light whenever the switch is toggled. That's not what I want, so ESPHome to the rescue!
+This is the standard setup for a Shelly-style in-wall switch module. With default behavior, these modules usually toggle the bulb power directly when the wall switch is toggled. That's not what I want, so ESPHome to the rescue!
 
 *Note: If you want to flash ESPHome to your Shelly devices, check out [my blog post about how to flash it over-the-air]({% link collections.posts, "2020-09-22-shelly-2.5-flash-esphome-over-the-air.md" %}). No wires needed!*
 

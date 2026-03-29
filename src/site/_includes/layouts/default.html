@@ -108,15 +108,22 @@
                         Blog
                     </a>
                 </li>
-                <li>
-                    <a href="/trivia/" class="text-savjeered dark:text-savjeered-darkmode font-bold no-underline {% if page.url contains "/trivia/" -%}active{%endif%}">
-                        Trivia
-                    </a>
-                </li>
-                <li>
-                    <a href="/courses/" class="text-savjeered dark:text-savjeered-darkmode font-bold no-underline {% if page.url contains "/courses/" -%}active{%endif%}">
-                        Courses
-                    </a>
+                <li class="relative">
+                    <details id="more-menu" class="group relative" {% if page.url contains "/courses/" or page.url contains "/trivia/" or page.url contains "/about/" or page.url contains "/talks/" %}open{% endif %}>
+                        <summary class="list-none cursor-pointer select-none text-savjeered dark:text-savjeered-darkmode font-bold no-underline hover:no-underline inline-flex items-center gap-1">
+                            More
+                            <span class="text-xs transition-transform duration-200 group-open:rotate-180">▾</span>
+                        </summary>
+                        <ul class="mt-3 md:absolute md:right-0 md:top-full md:mt-3 md:min-w-52 rounded-xl border border-savjeelightgrey dark:border-savjeeblue bg-white dark:bg-savjeeblack shadow-xl p-2 z-50 overflow-hidden md:origin-top-right md:opacity-0 md:translate-y-1 md:pointer-events-none group-open:md:opacity-100 group-open:md:translate-y-0 group-open:md:pointer-events-auto transition-all duration-150 ease-out">
+                            <li class="bg-white dark:bg-savjeeblack">
+                                <a data-more-menu-link href="/trivia/" class="block rounded-lg px-3 py-2 no-underline hover:no-underline bg-white dark:bg-savjeeblack text-savjeered dark:text-savjeered-darkmode font-semibold hover:bg-savjeelightgrey5 dark:hover:bg-savjeeblue/20 {% if page.url contains "/trivia/" -%}bg-savjeelightgrey5 dark:bg-savjeeblue/20{%endif%}">Trivia</a>
+                            </li>
+                            <li class="bg-white dark:bg-savjeeblack">
+                                <a data-more-menu-link href="/courses/" class="block rounded-lg px-3 py-2 no-underline hover:no-underline bg-white dark:bg-savjeeblack text-savjeered dark:text-savjeered-darkmode font-semibold hover:bg-savjeelightgrey5 dark:hover:bg-savjeeblue/20 {% if page.url contains "/courses/" -%}bg-savjeelightgrey5 dark:bg-savjeeblue/20{%endif%}">Courses</a>
+                            </li>
+                            {% comment %}Future entries for this menu: /talks/ and /about/{% endcomment %}
+                        </ul>
+                    </details>
                 </li>
             </ul>
         </nav>

@@ -1,2 +1,6 @@
+User-Agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Allow: /
+
 Sitemap: https://simplyexplained.com/sitemap.txt
 Sitemap: https://simplyexplained.com/rss.xml

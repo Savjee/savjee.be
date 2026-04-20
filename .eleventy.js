@@ -15,7 +15,7 @@ module.exports = function (config) {
 
     // ----------------------- Layouts -----------------------
     [
-        "default", "narrow", "post", "video", "page", "course", "newsletter",
+        "default", "narrow", "post", "video", "talk", "page", "course", "newsletter",
     ].forEach((layoutName) => {
         config.addLayoutAlias(layoutName, `layouts/${layoutName}.html`);
     });
@@ -52,6 +52,13 @@ module.exports = function (config) {
 
     config.addCollection('videos', (collectionApi) => {
          return collectionApi.getFilteredByGlob('src/site/videos/**/*.md')
+            .sort((a, b) => {
+                return b.date - a.date;
+            });
+    });
+
+    config.addCollection('talks', (collectionApi) => {
+        return collectionApi.getFilteredByGlob('src/site/talks/**/*.md')
             .sort((a, b) => {
                 return b.date - a.date;
             });

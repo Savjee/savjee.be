@@ -1,0 +1,26 @@
+---
+layout: page
+no_title: true
+---
+
+{% if videoId %}
+<div class="mt-12">
+  {% render "youtube-embed.html", videoId:videoId, videoDescription: title %}
+</div>
+{% endif %}
+
+<article class="prose dark:prose-dark max-w-none pt-12">
+    <p>
+        <a href="/talks/" class="no-underline">&larr; Back to talks</a>
+    </p>
+
+    <h1 class="mt-5 mb-2">{{ title | escape_once }}</h1>
+
+    <p class="text-savjeelightgrey3">
+        {{ conference }}{% if location %} • {{ location }}{% endif %}{% if date %} • {{ date | date: "%B %-d, %Y" }}{% endif %}
+    </p>
+
+    <div class="max-w-3xl">
+        {{ content }}
+    </div>
+</article>

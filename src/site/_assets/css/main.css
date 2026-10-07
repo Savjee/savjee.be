@@ -9,18 +9,18 @@
   }
 
     /* -------------------- Main navigation -------------------- */
-    nav li a{
+    nav > ul > li > a{
       @apply relative
     }
 
-    nav li a:after{
+    nav > ul > li > a:after{
       content: '';
       transition: width .6s cubic-bezier(0.075, 0.82, 0.165, 1);
       @apply absolute -bottom-2 left-0 h-1 w-0 bg-savjeered dark:bg-savjeered-darkmode
     }
 
-    nav li a:hover:after, 
-    nav li a.active:after{
+    nav > ul > li > a:hover:after,
+    nav > ul > li > a.active:after{
       @apply w-5
     }
 

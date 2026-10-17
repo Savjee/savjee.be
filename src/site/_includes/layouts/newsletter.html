@@ -29,7 +29,7 @@ layout: narrow
 
 <br>
 
-{% render "components/newsletter-box.html" %}
+{% render "components/newsletter-box.html", turnstileSitekey: turnstile.sitekey %}
 
 {% comment %} *********** Structured data for Google *********** {% endcomment %}
 <script type="application/ld+json">

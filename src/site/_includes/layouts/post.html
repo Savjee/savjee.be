@@ -64,7 +64,7 @@ layout: narrow
 {% endif %}
 
 <div class="my-12">
-    {% render "components/newsletter-box.html" %}
+    {% render "components/newsletter-box.html", turnstileSitekey: turnstile.sitekey %}
 </div>
 
 {% render "components/disqus-comments.html" %}

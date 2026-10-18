@@ -21,7 +21,7 @@
     "build:images": "npx ts-node src/build/image_pipeline.ts",
     "build:tailwind": "npx tailwindcss -i src/site/_assets/css/main.css -o _site/assets/css/main.css",
     "lint": "npm run lint:markdown",
-    "test": "node --test test/newsletter-signup.test.mjs",
+    "test": "node --test test/*.test.mjs",
     "lint:markdown": "npx ts-node src/build/lint-markdown.ts"
   },
   "devDependencies": {

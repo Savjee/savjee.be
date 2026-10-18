@@ -10,7 +10,7 @@
 	<p class="text-sm text-savjeelightgrey3 dark:text-savjeelightgrey3 pb-2">Free • Monthly • Unsubscribe anytime</p>
 
 	<div class="md:mt-4">
-		<form action="/newsletter/signup" method="post">
+		<form action="/newsletter/signup" method="post" {% if turnstileSitekey != blank %}data-newsletter-signup data-turnstile-sitekey="{{ turnstileSitekey | escape }}"{% endif %}>
 			<div class="md:flex">
 				{% comment %} Honeypot to catch bots (hidden from humans) {% endcomment %}
 				<input type="text" name="full_name" autocomplete="off" class="hidden" tabindex="-1">
@@ -19,25 +19,16 @@
 				<button type="submit" class="w-full md:w-auto">Subscribe</button>
 			</div>
 			{% comment %}
-				Managed Turnstile. interaction-only stays invisible unless Cloudflare
-				asks for a challenge. Callers pass turnstileSitekey because Liquid
-				render does not inherit global data. Widget mode in the dashboard: Managed.
+				Turnstile loads only after a valid submit. The dashboard controls widget mode.
+				Callers pass turnstileSitekey because Liquid render does not inherit global data.
 			{% endcomment %}
 			{% if turnstileSitekey != blank %}
-			<div
-				class="cf-turnstile"
-				data-sitekey="{{ turnstileSitekey | escape }}"
-				data-action="signup"
-				data-appearance="interaction-only"
-				data-theme="auto"
-			></div>
+			<div data-turnstile-widget></div>
+			<p data-newsletter-status role="status" class="text-sm pt-3 m-0" hidden></p>
 			<noscript>
 				<p class="text-sm pt-3 m-0">JavaScript is required to subscribe.</p>
 			</noscript>
 			{% endif %}
 		</form>
-		{% if turnstileSitekey != blank %}
-		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-		{% endif %}
 	</div>
 </div>

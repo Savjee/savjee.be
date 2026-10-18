@@ -19,9 +19,10 @@
 				<button type="submit" class="w-full md:w-auto">Subscribe</button>
 			</div>
 			{% comment %}
-				Managed Turnstile. interaction-only stays invisible unless Cloudflare
-				asks for a challenge. Callers pass turnstileSitekey because Liquid
-				render does not inherit global data. Widget mode in the dashboard: Managed.
+				Invisible Turnstile. The widget mode is set on the widget in the
+				Cloudflare dashboard (Invisible), which ignores data-appearance.
+				Callers pass turnstileSitekey because Liquid render does not inherit
+				global data.
 			{% endcomment %}
 			{% if turnstileSitekey != blank %}
 			<div

@@ -18,6 +18,26 @@
 				<input placeholder="Your email address" type="email" name="email" class="mt-4 mb-5 md:my-0 w-full md:flex-1 md:mr-3" required>
 				<button type="submit" class="w-full md:w-auto">Subscribe</button>
 			</div>
+			{% comment %}
+				Managed Turnstile. interaction-only stays invisible unless Cloudflare
+				asks for a challenge. Callers pass turnstileSitekey because Liquid
+				render does not inherit global data. Widget mode in the dashboard: Managed.
+			{% endcomment %}
+			{% if turnstileSitekey != blank %}
+			<div
+				class="cf-turnstile"
+				data-sitekey="{{ turnstileSitekey | escape }}"
+				data-action="signup"
+				data-appearance="interaction-only"
+				data-theme="auto"
+			></div>
+			<noscript>
+				<p class="text-sm pt-3 m-0">JavaScript is required to subscribe.</p>
+			</noscript>
+			{% endif %}
 		</form>
+		{% if turnstileSitekey != blank %}
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		{% endif %}
 	</div>
 </div>

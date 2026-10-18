@@ -16,6 +16,9 @@ jobs:
       with:
         node-version-file: '.nvmrc'
 
+    - name: Test newsletter signup protection
+      run: npm test
+
     - name: Cache node_modules
       id: cache-node-modules
       uses: actions/cache@v4
